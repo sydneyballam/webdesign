@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Boutique Willow Creek - Estate Ledger & Curiosities</title>
+    <title>The Willow Creek Gazette & Unique Boutique</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,12 +11,11 @@
             theme: {
                 extend: {
                     colors: {
-                        ledgerPaper: '#FBF9F1',
-                        ledgerInk: '#221E1B',
-                        ledgerGreen: '#2D4A3E',
-                        ledgerRust: '#9E3C24',
-                        ledgerGold: '#C28E38',
-                        ledgerRule: '#E5DEC9'
+                        gazetteBg: '#F4EFEB',
+                        gazetteInk: '#1A1816',
+                        gazetteRed: '#8B2613',
+                        gazetteGreen: '#233D35',
+                        gazetteBorder: '#D3C9BD'
                     }
                 }
             }
@@ -24,155 +23,133 @@
     </script>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts for antique ledger/typewriter flavor -->
-    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,500;1,400&family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <!-- Google Fonts for true newspaper / vintage editorial look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=UnifrakturMaguntia&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Libre Baskerville', serif;
-            background-color: #FBF9F1;
-            /* Subtle ledger line pattern */
-            background-image: linear-gradient(#E5DEC9 1px, transparent 1px);
-            background-size: 100% 28px;
-            color: #221E1B;
+            font-family: 'Newsreader', serif;
+            background-color: #F4EFEB;
+            color: #1A1816;
         }
-        h1, h2, h3, .ledger-title {
-            font-family: 'IM Fell English SC', serif;
-            letter-spacing: 0.05em;
+        .masthead-font {
+            font-family: 'UnifrakturMaguntia', cursive;
         }
-        .typewriter {
-            font-family: 'Special Elite', monospace;
+        .headline-font {
+            font-family: 'Playfair Display', serif;
         }
-        .handwritten {
-            font-family: 'Shantell Sans', cursive;
+        /* Classic newspaper column borders */
+        .news-grid-item {
+            border-bottom: 2px solid #D3C9BD;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-        /* Antique tag hanging effect */
-        .price-tag {
-            background: #FFFDF9;
-            border: 2px dashed #C28E38;
-            box-shadow: 2px 3px 8px rgba(0,0,0,0.06);
-            transition: all 0.2s ease;
-        }
-        .price-tag:hover {
-            transform: translateY(-3px) rotate(0.5deg);
-            box-shadow: 4px 6px 14px rgba(0,0,0,0.12);
+        @media (min-width: 768px) {
+            .news-column-border {
+                border-right: 2px solid #D3C9BD;
+                padding-right: 2rem;
+            }
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-ledgerRust selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-gazetteRed selection:text-white">
 
-    <!-- HEADER: ANTIQUE SHOP SIGNBOARD -->
-    <header class="bg-ledgerGreen text-ledgerPaper border-b-6 border-ledgerGold shadow-md pt-6 pb-6">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-            
-            <div class="text-center md:text-left">
-                <span class="handwritten text-ledgerGold text-sm block mb-1">
-                    ~ Est. 2023 &bull; 111 Mayfair St, Willow Creek, CA ~
-                </span>
-                <h1 class="text-4xl sm:text-6xl font-bold text-ledgerPaper ledger-title drop-shadow">
-                    Unique Boutique
-                </h1>
-                <p class="typewriter text-xs sm:text-sm text-stone-300 mt-1">
-                    [ Local Estate Treasures, Vintage Apparel, Glam & Curiosities ]
-                </p>
+    <!-- NEWSPAPER MASTHEAD HEADER -->
+    <header class="bg-gazetteBg border-b-4 border-gazetteInk pt-6 pb-4">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="border-y border-gazetteInk py-1 mb-3 flex justify-between items-center text-xs uppercase tracking-widest font-semibold px-4">
+                <span>Vol. IV No. 2026</span>
+                <span>Willow Creek, California</span>
+                <span>Est. 2023</span>
             </div>
             
-            <!-- Admin & Navigation Actions -->
-            <div class="flex flex-wrap justify-center gap-2">
-                <a href="https://sydneyballam.github.io/webdesign/" class="bg-stone-900/60 hover:bg-stone-900 text-stone-300 px-3 py-1.5 rounded text-xs typewriter uppercase transition border border-stone-600 flex items-center gap-1">
+            <h1 class="masthead-font text-5xl sm:text-7xl lg:text-8xl tracking-tight text-gazetteInk py-2">
+                The Unique Boutique Gazette
+            </h1>
+            
+            <p class="headline-font italic text-sm sm:text-base text-stone-700 mt-1 max-w-2xl mx-auto">
+                "A Chronicle of Fine Estate Salvage, Shabby Chic Curiosities, Apparel & Local Treasures at 111 Mayfair St."
+            </p>
+
+            <!-- Quick Action Bar -->
+            <div class="flex flex-wrap justify-center gap-3 mt-4 pb-2">
+                <a href="https://sydneyballam.github.io/webdesign/" class="text-xs uppercase font-bold tracking-wider px-3 py-1.5 bg-stone-200 hover:bg-stone-300 text-stone-800 rounded border border-stone-400 transition flex items-center gap-1">
                     <i class="fa-solid fa-arrow-left"></i> Hub
                 </a>
-                <a href="tel:7075995811" class="bg-ledgerRust hover:bg-red-900 text-white px-3.5 py-1.5 rounded text-xs typewriter uppercase transition border border-red-900 flex items-center gap-1.5 shadow">
+                <a href="tel:7075995811" class="text-xs uppercase font-bold tracking-wider px-3 py-1.5 bg-gazetteGreen text-white rounded transition flex items-center gap-1 shadow">
                     <i class="fa-solid fa-phone"></i> (707) 599-5811
                 </a>
-                <button onclick="openPublisherModal()" class="bg-ledgerGold hover:bg-amber-600 text-stone-950 px-4 py-1.5 rounded text-xs typewriter uppercase font-bold transition shadow flex items-center gap-1.5">
-                    <i class="fa-solid fa-feather"></i> Record New Find
+                <button onclick="openPublisherModal()" class="text-xs uppercase font-bold tracking-wider px-4 py-1.5 bg-gazetteRed text-white rounded transition shadow hover:bg-red-900 flex items-center gap-1">
+                    <i class="fa-solid fa-pen-nib"></i> Submit New Dispatch
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- MAIN APP CONTENT -->
-    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+    <!-- MAIN BROADSHEET LAYOUT -->
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full">
         
-        <!-- SHOP INTRO LEDGER NOTE -->
-        <div class="bg-white/90 border-2 border-ledgerGold p-6 rounded shadow-sm mb-8 relative">
-            <div class="absolute -top-3 right-6 bg-ledgerRust text-white text-[10px] typewriter px-3 py-0.5 rounded uppercase tracking-widest shadow">
-                Curator's Notes
+        <!-- CONTROL BAR: SEARCH & FILTERS -->
+        <div class="bg-stone-200/70 p-4 rounded border-2 border-gazetteInk mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2 w-full md:w-auto">
+                <span class="text-xs uppercase tracking-widest font-bold whitespace-nowrap">Browse Sections:</span>
+                <!-- Category Dropdown / Pills -->
+                <select id="categorySelect" onchange="filterCategory(this.value)" class="bg-white border border-stone-400 px-3 py-1.5 rounded text-xs font-serif focus:outline-none">
+                    <option value="All">All Dispatches (Everything)</option>
+                    <option value="Women's Clothing">Women's Clothing</option>
+                    <option value="Men's Clothing">Men's Clothing</option>
+                    <option value="Vintage Kitchenware">Vintage Kitchenware</option>
+                    <option value="Jewelry & Glam">Jewelry & Glam</option>
+                    <option value="Bigfoot & Novelty">Bigfoot & Novelty</option>
+                    <option value="Gifts & Collectibles">Gifts & Collectibles</option>
+                </select>
             </div>
-            <div class="max-w-3xl">
-                <h2 class="text-2xl font-bold ledger-title text-ledgerGreen mb-2">
-                    Welcome to the Willow Creek Trove
-                </h2>
-                <p class="text-stone-700 text-sm typewriter leading-relaxed">
-                    Hunting through local estate sales so you don't have to! Explore our revolving collection of vintage clothing, kitchenware, Fiestaware, jewelry, and unique novelties. Every entry here automatically syndicates to our Facebook Shop and Instagram feed.
-                </p>
-            </div>
-        </div>
 
-        <!-- SEARCH & FILTER CONTROLS -->
-        <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-ledgerRule/40 p-3 rounded border border-ledgerRule">
-            
             <!-- Search -->
-            <div class="relative flex-grow max-w-md">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-stone-500">
-                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
-                </span>
-                <input type="text" id="searchInput" oninput="filterInventory()" placeholder="Search ledger by keyword..." class="w-full pl-9 pr-4 py-2 bg-white border border-ledgerGold rounded text-xs typewriter focus:outline-none focus:ring-1 focus:ring-ledgerGreen shadow-inner">
+            <div class="relative w-full md:w-72">
+                <input type="text" id="searchInput" oninput="filterInventory()" placeholder="Search gazette archives..." class="w-full bg-white border border-stone-400 px-3 py-1.5 rounded text-xs focus:outline-none">
             </div>
 
-            <!-- Status Tabs -->
-            <div class="flex rounded bg-white p-1 border border-ledgerGold text-xs typewriter">
-                <button onclick="setStatusFilter('all')" id="tab-all" class="flex-1 md:flex-initial px-3 py-1.5 rounded bg-ledgerGreen text-white shadow transition">All Ledger Items</button>
-                <button onclick="setStatusFilter('current')" id="tab-current" class="flex-1 md:flex-initial px-3 py-1.5 rounded text-stone-700 hover:text-stone-900 transition">In Store Now</button>
-                <button onclick="setStatusFilter('past')" id="tab-past" class="flex-1 md:flex-initial px-3 py-1.5 rounded text-stone-700 hover:text-stone-900 transition">Past Treasures</button>
+            <!-- Status Toggles -->
+            <div class="flex gap-2 text-xs font-bold uppercase tracking-wider">
+                <button onclick="setStatusFilter('all')" id="tab-all" class="px-3 py-1.5 bg-gazetteInk text-white rounded">All</button>
+                <button onclick="setStatusFilter('current')" id="tab-current" class="px-3 py-1.5 bg-white border border-stone-400 text-stone-700 rounded">Available</button>
+                <button onclick="setStatusFilter('past')" id="tab-past" class="px-3 py-1.5 bg-white border border-stone-400 text-stone-700 rounded">Archived</button>
             </div>
         </div>
 
-        <!-- CATEGORY TAG BUTTONS -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8">
-            <button onclick="filterCategory('All')" id="cat-All" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-ledgerGreen text-white shadow transition">All Categories</button>
-            <button onclick="filterCategory('Women\'s Clothing')" id="cat-Women's Clothing" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Women's Clothing</button>
-            <button onclick="filterCategory('Men\'s Clothing')" id="cat-Men's Clothing" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Men's Clothing</button>
-            <button onclick="filterCategory('Vintage Kitchenware')" id="cat-Vintage Kitchenware" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Vintage Kitchenware</button>
-            <button onclick="filterCategory('Jewelry & Glam')" id="cat-Jewelry & Glam" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Jewelry & Glam</button>
-            <button onclick="filterCategory('Bigfoot & Novelty')" id="cat-Bigfoot & Novelty" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Bigfoot & Novelty</button>
-            <button onclick="filterCategory('Gifts & Collectibles')" id="cat-Gifts & Collectibles" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Gifts & Collectibles</button>
-        </div>
-
-        <!-- LEDGER INVENTORY GRID (TAG STYLE) -->
-        <div id="inventoryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Dynamic Cards Injected Here -->
+        <!-- NEWSPAPER CONTENT CONTAINER -->
+        <div id="inventoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamic Newspaper Articles Injected Here -->
         </div>
 
         <!-- EMPTY STATE -->
-        <div id="emptyState" class="hidden text-center py-16 bg-white border border-ledgerGold rounded mt-4">
-            <i class="fa-solid fa-scroll text-4xl text-stone-400 mb-2"></i>
-            <h3 class="text-lg font-bold ledger-title text-stone-800">No Ledger Entries Found</h3>
-            <p class="text-xs typewriter text-stone-500 mt-1">Try clearing your search filters.</p>
+        <div id="emptyState" class="hidden text-center py-20 border-2 border-dashed border-stone-400 rounded my-8">
+            <h3 class="headline-font text-2xl font-bold">No Dispatches Found</h3>
+            <p class="text-sm italic text-stone-600 mt-1">Check your search criteria or submit a new item dispatch.</p>
         </div>
 
     </main>
 
-    <!-- PUBLISHER MODAL -->
-    <div id="publisherModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-        <div class="bg-ledgerPaper rounded-lg max-w-lg w-full p-6 shadow-2xl border-4 border-ledgerGreen overflow-y-auto max-h-[90vh]">
-            <div class="flex justify-between items-center pb-3 border-b-2 border-ledgerGold mb-4">
-                <h3 class="text-xl font-bold ledger-title text-ledgerGreen flex items-center gap-2">
-                    <i class="fa-solid fa-feather text-ledgerRust"></i> Record New Store Find
+    <!-- PUBLISHER MODAL (SUBMIT DISPATCH) -->
+    <div id="publisherModal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+        <div class="bg-gazetteBg rounded max-w-lg w-full p-6 shadow-2xl border-4 border-gazetteInk overflow-y-auto max-h-[90vh]">
+            <div class="flex justify-between items-center pb-3 border-b-2 border-gazetteInk mb-4">
+                <h3 class="headline-font text-xl font-bold uppercase tracking-wider text-gazetteInk flex items-center gap-2">
+                    <i class="fa-solid fa-feather text-gazetteRed"></i> Submit New Item Dispatch
                 </h3>
-                <button onclick="closePublisherModal()" class="text-stone-500 hover:text-stone-900 font-bold text-lg">×</button>
+                <button onclick="closePublisherModal()" class="text-stone-700 hover:text-black font-bold text-xl">×</button>
             </div>
 
-            <form id="publishForm" onsubmit="handlePublish(event)" class="space-y-4 typewriter text-xs">
+            <form id="publishForm" onsubmit="handlePublish(event)" class="space-y-4 text-xs font-serif">
                 <div>
-                    <label class="block font-bold uppercase text-stone-700 mb-1">Item Title</label>
-                    <input type="text" id="newItemTitle" required placeholder="e.g., Antique Fiestaware Platter" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
+                    <label class="block font-bold uppercase tracking-widest text-stone-800 mb-1">Headline / Item Title</label>
+                    <input type="text" id="newItemTitle" required placeholder="e.g., Rare 1950s Fiestaware Platter Discovered" class="w-full px-3 py-2 bg-white border border-stone-400 rounded focus:outline-none focus:ring-1 focus:ring-gazetteGreen">
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block font-bold uppercase text-stone-700 mb-1">Category</label>
-                        <select id="newItemCategory" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
+                        <label class="block font-bold uppercase tracking-widest text-stone-800 mb-1">Department / Category</label>
+                        <select id="newItemCategory" class="w-full px-3 py-2 bg-white border border-stone-400 rounded focus:outline-none focus:ring-1 focus:ring-gazetteGreen">
                             <option value="Women's Clothing">Women's Clothing</option>
                             <option value="Men's Clothing">Men's Clothing</option>
                             <option value="Vintage Kitchenware">Vintage Kitchenware</option>
@@ -182,67 +159,67 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block font-bold uppercase text-stone-700 mb-1">Price</label>
-                        <input type="text" id="newItemPrice" required placeholder="e.g., $38.00" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
+                        <label class="block font-bold uppercase tracking-widest text-stone-800 mb-1">Asking Price</label>
+                        <input type="text" id="newItemPrice" required placeholder="e.g., $45.00" class="w-full px-3 py-2 bg-white border border-stone-400 rounded focus:outline-none focus:ring-1 focus:ring-gazetteGreen">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block font-bold uppercase text-stone-700 mb-1">Image URL</label>
-                    <input type="url" id="newItemImage" required placeholder="Paste direct image link" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
+                    <label class="block font-bold uppercase tracking-widest text-stone-800 mb-1">Photograph Image URL</label>
+                    <input type="url" id="newItemImage" required placeholder="Paste direct image link" class="w-full px-3 py-2 bg-white border border-stone-400 rounded focus:outline-none focus:ring-1 focus:ring-gazetteGreen">
                 </div>
 
                 <div>
-                    <label class="block font-bold uppercase text-stone-700 mb-1">Description & Details</label>
-                    <textarea id="newItemDesc" rows="3" required placeholder="Condition, size, estate background..." class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen"></textarea>
+                    <label class="block font-bold uppercase tracking-widest text-stone-800 mb-1">Article Body / Description</label>
+                    <textarea id="newItemDesc" rows="3" required placeholder="Write a brief editorial description of the estate find..." class="w-full px-3 py-2 bg-white border border-stone-400 rounded focus:outline-none focus:ring-1 focus:ring-gazetteGreen"></textarea>
                 </div>
 
                 <div>
-                    <label class="block font-bold uppercase text-stone-700 mb-1">Status</label>
-                    <select id="newItemStatus" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
-                        <option value="current">In Store Now (Active)</option>
-                        <option value="past">Past Treasure (Sold)</option>
+                    <label class="block font-bold uppercase tracking-widest text-stone-800 mb-1">Circulation Status</label>
+                    <select id="newItemStatus" class="w-full px-3 py-2 bg-white border border-stone-400 rounded focus:outline-none focus:ring-1 focus:ring-gazetteGreen">
+                        <option value="current">Available in Store Now</option>
+                        <option value="past">Archived / Sold</option>
                     </select>
                 </div>
 
-                <div class="bg-amber-50 p-3 rounded border border-ledgerGold space-y-1 text-stone-700">
-                    <span class="block font-bold uppercase">Automated Syndication:</span>
-                    <label class="flex items-center gap-2"><input type="checkbox" checked disabled> Website Ledger</label>
+                <div class="bg-stone-200 p-3 rounded border border-stone-400 space-y-1 text-stone-800">
+                    <span class="block font-bold uppercase tracking-wider">Syndicate Dispatch To:</span>
+                    <label class="flex items-center gap-2"><input type="checkbox" checked disabled> Gazette Website</label>
                     <label class="flex items-center gap-2"><input type="checkbox" id="syncFb" checked> Facebook Shop</label>
                     <label class="flex items-center gap-2"><input type="checkbox" id="syncIg" checked> Instagram Feed</label>
                 </div>
 
                 <div class="flex justify-end gap-3 pt-2">
-                    <button type="button" onclick="closePublisherModal()" class="px-4 py-2 rounded font-bold text-stone-600 hover:bg-stone-200">Cancel</button>
-                    <button type="submit" class="px-5 py-2 rounded font-bold bg-ledgerGreen text-ledgerPaper shadow hover:bg-emerald-900">Record & Post</button>
+                    <button type="button" onclick="closePublisherModal()" class="px-4 py-2 font-bold uppercase tracking-wider text-stone-600 hover:text-black">Cancel</button>
+                    <button type="submit" class="px-5 py-2 bg-gazetteGreen text-white font-bold uppercase tracking-wider rounded shadow hover:bg-emerald-900">Publish Dispatch</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- ITEM DETAIL MODAL -->
-    <div id="detailModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-        <div class="bg-ledgerPaper rounded-lg max-w-2xl w-full overflow-hidden shadow-2xl border-4 border-ledgerGreen flex flex-col md:flex-row">
-            <div class="md:w-1/2 bg-stone-200 h-64 md:h-auto relative p-4 flex items-center justify-center">
-                <img id="detailImg" src="" alt="Item preview" class="w-full h-full object-cover rounded border border-ledgerGold shadow">
-                <span id="detailStatusBadge" class="absolute top-6 left-6 text-[10px] typewriter font-bold uppercase px-2.5 py-1 rounded shadow"></span>
+    <!-- ARTICLE INSPECT LIGHTBOX -->
+    <div id="detailModal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+        <div class="bg-gazetteBg rounded max-w-2xl w-full overflow-hidden shadow-2xl border-4 border-gazetteInk flex flex-col md:flex-row">
+            <div class="md:w-1/2 bg-stone-300 h-64 md:h-auto relative p-4 flex items-center justify-center">
+                <img id="detailImg" src="" alt="Article photo" class="w-full h-full object-cover rounded border border-stone-500 shadow">
+                <span id="detailStatusBadge" class="absolute top-6 left-6 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded shadow"></span>
             </div>
             <div class="md:w-1/2 p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start">
-                        <span id="detailCategory" class="text-xs typewriter font-bold uppercase text-ledgerRust"></span>
-                        <button onclick="closeDetailModal()" class="text-stone-500 hover:text-stone-900 font-bold text-lg">×</button>
+                        <span id="detailCategory" class="text-xs font-bold uppercase tracking-widest text-gazetteRed"></span>
+                        <button onclick="closeDetailModal()" class="text-stone-700 hover:text-black font-bold text-xl">×</button>
                     </div>
-                    <h3 id="detailTitle" class="text-2xl font-bold ledger-title text-stone-900 mt-1"></h3>
-                    <p id="detailPrice" class="text-xl font-bold typewriter text-ledgerRust mt-2"></p>
-                    <p id="detailDesc" class="text-xs typewriter text-stone-700 mt-4 leading-relaxed"></p>
+                    <h3 id="detailTitle" class="headline-font text-2xl font-bold text-stone-900 mt-2"></h3>
+                    <p id="detailPrice" class="headline-font text-xl font-bold text-gazetteRed mt-1"></p>
+                    <p id="detailDesc" class="text-sm text-stone-700 mt-4 leading-relaxed italic"></p>
                 </div>
 
-                <div class="mt-6 pt-4 border-t-2 border-ledgerGold flex flex-col gap-3">
-                    <div class="text-[11px] typewriter text-stone-500 flex items-center gap-1">
-                        <i class="fa-solid fa-satellite-dish text-ledgerGreen"></i> Synced to Facebook Shop & Instagram
+                <div class="mt-6 pt-4 border-t-2 border-stone-300 flex flex-col gap-3">
+                    <div class="text-xs text-stone-600 flex items-center gap-1 font-semibold">
+                        <i class="fa-solid fa-globe text-gazetteGreen"></i> Synced to Facebook Shop & Instagram
                     </div>
-                    <a href="tel:7075995811" class="w-full bg-ledgerGreen hover:bg-emerald-900 text-ledgerPaper text-center py-2.5 rounded text-xs typewriter uppercase font-bold transition shadow flex items-center justify-center gap-2">
+                    <a href="tel:7075995811" class="w-full bg-gazetteGreen hover:bg-emerald-900 text-white text-center py-2.5 rounded text-xs uppercase tracking-widest font-bold transition shadow flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call (707) 599-5811 to Claim
                     </a>
                 </div>
@@ -250,44 +227,44 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="bg-ledgerGreen text-stone-300 text-xs mt-16 py-8 border-t-4 border-ledgerGold typewriter">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+    <!-- GAZETTE FOOTER -->
+    <footer class="bg-gazetteInk text-stone-300 text-xs mt-16 py-8 border-t-4 border-gazetteRed font-serif">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <div>
-                <h4 class="text-ledgerPaper font-bold text-sm ledger-title">Unique Boutique Willow Creek</h4>
-                <p class="mt-0.5 text-stone-300">111 Mayfair St, Willow Creek, CA, United States</p>
-                <p class="text-stone-300">Phone: (707) 599-5811 | Email: uniqueboutiquewillowcreek@gmail.com</p>
+                <h4 class="headline-font text-white font-bold text-base">Unique Boutique Willow Creek Gazette</h4>
+                <p class="mt-1 text-stone-400">111 Mayfair St, Willow Creek, California, United States</p>
+                <p class="text-stone-400">Phone: (707) 599-5811 | Email: uniqueboutiquewillowcreek@gmail.com</p>
             </div>
             <div class="flex gap-3">
-                <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded bg-stone-900 hover:bg-blue-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded bg-stone-900 hover:bg-pink-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="tel:7075995811" class="w-8 h-8 rounded bg-stone-900 hover:bg-ledgerGold text-stone-950 flex items-center justify-center transition"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded bg-stone-800 hover:bg-blue-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded bg-stone-800 hover:bg-pink-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="tel:7075995811" class="w-8 h-8 rounded bg-stone-800 hover:bg-gazetteGreen text-white flex items-center justify-center transition"><i class="fa-solid fa-phone"></i></a>
             </div>
         </div>
-        <div class="max-w-6xl mx-auto px-4 pt-4 mt-4 border-t border-ledgerGreen/80 text-center text-stone-400">
-            &copy; 2026 Unique Boutique Willow Creek. All estate ledgers and curiosities reserved.
+        <div class="max-w-7xl mx-auto px-4 pt-4 mt-4 border-t border-stone-800 text-center text-stone-500">
+            &copy; 2026 Unique Boutique Willow Creek. Published weekly for local estate treasure hunters.
         </div>
     </footer>
 
     <!-- SCRIPT LOGIC -->
     <script>
-        let inventory = JSON.parse(localStorage.getItem('ub_ledger_v4')) || [
+        let inventory = JSON.parse(localStorage.getItem('ub_gazette_v5')) || [
             {
                 id: 1,
-                title: "Vintage Shabby Chic Lace Slip Dress",
+                title: "Vintage Shabby Chic Lace Slip Dress Uncovered",
                 category: "Women's Clothing",
                 price: "$48.00",
                 image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800",
-                desc: "Delicate peach and ivory vintage slip dress hanging near our front window chandelier display.",
+                desc: "Delicate peach and ivory vintage slip dress brought in from a prized local estate collection. Now hanging near our front window display.",
                 status: "current"
             },
             {
                 id: 2,
-                title: "Bigfoot Tropical Hawaiian Novelty Shirt",
+                title: "Legendary Bigfoot Tropical Hawaiian Shirt Arrives",
                 category: "Bigfoot & Novelty",
                 price: "$36.00",
                 image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
-                desc: "Our legendary Bigfoot patterned button-down shirt, featured right out on our porch rack!",
+                desc: "Our famous Bigfoot patterned button-down shirts have returned to the porch rack. Quantities are strictly limited!",
                 status: "current"
             },
             {
@@ -296,25 +273,25 @@
                 category: "Vintage Kitchenware",
                 price: "$85.00",
                 image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",
-                desc: "Original system Harsch Gärtopf brown stoneware crock in gorgeous vintage condition.",
+                desc: "Original system Harsch Gärtopf brown stoneware crock in immaculate vintage condition. A prized find for kitchen collectors.",
                 status: "current"
             },
             {
                 id: 4,
-                title: "Vintage Green & Yellow Fiestaware Stack",
+                title: "Vibrant Retro Fiestaware Plates & Mugs",
                 category: "Vintage Kitchenware",
                 price: "$65.00",
                 image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800",
-                desc: "Bright estate-sourced plates and matching mugs with classic retro colors.",
+                desc: "A stunning stack of green, yellow, and purple vintage plates sourced directly from a local estate cellar.",
                 status: "current"
             },
             {
                 id: 5,
-                title: "Men's Vintage Flannel Utility Shirt",
+                title: "Rugged Men's Vintage Flannel Utility Shirt",
                 category: "Men's Clothing",
                 price: "$32.00",
                 image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=800",
-                desc: "Rugged, comfortable flannel button-down hand-selected from local estate collections.",
+                desc: "Comfortable flannel button-down curated for outdoor Willow Creek weather and everyday wear.",
                 status: "current"
             },
             {
@@ -323,7 +300,7 @@
                 category: "Jewelry & Glam",
                 price: "$45.00",
                 image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800",
-                desc: "Sparkling vintage costume jewelry piece with plenty of glitz and glam.",
+                desc: "Sparkling vintage costume jewelry piece with plenty of glitz and glam. Successfully claimed by a lucky collector!",
                 status: "past"
             }
         ];
@@ -352,15 +329,123 @@
                 emptyState.classList.add('hidden');
             }
 
-            filtered.forEach(item => {
-                const card = document.createElement('div');
-                card.className = "price-tag p-4 rounded flex flex-col justify-between cursor-pointer";
-                card.onclick = () => openDetailModal(item);
+            filtered.forEach((item, index) => {
+                const article = document.createElement('article');
+                article.className = "bg-white p-5 rounded border-2 border-stone-400 shadow-sm flex flex-col justify-between cursor-pointer hover:border-gazetteRed transition group";
+                article.onclick = () => openDetailModal(item);
 
                 const statusBadge = item.status === 'current' 
-                    ? '<span class="bg-ledgerGreen text-white text-[10px] typewriter font-bold uppercase px-2 py-0.5 rounded shadow">In Store Now</span>'
-                    : '<span class="bg-stone-600 text-stone-200 text-[10px] typewriter font-bold uppercase px-2 py-0.5 rounded shadow">Past Treasure</span>';
+                    ? '<span class="bg-gazetteGreen text-white text-[10px] uppercase tracking-widest font-bold px-2 py-0.5 rounded">Available</span>'
+                    : '<span class="bg-stone-600 text-stone-200 text-[10px] uppercase tracking-widest font-bold px-2 py-0.5 rounded">Archived</span>';
 
-                card.innerHTML = `
+                article.innerHTML = `
                     <div>
-                        <div class="relative h-48 bg-stone-100 rounded border
+                        <div class="flex justify-between items-center text-[11px] font-bold uppercase tracking-widest text-gazetteRed mb-2">
+                            <span>${item.category}</span>
+                            ${statusBadge}
+                        </div>
+                        <div class="relative h-48 bg-stone-200 rounded overflow-hidden mb-3 border border-stone-300">
+                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="headline-font text-xl font-bold text-stone-900 group-hover:text-gazetteRed transition leading-snug">${item.title}</h3>
+                        <p class="text-xs text-stone-700 mt-2 line-clamp-3 italic">${item.desc}</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-3 border-t border-stone-300">
+                        <span class="headline-font text-lg font-bold text-gazetteRed">${item.price}</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gazetteGreen flex items-center gap-1 group-hover:underline">
+                            Read Dispatch <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </span>
+                    </div>
+                `;
+                grid.appendChild(article);
+            });
+        }
+
+        function filterCategory(category) {
+            currentCategory = category;
+            document.getElementById('categorySelect').value = category;
+            renderInventory();
+        }
+
+        function setStatusFilter(status) {
+            currentStatusFilter = status;
+            ['all', 'current', 'past'].forEach(s => {
+                const btn = document.getElementById(`tab-${s}`);
+                if (s === status) {
+                    btn.className = "px-3 py-1.5 bg-gazetteInk text-white rounded font-bold";
+                } else {
+                    btn.className = "px-3 py-1.5 bg-white border border-stone-400 text-stone-700 rounded font-bold";
+                }
+            });
+            renderInventory();
+        }
+
+        function filterInventory() {
+            renderInventory();
+        }
+
+        function openPublisherModal() {
+            document.getElementById('publisherModal').classList.remove('hidden');
+        }
+
+        function closePublisherModal() {
+            document.getElementById('publisherModal').classList.add('hidden');
+            document.getElementById('publishForm').reset();
+        }
+
+        function handlePublish(e) {
+            e.preventDefault();
+            const title = document.getElementById('newItemTitle').value;
+            const category = document.getElementById('newItemCategory').value;
+            const price = document.getElementById('newItemPrice').value;
+            const image = document.getElementById('newItemImage').value;
+            const desc = document.getElementById('newItemDesc').value;
+            const status = document.getElementById('newItemStatus').value;
+
+            const newItem = {
+                id: Date.now(),
+                title,
+                category,
+                price: price.startsWith('$') ? price : '$' + price,
+                image,
+                desc,
+                status
+            };
+
+            inventory.unshift(newItem);
+            localStorage.setItem('ub_gazette_v5', JSON.stringify(inventory));
+            
+            renderInventory();
+            closePublisherModal();
+            alert('Dispatch published successfully to the Gazette, Facebook Shop, and Instagram feed!');
+        }
+
+        function openDetailModal(item) {
+            document.getElementById('detailImg').src = item.image;
+            document.getElementById('detailTitle').innerText = item.title;
+            document.getElementById('detailCategory').innerText = item.category;
+            document.getElementById('detailPrice').innerText = item.price;
+            document.getElementById('detailDesc').innerText = item.desc;
+            
+            const badge = document.getElementById('detailStatusBadge');
+            if(item.status === 'current') {
+                badge.className = "absolute top-6 left-6 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded shadow bg-gazetteGreen text-white";
+                badge.innerText = "Available";
+            } else {
+                badge.className = "absolute top-6 left-6 text-xs uppercase tracking-widest font-bold px-3 py-1 rounded shadow bg-stone-600 text-stone-200";
+                badge.innerText = "Archived";
+            }
+
+            document.getElementById('detailModal').classList.remove('hidden');
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+        }
+
+        window.onload = () => {
+            renderInventory();
+        };
+    </script>
+</body>
+</html>
