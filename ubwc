@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Boutique Willow Creek</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        boutiqueTeal: '#0E8388',
+                        boutiqueDarkTeal: '#2E4F4F',
+                        boutiqueCream: '#FEEFDD',
+                        boutiqueAccent: '#CBE4DE',
+                        boutiqueGreen: '#134B50',
+                        boutiqueWood: '#5C4033'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER & BRANDING -->
+    <header class="bg-boutiqueDarkTeal text-white shadow-md border-b-4 border-boutiqueTeal">
+        <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <span class="text-xs uppercase tracking-widest bg-boutiqueTeal px-3 py-1 rounded-full text-boutiqueCream font-semibold">Willow Creek Estate Finds</span>
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-wide mt-2 text-boutiqueCream">Unique Boutique</h1>
+                <p class="text-sm text-stone-300 italic mt-1">"A treasure trove of unique new and used items gifts glitz and glam..."</p>
+            </div>
+            
+            <!-- Contact & Action Badges -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="tel:7075995811" class="flex items-center gap-2 bg-boutiqueTeal hover:bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow">
+                    <i class="fa-solid fa-phone"></i> (707) 599-5811
+                </a>
+                <a href="mailto:uniqueboutiquewillowcreek@gmail.com" class="flex items-center gap-2 bg-stone-700 hover:bg-stone-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition shadow">
+                    <i class="fa-solid fa-envelope"></i> Email Us
+                </a>
+                <button onclick="openPublisherModal()" class="flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-bold transition shadow animate-pulse">
+                    <i class="fa-solid fa-circle-plus"></i> Post Item
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 flex-grow w-full">
+        
+        <!-- STORE INTRO & LOCATION BANNER -->
+        <section class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-stone-200 mb-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div class="space-y-3 max-w-2xl">
+                <h2 class="text-2xl font-bold text-boutiqueDarkTeal">Welcome to Our Treasure Trove!</h2>
+                <p class="text-stone-600 leading-relaxed text-sm sm:text-base">
+                    Gifts, glitz, glam, clothes, shoes, hats, Bigfoot novelties, jewelry, cosmetics, soaps, vintage kitchenware, toys, collectibles, and much more! Discover new hidden gems with every visit.
+                </p>
+                <div class="flex items-center gap-2 text-stone-500 text-sm font-medium">
+                    <i class="fa-solid fa-location-dot text-boutiqueTeal"></i>
+                    <span>111 Mayfair St, Willow Creek, CA, United States</span>
+                </div>
+            </div>
+            <div class="bg-boutiqueCream p-5 rounded-xl border border-teal-100 text-center lg:text-right w-full lg:w-auto">
+                <span class="block text-xs uppercase font-bold text-boutiqueTeal tracking-wider">Multi-Channel Sync Ready</span>
+                <p class="text-sm font-semibold text-stone-700 mt-1"><i class="fa-brands fa-facebook text-blue-600"></i> Facebook Shop &nbsp;|&nbsp; <i class="fa-brands fa-instagram text-pink-600"></i> Instagram &nbsp;|&nbsp; <i class="fa-solid fa-globe text-teal-700"></i> Website</p>
+                <span class="text-xs text-stone-500 block mt-2">Publish once, syndicate everywhere instantly!</span>
+            </div>
+        </section>
+
+        <!-- INVENTORY FILTER & CONTROLS -->
+        <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-6">
+            <!-- Search Bar -->
+            <div class="relative flex-grow max-w-md">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-stone-400">
+                    <i class="fa-solid fa-search"></i>
+                </span>
+                <input type="text" id="searchInput" oninput="filterInventory()" placeholder="Search items by name, style, or description..." class="w-full pl-10 pr-4 py-2 bg-white border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-boutiqueTeal text-sm">
+            </div>
+
+            <!-- Status Tabs (Current vs Past) -->
+            <div class="flex rounded-lg bg-stone-200 p-1 text-sm font-medium">
+                <button onclick="setStatusFilter('all')" id="tab-all" class="flex-1 md:flex-initial px-4 py-1.5 rounded-md bg-white text-boutiqueDarkTeal shadow-sm transition">All Treasures</button>
+                <button onclick="setStatusFilter('current')" id="tab-current" class="flex-1 md:flex-initial px-4 py-1.5 rounded-md text-stone-600 hover:text-stone-900 transition">In Store Now</button>
+                <button onclick="setStatusFilter('past')" id="tab-past" class="flex-1 md:flex-initial px-4 py-1.5 rounded-md text-stone-600 hover:text-stone-900 transition">Past Treasures</button>
+            </div>
+        </div>
+
+        <!-- CATEGORY PILLS -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-thin">
+            <button onclick="filterCategory('All')" id="cat-All" class="category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-boutiqueDarkTeal text-white transition shadow-sm">All Categories</button>
+            <button onclick="filterCategory('Women\'s Clothing')" id="cat-Women's Clothing" class="category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-600 border border-stone-300 hover:bg-stone-100 transition">Women's Clothing</button>
+            <button onclick="filterCategory('Men\'s Clothing')" id="cat-Men's Clothing" class="category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-600 border border-stone-300 hover:bg-stone-100 transition">Men's Clothing</button>
+            <button onclick="filterCategory('Vintage Kitchenware')" id="cat-Vintage Kitchenware" class="category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-600 border border-stone-300 hover:bg-stone-100 transition">Vintage Kitchenware</button>
+            <button onclick="filterCategory('Jewelry & Glam')" id="cat-Jewelry & Glam" class="category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-600 border border-stone-300 hover:bg-stone-100 transition">Jewelry & Glam</button>
+            <button onclick="filterCategory('Bigfoot & Novelty')" id="cat-Bigfoot & Novelty" class="category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-600 border border-stone-300 hover:bg-stone-100 transition">Bigfoot & Novelty</button>
+            <button onclick="filterCategory('Gifts & Collectibles')" id="cat-Gifts & Collectibles" class="category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-600 border border-stone-300 hover:bg-stone-100 transition">Gifts & Collectibles</button>
+        </div>
+
+        <!-- INVENTORY GRID -->
+        <div id="inventoryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamic cards injected via JS -->
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div id="emptyState" class="hidden text-center py-16 bg-white rounded-2xl border border-stone-200 mt-4">
+            <i class="fa-solid fa-box-open text-4xl text-stone-300 mb-3"></i>
+            <h3 class="text-lg font-bold text-stone-700">No matching items found</h3>
+            <p class="text-sm text-stone-500 mt-1">Try adjusting your search query or category filters.</p>
+        </div>
+    </main>
+
+    <!-- PUBLISH MODAL (SIMULATED MULTI-CHANNEL UPLOADER) -->
+    <div id="publisherModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-stone-200 overflow-y-auto max-h-[90vh]">
+            <div class="flex justify-between items-center pb-4 border-b border-stone-200 mb-4">
+                <h3 class="text-xl font-bold text-boutiqueDarkTeal flex items-center gap-2">
+                    <i class="fa-solid fa-cloud-arrow-up text-boutiqueTeal"></i> Post Item Across Channels
+                </h3>
+                <button onclick="closePublisherModal()" class="text-stone-400 hover:text-stone-700 p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <form id="publishForm" onsubmit="handlePublish(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-stone-600 mb-1">Item Title</label>
+                    <input type="text" id="newItemTitle" required placeholder="e.g., Vintage Shabby Chic Lace Slip Dress" class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:ring-2 focus:ring-boutiqueTeal focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-600 mb-1">Category</label>
+                        <select id="newItemCategory" class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:ring-2 focus:ring-boutiqueTeal focus:outline-none">
+                            <option value="Women's Clothing">Women's Clothing</option>
+                            <option value="Men's Clothing">Men's Clothing</option>
+                            <option value="Vintage Kitchenware">Vintage Kitchenware</option>
+                            <option value="Jewelry & Glam">Jewelry & Glam</option>
+                            <option value="Bigfoot & Novelty">Bigfoot & Novelty</option>
+                            <option value="Gifts & Collectibles">Gifts & Collectibles</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-600 mb-1">Price ($)</label>
+                        <input type="text" id="newItemPrice" required placeholder="e.g., $34.00" class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:ring-2 focus:ring-boutiqueTeal focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-stone-600 mb-1">Item Photo URL (or Image File/Sample)</label>
+                    <input type="url" id="newItemImage" required placeholder="Paste image URL (unsplash or direct link)" class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:ring-2 focus:ring-boutiqueTeal focus:outline-none">
+                    <p class="text-xs text-stone-400 mt-1">Tip: You can use any direct image link or paste a photo URL.</p>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-stone-600 mb-1">Description</label>
+                    <textarea id="newItemDesc" rows="3" required placeholder="Describe condition, estate find origin, sizing, etc." class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:ring-2 focus:ring-boutiqueTeal focus:outline-none"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-stone-600 mb-1">Item Status</label>
+                    <select id="newItemStatus" class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:ring-2 focus:ring-boutiqueTeal focus:outline-none">
+                        <option value="current">In Store Now (Active)</option>
+                        <option value="past">Past Treasure (Sold/Archived)</option>
+                    </select>
+                </div>
+
+                <!-- Cross-Posting Channels Selection -->
+                <div class="bg-stone-50 p-3 rounded-xl border border-stone-200 space-y-2">
+                    <span class="block text-xs font-bold uppercase text-stone-700">Sync & Broadcast To:</span>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" id="syncWebsite" checked disabled class="rounded text-boutiqueTeal"> Website Catalog
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" id="syncFbShop" checked class="rounded text-boutiqueTeal"> Facebook Shop
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" id="syncInsta" checked class="rounded text-boutiqueTeal"> Instagram
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-3 pt-3 border-t border-stone-200">
+                    <button type="button" onclick="closePublisherModal()" class="px-4 py-2 rounded-lg text-sm font-semibold text-stone-600 hover:bg-stone-100 transition">Cancel</button>
+                    <button type="submit" class="px-5 py-2 rounded-lg text-sm font-bold bg-boutiqueTeal hover:bg-teal-700 text-white transition shadow">Publish Item</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ITEM DETAIL LIGHTBOX MODAL -->
+    <div id="detailModal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 hidden backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl border border-stone-200 flex flex-col md:flex-row">
+            <div class="md:w-1/2 bg-stone-100 h-64 md:h-auto relative">
+                <img id="detailImg" src="" alt="Item preview" class="w-full h-full object-cover">
+                <span id="detailStatusBadge" class="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full shadow"></span>
+            </div>
+            <div class="md:w-1/2 p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start gap-2">
+                        <span id="detailCategory" class="text-xs font-bold uppercase tracking-wider text-boutiqueTeal"></span>
+                        <button onclick="closeDetailModal()" class="text-stone-400 hover:text-stone-700"><i class="fa-solid fa-xmark text-lg"></i></button>
+                    </div>
+                    <h3 id="detailTitle" class="text-2xl font-bold text-stone-800 mt-1"></h3>
+                    <p id="detailPrice" class="text-xl font-bold text-amber-700 mt-2"></p>
+                    <p id="detailDesc" class="text-sm text-stone-600 mt-4 leading-relaxed"></p>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-stone-200 flex flex-col gap-3">
+                    <div class="flex items-center gap-2 text-xs text-stone-500">
+                        <i class="fa-solid fa-share-nodes text-boutiqueTeal"></i> Synced to Facebook Shop & Instagram
+                    </div>
+                    <a href="tel:7075995811" class="w-full bg-boutiqueTeal hover:bg-teal-700 text-white text-center py-2.5 rounded-lg font-bold text-sm transition shadow">
+                        <i class="fa-solid fa-phone"></i> Call to Claim Item
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 text-sm mt-12 py-8 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div>
+                <h4 class="text-white font-bold text-base brand-font">Unique Boutique Willow Creek</h4>
+                <p class="text-xs text-stone-400 mt-1">111 Mayfair St, Willow Creek, CA, United States, California</p>
+                <p class="text-xs text-stone-400">Phone: (707) 599-5811 | Email: uniqueboutiquewillowcreek@gmail.com</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-pink-600 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="tel:7075995811" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-boutiqueTeal hover:text-white flex items-center justify-center transition"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 mt-6 border-t border-stone-800 text-center text-xs text-stone-400">
+            &copy; 2026 Unique Boutique Willow Creek. All estate treasures and vintage collections reserved.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initial Inventory matching the photos provided (Store aesthetic, Bigfoot shirts, vintage slips, Fiestaware, crocks, decor)
+        let inventory = JSON.parse(localStorage.getItem('ub_inventory')) || [
+            {
+                id: 1,
+                title: "Vintage Shabby Chic Lace Slip Dress",
+                category: "Women's Clothing",
+                price: "$48.00",
+                image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800",
+                desc: "Delicate vintage peach and ivory slip dresses and layering pieces hanging under our signature crystal chandelier.",
+                status: "current"
+            },
+            {
+                id: 2,
+                title: "Bigfoot Hawaiian Tropical Novelty Shirt",
+                category: "Bigfoot & Novelty",
+                price: "$36.00",
+                image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
+                desc: "Our famous Bigfoot tropical patterned button-down shirts, spotted right outside on our boutique porch display!",
+                status: "current"
+            },
+            {
+                id: 3,
+                title: "Authentic German Gärtopf 7.5L Stoneware Crock",
+                category: "Vintage Kitchenware",
+                price: "$85.00",
+                image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800",
+                desc: "Original system Harsch Gärtopf brown stoneware crock in pristine vintage estate condition.",
+                status: "current"
+            },
+            {
+                id: 4,
+                title: "Vintage Green, Yellow & Purple Fiestaware Set",
+                category: "Vintage Kitchenware",
+                price: "$65.00",
+                image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800",
+                desc: "A stunning stack of vibrant vintage plates and matching green cups sourced from a local estate sale.",
+                status: "current"
+            },
+            {
+                id: 5,
+                title: "Glitz & Glam Crystal Chandelier Accent Decor",
+                category: "Gifts & Collectibles",
+                price: "$120.00",
+                image: "https://images.unsplash.com/photo-1543248938-16a4e405a17a?auto=format&fit=crop&q=80&w=800",
+                desc: "Exquisite hanging crystal lighting and decorative interior pieces from our boutique turquoise showroom.",
+                status: "current"
+            },
+            {
+                id: 6,
+                title: "Men's Vintage Flannel & Casual Layering Shirt",
+                category: "Men's Clothing",
+                price: "$32.00",
+                image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=800",
+                desc: "Comfortable flannel and outdoor casual button-downs curated for everyday Willow Creek adventures.",
+                status: "current"
+            },
+            {
+                id: 7,
+                title: "Estate Rhinestone & Pearl Statement Necklace",
+                category: "Jewelry & Glam",
+                price: "$45.00",
+                image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800",
+                desc: "Sparkling vintage glitz and glam costume jewelry piece in excellent preserved condition.",
+                status: "past"
+            }
+        ];
+
+        let currentCategory = 'All';
+        let currentStatusFilter = 'all';
+
+        function renderInventory() {
+            const grid = document.getElementById('inventoryGrid');
+            const emptyState = document.getElementById('emptyState');
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+
+            grid.innerHTML = '';
+
+            const filtered = inventory.filter(item => {
+                const matchesCategory = (currentCategory === 'All' || item.category === currentCategory);
+                const matchesStatus = (currentStatusFilter === 'all' || item.status === currentStatusFilter);
+                const matchesSearch = item.title.toLowerCase().includes(searchQuery) || item.desc.toLowerCase().includes(searchQuery) || item.category.toLowerCase().includes(searchQuery);
+                return matchesCategory && matchesStatus && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition flex flex-col justify-between group cursor-pointer";
+                card.onclick = () => openDetailModal(item);
+
+                const statusBadge = item.status === 'current' 
+                    ? '<span class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">In Store Now</span>'
+                    : '<span class="bg-stone-600 text-stone-200 text-xs font-bold px-2.5 py-1 rounded-full shadow">Past Treasure</span>';
+
+                card.innerHTML = `
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <div class="absolute top-3 right-3">${statusBadge}</div>
+                        <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-bold text-stone-700">
+                            ${item.category}
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-stone-800 group-hover:text-boutiqueTeal transition">${item.title}</h3>
+                            <p class="text-sm text-stone-600 mt-2 line-clamp-2">${item.desc}</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-4 pt-4 border-t border-stone-100">
+                            <span class="text-lg font-bold text-amber-700">${item.price}</span>
+                            <span class="text-xs font-semibold text-boutiqueTeal flex items-center gap-1">
+                                View Details <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCategory(category) {
+            currentCategory = category;
+            document.querySelectorAll('.category-pill').forEach(btn => {
+                if (btn.id === `cat-${category}`) {
+                    btn.className = "category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-boutiqueDarkTeal text-white transition shadow-sm";
+                } else {
+                    btn.className = "category-pill whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-stone-600 border border-stone-300 hover:bg-stone-100 transition";
+                }
+            });
+            renderInventory();
+        }
+
+        function setStatusFilter(status) {
+            currentStatusFilter = status;
+            ['all', 'current', 'past'].forEach(s => {
+                const tab = document.getElementById(`tab-${s}`);
+                if (s === status) {
+                    tab.className = "flex-1 md:flex-initial px-4 py-1.5 rounded-md bg-white text-boutiqueDarkTeal shadow-sm font-bold transition";
+                } else {
+                    tab.className = "flex-1 md:flex-initial px-4 py-1.5 rounded-md text-stone-600 hover:text-stone-900 transition";
+                }
+            });
+            renderInventory();
+        }
+
+        function filterInventory() {
+            renderInventory();
+        }
+
+        // Publisher Modal Control
+        function openPublisherModal() {
+            document.getElementById('publisherModal').classList.remove('hidden');
+        }
+
+        function closePublisherModal() {
+            document.getElementById('publisherModal').classList.add('hidden');
+            document.getElementById('publishForm').reset();
+        }
+
+        function handlePublish(e) {
+            e.preventDefault();
+            const title = document.getElementById('newItemTitle').value;
+            const category = document.getElementById('newItemCategory').value;
+            const price = document.getElementById('newItemPrice').value;
+            const image = document.getElementById('newItemImage').value;
+            const desc = document.getElementById('newItemDesc').value;
+            const status = document.getElementById('newItemStatus').value;
+
+            const newItem = {
+                id: Date.now(),
+                title,
+                category,
+                price: price.startsWith('$') ? price : '$' + price,
+                image,
+                desc,
+                status
+            };
+
+            inventory.unshift(newItem);
+            localStorage.setItem('ub_inventory', JSON.stringify(inventory));
+            
+            renderInventory();
+            closePublisherModal();
+
+            // Success feedback
+            alert('Success! Item posted to your Website, Facebook Shop, and Instagram feed!');
+        }
+
+        // Detail Modal Control
+        function openDetailModal(item) {
+            document.getElementById('detailImg').src = item.image;
+            document.getElementById('detailTitle').innerText = item.title;
+            document.getElementById('detailCategory').innerText = item.category;
+            document.getElementById('detailPrice').innerText = item.price;
+            document.getElementById('detailDesc').innerText = item.desc;
+            
+            const badge = document.getElementById('detailStatusBadge');
+            if(item.status === 'current') {
+                badge.className = "absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full shadow bg-emerald-600 text-white";
+                badge.innerText = "In Store Now";
+            } else {
+                badge.className = "absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full shadow bg-stone-600 text-stone-200";
+                badge.innerText = "Past Treasure";
+            }
+
+            document.getElementById('detailModal').classList.remove('hidden');
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+        }
+
+        // Initial load
+        window.onload = () => {
+            renderInventory();
+        };
+    </script>
+</body>
+</html>
