@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Boutique Willow Creek - Estate Sales & Curiosities</title>
+    <title>Unique Boutique Willow Creek - Estate Ledger & Curiosities</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,12 +11,12 @@
             theme: {
                 extend: {
                     colors: {
-                        curioAged: '#F7F4EB',
-                        curioDark: '#2C221E',
-                        curioGreen: '#3B4E44',
-                        curioGold: '#C59B27',
-                        curioRust: '#A34828',
-                        curioCream: '#FFFDF9'
+                        ledgerPaper: '#FBF9F1',
+                        ledgerInk: '#221E1B',
+                        ledgerGreen: '#2D4A3E',
+                        ledgerRust: '#9E3C24',
+                        ledgerGold: '#C28E38',
+                        ledgerRule: '#E5DEC9'
                     }
                 }
             }
@@ -24,145 +24,155 @@
     </script>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Classic Editorial & Typewriter look -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Courier+Prime&display=swap" rel="stylesheet">
+    <!-- Google Fonts for antique ledger/typewriter flavor -->
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,500;1,400&family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Newsreader', serif;
-            background-color: #F7F4EB;
-            color: #2C221E;
+            font-family: 'Libre Baskerville', serif;
+            background-color: #FBF9F1;
+            /* Subtle ledger line pattern */
+            background-image: linear-gradient(#E5DEC9 1px, transparent 1px);
+            background-size: 100% 28px;
+            color: #221E1B;
         }
-        h1, h2, h3, .heading-font {
-            font-family: 'Cinzel', serif;
+        h1, h2, h3, .ledger-title {
+            font-family: 'IM Fell English SC', serif;
+            letter-spacing: 0.05em;
         }
-        .code-font {
-            font-family: 'Courier Prime', monospace;
+        .typewriter {
+            font-family: 'Special Elite', monospace;
         }
-        /* Antique double-border frame effect */
-        .curio-frame {
-            border: 3px double #3B4E44;
+        .handwritten {
+            font-family: 'Shantell Sans', cursive;
+        }
+        /* Antique tag hanging effect */
+        .price-tag {
+            background: #FFFDF9;
+            border: 2px dashed #C28E38;
+            box-shadow: 2px 3px 8px rgba(0,0,0,0.06);
+            transition: all 0.2s ease;
+        }
+        .price-tag:hover {
+            transform: translateY(-3px) rotate(0.5deg);
+            box-shadow: 4px 6px 14px rgba(0,0,0,0.12);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-curioRust selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-ledgerRust selection:text-white">
 
-    <!-- TOP HEADER / GENERAL STORE BANNER -->
-    <header class="bg-curioDark text-curioAged border-b-4 border-curioGold shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <!-- Branding -->
-                <div class="text-center md:text-left">
-                    <span class="text-xs uppercase tracking-[0.25em] text-curioGold font-semibold block mb-1">
-                        Est. Local Treasure Trove &bull; Willow Creek, CA
-                    </span>
-                    <h1 class="text-3xl sm:text-5xl font-bold tracking-wider text-curioCream heading-font">
-                        Unique Boutique
-                    </h1>
-                    <p class="text-xs sm:text-sm text-stone-300 italic mt-1 font-light">
-                        "Gifts, glitz, glam, clothes, shoes, Bigfoot finds, and curated curiosities."
-                    </p>
-                </div>
-                
-                <!-- Quick Contact & Admin Publisher Trigger -->
-                <div class="flex flex-wrap justify-center gap-2.5">
-                    <a href="https://sydneyballam.github.io/webdesign/" class="bg-stone-800 hover:bg-stone-700 text-stone-300 px-3.5 py-2 rounded text-xs font-semibold tracking-wider uppercase transition border border-stone-600 flex items-center gap-1.5">
-                        <i class="fa-solid fa-arrow-left"></i> Hub
-                    </a>
-                    <a href="tel:7075995811" class="bg-curioGreen hover:bg-emerald-900 text-curioCream px-4 py-2 rounded text-xs font-semibold tracking-wider uppercase transition border border-emerald-700 flex items-center gap-2">
-                        <i class="fa-solid fa-phone"></i> (707) 599-5811
-                    </a>
-                    <button onclick="openPublisherModal()" class="bg-curioRust hover:bg-red-900 text-white px-4 py-2 rounded text-xs font-bold tracking-wider uppercase transition shadow-md flex items-center gap-2">
-                        <i class="fa-solid fa-plus-circle"></i> Add New Find
-                    </button>
-                </div>
+    <!-- HEADER: ANTIQUE SHOP SIGNBOARD -->
+    <header class="bg-ledgerGreen text-ledgerPaper border-b-6 border-ledgerGold shadow-md pt-6 pb-6">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="text-center md:text-left">
+                <span class="handwritten text-ledgerGold text-sm block mb-1">
+                    ~ Est. 2023 &bull; 111 Mayfair St, Willow Creek, CA ~
+                </span>
+                <h1 class="text-4xl sm:text-6xl font-bold text-ledgerPaper ledger-title drop-shadow">
+                    Unique Boutique
+                </h1>
+                <p class="typewriter text-xs sm:text-sm text-stone-300 mt-1">
+                    [ Local Estate Treasures, Vintage Apparel, Glam & Curiosities ]
+                </p>
+            </div>
+            
+            <!-- Admin & Navigation Actions -->
+            <div class="flex flex-wrap justify-center gap-2">
+                <a href="https://sydneyballam.github.io/webdesign/" class="bg-stone-900/60 hover:bg-stone-900 text-stone-300 px-3 py-1.5 rounded text-xs typewriter uppercase transition border border-stone-600 flex items-center gap-1">
+                    <i class="fa-solid fa-arrow-left"></i> Hub
+                </a>
+                <a href="tel:7075995811" class="bg-ledgerRust hover:bg-red-900 text-white px-3.5 py-1.5 rounded text-xs typewriter uppercase transition border border-red-900 flex items-center gap-1.5 shadow">
+                    <i class="fa-solid fa-phone"></i> (707) 599-5811
+                </a>
+                <button onclick="openPublisherModal()" class="bg-ledgerGold hover:bg-amber-600 text-stone-950 px-4 py-1.5 rounded text-xs typewriter uppercase font-bold transition shadow flex items-center gap-1.5">
+                    <i class="fa-solid fa-feather"></i> Record New Find
+                </button>
             </div>
         </div>
     </header>
 
     <!-- MAIN APP CONTENT -->
-    <main class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 flex-grow w-full">
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
         
-        <!-- STOREFRONT ANNOUNCEMENT BANNER -->
-        <div class="bg-curioCream curio-frame p-6 sm:p-8 rounded-lg shadow-sm mb-10 relative overflow-hidden">
-            <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none select-none text-9xl">
-                <i class="fa-solid fa-gem"></i>
+        <!-- SHOP INTRO LEDGER NOTE -->
+        <div class="bg-white/90 border-2 border-ledgerGold p-6 rounded shadow-sm mb-8 relative">
+            <div class="absolute -top-3 right-6 bg-ledgerRust text-white text-[10px] typewriter px-3 py-0.5 rounded uppercase tracking-widest shadow">
+                Curator's Notes
             </div>
             <div class="max-w-3xl">
-                <span class="text-xs font-bold uppercase tracking-widest text-curioRust block mb-1">
-                    <i class="fa-solid fa-location-dot mr-1"></i> 111 Mayfair St, Willow Creek, California
-                </span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-curioDark heading-font mb-3">
-                    Curated Estate Sales & Shabby Chic Finds
+                <h2 class="text-2xl font-bold ledger-title text-ledgerGreen mb-2">
+                    Welcome to the Willow Creek Trove
                 </h2>
-                <p class="text-stone-700 text-base leading-relaxed font-light">
-                    Every piece in our shop tells a story. From vintage kitchenware and Fiestaware to retro apparel, jewelry, and occasional Bigfoot novelties—browse our active inventory below. Items posted here instantly syndicate to our Facebook Shop and Instagram feed!
+                <p class="text-stone-700 text-sm typewriter leading-relaxed">
+                    Hunting through local estate sales so you don't have to! Explore our revolving collection of vintage clothing, kitchenware, Fiestaware, jewelry, and unique novelties. Every entry here automatically syndicates to our Facebook Shop and Instagram feed.
                 </p>
             </div>
         </div>
 
-        <!-- CONTROLS: SEARCH & STATUS TABS -->
-        <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-6">
-            <!-- Search Bar -->
+        <!-- SEARCH & FILTER CONTROLS -->
+        <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 bg-ledgerRule/40 p-3 rounded border border-ledgerRule">
+            
+            <!-- Search -->
             <div class="relative flex-grow max-w-md">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-stone-500">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-stone-500">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
                 </span>
-                <input type="text" id="searchInput" oninput="filterInventory()" placeholder="Search clothes, kitchenware, glam..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-400 rounded focus:outline-none focus:border-curioGreen text-sm shadow-inner">
+                <input type="text" id="searchInput" oninput="filterInventory()" placeholder="Search ledger by keyword..." class="w-full pl-9 pr-4 py-2 bg-white border border-ledgerGold rounded text-xs typewriter focus:outline-none focus:ring-1 focus:ring-ledgerGreen shadow-inner">
             </div>
 
             <!-- Status Tabs -->
-            <div class="flex rounded bg-stone-300 p-1 border border-stone-400 text-xs font-semibold tracking-wider">
-                <button onclick="setStatusFilter('all')" id="tab-all" class="flex-1 md:flex-initial px-4 py-2 rounded bg-curioDark text-curioCream shadow transition">All Inventory</button>
-                <button onclick="setStatusFilter('current')" id="tab-current" class="flex-1 md:flex-initial px-4 py-2 rounded text-stone-700 hover:text-stone-900 transition">In Store Now</button>
-                <button onclick="setStatusFilter('past')" id="tab-past" class="flex-1 md:flex-initial px-4 py-2 rounded text-stone-700 hover:text-stone-900 transition">Past Treasures</button>
+            <div class="flex rounded bg-white p-1 border border-ledgerGold text-xs typewriter">
+                <button onclick="setStatusFilter('all')" id="tab-all" class="flex-1 md:flex-initial px-3 py-1.5 rounded bg-ledgerGreen text-white shadow transition">All Ledger Items</button>
+                <button onclick="setStatusFilter('current')" id="tab-current" class="flex-1 md:flex-initial px-3 py-1.5 rounded text-stone-700 hover:text-stone-900 transition">In Store Now</button>
+                <button onclick="setStatusFilter('past')" id="tab-past" class="flex-1 md:flex-initial px-3 py-1.5 rounded text-stone-700 hover:text-stone-900 transition">Past Treasures</button>
             </div>
         </div>
 
-        <!-- CATEGORY PILLS -->
+        <!-- CATEGORY TAG BUTTONS -->
         <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8">
-            <button onclick="filterCategory('All')" id="cat-All" class="category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-curioGreen text-curioCream shadow transition">All Categories</button>
-            <button onclick="filterCategory('Women\'s Clothing')" id="cat-Women's Clothing" class="category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-white text-stone-700 border border-stone-400 hover:bg-stone-100 transition">Women's Clothing</button>
-            <button onclick="filterCategory('Men\'s Clothing')" id="cat-Men's Clothing" class="category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-white text-stone-700 border border-stone-400 hover:bg-stone-100 transition">Men's Clothing</button>
-            <button onclick="filterCategory('Vintage Kitchenware')" id="cat-Vintage Kitchenware" class="category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-white text-stone-700 border border-stone-400 hover:bg-stone-100 transition">Vintage Kitchenware</button>
-            <button onclick="filterCategory('Jewelry & Glam')" id="cat-Jewelry & Glam" class="category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-white text-stone-700 border border-stone-400 hover:bg-stone-100 transition">Jewelry & Glam</button>
-            <button onclick="filterCategory('Bigfoot & Novelty')" id="cat-Bigfoot & Novelty" class="category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-white text-stone-700 border border-stone-400 hover:bg-stone-100 transition">Bigfoot & Novelty</button>
-            <button onclick="filterCategory('Gifts & Collectibles')" id="cat-Gifts & Collectibles" class="category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-white text-stone-700 border border-stone-400 hover:bg-stone-100 transition">Gifts & Collectibles</button>
+            <button onclick="filterCategory('All')" id="cat-All" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-ledgerGreen text-white shadow transition">All Categories</button>
+            <button onclick="filterCategory('Women\'s Clothing')" id="cat-Women's Clothing" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Women's Clothing</button>
+            <button onclick="filterCategory('Men\'s Clothing')" id="cat-Men's Clothing" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Men's Clothing</button>
+            <button onclick="filterCategory('Vintage Kitchenware')" id="cat-Vintage Kitchenware" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Vintage Kitchenware</button>
+            <button onclick="filterCategory('Jewelry & Glam')" id="cat-Jewelry & Glam" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Jewelry & Glam</button>
+            <button onclick="filterCategory('Bigfoot & Novelty')" id="cat-Bigfoot & Novelty" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Bigfoot & Novelty</button>
+            <button onclick="filterCategory('Gifts & Collectibles')" id="cat-Gifts & Collectibles" class="category-pill whitespace-nowrap px-3 py-1 rounded text-xs typewriter font-bold bg-white text-stone-700 border border-ledgerGold hover:bg-amber-50 transition">Gifts & Collectibles</button>
         </div>
 
-        <!-- INVENTORY CATALOG GRID -->
+        <!-- LEDGER INVENTORY GRID (TAG STYLE) -->
         <div id="inventoryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Dynamic Cards Injected via JavaScript -->
+            <!-- Dynamic Cards Injected Here -->
         </div>
 
         <!-- EMPTY STATE -->
-        <div id="emptyState" class="hidden text-center py-16 bg-curioCream curio-frame rounded-lg mt-4">
-            <i class="fa-solid fa-box-open text-4xl text-stone-400 mb-2"></i>
-            <h3 class="text-lg font-bold text-stone-800 heading-font">No items found</h3>
-            <p class="text-xs text-stone-500 code-font mt-1">Try adjusting your search criteria.</p>
+        <div id="emptyState" class="hidden text-center py-16 bg-white border border-ledgerGold rounded mt-4">
+            <i class="fa-solid fa-scroll text-4xl text-stone-400 mb-2"></i>
+            <h3 class="text-lg font-bold ledger-title text-stone-800">No Ledger Entries Found</h3>
+            <p class="text-xs typewriter text-stone-500 mt-1">Try clearing your search filters.</p>
         </div>
 
     </main>
 
-    <!-- PUBLISHER MODAL (ADMIN UPLOADER) -->
-    <div id="publisherModal" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-        <div class="bg-curioCream rounded-lg max-w-lg w-full p-6 shadow-2xl border-4 border-curioDark overflow-y-auto max-h-[90vh]">
-            <div class="flex justify-between items-center pb-3 border-b-2 border-stone-300 mb-4">
-                <h3 class="text-xl font-bold text-curioDark heading-font flex items-center gap-2">
-                    <i class="fa-solid fa-stamp text-curioRust"></i> Publish New Estate Item
+    <!-- PUBLISHER MODAL -->
+    <div id="publisherModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+        <div class="bg-ledgerPaper rounded-lg max-w-lg w-full p-6 shadow-2xl border-4 border-ledgerGreen overflow-y-auto max-h-[90vh]">
+            <div class="flex justify-between items-center pb-3 border-b-2 border-ledgerGold mb-4">
+                <h3 class="text-xl font-bold ledger-title text-ledgerGreen flex items-center gap-2">
+                    <i class="fa-solid fa-feather text-ledgerRust"></i> Record New Store Find
                 </h3>
-                <button onclick="closePublisherModal()" class="text-stone-500 hover:text-stone-900 font-bold text-lg px-2">×</button>
+                <button onclick="closePublisherModal()" class="text-stone-500 hover:text-stone-900 font-bold text-lg">×</button>
             </div>
 
-            <form id="publishForm" onsubmit="handlePublish(event)" class="space-y-4">
+            <form id="publishForm" onsubmit="handlePublish(event)" class="space-y-4 typewriter text-xs">
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Item Title</label>
-                    <input type="text" id="newItemTitle" required placeholder="e.g., Antique Fiestaware Platter" class="w-full px-3 py-2 bg-white border border-stone-400 rounded text-sm focus:outline-none focus:border-curioGreen">
+                    <label class="block font-bold uppercase text-stone-700 mb-1">Item Title</label>
+                    <input type="text" id="newItemTitle" required placeholder="e.g., Antique Fiestaware Platter" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Category</label>
-                        <select id="newItemCategory" class="w-full px-3 py-2 bg-white border border-stone-400 rounded text-sm focus:outline-none focus:border-curioGreen">
+                        <label class="block font-bold uppercase text-stone-700 mb-1">Category</label>
+                        <select id="newItemCategory" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
                             <option value="Women's Clothing">Women's Clothing</option>
                             <option value="Men's Clothing">Men's Clothing</option>
                             <option value="Vintage Kitchenware">Vintage Kitchenware</option>
@@ -172,67 +182,67 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Price</label>
-                        <input type="text" id="newItemPrice" required placeholder="e.g., $38.00" class="w-full px-3 py-2 bg-white border border-stone-400 rounded text-sm focus:outline-none focus:border-curioGreen">
+                        <label class="block font-bold uppercase text-stone-700 mb-1">Price</label>
+                        <input type="text" id="newItemPrice" required placeholder="e.g., $38.00" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Image URL</label>
-                    <input type="url" id="newItemImage" required placeholder="Paste direct photo link" class="w-full px-3 py-2 bg-white border border-stone-400 rounded text-sm focus:outline-none focus:border-curioGreen">
+                    <label class="block font-bold uppercase text-stone-700 mb-1">Image URL</label>
+                    <input type="url" id="newItemImage" required placeholder="Paste direct image link" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Description & History</label>
-                    <textarea id="newItemDesc" rows="3" required placeholder="Condition, size, estate find details..." class="w-full px-3 py-2 bg-white border border-stone-400 rounded text-sm focus:outline-none focus:border-curioGreen"></textarea>
+                    <label class="block font-bold uppercase text-stone-700 mb-1">Description & Details</label>
+                    <textarea id="newItemDesc" rows="3" required placeholder="Condition, size, estate background..." class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen"></textarea>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Status</label>
-                    <select id="newItemStatus" class="w-full px-3 py-2 bg-white border border-stone-400 rounded text-sm focus:outline-none focus:border-curioGreen">
+                    <label class="block font-bold uppercase text-stone-700 mb-1">Status</label>
+                    <select id="newItemStatus" class="w-full px-3 py-2 bg-white border border-ledgerGold rounded focus:outline-none focus:ring-1 focus:ring-ledgerGreen">
                         <option value="current">In Store Now (Active)</option>
                         <option value="past">Past Treasure (Sold)</option>
                     </select>
                 </div>
 
-                <div class="bg-stone-200 p-3 rounded border border-stone-400 space-y-1 text-xs font-semibold text-stone-700">
-                    <span class="block uppercase tracking-wider font-bold text-stone-900">Automatic Syndication:</span>
-                    <label class="flex items-center gap-2"><input type="checkbox" checked disabled> Website Catalog</label>
+                <div class="bg-amber-50 p-3 rounded border border-ledgerGold space-y-1 text-stone-700">
+                    <span class="block font-bold uppercase">Automated Syndication:</span>
+                    <label class="flex items-center gap-2"><input type="checkbox" checked disabled> Website Ledger</label>
                     <label class="flex items-center gap-2"><input type="checkbox" id="syncFb" checked> Facebook Shop</label>
                     <label class="flex items-center gap-2"><input type="checkbox" id="syncIg" checked> Instagram Feed</label>
                 </div>
 
                 <div class="flex justify-end gap-3 pt-2">
-                    <button type="button" onclick="closePublisherModal()" class="px-4 py-2 rounded text-sm font-semibold text-stone-600 hover:bg-stone-300">Cancel</button>
-                    <button type="submit" class="px-5 py-2 rounded text-sm font-bold uppercase tracking-wider bg-curioGreen text-curioCream shadow hover:bg-emerald-900">Publish Item</button>
+                    <button type="button" onclick="closePublisherModal()" class="px-4 py-2 rounded font-bold text-stone-600 hover:bg-stone-200">Cancel</button>
+                    <button type="submit" class="px-5 py-2 rounded font-bold bg-ledgerGreen text-ledgerPaper shadow hover:bg-emerald-900">Record & Post</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- ITEM DETAIL LIGHTBOX -->
-    <div id="detailModal" class="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-        <div class="bg-curioCream rounded-lg max-w-2xl w-full overflow-hidden shadow-2xl curio-frame flex flex-col md:flex-row">
-            <div class="md:w-1/2 bg-stone-300 h-64 md:h-auto relative p-4 flex items-center justify-center">
-                <img id="detailImg" src="" alt="Item preview" class="w-full h-full object-cover rounded border border-stone-400 shadow">
-                <span id="detailStatusBadge" class="absolute top-6 left-6 text-xs font-bold px-3 py-1 rounded shadow"></span>
+    <!-- ITEM DETAIL MODAL -->
+    <div id="detailModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+        <div class="bg-ledgerPaper rounded-lg max-w-2xl w-full overflow-hidden shadow-2xl border-4 border-ledgerGreen flex flex-col md:flex-row">
+            <div class="md:w-1/2 bg-stone-200 h-64 md:h-auto relative p-4 flex items-center justify-center">
+                <img id="detailImg" src="" alt="Item preview" class="w-full h-full object-cover rounded border border-ledgerGold shadow">
+                <span id="detailStatusBadge" class="absolute top-6 left-6 text-[10px] typewriter font-bold uppercase px-2.5 py-1 rounded shadow"></span>
             </div>
             <div class="md:w-1/2 p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start">
-                        <span id="detailCategory" class="text-xs font-bold uppercase tracking-wider text-curioRust"></span>
+                        <span id="detailCategory" class="text-xs typewriter font-bold uppercase text-ledgerRust"></span>
                         <button onclick="closeDetailModal()" class="text-stone-500 hover:text-stone-900 font-bold text-lg">×</button>
                     </div>
-                    <h3 id="detailTitle" class="text-2xl font-bold text-stone-900 heading-font mt-1"></h3>
-                    <p id="detailPrice" class="text-xl font-bold text-curioRust mt-2"></p>
-                    <p id="detailDesc" class="text-sm text-stone-700 code-font mt-4 leading-relaxed"></p>
+                    <h3 id="detailTitle" class="text-2xl font-bold ledger-title text-stone-900 mt-1"></h3>
+                    <p id="detailPrice" class="text-xl font-bold typewriter text-ledgerRust mt-2"></p>
+                    <p id="detailDesc" class="text-xs typewriter text-stone-700 mt-4 leading-relaxed"></p>
                 </div>
 
-                <div class="mt-6 pt-4 border-t-2 border-stone-300 flex flex-col gap-3">
-                    <div class="text-xs text-stone-500 flex items-center gap-1.5 font-semibold">
-                        <i class="fa-solid fa-share-nodes text-curioGreen"></i> Synced to Facebook Shop & Instagram
+                <div class="mt-6 pt-4 border-t-2 border-ledgerGold flex flex-col gap-3">
+                    <div class="text-[11px] typewriter text-stone-500 flex items-center gap-1">
+                        <i class="fa-solid fa-satellite-dish text-ledgerGreen"></i> Synced to Facebook Shop & Instagram
                     </div>
-                    <a href="tel:7075995811" class="w-full bg-curioGreen hover:bg-emerald-900 text-curioCream text-center py-2.5 rounded font-bold text-xs uppercase tracking-wider transition shadow flex items-center justify-center gap-2">
+                    <a href="tel:7075995811" class="w-full bg-ledgerGreen hover:bg-emerald-900 text-ledgerPaper text-center py-2.5 rounded text-xs typewriter uppercase font-bold transition shadow flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone"></i> Call (707) 599-5811 to Claim
                     </a>
                 </div>
@@ -241,27 +251,27 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-curioDark text-stone-400 text-xs mt-16 py-8 border-t-4 border-curioGold">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+    <footer class="bg-ledgerGreen text-stone-300 text-xs mt-16 py-8 border-t-4 border-ledgerGold typewriter">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <div>
-                <h4 class="text-curioCream font-bold text-sm heading-font">Unique Boutique Willow Creek</h4>
-                <p class="mt-0.5 text-stone-300 font-light">111 Mayfair St, Willow Creek, CA, United States</p>
-                <p class="text-stone-300 font-light">Phone: (707) 599-5811 | Email: uniqueboutiquewillowcreek@gmail.com</p>
+                <h4 class="text-ledgerPaper font-bold text-sm ledger-title">Unique Boutique Willow Creek</h4>
+                <p class="mt-0.5 text-stone-300">111 Mayfair St, Willow Creek, CA, United States</p>
+                <p class="text-stone-300">Phone: (707) 599-5811 | Email: uniqueboutiquewillowcreek@gmail.com</p>
             </div>
             <div class="flex gap-3">
-                <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded bg-stone-800 hover:bg-blue-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded bg-stone-800 hover:bg-pink-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="tel:7075995811" class="w-8 h-8 rounded bg-stone-800 hover:bg-curioGreen text-white flex items-center justify-center transition"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded bg-stone-900 hover:bg-blue-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded bg-stone-900 hover:bg-pink-600 text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="tel:7075995811" class="w-8 h-8 rounded bg-stone-900 hover:bg-ledgerGold text-stone-950 flex items-center justify-center transition"><i class="fa-solid fa-phone"></i></a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 pt-4 mt-4 border-t border-stone-800 text-center text-stone-500 font-light">
-            &copy; 2026 Unique Boutique Willow Creek. All estate findings and curiosities reserved.
+        <div class="max-w-6xl mx-auto px-4 pt-4 mt-4 border-t border-ledgerGreen/80 text-center text-stone-400">
+            &copy; 2026 Unique Boutique Willow Creek. All estate ledgers and curiosities reserved.
         </div>
     </footer>
 
     <!-- SCRIPT LOGIC -->
     <script>
-        let inventory = JSON.parse(localStorage.getItem('ub_curio_v3')) || [
+        let inventory = JSON.parse(localStorage.getItem('ub_ledger_v4')) || [
             {
                 id: 1,
                 title: "Vintage Shabby Chic Lace Slip Dress",
@@ -344,129 +354,13 @@
 
             filtered.forEach(item => {
                 const card = document.createElement('div');
-                card.className = "bg-curioCream rounded-lg overflow-hidden border border-stone-400 shadow-md hover:shadow-xl transition flex flex-col justify-between group cursor-pointer";
+                card.className = "price-tag p-4 rounded flex flex-col justify-between cursor-pointer";
                 card.onclick = () => openDetailModal(item);
 
                 const statusBadge = item.status === 'current' 
-                    ? '<span class="bg-curioGreen text-curioCream text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow">In Store Now</span>'
-                    : '<span class="bg-stone-600 text-stone-200 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded shadow">Past Treasure</span>';
+                    ? '<span class="bg-ledgerGreen text-white text-[10px] typewriter font-bold uppercase px-2 py-0.5 rounded shadow">In Store Now</span>'
+                    : '<span class="bg-stone-600 text-stone-200 text-[10px] typewriter font-bold uppercase px-2 py-0.5 rounded shadow">Past Treasure</span>';
 
                 card.innerHTML = `
                     <div>
-                        <div class="relative h-56 bg-stone-200 overflow-hidden border-b border-stone-300">
-                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <div class="absolute top-3 right-3">${statusBadge}</div>
-                            <div class="absolute bottom-3 left-3 bg-curioCream/95 px-2.5 py-1 rounded text-[11px] font-bold uppercase tracking-wider text-stone-800 border border-stone-300">
-                                ${item.category}
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg text-stone-900 heading-font leading-snug group-hover:text-curioRust transition">${item.title}</h3>
-                            <p class="text-xs text-stone-600 code-font mt-2 line-clamp-2">${item.desc}</p>
-                        </div>
-                    </div>
-                    <div class="p-5 pt-0 flex items-center justify-between mt-2">
-                        <span class="text-lg font-bold text-curioRust">${item.price}</span>
-                        <span class="text-xs font-bold uppercase tracking-wider text-curioGreen flex items-center gap-1 group-hover:underline">
-                            Inspect Find <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                        </span>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function filterCategory(category) {
-            currentCategory = category;
-            document.querySelectorAll('.category-pill').forEach(btn => {
-                if (btn.id === `cat-${category}`) {
-                    btn.className = "category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-curioGreen text-curioCream shadow transition";
-                } else {
-                    btn.className = "category-pill whitespace-nowrap px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wider bg-white text-stone-700 border border-stone-400 hover:bg-stone-100 transition";
-                }
-            });
-            renderInventory();
-        }
-
-        function setStatusFilter(status) {
-            currentStatusFilter = status;
-            ['all', 'current', 'past'].forEach(s => {
-                const tab = document.getElementById(`tab-${s}`);
-                if (s === status) {
-                    tab.className = "flex-1 md:flex-initial px-4 py-2 rounded bg-curioDark text-curioCream shadow transition";
-                } else {
-                    tab.className = "flex-1 md:flex-initial px-4 py-2 rounded text-stone-700 hover:text-stone-900 transition";
-                }
-            });
-            renderInventory();
-        }
-
-        function filterInventory() {
-            renderInventory();
-        }
-
-        function openPublisherModal() {
-            document.getElementById('publisherModal').classList.remove('hidden');
-        }
-
-        function closePublisherModal() {
-            document.getElementById('publisherModal').classList.add('hidden');
-            document.getElementById('publishForm').reset();
-        }
-
-        function handlePublish(e) {
-            e.preventDefault();
-            const title = document.getElementById('newItemTitle').value;
-            const category = document.getElementById('newItemCategory').value;
-            const price = document.getElementById('newItemPrice').value;
-            const image = document.getElementById('newItemImage').value;
-            const desc = document.getElementById('newItemDesc').value;
-            const status = document.getElementById('newItemStatus').value;
-
-            const newItem = {
-                id: Date.now(),
-                title,
-                category,
-                price: price.startsWith('$') ? price : '$' + price,
-                image,
-                desc,
-                status
-            };
-
-            inventory.unshift(newItem);
-            localStorage.setItem('ub_curio_v3', JSON.stringify(inventory));
-            
-            renderInventory();
-            closePublisherModal();
-            alert('Success! Item posted to your Website Catalog, Facebook Shop, and Instagram feed.');
-        }
-
-        function openDetailModal(item) {
-            document.getElementById('detailImg').src = item.image;
-            document.getElementById('detailTitle').innerText = item.title;
-            document.getElementById('detailCategory').innerText = item.category;
-            document.getElementById('detailPrice').innerText = item.price;
-            document.getElementById('detailDesc').innerText = item.desc;
-            
-            const badge = document.getElementById('detailStatusBadge');
-            if(item.status === 'current') {
-                badge.className = "absolute top-6 left-6 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded shadow bg-curioGreen text-curioCream";
-                badge.innerText = "In Store Now";
-            } else {
-                badge.className = "absolute top-6 left-6 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded shadow bg-stone-600 text-stone-200";
-                badge.innerText = "Past Treasure";
-            }
-
-            document.getElementById('detailModal').classList.remove('hidden');
-        }
-
-        function closeDetailModal() {
-            document.getElementById('detailModal').classList.add('hidden');
-        }
-
-        window.onload = () => {
-            renderInventory();
-        };
-    </script>
-</body>
-</html>
+                        <div class="relative h-48 bg-stone-100 rounded border
