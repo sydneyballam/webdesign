@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Boutique - Forager's Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #F3F0EB; color: #33332D; font-family: 'Quicksand', sans-serif; }
+        .journal-page { background: #FCFAF7; border: 1px solid #D6CEBE; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-6 sm:p-10">
+
+    <header class="text-center max-w-3xl mx-auto mb-8">
+        <span class="text-xs uppercase tracking-[0.2em] text-emerald-800 font-bold">Willow Creek Woodland Finds</span>
+        <h1 class="text-4xl font-bold font-serif text-emerald-950 mt-1">The Forager's Boutique Journal</h1>
+        <p class="text-xs text-stone-600 mt-1">111 Mayfair St &bull; (707) 599-5811</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto w-full journal-page rounded-2xl p-8 flex-grow">
+        <div class="flex justify-between items-center mb-6 pb-4 border-b border-stone-300 text-xs font-bold text-emerald-900">
+            <span>Section: Eco-Vintage & Botanical Finds</span>
+            <a href="https://sydneyballam.github.io/webdesign/" class="hover:underline text-stone-600">Hub Directory</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex gap-4 items-center bg-white p-4 rounded-xl border border-stone-200">
+                <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=300" class="w-28 h-28 object-cover rounded-lg border border-stone-300">
+                <div>
+                    <h3 class="font-bold font-serif text-emerald-950">Men's Vintage Flannel Utility Shirt</h3>
+                    <p class="text-xs text-stone-600 mt-1">Rugged organic flannel for forest trails.</p>
+                    <p class="text-sm font-bold text-emerald-800 mt-2">$32.00</p>
+                    <a href="tel:7075995811" class="inline-block mt-2 text-[11px] bg-emerald-900 text-white px-3 py-1 rounded">Claim Item</a>
+                </div>
+            </div>
+
+            <div class="flex gap-4 items-center bg-white p-4 rounded-xl border border-stone-200">
+                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=300" class="w-28 h-28 object-cover rounded-lg border border-stone-300">
+                <div>
+                    <h3 class="font-bold font-serif text-emerald-950">Shabby Chic Lace Slip Dress</h3>
+                    <p class="text-xs text-stone-600 mt-1">Delicate vintage cottagecore apparel.</p>
+                    <p class="text-sm font-bold text-emerald-800 mt-2">$48.00</p>
+                    <a href="tel:7075995811" class="inline-block mt-2 text-[11px] bg-emerald-900 text-white px-3 py-1 rounded">Claim Item</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center text-xs text-stone-500 mt-8">
+        &copy; 2026 Unique Boutique Willow Creek.
+    </footer>
+</body>
+</html>
