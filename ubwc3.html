@@ -15,8 +15,7 @@
                         magDark: '#1A1C1B',
                         magGold: '#B89753',
                         magMuted: '#6B706C',
-                        magBorder: '#D8D0C1',
-                        magBinding: '#E0D7C6'
+                        magBorder: '#D8D0C1'
                     }
                 }
             }
@@ -32,19 +31,42 @@
             background-color: #E2DBD0;
             color: #1A1C1B;
             overflow-x: hidden;
+            perspective: 2000px;
         }
         h1, h2, h3, .mag-serif {
             font-family: 'Playfair Display', serif;
         }
-        /* Book Binding Spine & Drop Shadow */
+        /* Realistic Book Container with 3D perspective */
         .magazine-book {
             background-color: #FAF6ED;
             border: 1px solid #D8D0C1;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-            background-image: linear-gradient(to right, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 3%, rgba(0,0,0,0) 97%, rgba(0,0,0,0.04) 100%);
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);
+            transform-style: preserve-3d;
         }
+        /* Centerfold Binding Spine */
+        .book-spine {
+            background: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.02) 0%,
+                rgba(0, 0, 0, 0.15) 48%,
+                rgba(255, 255, 255, 0.8) 50%,
+                rgba(0, 0, 0, 0.12) 52%,
+                rgba(0, 0, 0, 0.02) 100%
+            );
+            pointer-events: none;
+        }
+        /* Page Turn Animation Classes */
         .page-pane {
-            transition: transform 0.4s ease, opacity 0.4s ease;
+            transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.4s ease;
+            transform-origin: left center;
+        }
+        .page-flipping-forward {
+            transform: rotateY(-90deg);
+            opacity: 0;
+        }
+        .page-flipping-backward {
+            transform: rotateY(90deg);
+            opacity: 0;
         }
     </style>
 </head>
@@ -69,18 +91,21 @@
     <main class="max-w-6xl mx-auto w-full flex-grow flex flex-col justify-center">
         
         <!-- THE OPEN BOOK SPREAD -->
-        <div class="magazine-book rounded-sm min-h-[620px] grid grid-cols-1 lg:grid-cols-2 relative overflow-hidden">
+        <div class="magazine-book rounded-sm min-h-[640px] grid grid-cols-1 lg:grid-cols-2 relative overflow-hidden">
             
+            <!-- CENTERFOLD SPINE OVERLAY -->
+            <div class="hidden lg:block absolute inset-y-0 left-1/2 -translate-x-1/2 w-12 book-spine z-20"></div>
+
             <!-- LEFT PAGE (Click anywhere here to go Back) -->
-            <div onclick="prevSpread()" class="page-pane p-8 sm:p-12 border-b lg:border-b-0 lg:border-r border-magBinding flex flex-col justify-between cursor-pointer hover:bg-stone-50/40 transition group relative">
-                <div class="absolute top-2 left-4 text-[10px] text-magMuted italic">Click page to turn backward &larr;</div>
+            <div onclick="prevSpread()" class="page-pane p-8 sm:p-14 border-b lg:border-b-0 border-magBorder/60 flex flex-col justify-between cursor-pointer hover:bg-stone-50/20 transition group relative z-10">
+                <div class="absolute top-2 left-4 text-[10px] text-magMuted italic">&larr; Click page to turn backward</div>
                 <div id="leftPageContent" class="mt-4 flex-grow flex flex-col justify-center">
                     <!-- Injected Left Content -->
                 </div>
             </div>
 
             <!-- RIGHT PAGE (Click anywhere here to go Forward) -->
-            <div onclick="nextSpread()" class="page-pane p-8 sm:p-12 flex flex-col justify-between cursor-pointer hover:bg-stone-50/40 transition group relative">
+            <div onclick="nextSpread()" class="page-pane p-8 sm:p-14 flex flex-col justify-between cursor-pointer hover:bg-stone-50/20 transition group relative z-10">
                 <div class="absolute top-2 right-4 text-[10px] text-magMuted italic">Click page to turn forward &rarr;</div>
                 <div id="rightPageContent" class="mt-4 flex-grow flex flex-col justify-center">
                     <!-- Injected Right Content -->
@@ -101,9 +126,8 @@
         <p>&copy; 2026 Unique Boutique Willow Creek &bull; All Estate Records Reserved.</p>
     </footer>
 
-    <!-- MAGAZINE SPREAD ENGINE -->
+    <!-- MAGAZINE SPREAD & ANIMATION ENGINE -->
     <script>
-        // Data structured in 2-page spreads
         const spreads = [
             // SPREAD 0: COVER & TABLE OF CONTENTS
             {
@@ -254,44 +278,46 @@
 
         let currentSpread = 0;
 
-        function renderSpread() {
+        function renderSpread(direction = 'forward') {
             const spreadData = spreads[currentSpread];
             const leftEl = document.getElementById('leftPageContent');
             const rightEl = document.getElementById('rightPageContent');
             const indicator = document.getElementById('pageIndicator');
+            const panes = document.querySelectorAll('.page-pane');
 
-            // Fade out slightly for flip effect
-            leftEl.style.opacity = '0.3';
-            rightEl.style.opacity = '0.3';
+            // Apply page turn animation class
+            panes.forEach(pane => {
+                pane.classList.add(direction === 'forward' ? 'page-flipping-forward' : 'page-flipping-backward');
+            });
 
             setTimeout(() => {
                 leftEl.innerHTML = spreadData.left;
                 rightEl.innerHTML = spreadData.right;
                 indicator.innerText = `Spread ${String(currentSpread + 1).padStart(2, '0')} of ${String(spreads.length).padStart(2, '0')}`;
                 
-                leftEl.style.opacity = '1';
-                rightEl.style.opacity = '1';
-            }, 150);
+                // Remove animation class to swing back open smoothly
+                panes.forEach(pane => {
+                    pane.classList.remove('page-flipping-forward', 'page-flipping-backward');
+                });
+            }, 300);
         }
 
         function nextSpread() {
             if (currentSpread < spreads.length - 1) {
                 currentSpread++;
-                renderSpread();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                renderSpread('forward');
             }
         }
 
         function prevSpread() {
             if (currentSpread > 0) {
                 currentSpread--;
-                renderSpread();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                renderSpread('backward');
             }
         }
 
         window.onload = () => {
-            renderSpread();
+            renderSpread('forward');
         };
     </script>
 </body>
