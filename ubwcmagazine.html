@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: High-End Editorial Serif & Clean Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
+    <style>
         :root {
             --paper: #F7F5F0;
             --ink: #141716;
@@ -206,7 +206,7 @@
         </div>
         
         <div class="flex items-center gap-8 text-xs font-light">
-            <span id="pageIndicator" class="uppercase tracking-widest text-stone-400">Pages 01–02 of 08</span>
+            <span id="pageIndicator" class="uppercase tracking-widest text-stone-400">Pages 01–02 of 12</span>
             <a href="tel:7075995811" class="text-catalogGold hover:text-white transition flex items-center gap-2 uppercase tracking-wider font-medium">
                 <i class="fa-solid fa-phone text-xs"></i> (707) 599-5811
             </a>
@@ -254,17 +254,21 @@
                     </div>
                 `,
                 right: `
-                    <div class="py-4">
-                        <div class="border-b border-catalogDark pb-3 mb-6">
-                            <h2 class="editorial-serif text-2xl font-normal text-catalogDark">Index of Acquisitions</h2>
+                    <div class="py-2">
+                        <div class="border-b border-catalogDark pb-2 mb-4">
+                            <h2 class="editorial-serif text-xl font-normal text-catalogDark">Index of Acquisitions</h2>
                         </div>
-                        <ul class="space-y-4 text-xs tracking-wider">
-                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">01. Vintage Shabby Chic Lace Slip Dress</span><span class="text-catalogGold font-semibold">Page 03</span></li>
-                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">02. Bigfoot Tropical Hawaiian Shirt</span><span class="text-catalogGold font-semibold">Page 04</span></li>
-                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">03. 7.5L German Stoneware Gärtopf Crock</span><span class="text-catalogGold font-semibold">Page 05</span></li>
-                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">04. Retro Green & Yellow Fiestaware Stack</span><span class="text-catalogGold font-semibold">Page 06</span></li>
-                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">05. Men's Heavy Vintage Flannel Shirt</span><span class="text-catalogGold font-semibold">Page 07</span></li>
-                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">06. Estate Rhinestone & Pearl Necklace</span><span class="text-catalogGold font-semibold">Page 08</span></li>
+                        <ul class="space-y-2.5 text-[11px] tracking-wider">
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">01. Vintage Shabby Chic Lace Slip Dress</span><span class="text-catalogGold font-semibold">Page 03</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">02. Bigfoot Tropical Hawaiian Shirt</span><span class="text-catalogGold font-semibold">Page 04</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">03. 7.5L German Stoneware Gärtopf Crock</span><span class="text-catalogGold font-semibold">Page 05</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">04. Retro Green & Yellow Fiestaware Stack</span><span class="text-catalogGold font-semibold">Page 06</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">05. Men's Heavy Vintage Flannel Shirt</span><span class="text-catalogGold font-semibold">Page 07</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">06. Estate Rhinestone & Pearl Necklace</span><span class="text-catalogGold font-semibold">Page 08</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">07. Handcrafted Turned Wooden Spoons</span><span class="text-catalogGold font-semibold">Page 09</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">08. Main Gallery Interior Showcase</span><span class="text-catalogGold font-semibold">Page 10</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">09. Historic Storefront & Porch Displays</span><span class="text-catalogGold font-semibold">Page 11</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-1.5"><span class="font-medium text-catalogDark">10. Kitchen & Tabletop Relics Showcase</span><span class="text-catalogGold font-semibold">Page 12</span></li>
                         </ul>
                     </div>
                 `
@@ -373,6 +377,76 @@
                         </div>
                     </div>
                 `
+            },
+            // SPREAD 4: NEW USER IMAGES (WOODEN SPOONS & GALLERY INTERIOR)
+            {
+                leftPageNo: "Page 09",
+                rightPageNo: "Page 10",
+                left: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="747290159_1498424498752718_162837459819643237_n.jpg" alt="Handcrafted turned wooden spoons" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-900 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Available</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Handcrafted Relics // Item 07</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Handcrafted Turned Wooden Spoons</h3>
+                            <p class="text-sm font-semibold text-catalogDark">$28.00–$42.00</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Exquisitely turned natural wood utility spoons displayed in vintage kitchen crock ware.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Inquire to Claim</a>
+                        </div>
+                    </div>
+                `,
+                right: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="722131973_1474481534480348_4879190953823632860_n.jpg" alt="Main gallery interior showcase" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-catalogGold text-stone-950 text-[9px] uppercase tracking-widest px-2.5 py-1 font-bold">Gallery View</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Boutique Interior // Showcase</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Main Gallery Interior & Curiosities</h3>
+                            <p class="text-sm font-semibold text-catalogDark">111 Mayfair St, Willow Creek</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">A glimpse inside our curated shop featuring vintage apparel, chandeliers, and fine collectibles.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Visit Gallery</a>
+                        </div>
+                    </div>
+                `
+            },
+            // SPREAD 5: STOREFRONT & KITCHEN DISPLAY
+            {
+                leftPageNo: "Page 11",
+                rightPageNo: "Page 12",
+                left: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="732477656_1484139433514558_1292513039028722344_n.jpg" alt="Unique Boutique storefront" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-catalogGold text-stone-950 text-[9px] uppercase tracking-widest px-2.5 py-1 font-bold">Storefront</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Location // Exterior</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Unique Boutique Storefront</h3>
+                            <p class="text-sm font-semibold text-catalogDark">Willow Creek, CA</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Our charming roadside shop featuring porch displays and local treasure displays.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Contact Store</a>
+                        </div>
+                    </div>
+                `,
+                right: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="746156141_1498425088752659_3323959444468977221_n.jpg" alt="Kitchen and tabletop relics" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-900 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Available</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Kitchenware // Showcase</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Kitchen & Tabletop Relics Display</h3>
+                            <p class="text-sm font-semibold text-catalogDark">In-Store Collection</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Featuring glazed stoneware crocks, Fiestaware sets, and hand-painted fruit kitchen art.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Inquire to Claim</a>
+                        </div>
+                    </div>
+                `
             }
         ];
 
@@ -384,8 +458,6 @@
         const footerNext = document.getElementById('footerNext');
         const allPages = [];
 
-        // Convert the editorial spread data into eight individual pages. The page-flip
-        // engine bends each page as a canvas-backed sheet and supports corner dragging.
         spreads.forEach((spread, spreadIndex) => {
             const pages = [
                 { content: spread.left, number: spread.leftPageNo, side: 'left', spreadIndex },
@@ -416,91 +488,4 @@
             currentPage = Math.max(0, Math.min(pageIndex, pageCount - 1));
             const first = currentPage % 2 === 0 ? currentPage + 1 : currentPage;
             const second = Math.min(first + 1, pageCount);
-            indicator.textContent = `Pages ${String(first).padStart(2, '0')}–${String(second).padStart(2, '0')} of ${String(pageCount).padStart(2, '0')}`;
-            const atStart = currentPage <= 0;
-            const atEnd = currentPage >= pageCount - 2;
-            prevMargin.disabled = atStart;
-            footerPrev.disabled = atStart;
-            nextMargin.disabled = atEnd;
-            footerNext.disabled = atEnd;
-            prevMargin.setAttribute('aria-label', atStart ? 'Already at the beginning' : 'Turn to previous page');
-            nextMargin.setAttribute('aria-label', atEnd ? 'Already at the end' : 'Turn to next page');
-        }
-
-        function previousPage() {
-            if (pageFlip && currentPage > 0) pageFlip.flipPrev('top');
-        }
-        function nextPage() {
-            if (pageFlip && currentPage < pageCount - 2) pageFlip.flipNext('top');
-        }
-
-        // PageFlip handles the page mesh, curl, reverse side, dynamic shadows,
-        // touch/mouse dragging, and the settling animation after a release.
-        if (window.St && window.St.PageFlip) {
-            pageFlip = new St.PageFlip(bookEl, {
-                width: 540,
-                height: 680,
-                size: 'stretch',
-                minWidth: 280,
-                maxWidth: 1080,
-                minHeight: 360,
-                maxHeight: 1360,
-                autoSize: true,
-                maxShadowOpacity: 0.52,
-                showCover: false,
-                mobileScrollSupport: true,
-                flippingTime: 1050,
-                usePortrait: true,
-                startPage: 0,
-                drawShadow: true,
-                startZIndex: 10,
-                useMouseEvents: true,
-                clickEventForward: true,
-                swipeDistance: 30,
-                showPageCorners: true,
-                disableFlipByClick: false
-            });
-            pageFlip.loadFromHTML(allPages);
-            pageFlip.on('flip', event => updateNavigation(event.data));
-            pageFlip.on('changeState', event => {
-                bookEl.classList.toggle('is-flipping', event.data === 'flipping');
-            });
-            updateNavigation(0);
-        } else {
-            // Graceful fallback if the page-curl library cannot load: display the
-            // catalog as a normal paginated stack with simple previous/next controls.
-            let fallbackIndex = 0;
-            function showFallbackPage() {
-                allPages.forEach((page, index) => {
-                    page.style.display = index === fallbackIndex || index === fallbackIndex + 1 ? 'block' : 'none';
-                    page.style.width = '100%';
-                    page.style.height = 'auto';
-                    page.style.minHeight = '620px';
-                });
-                bookEl.style.width = '100%';
-                bookEl.style.maxWidth = '700px';
-                bookEl.style.display = 'grid';
-                bookEl.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
-                updateNavigation(fallbackIndex);
-            }
-            prevMargin.addEventListener('click', () => { fallbackIndex = Math.max(0, fallbackIndex - 2); showFallbackPage(); });
-            nextMargin.addEventListener('click', () => { fallbackIndex = Math.min(pageCount - 2, fallbackIndex + 2); showFallbackPage(); });
-            footerPrev.addEventListener('click', () => { fallbackIndex = Math.max(0, fallbackIndex - 2); showFallbackPage(); });
-            footerNext.addEventListener('click', () => { fallbackIndex = Math.min(pageCount - 2, fallbackIndex + 2); showFallbackPage(); });
-            showFallbackPage();
-        }
-
-        prevMargin.addEventListener('click', previousPage);
-        nextMargin.addEventListener('click', nextPage);
-        footerPrev.addEventListener('click', previousPage);
-        footerNext.addEventListener('click', nextPage);
-
-        document.addEventListener('keydown', event => {
-            if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest('a, button, input, textarea, select')) return;
-            if (event.key === 'ArrowRight') { event.preventDefault(); nextPage(); }
-            else if (event.key === 'ArrowLeft') { event.preventDefault(); previousPage(); }
-        });
-    </script>
-
-</body>
-</html>
+            indicator.textContent = `Pages ${String(first).padStart(2, '
