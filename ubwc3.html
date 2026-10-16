@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Boutique Willow Creek — Virtual Magazine Spread</title>
+    <title>Unique Boutique Willow Creek — Virtual Magazine</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,11 +11,11 @@
             theme: {
                 extend: {
                     colors: {
-                        magBg: '#F3EFE6',
+                        magPaper: '#F4EFE6',
                         magDark: '#1A1C1B',
                         magGold: '#B89753',
                         magMuted: '#6B706C',
-                        magBorder: '#D8D0C1'
+                        magSpine: '#D8D0C1'
                     }
                 }
             }
@@ -28,115 +28,119 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #E2DBD0;
+            background-color: #382C22; /* Rich wooden desk background */
             color: #1A1C1B;
             overflow-x: hidden;
-            perspective: 2000px;
+            perspective: 2500px;
         }
         h1, h2, h3, .mag-serif {
             font-family: 'Playfair Display', serif;
         }
-        /* Realistic Book Container with 3D perspective */
-        .magazine-book {
-            background-color: #FAF6ED;
-            border: 1px solid #D8D0C1;
-            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);
+        /* The Realistic Magazine Open Spread */
+        .magazine-sheet {
+            background-color: #F4EFE6;
+            box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6);
             transform-style: preserve-3d;
         }
-        /* Centerfold Binding Spine */
-        .book-spine {
+        /* Centerfold Crease Shadow */
+        .centerfold-spine {
             background: linear-gradient(
                 to right,
-                rgba(0, 0, 0, 0.02) 0%,
-                rgba(0, 0, 0, 0.15) 48%,
-                rgba(255, 255, 255, 0.8) 50%,
-                rgba(0, 0, 0, 0.12) 52%,
-                rgba(0, 0, 0, 0.02) 100%
+                rgba(0,0,0,0.01) 0%,
+                rgba(0,0,0,0.12) 47%,
+                rgba(255,255,255,0.7) 50%,
+                rgba(0,0,0,0.10) 53%,
+                rgba(0,0,0,0.01) 100%
             );
             pointer-events: none;
         }
-        /* Page Turn Animation Classes */
-        .page-pane {
+        /* 3D Page Turn Effect */
+        .turn-page {
             transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.4s ease;
             transform-origin: left center;
         }
-        .page-flipping-forward {
+        .flipping-forward {
             transform: rotateY(-90deg);
-            opacity: 0;
+            opacity: 0.1;
         }
-        .page-flipping-backward {
+        .flipping-backward {
             transform: rotateY(90deg);
-            opacity: 0;
+            opacity: 0.1;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-magGold selection:text-white py-6 px-4">
+<body class="min-h-screen flex flex-col justify-between selection:bg-magGold selection:text-white py-6 px-4 sm:px-8">
 
     <!-- TOP HEADER -->
-    <header class="max-w-6xl mx-auto w-full mb-6 flex justify-between items-center border-b border-magBorder pb-4">
+    <header class="max-w-6xl mx-auto w-full mb-4 flex justify-between items-center text-stone-300 border-b border-stone-600/50 pb-3">
         <div>
-            <span class="text-[9px] uppercase tracking-[0.3em] text-magGold font-semibold block">Willow Creek, California</span>
-            <span class="mag-serif text-lg font-bold tracking-wide">Unique Boutique Gazette</span>
+            <span class="text-[9px] uppercase tracking-[0.3em] text-magGold font-bold block">Willow Creek, California</span>
+            <span class="mag-serif text-lg font-bold tracking-wide text-white">Unique Boutique Gazette</span>
         </div>
         
         <div class="flex items-center gap-6">
-            <span id="pageIndicator" class="text-xs font-medium uppercase tracking-widest text-magMuted">Spread 01 of 04</span>
-            <a href="tel:7075995811" class="bg-magDark text-magBg px-4 py-1.5 rounded-sm text-xs uppercase font-semibold tracking-wider hover:bg-black transition flex items-center gap-2">
-                <i class="fa-solid fa-phone text-magGold"></i> (707) 599-5811
+            <span id="pageIndicator" class="text-xs font-medium uppercase tracking-widest text-stone-300">Spread 01 of 04</span>
+            <a href="tel:7075995811" class="bg-magGold text-stone-950 px-4 py-1.5 rounded-sm text-xs uppercase font-bold tracking-wider hover:bg-amber-500 transition flex items-center gap-2 shadow">
+                <i class="fa-solid fa-phone"></i> (707) 599-5811
             </a>
         </div>
     </header>
 
-    <!-- MAIN TWO-PAGE SPREAD CONTAINER -->
-    <main class="max-w-6xl mx-auto w-full flex-grow flex flex-col justify-center">
+    <!-- MAIN MAGAZINE OPEN SPREAD -->
+    <main class="max-w-6xl mx-auto w-full flex-grow flex flex-col justify-center my-auto">
         
-        <!-- THE OPEN BOOK SPREAD -->
-        <div class="magazine-book rounded-sm min-h-[640px] grid grid-cols-1 lg:grid-cols-2 relative overflow-hidden">
+        <div class="magazine-sheet rounded-sm min-h-[660px] grid grid-cols-1 lg:grid-cols-2 relative overflow-hidden">
             
-            <!-- CENTERFOLD SPINE OVERLAY -->
-            <div class="hidden lg:block absolute inset-y-0 left-1/2 -translate-x-1/2 w-12 book-spine z-20"></div>
+            <!-- CENTERFOLD BINDING CREASE -->
+            <div class="hidden lg:block absolute inset-y-0 left-1/2 -translate-x-1/2 w-14 centerfold-spine z-20"></div>
 
-            <!-- LEFT PAGE (Click anywhere here to go Back) -->
-            <div onclick="prevSpread()" class="page-pane p-8 sm:p-14 border-b lg:border-b-0 border-magBorder/60 flex flex-col justify-between cursor-pointer hover:bg-stone-50/20 transition group relative z-10">
-                <div class="absolute top-2 left-4 text-[10px] text-magMuted italic">&larr; Click page to turn backward</div>
-                <div id="leftPageContent" class="mt-4 flex-grow flex flex-col justify-center">
-                    <!-- Injected Left Content -->
+            <!-- LEFT PAGE (Click to go Backward) -->
+            <div onclick="prevSpread()" class="turn-page p-8 sm:p-14 border-b lg:border-b-0 border-stone-300/60 flex flex-col justify-between cursor-pointer hover:bg-black/5 transition relative z-10">
+                <div class="absolute top-3 left-6 text-[10px] text-magMuted italic">&larr; Click page to turn back</div>
+                <div id="leftContent" class="mt-6 flex-grow flex flex-col justify-center">
+                    <!-- Injected Left Item -->
+                </div>
+                <div class="mt-6 pt-2 border-t border-stone-300 flex justify-between text-[11px] text-magMuted font-mono">
+                    <span>Unique Boutique Willow Creek</span>
+                    <span id="leftPageNo">Page 01</span>
                 </div>
             </div>
 
-            <!-- RIGHT PAGE (Click anywhere here to go Forward) -->
-            <div onclick="nextSpread()" class="page-pane p-8 sm:p-14 flex flex-col justify-between cursor-pointer hover:bg-stone-50/20 transition group relative z-10">
-                <div class="absolute top-2 right-4 text-[10px] text-magMuted italic">Click page to turn forward &rarr;</div>
-                <div id="rightPageContent" class="mt-4 flex-grow flex flex-col justify-center">
-                    <!-- Injected Right Content -->
+            <!-- RIGHT PAGE (Click to go Forward) -->
+            <div onclick="nextSpread()" class="turn-page p-8 sm:p-14 flex flex-col justify-between cursor-pointer hover:bg-black/5 transition relative z-10">
+                <div class="absolute top-3 right-6 text-[10px] text-magMuted italic">Click page to turn forward &rarr;</div>
+                <div id="rightContent" class="mt-6 flex-grow flex flex-col justify-center">
+                    <!-- Injected Right Item -->
+                </div>
+                <div class="mt-6 pt-2 border-t border-stone-300 flex justify-between text-[11px] text-magMuted font-mono">
+                    <span id="rightPageNo">Page 02</span>
+                    <span>111 Mayfair St, CA</span>
                 </div>
             </div>
 
         </div>
 
-        <!-- HINT FOOTER -->
-        <div class="flex justify-between items-center mt-4 px-2 text-xs text-magMuted italic mag-serif">
-            <span>Tip: Click the left page to go back, or right page to turn forward.</span>
-            <span>111 Mayfair St, Willow Creek, CA</span>
-        </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="max-w-6xl mx-auto w-full mt-6 pt-4 border-t border-magBorder text-center text-[11px] text-magMuted font-light">
-        <p>&copy; 2026 Unique Boutique Willow Creek &bull; All Estate Records Reserved.</p>
+    <!-- FOOTER HINT -->
+    <footer class="max-w-6xl mx-auto w-full mt-4 text-center text-xs text-stone-400 italic mag-serif">
+        <p>Click the right page to turn forward &bull; Click the left page to turn backward</p>
     </footer>
 
-    <!-- MAGAZINE SPREAD & ANIMATION ENGINE -->
+    <!-- ENGINE SCRIPT -->
     <script>
+        // Spreads holding exactly 2 items (1 per page)
         const spreads = [
             // SPREAD 0: COVER & TABLE OF CONTENTS
             {
+                leftPageNo: "Page 01",
+                rightPageNo: "Page 02",
                 left: `
-                    <div class="text-center py-10 space-y-6">
+                    <div class="text-center py-12 space-y-6">
                         <span class="text-xs uppercase tracking-[0.4em] text-magGold font-bold block">Volume IV &bull; Edition 2026</span>
                         <h1 class="mag-serif text-5xl sm:text-6xl font-bold text-magDark leading-tight">Unique Boutique</h1>
                         <p class="text-xs text-magMuted italic">"Curated Estate Salvage & Historic Relics from Private Northern California Collections"</p>
-                        <div class="pt-8 border-t border-magBorder max-w-xs mx-auto">
+                        <div class="pt-8 border-t border-stone-300 max-w-xs mx-auto">
                             <span class="text-[11px] uppercase tracking-widest font-bold text-magDark">Willow Creek, California</span>
                         </div>
                     </div>
@@ -146,123 +150,129 @@
                         <div class="border-b border-magDark pb-3 mb-6">
                             <h2 class="mag-serif text-2xl font-bold text-magDark">Table of Contents</h2>
                         </div>
-                        <ul class="space-y-3 text-xs">
-                            <li class="flex justify-between border-b border-magBorder/60 pb-2">
+                        <ul class="space-y-3.5 text-xs">
+                            <li class="flex justify-between border-b border-stone-300 pb-2">
                                 <span class="font-semibold text-magDark">01. Vintage Shabby Chic Lace Slip Dress</span>
-                                <span class="text-magGold font-bold">Spread 2</span>
+                                <span class="text-magGold font-bold">Page 03</span>
                             </li>
-                            <li class="flex justify-between border-b border-magBorder/60 pb-2">
+                            <li class="flex justify-between border-b border-stone-300 pb-2">
                                 <span class="font-semibold text-magDark">02. Bigfoot Tropical Hawaiian Shirt</span>
-                                <span class="text-magGold font-bold">Spread 2</span>
+                                <span class="text-magGold font-bold">Page 04</span>
                             </li>
-                            <li class="flex justify-between border-b border-magBorder/60 pb-2">
+                            <li class="flex justify-between border-b border-stone-300 pb-2">
                                 <span class="font-semibold text-magDark">03. 7.5L German Stoneware Gärtopf Crock</span>
-                                <span class="text-magGold font-bold">Spread 3</span>
+                                <span class="text-magGold font-bold">Page 05</span>
                             </li>
-                            <li class="flex justify-between border-b border-magBorder/60 pb-2">
+                            <li class="flex justify-between border-b border-stone-300 pb-2">
                                 <span class="font-semibold text-magDark">04. Retro Green & Yellow Fiestaware Stack</span>
-                                <span class="text-magGold font-bold">Spread 3</span>
+                                <span class="text-magGold font-bold">Page 06</span>
                             </li>
-                            <li class="flex justify-between border-b border-magBorder/60 pb-2">
+                            <li class="flex justify-between border-b border-stone-300 pb-2">
                                 <span class="font-semibold text-magDark">05. Men's Heavy Vintage Flannel Shirt</span>
-                                <span class="text-magGold font-bold">Spread 4</span>
+                                <span class="text-magGold font-bold">Page 07</span>
                             </li>
-                            <li class="flex justify-between border-b border-magBorder/60 pb-2">
+                            <li class="flex justify-between border-b border-stone-300 pb-2">
                                 <span class="font-semibold text-magDark">06. Estate Rhinestone & Pearl Necklace</span>
-                                <span class="text-magGold font-bold">Spread 4</span>
+                                <span class="text-magGold font-bold">Page 08</span>
                             </li>
                         </ul>
                     </div>
                 `
             },
-            // SPREAD 1: ITEMS 1 & 2
+            // SPREAD 1: ITEMS 1 & 2 (Pages 3 & 4)
             {
+                leftPageNo: "Page 03",
+                rightPageNo: "Page 04",
                 left: `
                     <div class="space-y-4">
-                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-magBorder shadow-xs">
+                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-stone-300">
                             <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">Available</span>
+                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-sm shadow">Available</span>
                         </div>
                         <div class="space-y-2">
                             <span class="text-[10px] uppercase font-bold tracking-widest text-magGold">Women's Clothing // Item 01</span>
                             <h3 class="mag-serif text-2xl font-bold text-magDark">Vintage Shabby Chic Lace Slip Dress</h3>
                             <p class="text-sm font-bold text-magDark">$48.00</p>
                             <p class="text-xs text-magMuted font-light leading-relaxed">Delicate peach and ivory estate slip dress with original delicate stitching intact.</p>
-                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magBg px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2">Inquire to Claim</a>
+                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magPaper px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2 hover:bg-black">Inquire to Claim</a>
                         </div>
                     </div>
                 `,
                 right: `
                     <div class="space-y-4">
-                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-magBorder shadow-xs">
+                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-stone-300">
                             <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">Available</span>
+                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-sm shadow">Available</span>
                         </div>
                         <div class="space-y-2">
                             <span class="text-[10px] uppercase font-bold tracking-widest text-magGold">Bigfoot & Novelty // Item 02</span>
                             <h3 class="mag-serif text-2xl font-bold text-magDark">Bigfoot Tropical Hawaiian Novelty Shirt</h3>
                             <p class="text-sm font-bold text-magDark">$36.00</p>
                             <p class="text-xs text-magMuted font-light leading-relaxed">Iconic regional novelty button-down sourced directly from local Humboldt County estates.</p>
-                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magBg px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2">Inquire to Claim</a>
+                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magPaper px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2 hover:bg-black">Inquire to Claim</a>
                         </div>
                     </div>
                 `
             },
-            // SPREAD 2: ITEMS 3 & 4
+            // SPREAD 2: ITEMS 3 & 4 (Pages 5 & 6)
             {
+                leftPageNo: "Page 05",
+                rightPageNo: "Page 06",
                 left: `
                     <div class="space-y-4">
-                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-magBorder shadow-xs">
+                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-stone-300">
                             <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">Available</span>
+                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-sm shadow">Available</span>
                         </div>
                         <div class="space-y-2">
                             <span class="text-[10px] uppercase font-bold tracking-widest text-magGold">Vintage Kitchenware // Item 03</span>
                             <h3 class="mag-serif text-2xl font-bold text-magDark">7.5L German Stoneware Gärtopf Crock</h3>
                             <p class="text-sm font-bold text-magDark">$85.00</p>
                             <p class="text-xs text-magMuted font-light leading-relaxed">Original system Harsch Gärtopf brown glazed stoneware fermentation crock in pristine condition.</p>
-                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magBg px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2">Inquire to Claim</a>
+                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magPaper px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2 hover:bg-black">Inquire to Claim</a>
                         </div>
                     </div>
                 `,
                 right: `
                     <div class="space-y-4">
-                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-magBorder shadow-xs">
+                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-stone-300">
                             <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">Available</span>
+                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-sm shadow">Available</span>
                         </div>
                         <div class="space-y-2">
                             <span class="text-[10px] uppercase font-bold tracking-widest text-magGold">Vintage Kitchenware // Item 04</span>
                             <h3 class="mag-serif text-2xl font-bold text-magDark">Retro Green & Yellow Fiestaware Stack</h3>
                             <p class="text-sm font-bold text-magDark">$65.00</p>
                             <p class="text-xs text-magMuted font-light leading-relaxed">Authenticated mid-century ceramic plates and mugs featuring classic glazed primary colorways.</p>
-                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magBg px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2">Inquire to Claim</a>
+                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magPaper px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2 hover:bg-black">Inquire to Claim</a>
                         </div>
                     </div>
                 `
             },
-            // SPREAD 3: ITEMS 5 & 6
+            // SPREAD 3: ITEMS 5 & 6 (Pages 7 & 8)
             {
+                leftPageNo: "Page 07",
+                rightPageNo: "Page 08",
                 left: `
                     <div class="space-y-4">
-                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-magBorder shadow-xs">
+                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-stone-300">
                             <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">Available</span>
+                            <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-sm shadow">Available</span>
                         </div>
                         <div class="space-y-2">
                             <span class="text-[10px] uppercase font-bold tracking-widest text-magGold">Men's Clothing // Item 05</span>
                             <h3 class="mag-serif text-2xl font-bold text-magDark">Men's Heavy Vintage Flannel Utility Shirt</h3>
                             <p class="text-sm font-bold text-magDark">$32.00</p>
                             <p class="text-xs text-magMuted font-light leading-relaxed">Durable heavyweight cotton plaid flannel hand-selected from a regional estate collection.</p>
-                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magBg px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2">Inquire to Claim</a>
+                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="inline-block bg-magDark text-magPaper px-3.5 py-2 rounded-sm text-[11px] uppercase tracking-wider font-semibold mt-2 hover:bg-black">Inquire to Claim</a>
                         </div>
                     </div>
                 `,
                 right: `
                     <div class="space-y-4">
-                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-magBorder shadow-xs">
+                        <div class="relative h-64 bg-stone-200 rounded-sm overflow-hidden border border-stone-300">
                             <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-stone-600 text-stone-200 text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">Archived</span>
+                            <span class="absolute top-3 left-3 bg-stone-600 text-stone-200 text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-sm shadow">Archived</span>
                         </div>
                         <div class="space-y-2">
                             <span class="text-[10px] uppercase font-bold tracking-widest text-magGold">Jewelry & Glam // Item 06</span>
@@ -278,27 +288,25 @@
 
         let currentSpread = 0;
 
-        function renderSpread(direction = 'forward') {
-            const spreadData = spreads[currentSpread];
-            const leftEl = document.getElementById('leftPageContent');
-            const rightEl = document.getElementById('rightPageContent');
+        function renderSpread(direction) {
+            const data = spreads[currentSpread];
+            const leftEl = document.getElementById('leftContent');
+            const rightEl = document.getElementById('rightContent');
+            const leftNo = document.getElementById('leftPageNo');
+            const rightNo = document.getElementById('rightPageNo');
             const indicator = document.getElementById('pageIndicator');
-            const panes = document.querySelectorAll('.page-pane');
+            const panes = document.querySelectorAll('.turn-page');
 
-            // Apply page turn animation class
-            panes.forEach(pane => {
-                pane.classList.add(direction === 'forward' ? 'page-flipping-forward' : 'page-flipping-backward');
-            });
+            panes.forEach(p => p.classList.add(direction === 'forward' ? 'flipping-forward' : 'flipping-backward'));
 
             setTimeout(() => {
-                leftEl.innerHTML = spreadData.left;
-                rightEl.innerHTML = spreadData.right;
+                leftEl.innerHTML = data.left;
+                rightEl.innerHTML = data.right;
+                leftNo.innerText = data.leftPageNo;
+                rightNo.innerText = data.rightPageNo;
                 indicator.innerText = `Spread ${String(currentSpread + 1).padStart(2, '0')} of ${String(spreads.length).padStart(2, '0')}`;
-                
-                // Remove animation class to swing back open smoothly
-                panes.forEach(pane => {
-                    pane.classList.remove('page-flipping-forward', 'page-flipping-backward');
-                });
+
+                panes.forEach(p => p.classList.remove('flipping-forward', 'flipping-backward'));
             }, 300);
         }
 
