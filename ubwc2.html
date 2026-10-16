@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Boutique Willow Creek — Fine Estate Acquisitions & Curiosities</title>
+    <title>Unique Boutique Willow Creek — Fine Estate Acquisitions</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,12 +11,11 @@
             theme: {
                 extend: {
                     colors: {
-                        obsidian: '#121614',
-                        brass: '#C29B38',
-                        parchment: '#F6F4EE',
-                        forest: '#1E2C26',
-                        charcoal: '#272D2A',
-                        subtleBorder: '#D8D3C8'
+                        galleryBg: '#FAF8F5',
+                        galleryInk: '#111312',
+                        galleryAccent: '#9E7B44',
+                        galleryMuted: '#767B78',
+                        galleryLine: '#E3DFD5'
                     }
                 }
             }
@@ -24,147 +23,120 @@
     </script>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Editorial Serif & Clean Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts: High-End Editorial Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #F6F4EE;
-            color: #121614;
+            background-color: #FAF8F5;
+            color: #111312;
         }
-        h1, h2, h3, .editorial-serif {
-            font-family: 'Cormorant Garamond', serif;
+        h1, h2, h3, .editorial-title {
+            font-family: 'Bodoni Moda', serif;
         }
-        .gallery-border {
-            border: 1px solid #D8D3C8;
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brass selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-galleryAccent selection:text-white">
 
-    <!-- HEADER / MUSEUM-GRADE GALLERY BRANDING -->
-    <header class="bg-obsidian text-parchment border-b border-brass/30 sticky top-0 z-50 backdrop-blur-md bg-opacity-95">
-        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <span class="text-[10px] uppercase tracking-[0.35em] text-brass font-semibold block mb-1">
-                    Estate Liquidations & Fine Collections &bull; Est. 2023
-                </span>
-                <h1 class="text-4xl sm:text-5xl font-normal tracking-wide editorial-serif text-white">
-                    Unique Boutique
-                </h1>
-                <p class="text-xs text-stone-400 font-light tracking-wider mt-1">
-                    Willow Creek, California &bull; Verified Provenance
-                </p>
-            </div>
-            
-            <!-- Professional Contact & Location Badge -->
-            <div class="flex items-center gap-4 bg-charcoal px-5 py-3 rounded-sm gallery-border">
-                <div class="text-left text-xs">
-                    <span class="block text-brass font-semibold uppercase tracking-wider text-[10px]">Visit Our Gallery</span>
-                    <span class="text-stone-300 font-light">111 Mayfair St, Willow Creek, CA</span>
-                </div>
-                <div class="h-8 w-px bg-stone-700"></div>
-                <a href="tel:7075995811" class="bg-brass hover:bg-amber-600 text-obsidian px-4 py-2 rounded-sm text-xs font-semibold uppercase tracking-wider transition shadow-sm flex items-center gap-2">
-                    <i class="fa-solid fa-phone"></i> (707) 599-5811
-                </a>
-            </div>
+    <!-- TOP MINIMALIST NAV -->
+    <header class="border-b border-galleryLine px-6 lg:px-12 py-6 flex justify-between items-center bg-galleryBg sticky top-0 z-50 backdrop-blur-md bg-opacity-95">
+        <div>
+            <span class="text-[9px] uppercase tracking-[0.4em] text-galleryAccent font-semibold block">Willow Creek, California</span>
+            <span class="editorial-title text-xl font-semibold tracking-wide">Unique Boutique</span>
+        </div>
+        
+        <div class="flex items-center gap-6 text-xs font-medium tracking-wider uppercase">
+            <span class="hidden sm:inline text-galleryMuted">Direct Inquiries:</span>
+            <a href="tel:7075995811" class="text-galleryInk hover:text-galleryAccent transition flex items-center gap-2">
+                <i class="fa-solid fa-phone text-galleryAccent"></i> (707) 599-5811
+            </a>
         </div>
     </header>
 
-    <!-- MAIN GALLERY CONTENT -->
-    <main class="max-w-7xl mx-auto px-6 py-12 flex-grow w-full">
+    <!-- SPLIT-SCREEN EDITORIAL LAYOUT -->
+    <main class="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        <!-- FEATURED SHOWCASE HERO -->
-        <section class="bg-white gallery-border rounded-sm p-8 sm:p-12 mb-14 shadow-xs grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-7 space-y-4">
-                <span class="text-[11px] uppercase tracking-[0.25em] text-brass font-semibold block">Featured Discovery</span>
-                <h2 class="text-3xl sm:text-4xl font-semibold editorial-serif text-obsidian leading-tight">
-                    Preserving Local History Through Curated Estate Salvage
-                </h2>
-                <p class="text-stone-600 text-sm sm:text-base font-light leading-relaxed">
-                    We specialize in rescuing exceptional mid-century furnishings, vintage apparel, fine ceramics, and rare local curiosities from private Willow Creek estates. Every item is individually cataloged with complete historical documentation.
+        <!-- LEFT COLUMN: STICKY INDEX & FILTERS (EDITORIAL TOC STYLE) -->
+        <div class="lg:col-span-4 lg:sticky lg:top-28 space-y-8">
+            <div>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-galleryAccent font-semibold block mb-2">Catalog Index</span>
+                <h1 class="editorial-title text-4xl lg:text-5xl font-normal leading-tight text-galleryInk">
+                    Curated Estate Salvage & Relics
+                </h1>
+                <p class="text-xs text-galleryMuted font-light mt-3 leading-relaxed">
+                    A continuously evolving inventory sourced directly from private estate liquidations in Northern California. Each piece carries verified provenance.
                 </p>
-                <div class="pt-2 flex flex-wrap gap-4 text-xs font-medium text-stone-500">
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brass"></i> Authenticated Provenance</span>
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brass"></i> Local Estate Sourced</span>
-                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-brass"></i> Direct Inquiries Welcome</span>
-                </div>
             </div>
-            <div class="lg:col-span-5 bg-stone-100 h-72 rounded-sm overflow-hidden gallery-border relative">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800" alt="Showcase artifact" class="w-full h-full object-cover">
-                <div class="absolute bottom-3 left-3 bg-obsidian/90 text-parchment text-[10px] uppercase tracking-widest px-3 py-1 rounded-sm">
-                    Curator's Choice
-                </div>
-            </div>
-        </section>
 
-        <!-- CATALOG CONTROLS: SEARCH & FILTERS -->
-        <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-8 pb-6 border-b border-stone-300">
-            <!-- Search Bar -->
-            <div class="relative flex-grow max-w-md">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-stone-400">
+            <!-- SEARCH BAR -->
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-galleryMuted">
                     <i class="fa-solid fa-search text-xs"></i>
                 </span>
-                <input type="text" id="searchInput" oninput="filterInventory()" placeholder="Search catalog by keyword, maker, or era..." class="w-full pl-10 pr-4 py-3 bg-white gallery-border rounded-sm text-sm focus:outline-none focus:border-brass">
+                <input type="text" id="searchInput" oninput="filterInventory()" placeholder="Search collection..." class="w-full pl-9 pr-4 py-2.5 bg-transparent border-b border-galleryInk text-xs focus:outline-none focus:border-galleryAccent placeholder-galleryMuted">
             </div>
 
-            <!-- Status Tabs -->
-            <div class="flex rounded-sm bg-stone-200 p-1 text-xs font-medium">
-                <button onclick="setStatusFilter('all')" id="tab-all" class="flex-1 md:flex-initial px-4 py-2 rounded-sm bg-white text-obsidian shadow-xs transition font-semibold">Complete Catalog</button>
-                <button onclick="setStatusFilter('current')" id="tab-current" class="flex-1 md:flex-initial px-4 py-2 rounded-sm text-stone-600 hover:text-stone-900 transition">Available Now</button>
-                <button onclick="setStatusFilter('past')" id="tab-past" class="flex-1 md:flex-initial px-4 py-2 rounded-sm text-stone-600 hover:text-stone-900 transition">Archived Items</button>
+            <!-- CATEGORY TABLE OF CONTENTS -->
+            <div class="space-y-2 pt-2">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-galleryMuted block mb-3 font-semibold">Collections</span>
+                <div id="categoryNav" class="flex flex-col space-y-2 text-xs font-medium uppercase tracking-wider">
+                    <button onclick="filterCategory('All')" id="cat-All" class="text-left py-1.5 px-3 rounded-sm bg-galleryInk text-galleryBg transition">00. All Available Pieces</button>
+                    <button onclick="filterCategory('Women\'s Clothing')" id="cat-Women's Clothing" class="text-left py-1.5 px-3 rounded-sm text-galleryMuted hover:text-galleryInk transition">01. Women's Apparel</button>
+                    <button onclick="filterCategory('Men\'s Clothing')" id="cat-Men's Clothing" class="text-left py-1.5 px-3 rounded-sm text-galleryMuted hover:text-galleryInk transition">02. Men's Apparel</button>
+                    <button onclick="filterCategory('Vintage Kitchenware')" id="cat-Vintage Kitchenware" class="text-left py-1.5 px-3 rounded-sm text-galleryMuted hover:text-galleryInk transition">03. Kitchen & Tableware</button>
+                    <button onclick="filterCategory('Jewelry & Glam')" id="cat-Jewelry & Glam" class="text-left py-1.5 px-3 rounded-sm text-galleryMuted hover:text-galleryInk transition">04. Jewelry & Valuables</button>
+                    <button onclick="filterCategory('Bigfoot & Novelty')" id="cat-Bigfoot & Novelty" class="text-left py-1.5 px-3 rounded-sm text-galleryMuted hover:text-galleryInk transition">05. Regional Novelties</button>
+                    <button onclick="filterCategory('Gifts & Collectibles')" id="cat-Gifts & Collectibles" class="text-left py-1.5 px-3 rounded-sm text-galleryMuted hover:text-galleryInk transition">06. Collectibles</button>
+                </div>
+            </div>
+
+            <!-- STATUS TOGGLE -->
+            <div class="pt-4 border-t border-galleryLine flex gap-4 text-xs uppercase tracking-wider font-medium">
+                <button onclick="setStatusFilter('all')" id="tab-all" class="text-galleryInk font-bold border-b-2 border-galleryInk pb-1">All</button>
+                <button onclick="setStatusFilter('current')" id="tab-current" class="text-galleryMuted hover:text-galleryInk pb-1 transition">Available</button>
+                <button onclick="setStatusFilter('past')" id="tab-past" class="text-galleryMuted hover:text-galleryInk pb-1 transition">Archived</button>
             </div>
         </div>
 
-        <!-- CATEGORY NAVIGATION -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-10 text-xs font-medium">
-            <button onclick="filterCategory('All')" id="cat-All" class="category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-obsidian text-parchment transition shadow-xs">All Collections</button>
-            <button onclick="filterCategory('Women\'s Clothing')" id="cat-Women's Clothing" class="category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-white text-stone-700 gallery-border hover:bg-stone-50 transition">Women's Apparel</button>
-            <button onclick="filterCategory('Men\'s Clothing')" id="cat-Men's Clothing" class="category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-white text-stone-700 gallery-border hover:bg-stone-50 transition">Men's Apparel</button>
-            <button onclick="filterCategory('Vintage Kitchenware')" id="cat-Vintage Kitchenware" class="category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-white text-stone-700 gallery-border hover:bg-stone-50 transition">Kitchen & Tableware</button>
-            <button onclick="filterCategory('Jewelry & Glam')" id="cat-Jewelry & Glam" class="category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-white text-stone-700 gallery-border hover:bg-stone-50 transition">Jewelry & Valuables</button>
-            <button onclick="filterCategory('Bigfoot & Novelty')" id="cat-Bigfoot & Novelty" class="category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-white text-stone-700 gallery-border hover:bg-stone-50 transition">Regional Novelties</button>
-            <button onclick="filterCategory('Gifts & Collectibles')" id="cat-Gifts & Collectibles" class="category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-white text-stone-700 gallery-border hover:bg-stone-50 transition">Collectibles</button>
-        </div>
-
-        <!-- INVENTORY GALLERY LIST (EDITORIAL LAYOUT) -->
-        <div id="inventoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Dynamically injected gallery cards -->
+        <!-- RIGHT COLUMN: STAGGERED EDITORIAL SHOWCASE -->
+        <div class="lg:col-span-8 space-y-16" id="inventoryContainer">
+            <!-- Dynamically injected magazine features -->
         </div>
 
         <!-- EMPTY STATE -->
-        <div id="emptyState" class="hidden text-center py-20 bg-white gallery-border rounded-sm mt-4">
-            <i class="fa-regular fa-folder-open text-3xl text-stone-400 mb-3"></i>
-            <h3 class="text-xl font-semibold editorial-serif text-stone-800">No Catalog Entries Found</h3>
-            <p class="text-xs text-stone-500 mt-1">Try modifying your search terms or resetting collections.</p>
+        <div id="emptyState" class="hidden lg:col-span-8 text-center py-24 border border-galleryLine rounded-sm">
+            <h3 class="editorial-title text-2xl font-normal text-galleryInk">No Collection Entries Found</h3>
+            <p class="text-xs text-galleryMuted mt-2">Please adjust your search criteria or reset filters.</p>
         </div>
 
     </main>
 
-    <!-- ITEM DETAIL MODAL -->
-    <div id="detailModal" class="fixed inset-0 bg-obsidian/80 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-        <div class="bg-white rounded-sm max-w-3xl w-full overflow-hidden shadow-2xl gallery-border flex flex-col md:flex-row">
-            <div class="md:w-1/2 bg-stone-100 h-72 md:h-auto relative">
-                <img id="detailImg" src="" alt="Artifact preview" class="w-full h-full object-cover">
-                <span id="detailStatusBadge" class="absolute top-4 left-4 text-[10px] uppercase font-semibold tracking-widest px-3 py-1 rounded-sm shadow-xs"></span>
+    <!-- PIECE INSPECT MODAL -->
+    <div id="detailModal" class="fixed inset-0 bg-galleryInk/80 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
+        <div class="bg-galleryBg rounded-sm max-w-3xl w-full overflow-hidden shadow-2xl border border-galleryLine flex flex-col md:flex-row">
+            <div class="md:w-1/2 bg-stone-200 h-72 md:h-auto relative">
+                <img id="detailImg" src="" alt="Piece preview" class="w-full h-full object-cover">
+                <span id="detailStatusBadge" class="absolute top-4 left-4 text-[9px] uppercase font-semibold tracking-widest px-2.5 py-1 rounded-sm"></span>
             </div>
             <div class="md:w-1/2 p-8 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start">
-                        <span id="detailCategory" class="text-xs font-semibold uppercase tracking-widest text-brass"></span>
-                        <button onclick="closeDetailModal()" class="text-stone-400 hover:text-stone-800 p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+                        <span id="detailCategory" class="text-[10px] font-semibold uppercase tracking-[0.2em] text-galleryAccent"></span>
+                        <button onclick="closeDetailModal()" class="text-galleryMuted hover:text-galleryInk p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
                     </div>
-                    <h3 id="detailTitle" class="text-2xl font-semibold editorial-serif text-obsidian mt-1"></h3>
-                    <p id="detailPrice" class="text-xl font-semibold text-stone-900 mt-2"></p>
-                    <p id="detailDesc" class="text-xs text-stone-600 font-light mt-4 leading-relaxed"></p>
+                    <h3 id="detailTitle" class="text-2xl font-semibold editorial-title text-galleryInk mt-2"></h3>
+                    <p id="detailPrice" class="text-lg font-semibold text-galleryInk mt-1"></p>
+                    <p id="detailDesc" class="text-xs text-galleryMuted font-light mt-4 leading-relaxed"></p>
                 </div>
 
-                <div class="mt-8 pt-4 border-t border-stone-200 flex flex-col gap-3">
-                    <div class="text-[11px] text-stone-500 flex items-center gap-1.5 font-medium">
-                        <i class="fa-solid fa-circle-check text-emerald-700"></i> Verified Estate Acquisition
-                    </div>
-                    <a href="tel:7075995811" class="w-full bg-obsidian hover:bg-stone-900 text-parchment text-center py-3 rounded-sm font-semibold text-xs uppercase tracking-widest transition shadow-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-phone text-brass"></i> Inquire or Purchase (707) 599-5811
+                <div class="mt-8 pt-6 border-t border-galleryLine flex flex-col gap-3">
+                    <span class="text-[10px] uppercase tracking-wider text-galleryMuted">Syndicated across web & social displays</span>
+                    <a href="tel:7075995811" class="w-full bg-galleryInk hover:bg-black text-galleryBg text-center py-3 rounded-sm font-semibold text-xs uppercase tracking-widest transition shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone text-galleryAccent"></i> Inquire (707) 599-5811
                     </a>
                 </div>
             </div>
@@ -172,34 +144,34 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-obsidian text-stone-400 text-xs py-12 mt-20 border-t border-brass/20">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+    <footer class="border-t border-galleryLine bg-galleryBg text-galleryMuted text-xs py-12 px-6 lg:px-12 mt-20">
+        <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div>
-                <h4 class="text-white font-semibold text-sm editorial-serif tracking-wide">Unique Boutique Willow Creek</h4>
-                <p class="mt-1 font-light text-stone-400">111 Mayfair St, Willow Creek, CA &bull; Fine Estate Acquisitions</p>
-                <p class="font-light text-stone-400">Phone: (707) 599-5811 | Email: uniqueboutiquewillowcreek@gmail.com</p>
+                <h4 class="text-galleryInk font-semibold text-sm editorial-title">Unique Boutique Willow Creek</h4>
+                <p class="mt-1 font-light">111 Mayfair St, Willow Creek, CA &bull; Fine Estate Acquisitions</p>
+                <p class="font-light">Phone: (707) 599-5811 | Email: uniqueboutiquewillowcreek@gmail.com</p>
             </div>
-            <div class="flex gap-3">
-                <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-sm bg-stone-800 hover:bg-stone-700 text-white flex items-center justify-center transition border border-stone-700"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-sm bg-stone-800 hover:bg-stone-700 text-white flex items-center justify-center transition border border-stone-700"><i class="fa-brands fa-instagram"></i></a>
-                <a href="tel:7075995811" class="w-9 h-9 rounded-sm bg-stone-800 hover:bg-brass hover:text-obsidian text-white flex items-center justify-center transition border border-stone-700"><i class="fa-solid fa-phone"></i></a>
+            <div class="flex gap-4">
+                <a href="https://facebook.com" target="_blank" class="hover:text-galleryInk transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-galleryInk transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                <a href="tel:7075995811" class="hover:text-galleryInk transition"><i class="fa-solid fa-phone text-sm"></i></a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 pt-6 mt-6 border-t border-stone-800 text-center text-stone-500 font-light text-[11px]">
-            &copy; 2026 Unique Boutique Willow Creek. All estate catalog records reserved.
+        <div class="max-w-[1400px] mx-auto pt-6 mt-6 border-t border-galleryLine text-center font-light text-[11px]">
+            &copy; 2026 Unique Boutique Willow Creek. All rights reserved.
         </div>
     </footer>
 
-    <!-- SCRIPT LOGIC (CONSUMER VIEW WITH PERSISTENT INVENTORY) -->
+    <!-- SCRIPT LOGIC -->
     <script>
-        let inventory = JSON.parse(localStorage.getItem('ub_professional_v1')) || [
+        let inventory = JSON.parse(localStorage.getItem('ub_editorial_v2')) || [
             {
                 id: 1,
                 title: "Vintage Shabby Chic Lace Slip Dress",
                 category: "Women's Clothing",
                 price: "$48.00",
-                image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800",
-                desc: "Delicate peach and ivory estate-acquired slip dress. Excellent vintage condition with original stitching intact.",
+                image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=900",
+                desc: "Delicate peach and ivory estate-acquired slip dress. Excellent vintage condition with original delicate stitching intact.",
                 status: "current"
             },
             {
@@ -207,8 +179,8 @@
                 title: "Bigfoot Tropical Hawaiian Novelty Shirt",
                 category: "Bigfoot & Novelty",
                 price: "$36.00",
-                image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
-                desc: "Iconic regional novelty button-down shirt. Sourced directly from local estate inventory.",
+                image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=900",
+                desc: "Iconic regional novelty button-down shirt. Sourced directly from local estate inventories in Humboldt County.",
                 status: "current"
             },
             {
@@ -216,7 +188,7 @@
                 title: "Authentic German Gärtopf 7.5L Stoneware Crock",
                 category: "Vintage Kitchenware",
                 price: "$85.00",
-                image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=800",
+                image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=900",
                 desc: "Original system Harsch Gärtopf brown glazed stoneware fermentation crock in pristine estate condition.",
                 status: "current"
             },
@@ -225,7 +197,7 @@
                 title: "Vintage Green & Yellow Fiestaware Service Stack",
                 category: "Vintage Kitchenware",
                 price: "$65.00",
-                image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800",
+                image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=900",
                 desc: "Authenticated mid-century ceramic plates and mugs featuring classic glazed primary colorways.",
                 status: "current"
             },
@@ -234,7 +206,7 @@
                 title: "Men's Heavy Vintage Flannel Utility Shirt",
                 category: "Men's Clothing",
                 price: "$32.00",
-                image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=800",
+                image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=900",
                 desc: "Durable heavyweight cotton plaid flannel hand-selected from a regional estate collection.",
                 status: "current"
             },
@@ -243,7 +215,7 @@
                 title: "Estate Rhinestone & Faux Pearl Statement Necklace",
                 category: "Jewelry & Glam",
                 price: "$45.00",
-                image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800",
+                image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=900",
                 desc: "Mid-century costume jewelry piece featuring handset crystals and secure clasp closure.",
                 status: "past"
             }
@@ -253,11 +225,11 @@
         let currentStatusFilter = 'all';
 
         function renderInventory() {
-            const grid = document.getElementById('inventoryGrid');
+            const container = document.getElementById('inventoryContainer');
             const emptyState = document.getElementById('emptyState');
             const searchQuery = document.getElementById('searchInput').value.toLowerCase();
 
-            grid.innerHTML = '';
+            container.innerHTML = '';
 
             const filtered = inventory.filter(item => {
                 const matchesCategory = (currentCategory === 'All' || item.category === currentCategory);
@@ -273,60 +245,72 @@
                 emptyState.classList.add('hidden');
             }
 
-            filtered.forEach(item => {
-                const card = document.createElement('div');
-                card.className = "bg-white rounded-sm gallery-border shadow-xs hover:shadow-md transition flex flex-col justify-between group cursor-pointer overflow-hidden";
-                card.onclick = () => openDetailModal(item);
+            filtered.forEach((item, index) => {
+                const article = document.createElement('article');
+                article.className = "group cursor-pointer border-b border-galleryLine pb-16 last:border-none";
+                article.onclick = () => openDetailModal(item);
 
                 const statusBadge = item.status === 'current' 
-                    ? '<span class="bg-emerald-800 text-white text-[10px] uppercase font-semibold tracking-wider px-2.5 py-1 rounded-sm shadow-xs">Available</span>'
-                    : '<span class="bg-stone-600 text-stone-200 text-[10px] uppercase font-semibold tracking-wider px-2.5 py-1 rounded-sm shadow-xs">Archived</span>';
+                    ? '<span class="text-emerald-700 font-semibold">Available</span>'
+                    : '<span class="text-galleryMuted line-through">Archived</span>';
 
-                card.innerHTML = `
-                    <div>
-                        <div class="relative h-64 bg-stone-100 overflow-hidden border-b border-stone-200">
-                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-102 transition duration-500">
-                            <div class="absolute top-3 right-3">${statusBadge}</div>
-                            <div class="absolute bottom-3 left-3 bg-white/95 px-2.5 py-1 rounded-sm text-[10px] font-semibold uppercase tracking-wider text-stone-800 border border-stone-200">
-                                ${item.category}
+                const numStr = (index + 1).toString().padStart(2, '0');
+
+                article.innerHTML = `
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-5 relative h-80 bg-stone-100 overflow-hidden rounded-sm border border-galleryLine">
+                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-102 transition duration-700">
+                            <div class="absolute top-3 left-3 bg-galleryBg/90 px-2 py-0.5 text-[10px] uppercase font-semibold tracking-wider text-galleryInk">
+                                ${numStr} // ${item.category}
                             </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="font-semibold text-lg text-stone-900 editorial-serif leading-snug group-hover:text-brass transition">${item.title}</h3>
-                            <p class="text-xs text-stone-600 font-light mt-2 line-clamp-2">${item.desc}</p>
+                        <div class="md:col-span-7 space-y-4 md:pl-6">
+                            <div class="flex justify-between items-center text-xs uppercase tracking-wider">
+                                <span class="text-galleryAccent font-semibold">${item.category}</span>
+                                ${statusBadge}
+                            </div>
+                            <h2 class="editorial-title text-2xl lg:text-3xl font-normal text-galleryInk group-hover:text-galleryAccent transition leading-snug">
+                                ${item.title}
+                            </h2>
+                            <p class="text-xs text-galleryMuted font-light leading-relaxed">
+                                ${item.desc}
+                            </p>
+                            <div class="flex items-center justify-between pt-2">
+                                <span class="text-base font-semibold text-galleryInk">${item.price}</span>
+                                <span class="text-xs font-medium uppercase tracking-widest text-galleryAccent group-hover:underline flex items-center gap-1.5">
+                                    Inspect Piece <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-6 pt-0 flex items-center justify-between mt-2">
-                        <span class="text-lg font-semibold text-stone-900">${item.price}</span>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-brass flex items-center gap-1 group-hover:underline">
-                            Inspect Piece <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                        </span>
-                    </div>
                 `;
-                grid.appendChild(card);
+                container.appendChild(article);
             });
         }
 
         function filterCategory(category) {
             currentCategory = category;
-            document.querySelectorAll('.category-pill').forEach(btn => {
-                if (btn.id === `cat-${category}`) {
-                    btn.className = "category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-obsidian text-parchment transition shadow-xs";
+            
+            // Update active state in sidebar TOC
+            const buttons = document.getElementById('categoryNav').getElementsByTagName('button');
+            for (let btn of buttons) {
+                if (btn.innerText.includes(category) || (category === 'All' && btn.innerText.includes('All'))) {
+                    btn.className = "text-left py-1.5 px-3 rounded-sm bg-galleryInk text-galleryBg transition";
                 } else {
-                    btn.className = "category-pill whitespace-nowrap px-4 py-2 rounded-sm bg-white text-stone-700 gallery-border hover:bg-stone-50 transition";
+                    btn.className = "text-left py-1.5 px-3 rounded-sm text-galleryMuted hover:text-galleryInk transition";
                 }
-            });
+            }
             renderInventory();
         }
 
         function setStatusFilter(status) {
             currentStatusFilter = status;
             ['all', 'current', 'past'].forEach(s => {
-                const tab = document.getElementById(`tab-${s}`);
+                const btn = document.getElementById(`tab-${s}`);
                 if (s === status) {
-                    tab.className = "flex-1 md:flex-initial px-4 py-2 rounded-sm bg-white text-obsidian shadow-xs font-semibold transition";
+                    btn.className = "text-galleryInk font-bold border-b-2 border-galleryInk pb-1";
                 } else {
-                    tab.className = "flex-1 md:flex-initial px-4 py-2 rounded-sm text-stone-600 hover:text-stone-900 transition";
+                    btn.className = "text-galleryMuted hover:text-galleryInk pb-1 transition";
                 }
             });
             renderInventory();
@@ -345,10 +329,10 @@
             
             const badge = document.getElementById('detailStatusBadge');
             if(item.status === 'current') {
-                badge.className = "absolute top-4 left-4 text-[10px] uppercase font-semibold tracking-widest px-3 py-1 rounded-sm shadow-xs bg-emerald-800 text-white";
+                badge.className = "absolute top-4 left-4 text-[9px] uppercase font-semibold tracking-widest px-2.5 py-1 rounded-sm bg-emerald-800 text-white";
                 badge.innerText = "Available Now";
             } else {
-                badge.className = "absolute top-4 left-4 text-[10px] uppercase font-semibold tracking-widest px-3 py-1 rounded-sm shadow-xs bg-stone-600 text-stone-200";
+                badge.className = "absolute top-4 left-4 text-[9px] uppercase font-semibold tracking-widest px-2.5 py-1 rounded-sm bg-stone-600 text-stone-200";
                 badge.innerText = "Archived / Sold";
             }
 
