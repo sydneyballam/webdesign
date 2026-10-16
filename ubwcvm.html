@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Boutique Willow Creek — Fine Estate Catalog</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        catalogBg: '#F7F5F0',
+                        catalogDark: '#141716',
+                        catalogGold: '#A3824B',
+                        catalogMuted: '#6E7370',
+                        catalogLine: '#DCD6CB'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: High-End Editorial Serif & Clean Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --paper: #F7F5F0;
+            --ink: #141716;
+            --gold: #A3824B;
+            --muted: #6E7370;
+            --line: #DCD6CB;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background:
+                radial-gradient(ellipse at top, rgba(255,255,255,.05), transparent 55%),
+                #1A1D1C;
+            color: var(--ink);
+            letter-spacing: 0.02em;
+        }
+
+        h1, h2, h3, .editorial-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .catalog-spread {
+            position: relative;
+            isolation: isolate;
+            background: transparent;
+            perspective: 2400px;
+            transform-style: preserve-3d;
+            overflow: visible;
+            border-radius: 2px;
+        }
+
+        .book-shell {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 640px;
+            perspective: 2400px;
+            touch-action: pan-y;
+        }
+
+        #book {
+            margin: 0 auto;
+            box-shadow: 0 30px 60px rgba(0,0,0,.42);
+        }
+
+        .page {
+            background: var(--paper);
+            color: var(--ink);
+            border: 1px solid rgba(220,214,203,.8);
+            overflow: hidden;
+        }
+
+        .page-content {
+            width: 100%;
+            height: 100%;
+            padding: 2.4rem 2.2rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            background: var(--paper);
+        }
+
+        .page-content .page-main {
+            margin-top: 1.7rem;
+            margin-bottom: 1.2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 0;
+        }
+
+        .page-topline {
+            position: absolute;
+            top: 1.1rem;
+            left: 2.2rem;
+            right: 2.2rem;
+            font-size: 9px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .page-bottomline {
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            gap: .5rem;
+            font-size: 9px;
+            color: var(--muted);
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .page-margin {
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            bottom: 0;
+            width: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            padding: 0;
+            color: rgba(163,130,75,.95);
+            background: linear-gradient(90deg, rgba(163,130,75,.16), rgba(163,130,75,0));
+            cursor: pointer;
+            transition: color .2s ease, background .2s ease, width .2s ease;
+        }
+
+        .page-margin span {
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            letter-spacing: .22em;
+            font-size: 9px;
+            font-weight: 500;
+            opacity: .9;
+        }
+
+        .page-margin:hover,
+        .page-margin:focus-visible {
+            width: 46px;
+            color: #fff;
+            background: linear-gradient(90deg, rgba(163,130,75,.48), rgba(163,130,75,0));
+            outline: 2px solid var(--gold);
+            outline-offset: -2px;
+        }
+
+        .page-margin:disabled { opacity: .22; cursor: default; }
+        .page-margin.prev { left: 0; }
+        .page-margin.prev span { transform: rotate(180deg); }
+        .page-margin.next { right: 0; background: linear-gradient(270deg, rgba(163,130,75,.16), rgba(163,130,75,0)); }
+        .page-margin.next:hover,
+        .page-margin.next:focus-visible { background: linear-gradient(270deg, rgba(163,130,75,.48), rgba(163,130,75,0)); }
+
+        .stf__parent { margin: 0 auto; }
+        .stf__block { overflow: visible !important; }
+        .stf__item { background: var(--paper); }
+        .page img { -webkit-user-drag: none; user-select: none; }
+
+        @media (max-width: 1023px) {
+            .book-shell { min-height: 540px; }
+            .page-content { padding: 2.1rem 1.7rem 1.5rem; }
+            .page-topline { left: 1.7rem; right: 1.7rem; }
+            .page-margin { width: 30px; }
+            .page-margin span { font-size: 8px; }
+        }
+
+        @media (max-width: 640px) {
+            body { padding-left: 10px !important; padding-right: 10px !important; }
+            .book-shell { min-height: 0; padding: 0 3px; }
+            .page-content { padding: 2.2rem 1.45rem 1.4rem; }
+            .page-topline { left: 1.45rem; right: 1.45rem; font-size: 8px; }
+            .page-bottomline { font-size: 8px; letter-spacing: .06em; }
+            .page-margin { width: 24px; }
+            .page-margin:hover, .page-margin:focus-visible { width: 28px; }
+            .page-margin span { letter-spacing: .12em; font-size: 7px; }
+        }
+
+
+        /* The cover carries the shop identity; subsequent pages are uninterrupted editorial pages. */
+        .magazine-cover {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: clamp(28px, 7vw, 100px) clamp(24px, 8vw, 120px);
+            color: #f7f2e8;
+            background:
+                radial-gradient(ellipse at 50% 40%, rgba(164,128,72,.25), transparent 38%),
+                linear-gradient(145deg, rgba(17,20,18,.25), rgba(17,20,18,.94)),
+                #242923;
+        }
+        .magazine-cover::before,
+        .magazine-cover::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            border: 1px solid rgba(196,164,111,.5);
+        }
+        .magazine-cover::before { inset: clamp(14px, 2.5vw, 34px); }
+        .magazine-cover::after { inset: clamp(20px, 3.3vw, 46px); border-color: rgba(247,242,232,.15); }
+        .cover-kicker, .cover-rule, .magazine-cover h1, .cover-deck, .cover-store-info, .cover-edition { position: relative; z-index: 1; }
+        .cover-kicker { text-transform: uppercase; letter-spacing: .34em; font-size: clamp(9px, 1vw, 13px); color: #d6b77f; }
+        .cover-rule { width: 54px; height: 1px; background: #b89760; margin: clamp(22px, 4vh, 42px) auto; }
+        .magazine-cover h1 { margin: 0; font-size: clamp(4.2rem, 12vw, 11.5rem); line-height: .72; font-weight: 400; letter-spacing: -.045em; }
+        .magazine-cover h1 em { font-weight: 400; }
+        .cover-deck { max-width: 27rem; margin: clamp(24px, 4vh, 42px) auto 0; color: rgba(247,242,232,.78); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.2rem, 2.3vw, 2rem); line-height: 1.2; }
+        .cover-store-info { margin-top: clamp(32px, 6vh, 64px); display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .cover-location { color: #d6b77f; font-size: clamp(10px, 1vw, 13px); text-transform: uppercase; letter-spacing: .22em; }
+        .cover-phone { color: #f7f2e8; font-size: clamp(15px, 1.7vw, 22px); letter-spacing: .08em; text-decoration: none; border-bottom: 1px solid rgba(214,183,127,.65); padding-bottom: 5px; }
+        .cover-phone:hover { color: #d6b77f; }
+        .cover-invitation { margin-top: 8px; color: rgba(247,242,232,.65); font-size: 9px; letter-spacing: .24em; text-transform: uppercase; }
+        .cover-edition { position: absolute; bottom: clamp(28px, 5vh, 58px); left: 0; right: 0; color: rgba(247,242,232,.48); font-size: 9px; text-transform: uppercase; letter-spacing: .22em; }
+        .cover-edition span { padding: 0 .5em; color: #b89760; }
+        .page-topline, .page-bottomline { display: none !important; }
+        @media (max-width: 640px) {
+            .magazine-cover h1 { font-size: clamp(3.8rem, 18vw, 6.5rem); }
+            .cover-deck { max-width: 17rem; }
+        }
+
+        /* Full-window, single-page editorial presentation */
+        html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+        body {
+            padding: 0 !important;
+            min-height: 100dvh !important;
+            display: block !important;
+            background: #111312;
+        }
+        body > header {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100% !important;
+            max-width: none !important;
+            margin: 0 !important;
+            padding: 18px 26px 14px !important;
+            border: 0 !important;
+            background: linear-gradient(180deg, rgba(12,14,13,.78), rgba(12,14,13,0));
+            align-items: flex-start;
+            pointer-events: none;
+        }
+        body > header a { pointer-events: auto; }
+        body > header > div:last-child { padding-top: 4px; }
+        body > main {
+            position: fixed !important;
+            inset: 0 !important;
+            width: 100vw !important;
+            max-width: none !important;
+            height: 100dvh !important;
+            min-height: 0 !important;
+            margin: 0 !important;
+            display: block !important;
+        }
+        .book-shell {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 0 !important;
+            padding: 0 !important;
+            display: block;
+            perspective: 2600px;
+        }
+        #book {
+            width: 100vw !important;
+            height: 100dvh !important;
+            max-width: none !important;
+            margin: 0 !important;
+            box-shadow: none;
+        }
+        .stf__parent { margin: 0 !important; }
+        .stf__block { overflow: visible !important; }
+        .page {
+            width: 100%; height: 100%;
+            border: 0 !important;
+            border-radius: 0 !important;
+            background: var(--paper);
+        }
+        .page-content {
+            width: 100%; height: 100%;
+            min-height: 100%;
+            padding: 0 !important;
+            display: block;
+            overflow: hidden;
+            background: var(--paper);
+        }
+        .page-content .page-main {
+            position: absolute;
+            inset: 0;
+            margin: 0 !important;
+            padding: 0;
+            width: 100%; height: 100%;
+            display: block;
+        }
+        .page-topline, .page-bottomline {
+            z-index: 8;
+            position: absolute;
+            left: 28px !important;
+            right: 28px !important;
+            color: rgba(20,23,22,.72);
+            text-shadow: 0 1px 10px rgba(255,255,255,.3);
+        }
+        .page-topline { top: 72px !important; font-size: 9px; }
+        .page-bottomline {
+            bottom: 22px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(20,23,22,.28);
+            background: linear-gradient(0deg, rgba(247,245,240,.88), rgba(247,245,240,0));
+        }
+        .page-main > div:not(.space-y-5) { min-height: 100%; }
+        /* Cover: full-page typography, like a printed editorial cover. */
+        .page-main > .text-center {
+            min-height: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10vh 9vw !important;
+            background:
+                linear-gradient(135deg, rgba(247,245,240,.97), rgba(232,225,211,.92)),
+                var(--paper);
+        }
+        .page-main > .text-center h1 { font-size: clamp(3.4rem, 9vw, 9rem); line-height: .88; max-width: 10ch; }
+        .page-main > .text-center p { font-size: clamp(1rem, 1.8vw, 1.6rem); max-width: 30rem; }
+        /* Contents page becomes a full-window, typeset index. */
+        .page-main > .py-4 {
+            height: 100%;
+            padding: 14vh 10vw 10vh !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #f1eee7;
+        }
+        .page-main > .py-4 h2 { font-size: clamp(2.5rem, 5vw, 5rem); }
+        .page-main > .py-4 ul { font-size: clamp(.8rem, 1.25vw, 1.15rem); }
+        .page-main > .py-4 ul li { padding-bottom: 1rem; }
+        /* Product pages use a full-bleed photograph with editorial copy overlaid. */
+        .page-main > div.space-y-5 {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            background: #262724;
+        }
+        .page-main > div.space-y-5 > .relative.h-60 {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            background: #3d3b35;
+        }
+        .page-main > div.space-y-5 > .relative.h-60 img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: saturate(.88);
+        }
+        .page-main > div.space-y-5 > .relative.h-60::after {
+            content: "";
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(10,12,11,.04) 22%, rgba(10,12,11,.08) 42%, rgba(10,12,11,.88) 100%);
+            pointer-events: none;
+        }
+        .page-main > div.space-y-5 > .relative.h-60 > span { z-index: 2; }
+        .page-main > div.space-y-5 > .space-y-2 {
+            position: relative;
+            z-index: 3;
+            margin: 0 !important;
+            padding: 8vh 8vw 12vh;
+            color: white;
+            max-width: 1000px;
+        }
+        .page-main > div.space-y-5 > .space-y-2 > span:first-child {
+            display: block;
+            color: #e2c28d;
+            font-size: clamp(.65rem, 1vw, .9rem);
+            letter-spacing: .24em;
+            margin-bottom: 1.2rem;
+        }
+        .page-main > div.space-y-5 h3 {
+            color: white !important;
+            font-size: clamp(2.5rem, 6.5vw, 6.5rem) !important;
+            line-height: .92;
+            max-width: 12ch;
+            margin-bottom: 1.2rem;
+        }
+        .page-main > div.space-y-5 p { color: rgba(255,255,255,.88) !important; }
+        .page-main > div.space-y-5 p.text-sm { font-size: clamp(1.25rem, 2.3vw, 2.2rem); margin: .6rem 0 1rem; }
+        .page-main > div.space-y-5 p.text-xs { font-size: clamp(.9rem, 1.35vw, 1.2rem); max-width: 38rem; line-height: 1.7; }
+        .page-main > div.space-y-5 a { margin-top: 1.4rem; padding: .9rem 1.3rem; background: #f7f5f0; color: #141716; }
+        .page-main > div.space-y-5 a:hover { background: #dfc18e; }
+        .page-margin {
+            position: fixed;
+            top: 0; bottom: 0;
+            width: clamp(24px, 4vw, 62px);
+            z-index: 120;
+            opacity: .25;
+            color: white;
+            background: linear-gradient(90deg, rgba(10,12,11,.2), transparent);
+        }
+        .page-margin span { font-size: 8px; text-shadow: 0 1px 8px #000; }
+        .page-margin:hover, .page-margin:focus-visible { opacity: 1; width: clamp(32px, 5vw, 76px); }
+        .page-margin.next { background: linear-gradient(270deg, rgba(10,12,11,.2), transparent); }
+        body > footer {
+            position: fixed;
+            z-index: 100;
+            left: 0; right: 0; bottom: 0;
+            width: 100% !important; max-width: none !important;
+            margin: 0 !important;
+            padding: 14px 20px 18px !important;
+            color: rgba(255,255,255,.82) !important;
+            background: linear-gradient(0deg, rgba(12,14,13,.7), transparent);
+            pointer-events: none;
+        }
+        body > footer button { pointer-events: auto; }
+        @media (max-width: 640px) {
+            body > header { padding: 14px 16px 10px !important; }
+            body > header .editorial-serif { font-size: 1.2rem; }
+            body > header > div:last-child { gap: 12px; font-size: 9px; }
+            .page-topline { top: 62px !important; left: 18px !important; right: 18px !important; }
+            .page-bottomline { left: 18px !important; right: 18px !important; bottom: 14px; font-size: 7px; }
+            .page-main > .text-center { padding: 12vh 8vw !important; }
+            .page-main > .py-4 { padding: 13vh 9vw 11vh !important; }
+            .page-main > .py-4 ul { font-size: 10px; }
+            .page-main > .space-y-5 > .space-y-2 { padding: 8vh 8vw 13vh; }
+            .page-main > div.space-y-5 > .space-y-2 { padding: 7vh 8vw 12vh; }
+            body > footer { padding: 10px 12px 12px !important; font-size: 9px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .page-margin, button { transition-duration: .01ms !important; }
+        }
+    </style>
+</head>
+<body class="selection:bg-catalogGold selection:text-white">
+
+    <!-- INTERACTIVE PAGE-CURL BOOK -->
+    <main>
+        <div class="book-shell">
+            <div id="book" aria-label="Unique Boutique digital catalog"></div>
+        </div>
+        <button id="prevMargin" class="page-margin prev" type="button" aria-label="Turn to previous page" title="Previous page">
+            <span>← Previous</span>
+        </button>
+        <button id="nextMargin" class="page-margin next" type="button" aria-label="Turn to next page" title="Next page">
+            <span>Next →</span>
+        </button>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+    <script>
+        const spreads = [
+            // SPREAD 0: COVER & TABLE OF CONTENTS
+            {
+                leftPageNo: "Page 01",
+                rightPageNo: "Page 02",
+                left: `
+                    <section class="magazine-cover">
+                        <div class="cover-kicker">A different kind of find</div>
+                        <div class="cover-rule"></div>
+                        <h1 class="editorial-serif">Unique<br><em>Boutique</em></h1>
+                        <p class="cover-deck">Unexpected treasures. Pre-loved pieces. One-of-a-kind finds.</p>
+                        <div class="cover-store-info">
+                            <span class="cover-location">Willow Creek, California</span>
+                            <a href="tel:7075995811" onclick="event.stopPropagation()" class="cover-phone">707&nbsp;599&nbsp;5811</a>
+                            <span class="cover-invitation">Explore the collection</span>
+                        </div>
+                        <div class="cover-edition">The shop catalog <span>•</span> 2026</div>
+                    </section>
+                `,
+                right: `
+                    <div class="py-4">
+                        <div class="border-b border-catalogDark pb-3 mb-6">
+                            <h2 class="editorial-serif text-2xl font-normal text-catalogDark">Index of Acquisitions</h2>
+                        </div>
+                        <ul class="space-y-4 text-xs tracking-wider">
+                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">01. Vintage Shabby Chic Lace Slip Dress</span><span class="text-catalogGold font-semibold">Page 03</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">02. Bigfoot Tropical Hawaiian Shirt</span><span class="text-catalogGold font-semibold">Page 04</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">03. 7.5L German Stoneware Gärtopf Crock</span><span class="text-catalogGold font-semibold">Page 05</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">04. Retro Green & Yellow Fiestaware Stack</span><span class="text-catalogGold font-semibold">Page 06</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">05. Men's Heavy Vintage Flannel Shirt</span><span class="text-catalogGold font-semibold">Page 07</span></li>
+                            <li class="flex justify-between border-b border-catalogLine pb-2.5"><span class="font-medium text-catalogDark">06. Estate Rhinestone & Pearl Necklace</span><span class="text-catalogGold font-semibold">Page 08</span></li>
+                        </ul>
+                    </div>
+                `
+            },
+            // SPREAD 1: ITEMS 1 & 2
+            {
+                leftPageNo: "Page 03",
+                rightPageNo: "Page 04",
+                left: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800" alt="Vintage lace slip dress" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-900 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Available</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Women's Apparel // Item 01</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Vintage Shabby Chic Lace Slip Dress</h3>
+                            <p class="text-sm font-semibold text-catalogDark">$48.00</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Delicate peach and ivory estate slip dress with original delicate stitching intact.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Inquire to Claim</a>
+                        </div>
+                    </div>
+                `,
+                right: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800" alt="Novelty button-down shirt" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-900 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Available</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Regional Novelty // Item 02</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Bigfoot Tropical Hawaiian Novelty Shirt</h3>
+                            <p class="text-sm font-semibold text-catalogDark">$36.00</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Iconic regional novelty button-down sourced directly from local Humboldt County estates.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Inquire to Claim</a>
+                        </div>
+                    </div>
+                `
+            },
+            // SPREAD 2: ITEMS 3 & 4
+            {
+                leftPageNo: "Page 05",
+                rightPageNo: "Page 06",
+                left: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=800" alt="Stoneware fermentation crock" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-900 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Available</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Vintage Kitchenware // Item 03</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">7.5L German Stoneware Gärtopf Crock</h3>
+                            <p class="text-sm font-semibold text-catalogDark">$85.00</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Original system Harsch Gärtopf brown glazed stoneware fermentation crock in pristine condition.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Inquire to Claim</a>
+                        </div>
+                    </div>
+                `,
+                right: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=800" alt="Vintage green and yellow tableware" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-900 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Available</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Vintage Kitchenware // Item 04</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Retro Green & Yellow Fiestaware Stack</h3>
+                            <p class="text-sm font-semibold text-catalogDark">$65.00</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Authenticated mid-century ceramic plates and mugs featuring classic glazed primary colorways.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Inquire to Claim</a>
+                        </div>
+                    </div>
+                `
+            },
+            // SPREAD 3: ITEMS 5 & 6
+            {
+                leftPageNo: "Page 07",
+                rightPageNo: "Page 08",
+                left: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=800" alt="Vintage flannel shirt" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-emerald-900 text-white text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Available</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Men's Apparel // Item 05</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Men's Heavy Vintage Flannel Utility Shirt</h3>
+                            <p class="text-sm font-semibold text-catalogDark">$32.00</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Durable heavyweight cotton plaid flannel hand-selected from a regional estate collection.</p>
+                            <a href="tel:7075995811" class="inline-block bg-catalogDark text-white px-4 py-2 rounded-sm text-[10px] uppercase tracking-widest font-medium mt-2 hover:bg-black transition">Inquire to Claim</a>
+                        </div>
+                    </div>
+                `,
+                right: `
+                    <div class="space-y-5">
+                        <div class="relative h-60 bg-stone-200 rounded-sm overflow-hidden border border-catalogLine shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=800" alt="Rhinestone and pearl necklace" loading="lazy" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-stone-600 text-stone-200 text-[9px] uppercase tracking-widest px-2.5 py-1 font-medium">Archived</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[9px] uppercase font-semibold tracking-[0.25em] text-catalogGold">Jewelry & Valuables // Item 06</span>
+                            <h3 class="editorial-serif text-2xl font-normal text-catalogDark">Estate Rhinestone & Pearl Necklace</h3>
+                            <p class="text-sm font-semibold text-catalogDark">$45.00</p>
+                            <p class="text-xs text-catalogMuted font-light leading-relaxed">Mid-century costume jewelry piece featuring handset crystals and secure clasp closure.</p>
+                            <span class="inline-block text-stone-500 text-[10px] uppercase tracking-wider font-semibold mt-2">Item Sold / Claimed</span>
+                        </div>
+                    </div>
+                `
+            }
+        ];
+
+        const bookEl = document.getElementById('book');
+        const prevMargin = document.getElementById('prevMargin');
+        const nextMargin = document.getElementById('nextMargin');
+        const allPages = [];
+
+        // Convert the editorial spread data into eight individual pages. The page-flip
+        // engine bends each page as a canvas-backed sheet and supports corner dragging.
+        spreads.forEach((spread, spreadIndex) => {
+            const pages = [
+                { content: spread.left, number: spread.leftPageNo, side: 'left', spreadIndex },
+                { content: spread.right, number: spread.rightPageNo, side: 'right', spreadIndex }
+            ];
+            pages.forEach(page => {
+                const pageEl = document.createElement('div');
+                pageEl.className = 'page';
+                pageEl.innerHTML = `
+                    <div class="page-content">
+                        <div class="page-main">${page.content}</div>
+                    </div>`;
+                bookEl.appendChild(pageEl);
+                allPages.push(pageEl);
+            });
+        });
+
+        let pageFlip;
+        let currentPage = 0;
+        const pageCount = allPages.length;
+
+        function updateNavigation(pageIndex) {
+            currentPage = Math.max(0, Math.min(pageIndex, pageCount - 1));
+            const atStart = currentPage <= 0;
+            const atEnd = currentPage >= pageCount - 1;
+            prevMargin.disabled = atStart;
+            nextMargin.disabled = atEnd;
+            prevMargin.setAttribute('aria-label', atStart ? 'Already at the beginning' : 'Turn to previous page');
+            nextMargin.setAttribute('aria-label', atEnd ? 'Already at the end' : 'Turn to next page');
+        }
+
+        function previousPage() {
+            if (pageFlip && currentPage > 0) pageFlip.flipPrev('top');
+        }
+        function nextPage() {
+            if (pageFlip && currentPage < pageCount - 1) pageFlip.flipNext('top');
+        }
+
+        // PageFlip handles the page mesh, curl, reverse side, dynamic shadows,
+        // touch/mouse dragging, and the settling animation after a release.
+        if (window.St && window.St.PageFlip) {
+            pageFlip = new St.PageFlip(bookEl, {
+                // A page is the viewport itself, not half of a two-page book.
+                width: Math.max(320, window.innerWidth),
+                height: Math.max(480, window.innerHeight),
+                size: 'stretch',
+                minWidth: 320,
+                maxWidth: 2400,
+                minHeight: 480,
+                maxHeight: 1800,
+                autoSize: true,
+                maxShadowOpacity: 0.52,
+                showCover: false,
+                mobileScrollSupport: true,
+                flippingTime: 1050,
+                usePortrait: true,
+                startPage: 0,
+                drawShadow: true,
+                startZIndex: 10,
+                useMouseEvents: true,
+                clickEventForward: true,
+                swipeDistance: 30,
+                showPageCorners: true,
+                disableFlipByClick: false
+            });
+            pageFlip.loadFromHTML(allPages);
+            pageFlip.on('flip', event => updateNavigation(event.data));
+            pageFlip.on('changeState', event => {
+                bookEl.classList.toggle('is-flipping', event.data === 'flipping');
+            });
+            updateNavigation(0);
+        } else {
+            // Graceful fallback if the page-curl library cannot load: display the
+            // catalog as a normal paginated stack with simple previous/next controls.
+            let fallbackIndex = 0;
+            function showFallbackPage() {
+                allPages.forEach((page, index) => {
+                    page.style.display = index === fallbackIndex ? 'block' : 'none';
+                    page.style.width = '100vw';
+                    page.style.height = '100dvh';
+                    page.style.minHeight = '100dvh';
+                });
+                bookEl.style.width = '100%';
+                bookEl.style.maxWidth = 'none';
+                bookEl.style.height = '100dvh';
+                bookEl.style.display = 'block';
+                updateNavigation(fallbackIndex);
+            }
+            prevMargin.addEventListener('click', () => { fallbackIndex = Math.max(0, fallbackIndex - 1); showFallbackPage(); });
+            nextMargin.addEventListener('click', () => { fallbackIndex = Math.min(pageCount - 1, fallbackIndex + 1); showFallbackPage(); });
+            showFallbackPage();
+        }
+
+        prevMargin.addEventListener('click', previousPage);
+        nextMargin.addEventListener('click', nextPage);
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                if (pageFlip && typeof pageFlip.update === 'function') pageFlip.update();
+            }, 180);
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest('a, button, input, textarea, select')) return;
+            if (event.key === 'ArrowRight') { event.preventDefault(); nextPage(); }
+            else if (event.key === 'ArrowLeft') { event.preventDefault(); previousPage(); }
+        });
+    </script>
+
+</body>
+</html>
