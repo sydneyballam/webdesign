@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Wellness Services (mockup)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FBEEE3',
+                        blush: '#EDB9A8',
+                        sage:  '#B9C6B1',
+                        ink:   '#5B2A2E'
+                    },
+                    fontFamily: {
+                        script: ['"Kaushan Script"', 'cursive'],
+                        serif:  ['"Playfair Display"', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: brush script for the name, Playfair Display for everything else (both appear on her flyer) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Playfair Display', Georgia, serif; }
+        :focus-visible { outline: 3px solid #5B2A2E; outline-offset: 2px; }
+    </style>
+</head>
+<body class="bg-paper text-ink font-serif text-[17px] leading-relaxed antialiased">
+
+    <!-- Watercolor edge effect, used by the two bands in the header -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <filter id="wc" x="-8%" y="-12%" width="116%" height="124%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.018 0.03" numOctaves="3" seed="7" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <linearGradient id="gBlush" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#F1C4B4"/>
+                <stop offset="1" stop-color="#E7A996"/>
+            </linearGradient>
+            <linearGradient id="gSage" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#C4CFBD"/>
+                <stop offset="1" stop-color="#AEBFA7"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- MOCKUP BANNER (remove when this becomes her live site) -->
+    <div class="bg-ink text-paper text-sm">
+        <div class="max-w-xl mx-auto px-4 py-1 flex flex-wrap items-center justify-between gap-x-4">
+            <p class="py-2">Design mockup. Name, contact details, dates and times are placeholders.</p>
+            <a href="index.html?client=jessica" class="min-h-[44px] inline-flex items-center underline underline-offset-4">Back to portfolio</a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="max-w-xl mx-auto px-4 pt-6">
+        <div class="relative px-6 pt-12 pb-14 text-center">
+            <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+                <rect x="8" y="10" width="384" height="180" fill="url(#gBlush)" filter="url(#wc)"/>
+            </svg>
+            <h1 class="relative font-script text-5xl sm:text-6xl leading-tight">Wellness Services</h1>
+        </div>
+        <div class="relative -mt-6 px-6 pt-12 pb-12 text-center">
+            <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
+                <rect x="8" y="10" width="384" height="220" fill="url(#gSage)" filter="url(#wc)"/>
+            </svg>
+            <ul class="relative text-2xl sm:text-3xl leading-relaxed">
+                <li>Massage therapy</li>
+                <li>Reiki</li>
+                <li>Sound healing</li>
+            </ul>
+        </div>
+
+        <p class="mt-6 text-center text-ink/80">Trinity County, California</p>
+        <div class="mt-5 flex flex-col sm:flex-row gap-3">
+            <a href="#book" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full bg-ink text-paper text-lg font-semibold px-6">Book a session</a>
+            <a href="#retreats" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink text-lg font-semibold px-6">See summer retreats</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- BOOKING -->
+        <section id="book" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
+            <h2 class="text-3xl font-semibold">Book a session</h2>
+            <p class="mt-2 text-ink/80">Pick a service, a day and a time. Days she is away at a retreat are blocked automatically, so nobody can book her twice.</p>
+
+            <h3 class="mt-10 text-xl font-semibold">1. Choose a service</h3>
+            <div id="services" class="mt-3 border-t border-ink/20"></div>
+
+            <h3 class="mt-10 text-xl font-semibold">2. Pick a day</h3>
+            <div id="calendar" class="mt-3"></div>
+            <p class="mt-3 text-sm text-ink/80 flex flex-wrap items-center gap-x-2">
+                <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sage" aria-hidden="true"><i class="fa-solid fa-leaf text-[10px]"></i></span>
+                <span>Retreat, no sessions. Sunday and Monday are closed. Sample hours.</span>
+            </p>
+
+            <h3 class="mt-10 text-xl font-semibold">3. Pick a time</h3>
+            <div id="times" class="mt-3"></div>
+
+            <div id="summary" class="mt-8"></div>
+        </section>
+
+        <!-- RETREATS -->
+        <section id="retreats" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
+            <h2 class="text-3xl font-semibold">Summer retreats</h2>
+            <p class="mt-2 text-ink/80">Small gatherings in Trinity County. These are sample dates. They also show up as blocked days in the booking calendar above.</p>
+            <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section id="news" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
+            <h2 class="text-3xl font-semibold">Stay in the loop</h2>
+            <p class="mt-2 text-ink/80">Get new retreat dates and openings by email.</p>
+            <form id="newsForm" class="mt-5" method="post">
+                <label for="email" class="block font-semibold mb-2">Email address</label>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
+                           class="min-h-[52px] flex-1 rounded-full border-2 border-ink/40 bg-white/60 px-5 text-ink placeholder-ink/50 focus:border-ink">
+                    <button type="submit" class="min-h-[52px] rounded-full bg-ink text-paper text-lg font-semibold px-6">Join the list</button>
+                </div>
+                <p id="newsNotice" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="max-w-xl mx-auto px-4 mt-20 pb-12">
+        <div class="border-t border-ink/20 pt-8">
+            <p class="font-script text-3xl">Wellness Services</p>
+            <p class="mt-1 text-ink/80">Trinity County, California</p>
+            <p class="mt-4">
+                <a href="mailto:hello@example.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">hello@example.com</a><br>
+                <a href="tel:+15305550100" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 555-0100</a>
+            </p>
+
+            <details class="mt-6 text-sm text-ink/80">
+                <summary class="min-h-[44px] flex items-center cursor-pointer">About this mockup</summary>
+                <ul class="list-disc pl-5 space-y-1 pb-2">
+                    <li>The business name, email and phone number are stand-ins until she has her own.</li>
+                    <li>Retreat dates, open hours and times are sample data.</li>
+                    <li>Booking and the newsletter form do nothing yet. The live version points them at her booking tool and email service.</li>
+                </ul>
+            </details>
+        </div>
+    </footer>
+
+    <script>
+        /* ==========================================================
+           EDIT HERE. Everything the page shows comes from these lists.
+           ========================================================== */
+
+        const SITE = {
+            // Paste her real booking link here (Square, Google Calendar, Cal.com...).
+            // While this is empty, "Book this time" shows a mockup notice instead.
+            bookingUrl: '',
+            // Paste the form address from her email service here (MailerLite, Buttondown...).
+            // While this is empty, the newsletter form shows a mockup notice instead.
+            newsletterAction: ''
+        };
+
+        const SERVICES = [
+            { id: 'massage', name: 'Massage therapy', blurb: 'Bodywork for tight muscles and tired shoulders.' },
+            { id: 'reiki',   name: 'Reiki',           blurb: 'Calm, gentle energy work.' },
+            { id: 'sound',   name: 'Sound healing',   blurb: 'Sound and stillness to help you rest.' }
+        ];
+
+        // Sample retreats. Dates are YYYY-MM-DD. Days from start to end are blocked in the booking calendar.
+        const EVENTS = [
+            { id: 'r1', title: 'Midsummer sound retreat',      start: '2027-06-18', end: '2027-06-20',
+              place: 'Trinity County. Address sent after you register.',
+              blurb: 'A weekend of sound healing, reiki and quiet time outdoors, for a small group.' },
+            { id: 'r2', title: 'Late-summer renewal retreat',  start: '2027-08-13', end: '2027-08-15',
+              place: 'Trinity County. Address sent after you register.',
+              blurb: 'A slow weekend to rest and reset before fall, with reiki and bodywork on offer.' }
+        ];
+
+        // The booking calendar shows these months. Open days are Tuesday to Saturday (0 = Sunday).
+        const MONTHS = [ { y: 2027, m: 5 }, { y: 2027, m: 6 }, { y: 2027, m: 7 } ];
+        const OPEN_DAYS = [2, 3, 4, 5, 6];
+        const SLOT_TIMES = ['10:00 am', '11:30 am', '1:00 pm', '2:30 pm', '4:00 pm'];
+
+        /* ---------------- code below needs no editing ---------------- */
+
+        const state = { service: SERVICES[0].id, monthIdx: 0, date: null, time: null };
+
+        const fmtLong  = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+        const fmtMonth = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+        const fmtMD    = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric' });
+
+        function esc(s) {
+            return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+        function parseDay(s) { const p = s.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]); }
+        function iso(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+        function eventOn(d) { return EVENTS.find(e => d >= parseDay(e.start) && d <= parseDay(e.end)); }
+        function serviceById(id) { return SERVICES.find(s => s.id === id); }
+
+        function rangeText(e) {
+            const s = parseDay(e.start), t = parseDay(e.end);
+            const end = s.getMonth() === t.getMonth() ? String(t.getDate()) : fmtMD.format(t);
+            return fmtMD.format(s) + ' to ' + end + ', ' + t.getFullYear();
+        }
+
+        function slotsFor(date) {
+            // Sample data: every few slots show as already booked, so the picker looks lived-in.
+            return SLOT_TIMES.map((t, i) => ({ t: t, taken: (date.getDate() + i) % 4 === 0 }));
+        }
+
+        /* ---- 1. services ---- */
+        function renderServices() {
+            document.getElementById('services').innerHTML = SERVICES.map(s =>
+                '<label class="flex items-start gap-4 min-h-[68px] py-4 border-b border-ink/20 cursor-pointer">' +
+                    '<input type="radio" name="service" value="' + esc(s.id) + '" class="mt-1.5 h-6 w-6 shrink-0 accent-ink"' + (state.service === s.id ? ' checked' : '') + '>' +
+                    '<span><span class="block text-xl font-semibold">' + esc(s.name) + '</span>' +
+                    '<span class="block text-ink/80">' + esc(s.blurb) + '</span></span>' +
+                '</label>'
+            ).join('');
+        }
+
+        /* ---- 2. calendar ---- */
+        function renderCalendar(refocus) {
+            const mo = MONTHS[state.monthIdx];
+            const first = new Date(mo.y, mo.m, 1);
+            const daysIn = new Date(mo.y, mo.m + 1, 0).getDate();
+
+            let cells = '';
+            for (let i = 0; i < first.getDay(); i++) cells += '<span></span>';
+            for (let d = 1; d <= daysIn; d++) {
+                const date = new Date(mo.y, mo.m, d);
+                const key = iso(date);
+                const ev = eventOn(date);
+                const open = OPEN_DAYS.indexOf(date.getDay()) !== -1;
+                const base = 'h-11 w-full rounded-full text-base ';
+                if (ev) {
+                    cells += '<button type="button" disabled aria-label="' + esc(fmtMD.format(date)) + ', away at a retreat" class="' + base + 'bg-sage">' +
+                        d + '<i class="fa-solid fa-leaf text-[9px] ml-0.5 align-super" aria-hidden="true"></i></button>';
+                } else if (!open) {
+                    cells += '<button type="button" disabled aria-label="' + esc(fmtMD.format(date)) + ', closed" class="' + base + 'text-ink/35">' + d + '</button>';
+                } else {
+                    const sel = state.date === key;
+                    cells += '<button type="button" data-date="' + key + '" aria-pressed="' + sel + '" aria-label="' + esc(fmtLong.format(date)) + '" class="' + base +
+                        (sel ? 'bg-ink text-paper font-semibold' : 'border border-ink/30 hover:bg-blush/40') + '">' + d + '</button>';
+                }
+            }
+
+            const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(w => '<span aria-hidden="true">' + w + '</span>').join('');
+            const navCls = 'min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded-full border border-ink/30 disabled:opacity-30';
+
+            document.getElementById('calendar').innerHTML =
+                '<div class="flex items-center justify-between mb-3">' +
+                    '<button type="button" data-nav="-1" aria-label="Previous month" class="' + navCls + '"' + (state.monthIdx === 0 ? ' disabled' : '') + '><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>' +
+                    '<p class="text-xl font-semibold" aria-live="polite">' + esc(fmtMonth.format(first)) + '</p>' +
+                    '<button type="button" data-nav="1" aria-label="Next month" class="' + navCls + '"' + (state.monthIdx === MONTHS.length - 1 ? ' disabled' : '') + '><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>' +
+                '</div>' +
+                '<div class="grid grid-cols-7 gap-1 text-center text-sm text-ink/70 mb-1">' + weekdays + '</div>' +
+                '<div class="grid grid-cols-7 gap-1 text-center">' + cells + '</div>';
+
+            if (refocus) {
+                const el = document.querySelector('#calendar ' + refocus);
+                if (el && !el.disabled) el.focus();
+            }
+        }
+
+        /* ---- 3. times ---- */
+        function renderTimes() {
+            const box = document.getElementById('times');
+            if (!state.date) {
+                box.innerHTML = '<p class="text-ink/80">Pick a day to see open times.</p>';
+                return;
+            }
+            const slots = slotsFor(parseDay(state.date));
+            box.innerHTML = '<p class="mb-3 text-ink/80">' + esc(fmtLong.format(parseDay(state.date))) + '. Sample times.</p>' +
+                '<div class="grid grid-cols-2 gap-2">' + slots.map(s => {
+                    if (s.taken) {
+                        return '<button type="button" disabled class="min-h-[52px] rounded-full border border-ink/20 text-ink/40 line-through" aria-label="' + esc(s.t) + ', already booked">' + esc(s.t) + '</button>';
+                    }
+                    const sel = state.time === s.t;
+                    return '<button type="button" data-time="' + esc(s.t) + '" aria-pressed="' + sel + '" class="min-h-[52px] rounded-full text-lg ' +
+                        (sel ? 'bg-ink text-paper font-semibold' : 'border-2 border-ink/40 hover:bg-blush/40') + '">' + esc(s.t) + '</button>';
+                }).join('') + '</div>';
+        }
+
+        /* ---- summary and book button ---- */
+        function renderSummary() {
+            const box = document.getElementById('summary');
+            if (!state.date || !state.time) { box.innerHTML = ''; return; }
+            const s = serviceById(state.service);
+            box.innerHTML =
+                '<div class="border-l-4 border-sage pl-4">' +
+                    '<p class="text-xl font-semibold">' + esc(s.name) + '</p>' +
+                    '<p>' + esc(fmtLong.format(parseDay(state.date))) + ' at ' + esc(state.time) + '</p>' +
+                    '<button id="bookBtn" type="button" class="mt-4 min-h-[52px] w-full sm:w-auto rounded-full bg-ink text-paper text-lg font-semibold px-8">Book this time</button>' +
+                    '<p id="bookNotice" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>' +
+                '</div>';
+        }
+
+        /* ---- retreats ---- */
+        function renderEvents() {
+            document.getElementById('eventList').innerHTML = EVENTS.map(e =>
+                '<li class="py-7 border-b border-ink/20">' +
+                    '<h3 class="text-2xl font-semibold">' + esc(rangeText(e)) + '</h3>' +
+                    '<p class="text-xl mt-1">' + esc(e.title) + '</p>' +
+                    '<p class="mt-2 text-ink/80">' + esc(e.blurb) + '</p>' +
+                    '<p class="mt-2 text-sm text-ink/80"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i>' + esc(e.place) + '</p>' +
+                    '<button type="button" data-event="' + esc(e.id) + '" class="mt-4 min-h-[52px] rounded-full border-2 border-ink text-lg font-semibold px-6">Reserve a spot</button>' +
+                    '<p id="note-' + esc(e.id) + '" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>' +
+                '</li>'
+            ).join('');
+        }
+
+        /* ---- wiring ---- */
+        document.getElementById('services').addEventListener('change', function (ev) {
+            if (ev.target.name === 'service') { state.service = ev.target.value; renderSummary(); }
+        });
+
+        document.getElementById('calendar').addEventListener('click', function (ev) {
+            const nav = ev.target.closest('button[data-nav]');
+            if (nav) {
+                const next = state.monthIdx + Number(nav.dataset.nav);
+                if (next < 0 || next >= MONTHS.length) return;
+                state.monthIdx = next; state.date = null; state.time = null;
+                renderCalendar('[data-nav="' + nav.dataset.nav + '"]'); renderTimes(); renderSummary();
+                return;
+            }
+            const day = ev.target.closest('button[data-date]');
+            if (day) {
+                state.date = day.dataset.date; state.time = null;
+                renderCalendar('[data-date="' + state.date + '"]'); renderTimes(); renderSummary();
+            }
+        });
+
+        document.getElementById('times').addEventListener('click', function (ev) {
+            const t = ev.target.closest('button[data-time]');
+            if (!t) return;
+            state.time = t.dataset.time;
+            renderTimes(); renderSummary();
+            const again = document.querySelector('#times [data-time="' + state.time + '"]');
+            if (again) again.focus();
+        });
+
+        document.getElementById('summary').addEventListener('click', function (ev) {
+            if (!ev.target.closest('#bookBtn')) return;
+            if (SITE.bookingUrl) { window.open(SITE.bookingUrl, '_blank', 'noopener'); return; }
+            document.getElementById('bookNotice').textContent =
+                'Mockup only. Nothing was booked. On the live site, this opens her booking page for this time.';
+        });
+
+        document.getElementById('eventList').addEventListener('click', function (ev) {
+            const b = ev.target.closest('button[data-event]');
+            if (!b) return;
+            document.getElementById('note-' + b.dataset.event).textContent =
+                'Mockup only. Nothing was reserved. On the live site, this opens the sign-up form for this retreat.';
+        });
+
+        const newsForm = document.getElementById('newsForm');
+        if (SITE.newsletterAction) newsForm.action = SITE.newsletterAction;
+        newsForm.addEventListener('submit', function (ev) {
+            if (SITE.newsletterAction) return;   // real form: let the browser send it
+            ev.preventDefault();
+            document.getElementById('newsNotice').textContent = 'Mockup only. Nothing was sent. On the live site, this adds you to her email list.';
+        });
+
+        renderServices();
+        renderCalendar();
+        renderTimes();
+        renderSummary();
+        renderEvents();
+    </script>
+</body>
+</html>
