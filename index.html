@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Portal | Web Design Samples</title>
+    <title>Client Portal | Web Design Portfolio</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,9 +12,7 @@
                 extend: {
                     colors: {
                         hubDark: '#111827',
-                        hubCard: '#1F2937',
-                        hubAccent: '#3B82F6',
-                        hubTeal: '#0D9488'
+                        hubCard: '#1F2937'
                     }
                 }
             }
@@ -26,120 +24,239 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        html { scroll-behavior: smooth; }
-        section[id] { scroll-margin-top: 1rem; }
     </style>
 </head>
-<body class="bg-hubDark text-gray-100 min-h-screen antialiased">
+<body class="bg-hubDark text-gray-100 min-h-screen flex flex-col antialiased">
 
     <!-- HEADER -->
     <header class="border-b border-gray-800">
-        <div class="max-w-3xl mx-auto px-4 py-8 sm:py-10 text-center">
+        <div class="max-w-4xl mx-auto px-4 py-8 sm:py-10 text-center">
             <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-teal-400 flex items-center justify-center text-white text-xl shadow-lg mx-auto mb-4">
                 <i class="fa-solid fa-code"></i>
             </div>
             <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Client Portal</h1>
-            <p class="mt-2 text-sm sm:text-base text-gray-400">Find your site, or browse sample designs by category.</p>
+            <p id="subtitle" class="mt-2 text-sm sm:text-base text-gray-400"></p>
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-4 py-8 space-y-12">
+    <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-grow">
 
-        <!-- YOUR SITE -->
-        <section id="your-site" aria-labelledby="your-site-title">
-            <h2 id="your-site-title" class="text-lg font-semibold text-white mb-1">Your site</h2>
-            <p class="text-sm text-gray-400 mb-4">Pages designed specifically for you.</p>
+        <noscript>
+            <p class="text-sm text-gray-400 text-center py-8">Please turn on JavaScript to browse the designs.</p>
+        </noscript>
 
-            <div class="space-y-3">
+        <!-- FILTERS -->
+        <section aria-label="Filters" class="space-y-4">
+            <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Category</p>
+                <div id="categoryChips" class="flex flex-wrap gap-2"></div>
+            </div>
 
-                <!-- Unique Boutique Willow Creek -->
-                <a href="ubwc1.html" class="flex items-center gap-4 bg-hubCard border border-gray-800 hover:border-teal-500/60 rounded-2xl p-4 min-h-[72px] transition">
-                    <span class="w-12 h-12 shrink-0 rounded-xl bg-teal-900/40 border border-teal-500/20 flex items-center justify-center text-teal-400 text-lg">
-                        <i class="fa-solid fa-store"></i>
-                    </span>
-                    <span class="flex-grow min-w-0">
-                        <span class="block font-semibold text-white">Unique Boutique</span>
-                        <span class="block text-xs text-gray-400">Willow Creek, CA &middot; Estate sale storefront</span>
-                    </span>
-                    <i class="fa-solid fa-chevron-right text-gray-500"></i>
-                </a>
+            <div>
+                <label for="clientSelect" class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Client</label>
+                <select id="clientSelect" onchange="setClient(this.value)" class="w-full sm:w-72 min-h-[44px] bg-hubCard border border-gray-700 rounded-xl px-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
+            </div>
 
-                <!-- Wellness client (page not built yet) -->
-                <div class="flex items-center gap-4 border border-dashed border-gray-700 rounded-2xl p-4 min-h-[72px]" aria-disabled="true">
-                    <span class="w-12 h-12 shrink-0 rounded-xl bg-gray-800 flex items-center justify-center text-gray-500 text-lg">
-                        <i class="fa-solid fa-spa"></i>
-                    </span>
-                    <span class="flex-grow min-w-0">
-                        <span class="block font-semibold text-gray-300">Massage &amp; Wellness</span>
-                        <span class="block text-xs text-gray-500">Massage therapy, wellness consulting &amp; retreats &middot; Coming soon</span>
-                    </span>
-                </div>
-
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+                <p id="resultCount" class="text-sm text-gray-400" aria-live="polite"></p>
+                <button id="copyBtn" type="button" onclick="copyLink()" class="min-h-[44px] px-3 text-sm text-blue-400 hover:text-blue-300 flex items-center gap-2">
+                    <i class="fa-solid fa-link text-xs"></i><span id="copyLabel">Copy link to this view</span>
+                </button>
             </div>
         </section>
 
-        <!-- BROWSE SAMPLES -->
-        <section id="samples" aria-labelledby="samples-title">
-            <h2 id="samples-title" class="text-lg font-semibold text-white mb-1">Browse sample designs</h2>
-            <p class="text-sm text-gray-400 mb-4">Pick a category to see what's possible.</p>
-
-            <!-- Category buttons -->
-            <nav aria-label="Categories" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <a href="#storefront" class="flex sm:flex-col items-center sm:justify-center gap-3 sm:gap-2 bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-2xl p-4 min-h-[64px] sm:min-h-[110px] sm:text-center transition">
-                    <i class="fa-solid fa-store text-xl text-blue-400"></i>
-                    <span class="text-sm font-semibold text-white">Storefront</span>
-                </a>
-                <a href="#appointments" class="flex sm:flex-col items-center sm:justify-center gap-3 sm:gap-2 bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-2xl p-4 min-h-[64px] sm:min-h-[110px] sm:text-center transition">
-                    <i class="fa-solid fa-calendar-check text-xl text-blue-400"></i>
-                    <span class="text-sm font-semibold text-white">Appointments &amp; Calendar</span>
-                </a>
-                <a href="#wellness" class="flex sm:flex-col items-center sm:justify-center gap-3 sm:gap-2 bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-2xl p-4 min-h-[64px] sm:min-h-[110px] sm:text-center transition">
-                    <i class="fa-solid fa-spa text-xl text-blue-400"></i>
-                    <span class="text-sm font-semibold text-white">Wellness &amp; Retreats</span>
-                </a>
-            </nav>
-        </section>
-
-        <!-- CATEGORY: STOREFRONT -->
-        <section id="storefront" aria-labelledby="storefront-title">
-            <h2 id="storefront-title" class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-store text-blue-400"></i> Storefront
-            </h2>
-            <ul class="space-y-2">
-                <li><a href="ubwc2.html" class="flex items-center justify-between bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-xl px-4 min-h-[56px] transition"><span class="text-sm text-gray-100">Gallery style</span><i class="fa-solid fa-chevron-right text-gray-500"></i></a></li>
-                <li><a href="ubwc3.html" class="flex items-center justify-between bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-xl px-4 min-h-[56px] transition"><span class="text-sm text-gray-100">Catalog style 1</span><i class="fa-solid fa-chevron-right text-gray-500"></i></a></li>
-                <li><a href="ubwcmagazine.html" class="flex items-center justify-between bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-xl px-4 min-h-[56px] transition"><span class="text-sm text-gray-100">Catalog style 2 (magazine)</span><i class="fa-solid fa-chevron-right text-gray-500"></i></a></li>
-                <li><a href="ubwcvm.html" class="flex items-center justify-between bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-xl px-4 min-h-[56px] transition"><span class="text-sm text-gray-100">Catalog style 3</span><i class="fa-solid fa-chevron-right text-gray-500"></i></a></li>
-                <li><a href="ub1.html" class="flex items-center justify-between bg-hubCard border border-gray-800 hover:border-blue-500/60 rounded-xl px-4 min-h-[56px] transition"><span class="text-sm text-gray-100">Catalog style 4</span><i class="fa-solid fa-chevron-right text-gray-500"></i></a></li>
-            </ul>
-        </section>
-
-        <!-- CATEGORY: APPOINTMENTS & CALENDAR -->
-        <section id="appointments" aria-labelledby="appointments-title">
-            <h2 id="appointments-title" class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-check text-blue-400"></i> Appointments &amp; Calendar
-            </h2>
-            <div class="border border-dashed border-gray-700 rounded-xl px-4 py-5 text-sm text-gray-500">
-                Sample pages coming soon.
+        <!-- RESULTS -->
+        <section aria-label="Designs" class="mt-2">
+            <div id="results" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+            <div id="emptyState" class="hidden text-center py-12 border border-dashed border-gray-700 rounded-2xl">
+                <p id="emptyText" class="text-sm text-gray-400"></p>
+                <button id="resetBtn" type="button" onclick="resetFilters()" class="mt-3 min-h-[44px] px-4 text-sm text-blue-400 hover:text-blue-300">Show all designs</button>
             </div>
         </section>
-
-        <!-- CATEGORY: WELLNESS & RETREATS -->
-        <section id="wellness" aria-labelledby="wellness-title">
-            <h2 id="wellness-title" class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-spa text-blue-400"></i> Wellness &amp; Retreats
-            </h2>
-            <div class="border border-dashed border-gray-700 rounded-xl px-4 py-5 text-sm text-gray-500">
-                Sample pages coming soon.
-            </div>
-        </section>
-
-        <p class="text-center"><a href="#top" class="text-xs text-gray-500 hover:text-gray-300">Back to top</a></p>
     </main>
 
     <footer class="border-t border-gray-800 py-6 text-center text-xs text-gray-500">
         <p>&copy; 2026 Web Design Portal</p>
     </footer>
 
+    <script>
+        /* ==========================================================
+           HOW TO ADD THINGS
+           1. New client: add a line to CLIENTS (the key becomes the
+              link, e.g. index.html?client=unique-boutique).
+           2. New design: add an object to DESIGNS. A design can have
+              several "looks" (variations); the first look is the main link.
+              "categories" can list more than one category.
+           3. New category: add a line to CATEGORIES.
+           Optional: set "image" on a design (e.g. 'images/thumb.jpg')
+           to show a screenshot instead of the icon tile.
+           ========================================================== */
+
+        const CATEGORIES = [
+            { id: 'storefront',   label: 'Storefront',              icon: 'fa-store' },
+            { id: 'appointments', label: 'Appointments & Calendar', icon: 'fa-calendar-check' },
+            { id: 'wellness',     label: 'Wellness & Retreats',     icon: 'fa-spa' }
+        ];
+
+        const CLIENTS = {
+            'unique-boutique': { name: 'Unique Boutique', place: 'Willow Creek, CA' }
+        };
+
+        const DESIGNS = [
+            {
+                title: 'Estate Storefront',
+                client: 'unique-boutique',
+                categories: ['storefront'],
+                industry: 'Retail · Estate sales',
+                blurb: 'Estate sale inventory, vintage apparel and Fiestaware.',
+                image: '',
+                looks: [
+                    { label: 'Treasure shop', url: 'ubwc1.html' },
+                    { label: 'Gallery',       url: 'ubwc2.html' },
+                    { label: 'Catalog 1',     url: 'ubwc3.html' },
+                    { label: 'Magazine',      url: 'ubwcmagazine.html' },
+                    { label: 'Catalog 2',     url: 'ubwcvm.html' },
+                    { label: 'Catalog 3',     url: 'ub1.html' }
+                ]
+            }
+        ];
+
+        /* ---------------- code below needs no editing ---------------- */
+
+        const state = { category: 'all', client: 'all' };
+
+        function esc(s) {
+            return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+        function catById(id) { return CATEGORIES.find(c => c.id === id); }
+
+        function readUrl() {
+            const p = new URLSearchParams(location.search);
+            const client = p.get('client');
+            const category = p.get('category');
+            if (client && CLIENTS[client]) state.client = client;
+            if (category && catById(category)) state.category = category;
+        }
+
+        function queryString() {
+            const p = new URLSearchParams();
+            if (state.client !== 'all') p.set('client', state.client);
+            if (state.category !== 'all') p.set('category', state.category);
+            return p.toString();
+        }
+
+        function syncUrl() {
+            const qs = queryString();
+            try {
+                history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+            } catch (e) { /* some browsers block this on local files */ }
+        }
+
+        function visibleDesigns() {
+            return DESIGNS.filter(d =>
+                (state.client === 'all' || d.client === state.client) &&
+                (state.category === 'all' || d.categories.includes(state.category))
+            );
+        }
+
+        function renderChips() {
+            const chips = [{ id: 'all', label: 'All', soon: false }].concat(
+                CATEGORIES.map(c => ({ id: c.id, label: c.label, soon: !DESIGNS.some(d => d.categories.includes(c.id)) }))
+            );
+            document.getElementById('categoryChips').innerHTML = chips.map(c => {
+                const active = state.category === c.id;
+                const cls = active
+                    ? 'bg-blue-600 border-blue-500 text-white'
+                    : 'bg-hubCard border-gray-700 text-gray-300 hover:border-blue-500/60';
+                return '<button type="button" onclick="setCategory(\'' + c.id + '\')" aria-pressed="' + active + '" ' +
+                    'class="min-h-[44px] px-4 rounded-full border text-sm font-medium transition ' + cls + '">' +
+                    esc(c.label) + (c.soon ? ' <span class="text-xs opacity-60">&middot; soon</span>' : '') + '</button>';
+            }).join('');
+        }
+
+        function renderClientSelect() {
+            const sel = document.getElementById('clientSelect');
+            sel.innerHTML = '<option value="all">All clients</option>' +
+                Object.keys(CLIENTS).map(id => '<option value="' + esc(id) + '">' + esc(CLIENTS[id].name) + '</option>').join('');
+            sel.value = state.client;
+        }
+
+        function cardHtml(d) {
+            const client = CLIENTS[d.client];
+            const cat = catById(d.categories[0]);
+            const thumb = d.image
+                ? '<img src="' + esc(d.image) + '" alt="" loading="lazy" class="w-full h-full object-cover">'
+                : '<i class="fa-solid ' + (cat ? cat.icon : 'fa-code') + ' text-3xl text-white/70"></i>';
+            const tags = d.categories.map(id => {
+                const c = catById(id);
+                return c ? '<span class="text-[11px] bg-gray-800 text-gray-300 px-2.5 py-1 rounded-md">' + esc(c.label) + '</span>' : '';
+            }).join('');
+            const looks = d.looks.length > 1
+                ? '<div class="px-4 pb-4"><p class="text-xs text-gray-500 mb-2">' + d.looks.length + ' looks</p><div class="flex flex-wrap gap-2">' +
+                  d.looks.map(l => '<a href="' + esc(l.url) + '" class="min-h-[40px] inline-flex items-center px-3 rounded-lg border border-gray-700 text-xs text-gray-200 hover:border-blue-500/60 hover:text-white transition">' + esc(l.label) + '</a>').join('') +
+                  '</div></div>'
+                : '';
+            return '<article class="bg-hubCard border border-gray-800 rounded-2xl overflow-hidden flex flex-col">' +
+                '<a href="' + esc(d.looks[0].url) + '" class="block group">' +
+                    '<div class="h-32 bg-gradient-to-tr from-blue-700/60 to-teal-500/50 flex items-center justify-center overflow-hidden">' + thumb + '</div>' +
+                    '<div class="p-4">' +
+                        '<h2 class="font-semibold text-white group-hover:text-blue-300 transition">' + esc(d.title) + '</h2>' +
+                        '<p class="text-xs text-gray-400 mt-0.5">' + esc(client ? client.name : '') + (client && client.place ? ' &middot; ' + esc(client.place) : '') + '</p>' +
+                        '<p class="text-sm text-gray-300 mt-2">' + esc(d.blurb) + '</p>' +
+                        '<div class="flex flex-wrap gap-1.5 mt-3">' + tags + '</div>' +
+                    '</div>' +
+                '</a>' +
+                looks +
+            '</article>';
+        }
+
+        function render() {
+            renderChips();
+            renderClientSelect();
+
+            const list = visibleDesigns();
+            document.getElementById('results').innerHTML = list.map(cardHtml).join('');
+
+            const subtitle = state.client !== 'all'
+                ? 'Designs made for ' + CLIENTS[state.client].name + '.'
+                : 'Browse sample designs for ideas. Filter by what you need, or by client.';
+            document.getElementById('subtitle').textContent = subtitle;
+
+            let count = list.length + (list.length === 1 ? ' design' : ' designs');
+            if (state.client !== 'all') count += ' for ' + CLIENTS[state.client].name;
+            if (state.category !== 'all') count += ' in ' + catById(state.category).label;
+            document.getElementById('resultCount').textContent = count;
+
+            const empty = document.getElementById('emptyState');
+            empty.classList.toggle('hidden', list.length > 0);
+            if (list.length === 0) {
+                const noneAtAll = state.category !== 'all' && !DESIGNS.some(d => d.categories.includes(state.category));
+                document.getElementById('emptyText').textContent = noneAtAll
+                    ? 'Designs for ' + catById(state.category).label + ' are coming soon.'
+                    : 'No designs match these filters yet.';
+            }
+
+            syncUrl();
+        }
+
+        function setCategory(id) { state.category = id; render(); }
+        function setClient(id) { state.client = id; render(); }
+        function resetFilters() { state.category = 'all'; state.client = 'all'; render(); }
+
+        function copyLink() {
+            const qs = queryString();
+            const url = location.href.split('?')[0].split('#')[0] + (qs ? '?' + qs : '');
+            const label = document.getElementById('copyLabel');
+            const done = () => { label.textContent = 'Link copied'; setTimeout(() => { label.textContent = 'Copy link to this view'; }, 2000); };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(done, () => window.prompt('Copy this link:', url));
+            } else {
+                window.prompt('Copy this link:', url);
+            }
+        }
+
+        readUrl();
+        render();
+    </script>
 </body>
 </html>
