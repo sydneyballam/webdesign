@@ -51,6 +51,35 @@
                 <stop offset="0" stop-color="#C4CFBD"/>
                 <stop offset="1" stop-color="#AEBFA7"/>
             </linearGradient>
+
+            <!-- Service icons: simple line drawings in the ink color, used with <use href="#ic-...">. -->
+            <symbol id="ic-massage" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="32" cy="53" rx="21" ry="7"/>
+                    <ellipse cx="32" cy="41" rx="14" ry="6"/>
+                    <ellipse cx="32" cy="29.5" rx="9" ry="5"/>
+                    <path d="M32 24.5 C29 15 35 9 45 9 C46 18 40 24 32 24.5 Z"/>
+                    <path d="M33 22 L42 13"/>
+                </g>
+            </symbol>
+            <symbol id="ic-reiki" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="32" cy="26" r="7"/>
+                    <path d="M45 26 H50 M41.2 16.8 L44.7 13.3 M32 13 V8 M22.8 16.8 L19.3 13.3 M19 26 H14 M22.8 35.2 L19.3 38.7 M41.2 35.2 L44.7 38.7 M32 39 V43"/>
+                    <path d="M9 42 C13 54 23 58 32 58 C41 58 51 54 55 42"/>
+                </g>
+            </symbol>
+            <symbol id="ic-sound" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="30" cy="37" rx="21" ry="5.5"/>
+                    <path d="M9 37 C9 51 18 57 30 57 C42 57 51 51 51 37"/>
+                    <path d="M22 61 H38"/>
+                    <path d="M58 9 L46 32"/>
+                    <circle cx="59.5" cy="6.5" r="3.2"/>
+                    <path d="M12 24 Q18 18 24 24"/>
+                    <path d="M7 19 Q18 8 29 19"/>
+                </g>
+            </symbol>
         </defs>
     </svg>
 
@@ -74,10 +103,10 @@
             <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
                 <rect x="8" y="10" width="384" height="220" fill="url(#gSage)" filter="url(#wc)"/>
             </svg>
-            <ul class="relative text-2xl sm:text-3xl leading-relaxed">
-                <li>Massage therapy</li>
-                <li>Reiki</li>
-                <li>Sound Healing</li>
+            <ul class="relative inline-block text-left text-2xl sm:text-3xl space-y-3">
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg>Massage Therapy</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg>Reiki</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg>Sound Healing</li>
             </ul>
         </div>
 
@@ -99,7 +128,7 @@
 
             <h3 class="mt-10 text-xl font-semibold">2. Pick a day</h3>
             <div id="calendar" class="mt-3"></div>
-            <p class="mt-3 text-sm text-ink/80 flex flex-wrap items-center gap-x-2">
+            <p class="mt-3 text-sm text-ink/80 flex items-center gap-2">
                 <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sage" aria-hidden="true"><i class="fa-solid fa-leaf text-[10px]"></i></span>
                 <span>Retreat, no sessions. Sunday and Monday are closed.</span>
             </p>
@@ -111,14 +140,24 @@
         </section>
 
         <!-- RETREATS -->
-        <section id="retreats" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
+        <div class="max-w-xl mx-auto px-4 mt-16" aria-hidden="true">
+            <svg class="w-full h-5 text-ink/35" viewBox="0 0 400 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path vector-effect="non-scaling-stroke" d="M0 10 Q25 -2 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10"/>
+            </svg>
+        </div>
+        <section id="retreats" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Summer retreats</h2>
             <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
             <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
         </section>
 
         <!-- NEWSLETTER -->
-        <section id="news" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
+        <div class="max-w-xl mx-auto px-4 mt-16" aria-hidden="true">
+            <svg class="w-full h-5 text-ink/35" viewBox="0 0 400 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path vector-effect="non-scaling-stroke" d="M0 10 Q25 -2 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10"/>
+            </svg>
+        </div>
+        <section id="news" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Stay in the loop</h2>
             <p class="mt-2 text-ink/80">Get new retreat dates and openings by email.</p>
             <form id="newsForm" class="mt-5" method="post">
@@ -161,9 +200,9 @@
         };
 
         const SERVICES = [
-            { id: 'massage', name: 'Massage therapy', blurb: 'Bodywork for tight muscles and tired shoulders.' },
-            { id: 'reiki',   name: 'Reiki',           blurb: 'Calm, gentle energy work.' },
-            { id: 'sound',   name: 'Sound Healing',   blurb: 'Sound and stillness to help you rest.' }
+            { id: 'massage', icon: 'ic-massage', name: 'Massage Therapy', blurb: 'Bodywork for tight muscles and tired shoulders.' },
+            { id: 'reiki',   icon: 'ic-reiki',   name: 'Reiki',           blurb: 'Calm, gentle energy work.' },
+            { id: 'sound',   icon: 'ic-sound',   name: 'Sound Healing',   blurb: 'Sound and stillness to help you rest.' }
         ];
 
         // Sample retreats. Dates are YYYY-MM-DD. Days from start to end are blocked in the booking calendar.
@@ -211,8 +250,9 @@
         /* ---- 1. services ---- */
         function renderServices() {
             document.getElementById('services').innerHTML = SERVICES.map(s =>
-                '<label class="flex items-start gap-4 min-h-[68px] py-4 border-b border-ink/20 cursor-pointer">' +
-                    '<input type="radio" name="service" value="' + esc(s.id) + '" class="mt-1.5 h-6 w-6 shrink-0 accent-ink"' + (state.service === s.id ? ' checked' : '') + '>' +
+                '<label class="flex items-center gap-4 min-h-[80px] px-3 py-3 border-b border-ink/20 cursor-pointer has-[:checked]:bg-blush/25">' +
+                    '<input type="radio" name="service" value="' + esc(s.id) + '" class="h-6 w-6 shrink-0 accent-ink"' + (state.service === s.id ? ' checked' : '') + '>' +
+                    '<span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#' + esc(s.icon) + '"/></svg></span>' +
                     '<span><span class="block text-xl font-semibold">' + esc(s.name) + '</span>' +
                     '<span class="block text-ink/80">' + esc(s.blurb) + '</span></span>' +
                 '</label>'
@@ -289,7 +329,7 @@
             const s = serviceById(state.service);
             box.innerHTML =
                 '<div class="border-l-4 border-sage pl-4">' +
-                    '<p class="text-xl font-semibold">' + esc(s.name) + '</p>' +
+                    '<p class="text-xl font-semibold flex items-center gap-3"><svg class="h-9 w-9 shrink-0" aria-hidden="true" focusable="false"><use href="#' + esc(s.icon) + '"/></svg>' + esc(s.name) + '</p>' +
                     '<p>' + esc(fmtLong.format(parseDay(state.date))) + ' at ' + esc(state.time) + '</p>' +
                     '<button id="bookBtn" type="button" class="mt-4 min-h-[52px] w-full sm:w-auto rounded-full bg-ink text-paper text-lg font-semibold px-8">Book this time</button>' +
                     '<p id="bookNotice" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>' +
