@@ -92,7 +92,7 @@
         <!-- BOOKING -->
         <section id="book" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Book a session</h2>
-            <p class="mt-2 text-ink/80">Pick a service, a day and a time. Days she is away at a retreat are blocked automatically, so nobody can book her twice.</p>
+            <p class="mt-2 text-ink/80">Pick a service, a day and a time.</p>
 
             <h3 class="mt-10 text-xl font-semibold">1. Choose a service</h3>
             <div id="services" class="mt-3 border-t border-ink/20"></div>
@@ -101,7 +101,7 @@
             <div id="calendar" class="mt-3"></div>
             <p class="mt-3 text-sm text-ink/80 flex flex-wrap items-center gap-x-2">
                 <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sage" aria-hidden="true"><i class="fa-solid fa-leaf text-[10px]"></i></span>
-                <span>Retreat, no sessions. Sunday and Monday are closed. Sample hours.</span>
+                <span>Retreat, no sessions. Sunday and Monday are closed.</span>
             </p>
 
             <h3 class="mt-10 text-xl font-semibold">3. Pick a time</h3>
@@ -113,7 +113,7 @@
         <!-- RETREATS -->
         <section id="retreats" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Summer retreats</h2>
-            <p class="mt-2 text-ink/80">Small gatherings in Trinity County. These are sample dates. They also show up as blocked days in the booking calendar above.</p>
+            <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
             <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
         </section>
 
@@ -141,15 +141,6 @@
                 <a href="mailto:hello@example.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">hello@example.com</a><br>
                 <a href="tel:+15305550100" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 555-0100</a>
             </p>
-
-            <details class="mt-6 text-sm text-ink/80">
-                <summary class="min-h-[44px] flex items-center cursor-pointer">About this mockup</summary>
-                <ul class="list-disc pl-5 space-y-1 pb-2">
-                    <li>The business name, email and phone number are stand-ins until she has her own.</li>
-                    <li>Retreat dates, open hours and times are sample data.</li>
-                    <li>Booking and the newsletter form do nothing yet. The live version points them at her booking tool and email service.</li>
-                </ul>
-            </details>
         </div>
     </footer>
 
@@ -280,7 +271,7 @@
                 return;
             }
             const slots = slotsFor(parseDay(state.date));
-            box.innerHTML = '<p class="mb-3 text-ink/80">' + esc(fmtLong.format(parseDay(state.date))) + '. Sample times.</p>' +
+            box.innerHTML = '<p class="mb-3 text-ink/80">' + esc(fmtLong.format(parseDay(state.date))) + '</p>' +
                 '<div class="grid grid-cols-2 gap-2">' + slots.map(s => {
                     if (s.taken) {
                         return '<button type="button" disabled class="min-h-[52px] rounded-full border border-ink/20 text-ink/40 line-through" aria-label="' + esc(s.t) + ', already booked">' + esc(s.t) + '</button>';
