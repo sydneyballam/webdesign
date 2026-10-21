@@ -106,6 +106,36 @@ footer a:hover{text-decoration:underline}
 #chipper .wrap{container-type:inline-size}
 .one{font-size:clamp(34px,5.2cqw,104px);white-space:nowrap}
 @media(max-width:700px){.one{white-space:normal}}
+#zone .wrap{container-type:inline-size}
+.fr .wrap{container-type:inline-size;--F2:clamp(34px,5.4cqw,80px)}
+.frrow{display:flex;align-items:center;gap:calc(var(--F2)*.8)}
+.fr h2{font-size:var(--F2);line-height:.92;color:#0F2F6B;margin:0 0 28px}
+.fr h2 span{display:block;white-space:nowrap}
+.dot{flex:none;width:calc(var(--F2)*1.84 + 150px);aspect-ratio:1;border-radius:50%;background:#1D5FD1;position:relative}
+.dot::after{content:"";position:absolute;inset:32%;border-radius:50%;background:#fff}
+@media(max-width:700px){.frrow{flex-direction:column;align-items:flex-start}.dot{width:120px}.fr h2 span{white-space:normal}}
+.acc details{border-top:3px solid var(--deep)}
+.acc>details:last-child{border-bottom:3px solid var(--deep)}
+.acc summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px 24px;align-items:center;padding:30px 0}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .t{font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(30px,4.4vw,60px);color:var(--deep)}
+.acc summary .t small{display:block;margin-top:8px;font-family:'Atkinson Hyperlegible',sans-serif;font-weight:400;text-transform:none;font-size:18px;letter-spacing:0;line-height:1.3;color:#41454A}
+.tg{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:.06em;text-transform:uppercase;padding:2px 14px;border-radius:6px;color:#fff;background:var(--navy)}
+.tg.on{background:var(--pine)}
+.pm{position:relative;width:44px;height:44px;border:3px solid var(--deep);border-radius:50%}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;background:var(--deep);transform:translate(-50%,-50%)}
+.pm::before{width:18px;height:3px}.pm::after{width:3px;height:18px}
+details[open]>summary .pm::after{display:none}
+.acc summary:hover .pm{background:var(--sun)}
+.acc .panel{padding:0 0 44px}
+.acc .kids{margin:36px 0 0 clamp(0px,3vw,40px);border-left:8px solid var(--pine);padding-left:clamp(14px,2.4vw,32px)}
+.acc .kids details{border-top:2px solid var(--sage)}
+.acc .kids details:first-child{border-top:0}
+.acc .kids>details:last-child{border-bottom:0}
+.acc .kids summary .t{font-size:clamp(24px,3vw,40px)}
+.teaser{margin:0 0 20px;font-size:22px}
+.teaser b{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:56px;line-height:1;color:var(--pine);margin-right:6px}
+@media(max-width:700px){.acc summary{grid-template-columns:minmax(0,1fr) auto}.acc summary .tg{grid-column:1;justify-self:start;grid-row:2}.acc summary .pm{grid-column:2;grid-row:1}}
 </style>
 </head>
 <body>
@@ -281,36 +311,36 @@ footer a:hover{text-decoration:underline}
 </section>
 
 <!-- PROJECTS -->
-<section class="sec" style="background:#fff">
-<div class="wrap">
-<div style="display:flex;flex-wrap:wrap;gap:44px 72px;align-items:flex-start;margin-bottom:104px">
-<div style="flex:1 1 460px;min-width:0">
-<h2 class="d h2" style="color:var(--pine);margin-bottom:26px;font-size:clamp(44px,6vw,86px)">2025 PG&amp;E Western Willow Creek Risk Reduction Project</h2>
-<h3 class="h3" style="font-size:clamp(28px,3vw,38px);margin-bottom:18px">Brannan Mountain Roadside Fuels Reduction</h3>
-<div class="body">
-<p>This project focused on roadside fuel reduction on private property along Brannan Mountain Road, treating within 500 feet of PG&amp;E infrastructure and driveways adjacent to powerlines.</p>
-<p>The resulting shaded fuel breaks protect PG&amp;E electrical assets and reduces the risk of wildfire ignition and spreading into the communities and households that PG&amp;E serves. The neighborhood has improved ingress and egress for residents and emergency services along Brannan Mountain Road, which is a vital secondary evacuation route for Eastern Humboldt residents.</p>
+<section class="sec" style="background:var(--pine);color:#fff;padding-bottom:72px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:24px 72px;align-items:flex-end;justify-content:space-between">
+<h2 class="d h2">Projects</h2>
+<div style="display:flex;align-items:center;gap:20px">
+<!-- PLACEHOLDER: the number below is the total of every data-acres value on this page. Set data-acres on a completed phase and it updates. -->
+<p class="big" id="acres" style="font-size:clamp(90px,14vw,190px);color:var(--sun);margin:0" aria-label="Acres treated (placeholder)">00</p>
+<p style="margin:0;font-size:22px;line-height:1.25;max-width:16ch;text-align:left">acres treated under the Greater Willow Creek Wildfire Resilience Project</p>
 </div>
 </div>
-<div style="flex:1 1 420px;min-width:0">
-<h3 class="h3" style="font-size:28px;margin-bottom:16px">Before and after - Brannan Mountain Road</h3>
-<div style="display:grid;gap:16px">
-<div role="img" aria-label="Photo placeholder: Brannan Mountain Road - before" class="ph" style="aspect-ratio:16/10"><span>Brannan Mountain Road - before</span></div>
-<div role="img" aria-label="Photo placeholder: Brannan Mountain Road - after" class="ph" style="aspect-ratio:16/10"><span>Brannan Mountain Road - after</span></div>
-</div>
-</div>
-</div>
+</section>
 
-<div id="assessment" style="display:flex;flex-wrap:wrap;gap:44px 72px;align-items:flex-start;flex-direction:row-reverse">
-<div style="flex:1 1 460px;min-width:0">
-<h2 class="d h2" style="color:var(--pine);margin-bottom:28px;font-size:clamp(44px,6vw,86px)">Greater Willow Creek Wildfire Resilience project</h2>
+<section style="background:#fff;padding:72px 0 112px">
+<div class="wrap acc">
+
+<details open>
+<summary><span class="t">Greater Willow Creek Wildfire Resilience project</span><span class="tg on">Ongoing</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="panel">
 <div class="body">
 <p>This project removes dangerous hazardous fuels on private property, focusing on roadsides and within 100 feet of homes to create defensible space. This important work makes our community more safe by creating safe ingress/egress and protecting residents.</p>
-<p>The next portion of this project will focus on completing Home Risk Assessments for homeowners. Homeowners can learn how to harden their homes against catastrophic wildfire, register water sources with the Blue Dot Program, and get address signs that will aid emergency services.</p>
 </div>
-<h3 class="h3" style="font-size:clamp(28px,3vw,38px);margin:34px 0 14px">A Regional Partnership</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px;margin:28px 0"><div role="img" aria-label="Photo placeholder: Before" class="ph" style="aspect-ratio:16/10"><span>Before</span></div><div role="img" aria-label="Photo placeholder: After" class="ph" style="aspect-ratio:16/10"><span>After</span></div></div>
+<h3 class="h3" style="font-size:clamp(28px,3vw,38px);margin:8px 0 14px">A Regional Partnership</h3>
 <div class="body"><p>This multi-year project was designed and is being implemented in partnership with Humboldt County Resource Conservation District, Trinity County Resource Conservation District, and Willow Creek Volunteer Fire Department.</p></div>
-<div style="background:var(--mist);border-radius:6px;padding:30px;margin-top:22px;border-left:10px solid var(--pine)">
+
+<div class="kids">
+<details open id="assessment">
+<summary><span class="t">Home Risk Assessments</span><span class="tg on">Ongoing</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="panel">
+<div class="body"><p>The next portion of this project will focus on completing Home Risk Assessments for homeowners. Homeowners can learn how to harden their homes against catastrophic wildfire, register water sources with the Blue Dot Program, and get address signs that will aid emergency services.</p></div>
+<div style="background:var(--mist);border-radius:6px;padding:30px;margin-top:10px;border-left:10px solid var(--pine)">
 <p style="margin:0 0 18px;font-weight:700;font-size:21px">Follow the link below to email our project coordinator to sign up for a free home risk assessment!</p>
 <a class="btn btn-e" href="mailto:jen@wcfiresafe.org?subject=Greater%20WC%20Wildfire%20Defense%20Project">Email Today to Learn More</a>
 <p class="h3" style="font-size:26px;margin:28px 0 4px;color:var(--pine)">Contact our contract project coordinator</p>
@@ -318,50 +348,60 @@ footer a:hover{text-decoration:underline}
 <p style="margin:0;font-size:17px">Blue Dot Program/Home Risk Assessments/Willow Creek Community Wildfire Defense Grant</p>
 </div>
 </div>
-<div style="flex:1 1 420px;min-width:0;display:grid;gap:16px">
-<div role="img" aria-label="Photo placeholder: Before" class="ph" style="aspect-ratio:16/10"><span>Before</span></div>
-<div role="img" aria-label="Photo placeholder: After" class="ph" style="aspect-ratio:16/10"><span>After</span></div>
-</div>
-</div>
-</div>
-</section>
+</details>
 
-<!-- PROJECT UPDATES -->
-<section class="sec" style="background:var(--pine);color:#fff">
-<div class="wrap">
-<h2 class="d h2" style="margin-bottom:44px">Project Updates</h2>
-<div style="display:flex;flex-wrap:wrap;gap:28px 72px;align-items:flex-start">
-<p class="big" style="font-size:clamp(120px,18vw,260px);color:var(--sun);margin:0" aria-label="45 acres">45</p>
-<div style="flex:1 1 420px;min-width:0">
-<h3 class="d" style="font-size:clamp(36px,4vw,56px);margin-bottom:18px;color:var(--sun)">Completed Project: Shaded Fuel Break Phase 1</h3>
-<p class="j" style="margin:0 0 1em;font-size:20px">Shaded Fuel Break Phase 1 is complete! Under the Greater Willow Creek Wildfire Resilience Project, 45 acres were treated across multiple priority project areas. These areas include the steep slopes around a Willow Creek Community Service District water tank and access roads up Patterson Road, significant blowdown from Snowmageddon around the Bigfoot Subdivision, and the hillside along Country Club Drive and Kimtu Ridge.</p>
-<p class="j" style="margin:0 0 1em;font-size:20px">Mechanical treatments were implemented under the guidance of a licensed timber operator. Contractors cleared dead and downed trees and brush in the understory, significantly reducing hazardous ladder fuels, to slow the spread rate and intensity of wildfire. Main canopy cover was retained to shade and slow the regrowth of vegetation. Firewood from these project areas were able to be donated to local tribes as well as a pilot Community Firewood Program. This work improves accessibility and visibility should firefighters be deployed within these areas, protects critical community infrastructure, and safeguards densely populated neighborhoods.</p>
-<p class="j" style="margin:0 0 1em;font-size:20px">WCFSC thanks the Willow Creek community and our project partners for ongoing support to reduce wildfire risk around our community. This project was funded by a USDA Forest Service Community Wildfire Defense Grant. This institution is an equal opportunity provider.</p>
-<p class="j" style="margin:0 0 1em;font-size:20px">If you are interested in these or our ongoing projects, please reach out to Project Coordinator, Jen Hildreth at <a href="mailto:jen@wcfiresafe.org" style="font-weight:700;text-decoration:underline">jen@wcfiresafe.org</a>.</p>
+<details data-acres="">
+<summary><span class="t">Completed Project: Shaded Fuel Break Phase 1</span><span class="tg done">Completed</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="panel">
+<p class="teaser"><b>00</b> acres treated</p>
+<div class="body">
+<p>Shaded Fuel Break Phase 1 is complete! Under the Greater Willow Creek Wildfire Resilience Project, 45 acres were treated across multiple priority project areas. These areas include the steep slopes around a Willow Creek Community Service District water tank and access roads up Patterson Road, significant blowdown from Snowmageddon around the Bigfoot Subdivision, and the hillside along Country Club Drive and Kimtu Ridge.</p>
+<p>Mechanical treatments were implemented under the guidance of a licensed timber operator. Contractors cleared dead and downed trees and brush in the understory, significantly reducing hazardous ladder fuels, to slow the spread rate and intensity of wildfire. Main canopy cover was retained to shade and slow the regrowth of vegetation. Firewood from these project areas were able to be donated to local tribes as well as a pilot Community Firewood Program. This work improves accessibility and visibility should firefighters be deployed within these areas, protects critical community infrastructure, and safeguards densely populated neighborhoods.</p>
+<p>WCFSC thanks the Willow Creek community and our project partners for ongoing support to reduce wildfire risk around our community. This project was funded by a USDA Forest Service Community Wildfire Defense Grant. This institution is an equal opportunity provider.</p>
+<p>If you are interested in these or our ongoing projects, please reach out to Project Coordinator, Jen Hildreth at <a href="mailto:jen@wcfiresafe.org" style="font-weight:700;text-decoration:underline">jen@wcfiresafe.org</a>.</p>
 </div>
 </div>
+</details>
+</div>
+</div>
+</details>
+
+<details>
+<summary><span class="t">Brannan Mountain Roadside Fuels Reduction<small>2025 PG&amp;E Western Willow Creek Risk Reduction Project</small></span><span class="tg done">Completed</span><span class="pm" aria-hidden="true"></span></summary>
+<div class="panel">
+<div class="body">
+<p>This project focused on roadside fuel reduction on private property along Brannan Mountain Road, treating within 500 feet of PG&amp;E infrastructure and driveways adjacent to powerlines.</p>
+<p>The resulting shaded fuel breaks protect PG&amp;E electrical assets and reduces the risk of wildfire ignition and spreading into the communities and households that PG&amp;E serves. The neighborhood has improved ingress and egress for residents and emergency services along Brannan Mountain Road, which is a vital secondary evacuation route for Eastern Humboldt residents.</p>
+</div>
+<h3 class="h3" style="font-size:28px;margin:12px 0 0">Before and after - Brannan Mountain Road</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px;margin:28px 0"><div role="img" aria-label="Photo placeholder: Brannan Mountain Road - before" class="ph" style="aspect-ratio:16/10"><span>Brannan Mountain Road - before</span></div><div role="img" aria-label="Photo placeholder: Brannan Mountain Road - after" class="ph" style="aspect-ratio:16/10"><span>Brannan Mountain Road - after</span></div></div>
+</div>
+</details>
+
 </div>
 </section>
 
 <!-- ZONE + BLUE DOT -->
 <section id="zone" style="background:var(--ember);color:#fff;padding:96px 0">
 <div class="wrap">
-<h2 class="d h2" style="margin-bottom:44px">Know Your Evacuation Zone!</h2>
+<h2 class="d h2 one" style="margin-bottom:44px">Know Your Evacuation Zone!</h2>
 <div style="display:flex;flex-wrap:wrap;gap:20px">
-<a class="btn" href="https://protect.genasys.com/search" style="flex:1 1 380px;min-height:150px;flex-direction:column;gap:6px;background:#fff;color:var(--ember);border-radius:8px"><span style="font-size:clamp(40px,5vw,68px);line-height:.95;font-weight:900">Humboldt County</span><span style="font-size:24px">Link to Project Genasys</span></a>
-<a class="btn" href="https://trinityfriends.maps.arcgis.com/apps/webappviewer/index.html?id=f4ba89983bba4e2aa3f0d608b30b4fb8" style="flex:1 1 380px;min-height:150px;flex-direction:column;gap:6px;background:#fff;color:var(--ember);border-radius:8px"><span style="font-size:clamp(40px,5vw,68px);line-height:.95;font-weight:900">Trinity County</span><span style="font-size:24px">Link to Ready Trinity</span></a>
+<a class="btn" href="https://protect.genasys.com/search" style="flex:1 1 380px;min-height:150px;flex-direction:column;gap:6px;background:#fff;color:var(--ember);border-radius:8px"><span style="font-size:clamp(28px,3.8vw,56px);line-height:.95;font-weight:900;white-space:nowrap">Humboldt County</span><span style="font-size:24px">Link to Project Genasys</span></a>
+<a class="btn" href="https://trinityfriends.maps.arcgis.com/apps/webappviewer/index.html?id=f4ba89983bba4e2aa3f0d608b30b4fb8" style="flex:1 1 380px;min-height:150px;flex-direction:column;gap:6px;background:#fff;color:var(--ember);border-radius:8px"><span style="font-size:clamp(28px,3.8vw,56px);line-height:.95;font-weight:900;white-space:nowrap">Trinity County</span><span style="font-size:24px">Link to Ready Trinity</span></a>
 </div>
 </div>
 </section>
 
-<section id="first-responders" class="sec" style="background:#DCE8F7">
-<div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px 72px;align-items:center">
-<svg width="210" height="210" viewBox="0 0 210 210" role="img" aria-label="Blue dot placeholder" style="flex:none"><circle cx="105" cy="105" r="105" fill="#1D5FD1"/><circle cx="105" cy="105" r="38" fill="#fff"/></svg>
-<div style="flex:1 1 440px;min-width:0">
-<h2 class="d h2" style="color:#0F2F6B;margin-bottom:32px">Help first responders find you fast</h2>
-<div style="display:flex;flex-wrap:wrap;gap:14px">
+<section id="first-responders" class="sec fr" style="background:#DCE8F7">
+<div class="wrap">
+<div class="frrow">
+<div class="dot" role="img" aria-label="Blue dot placeholder"></div>
+<div>
+<h2 class="d"><span>Help first responders</span><span>find you fast</span></h2>
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:14px">
 <a class="btn btn-p" href="https://forms.gle/SitbVK8eFhowtrQD7">Complete form to sign up</a>
 <a class="btn btn-o" href="https://img1.wsimg.com/blobby/go/89a60f8b-d11b-4ca4-a629-3127aed3af68/GWCWRP_ProgramInterestFlyer_QRCode.pdf" style="color:#0F2F6B">Program interest flyer (PDF)</a>
+</div>
 </div>
 </div>
 </div>
@@ -439,6 +479,9 @@ footer a:hover{text-decoration:underline}
 (function(){var n=new Date();function f(y,m){var d=new Date(y,m,1);return new Date(y,m,1+((4-d.getDay()+7)%7),18,0)}
 var t=f(n.getFullYear(),n.getMonth());if(n>t)t=f(n.getFullYear(),n.getMonth()+1);
 var e=document.getElementById('nm');if(e)e.textContent=t.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})+', 6pm';})();
+</script>
+<script>
+(function(){var t=0;document.querySelectorAll('[data-acres]').forEach(function(e){t+=parseFloat(e.getAttribute('data-acres'))||0});var n=document.getElementById('acres');if(!n||!t)return;var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm||!('IntersectionObserver' in window)){n.textContent=t;return}var io=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;io.disconnect();var s=null;function f(ts){if(s===null)s=ts;var k=Math.min((ts-s)/1200,1);n.textContent=Math.round(t*k);if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)});io.observe(n)})();
 </script>
 </body>
 </html>
