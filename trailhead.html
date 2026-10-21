@@ -22,7 +22,6 @@ a{color:inherit}
 .h2{font-size:clamp(46px,7.2vw,104px)}
 .h3{font-family:'Big Shoulders Display',Impact,system-ui,sans-serif;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.02em;margin:0}
 main p:not(.d):not(.h3):not(.big):not(.tag),main li,footer p,footer li,.j,.body p,.body li,.mj{text-align:justify;text-justify:inter-word;hyphens:none;-webkit-hyphens:none;overflow-wrap:normal}
-.j,.body p,.body li{max-width:64ch}
 .body p{margin:0 0 1em}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:12px;font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:800;font-size:24px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;text-align:center;border:3px solid transparent;transition:transform .15s}
 .btn:hover{transform:translateY(-3px)}
@@ -34,12 +33,13 @@ a:focus-visible,label:focus-within{outline:4px solid var(--navy);outline-offset:
 .skip{position:absolute;left:-9999px;top:8px;background:#fff;padding:12px 18px;z-index:99}
 .skip:focus{left:8px}
 /* header */
-.hd{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:3px solid var(--deep)}
+.hd{position:relative;z-index:50;background:var(--paper);border-bottom:3px solid var(--deep)}
 .hd .r{display:flex;align-items:center;justify-content:space-between;gap:10px 28px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
 .hd nav{display:flex;gap:0 8px;align-items:center;flex-wrap:wrap}
 .hd nav a{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:21px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:8px 10px;border-radius:8px}
 .hd nav a:hover{background:var(--mist)}
-@media(max-width:940px){.hd nav{order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto}.hd nav a{white-space:nowrap}}
+.hd nav{order:3;flex:1 0 100%;justify-content:center;border-top:2px solid var(--sage);margin-top:4px}
+@media(max-width:940px){.hd nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start}.hd nav a{white-space:nowrap}}
 /* hero */
 .hero{background:linear-gradient(180deg,#BFE3D6 0%,#E7EFD0 55%,#FBE7B5 100%);position:relative;overflow:hidden}
 .hero .wrap{container-type:inline-size}
@@ -101,6 +101,9 @@ a:focus-visible,label:focus-within{outline:4px solid var(--navy);outline-offset:
 .big{font-family:'Big Shoulders Display',sans-serif;font-weight:900;line-height:.8}
 footer a{text-decoration:none}
 footer a:hover{text-decoration:underline}
+#chipper .wrap{container-type:inline-size}
+.one{font-size:clamp(34px,5.2cqw,104px);white-space:nowrap}
+@media(max-width:700px){.one{white-space:normal}}
 </style>
 </head>
 <body>
@@ -116,7 +119,7 @@ footer a:hover{text-decoration:underline}
 <nav aria-label="Main">
 <a href="https://wcfiresafe.org/chipper-program">Chipper Program</a>
 <a href="https://wcfiresafe.org/firewise-communities">Firewise Communities</a>
-<a href="https://wcfiresafe.org/cwpp">CWPP</a>
+<a href="https://wcfiresafe.org/cwpp">Community Wildfire Protection Plan</a>
 <a href="https://wcfiresafe.org/about">About</a>
 <a href="https://wcfiresafe.org/membership">Membership</a>
 <a href="https://wcfiresafe.org/contact-us">Contact Us</a>
@@ -159,7 +162,7 @@ footer a:hover{text-decoration:underline}
 <g fill="#17594A">
 <use href="#pine" transform="translate(90 575) scale(1.5)"/><use href="#pine" transform="translate(180 575) scale(1.1)"/><use href="#pine" transform="translate(620 575) scale(1.4)"/><use href="#pine" transform="translate(705 575) scale(1.1)"/><use href="#pine" transform="translate(810 575) scale(1.6)"/><use href="#pine" transform="translate(920 575) scale(1.2)"/><use href="#pine" transform="translate(1230 575) scale(1.5)"/><use href="#pine" transform="translate(1330 575) scale(1.2)"/>
 </g>
-<g transform="translate(393 590) scale(.5)"><path class="peek" fill="#1B6049" d="M -4 -100 C 6 -101 13 -95 14 -88 C 15 -82 12 -78 9 -76 L 16 -72 C 28 -68 33 -58 32 -46 L 35 -20 L 31 -12 L 26 -22 L 24 -44 L 23 -2 L 26 0 L 6 0 L 6 -5 L -2 -5 L -2 0 L -22 0 L -19 -4 L -20 -44 L -26 -22 L -32 -12 L -36 -22 L -33 -48 C -33 -62 -26 -70 -16 -73 L -12 -77 C -16 -80 -16 -88 -14 -93 C -12 -98 -8 -100 -4 -100 Z"/></g>
+<g transform="translate(410 590) scale(.62)"><path class="peek" fill="#114A38" d="M -4 -100 C 6 -101 13 -95 14 -88 C 15 -82 12 -78 9 -76 L 16 -72 C 28 -68 33 -58 32 -46 L 35 -20 L 31 -12 L 26 -22 L 24 -44 L 23 -2 L 26 0 L 6 0 L 6 -5 L -2 -5 L -2 0 L -22 0 L -19 -4 L -20 -44 L -26 -22 L -32 -12 L -36 -22 L -33 -48 C -33 -62 -26 -70 -16 -73 L -12 -77 C -16 -80 -16 -88 -14 -93 C -12 -98 -8 -100 -4 -100 Z"/></g>
 </g></g>
 <g class="p4"><g class="rise l4" fill="#0A2E24">
 <use href="#pine" transform="translate(40 660) scale(3.1)"/><use href="#pine" transform="translate(200 660) scale(2.2)"/><use href="#pine" transform="translate(330 660) scale(2.9)"/>
@@ -184,7 +187,7 @@ footer a:hover{text-decoration:underline}
 <div class="wrap">
 <h2 class="d h2" style="color:var(--pine);margin-bottom:40px">About Us</h2>
 <p class="d mj" style="font-size:clamp(28px,3.7vw,54px);line-height:1.08;font-weight:800;text-transform:none;letter-spacing:0;max-width:none;color:var(--deep)">The mission of the Willow Creek Fire Safe Council is to reduce wildfire risk and increase survivability by implementing fuels reduction projects and encouraging residents of the greater Willow Creek area to make their homes, neighborhoods and community fire safe.</p>
-<p class="j" style="margin:44px 0 0;font-size:17px">Willow Creek Fire Safe Council is incorporated as a nonprofit public benefit corporation in the State of California. Willow Creek Fire Safe Council is exempt from federal income taxes under IRC Section 501(c)(3) as a public charity.</p>
+<p class="j" style="margin:44px 0 0;font-size:18px;max-width:none">Willow Creek Fire Safe Council is incorporated as a nonprofit public benefit corporation in the State of California. Willow Creek Fire Safe Council is exempt from federal income taxes under IRC Section 501(c)(3) as a public charity.</p>
 <h3 class="h3" style="font-size:clamp(30px,3.4vw,44px);margin:80px 0 12px;color:var(--deep)">The primary objectives of the Willow Creek Fire Safe Council are:</h3>
 <ol class="objs" style="margin-top:24px">
 <li><b>A</b><span>Increase community awareness and understanding of both the benefits and threats of wildland fire</span></li>
@@ -250,7 +253,7 @@ footer a:hover{text-decoration:underline}
 <!-- CHIPPER -->
 <section id="chipper" class="sec">
 <div class="wrap">
-<h2 class="d h2" style="color:var(--pine);margin-bottom:32px">Community Chipping Program</h2>
+<h2 class="d h2 one" style="color:var(--pine);margin-bottom:32px">Community Chipping Program</h2>
 <div class="body" style="font-size:20px">
 <p>The Willow Creek Fire Safe Council (WCFSC) provides <strong>free</strong> chipping services for homeowners and residents of the Willow Creek area. Chipping the woody materials produced during tree pruning and fuel reduction activities around homes and along road frontage is an alternative to burning or hauling. The chips are left in a pile <span style="white-space:nowrap">on-site</span>, and provide a great source of mulch and ground cover to prevent erosion and improve soil moisture and health. Please follow these instructions to ensure a safe and effective chipper day.</p>
 </div>
@@ -415,7 +418,7 @@ footer a:hover{text-decoration:underline}
 <p style="margin:0">PO Box 224, Willow Creek, CA 95573</p>
 </div>
 <div style="flex:1 1 200px;min-width:0;font-size:17px;display:flex;flex-direction:column;gap:6px">
-<a href="https://wcfiresafe.org/about">About</a><a href="https://wcfiresafe.org/membership">Membership</a><a href="https://wcfiresafe.org/cwpp">CWPP</a><a href="https://wcfiresafe.org/bylaws">ByLaws</a><a href="https://wcfiresafe.org/hiring">Hiring</a><a href="https://wcfiresafe.org/donate">Donate</a><a href="https://wcfiresafe.org/privacy-policy">Privacy Policy</a>
+<a href="https://wcfiresafe.org/about">About</a><a href="https://wcfiresafe.org/membership">Membership</a><a href="https://wcfiresafe.org/cwpp">Community Wildfire Protection Plan</a><a href="https://wcfiresafe.org/bylaws">ByLaws</a><a href="https://wcfiresafe.org/hiring">Hiring</a><a href="https://wcfiresafe.org/donate">Donate</a><a href="https://wcfiresafe.org/privacy-policy">Privacy Policy</a>
 </div>
 <div style="flex:1 1 260px;min-width:0;font-size:17px;display:flex;flex-direction:column;gap:6px">
 <p class="h3" style="font-size:26px;color:var(--sun);margin-bottom:6px">Helpful Links</p>
