@@ -1,0 +1,312 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><title>WCFSC Budget Dashboard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: control strip over a summary row, two charts, then an expandable project ledger that opens to transactions. Palette comes from the WCFSC Trailhead homepage. */
+:root{
+  --bg:#EEF3EF; --surface:#FFFFFF; --surface2:#F4F8F5; --line:#DAE4DD; --fg:#17231F; --mute:#5A6B63;
+  --pine:#0F4D3A; --pine-ink:#FFFFFF; --mist:#DCEBE4; --band:#0A2E24; --band-fg:#EAF4EE;
+  --sun:#F6B53C; --good-bg:#E1F1E7; --good:#1C6B3B; --warn-bg:#FFF0CF; --warn:#7D5200; --bad-bg:#FBE2DC; --bad:#A12A14; --done-bg:#E4EAF5; --done:#2B4A86;
+  --focus:#1B6FD6;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0A1410; --surface:#12221C; --surface2:#0F1D18; --line:#244035; --fg:#E6F0EA; --mute:#9DB3A8;
+  --pine:#58C79C; --pine-ink:#08261B; --mist:#1B3A2E; --band:#06100C; --band-fg:#DDEDE4;
+  --sun:#F6B53C; --good-bg:#16382A; --good:#7ED9A7; --warn-bg:#3D3010; --warn:#F2C766; --bad-bg:#44201A; --bad:#FF9A85; --done-bg:#1C2A47; --done:#9DB8F0;
+  --focus:#7DB3FF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1410; --surface:#12221C; --surface2:#0F1D18; --line:#244035; --fg:#E6F0EA; --mute:#9DB3A8;
+  --pine:#58C79C; --pine-ink:#08261B; --mist:#1B3A2E; --band:#06100C; --band-fg:#DDEDE4;
+  --sun:#F6B53C; --good-bg:#16382A; --good:#7ED9A7; --warn-bg:#3D3010; --warn:#F2C766; --bad-bg:#44201A; --bad:#FF9A85; --done-bg:#1C2A47; --done:#9DB8F0;
+  --focus:#7DB3FF; color-scheme:dark}
+
+html{font-size:16px}
+html.pm{font-size:20px}
+body{background:var(--bg);color:var(--fg);font:400 1rem/1.45 var(--body);margin:0}
+*{box-sizing:border-box}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.num{font-variant-numeric:tabular-nums}
+
+header.top{background:var(--band);color:var(--band-fg)}
+header.top .wrap{padding-block:1.25rem;display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;justify-content:space-between}
+h1{font:800 1.9rem/1 var(--display);letter-spacing:.02em;margin:0;text-transform:uppercase}
+header.top small{display:block;margin-top:.35rem;color:color-mix(in srgb,var(--band-fg) 72%,transparent);font-size:.85rem}
+.badge{background:var(--sun);color:#0A2E24;font-weight:700;font-size:.72rem;letter-spacing:.08em;padding:.4rem .75rem;border-radius:99px;white-space:nowrap}
+
+.controls{background:var(--surface);border-bottom:1px solid var(--line)}
+.controls .wrap{padding-block:.85rem;display:grid;gap:.65rem 1.5rem;grid-template-columns:auto 1fr auto;align-items:center}
+.grp{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;min-width:0}
+.grp>label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-right:.25rem}
+.chip{border:1px solid var(--line);background:var(--surface2);border-radius:99px;padding:.3rem .8rem;font-size:.85rem;font-weight:500}
+.chip:hover{border-color:var(--pine)}
+.chip[aria-pressed="true"]{background:var(--pine);color:var(--pine-ink);border-color:var(--pine);font-weight:600}
+.toggle{border:1px solid var(--line);background:var(--surface2);border-radius:8px;padding:.35rem .8rem;font-size:.85rem;font-weight:600}
+.toggle[aria-pressed="true"]{background:var(--sun);color:#0A2E24;border-color:var(--sun)}
+
+main{padding-block:1.4rem 2.5rem;display:grid;gap:1.1rem}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem;min-width:0}
+.kpi .l{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.kpi .v{font:800 2.4rem/1.05 var(--display);margin:.3rem 0 .2rem;letter-spacing:.01em}
+.kpi .s{font-size:.82rem;color:var(--mute)}
+.meter{height:7px;border-radius:99px;background:var(--mist);margin-top:.6rem;position:relative;overflow:visible}
+.meter i{display:block;height:100%;border-radius:99px;background:var(--pine)}
+.meter b{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--fg);opacity:.7}
+
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:1.1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.25rem;min-width:0}
+.card h2{margin:0 0 .15rem;font:700 1.15rem/1.2 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.card .sub{color:var(--mute);font-size:.82rem;margin:0 0 .9rem}
+
+.bars{display:grid;gap:.95rem}
+.bar .t{display:flex;justify-content:space-between;gap:.75rem;font-size:.9rem;margin-bottom:.3rem;flex-wrap:wrap}
+.bar .t b{font-weight:600}.bar .t span{color:var(--mute)}
+.track{height:16px;background:var(--mist);border-radius:4px;position:relative}
+.track i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:var(--pine);min-width:2px}
+.track i.monitor{background:var(--sun)}.track i.risk,.track i.over{background:#C8442B}.track i.done{background:#4B6FB5}
+.track em{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--fg);opacity:.75}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-size:.78rem;color:var(--mute);margin-top:.9rem}
+.legend span{display:inline-flex;align-items:center;gap:.4rem}.legend i{width:11px;height:11px;border-radius:2px;display:inline-block}
+.legend .tick{width:2px;height:12px;background:var(--fg);opacity:.75;border-radius:0}
+
+.chart{position:relative}
+.chart svg{width:100%;height:auto;display:block;touch-action:pan-y}
+.chart text{font:500 11px var(--body);fill:var(--mute)}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font-size:.78rem;padding:.5rem .7rem;border-radius:6px;line-height:1.4;white-space:nowrap;transform:translate(-50%,-100%);margin-top:-10px;z-index:3}
+.tip[hidden]{display:none}
+
+.ledger table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:720px}
+.ledger .scroll{overflow-x:auto}
+.ledger th{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:600;text-align:right;padding:.4rem .6rem;border-bottom:1px solid var(--line)}
+.ledger th:first-child,.ledger td:first-child{text-align:left}
+.ledger td{padding:.6rem .6rem;text-align:right;border-bottom:1px solid var(--line);vertical-align:middle}
+.rowbtn{display:flex;align-items:center;gap:.6rem;width:100%;background:none;border:0;padding:0;text-align:left;font-weight:700}
+.rowbtn .car{display:inline-block;width:1.1rem;color:var(--pine);transition:transform .15s}
+.rowbtn[aria-expanded="true"] .car{transform:rotate(90deg)}
+tr.proj td{background:var(--surface)}
+tr.phase td{background:var(--surface2)}
+tr.phase td:first-child{padding-left:2.2rem}
+tr.phase .rowbtn{font-weight:500}
+tr.phase .rowbtn[aria-expanded="true"]{font-weight:700}
+tr.tx>td{background:var(--surface2);padding:.4rem 1rem 1rem 2.2rem;text-align:left}
+.txbox{border:1px solid var(--line);border-radius:8px;background:var(--surface);overflow:hidden}
+.txbox h3{margin:0;padding:.6rem .8rem;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.txbox table{min-width:0;font-size:.85rem}
+.txbox td,.txbox th{padding:.4rem .8rem;border-bottom:1px solid var(--line)}
+.txbox tr:last-child td{border-bottom:0}
+.txbox td:nth-child(2),.txbox th:nth-child(2){text-align:left}
+.txbox td:nth-child(3),.txbox th:nth-child(3){text-align:left}
+.txbox td:first-child,.txbox th:first-child{text-align:left}
+.pill{display:inline-flex;align-items:center;gap:.35rem;font-size:.74rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;white-space:nowrap}
+.pill.ok{background:var(--good-bg);color:var(--good)}.pill.monitor{background:var(--warn-bg);color:var(--warn)}
+.pill.risk,.pill.over{background:var(--bad-bg);color:var(--bad)}.pill.done{background:var(--done-bg);color:var(--done)}
+
+.reimb{display:grid;gap:.85rem}
+.rm{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,2fr) auto;gap:.5rem 1rem;align-items:center;font-size:.9rem}
+.rm .bar2{height:10px;border-radius:99px;background:var(--mist);overflow:hidden;display:flex}
+.rm .bar2 i{display:block;height:100%}
+.rm .bar2 .got{background:var(--pine)}.rm .bar2 .wait{background:var(--sun)}
+.rm small{color:var(--mute);display:block;font-size:.76rem}
+.note{font-size:.8rem;color:var(--mute);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 1.5rem;background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:.7rem 1rem}
+
+@media (max-width:900px){
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .two{grid-template-columns:minmax(0,1fr)}
+  .controls .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){
+  .kpis{grid-template-columns:minmax(0,1fr)}
+  .rm{grid-template-columns:minmax(0,1fr)}
+  h1{font-size:1.55rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="top"><div class="wrap">
+  <div><h1>Willow Creek Fire Safe Council &middot; Budget</h1>
+  <small>Sample dashboard. Fiscal year January to December 2026. Last refreshed Oct 1, 2026, 6:00 AM.</small></div>
+  <span class="badge">SAMPLE DATA &middot; MADE UP FIGURES</span>
+</div></header>
+
+<section class="controls" aria-label="Dashboard controls"><div class="wrap">
+  <div class="grp" id="months" role="group" aria-label="Through month"><label>Through</label></div>
+  <div class="grp" id="funds" role="group" aria-label="Funding source"><label>Funding</label></div>
+  <button class="toggle" id="pm" aria-pressed="false" title="Larger type for the office display or a screen share">Presentation view</button>
+</div></section>
+
+<main class="wrap">
+  <div class="kpis" id="kpis"></div>
+  <div class="two">
+    <section class="card"><h2>Budget vs. actual by project</h2><p class="sub" id="barsub"></p><div class="bars" id="bars"></div>
+      <div class="legend"><span><i style="background:var(--pine)"></i>On track</span><span><i style="background:var(--sun)"></i>Monitor</span><span><i style="background:#C8442B"></i>At risk</span><span><i style="background:#4B6FB5"></i>Complete</span><span><i class="tick"></i>Share of year elapsed</span></div></section>
+    <section class="card"><h2>Spending over the year</h2><p class="sub">Cumulative spending against an even pace to the full budget. Move across the chart for each month.</p>
+      <div class="chart" id="chart"><svg id="svg" viewBox="0 0 640 290" role="img" aria-label="Cumulative spending by month compared with an even budget pace"></svg><div class="tip" id="tip" hidden></div></div></section>
+  </div>
+  <section class="card ledger"><h2>Projects and phases</h2><p class="sub">Select a project to see its phases, and a phase to see the transactions coded to it.</p>
+    <div class="scroll"><table><thead><tr><th>Project / phase</th><th>Budget</th><th>Spent</th><th>Remaining</th><th>Acres</th><th>Cost / acre</th><th>Pace</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+  <section class="card"><h2>Grant reimbursements</h2><p class="sub">Billed to grantors versus received, as of Sep 30.</p><div class="reimb" id="reimb"></div></section>
+  <div class="note"><span>In the working version this page reads from QuickBooks on a schedule. Transactions shown here are examples.</span><span>Pace compares the share of budget spent with the share of the calendar year elapsed.</span></div>
+</main>
+
+<script>
+(function(){
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep'];
+var MONF=['January','February','March','April','May','June','July','August','September'];
+var FUNDS={all:'All sources',fed:'Federal grant',state:'State grant',cap:'Capacity grant',local:'Local'};
+var DATA=[
+ {id:'cwdg',name:'Greater Willow Creek Wildfire Resilience',fund:'fed',vendors:['Crew contractor','Equipment rental','Fuel and supplies','Disposal fees'],phases:[
+   {id:'p1',name:'Phase 1: Shaded Fuel Break',budget:140000,spend:[12000,28000,30000,26000,22000,18200,0,0,0],acres:[4,9,10,8,8,6,0,0,0],doneAt:5},
+   {id:'p2',name:'Phase 2: Fuel Break Extension',budget:210000,spend:[0,0,0,0,0,9000,18000,21800,19000],acres:[0,0,0,0,0,2,3,4,3],planned:70}]},
+ {id:'chip',name:'Community Chipping Program',fund:'local',vendors:['Chipper rental','Crew labor','Fuel','Outreach printing'],phases:[
+   {id:'c1',name:'Spring chipper days',budget:18000,spend:[0,0,2500,5200,4800,0,0,0,0],doneAt:4},
+   {id:'c2',name:'Fall chipper days',budget:12000,spend:[0,0,0,0,0,0,0,3400,6000]}]},
+ {id:'road',name:'Fire Safe Roads',fund:'state',vendors:['Contractor invoice','Signage','Fuel and supplies'],phases:[
+   {id:'r1',name:'Segment A',budget:22000,spend:[0,0,4000,9000,7000,0,0,0,0],doneAt:4},
+   {id:'r2',name:'Segment B',budget:18000,spend:[0,0,0,0,0,3000,6200,6000,0]}]},
+ {id:'ops',name:'Organizational Capacity',fund:'cap',vendors:['Payroll'],phases:[
+   {id:'o1',name:'Executive Director',budget:38000,spend:[4200,4200,4200,4200,4200,4200,4200,4200,4200],vendors:['Payroll']},
+   {id:'o2',name:'Insurance and administration',budget:22000,spend:[3000,2400,1800,1900,2000,2100,2100,2100,2100],vendors:['Insurance','Software subscriptions','Office supplies','Bookkeeping']}]}
+];
+var REIMB=[
+ {fund:'fed',label:'Federal grant',inv:160000,got:126000},
+ {fund:'state',label:'State grant',inv:56000,got:47100},
+ {fund:'cap',label:'Capacity grant',note:'Paid in advance. No billing needed.'},
+ {fund:'local',label:'Local',note:'Donations and local grants. No billing needed.'}
+];
+var st={m:8,fund:'all',open:{},tx:null};
+var $=function(i){return document.getElementById(i)};
+var usd=function(n){return '$'+Math.round(n).toLocaleString('en-US')};
+var usdk=function(n){return n>=1000?'$'+(n/1000).toFixed(n>=100000?0:1).replace(/\.0$/,'')+'k':usd(n)};
+var cum=function(a,m){var s=0;for(var i=0;i<=m;i++)s+=a[i]||0;return s};
+function phaseStats(p,m){var sp=cum(p.spend,m),ac=p.acres?cum(p.acres,m):null;return {spent:sp,acres:ac}}
+function status(spent,budget,m,done){
+  if(done)return 'done';
+  var pct=spent/budget,el=(m+1)/12;
+  if(pct>1)return 'over';
+  var pace=pct/el; if(pace>1.15)return 'risk'; if(pace>1.0)return 'monitor'; return 'ok';
+}
+var LABEL={ok:'On track',monitor:'Monitor',risk:'At risk',over:'Over budget',done:'Complete'};
+var ICON={ok:'✓',monitor:'!',risk:'▲',over:'▲',done:'✓'};
+function pill(s){return '<span class="pill '+s+'">'+ICON[s]+' '+LABEL[s]+'</span>'}
+function projects(){return DATA.filter(function(d){return st.fund==='all'||d.fund===st.fund}).map(function(d){
+  var b=0,sp=0,ac=0,hasAc=false,allDone=true;
+  d.phases.forEach(function(p){var s=phaseStats(p,st.m);b+=p.budget;sp+=s.spent;if(s.acres!==null){ac+=s.acres;hasAc=true}
+    var dn=p.doneAt!==undefined&&st.m>=p.doneAt; p._done=dn; if(!dn)allDone=false});
+  return {d:d,budget:b,spent:sp,acres:hasAc?ac:null,done:allDone,status:status(sp,b,st.m,allDone)};
+})}
+function seeded(n){var x=Math.sin(n*9301+49297)*233280;return x-Math.floor(x)}
+function transactions(d,p,m){
+  var out=[],vend=p.vendors||d.vendors,seed=0;
+  for(var i=0;i<=m;i++){var amt=p.spend[i];if(!amt)continue;
+    var k=vend.length===1?1:(i%2?2:3), rest=amt, weights=[],tw=0;
+    for(var j=0;j<k;j++){var w=.4+seeded(i*7+j+p.budget%97);weights.push(w);tw+=w}
+    for(var j=0;j<k;j++){var a=j===k-1?rest:Math.round(amt*weights[j]/tw/10)*10;rest-=a;
+      out.push({mo:i,day:3+j*9+(i%4),vendor:vend[(i+j)%vend.length],amt:a})}}
+  out.sort(function(a,b){return b.mo-a.mo||b.day-a.day});return out}
+
+function buildControls(){
+  var mw=$('months');MON.forEach(function(n,i){var b=document.createElement('button');b.className='chip';b.textContent=n;b.setAttribute('aria-pressed',i===st.m);b.onclick=function(){st.m=i;render()};mw.appendChild(b)});
+  var fw=$('funds');Object.keys(FUNDS).forEach(function(k){var b=document.createElement('button');b.className='chip';b.textContent=FUNDS[k];b.dataset.k=k;b.setAttribute('aria-pressed',k===st.fund);b.onclick=function(){st.fund=k;st.tx=null;render()};fw.appendChild(b)});
+  $('pm').onclick=function(){var on=this.getAttribute('aria-pressed')!=='true';this.setAttribute('aria-pressed',on);document.documentElement.classList.toggle('pm',on)};
+}
+function syncControls(){
+  Array.prototype.forEach.call($('months').querySelectorAll('.chip'),function(b,i){b.setAttribute('aria-pressed',i===st.m)});
+  Array.prototype.forEach.call($('funds').querySelectorAll('.chip'),function(b){b.setAttribute('aria-pressed',b.dataset.k===st.fund)});
+}
+function renderKpis(P){
+  var B=0,S=0,A=0,hasA=false;P.forEach(function(p){B+=p.budget;S+=p.spent;if(p.acres!==null){A+=p.acres;hasA=true}});
+  var el=(st.m+1)/12*100, pct=B?S/B*100:0, remain=B-S;
+  var fuelSpent=0;P.forEach(function(p){if(p.acres!==null)p.d.phases.forEach(function(x){if(x.acres)fuelSpent+=cum(x.spend,st.m)})});
+  $('kpis').innerHTML=
+   '<div class="kpi"><div class="l">Annual budget</div><div class="v num">'+usd(B)+'</div><div class="s">'+P.length+' project'+(P.length===1?'':'s')+' &middot; '+(FUNDS[st.fund]).toLowerCase()+'</div></div>'+
+   '<div class="kpi"><div class="l">Spent through '+MON[st.m]+'</div><div class="v num">'+usd(S)+'</div><div class="s">'+pct.toFixed(0)+'% of budget &middot; '+el.toFixed(0)+'% of year</div><div class="meter" role="img" aria-label="'+pct.toFixed(0)+' percent of budget spent, '+el.toFixed(0)+' percent of year elapsed"><i style="width:'+Math.min(100,pct)+'%"></i><b style="left:'+el+'%"></b></div></div>'+
+   '<div class="kpi"><div class="l">Remaining</div><div class="v num">'+usd(remain)+'</div><div class="s">'+(B?(remain/B*100).toFixed(0):0)+'% of budget left</div></div>'+
+   '<div class="kpi"><div class="l">Acres treated</div><div class="v num">'+(hasA?A:'&mdash;')+'</div><div class="s">'+(hasA&&A?usd(fuelSpent/A)+' per acre':'No fuels work in this view')+'</div></div>';
+}
+function renderBars(P){
+  var el=(st.m+1)/12*100;
+  $('barsub').textContent='Through '+MONF[st.m]+' 30. Each bar is a share of that project’s own budget.';
+  $('bars').innerHTML=P.map(function(p){var pct=p.spent/p.budget*100;
+    return '<div class="bar"><div class="t"><b>'+p.d.name+'</b><span class="num">'+usdk(p.spent)+' of '+usdk(p.budget)+'</span></div>'+
+     '<div class="track" role="img" aria-label="'+p.d.name+': '+pct.toFixed(0)+' percent of budget spent, '+LABEL[p.status]+'"><i class="'+p.status+'" style="width:'+Math.min(100,pct)+'%"></i><em style="left:'+el+'%"></em></div></div>'}).join('')||'<p class="sub">No projects for this funding source.</p>';
+}
+function renderRows(P){
+  var h='';
+  P.forEach(function(p){
+    var d=p.d,open=!!st.open[d.id],cpa=p.acres?usd(fuelCost(d)/p.acres):'&mdash;';
+    h+='<tr class="proj"><td><button class="rowbtn" aria-expanded="'+open+'" data-proj="'+d.id+'"><span class="car">▸</span>'+d.name+'</button></td><td class="num">'+usd(p.budget)+'</td><td class="num">'+usd(p.spent)+'</td><td class="num">'+usd(p.budget-p.spent)+'</td><td class="num">'+(p.acres===null?'&mdash;':p.acres)+'</td><td class="num">'+cpa+'</td><td>'+pill(p.status)+'</td></tr>';
+    if(open)d.phases.forEach(function(ph){
+      var s=phaseStats(ph,st.m),stt=status(s.spent,ph.budget,st.m,ph._done),txo=st.tx===ph.id;
+      h+='<tr class="phase"><td><button class="rowbtn" aria-expanded="'+txo+'" data-ph="'+ph.id+'"><span class="car">▸</span>'+ph.name+'</button></td><td class="num">'+usd(ph.budget)+'</td><td class="num">'+usd(s.spent)+'</td><td class="num">'+usd(ph.budget-s.spent)+'</td><td class="num">'+(s.acres===null?'&mdash;':s.acres+(ph.planned?' of '+ph.planned:''))+'</td><td class="num">'+(s.acres?usd(s.spent/s.acres):'&mdash;')+'</td><td>'+pill(stt)+'</td></tr>';
+      if(txo){var tx=transactions(d,ph,st.m);
+        h+='<tr class="tx"><td colspan="7"><div class="txbox"><h3><span>Transactions coded to '+ph.name+'</span><span>Class: '+d.name+'</span></h3><div class="scroll"><table><thead><tr><th>Date</th><th>Vendor</th><th>Class</th><th>Amount</th></tr></thead><tbody>'+
+          (tx.length?tx.map(function(t){return '<tr><td class="num">'+MON[t.mo]+' '+t.day+'</td><td>'+t.vendor+'</td><td>'+d.name+'</td><td class="num">'+usd(t.amt)+'</td></tr>'}).join(''):'<tr><td colspan="4">No spending yet through '+MON[st.m]+'.</td></tr>')+
+          '</tbody></table></div></div></td></tr>'}
+    });
+  });
+  $('rows').innerHTML=h||'<tr><td colspan="7">No projects for this funding source.</td></tr>';
+  Array.prototype.forEach.call($('rows').querySelectorAll('[data-proj]'),function(b){b.onclick=function(){var k=b.dataset.proj;st.open[k]=!st.open[k];if(!st.open[k])st.tx=null;render(b.dataset.proj)}});
+  Array.prototype.forEach.call($('rows').querySelectorAll('[data-ph]'),function(b){b.onclick=function(){st.tx=st.tx===b.dataset.ph?null:b.dataset.ph;render(null,b.dataset.ph)}});
+}
+function fuelCost(d){var s=0;d.phases.forEach(function(x){if(x.acres)s+=cum(x.spend,st.m)});return s}
+
+function renderChart(P){
+  var W=640,H=290,L=54,R=18,T=14,Bm=30,pw=W-L-R,ph=H-T-Bm;
+  var total=0;P.forEach(function(p){total+=p.budget});
+  var series=[];for(var i=0;i<12;i++)series.push(null);
+  var run=0;for(var i=0;i<=st.m;i++){var s=0;P.forEach(function(p){p.d.phases.forEach(function(x){s+=x.spend[i]||0})});run+=s;series[i]=run}
+  var step=niceStep(total/4),max=step*Math.ceil(total/step)||step;
+  var X=function(i){return L+pw*i/11},Y=function(v){return T+ph*(1-v/max)};
+  var g='';for(var v=0;v<=max+1;v+=step){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" style="stroke:var(--line)" stroke-width="1"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" text-anchor="end">'+usdk(v)+'</text>'}
+  var lab='';[0,2,4,6,8,10].forEach(function(i){lab+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle">'+['Jan','Mar','May','Jul','Sep','Nov'][i/2]+'</text>'});
+  lab+='<text x="'+X(11)+'" y="'+(H-8)+'" text-anchor="end">Dec</text>';
+  var pts='',area='M'+X(0)+' '+Y(0);for(var i=0;i<=st.m;i++){pts+=(i?'L':'M')+X(i)+' '+Y(series[i]);area+='L'+X(i)+' '+Y(series[i])}
+  area+='L'+X(st.m)+' '+Y(0)+'Z';
+  var ex=X(st.m),ey=Y(series[st.m]);
+  var anchor=st.m>7?'end':'start',dx=st.m>7?-10:10;
+  $('svg').innerHTML=g+lab+
+   '<line x1="'+X(0)+'" y1="'+Y(0)+'" x2="'+X(11)+'" y2="'+Y(total)+'" style="stroke:var(--mute)" stroke-width="1.5" stroke-dasharray="5 5"/>'+
+   '<text x="'+(X(11)-6)+'" y="'+(Y(total)-8)+'" text-anchor="end">Even pace to '+usdk(total)+'</text>'+
+   '<path d="'+area+'" style="fill:var(--pine)" fill-opacity=".14"/><path d="'+pts+'" fill="none" style="stroke:var(--pine)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>'+
+   '<circle cx="'+ex+'" cy="'+ey+'" r="5.5" style="fill:var(--pine);stroke:var(--surface)" stroke-width="2.5"/>'+
+   '<text x="'+(ex+dx)+'" y="'+(ey+(st.m>7?-12:4))+'" text-anchor="'+anchor+'" style="fill:var(--fg);font-weight:700">'+usdk(series[st.m])+'</text>'+
+   '<line id="hl" y1="'+T+'" y2="'+(T+ph)+'" style="stroke:var(--fg)" stroke-opacity=".35" stroke-width="1" visibility="hidden"/>'+
+   '<rect id="hit" x="'+L+'" y="'+T+'" width="'+pw+'" height="'+ph+'" fill="transparent"/>';
+  var hit=$('hit'),hl=$('hl'),tip=$('tip'),box=$('chart');
+  function move(e){var r=$('svg').getBoundingClientRect(),sx=(e.clientX-r.left)/r.width*W;
+    var i=Math.round((sx-L)/pw*11);i=Math.max(0,Math.min(11,i));
+    var pace=total*(i+1)/12,sp=series[i];
+    hl.setAttribute('x1',X(i));hl.setAttribute('x2',X(i));hl.setAttribute('visibility','visible');
+    var nm=['January','February','March','April','May','June','July','August','September','October','November','December'][i];
+    tip.innerHTML='<b>'+nm+'</b><br>'+(sp===null?'Not yet reported':'Spent '+usd(sp))+'<br>Even pace '+usd(pace)+(sp===null?'':'<br>'+(sp>pace?'Ahead of pace by ':'Under pace by ')+usd(Math.abs(sp-pace)));
+    tip.hidden=false;var br=box.getBoundingClientRect(),tx=(X(i)/W)*r.width,ty=(sp===null?Y(pace):Y(Math.max(sp,pace)))/H*r.height;
+    tip.style.left=Math.max(70,Math.min(r.width-70,tx))+'px';tip.style.top=ty+'px'}
+  hit.addEventListener('pointermove',move);hit.addEventListener('pointerdown',move);
+  hit.addEventListener('pointerleave',function(){tip.hidden=true;hl.setAttribute('visibility','hidden')});
+}
+function niceStep(x){if(x<=0)return 1000;var p=Math.pow(10,Math.floor(Math.log10(x))),f=x/p;return (f<=1?1:f<=2?2:f<=2.5?2.5:f<=5?5:10)*p}
+
+function renderReimb(){
+  var rows=REIMB.filter(function(r){return st.fund==='all'||r.fund===st.fund});
+  $('reimb').innerHTML=rows.map(function(r){
+    if(!r.inv)return '<div class="rm"><div><b>'+r.label+'</b></div><div>'+r.note+'</div><span></span></div>';
+    var wait=r.inv-r.got;
+    return '<div class="rm"><div><b>'+r.label+'</b><small class="num">'+usd(r.inv)+' billed</small></div>'+
+      '<div class="bar2" role="img" aria-label="'+usd(r.got)+' received, '+usd(wait)+' awaiting"><i class="got" style="width:'+(r.got/r.inv*100)+'%"></i><i class="wait" style="width:'+(wait/r.inv*100)+'%"></i></div>'+
+      '<span class="num"><b>'+usd(r.got)+'</b> received &middot; <b>'+usd(wait)+'</b> awaiting</span></div>'}).join('');
+}
+function render(focusProj,focusPh){
+  var P=projects();syncControls();renderKpis(P);renderBars(P);renderRows(P);renderChart(P);renderReimb();
+  var f=focusProj?document.querySelector('[data-proj="'+focusProj+'"]'):focusPh?document.querySelector('[data-ph="'+focusPh+'"]'):null;
+  if(f)f.focus();
+}
+buildControls();render();
+})();
+</script>
+</body></html>
