@@ -142,7 +142,7 @@
         <section id="book" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Book a session</h2>
             <p class="mt-2 text-ink/80">Pick a time that works for you. Tell me which service you would like when you book.</p>
-            <div class="mt-6 rounded-2xl overflow-hidden border-2 border-ink/20 bg-white">
+            <div class="mt-6 rounded-2xl overflow-hidden">
                 <div id="calEmbed" class="w-full min-h-[560px]"></div>
             </div>
             <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
@@ -200,8 +200,31 @@
         const SITE = {
             // Her Cal.com booking link, as "username/event-type" (cal.com/username/event-type).
             calLink: 'syd-ballam-qcjhpv/30min',
-            // The brand color of the buttons inside the booking box.
-            calBrandColor: '#5B2A2E',
+            // Colors inside the booking box, matched to the page. Names are Cal.com's own.
+            calColors: {
+                "cal-brand": "#5B2A2E",           // selected day, confirm button
+                "cal-brand-emphasis": "#451E22",  // button hover
+                "cal-brand-text": "#FBEEE3",      // text on those buttons
+                "cal-brand-subtle": "#EDB9A8",
+                "cal-brand-accent": "#FBEEE3",
+                "cal-text": "#5B2A2E",
+                "cal-text-emphasis": "#5B2A2E",
+                "cal-text-subtle": "#7A4A4E",
+                "cal-text-muted": "#B08F8F",
+                "cal-text-inverted": "#FBEEE3",
+                "cal-bg": "#FBEEE3",              // the page's own cream
+                "cal-bg-emphasis": "#F1D3C6",     // open days and times
+                "cal-bg-subtle": "#F6E0D3",
+                "cal-bg-muted": "#F6E0D3",
+                "cal-bg-inverted": "#5B2A2E",
+                "cal-border": "#E2C9BD",
+                "cal-border-emphasis": "#5B2A2E",
+                "cal-border-subtle": "#E9D5CA",
+                "cal-border-muted": "#EFDFD5",
+                "cal-border-booker": "#FBEEE3",   // outer frame: same as the page, so it disappears
+                "cal-border-booker-width": "0px",
+                "radius": "1rem"
+            },
             // Paste the form address from her email service here (MailerLite, Buttondown...).
             // While this is empty, the newsletter form shows a mockup notice instead.
             newsletterAction: ''
@@ -248,7 +271,7 @@
             theme: "light",
             hideEventTypeDetails: false,
             layout: "month_view",
-            cssVarsPerTheme: { light: { "cal-brand": SITE.calBrandColor } }
+            cssVarsPerTheme: { light: SITE.calColors }
         });
 
         /* ---- retreats ---- */
