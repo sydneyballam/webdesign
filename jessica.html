@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <title>Wellness Services (mockup)</title>
+    <title>Wellness by Jessica Lynn (mockup)</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -80,13 +80,21 @@
                     <path d="M7 19 Q18 8 29 19"/>
                 </g>
             </symbol>
+            <symbol id="ic-yoga" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M32 8 C25 18 25 32 32 43 C39 32 39 18 32 8 Z"/>
+                    <path d="M28 42 C17 41 9 34 7 22 C18 22 25 28 28 42 Z"/>
+                    <path d="M36 42 C47 41 55 34 57 22 C46 22 39 28 36 42 Z"/>
+                    <path d="M12 52 Q32 61 52 52"/>
+                </g>
+            </symbol>
         </defs>
     </svg>
 
     <!-- MOCKUP BANNER (remove when this becomes her live site) -->
     <div class="bg-ink text-paper text-sm">
         <div class="max-w-xl mx-auto px-4 py-1 flex flex-wrap items-center justify-between gap-x-4">
-            <p class="py-2">Design mockup. Name, contact details, dates and times are placeholders.</p>
+            <p class="py-2">Design mockup. Contact details, dates and times are placeholders.</p>
             <a href="index.html?client=jessica" class="min-h-[44px] inline-flex items-center underline underline-offset-4">Back to portfolio</a>
         </div>
     </div>
@@ -97,7 +105,7 @@
             <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
                 <rect x="8" y="10" width="384" height="180" fill="url(#gBlush)" filter="url(#wc)"/>
             </svg>
-            <h1 class="relative font-script text-5xl sm:text-6xl leading-tight">Wellness Services</h1>
+            <h1 class="relative font-script text-5xl sm:text-6xl leading-tight">Wellness by Jessica Lynn</h1>
         </div>
         <div class="relative -mt-6 px-6 pt-12 pb-12 text-center">
             <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
@@ -105,8 +113,9 @@
             </svg>
             <ul class="relative inline-block text-left text-2xl sm:text-3xl space-y-3">
                 <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg>Massage Therapy</li>
-                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg>Reiki</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg>Reiki Healing</li>
                 <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg>Sound Healing</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-yoga"/></svg>Yoga</li>
             </ul>
         </div>
 
@@ -174,7 +183,7 @@
 
     <footer class="max-w-xl mx-auto px-4 mt-20 pb-12">
         <div class="border-t border-ink/20 pt-8">
-            <p class="font-script text-3xl">Wellness Services</p>
+            <p class="font-script text-3xl">Wellness by Jessica Lynn</p>
             <p class="mt-1 text-ink/80">Hayfork, California</p>
             <p class="mt-4">
                 <a href="mailto:hello@example.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">hello@example.com</a><br>
@@ -199,10 +208,20 @@
             newsletterAction: ''
         };
 
+        // Descriptions are draft wording. Ask her to approve or change them.
         const SERVICES = [
-            { id: 'massage', icon: 'ic-massage', name: 'Massage Therapy', blurb: 'Bodywork for tight muscles and tired shoulders.' },
-            { id: 'reiki',   icon: 'ic-reiki',   name: 'Reiki',           blurb: 'Calm, gentle energy work.' },
-            { id: 'sound',   icon: 'ic-sound',   name: 'Sound Healing',   blurb: 'Sound and stillness to help you rest.' }
+            { id: 'massage', icon: 'ic-massage', name: 'Massage Therapy', blurb: 'Bodywork for tight muscles and tired shoulders. Choose a style.' },
+            { id: 'reiki',   icon: 'ic-reiki',   name: 'Reiki Healing',   blurb: 'Calm, gentle energy work.' },
+            { id: 'sound',   icon: 'ic-sound',   name: 'Sound Healing',   blurb: 'Sound and stillness to help you rest.' },
+            { id: 'yoga',    icon: 'ic-yoga',    name: 'Yoga',            blurb: 'Movement and breath, at your own pace.' }
+        ];
+
+        // Massage styles, as listed on her flyer. "full" is the name shown in the booking summary.
+        const MASSAGE_STYLES = [
+            { id: 'deep',    label: 'Deep Tissue',        full: 'Deep Tissue Massage' },
+            { id: 'sports',  label: 'Sports',             full: 'Sports Massage' },
+            { id: 'hara',    label: 'Womb Hara',          full: 'Womb Hara Massage' },
+            { id: 'swedish', label: 'Swedish Relaxation', full: 'Swedish Relaxation Massage' }
         ];
 
         // Sample retreats. Dates are YYYY-MM-DD. Days from start to end are blocked in the booking calendar.
@@ -222,7 +241,7 @@
 
         /* ---------------- code below needs no editing ---------------- */
 
-        const state = { service: SERVICES[0].id, monthIdx: 0, date: null, time: null };
+        const state = { service: SERVICES[0].id, style: MASSAGE_STYLES[0].id, monthIdx: 0, date: null, time: null };
 
         const fmtLong  = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
         const fmtMonth = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
@@ -235,6 +254,7 @@
         function iso(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
         function eventOn(d) { return EVENTS.find(e => d >= parseDay(e.start) && d <= parseDay(e.end)); }
         function serviceById(id) { return SERVICES.find(s => s.id === id); }
+        function styleById(id) { return MASSAGE_STYLES.find(m => m.id === id); }
 
         function rangeText(e) {
             const s = parseDay(e.start), t = parseDay(e.end);
@@ -250,13 +270,29 @@
         /* ---- 1. services ---- */
         function renderServices() {
             document.getElementById('services').innerHTML = SERVICES.map(s =>
-                '<label class="flex items-center gap-4 min-h-[80px] px-3 py-3 border-b border-ink/20 cursor-pointer has-[:checked]:bg-blush/25">' +
-                    '<input type="radio" name="service" value="' + esc(s.id) + '" class="h-6 w-6 shrink-0 accent-ink"' + (state.service === s.id ? ' checked' : '') + '>' +
-                    '<span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#' + esc(s.icon) + '"/></svg></span>' +
-                    '<span><span class="block text-xl font-semibold">' + esc(s.name) + '</span>' +
-                    '<span class="block text-ink/80">' + esc(s.blurb) + '</span></span>' +
-                '</label>'
+                '<div class="border-b border-ink/20 has-[:checked]:bg-blush/25">' +
+                    '<label class="flex items-center gap-4 min-h-[80px] px-3 py-3 cursor-pointer">' +
+                        '<input type="radio" name="service" value="' + esc(s.id) + '" class="h-6 w-6 shrink-0 accent-ink"' + (state.service === s.id ? ' checked' : '') + '>' +
+                        '<span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#' + esc(s.icon) + '"/></svg></span>' +
+                        '<span><span class="block text-xl font-semibold">' + esc(s.name) + '</span>' +
+                        '<span class="block text-ink/80">' + esc(s.blurb) + '</span></span>' +
+                    '</label>' +
+                    (s.id === 'massage' ? '<div id="styleBox" role="group" aria-label="Massage style" class="px-3 pb-4 flex flex-wrap gap-2"></div>' : '') +
+                '</div>'
             ).join('');
+            renderStyles();
+        }
+
+        /* ---- 1b. massage styles (shown only while Massage Therapy is chosen) ---- */
+        function renderStyles() {
+            const box = document.getElementById('styleBox');
+            if (!box) return;
+            box.classList.toggle('hidden', state.service !== 'massage');
+            box.innerHTML = MASSAGE_STYLES.map(m => {
+                const sel = state.style === m.id;
+                return '<button type="button" data-style="' + esc(m.id) + '" aria-pressed="' + sel + '" class="min-h-[44px] rounded-full px-4 text-base ' +
+                    (sel ? 'bg-ink text-paper font-semibold' : 'border-2 border-ink/40 hover:bg-blush/40') + '">' + esc(m.label) + '</button>';
+            }).join('');
         }
 
         /* ---- 2. calendar ---- */
@@ -327,9 +363,10 @@
             const box = document.getElementById('summary');
             if (!state.date || !state.time) { box.innerHTML = ''; return; }
             const s = serviceById(state.service);
+            const title = s.id === 'massage' ? styleById(state.style).full : s.name;
             box.innerHTML =
                 '<div class="border-l-4 border-sage pl-4">' +
-                    '<p class="text-xl font-semibold flex items-center gap-3"><svg class="h-9 w-9 shrink-0" aria-hidden="true" focusable="false"><use href="#' + esc(s.icon) + '"/></svg>' + esc(s.name) + '</p>' +
+                    '<p class="text-xl font-semibold flex items-center gap-3"><svg class="h-9 w-9 shrink-0" aria-hidden="true" focusable="false"><use href="#' + esc(s.icon) + '"/></svg>' + esc(title) + '</p>' +
                     '<p>' + esc(fmtLong.format(parseDay(state.date))) + ' at ' + esc(state.time) + '</p>' +
                     '<button id="bookBtn" type="button" class="mt-4 min-h-[52px] w-full sm:w-auto rounded-full bg-ink text-paper text-lg font-semibold px-8">Book this time</button>' +
                     '<p id="bookNotice" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>' +
@@ -352,7 +389,16 @@
 
         /* ---- wiring ---- */
         document.getElementById('services').addEventListener('change', function (ev) {
-            if (ev.target.name === 'service') { state.service = ev.target.value; renderSummary(); }
+            if (ev.target.name === 'service') { state.service = ev.target.value; renderStyles(); renderSummary(); }
+        });
+
+        document.getElementById('services').addEventListener('click', function (ev) {
+            const b = ev.target.closest('button[data-style]');
+            if (!b) return;
+            state.style = b.dataset.style;
+            renderStyles(); renderSummary();
+            const again = document.querySelector('#styleBox [data-style="' + state.style + '"]');
+            if (again) again.focus();
         });
 
         document.getElementById('calendar').addEventListener('click', function (ev) {
