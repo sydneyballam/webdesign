@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Wellness by Jessica Lynn (Cal.com test)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FBEEE3',
+                        blush: '#EDB9A8',
+                        sage:  '#B9C6B1',
+                        ink:   '#5B2A2E'
+                    },
+                    fontFamily: {
+                        script: ['"Kaushan Script"', 'cursive'],
+                        serif:  ['"Playfair Display"', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: brush script for the name, Playfair Display for everything else (both appear on her flyer) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Playfair Display', Georgia, serif; }
+        :focus-visible { outline: 3px solid #5B2A2E; outline-offset: 2px; }
+    </style>
+</head>
+<body class="bg-paper text-ink font-serif text-[17px] leading-relaxed antialiased">
+
+    <!-- Watercolor edge effect, used by the two bands in the header -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <filter id="wc" x="-8%" y="-12%" width="116%" height="124%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.018 0.03" numOctaves="3" seed="7" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+            <linearGradient id="gBlush" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#F1C4B4"/>
+                <stop offset="1" stop-color="#E7A996"/>
+            </linearGradient>
+            <linearGradient id="gSage" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#C4CFBD"/>
+                <stop offset="1" stop-color="#AEBFA7"/>
+            </linearGradient>
+
+            <!-- Service icons: simple line drawings in the ink color, used with <use href="#ic-...">. -->
+            <symbol id="ic-massage" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="32" cy="53" rx="21" ry="7"/>
+                    <ellipse cx="32" cy="41" rx="14" ry="6"/>
+                    <ellipse cx="32" cy="29.5" rx="9" ry="5"/>
+                    <path d="M32 24.5 C29 15 35 9 45 9 C46 18 40 24 32 24.5 Z"/>
+                    <path d="M33 22 L42 13"/>
+                </g>
+            </symbol>
+            <symbol id="ic-reiki" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="32" cy="26" r="7"/>
+                    <path d="M45 26 H50 M41.2 16.8 L44.7 13.3 M32 13 V8 M22.8 16.8 L19.3 13.3 M19 26 H14 M22.8 35.2 L19.3 38.7 M41.2 35.2 L44.7 38.7 M32 39 V43"/>
+                    <path d="M9 42 C13 54 23 58 32 58 C41 58 51 54 55 42"/>
+                </g>
+            </symbol>
+            <symbol id="ic-sound" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="30" cy="37" rx="21" ry="5.5"/>
+                    <path d="M9 37 C9 51 18 57 30 57 C42 57 51 51 51 37"/>
+                    <path d="M22 61 H38"/>
+                    <path d="M58 9 L46 32"/>
+                    <circle cx="59.5" cy="6.5" r="3.2"/>
+                    <path d="M12 24 Q18 18 24 24"/>
+                    <path d="M7 19 Q18 8 29 19"/>
+                </g>
+            </symbol>
+            <symbol id="ic-yoga" viewBox="0 0 64 64">
+                <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M32 8 C25 18 25 32 32 43 C39 32 39 18 32 8 Z"/>
+                    <path d="M28 42 C17 41 9 34 7 22 C18 22 25 28 28 42 Z"/>
+                    <path d="M36 42 C47 41 55 34 57 22 C46 22 39 28 36 42 Z"/>
+                    <path d="M12 52 Q32 61 52 52"/>
+                </g>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- MOCKUP BANNER (remove when this becomes her live site) -->
+    <div class="bg-ink text-paper text-sm">
+        <div class="max-w-xl mx-auto px-4 py-1 flex flex-wrap items-center justify-between gap-x-4">
+            <p class="py-2">Booking test with Cal.com. The booking calendar is a real test account. Contact details, dates and times are placeholders.</p>
+            <a href="index.html?client=jessica" class="min-h-[44px] inline-flex items-center underline underline-offset-4">Back to portfolio</a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="max-w-xl mx-auto px-4 pt-6">
+        <div class="relative px-6 pt-12 pb-14 text-center">
+            <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+                <rect x="8" y="10" width="384" height="180" fill="url(#gBlush)" filter="url(#wc)"/>
+            </svg>
+            <h1 class="relative font-script text-5xl sm:text-6xl leading-tight">Wellness by Jessica Lynn</h1>
+        </div>
+        <div class="relative -mt-6 px-6 pt-12 pb-12 text-center">
+            <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
+                <rect x="8" y="10" width="384" height="220" fill="url(#gSage)" filter="url(#wc)"/>
+            </svg>
+            <ul class="relative inline-block text-left text-2xl sm:text-3xl space-y-3">
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg>Massage Therapy</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg>Reiki Healing</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg>Sound Healing</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-yoga"/></svg>Yoga</li>
+            </ul>
+        </div>
+
+        <p class="mt-6 text-center text-ink/80">Hayfork, California</p>
+        <div class="mt-5 flex flex-col sm:flex-row gap-3">
+            <a href="#book" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full bg-ink text-paper text-lg font-semibold px-6">Book a session</a>
+            <a href="#retreats" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink text-lg font-semibold px-6">See summer retreats</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- WHAT SHE OFFERS -->
+        <section id="offer" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
+            <h2 class="text-3xl font-semibold">What I offer</h2>
+            <ul class="mt-4 border-t border-ink/20">
+                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg></span><span><span class="block text-xl font-semibold">Massage Therapy</span><span class="block text-ink/80">Bodywork for tight muscles and tired shoulders.</span><ul class="mt-2 flex flex-wrap gap-2" aria-label="Massage styles"><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Deep Tissue</li><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Sports</li><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Womb Hara</li><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Swedish Relaxation</li></ul></span></li>
+                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg></span><span><span class="block text-xl font-semibold">Reiki Healing</span><span class="block text-ink/80">Calm, gentle energy work.</span></span></li>
+                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg></span><span><span class="block text-xl font-semibold">Sound Healing</span><span class="block text-ink/80">Sound and stillness to help you rest.</span></span></li>
+                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-yoga"/></svg></span><span><span class="block text-xl font-semibold">Yoga</span><span class="block text-ink/80">Movement and breath, at your own pace.</span></span></li>
+            </ul>
+        </section>
+
+        <!-- BOOKING: her Google Calendar booking page, as a button and as an embedded page -->
+        <section id="book" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
+            <h2 class="text-3xl font-semibold">Book a session</h2>
+            <p class="mt-2 text-ink/80">Pick a time that works for you. Tell me which service you would like when you book.</p>
+            <div class="mt-6 rounded-2xl overflow-hidden border-2 border-ink/20 bg-white">
+                <div id="calEmbed" class="w-full min-h-[560px]"></div>
+            </div>
+            <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
+        </section>
+
+        <!-- RETREATS -->
+        <div class="max-w-xl mx-auto px-4 mt-16" aria-hidden="true">
+            <svg class="w-full h-5 text-ink/35" viewBox="0 0 400 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path vector-effect="non-scaling-stroke" d="M0 10 Q25 -2 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10"/>
+            </svg>
+        </div>
+        <section id="retreats" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
+            <h2 class="text-3xl font-semibold">Summer retreats</h2>
+            <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
+            <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <div class="max-w-xl mx-auto px-4 mt-16" aria-hidden="true">
+            <svg class="w-full h-5 text-ink/35" viewBox="0 0 400 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path vector-effect="non-scaling-stroke" d="M0 10 Q25 -2 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10"/>
+            </svg>
+        </div>
+        <section id="news" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
+            <h2 class="text-3xl font-semibold">Stay in the loop</h2>
+            <p class="mt-2 text-ink/80">Get new retreat dates and openings by email.</p>
+            <form id="newsForm" class="mt-5" method="post">
+                <label for="email" class="block font-semibold mb-2">Email address</label>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
+                           class="min-h-[52px] flex-1 rounded-full border-2 border-ink/40 bg-white/60 px-5 text-ink placeholder-ink/50 focus:border-ink">
+                    <button type="submit" class="min-h-[52px] rounded-full bg-ink text-paper text-lg font-semibold px-6">Join the list</button>
+                </div>
+                <p id="newsNotice" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="max-w-xl mx-auto px-4 mt-20 pb-12">
+        <div class="border-t border-ink/20 pt-8">
+            <p class="font-script text-3xl">Wellness by Jessica Lynn</p>
+            <p class="mt-1 text-ink/80">Hayfork, California</p>
+            <p class="mt-4">
+                <a href="mailto:hello@example.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">hello@example.com</a><br>
+                <a href="tel:+15305550100" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 555-0100</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        /* ==========================================================
+           EDIT HERE. Everything the page shows comes from these.
+           ========================================================== */
+
+        const SITE = {
+            // Her Cal.com booking link, as "username/event-type" (cal.com/username/event-type).
+            calLink: 'syd-ballam-qcjhpv/30min',
+            // The brand color of the buttons inside the booking box.
+            calBrandColor: '#5B2A2E',
+            // Paste the form address from her email service here (MailerLite, Buttondown...).
+            // While this is empty, the newsletter form shows a mockup notice instead.
+            newsletterAction: ''
+        };
+
+        // Sample retreats. Dates are YYYY-MM-DD.
+        const EVENTS = [
+            { id: 'r1', title: 'Midsummer sound retreat',      start: '2027-06-18', end: '2027-06-20',
+              place: 'Trinity County. Address sent after you register.',
+              blurb: 'A weekend of sound healing, reiki and quiet time outdoors, for a small group.' },
+            { id: 'r2', title: 'Late-summer renewal retreat',  start: '2027-08-13', end: '2027-08-15',
+              place: 'Trinity County. Address sent after you register.',
+              blurb: 'A slow weekend to rest and reset before fall, with reiki and bodywork on offer.' }
+        ];
+
+        /* ---------------- code below needs no editing ---------------- */
+
+        const fmtMD = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric' });
+
+        function esc(s) {
+            return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+        function parseDay(s) { const p = s.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]); }
+        function rangeText(e) {
+            const s = parseDay(e.start), t = parseDay(e.end);
+            const end = s.getMonth() === t.getMonth() ? String(t.getDate()) : fmtMD.format(t);
+            return fmtMD.format(s) + ' to ' + end + ', ' + t.getFullYear();
+        }
+
+        /* ---- booking: Cal.com inline embed ---- */
+        const CAL_URL = 'https://cal.com/' + SITE.calLink;
+        document.querySelectorAll('[data-booking-link]').forEach(a => { a.href = CAL_URL; });
+
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+        const CAL_NS = SITE.calLink.split('/').pop();
+        Cal("init", CAL_NS, { origin: "https://app.cal.com" });
+        Cal.ns[CAL_NS]("inline", {
+            elementOrSelector: "#calEmbed",
+            config: { layout: "month_view", theme: "light" },
+            calLink: SITE.calLink
+        });
+        Cal.ns[CAL_NS]("ui", {
+            theme: "light",
+            hideEventTypeDetails: false,
+            layout: "month_view",
+            cssVarsPerTheme: { light: { "cal-brand": SITE.calBrandColor } }
+        });
+
+        /* ---- retreats ---- */
+        document.getElementById('eventList').innerHTML = EVENTS.map(e =>
+            '<li class="py-7 border-b border-ink/20">' +
+                '<h3 class="text-2xl font-semibold">' + esc(rangeText(e)) + '</h3>' +
+                '<p class="text-xl mt-1">' + esc(e.title) + '</p>' +
+                '<p class="mt-2 text-ink/80">' + esc(e.blurb) + '</p>' +
+                '<p class="mt-2 text-sm text-ink/80"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i>' + esc(e.place) + '</p>' +
+                '<button type="button" data-event="' + esc(e.id) + '" class="mt-4 min-h-[52px] rounded-full border-2 border-ink text-lg font-semibold px-6">Reserve a spot</button>' +
+                '<p id="note-' + esc(e.id) + '" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>' +
+            '</li>'
+        ).join('');
+
+        document.getElementById('eventList').addEventListener('click', function (ev) {
+            const b = ev.target.closest('button[data-event]');
+            if (!b) return;
+            document.getElementById('note-' + b.dataset.event).textContent =
+                'Mockup only. Nothing was reserved. On the live site, this opens the sign-up form for this retreat.';
+        });
+
+        /* ---- newsletter ---- */
+        const newsForm = document.getElementById('newsForm');
+        if (SITE.newsletterAction) newsForm.action = SITE.newsletterAction;
+        newsForm.addEventListener('submit', function (ev) {
+            if (SITE.newsletterAction) return;   // real form: let the browser send it
+            ev.preventDefault();
+            document.getElementById('newsNotice').textContent = 'Mockup only. Nothing was sent. On the live site, this adds you to her email list.';
+        });
+    </script>
+</body>
+</html>
