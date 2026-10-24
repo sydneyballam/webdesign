@@ -33,6 +33,13 @@
         body { font-family: 'Playfair Display', Georgia, serif; }
         :focus-visible { outline: 3px solid #5B2A2E; outline-offset: 2px; }
 
+        /* The booking panel grows from nothing to its full height. While closed it is hidden from keyboards and screen readers. */
+        .book-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+        .book-panel > div { overflow: hidden; visibility: hidden; transition: visibility 0s linear .45s; }
+        .book-panel.is-open { grid-template-rows: 1fr; }
+        .book-panel.is-open > div { visibility: visible; transition-delay: 0s; }
+        @media (prefers-reduced-motion: reduce) { .book-panel, .book-panel > div { transition: none; } }
+
         /* Soft flowers and ripples in the empty space beside the page. Wide screens only, fixed behind the content. */
         @media (min-width: 1100px) {
             body {
@@ -130,42 +137,35 @@
                 <rect x="8" y="10" width="384" height="220" fill="url(#gSage)" filter="url(#wc)"/>
             </svg>
             <ul class="relative inline-block text-left text-2xl sm:text-3xl space-y-3">
-                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg>Massage Therapy</li>
-                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg>Reiki Healing</li>
-                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg>Sound Healing</li>
-                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-yoga"/></svg>Yoga</li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg><a href="#book" aria-label="Massage Therapy: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Massage Therapy</a></li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg><a href="#book" aria-label="Reiki Healing: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Reiki Healing</a></li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg><a href="#book" aria-label="Sound Healing: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Sound Healing</a></li>
+                <li class="flex items-center gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-yoga"/></svg><a href="#book" aria-label="Yoga: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Yoga</a></li>
             </ul>
+            <p class="relative mx-auto mt-6 max-w-[19rem] text-base text-ink/80">Massage styles: Deep Tissue, Sports, Womb Hara, and Swedish Relaxation</p>
         </div>
 
         <p class="mt-6 text-center text-ink/80">Hayfork, California</p>
         <div class="mt-5 flex flex-col sm:flex-row gap-3">
-            <a href="#book" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full bg-ink text-paper text-lg font-semibold px-6">Book a session</a>
+            <button id="bookToggle" type="button" aria-expanded="false" aria-controls="book" class="scroll-mt-4 min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink bg-ink text-paper text-lg font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Book a session</button>
             <a href="#retreats" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink text-lg font-semibold px-6">See summer retreats</a>
+        </div>
+
+        <!-- BOOKING: opens in place under the button. The Cal.com calendar loads the first time it opens. -->
+        <div id="book" class="book-panel">
+            <div>
+                <div class="pt-8">
+                    <p class="text-ink/80">Pick a time that works for you. Tell me which service you would like when you book.</p>
+                    <div class="mt-5 rounded-2xl overflow-hidden">
+                        <div id="calEmbed" class="w-full min-h-[560px]"></div>
+                    </div>
+                    <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- WHAT SHE OFFERS -->
-        <section id="offer" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
-            <h2 class="text-3xl font-semibold">What I offer</h2>
-            <ul class="mt-4 border-t border-ink/20">
-                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg></span><span><a href="#book" aria-label="Massage Therapy: go to booking" class="relative -my-2 block w-fit py-2 text-xl font-semibold underline decoration-ink/30 underline-offset-4 hover:decoration-ink">Massage Therapy</a><span class="block text-ink/80">Bodywork for tight muscles and tired shoulders.</span><ul class="mt-2 flex flex-wrap gap-2" aria-label="Massage styles"><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Deep Tissue</li><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Sports</li><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Womb Hara</li><li class="rounded-full bg-blush/40 px-3 py-1 text-base">Swedish Relaxation</li></ul></span></li>
-                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg></span><span><a href="#book" aria-label="Reiki Healing: go to booking" class="relative -my-2 block w-fit py-2 text-xl font-semibold underline decoration-ink/30 underline-offset-4 hover:decoration-ink">Reiki Healing</a><span class="block text-ink/80">Calm, gentle energy work.</span></span></li>
-                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg></span><span><a href="#book" aria-label="Sound Healing: go to booking" class="relative -my-2 block w-fit py-2 text-xl font-semibold underline decoration-ink/30 underline-offset-4 hover:decoration-ink">Sound Healing</a><span class="block text-ink/80">Sound and stillness to help you rest.</span></span></li>
-                <li class="flex items-start gap-4 py-4 border-b border-ink/20"><span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blush/45"><svg class="h-9 w-9" aria-hidden="true" focusable="false"><use href="#ic-yoga"/></svg></span><span><a href="#book" aria-label="Yoga: go to booking" class="relative -my-2 block w-fit py-2 text-xl font-semibold underline decoration-ink/30 underline-offset-4 hover:decoration-ink">Yoga</a><span class="block text-ink/80">Movement and breath, at your own pace.</span></span></li>
-            </ul>
-        </section>
-
-        <!-- BOOKING: her Google Calendar booking page, as a button and as an embedded page -->
-        <section id="book" class="max-w-xl mx-auto px-4 mt-20 scroll-mt-4">
-            <h2 class="text-3xl font-semibold">Book a session</h2>
-            <p class="mt-2 text-ink/80">Pick a time that works for you. Tell me which service you would like when you book.</p>
-            <div class="mt-6 rounded-2xl overflow-hidden">
-                <div id="calEmbed" class="w-full min-h-[560px]"></div>
-            </div>
-            <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
-        </section>
-
         <!-- RETREATS -->
         <div class="max-w-xl mx-auto px-4 mt-16" aria-hidden="true">
             <svg class="w-full h-5 text-ink/35" viewBox="0 0 400 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -279,18 +279,43 @@
         (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 
         const CAL_NS = SITE.calLink.split('/').pop();
-        Cal("init", CAL_NS, { origin: "https://app.cal.com" });
-        Cal.ns[CAL_NS]("inline", {
-            elementOrSelector: "#calEmbed",
-            config: { layout: "month_view", theme: "light" },
-            calLink: SITE.calLink
+        let calStarted = false;
+        function startCal() {
+            if (calStarted) return;
+            calStarted = true;
+            Cal("init", CAL_NS, { origin: "https://app.cal.com" });
+            Cal.ns[CAL_NS]("inline", {
+                elementOrSelector: "#calEmbed",
+                config: { layout: "month_view", theme: "light" },
+                calLink: SITE.calLink
+            });
+            Cal.ns[CAL_NS]("ui", {
+                theme: "light",
+                hideEventTypeDetails: false,
+                layout: "month_view",
+                cssVarsPerTheme: { light: SITE.calColors }
+            });
+        }
+
+        const bookToggle = document.getElementById('bookToggle');
+        const bookPanel = document.getElementById('book');
+        const calmMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function setBooking(open, scroll) {
+            bookPanel.classList.toggle('is-open', open);
+            bookToggle.setAttribute('aria-expanded', String(open));
+            if (open) startCal();
+            if (open && scroll) bookToggle.scrollIntoView({ behavior: calmMotion ? 'auto' : 'smooth', block: 'start' });
+        }
+
+        bookToggle.addEventListener('click', function () {
+            setBooking(bookToggle.getAttribute('aria-expanded') !== 'true', true);
         });
-        Cal.ns[CAL_NS]("ui", {
-            theme: "light",
-            hideEventTypeDetails: false,
-            layout: "month_view",
-            cssVarsPerTheme: { light: SITE.calColors }
-        });
+        document.querySelectorAll('a[href="#book"]').forEach(a => a.addEventListener('click', function (ev) {
+            ev.preventDefault();
+            setBooking(true, true);
+        }));
+        if (location.hash === '#book') setBooking(true, false);
 
         /* ---- retreats ---- */
         document.getElementById('eventList').innerHTML = EVENTS.map(e =>
