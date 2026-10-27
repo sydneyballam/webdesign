@@ -176,6 +176,7 @@
             <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
             <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
             <p id="eventEmpty" class="hidden mt-6 text-ink/80"></p>
+            <p class="mt-6 text-sm text-ink/80"><a id="retreatsLink" class="underline underline-offset-4" href="#" target="_blank" rel="noopener">See all retreats on Cal.com<span class="sr-only"> (opens in a new tab)</span></a></p>
             <details id="pastWrap" class="hidden mt-8">
                 <summary class="min-h-[44px] inline-flex items-center cursor-pointer underline underline-offset-4 decoration-ink/30">Past retreats</summary>
                 <ul id="pastList" class="mt-2 text-ink/80"></ul>
@@ -326,6 +327,7 @@
 
         /* ---- retreats (from jessica-retreats.json) ---- */
         const CAL_EVENTS_URL = 'https://cal.com/' + SITE.calLink.split('/')[0] + '/events';
+        document.getElementById('retreatsLink').href = CAL_EVENTS_URL;
 
         function spotsText(e) {
             if (e.soldOut) return 'Sold out';
