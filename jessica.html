@@ -144,7 +144,7 @@
             </ul>
         </div>
 
-        <p class="mt-6 text-center text-ink/80">Hayfork, California</p>
+        <p class="mt-6 text-center text-ink/80">Hayfork and Weaverville, California</p>
         <div class="mt-5 flex flex-col sm:flex-row gap-3">
             <button id="bookToggle" type="button" aria-expanded="false" aria-controls="book" class="scroll-mt-4 min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink bg-ink text-paper text-lg font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Book a session</button>
             <a href="#retreats" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink text-lg font-semibold px-6">See summer retreats</a>
@@ -155,17 +155,14 @@
             <div>
                 <div class="pt-8">
                     <div id="bookFlow">
-                    <p class="text-ink/80">Choose what you would like and where, then pick a time.</p>
                     <div id="bookPicker" class="mt-5">
                         <p id="svcLabel" class="text-ink/80">What would you like to book?</p>
                         <div id="svcButtons" role="group" aria-labelledby="svcLabel" class="mt-2 flex flex-wrap gap-3"></div>
                         <p id="placeLabel" class="mt-5 text-ink/80">Where would you like to book?</p>
                         <div id="placeButtons" role="group" aria-labelledby="placeLabel" class="mt-2 flex flex-wrap gap-3"></div>
-                        <p id="pickHint" role="status" class="mt-4 text-sm text-ink/80"></p>
                     </div>
                     <div id="calEmbeds" class="mt-6 rounded-2xl overflow-hidden"></div>
-                    <p class="mt-3 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
-                    <p class="mt-1 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
+                    <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
                     </div>
                     <div id="thanks" class="hidden focus:outline-none" tabindex="-1" role="status">
                         <h2 class="text-3xl font-semibold">Thank you!</h2>
@@ -224,7 +221,7 @@
     <footer class="max-w-xl mx-auto px-4 mt-20 pb-12">
         <div class="border-t border-ink/20 pt-8">
             <p class="font-script text-3xl">Sweet Somatics</p>
-            <p class="mt-1 text-ink/80">Hayfork, California</p>
+            <p class="mt-1 text-ink/80">Hayfork and Weaverville, California</p>
             <p class="mt-4">
                 <a href="mailto:sweetsomatics@gmail.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">sweetsomatics@gmail.com</a><br>
                 <a href="tel:+15307392395" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 739-2395</a>
@@ -371,8 +368,6 @@
             document.querySelectorAll('#placeButtons button').forEach((b, i) => b.setAttribute('aria-pressed', String(i === placeIdx)));
             setFallbackLink();
             const ready = svcIdx >= 0 && placeIdx >= 0;
-            document.getElementById('pickHint').textContent = ready ? '' :
-                (svcIdx < 0 && placeIdx < 0 ? 'Choose a service and a place to see open times.' : svcIdx < 0 ? 'Choose a service to see open times.' : 'Choose a place to see open times.');
             if (ready) startCal(svcIdx, placeIdx);
             else embeds.querySelectorAll('[data-embed]').forEach(d => { d.hidden = true; });
         }
