@@ -23,7 +23,6 @@ jobs:
       - name: Read retreats from Cal.com
         env:
           CAL_API_KEY: ${{ secrets.CAL_API_KEY }}
-          CAL_USERNAME: ${{ vars.CAL_USERNAME }}
         run: node scripts/update-retreats.mjs
       - name: Save if anything changed
         run: |
