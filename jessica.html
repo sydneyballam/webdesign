@@ -177,9 +177,13 @@
         <section id="retreats" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Summer retreats</h2>
             <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
-            <p class="mt-5 text-ink/80">Retreats are small, with room for 10 people, and the dates are announced once a year.</p>
-            <p class="mt-3 text-ink/80">Join the email list below to hear first when new dates are posted.</p>
-            <a href="#news" class="mt-5 min-h-[52px] inline-flex items-center rounded-full border-2 border-ink text-lg font-semibold px-6">Get retreat news</a>
+            <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
+            <p id="eventEmpty" class="hidden mt-6 text-ink/80"></p>
+            <p class="mt-6 text-sm text-ink/80"><a id="retreatsLink" class="underline underline-offset-4" href="#" target="_blank" rel="noopener">See all retreats on Cal.com<span class="sr-only"> (opens in a new tab)</span></a></p>
+            <details id="pastWrap" class="hidden mt-8">
+                <summary class="min-h-[44px] inline-flex items-center cursor-pointer underline underline-offset-4 decoration-ink/30">Past retreats</summary>
+                <ul id="pastList" class="mt-2 text-ink/80"></ul>
+            </details>
         </section>
 
         <!-- NEWSLETTER -->
@@ -258,11 +262,33 @@
             newsletterAction: ''
         };
 
+        // Retreats are not typed in here. They come from jessica-retreats.json, which a
+        // scheduled job refreshes from her Cal.com account (see scripts/update-retreats.mjs).
+        const RETREATS_FILE = 'jessica-retreats.json';
+        const TZ = 'America/Los_Angeles';
+
         /* ---------------- code below needs no editing ---------------- */
+
+        const fmt = o => new Intl.DateTimeFormat('en-US', Object.assign({ timeZone: TZ }, o));
+        const fmtMD = fmt({ month: 'long', day: 'numeric' }), fmtMDY = fmt({ month: 'long', day: 'numeric', year: 'numeric' });
+        const fmtTime = fmt({ hour: 'numeric', minute: '2-digit' }), fmtMonthYear = fmt({ month: 'long', year: 'numeric' });
+        const dayKey = d => fmt({ year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 
         function esc(s) {
             return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
         }
+        function rangeText(e) {
+            const s = new Date(e.start), t = new Date(e.end);
+            if (dayKey(s) === dayKey(t)) return fmtMDY.format(s);
+            const sm = fmt({ month: 'numeric', year: 'numeric' }).format(s), tm = fmt({ month: 'numeric', year: 'numeric' }).format(t);
+            const endTxt = sm === tm ? fmt({ day: 'numeric' }).format(t) : fmtMD.format(t);
+            return fmtMD.format(s) + ' to ' + endTxt + ', ' + fmt({ year: 'numeric' }).format(t);
+        }
+        function timeText(e) {
+            const s = new Date(e.start), t = new Date(e.end);
+            return dayKey(s) === dayKey(t) ? fmtTime.format(s) + ' to ' + fmtTime.format(t) : '';
+        }
+
         /* ---- booking: Cal.com inline embed ---- */
         const PLACES = SITE.locations;
         let activePlace = -1;
@@ -344,6 +370,55 @@
                 el.innerHTML = '<a href="https://venmo.com/u/' + encodeURIComponent(SITE.venmo) + '" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Venmo @' + esc(SITE.venmo) + '<span class="sr-only"> (opens in a new tab)</span></a>';
             });
         }
+
+        /* ---- retreats (from jessica-retreats.json) ---- */
+        const CAL_EVENTS_URL = 'https://cal.com/' + SITE.locations[0].calLink.split('/')[0] + '/events';
+        document.getElementById('retreatsLink').href = CAL_EVENTS_URL;
+
+        function spotsText(e) {
+            if (e.soldOut) return 'Sold out';
+            if (!e.capacity) return '';
+            return e.left === 1 ? '1 spot left of ' + e.capacity : e.left + ' spots left of ' + e.capacity;
+        }
+        function retreatItem(e) {
+            const sold = e.soldOut, tm = timeText(e);
+            return '<li class="py-7 border-b border-ink/20">' +
+                '<h3 class="text-2xl font-semibold">' + esc(rangeText(e)) + '</h3>' +
+                '<p class="text-xl mt-1">' + esc(e.title) + '</p>' +
+                (e.description ? '<p class="mt-2 text-ink/80">' + esc(e.description) + '</p>' : '') +
+                (tm ? '<p class="mt-2 text-sm text-ink/80"><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i>' + esc(tm) + '</p>' : '') +
+                (e.place ? '<p class="mt-2 text-sm text-ink/80"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i>' + esc(e.place) + '</p>' : '') +
+                '<p class="mt-3 inline-block rounded-full px-3 py-1 text-sm font-semibold ' + (sold ? 'bg-ink text-paper' : 'bg-sage/60') + '">' + esc(spotsText(e)) + '</p>' +
+                '<div class="mt-4">' + (sold
+                    ? '<a href="#news" class="min-h-[52px] inline-flex items-center rounded-full border-2 border-ink/50 text-lg font-semibold px-6 text-ink/80">Get notified when spots open</a>'
+                    : '<a href="' + esc(e.url) + '" target="_blank" rel="noopener" class="min-h-[52px] inline-flex items-center rounded-full border-2 border-ink text-lg font-semibold px-6">Reserve a spot<span class="sr-only"> for ' + esc(e.title) + ', opens in a new tab</span></a>') +
+                '</div>' +
+            '</li>';
+        }
+        function showRetreats(data) {
+            const now = new Date();
+            // Anything that has ended moves to the archive, even if the file has not refreshed yet.
+            const upcoming = (data.retreats || []).filter(e => new Date(e.end) > now).sort((a, b) => a.start.localeCompare(b.start));
+            const old = (data.archive || []).concat((data.retreats || []).filter(e => new Date(e.end) <= now))
+                .sort((a, b) => b.start.localeCompare(a.start));
+            const list = document.getElementById('eventList'), empty = document.getElementById('eventEmpty');
+            list.innerHTML = upcoming.map(retreatItem).join('');
+            list.classList.toggle('hidden', !upcoming.length);
+            empty.classList.toggle('hidden', upcoming.length > 0);
+            if (!upcoming.length) empty.textContent = 'Retreats are small, with room for 10 people, and dates are announced once a year. Join the email list below to hear first when new dates are posted.';
+            document.getElementById('pastList').innerHTML = old.map(e =>
+                '<li class="py-1">' + esc(fmtMonthYear.format(new Date(e.start))) + ': ' + esc(e.title) + '</li>').join('');
+            document.getElementById('pastWrap').classList.toggle('hidden', !old.length);
+        }
+        function retreatsUnavailable() {
+            const empty = document.getElementById('eventEmpty');
+            empty.classList.remove('hidden');
+            empty.innerHTML = 'Retreat dates are not loading right now. <a class="underline underline-offset-4" href="' + esc(CAL_EVENTS_URL) + '" target="_blank" rel="noopener">See them on Cal.com</a>.';
+        }
+        fetch(RETREATS_FILE, { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+            .then(showRetreats)
+            .catch(err => { console.error('Could not load retreats:', err); retreatsUnavailable(); });
 
         /* ---- newsletter ---- */
         const newsForm = document.getElementById('newsForm');
