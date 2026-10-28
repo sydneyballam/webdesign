@@ -26,7 +26,7 @@
         }
     </script>
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Google Fonts: brush script for the name, Playfair Display for everything else (both appear on her flyer) -->
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -154,6 +154,7 @@
         <div id="book" class="book-panel">
             <div>
                 <div class="pt-8">
+                    <div id="bookFlow">
                     <p class="text-ink/80">Choose what you would like and where, then pick a time.</p>
                     <div id="bookPicker" class="mt-5">
                         <p id="svcLabel" class="text-ink/80">What would you like to book?</p>
@@ -163,14 +164,18 @@
                         <p id="pickHint" role="status" class="mt-4 text-sm text-ink/80"></p>
                     </div>
                     <div id="calEmbeds" class="mt-6 rounded-2xl overflow-hidden"></div>
-                    <div id="shareCard" class="hidden mt-6 rounded-2xl bg-sage/40 p-5" role="status">
-                        <p id="shareTitle" class="text-xl font-semibold"></p>
-                        <p class="mt-1 text-ink/80">Check your email for the confirmation and a calendar invite. Know someone who would enjoy this? Pass it on.</p>
-                        <div id="shareButtons" class="mt-4 flex flex-wrap gap-3"></div>
-                        <p id="shareNote" role="status" class="empty:hidden mt-3 text-sm text-ink/80"></p>
-                    </div>
                     <p class="mt-3 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
                     <p class="mt-1 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
+                    </div>
+                    <div id="thanks" class="hidden focus:outline-none" tabindex="-1" role="status">
+                        <h2 class="text-3xl font-semibold">Thank you!</h2>
+                        <p id="thanksLine" class="mt-2 text-xl"></p>
+                        <p class="mt-3 text-ink/80">A confirmation and calendar invite are on their way to your email. If you do not see them in a few minutes, check your spam folder.</p>
+                        <p class="mt-6 text-ink/80">Know someone who would enjoy this? Pass it on.</p>
+                        <div id="thanksShare" class="mt-3 flex flex-wrap gap-3"></div>
+                        <p id="thanksNote" role="status" class="empty:hidden mt-3 text-sm text-ink/80"></p>
+                        <button id="bookAnother" type="button" class="mt-6 min-h-[48px] inline-flex items-center rounded-full border-2 border-ink text-base font-semibold px-5">Book another session</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,6 +230,15 @@
                 <a href="tel:+15307392395" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 739-2395</a>
             </p>
             <p class="mt-2 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
+            <div id="followRow" class="hidden mt-6">
+                <p class="text-ink/80">Follow along</p>
+                <div id="followLinks" class="mt-2 flex flex-wrap gap-3"></div>
+            </div>
+            <div class="mt-6">
+                <p class="text-ink/80">Share this page</p>
+                <div id="footShare" class="mt-2 flex flex-wrap gap-3"></div>
+                <p id="footShareNote" role="status" class="empty:hidden mt-3 text-sm text-ink/80"></p>
+            </div>
         </div>
     </footer>
 
@@ -265,6 +279,8 @@
                 "cal-border-booker": "#FBEEE3", "cal-border-booker-width": "0px",
                 "radius": "1rem"
             },
+            // Her social accounts: paste the full address of each profile. Empty ones are not shown.
+            social: { facebook: '', x: '', instagram: '' },
             // Her Venmo username, without the @. While empty, the page says Venmo is accepted but shows no link.
             venmo: '',
             // While this is empty, the newsletter form shows a mockup notice instead.
@@ -354,7 +370,6 @@
             document.querySelectorAll('#svcButtons button').forEach((b, i) => b.setAttribute('aria-pressed', String(i === svcIdx)));
             document.querySelectorAll('#placeButtons button').forEach((b, i) => b.setAttribute('aria-pressed', String(i === placeIdx)));
             setFallbackLink();
-            document.getElementById('shareCard').classList.add('hidden');
             const ready = svcIdx >= 0 && placeIdx >= 0;
             document.getElementById('pickHint').textContent = ready ? '' :
                 (svcIdx < 0 && placeIdx < 0 ? 'Choose a service and a place to see open times.' : svcIdx < 0 ? 'Choose a service to see open times.' : 'Choose a place to see open times.');
@@ -374,41 +389,77 @@
         else { document.getElementById('placeLabel').hidden = true; document.getElementById('placeButtons').hidden = true; }
         refreshBooking();
 
-        /* ---- after someone books: a thank-you with easy sharing (shares the site, never the booking) ---- */
-        const shareCard = document.getElementById('shareCard');
-        const SHARE_URL = location.origin + location.pathname;
-        const SHARE_TEXT = 'I just booked with Sweet Somatics in Hayfork and Weaverville.';
-        const shareBtn = 'min-h-[48px] inline-flex items-center rounded-full border-2 border-ink text-base font-semibold px-5';
-        function shareLinks() {
-            const u = encodeURIComponent(SHARE_URL), t = encodeURIComponent(SHARE_TEXT);
-            let h = '';
-            if (navigator.share) h += '<button type="button" data-share="native" class="' + shareBtn + '">Share</button>';
-            h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=' + u + '">Facebook<span class="sr-only"> (opens in a new tab)</span></a>';
-            h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://wa.me/?text=' + t + '%20' + u + '">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>';
-            h += '<a class="' + shareBtn + '" href="mailto:?subject=' + encodeURIComponent('Sweet Somatics') + '&body=' + t + '%20' + u + '">Email</a>';
-            h += '<button type="button" data-share="copy" class="' + shareBtn + '">Copy link</button>';
-            return h;
-        }
-        document.getElementById('shareButtons').innerHTML = shareLinks();
-        document.getElementById('shareButtons').addEventListener('click', function (ev) {
-            const b = ev.target.closest('button[data-share]'); if (!b) return;
-            const note = document.getElementById('shareNote');
-            if (b.dataset.share === 'native') {
-                navigator.share({ title: 'Sweet Somatics', text: SHARE_TEXT, url: SHARE_URL }).catch(function () {});
-            } else if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(SHARE_URL).then(function () { note.textContent = 'Link copied.'; }, function () { note.textContent = SHARE_URL; });
-            } else { note.textContent = SHARE_URL; }
-        });
-        function onBooked(data) {
-            const pending = data && data.status && String(data.status).toLowerCase() !== 'accepted';
-            document.getElementById('shareTitle').textContent = pending ? 'Thank you. Your request is in.' : 'You are booked. See you soon.';
-            shareCard.classList.remove('hidden');
-            shareCard.scrollIntoView({ behavior: window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
-        }
-
         const bookToggle = document.getElementById('bookToggle');
         const bookPanel = document.getElementById('book');
         const calmMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---- sharing: the site only, never anyone's booking details ---- */
+        const SHARE_URL = location.origin + location.pathname;
+        const SHARE_GENERIC = 'Sweet Somatics: massage, reiki, sound healing and yoga in Hayfork and Weaverville.';
+        const shareBtn = 'min-h-[48px] inline-flex items-center gap-2 rounded-full border-2 border-ink text-base font-semibold px-5';
+        function shareHtml(text) {
+            const u = encodeURIComponent(SHARE_URL), t = encodeURIComponent(text);
+            let h = '';
+            if (navigator.share) h += '<button type="button" data-share="native" data-text="' + esc(text) + '" class="' + shareBtn + '"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i>Share</button>';
+            h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=' + u + '"><i class="fa-brands fa-facebook" aria-hidden="true"></i>Facebook<span class="sr-only"> (opens in a new tab)</span></a>';
+            h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://x.com/intent/post?text=' + t + '&url=' + u + '"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i>X<span class="sr-only"> (opens in a new tab)</span></a>';
+            h += '<button type="button" data-share="copy" class="' + shareBtn + '"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy link</button>';
+            return h;
+        }
+        function wireShare(boxId, noteId) {
+            document.getElementById(boxId).addEventListener('click', function (ev) {
+                const b = ev.target.closest('button[data-share]'); if (!b) return;
+                const note = document.getElementById(noteId);
+                if (b.dataset.share === 'native') {
+                    navigator.share({ title: 'Sweet Somatics', text: b.dataset.text, url: SHARE_URL }).catch(function () {});
+                } else if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(SHARE_URL).then(function () { note.textContent = 'Link copied. Paste it into Instagram or anywhere else.'; }, function () { note.textContent = SHARE_URL; });
+                } else { note.textContent = SHARE_URL; }
+            });
+        }
+        document.getElementById('footShare').innerHTML = shareHtml(SHARE_GENERIC);
+        wireShare('footShare', 'footShareNote');
+        wireShare('thanksShare', 'thanksNote');
+
+        const SOCIAL = [
+            { key: 'facebook',  label: 'Facebook',  icon: 'fa-brands fa-facebook' },
+            { key: 'x',         label: 'X',         icon: 'fa-brands fa-x-twitter' },
+            { key: 'instagram', label: 'Instagram', icon: 'fa-brands fa-instagram' }
+        ].filter(x => SITE.social && SITE.social[x.key]);
+        if (SOCIAL.length) {
+            document.getElementById('followRow').classList.remove('hidden');
+            document.getElementById('followLinks').innerHTML = SOCIAL.map(x =>
+                '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="' + esc(SITE.social[x.key]) + '"><i class="' + x.icon + '" aria-hidden="true"></i>' + x.label + '<span class="sr-only"> (opens in a new tab)</span></a>').join('');
+        }
+
+        /* ---- after someone books: a thank-you with confirmation and sharing, in place of the calendar ---- */
+        const thanks = document.getElementById('thanks'), bookFlow = document.getElementById('bookFlow');
+        const fmtWhen = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+        function showThanks(o) {
+            o = o || {};
+            const place = PLACES[o.placeIdx] ? PLACES[o.placeIdx].name : '';
+            const svc = SERVICES[o.svcIdx] ? SERVICES[o.svcIdx].name : '';
+            const when = o.start && !isNaN(new Date(o.start)) ? fmtWhen.format(new Date(o.start)).replace(/, (\d)/, ' at $1') : '';
+            const lead = o.pending ? 'Your request is in' : 'You are booked';
+            document.getElementById('thanksLine').textContent =
+                lead + (svc ? ': ' + svc : '') + (place ? ' in ' + place : '') + (when ? ', ' + when : '') + '.';
+            const text = place ? 'I just booked with Sweet Somatics in ' + place + '.' : 'I just booked with Sweet Somatics.';
+            document.getElementById('thanksShare').innerHTML = shareHtml(text);
+            document.getElementById('thanksNote').textContent = '';
+            bookFlow.hidden = true; thanks.classList.remove('hidden');
+            setBooking(true, false);
+            thanks.scrollIntoView({ behavior: calmMotion ? 'auto' : 'smooth', block: 'start' });
+            thanks.focus({ preventScroll: true });
+        }
+        function onBooked(data) {
+            showThanks({ svcIdx: svcIdx, placeIdx: placeIdx, start: data && data.startTime, pending: Boolean(data && data.status && String(data.status).toLowerCase() !== 'accepted') });
+        }
+        document.getElementById('bookAnother').addEventListener('click', function () {
+            thanks.classList.add('hidden'); bookFlow.hidden = false;
+            svcIdx = -1; placeIdx = PLACES.length === 1 ? 0 : -1;
+            refreshBooking();
+            bookToggle.scrollIntoView({ behavior: calmMotion ? 'auto' : 'smooth', block: 'start' });
+        });
 
         function setBooking(open, scroll, serviceKey) {
             bookPanel.classList.toggle('is-open', open);
@@ -426,6 +477,12 @@
             setBooking(true, true, a.dataset.service);
         }));
         if (location.hash === '#book') setBooking(true, false);
+        (function () {
+            const q = new URLSearchParams(location.search), t = q.get('thanks');
+            if (t === null) return;
+            const pi = PLACES.findIndex(p => p.slug === t.toLowerCase());
+            showThanks({ placeIdx: pi, start: q.get('startTime') });
+        })();
 
         /* ---- Venmo: optional, shown quietly. Becomes a link once her username is set. ---- */
         if (SITE.venmo) {
