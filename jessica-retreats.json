@@ -1,5 +1,18 @@
 {
-  "updated": "2026-10-27T00:00:00.000Z",
-  "retreats": [],
+  "updated": "2026-10-28T05:29:33.734Z",
+  "retreats": [
+    {
+      "title": "Jessica's faux retreat",
+      "description": "Testing how Jessica might manage scheduling and seat limits.",
+      "slug": "jessica-s-faux-retreat",
+      "url": "https://cal.com/jessica-s-faux-retreat",
+      "place": "Hayfork",
+      "start": "2026-11-04T09:00:00.000Z",
+      "end": "2026-11-05T05:30:00.000Z",
+      "capacity": 10,
+      "left": 10,
+      "soldOut": false
+    }
+  ],
   "archive": []
 }
