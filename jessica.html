@@ -158,7 +158,8 @@
                     <div class="mt-5 rounded-2xl overflow-hidden">
                         <div id="calEmbed" class="w-full min-h-[560px]"></div>
                     </div>
-                    <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
+                    <p class="mt-3 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
+                    <p class="mt-1 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
                 </div>
             </div>
         </div>
@@ -212,6 +213,7 @@
                 <a href="mailto:hello@example.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">hello@example.com</a><br>
                 <a href="tel:+15305550100" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 555-0100</a>
             </p>
+            <p class="mt-2 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
         </div>
     </footer>
 
@@ -249,6 +251,8 @@
                 "radius": "1rem"
             },
             // Paste the form address from her email service here (MailerLite, Buttondown...).
+            // Her Venmo username, without the @. While empty, the page says Venmo is accepted but shows no link.
+            venmo: '',
             // While this is empty, the newsletter form shows a mockup notice instead.
             newsletterAction: ''
         };
@@ -324,6 +328,13 @@
             setBooking(true, true);
         }));
         if (location.hash === '#book') setBooking(true, false);
+
+        /* ---- Venmo: optional, shown quietly. Becomes a link once her username is set. ---- */
+        if (SITE.venmo) {
+            document.querySelectorAll('[data-venmo]').forEach(function (el) {
+                el.innerHTML = '<a href="https://venmo.com/u/' + encodeURIComponent(SITE.venmo) + '" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Venmo @' + esc(SITE.venmo) + '<span class="sr-only"> (opens in a new tab)</span></a>';
+            });
+        }
 
         /* ---- retreats (from jessica-retreats.json) ---- */
         const CAL_EVENTS_URL = 'https://cal.com/' + SITE.calLink.split('/')[0] + '/events';
