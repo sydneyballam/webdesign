@@ -144,7 +144,7 @@
             </ul>
         </div>
 
-        <p class="mt-6 text-center text-ink/80">Hayfork and Weaverville, California</p>
+        <div id="whereRow" class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-y-3 sm:gap-x-9 text-center"></div>
         <div class="mt-5 flex flex-col sm:flex-row gap-3">
             <button id="bookToggle" type="button" aria-expanded="false" aria-controls="book" class="scroll-mt-4 min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink bg-ink text-paper text-lg font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Book a session</button>
             <a href="#retreats" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink text-lg font-semibold px-6">See summer retreats</a>
@@ -221,7 +221,7 @@
     <footer class="max-w-xl mx-auto px-4 mt-20 pb-12">
         <div class="border-t border-ink/20 pt-8">
             <p class="font-script text-3xl">Sweet Somatics</p>
-            <p class="mt-1 text-ink/80">Hayfork and Weaverville, California</p>
+            <p id="footWhere" class="mt-1 text-ink/80"></p>
             <p class="mt-4">
                 <a href="mailto:sweetsomatics@gmail.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">sweetsomatics@gmail.com</a><br>
                 <a href="tel:+15307392395" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 739-2395</a>
@@ -249,9 +249,10 @@
             calUser: 'syd-ballam-qcjhpv',
             // Each booking link is named place-service, for example cal.com/syd-ballam-qcjhpv/hayfork-massage.
             // So every place needs one link per service. "slug" is the part used in that link name.
+            // "days" is the usual days she is there, shown on the page.
             locations: [
-                { name: 'Hayfork', slug: 'hayfork' },
-                { name: 'Weaverville', slug: 'weaverville' }
+                { name: 'Hayfork', slug: 'hayfork', days: 'Mon · Wed · Fri' },
+                { name: 'Weaverville', slug: 'weaverville', days: 'Tue · Thu' }
             ],
             services: [
                 { key: 'massage', name: 'Massage Therapy', slug: 'massage' },
@@ -373,12 +374,20 @@
         }
         function pickerButtons(items, id, onPick) {
             const box = document.getElementById(id);
-            box.innerHTML = items.map(x => '<button type="button" aria-pressed="false" class="min-h-[52px] rounded-full border-2 border-ink text-lg font-semibold px-6 aria-pressed:bg-ink aria-pressed:text-paper">' + esc(x.name) + '</button>').join('');
+            box.innerHTML = items.map(x => '<button type="button" aria-pressed="false" class="min-h-[52px] rounded-full border-2 border-ink text-lg font-semibold leading-tight px-6 py-1.5 aria-pressed:bg-ink aria-pressed:text-paper">' + esc(x.name) + (x.days ? '<span class="block text-xs font-normal italic opacity-80">' + esc(x.days) + '</span>' : '') + '</button>').join('');
             box.addEventListener('click', ev => {
                 const b = ev.target.closest('button'); if (!b) return;
                 onPick([...box.children].indexOf(b));
             });
         }
+        /* ---- where she is, and on which days ---- */
+        (function () {
+            const place = p => '<p><span class="block text-sm font-semibold uppercase tracking-[0.2em]">' + esc(p.name) + '</span>' +
+                (p.days ? '<span class="block italic text-ink/80">' + esc(p.days) + '</span>' : '') + '</p>';
+            document.getElementById('whereRow').innerHTML = PLACES.map(place).join('<span class="block h-px w-10 bg-ink/25 sm:h-9 sm:w-px" aria-hidden="true"></span>');
+            document.getElementById('footWhere').textContent = PLACES.map(p => p.name + (p.days ? ': ' + p.days.replace(/ · /g, ', ') : '')).join(' · ');
+        })();
+
         pickerButtons(SERVICES, 'svcButtons', i => { svcIdx = i; refreshBooking(); });
         if (PLACES.length > 1) pickerButtons(PLACES, 'placeButtons', i => { placeIdx = i; refreshBooking(); });
         else { document.getElementById('placeLabel').hidden = true; document.getElementById('placeButtons').hidden = true; }
