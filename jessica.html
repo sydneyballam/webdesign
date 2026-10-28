@@ -163,6 +163,12 @@
                         <p id="pickHint" role="status" class="mt-4 text-sm text-ink/80"></p>
                     </div>
                     <div id="calEmbeds" class="mt-6 rounded-2xl overflow-hidden"></div>
+                    <div id="shareCard" class="hidden mt-6 rounded-2xl bg-sage/40 p-5" role="status">
+                        <p id="shareTitle" class="text-xl font-semibold"></p>
+                        <p class="mt-1 text-ink/80">Check your email for the confirmation and a calendar invite. Know someone who would enjoy this? Pass it on.</p>
+                        <div id="shareButtons" class="mt-4 flex flex-wrap gap-3"></div>
+                        <p id="shareNote" role="status" class="empty:hidden mt-3 text-sm text-ink/80"></p>
+                    </div>
                     <p class="mt-3 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
                     <p class="mt-1 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
                 </div>
@@ -242,6 +248,23 @@
                 { key: 'sound',   name: 'Sound Healing',   slug: 'sound-healing' },
                 { key: 'yoga',    name: 'Yoga',            slug: 'yoga' }
             ],
+            // Colors inside the booking box, as they should look on the page. Names are Cal.com's own (all but "spacing", which is left at its default).
+            calColors: {
+                "cal-brand": "#5B2A2E", "cal-brand-emphasis": "#451E22", "cal-brand-text": "#FBEEE3",
+                "cal-brand-subtle": "#EDB9A8", "cal-brand-accent": "#FBEEE3",
+                "cal-text": "#5B2A2E", "cal-text-emphasis": "#5B2A2E", "cal-text-subtle": "#7A4A4E",
+                "cal-text-muted": "#B08F8F", "cal-text-inverted": "#FBEEE3",
+                "cal-text-semantic-info": "#3F5A6B", "cal-text-semantic-attention": "#8A5A12", "cal-text-semantic-error": "#9B2C2C",
+                "cal-text-info": "#3F5A6B", "cal-text-success": "#3F6B4A", "cal-text-attention": "#8A5A12", "cal-text-error": "#9B2C2C",
+                "cal-bg": "#FBEEE3", "cal-bg-emphasis": "#F1D3C6", "cal-bg-subtle": "#F6E0D3", "cal-bg-muted": "#F6E0D3",
+                "cal-bg-inverted": "#5B2A2E", "cal-bg-attention": "#F6E3B8", "cal-bg-error": "#F3C9C4",
+                "cal-bg-semantic-info-subtle": "#DDE5D8", "cal-bg-semantic-attention-subtle": "#F6E3B8", "cal-bg-semantic-error-subtle": "#F3C9C4",
+                "cal-border": "#E2C9BD", "cal-border-emphasis": "#5B2A2E", "cal-border-subtle": "#E9D5CA", "cal-border-muted": "#EFDFD5",
+                "cal-border-error": "#9B2C2C", "cal-border-semantic-error": "#9B2C2C",
+                "cal-border-semantic-attention-subtle": "#E2C98F", "cal-border-semantic-error-subtle": "#E8B4AD",
+                "cal-border-booker": "#FBEEE3", "cal-border-booker-width": "0px",
+                "radius": "1rem"
+            },
             // Her Venmo username, without the @. While empty, the page says Venmo is accepted but shows no link.
             venmo: '',
             // While this is empty, the newsletter form shows a mockup notice instead.
@@ -288,6 +311,19 @@
 
         (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 
+        // Cal.com paints some boxes plain white that its color settings cannot reach. Blending the calendar
+        // into the page ("multiply") turns every white area into the page's cream. Cal's colors are
+        // pre-adjusted below so everything else still comes out as listed in SITE.calColors.
+        const PAGE_RGB = [251, 238, 227];
+        function onPage(hex) {
+            const m = /^#([0-9a-f]{6})$/i.exec(hex);
+            if (!m) return hex;
+            const v = [0, 2, 4].map((i, k) => Math.min(255, Math.round(parseInt(m[1].substr(i, 2), 16) * 255 / PAGE_RGB[k])));
+            return '#' + v.map(n => n.toString(16).padStart(2, '0')).join('');
+        }
+        const calVars = {};
+        Object.keys(SITE.calColors).forEach(k => { calVars[k] = onPage(SITE.calColors[k]); });
+
         const calStarted = {};
         const embeds = document.getElementById('calEmbeds');
         function startCal(si, pi) {
@@ -295,10 +331,11 @@
             if (!calStarted[id]) {
                 calStarted[id] = true;
                 const d = document.createElement('div');
-                d.id = 'calEmbed-' + id; d.dataset.embed = id; d.className = 'w-full min-h-[560px]';
+                d.id = 'calEmbed-' + id; d.dataset.embed = id; d.className = 'w-full min-h-[560px] mix-blend-multiply';
                 embeds.appendChild(d);
                 const link = linkFor(si, pi), ns = link.split('/').pop();
                 Cal("init", ns, { origin: "https://app.cal.com" });
+                Cal.ns[ns]("on", { action: "bookingSuccessfulV2", callback: e => onBooked(e && e.detail && e.detail.data) });
                 Cal.ns[ns]("inline", {
                     elementOrSelector: "#calEmbed-" + id,
                     config: { layout: "month_view", theme: "light" },
@@ -308,7 +345,7 @@
                     theme: "light",
                     hideEventTypeDetails: false,
                     layout: "month_view",
-                    cssVarsPerTheme: { light: SITE.calColors }
+                    cssVarsPerTheme: { light: calVars }
                 });
             }
             embeds.querySelectorAll('[data-embed]').forEach(d => { d.hidden = d.dataset.embed !== id; });
@@ -317,6 +354,7 @@
             document.querySelectorAll('#svcButtons button').forEach((b, i) => b.setAttribute('aria-pressed', String(i === svcIdx)));
             document.querySelectorAll('#placeButtons button').forEach((b, i) => b.setAttribute('aria-pressed', String(i === placeIdx)));
             setFallbackLink();
+            document.getElementById('shareCard').classList.add('hidden');
             const ready = svcIdx >= 0 && placeIdx >= 0;
             document.getElementById('pickHint').textContent = ready ? '' :
                 (svcIdx < 0 && placeIdx < 0 ? 'Choose a service and a place to see open times.' : svcIdx < 0 ? 'Choose a service to see open times.' : 'Choose a place to see open times.');
@@ -335,6 +373,38 @@
         if (PLACES.length > 1) pickerButtons(PLACES, 'placeButtons', i => { placeIdx = i; refreshBooking(); });
         else { document.getElementById('placeLabel').hidden = true; document.getElementById('placeButtons').hidden = true; }
         refreshBooking();
+
+        /* ---- after someone books: a thank-you with easy sharing (shares the site, never the booking) ---- */
+        const shareCard = document.getElementById('shareCard');
+        const SHARE_URL = location.origin + location.pathname;
+        const SHARE_TEXT = 'I just booked with Sweet Somatics in Hayfork and Weaverville.';
+        const shareBtn = 'min-h-[48px] inline-flex items-center rounded-full border-2 border-ink text-base font-semibold px-5';
+        function shareLinks() {
+            const u = encodeURIComponent(SHARE_URL), t = encodeURIComponent(SHARE_TEXT);
+            let h = '';
+            if (navigator.share) h += '<button type="button" data-share="native" class="' + shareBtn + '">Share</button>';
+            h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=' + u + '">Facebook<span class="sr-only"> (opens in a new tab)</span></a>';
+            h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://wa.me/?text=' + t + '%20' + u + '">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>';
+            h += '<a class="' + shareBtn + '" href="mailto:?subject=' + encodeURIComponent('Sweet Somatics') + '&body=' + t + '%20' + u + '">Email</a>';
+            h += '<button type="button" data-share="copy" class="' + shareBtn + '">Copy link</button>';
+            return h;
+        }
+        document.getElementById('shareButtons').innerHTML = shareLinks();
+        document.getElementById('shareButtons').addEventListener('click', function (ev) {
+            const b = ev.target.closest('button[data-share]'); if (!b) return;
+            const note = document.getElementById('shareNote');
+            if (b.dataset.share === 'native') {
+                navigator.share({ title: 'Sweet Somatics', text: SHARE_TEXT, url: SHARE_URL }).catch(function () {});
+            } else if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(SHARE_URL).then(function () { note.textContent = 'Link copied.'; }, function () { note.textContent = SHARE_URL; });
+            } else { note.textContent = SHARE_URL; }
+        });
+        function onBooked(data) {
+            const pending = data && data.status && String(data.status).toLowerCase() !== 'accepted';
+            document.getElementById('shareTitle').textContent = pending ? 'Thank you. Your request is in.' : 'You are booked. See you soon.';
+            shareCard.classList.remove('hidden');
+            shareCard.scrollIntoView({ behavior: window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
+        }
 
         const bookToggle = document.getElementById('bookToggle');
         const bookPanel = document.getElementById('book');
