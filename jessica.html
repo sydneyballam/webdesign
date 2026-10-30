@@ -195,7 +195,7 @@
             <ul class="mt-2 space-y-1 text-ink/80">
                 <li>Florida College of Natural Health, over 700 hours of massage therapy training</li>
                 <li>NCTMB, 2007</li>
-                <li>Certified by the California Massage Therapy Council, certificate number 74029</li>
+                <li>Certified by the California Massage Therapy Council, <a href="https://www.camtc.org/record-search?certificateNumber=74029&amp;work=&amp;lastName=&amp;firstName=" target="_blank" rel="noopener" class="underline underline-offset-4">certificate number 74029<span class="sr-only"> (opens her CAMTC record in a new tab)</span></a></li>
                 <li>Further training in Thai Yoga massage adapted for the table, myofascial release and reflexology</li>
             </ul>
             </div>
@@ -214,7 +214,6 @@
             <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
             <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
             <p id="eventEmpty" class="hidden mt-6 text-ink/80"></p>
-            <p class="mt-6 text-sm text-ink/80"><a id="retreatsLink" class="underline underline-offset-4" href="#" target="_blank" rel="noopener">See all retreats on Cal.com<span class="sr-only"> (opens in a new tab)</span></a></p>
             <details id="pastWrap" class="hidden mt-8">
                 <summary class="min-h-[44px] inline-flex items-center cursor-pointer underline underline-offset-4 decoration-ink/30">Past retreats</summary>
                 <ul id="pastList" class="mt-2 text-ink/80"></ul>
@@ -532,8 +531,6 @@
         }
 
         /* ---- retreats (from jessica-retreats.json) ---- */
-        const CAL_EVENTS_URL = 'https://cal.com/' + SITE.calUser + '/events';
-        document.getElementById('retreatsLink').href = CAL_EVENTS_URL;
 
         function spotsText(e) {
             if (e.soldOut) return 'Sold out';
@@ -568,7 +565,9 @@
             if (!upcoming.length) empty.textContent = 'Retreats are small, with room for 10 people, and dates are announced once a year. Join the email list below to hear first when new dates are posted.';
             document.getElementById('pastList').innerHTML = old.map(e => {
                 const label = fmtMonthYear.format(new Date(e.start)) + ': ' + e.title, ph = e.photos || [];
-                return '<li class="py-3">' + esc(label) +
+                return '<li class="py-4 border-b border-ink/15"><p class="text-lg font-semibold text-ink">' + esc(label) + '</p>' +
+                    (e.place ? '<p class="mt-1 text-sm"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i>' + esc(e.place) + '</p>' : '') +
+                    (e.description ? '<p class="mt-1">' + esc(e.description) + '</p>' : '') +
                     (ph.length ? '<ul class="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">' + ph.map((p, i) =>
                         '<li><button type="button" data-photo="' + esc(p.src) + '" class="block w-full rounded-lg overflow-hidden" aria-label="View photo ' + (i + 1) + ' of ' + ph.length + ' from ' + esc(e.title) + '">' +
                         '<img src="' + esc(p.thumb) + '" alt="Photo from ' + esc(e.title) + '" loading="lazy" class="w-full aspect-[4/3] object-cover"></button></li>').join('') + '</ul>' : '') + '</li>';
@@ -589,7 +588,7 @@
         function retreatsUnavailable() {
             const empty = document.getElementById('eventEmpty');
             empty.classList.remove('hidden');
-            empty.innerHTML = 'Retreat dates are not loading right now. <a class="underline underline-offset-4" href="' + esc(CAL_EVENTS_URL) + '" target="_blank" rel="noopener">See them on Cal.com</a>.';
+            empty.textContent = 'Retreat dates are not loading right now. Please check back soon.';
         }
         fetch(RETREATS_FILE, { cache: 'no-cache' })
             .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })

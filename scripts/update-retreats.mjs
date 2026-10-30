@@ -29,19 +29,24 @@ export function keyOf(e) {
     const name = String(e.slug || e.title || 'retreat').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
     return day + '-' + name;
 }
-export function build({ upcoming, past, now = new Date(), photosFor = () => [] }) {
+export function build({ upcoming, past, now = new Date(), photosFor = () => [], previous = {} }) {
     const retreats = upcoming.filter(isShown).filter(e => new Date(e.endTime) > now).map(e => {
         const capacity = Number(e.capacity) > 0 ? Number(e.capacity) : DEFAULT_CAPACITY;
         const taken = Number(e.confirmedCount || 0);
         const left = Math.max(0, capacity - taken);
         return {
-            title: e.title, description: e.description || '', slug: e.slug, url: 'https://cal.com/' + e.slug,
+            key: keyOf(e), title: e.title, description: e.description || '', slug: e.slug, url: 'https://cal.com/' + e.slug,
             place: placeOf(e), start: new Date(e.startTime).toISOString(), end: new Date(e.endTime).toISOString(),
             capacity, left, soldOut: left === 0, photos: photosFor(keyOf(e))
         };
     }).sort((a, b) => a.start.localeCompare(b.start));
-    const archive = past.filter(isShown).map(e => ({ title: e.title, start: new Date(e.startTime).toISOString(), end: new Date(e.endTime).toISOString(), photos: photosFor(keyOf(e)) }))
-        .sort((a, b) => b.start.localeCompare(a.start));
+    const entry = e => ({ key: keyOf(e), slug: e.slug, title: e.title, description: e.description || '', place: placeOf(e),
+        start: new Date(e.startTime).toISOString(), end: new Date(e.endTime).toISOString(), photos: photosFor(keyOf(e)) });
+    const byKey = new Map(past.filter(isShown).map(e => [keyOf(e), entry(e)]));
+    // Keep what we already saved, so a retreat stays on the site even if it is later removed from Cal.com.
+    const remembered = (previous.archive || []).concat((previous.retreats || []).filter(r => new Date(r.end) <= now));
+    for (const r of remembered) if (r.key && !byKey.has(r.key)) byKey.set(r.key, { ...r, photos: photosFor(r.key) });
+    const archive = [...byKey.values()].sort((a, b) => b.start.localeCompare(a.start));
     return { retreats, archive };
 }
 
@@ -135,7 +140,9 @@ async function main() {
     const shown = upcoming.concat(past).filter(isShown);
     ensureFolders(shown);
     await processPhotos();
-    const data = build({ upcoming, past, now, photosFor: listPhotos });
+    let previous = {};
+    try { previous = JSON.parse(readFileSync('jessica-retreats.json', 'utf8')); } catch { /* first run */ }
+    const data = build({ upcoming, past, now, photosFor: listPhotos, previous });
     writeFileSync('jessica-retreats.json', JSON.stringify({ updated: now.toISOString(), ...data }, null, 2) + '\n');
     console.log(`Wrote ${data.retreats.length} upcoming and ${data.archive.length} past retreats.`);
 }
