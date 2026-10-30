@@ -32,6 +32,11 @@
     <style>
         body { font-family: 'Playfair Display', Georgia, serif; }
         :focus-visible { outline: 3px solid #5B2A2E; outline-offset: 2px; }
+        /* Body text is fully justified, and words are never split with hyphens. */
+        #about p, #about dd, #about li, #retreats p, #thanks p {
+            text-align: justify; text-justify: inter-word;
+            hyphens: none; -webkit-hyphens: none;
+        }
 
         /* The booking panel grows from nothing to its full height. While closed it is hidden from keyboards and screen readers. */
         .book-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
@@ -219,7 +224,7 @@
         </div>
         <!-- RETREATS -->
         <section id="retreats" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
-            <img src="images/sunlit-hand.jpg" width="1200" height="456" alt="" loading="lazy" class="mb-6 block w-full h-auto rounded-2xl">
+            <img src="images/jessica-sunset.jpg" width="1000" height="1499" alt="Jessica with her eyes closed and one arm raised, holding dried wildflowers in golden sunset light" loading="lazy" class="mb-6 block w-full h-auto rounded-2xl">
             <h2 class="text-3xl font-semibold">Summer retreats</h2>
             <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
             <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
