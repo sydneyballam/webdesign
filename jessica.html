@@ -159,6 +159,7 @@
                         <p id="placeLabel" class="mt-5 text-ink/80">Where would you like to book?</p>
                         <div id="placeButtons" role="group" aria-labelledby="placeLabel" class="mt-2 flex flex-wrap gap-3"></div>
                     </div>
+                    <p class="mt-5 text-ink/80">Like to pay ahead? <a data-pay-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Pay here with Venmo<span class="sr-only"> (opens in a new tab)</span></a>. You can also pay when we meet.</p>
                     <div id="calEmbeds" class="mt-6 rounded-2xl overflow-hidden"></div>
                     <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a data-booking-link href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
                     </div>
@@ -166,7 +167,9 @@
                         <h2 class="text-3xl font-semibold">Thank you!</h2>
                         <p id="thanksLine" class="mt-2 text-xl"></p>
                         <p class="mt-3 text-ink/80">A confirmation and calendar invite are on their way to your email. If you do not see them in a few minutes, check your spam folder.</p>
-                        <p class="mt-6 text-ink/80">Know someone who would enjoy this? Pass it on.</p>
+                        <p class="mt-6 text-lg">Like to pay ahead? It is optional, and Venmo is the easiest way.</p>
+                        <p class="mt-3"><a data-pay href="#" target="_blank" rel="noopener" class="min-h-[48px] inline-flex items-center gap-2 rounded-full bg-ink text-paper text-base font-semibold px-6"><i class="fa-solid fa-wallet" aria-hidden="true"></i>Pay here with Venmo<span class="sr-only"> (opens in a new tab)</span></a></p>
+                        <p class="mt-8 text-ink/80">Know someone who would enjoy this? Pass it on.</p>
                         <div id="thanksShare" class="mt-3 flex flex-wrap gap-3"></div>
                         <p id="thanksNote" role="status" class="empty:hidden mt-3 text-sm text-ink/80"></p>
                         <button id="bookAnother" type="button" class="mt-6 min-h-[48px] inline-flex items-center rounded-full border-2 border-ink text-base font-semibold px-5">Book another session</button>
@@ -194,7 +197,7 @@
             <h3 class="mt-8 text-xl font-semibold">Training</h3>
             <ul class="mt-2 space-y-1 text-ink/80">
                 <li>Florida College of Natural Health, over 700 hours of massage therapy training</li>
-                <li>NCTMB, 2007</li>
+                <li>Nationally Certified in Therapeutic Massage and Bodywork (NCTMB), 2007</li>
                 <li>Certified by the California Massage Therapy Council, <a href="https://www.camtc.org/record-search?certificateNumber=74029&amp;work=&amp;lastName=&amp;firstName=" target="_blank" rel="noopener" class="underline underline-offset-4">certificate number 74029<span class="sr-only"> (opens her CAMTC record in a new tab)</span></a></li>
                 <li>Further training in Thai Yoga massage adapted for the table, myofascial release and reflexology</li>
             </ul>
@@ -210,7 +213,7 @@
         <section id="retreats" class="lg:grid lg:grid-cols-[18rem_1fr] lg:gap-x-14 max-w-xl lg:max-w-5xl mx-auto px-4 mt-8 scroll-mt-4">
             <img src="images/jessica-sunset.jpg" width="1000" height="1499" alt="Jessica with her eyes closed and one arm raised, holding dried wildflowers in golden sunset light" loading="lazy" class="mb-6 lg:mb-0 block w-full max-w-md mx-auto lg:max-w-none h-auto rounded-2xl">
             <div class="lg:max-w-2xl">
-            <h2 class="text-3xl font-semibold">Summer retreats</h2>
+            <h2 class="text-3xl font-semibold">Summer Retreats</h2>
             <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
             <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
             <p id="eventEmpty" class="hidden mt-6 text-ink/80"></p>
@@ -258,7 +261,8 @@
                 <a href="mailto:sweetsomatics@gmail.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">sweetsomatics@gmail.com</a><br>
                 <a href="tel:+15307392395" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 739-2395</a>
             </p>
-            <p class="mt-2 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
+            <p class="mt-4"><a data-pay href="#" target="_blank" rel="noopener" class="min-h-[48px] inline-flex items-center gap-2 rounded-full bg-ink text-paper text-base font-semibold px-6"><i class="fa-solid fa-wallet" aria-hidden="true"></i>Pay here with Venmo<span class="sr-only"> (opens in a new tab)</span></a></p>
+            <p class="mt-1 text-sm text-ink/80">For sessions and retreats. Pay ahead or when we meet.</p>
             </div>
             <div>
             <div id="followRow" class="hidden mt-6">
@@ -420,7 +424,7 @@
             const place = p => '<p><span class="block text-sm font-semibold uppercase tracking-[0.2em]">' + esc(p.name) + '</span>' +
                 (p.days ? '<span class="block italic text-ink/80">' + esc(p.days) + '</span>' : '') + '</p>';
             document.getElementById('whereRow').innerHTML = PLACES.map(place).join('<span class="block h-px w-10 bg-ink/25 sm:h-9 sm:w-px" aria-hidden="true"></span>');
-            document.getElementById('footWhere').textContent = PLACES.map(p => p.name + (p.days ? ': ' + p.days.replace(/ · /g, ', ') : '')).join(' · ');
+            document.getElementById('footWhere').innerHTML = PLACES.map(p => '<span class="block">' + esc(p.name + (p.days ? ': ' + p.days.replace(/ · /g, ', ') : '')) + '</span>').join('');
         })();
 
         pickerButtons(SERVICES, 'svcButtons', i => { svcIdx = i; refreshBooking(); });
@@ -442,6 +446,7 @@
             if (navigator.share) h += '<button type="button" data-share="native" data-text="' + esc(text) + '" class="' + shareBtn + '"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i>Share</button>';
             h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=' + u + '"><i class="fa-brands fa-facebook" aria-hidden="true"></i>Facebook<span class="sr-only"> (opens in a new tab)</span></a>';
             h += '<a class="' + shareBtn + '" target="_blank" rel="noopener" href="https://x.com/intent/post?text=' + t + '&url=' + u + '"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i>X<span class="sr-only"> (opens in a new tab)</span></a>';
+            h += '<button type="button" data-share="instagram" data-text="' + esc(text) + '" class="' + shareBtn + '"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</button>';
             h += '<button type="button" data-share="copy" class="' + shareBtn + '"><i class="fa-regular fa-copy" aria-hidden="true"></i>Copy link</button>';
             return h;
         }
@@ -449,10 +454,10 @@
             document.getElementById(boxId).addEventListener('click', function (ev) {
                 const b = ev.target.closest('button[data-share]'); if (!b) return;
                 const note = document.getElementById(noteId);
-                if (b.dataset.share === 'native') {
+                if (b.dataset.share === 'native' || (b.dataset.share === 'instagram' && navigator.share)) {
                     navigator.share({ title: 'Sweet Somatics', text: b.dataset.text, url: SHARE_URL }).catch(function () {});
                 } else if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(SHARE_URL).then(function () { note.textContent = 'Link copied. Paste it into Instagram or anywhere else.'; }, function () { note.textContent = SHARE_URL; });
+                    navigator.clipboard.writeText(SHARE_URL).then(function () { note.textContent = b.dataset.share === 'instagram' ? 'Link copied. Open Instagram and paste it into a post, story or message.' : 'Link copied. Paste it anywhere you like.'; }, function () { note.textContent = SHARE_URL; });
                 } else { note.textContent = SHARE_URL; }
             });
         }
@@ -523,12 +528,11 @@
             showThanks({ placeIdx: pi, start: q.get('startTime') });
         })();
 
-        /* ---- Venmo: optional, shown quietly. Becomes a link once her username is set. ---- */
-        if (SITE.venmo) {
-            document.querySelectorAll('[data-venmo]').forEach(function (el) {
-                el.innerHTML = '<a href="https://venmo.com/u/' + encodeURIComponent(SITE.venmo) + '" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Venmo @' + esc(SITE.venmo) + '<span class="sr-only"> (opens in a new tab)</span></a>';
-            });
-        }
+        /* ---- Venmo: every "pay here" link points at her Venmo profile ---- */
+        document.querySelectorAll('[data-pay], [data-pay-link]').forEach(function (el) {
+            if (SITE.venmo) el.href = 'https://venmo.com/u/' + encodeURIComponent(SITE.venmo);
+            else el.hidden = true;
+        });
 
         /* ---- retreats (from jessica-retreats.json) ---- */
 
