@@ -12,7 +12,7 @@ const VERSION = '2026-05-01';
 const DEFAULT_CAPACITY = 10;   // used only if an event has no capacity set in Cal.com
 const PHOTO_ROOT = 'retreat-photos';   // one folder per retreat inside this folder; Jessica drops photos in
 const FULL_PX = 1600, THUMB_PX = 480;
-const IMAGE_EXT = /\.(jpe?g|png|webp)$/i;
+const IMAGE_EXT = /\.(jpe?g|jfif|jpe|png|webp)$/i;   // .jfif is what Windows saves for some JPEGs
 
 /* ---------- pure logic (tested separately) ---------- */
 
@@ -60,7 +60,7 @@ Drop this retreat's photos into this folder and they appear on the website under
 2. Drag in your photos (or choose them from your phone or computer).
 3. Click **Commit changes**.
 
-Big photos are fine. They are shrunk automatically, and location details are removed. JPG and PNG work. Delete a photo here to remove it from the site.
+Big photos are fine. They are shrunk automatically, and location details are removed. JPG, PNG and WebP work. Delete a photo here to remove it from the site.
 `;
 
 // Makes a folder (with a how-to note) for every retreat that is on Cal.com. Returns the folder names.

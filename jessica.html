@@ -537,6 +537,12 @@
             if (!e.capacity) return '';
             return e.left === 1 ? '1 spot left of ' + e.capacity : e.left + ' spots left of ' + e.capacity;
         }
+        function photoGrid(e) {
+            const ph = e.photos || [];
+            return ph.length ? '<ul class="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">' + ph.map((p, i) =>
+                '<li><button type="button" data-photo="' + esc(p.src) + '" class="block w-full rounded-lg overflow-hidden" aria-label="View photo ' + (i + 1) + ' of ' + ph.length + ' from ' + esc(e.title) + '">' +
+                '<img src="' + esc(p.thumb) + '" alt="Photo from ' + esc(e.title) + '" loading="lazy" class="w-full aspect-[4/3] object-cover"></button></li>').join('') + '</ul>' : '';
+        }
         function retreatItem(e) {
             const sold = e.soldOut, tm = timeText(e);
             return '<li class="py-7 border-b border-ink/20">' +
@@ -548,8 +554,11 @@
                 '<p class="mt-3 inline-block rounded-full px-3 py-1 text-sm font-semibold ' + (sold ? 'bg-ink text-paper' : 'bg-sage/60') + '">' + esc(spotsText(e)) + '</p>' +
                 '<div class="mt-4">' + (sold
                     ? '<a href="#news" class="min-h-[52px] inline-flex items-center rounded-full border-2 border-ink/50 text-lg font-semibold px-6 text-ink/80">Get notified when spots open</a>'
-                    : '<a href="' + esc(e.url) + '" target="_blank" rel="noopener" class="min-h-[52px] inline-flex items-center rounded-full border-2 border-ink text-lg font-semibold px-6">Reserve a spot<span class="sr-only"> for ' + esc(e.title) + ', opens in a new tab</span></a>') +
+                    : '<button type="button" data-reserve="' + esc(e.slug) + '" aria-expanded="false" class="min-h-[52px] inline-flex items-center rounded-full border-2 border-ink bg-ink text-paper text-lg font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Reserve a spot<span class="sr-only"> for ' + esc(e.title) + '</span></button>') +
                 '</div>' +
+                (sold ? '' : '<div data-reserve-panel="' + esc(e.slug) + '" hidden class="mt-5"><div data-reserve-embed class="rounded-2xl overflow-hidden mix-blend-multiply min-h-[560px]"></div>' +
+                    '<p class="mt-3 text-sm text-ink/80">Calendar not showing? <a href="' + esc(e.url) + '" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p></div>') +
+                photoGrid(e) +
             '</li>';
         }
         function showRetreats(data) {
@@ -568,15 +577,32 @@
                 return '<li class="py-4 border-b border-ink/15"><p class="text-lg font-semibold text-ink">' + esc(label) + '</p>' +
                     (e.place ? '<p class="mt-1 text-sm"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i>' + esc(e.place) + '</p>' : '') +
                     (e.description ? '<p class="mt-1">' + esc(e.description) + '</p>' : '') +
-                    (ph.length ? '<ul class="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">' + ph.map((p, i) =>
-                        '<li><button type="button" data-photo="' + esc(p.src) + '" class="block w-full rounded-lg overflow-hidden" aria-label="View photo ' + (i + 1) + ' of ' + ph.length + ' from ' + esc(e.title) + '">' +
-                        '<img src="' + esc(p.thumb) + '" alt="Photo from ' + esc(e.title) + '" loading="lazy" class="w-full aspect-[4/3] object-cover"></button></li>').join('') + '</ul>' : '') + '</li>';
+                    photoGrid(e) + '</li>';
             }).join('');
             document.getElementById('pastWrap').classList.toggle('hidden', !old.length);
         }
+        /* ---- "Reserve a spot" opens the Cal.com booking calendar right here ---- */
+        document.getElementById('eventList').addEventListener('click', function (ev) {
+            const btn = ev.target.closest('[data-reserve]');
+            if (!btn) return;
+            const slug = btn.getAttribute('data-reserve');
+            const panel = btn.closest('li').querySelector('[data-reserve-panel]');
+            const open = panel.hidden;
+            panel.hidden = !open;
+            btn.setAttribute('aria-expanded', String(open));
+            const host = panel.querySelector('[data-reserve-embed]');
+            if (open && !host.dataset.started) {
+                host.dataset.started = '1';
+                const ns = 'retreat-' + slug;
+                Cal("init", ns, { origin: "https://app.cal.com" });
+                Cal.ns[ns]("inline", { elementOrSelector: host, config: { layout: "month_view", theme: "light" }, calLink: slug });
+                Cal.ns[ns]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: calVars } });
+            }
+        });
+
         (function () {
             const box = document.getElementById('lightbox'), img = document.getElementById('lightboxImg');
-            document.getElementById('pastList').addEventListener('click', function (ev) {
+            document.getElementById('retreats').addEventListener('click', function (ev) {
                 const b = ev.target.closest('[data-photo]');
                 if (!b || !box.showModal) return;
                 img.src = b.getAttribute('data-photo'); img.alt = b.querySelector('img').alt;
