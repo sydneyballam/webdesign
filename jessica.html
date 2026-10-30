@@ -32,10 +32,11 @@
     <style>
         body { font-family: 'Playfair Display', Georgia, serif; }
         :focus-visible { outline: 3px solid #5B2A2E; outline-offset: 2px; }
-        /* Body text is fully justified, and words are never split with hyphens. */
-        #about p, #about dd, #about li, #retreats p, #thanks p {
-            text-align: justify; text-justify: inter-word;
-            hyphens: none; -webkit-hyphens: none;
+        /* On tablets and computers, body text is fully justified. Phones stay left-aligned, where narrow
+           columns would leave wide gaps. Words are never split with hyphens. */
+        #about p, #about dd, #about li, #retreats p, #thanks p { hyphens: none; -webkit-hyphens: none; }
+        @media (min-width: 640px) {
+            #about p, #about dd, #about li, #retreats p, #thanks p { text-align: justify; text-justify: inter-word; }
         }
 
         /* The booking panel grows from nothing to its full height. While closed it is hidden from keyboards and screen readers. */
