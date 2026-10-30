@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T05:43:26.261Z",
+  "updated": "2026-10-30T08:43:37.703Z",
   "retreats": [
     {
       "key": "2026-11-04-jessica-s-faux-retreat",
@@ -13,7 +13,24 @@
       "capacity": 10,
       "left": 10,
       "soldOut": false,
-      "photos": []
+      "photos": [
+        {
+          "src": "retreat-photos/2026-11-04-jessica-s-faux-retreat/6da16529-e182-4a6b-804b-1ef7e83bf2f7.jpg",
+          "thumb": "retreat-photos/2026-11-04-jessica-s-faux-retreat/thumbs/6da16529-e182-4a6b-804b-1ef7e83bf2f7.jpg"
+        },
+        {
+          "src": "retreat-photos/2026-11-04-jessica-s-faux-retreat/78070fda-0020-468f-9dce-65651d11e866.jpg",
+          "thumb": "retreat-photos/2026-11-04-jessica-s-faux-retreat/thumbs/78070fda-0020-468f-9dce-65651d11e866.jpg"
+        },
+        {
+          "src": "retreat-photos/2026-11-04-jessica-s-faux-retreat/8d8b311f-b849-4c44-b531-5914b17a9cb6.jpg",
+          "thumb": "retreat-photos/2026-11-04-jessica-s-faux-retreat/thumbs/8d8b311f-b849-4c44-b531-5914b17a9cb6.jpg"
+        },
+        {
+          "src": "retreat-photos/2026-11-04-jessica-s-faux-retreat/e864d0d7-4b60-48c4-b024-50342044fa59.jpg",
+          "thumb": "retreat-photos/2026-11-04-jessica-s-faux-retreat/thumbs/e864d0d7-4b60-48c4-b024-50342044fa59.jpg"
+        }
+      ]
     }
   ],
   "archive": []
