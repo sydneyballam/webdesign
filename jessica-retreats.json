@@ -1,7 +1,8 @@
 {
-  "updated": "2026-10-30T03:37:22.269Z",
+  "updated": "2026-10-30T05:43:26.261Z",
   "retreats": [
     {
+      "key": "2026-11-04-jessica-s-faux-retreat",
       "title": "Jessica's faux retreat",
       "description": "Testing how Jessica might manage scheduling and seat limits.",
       "slug": "jessica-s-faux-retreat",
