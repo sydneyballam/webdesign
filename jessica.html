@@ -123,7 +123,7 @@
     </svg>
 
     <!-- HEADER -->
-    <header class="max-w-xl mx-auto px-4 pt-6">
+    <header class="max-w-xl lg:max-w-5xl mx-auto px-4 pt-6">
         <div class="relative px-6 pt-12 pb-14 text-center">
             <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
                 <rect x="8" y="10" width="384" height="180" fill="url(#gBlush)" filter="url(#wc)"/>
@@ -134,16 +134,16 @@
             <svg class="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
                 <rect x="8" y="10" width="384" height="220" fill="url(#gSage)" filter="url(#wc)"/>
             </svg>
-            <ul class="relative inline-block text-left text-2xl sm:text-3xl space-y-5">
-                <li class="flex items-start gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg><span><a href="#book" data-service="massage" aria-label="Massage Therapy: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Massage Therapy</a><span class="mt-1 block max-w-[19rem] text-base leading-snug text-ink/80">Bodywork shaped around you.</span><ul class="mt-2 max-w-[19rem] space-y-1.5 text-base leading-snug text-ink/80" aria-label="Massage styles"><li><span class="font-semibold text-ink">Deep Tissue:</span> firm pressure for the deeper layers of muscle. My specialty.</li><li><span class="font-semibold text-ink">Sports:</span> for active people: eases tension and supports recovery.</li><li><span class="font-semibold text-ink">Swedish Relaxation:</span> long, flowing strokes to calm the nervous system.</li><li><span class="font-semibold text-ink">Womb Hara:</span> gentle, focused attention on the womb and hara, for women.</li></ul></span></li>
-                <li class="flex items-start gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg><span><a href="#book" data-service="reiki" aria-label="Reiki Healing: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Reiki Healing</a><span class="mt-1 block max-w-[19rem] text-base leading-snug text-ink/80">Usui Holy Fire Reiki sessions, plus classes from Level 1 through Master.</span></span></li>
-                <li class="flex items-start gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg><span><a href="#book" data-service="sound" aria-label="Sound Healing: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Sound Healing</a><span class="mt-1 block max-w-[19rem] text-base leading-snug text-ink/80">Crystal singing bowls and tuning forks, for individuals or groups.</span></span></li>
+            <ul class="relative inline-block lg:grid lg:grid-cols-2 lg:gap-x-14 lg:gap-y-6 lg:items-start text-left text-2xl sm:text-3xl space-y-5 lg:space-y-0">
+                <li class="lg:row-span-3 flex items-start gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-massage"/></svg><span><a href="#book" data-service="massage" aria-label="Massage Therapy: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Massage Therapy</a><span class="mt-1 block max-w-[19rem] lg:max-w-sm text-base leading-snug text-ink/80">Bodywork shaped around you.</span><ul class="mt-2 max-w-[19rem] lg:max-w-sm space-y-1.5 text-base leading-snug text-ink/80" aria-label="Massage styles"><li><span class="font-semibold text-ink">Deep Tissue:</span> firm pressure for the deeper layers of muscle. My specialty.</li><li><span class="font-semibold text-ink">Sports:</span> for active people: eases tension and supports recovery.</li><li><span class="font-semibold text-ink">Swedish Relaxation:</span> long, flowing strokes to calm the nervous system.</li><li><span class="font-semibold text-ink">Womb Hara:</span> gentle, focused attention on the womb and hara, for women.</li></ul></span></li>
+                <li class="flex items-start gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-reiki"/></svg><span><a href="#book" data-service="reiki" aria-label="Reiki Healing: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Reiki Healing</a><span class="mt-1 block max-w-[19rem] lg:max-w-sm text-base leading-snug text-ink/80">Usui Holy Fire Reiki sessions, plus classes from Level 1 through Master.</span></span></li>
+                <li class="flex items-start gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-sound"/></svg><span><a href="#book" data-service="sound" aria-label="Sound Healing: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Sound Healing</a><span class="mt-1 block max-w-[19rem] lg:max-w-sm text-base leading-snug text-ink/80">Crystal singing bowls and tuning forks, for individuals or groups.</span></span></li>
                 <li class="flex items-start gap-4"><svg class="w-11 h-11 shrink-0" aria-hidden="true" focusable="false"><use href="#ic-yoga"/></svg><span><a href="#book" data-service="yoga" aria-label="Yoga: open the booking calendar" class="relative -my-2 py-2 underline decoration-ink/25 underline-offset-4 hover:decoration-ink">Yoga</a></span></li>
             </ul>
         </div>
 
         <div id="whereRow" class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-y-3 sm:gap-x-9 text-center"></div>
-        <div class="mt-5 flex flex-col sm:flex-row gap-3">
+        <div class="mt-5 flex flex-col sm:flex-row gap-3 lg:max-w-xl lg:mx-auto">
             <button id="bookToggle" type="button" aria-expanded="false" aria-controls="book" class="scroll-mt-4 min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink bg-ink text-paper text-lg font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Book a session</button>
             <a href="#retreats" class="min-h-[52px] flex-1 inline-flex items-center justify-center rounded-full border-2 border-ink text-lg font-semibold px-6">See summer retreats</a>
         </div>
@@ -178,9 +178,10 @@
 
     <main>
         <!-- ABOUT -->
-        <section id="about" class="max-w-xl mx-auto px-4 mt-16 scroll-mt-4">
-            <img src="images/jessica-portrait.jpg" width="800" height="1000" alt="Portrait of Jessica, smiling, outdoors in the late afternoon light" loading="lazy"
-                 class="mx-auto block w-64 sm:w-72 h-auto aspect-[4/5] object-cover rounded-t-full rounded-b-3xl">
+        <section id="about" class="lg:grid lg:grid-cols-[18rem_1fr] lg:gap-x-14 max-w-xl lg:max-w-5xl mx-auto px-4 mt-16 scroll-mt-4">
+            <div class="lg:sticky lg:top-8 lg:self-start"><img src="images/jessica-portrait.jpg" width="800" height="1000" alt="Portrait of Jessica, smiling, outdoors in the late afternoon light" loading="lazy"
+                 class="mx-auto lg:mx-0 block w-64 sm:w-72 h-auto aspect-[4/5] object-cover rounded-t-full rounded-b-3xl"></div>
+            <div class="lg:max-w-2xl">
             <h2 class="mt-8 text-3xl font-semibold">About Jessica</h2>
             <p class="mt-3 text-xl">I have been practicing bodywork for almost twenty years, trained and certified in multiple modalities.</p>
             <p class="mt-4 text-ink/80">Bodywork is never one-size-fits-all. Each session is crafted around you: your history, your unfolding and your specific needs. I serve not only the physical body, but the mind and the emotional landscape too.</p>
@@ -197,16 +198,18 @@
                 <li>Certified by the California Massage Therapy Council, certificate number 74029</li>
                 <li>Further training in Thai Yoga massage adapted for the table, myofascial release and reflexology</li>
             </ul>
+            </div>
         </section>
 
-        <div class="max-w-xl mx-auto px-4 mt-16" aria-hidden="true">
+        <div class="max-w-xl lg:max-w-5xl mx-auto px-4 mt-16" aria-hidden="true">
             <svg class="w-full h-5 text-ink/35" viewBox="0 0 400 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                 <path vector-effect="non-scaling-stroke" d="M0 10 Q25 -2 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10"/>
             </svg>
         </div>
         <!-- RETREATS -->
-        <section id="retreats" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
-            <img src="images/jessica-sunset.jpg" width="1000" height="1499" alt="Jessica with her eyes closed and one arm raised, holding dried wildflowers in golden sunset light" loading="lazy" class="mb-6 block w-full h-auto rounded-2xl">
+        <section id="retreats" class="lg:grid lg:grid-cols-[18rem_1fr] lg:gap-x-14 max-w-xl lg:max-w-5xl mx-auto px-4 mt-8 scroll-mt-4">
+            <img src="images/jessica-sunset.jpg" width="1000" height="1499" alt="Jessica with her eyes closed and one arm raised, holding dried wildflowers in golden sunset light" loading="lazy" class="mb-6 lg:mb-0 block w-full max-w-md mx-auto lg:max-w-none h-auto rounded-2xl">
+            <div class="lg:max-w-2xl">
             <h2 class="text-3xl font-semibold">Summer retreats</h2>
             <p class="mt-2 text-ink/80">Small gatherings in Trinity County.</p>
             <ul id="eventList" class="mt-6 border-t border-ink/20"></ul>
@@ -216,18 +219,19 @@
                 <summary class="min-h-[44px] inline-flex items-center cursor-pointer underline underline-offset-4 decoration-ink/30">Past retreats</summary>
                 <ul id="pastList" class="mt-2 text-ink/80"></ul>
             </details>
+            </div>
         </section>
 
         <!-- NEWSLETTER -->
-        <div class="max-w-xl mx-auto px-4 mt-16" aria-hidden="true">
+        <div class="max-w-xl lg:max-w-5xl mx-auto px-4 mt-16" aria-hidden="true">
             <svg class="w-full h-5 text-ink/35" viewBox="0 0 400 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                 <path vector-effect="non-scaling-stroke" d="M0 10 Q25 -2 50 10 T100 10 T150 10 T200 10 T250 10 T300 10 T350 10 T400 10"/>
             </svg>
         </div>
-        <section id="news" class="max-w-xl mx-auto px-4 mt-8 scroll-mt-4">
+        <section id="news" class="max-w-xl lg:max-w-5xl mx-auto px-4 mt-8 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Stay in the loop</h2>
             <p class="mt-2 text-ink/80">Get new retreat dates and openings by email.</p>
-            <form id="newsForm" class="mt-5" method="post">
+            <form id="newsForm" class="mt-5 lg:max-w-xl" method="post">
                 <label for="email" class="block font-semibold mb-2">Email address</label>
                 <div class="flex flex-col sm:flex-row gap-3">
                     <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
@@ -239,23 +243,29 @@
         </section>
     </main>
 
-    <footer class="max-w-xl mx-auto px-4 mt-20 pb-12">
-        <div class="border-t border-ink/20 pt-8">
+    <footer class="max-w-xl lg:max-w-5xl mx-auto px-4 mt-20 pb-12">
+        <div class="border-t border-ink/20 pt-8 lg:grid lg:grid-cols-3 lg:gap-x-12">
+            <div>
             <p class="font-script text-3xl">Sweet Somatics</p>
             <p id="footWhere" class="mt-1 text-ink/80"></p>
-            <p class="mt-4">
+            </div>
+            <div>
+            <p class="mt-4 lg:mt-0">
                 <a href="mailto:sweetsomatics@gmail.com" class="min-h-[44px] inline-flex items-center underline underline-offset-4">sweetsomatics@gmail.com</a><br>
                 <a href="tel:+15307392395" class="min-h-[44px] inline-flex items-center underline underline-offset-4">(530) 739-2395</a>
             </p>
             <p class="mt-2 text-sm text-ink/80">Paying ahead is optional. <span data-venmo>Venmo is accepted</span>.</p>
+            </div>
+            <div>
             <div id="followRow" class="hidden mt-6">
                 <p class="text-ink/80">Follow along</p>
                 <div id="followLinks" class="mt-2 flex flex-wrap gap-3"></div>
             </div>
-            <div class="mt-6">
+            <div class="mt-6 lg:mt-0">
                 <p class="text-ink/80">Share this page</p>
                 <div id="footShare" class="mt-2 flex flex-wrap gap-3"></div>
                 <p id="footShareNote" role="status" class="empty:hidden mt-3 text-sm text-ink/80"></p>
+            </div>
             </div>
         </div>
     </footer>
