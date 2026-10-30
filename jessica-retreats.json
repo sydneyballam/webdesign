@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T05:29:33.734Z",
+  "updated": "2026-10-30T03:37:22.269Z",
   "retreats": [
     {
       "title": "Jessica's faux retreat",
@@ -11,7 +11,8 @@
       "end": "2026-11-05T05:30:00.000Z",
       "capacity": 10,
       "left": 10,
-      "soldOut": false
+      "soldOut": false,
+      "photos": []
     }
   ],
   "archive": []
