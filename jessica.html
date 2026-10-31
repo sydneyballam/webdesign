@@ -285,7 +285,7 @@
 
         const SITE = {
             // Her Cal.com username, from cal.com/username/...
-            calUser: 'syd-ballam-qcjhpv',
+            calUser: 'sweetsomatics',
             // Each booking link is named place-service, for example cal.com/syd-ballam-qcjhpv/hayfork-massage.
             // So every place needs one link per service. "slug" is the part used in that link name.
             // "days" is the usual days she is there, shown on the page.
@@ -355,7 +355,12 @@
         const PLACES = SITE.locations, SERVICES = SITE.services;
         let svcIdx = -1, placeIdx = PLACES.length === 1 ? 0 : -1;
         const bookingLinks = document.querySelectorAll('[data-booking-link]');
-        const linkFor = (si, pi) => SITE.calUser + '/' + PLACES[pi].slug + '-' + SERVICES[si].slug;
+        // The Cal.com link name for each place and service (the part after her username).
+        const LINKS = {
+            hayfork:     { massage: 'massage-therapy',      reiki: 'reiki-healing',             sound: 'sound-healing',             yoga: 'yoga' },
+            weaverville: { massage: 'massage-therapy-copy', reiki: 'weaverville-reiki-healing', sound: 'weaverville-sound-healing', yoga: 'weaverville-yoga' }
+        };
+        const linkFor = (si, pi) => SITE.calUser + '/' + LINKS[PLACES[pi].slug][SERVICES[si].key];
         function setFallbackLink() {
             const l = svcIdx >= 0 && placeIdx >= 0 ? linkFor(svcIdx, placeIdx) : SITE.calUser;
             bookingLinks.forEach(a => { a.href = 'https://cal.com/' + l; });
