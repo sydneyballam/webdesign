@@ -191,7 +191,12 @@
             <p class="mt-4 text-ink/80">I attend to the stomach and core, the emotional processing center of the whole system and an area often overlooked in traditional bodywork. For women, I can give deep attention to the womb and hara. Much of my work takes place directly on the ground, supported by the living presence of Earth herself.</p>
             <p class="mt-4 text-ink/80">Alongside hands-on bodywork, I weave in sound healing, tuning forks and other subtle practices that deepen regulation and release. I also offer one-on-one sessions out in nature, and group immersions, where people heal in community.</p>
             <blockquote class="mt-6 border-l-2 border-blush pl-4 text-xl italic">To tend the physical vessel so that others may step into their truest sovereignty.</blockquote>
-            <p class="mt-6 text-ink/80">Curious whether we are a good fit? I offer a free 20-minute consultation call. <a href="mailto:sweetsomatics@gmail.com" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Email me to set one up</a>.</p>
+            <p class="mt-6 text-ink/80">Curious whether we are a good fit? I offer a free 20-minute consultation call.</p>
+            <button id="consultToggle" type="button" aria-expanded="false" aria-controls="consultPanel" class="mt-3 min-h-[48px] inline-flex items-center rounded-full border-2 border-ink bg-ink text-paper text-base font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Book a free consultation</button>
+            <div id="consultPanel" hidden class="mt-4">
+                <div id="consultEmbed" class="rounded-2xl overflow-hidden mix-blend-multiply min-h-[560px]"></div>
+                <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a id="consultLink" href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
+            </div>
 
 
             <h3 class="mt-8 text-xl font-semibold">Training</h3>
@@ -590,6 +595,24 @@
             }).join('');
             document.getElementById('pastWrap').classList.toggle('hidden', !old.length);
         }
+        /* ---- free consultation: opens its Cal.com calendar right here ---- */
+        (function () {
+            const link = SITE.calUser + '/free-consultation', btn = document.getElementById('consultToggle'), panel = document.getElementById('consultPanel');
+            document.getElementById('consultLink').href = 'https://cal.com/' + link;
+            let started = false;
+            btn.addEventListener('click', function () {
+                const open = panel.hidden;
+                panel.hidden = !open;
+                btn.setAttribute('aria-expanded', String(open));
+                if (open && !started) {
+                    started = true;
+                    Cal("init", 'consult', { origin: "https://app.cal.com" });
+                    Cal.ns['consult']("inline", { elementOrSelector: '#consultEmbed', config: { layout: "month_view", theme: "light" }, calLink: link });
+                    Cal.ns['consult']("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: calVars } });
+                }
+            });
+        })();
+
         /* ---- "Reserve a spot" opens the Cal.com booking calendar right here ---- */
         document.getElementById('eventList').addEventListener('click', function (ev) {
             const btn = ev.target.closest('[data-reserve]');
