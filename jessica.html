@@ -419,6 +419,7 @@
             }
             embeds.querySelectorAll('[data-embed]').forEach(d => { d.hidden = d.dataset.embed !== id; });
         }
+        let fillEmailBox = null;   // set below; refreshes the Redding email box if a service is picked while it is open
         function mailParts(place) {
             const svc = svcIdx >= 0 ? SERVICES[svcIdx].name + ' ' : '';
             return { subject: svc + 'booking in ' + place,
@@ -435,6 +436,7 @@
             document.querySelectorAll('[data-email-place]').forEach(function (a) {
                 a.href = mailtoFor(a.getAttribute('data-email-place'));
             });
+            if (fillEmailBox) fillEmailBox();
             const ready = svcIdx >= 0 && placeIdx >= 0;
             if (ready) startCal(svcIdx, placeIdx);
             else embeds.querySelectorAll('[data-embed]').forEach(d => { d.hidden = true; });
@@ -471,16 +473,12 @@
             // Redding: not every computer has an email program set up, so offer three ways to send the message.
             const box = document.createElement('div');
             box.id = 'emailBox'; box.hidden = true; box.setAttribute('role', 'status');
-            box.className = 'basis-full rounded-2xl border-2 border-ink/30 px-4 py-3 text-base';
-            document.getElementById('placeButtons').appendChild(box);
+            box.className = 'mt-4 rounded-2xl border-2 border-ink/30 px-4 py-3 text-base';
+            document.getElementById('placeButtons').insertAdjacentElement('afterend', box);
             const btn = 'min-h-[44px] inline-flex items-center rounded-full border-2 border-ink text-base font-semibold px-4';
-            document.getElementById('placeButtons').addEventListener('click', function (ev) {
-                const a = ev.target.closest('[data-email-place]');
-                if (!a) return;
-                const place = a.getAttribute('data-email-place'), m = mailParts(place);
-                if (!box.hidden && box.dataset.place === place) { box.hidden = true; return; }   // second tap hides it
-                ev.preventDefault();
-                box.dataset.place = place; box.hidden = false;
+            fillEmailBox = function () {
+                if (box.hidden) return;
+                const place = box.dataset.place, m = mailParts(place);
                 const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(SITE.email) + '&su=' + encodeURIComponent(m.subject) + '&body=' + encodeURIComponent(m.body);
                 box.innerHTML = '<p>To book in ' + esc(place) + ', email <span class="font-semibold">' + esc(SITE.email) + '</span></p>' +
                     '<div class="mt-2 flex flex-wrap gap-2">' +
@@ -488,6 +486,16 @@
                     '<a href="' + esc(gmail) + '" target="_blank" rel="noopener" class="' + btn + '">Open Gmail<span class="sr-only"> (opens in a new tab)</span></a>' +
                     '<button type="button" data-copy-email class="' + btn + '">Copy address</button></div>' +
                     '<p data-copy-note class="empty:hidden mt-2 text-sm text-ink/80"></p>';
+            };
+            document.getElementById('placeButtons').addEventListener('click', function (ev) {
+                if (ev.target.closest('#emailBox')) return;
+                const a = ev.target.closest('[data-email-place]');
+                if (!a) { if (ev.target.closest('button, a')) box.hidden = true; return; }   // picking another place closes the email box
+                const place = a.getAttribute('data-email-place');
+                if (!box.hidden && box.dataset.place === place) { box.hidden = true; return; }   // second tap hides it
+                ev.preventDefault();
+                box.dataset.place = place; box.hidden = false;
+                fillEmailBox();
             });
             box.addEventListener('click', function (ev) {
                 if (!ev.target.closest('[data-copy-email]')) return;
