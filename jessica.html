@@ -445,7 +445,7 @@
             const place = p => '<p><span class="block text-sm font-semibold uppercase tracking-[0.2em]">' + esc(p.name) + '</span>' +
                 (p.days ? '<span class="block italic text-ink/80">' + esc(p.days) + '</span>' : '') + '</p>';
             document.getElementById('whereRow').innerHTML = PLACES.concat(SITE.otherPlaces || []).map(place).join('<span class="hidden sm:block h-9 w-px bg-ink/25" aria-hidden="true"></span>');
-            document.getElementById('footWhere').innerHTML = PLACES.map(p => '<span class="block">' + esc(p.name + (p.days ? ': ' + p.days.replace(/ · /g, ', ') : '')) + '</span>').join('');
+            document.getElementById('footWhere').innerHTML = PLACES.concat(SITE.otherPlaces || []).map(p => '<span class="block">' + esc(p.name + (p.days ? ': ' + p.days.replace(/ · /g, ', ') : '')) + '</span>').join('');
         })();
 
         pickerButtons(SERVICES, 'svcButtons', i => { svcIdx = i; refreshBooking(); });
