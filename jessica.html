@@ -293,10 +293,10 @@
             calUser: 'sweetsomatics',
             // Each booking link is named place-service, for example cal.com/syd-ballam-qcjhpv/hayfork-massage.
             // So every place needs one link per service. "slug" is the part used in that link name.
-            // "days" is the usual days she is there, shown on the page.
+            // Optionally add days: 'Mon · Wed · Fri' to a place to show the days she is there.
             locations: [
-                { name: 'Hayfork', slug: 'hayfork', days: 'Mon · Wed · Fri' },
-                { name: 'Weaverville', slug: 'weaverville', days: 'Tue · Thu' }
+                { name: 'Hayfork', slug: 'hayfork' },
+                { name: 'Weaverville', slug: 'weaverville' }
             ],
             email: 'sweetsomatics@gmail.com',
             // Places that are not booked through Cal.com. Eureka opens its own booking page in a new tab; Redding sends her an email.
