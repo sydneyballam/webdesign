@@ -419,14 +419,21 @@
             }
             embeds.querySelectorAll('[data-embed]').forEach(d => { d.hidden = d.dataset.embed !== id; });
         }
+        function mailParts(place) {
+            const svc = svcIdx >= 0 ? SERVICES[svcIdx].name + ' ' : '';
+            return { subject: svc + 'booking in ' + place,
+                     body: 'Hi Jessica, I would like to book ' + (svc ? svc.trim() + ' ' : 'a session ') + 'in ' + place + '. Days and times that work for me: ' };
+        }
+        function mailtoFor(place) {
+            const m = mailParts(place);
+            return 'mailto:' + SITE.email + '?subject=' + encodeURIComponent(m.subject) + '&body=' + encodeURIComponent(m.body);
+        }
         function refreshBooking() {
             document.querySelectorAll('#svcButtons button').forEach((b, i) => b.setAttribute('aria-pressed', String(i === svcIdx)));
             document.querySelectorAll('#placeButtons button').forEach((b, i) => b.setAttribute('aria-pressed', String(i === placeIdx)));
             setFallbackLink();
             document.querySelectorAll('[data-email-place]').forEach(function (a) {
-                const svc = svcIdx >= 0 ? SERVICES[svcIdx].name + ' ' : '';
-                a.href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent(svc + 'booking in ' + a.getAttribute('data-email-place')) +
-                    '&body=' + encodeURIComponent('Hi Jessica, I would like to book ' + (svc ? svc.trim() + ' ' : 'a session ') + 'in ' + a.getAttribute('data-email-place') + '. Days and times that work for me: ');
+                a.href = mailtoFor(a.getAttribute('data-email-place'));
             });
             const ready = svcIdx >= 0 && placeIdx >= 0;
             if (ready) startCal(svcIdx, placeIdx);
@@ -461,6 +468,33 @@
                 const tip = x.tip ? '<span id="' + tipId + '" role="tooltip" class="pointer-events-none absolute left-0 bottom-full mb-2 z-10 w-max max-w-[14rem] rounded-lg bg-ink text-paper text-sm leading-snug px-3 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">' + esc(x.tip) + '</span>' : '';
                 return '<span class="group relative inline-block">' + link + tip + '</span>';
             }).join(''));
+            // Redding: not every computer has an email program set up, so offer three ways to send the message.
+            const box = document.createElement('div');
+            box.id = 'emailBox'; box.hidden = true; box.setAttribute('role', 'status');
+            box.className = 'basis-full rounded-2xl border-2 border-ink/30 px-4 py-3 text-base';
+            document.getElementById('placeButtons').appendChild(box);
+            const btn = 'min-h-[44px] inline-flex items-center rounded-full border-2 border-ink text-base font-semibold px-4';
+            document.getElementById('placeButtons').addEventListener('click', function (ev) {
+                const a = ev.target.closest('[data-email-place]');
+                if (!a) return;
+                const place = a.getAttribute('data-email-place'), m = mailParts(place);
+                if (!box.hidden && box.dataset.place === place) { box.hidden = true; return; }   // second tap hides it
+                ev.preventDefault();
+                box.dataset.place = place; box.hidden = false;
+                const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(SITE.email) + '&su=' + encodeURIComponent(m.subject) + '&body=' + encodeURIComponent(m.body);
+                box.innerHTML = '<p>To book in ' + esc(place) + ', email <span class="font-semibold">' + esc(SITE.email) + '</span></p>' +
+                    '<div class="mt-2 flex flex-wrap gap-2">' +
+                    '<a href="' + esc(mailtoFor(place)) + '" class="' + btn + '">Open my email app</a>' +
+                    '<a href="' + esc(gmail) + '" target="_blank" rel="noopener" class="' + btn + '">Open Gmail<span class="sr-only"> (opens in a new tab)</span></a>' +
+                    '<button type="button" data-copy-email class="' + btn + '">Copy address</button></div>' +
+                    '<p data-copy-note class="empty:hidden mt-2 text-sm text-ink/80"></p>';
+            });
+            box.addEventListener('click', function (ev) {
+                if (!ev.target.closest('[data-copy-email]')) return;
+                const note = box.querySelector('[data-copy-note]');
+                if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(SITE.email).then(function () { note.textContent = 'Copied.'; }, function () { note.textContent = SITE.email; });
+                else note.textContent = SITE.email;
+            });
         })();
         refreshBooking();
 
