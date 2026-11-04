@@ -301,8 +301,8 @@
             email: 'sweetsomatics@gmail.com',
             // Places that are not booked through Cal.com. Eureka opens its own booking page in a new tab; Redding sends her an email.
             otherPlaces: [
-                { name: 'Eureka', url: 'https://hmm.janeapp.com/locations/humboldt-mobile-massage/book#/staff_member/47/treatment/95' },
-                { name: 'Redding', email: true }
+                { name: 'Eureka', tip: 'Bookings through humboldtmobilemassage.com', url: 'https://hmm.janeapp.com/locations/humboldt-mobile-massage/book#/staff_member/47/treatment/95' },
+                { name: 'Redding', tip: 'Email me for opportunities', email: true }
             ],
             services: [
                 { key: 'massage', name: 'Massage Therapy', slug: 'massage' },
@@ -453,10 +453,13 @@
         else { document.getElementById('placeLabel').hidden = true; document.getElementById('placeButtons').hidden = true; }
         (function () {
             const cls = 'min-h-[52px] inline-flex items-center rounded-full border-2 border-ink text-lg font-semibold leading-tight px-6 py-1.5';
-            document.getElementById('placeButtons').insertAdjacentHTML('beforeend', (SITE.otherPlaces || []).map(function (x) {
-                return x.url
-                    ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener" class="' + cls + '">' + esc(x.name) + '<span class="sr-only"> (opens its own booking page in a new tab)</span></a>'
-                    : '<a data-email-place="' + esc(x.name) + '" href="#" class="' + cls + '">' + esc(x.name) + '<span class="sr-only"> (sends her an email)</span></a>';
+            document.getElementById('placeButtons').insertAdjacentHTML('beforeend', (SITE.otherPlaces || []).map(function (x, i) {
+                const tipId = 'placeTip' + i, d = x.tip ? ' aria-describedby="' + tipId + '"' : '';
+                const link = x.url
+                    ? '<a href="' + esc(x.url) + '" target="_blank" rel="noopener"' + d + ' class="' + cls + '">' + esc(x.name) + '<span class="sr-only"> (opens its own booking page in a new tab)</span></a>'
+                    : '<a data-email-place="' + esc(x.name) + '" href="#"' + d + ' class="' + cls + '">' + esc(x.name) + '<span class="sr-only"> (sends her an email)</span></a>';
+                const tip = x.tip ? '<span id="' + tipId + '" role="tooltip" class="pointer-events-none absolute left-0 bottom-full mb-2 z-10 w-max max-w-[14rem] rounded-lg bg-ink text-paper text-sm leading-snug px-3 py-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">' + esc(x.tip) + '</span>' : '';
+                return '<span class="group relative inline-block">' + link + tip + '</span>';
             }).join(''));
         })();
         refreshBooking();
