@@ -194,7 +194,7 @@
             <p class="mt-6 text-ink/80">Curious whether we are a good fit? I offer a free 20-minute consultation call.</p>
             <button id="consultToggle" type="button" aria-expanded="false" aria-controls="consultPanel" class="mt-3 min-h-[48px] inline-flex items-center rounded-full border-2 border-ink bg-ink text-paper text-base font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Book a free consultation</button>
             <div id="consultPanel" hidden class="mt-4">
-                <div id="consultEmbed" class="rounded-2xl overflow-hidden mix-blend-multiply min-h-[560px]"></div>
+                <div id="consultEmbed" class="rounded-2xl overflow-hidden min-h-[560px]"></div>
                 <p class="mt-3 text-sm text-ink/80">Calendar not showing? <a id="consultLink" href="#" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p>
             </div>
 
@@ -380,18 +380,9 @@
 
         (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
 
-        // Cal.com paints some boxes plain white that its color settings cannot reach. Blending the calendar
-        // into the page ("multiply") turns every white area into the page's cream. Cal's colors are
-        // pre-adjusted below so everything else still comes out as listed in SITE.calColors.
-        const PAGE_RGB = [251, 238, 227];
-        function onPage(hex) {
-            const m = /^#([0-9a-f]{6})$/i.exec(hex);
-            if (!m) return hex;
-            const v = [0, 2, 4].map((i, k) => Math.min(255, Math.round(parseInt(m[1].substr(i, 2), 16) * 255 / PAGE_RGB[k])));
-            return '#' + v.map(n => n.toString(16).padStart(2, '0')).join('');
-        }
+        // The calendar is drawn by Cal.com inside its own frame, in the colors listed in SITE.calColors.
         const calVars = {};
-        Object.keys(SITE.calColors).forEach(k => { calVars[k] = onPage(SITE.calColors[k]); });
+        Object.keys(SITE.calColors).forEach(k => { calVars[k] = SITE.calColors[k]; });
 
         const calStarted = {};
         const embeds = document.getElementById('calEmbeds');
@@ -400,7 +391,7 @@
             if (!calStarted[id]) {
                 calStarted[id] = true;
                 const d = document.createElement('div');
-                d.id = 'calEmbed-' + id; d.dataset.embed = id; d.className = 'w-full min-h-[560px] mix-blend-multiply';
+                d.id = 'calEmbed-' + id; d.dataset.embed = id; d.className = 'w-full min-h-[560px]';
                 embeds.appendChild(d);
                 const link = linkFor(si, pi), ns = link.split('/').pop();
                 Cal("init", ns, { origin: "https://app.cal.com" });
@@ -634,7 +625,7 @@
                     ? '<a href="#news" class="min-h-[52px] inline-flex items-center rounded-full border-2 border-ink/50 text-lg font-semibold px-6 text-ink/80">Get notified when spots open</a>'
                     : '<button type="button" data-reserve="' + esc(e.slug) + '" aria-expanded="false" class="min-h-[52px] inline-flex items-center rounded-full border-2 border-ink bg-ink text-paper text-lg font-semibold px-6 aria-expanded:bg-transparent aria-expanded:text-ink">Reserve a spot<span class="sr-only"> for ' + esc(e.title) + '</span></button>') +
                 '</div>' +
-                (sold ? '' : '<div data-reserve-panel="' + esc(e.slug) + '" hidden class="mt-5"><div data-reserve-embed class="rounded-2xl overflow-hidden mix-blend-multiply min-h-[560px]"></div>' +
+                (sold ? '' : '<div data-reserve-panel="' + esc(e.slug) + '" hidden class="mt-5"><div data-reserve-embed class="rounded-2xl overflow-hidden min-h-[560px]"></div>' +
                     '<p class="mt-3 text-sm text-ink/80">Calendar not showing? <a href="' + esc(e.url) + '" target="_blank" rel="noopener" class="underline underline-offset-4 inline-flex items-center min-h-[44px]">Open it in a new tab</a>.</p></div>') +
                 photoGrid(e) +
             '</li>';
