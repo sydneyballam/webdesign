@@ -139,7 +139,7 @@
                 blurb: 'Online booking, summer retreats, and an email signup.',
                 image: '',
                 looks: [
-                    { label: 'Booking site', url: 'jessica.html', status: 'prototype' }
+                    { label: 'Live site', url: 'https://sweetsomatics.github.io/', status: 'published' }
                 ]
             }
         ];
@@ -148,6 +148,8 @@
 
         const state = { category: 'all', client: 'all', status: 'all' };
         function statusById(id) { return STATUSES.find(s => s.id === id); }
+        // Sites on other web addresses open in a new tab so people can find their way back here.
+        function linkAttrs(u) { return /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : ''; }
         function statusBadge(id) {
             const s = statusById(id);
             return s ? '<span class="text-[11px] font-medium ' + s.badge + ' px-2.5 py-1 rounded-md">' + esc(s.label) + '</span>' : '';
@@ -242,11 +244,11 @@
             }).join('');
             const looks = shown.length > 1
                 ? '<div class="px-4 pb-4"><p class="text-xs text-gray-500 mb-2">' + shown.length + ' looks</p><div class="flex flex-wrap gap-2">' +
-                  shown.map(l => '<a href="' + esc(l.url) + '" class="min-h-[40px] inline-flex items-center gap-2 px-3 rounded-lg border border-gray-700 text-xs text-gray-200 hover:border-blue-500/60 hover:text-white transition">' + esc(l.label) + '<span class="text-[10px] uppercase tracking-wide opacity-60">' + esc((statusById(l.status) || { label: '' }).label) + '</span></a>').join('') +
+                  shown.map(l => '<a href="' + esc(l.url) + '"' + linkAttrs(l.url) + ' class="min-h-[40px] inline-flex items-center gap-2 px-3 rounded-lg border border-gray-700 text-xs text-gray-200 hover:border-blue-500/60 hover:text-white transition">' + esc(l.label) + '<span class="text-[10px] uppercase tracking-wide opacity-60">' + esc((statusById(l.status) || { label: '' }).label) + '</span></a>').join('') +
                   '</div></div>'
                 : '';
             return '<article class="bg-hubCard border border-gray-800 rounded-2xl overflow-hidden flex flex-col">' +
-                '<a href="' + esc(shown[0].url) + '" class="block group">' +
+                '<a href="' + esc(shown[0].url) + '"' + linkAttrs(shown[0].url) + ' class="block group">' +
                     '<div class="h-32 bg-gradient-to-tr from-blue-700/60 to-teal-500/50 flex items-center justify-center overflow-hidden">' + thumb + '</div>' +
                     '<div class="p-4">' +
                         '<h2 class="font-semibold text-white group-hover:text-blue-300 transition">' + esc(d.title) + '</h2>' +
