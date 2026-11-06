@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's Happening | Community Calendar</title>
+<meta name="description" content="Events in Willow Creek and nearby. Bookmark it or subscribe on your phone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#12302F;--teal:#1F5F6B;--gold:#E0A526;--bg:#F5F7F6;--line:#D5DEDC;--body:#3E5655;--mint:#E8F1EF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--deep);font-family:'Source Sans 3',system-ui,sans-serif;font-size:17px;line-height:1.5}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;margin:0}
+button,a.btn{font-family:inherit;cursor:pointer}
+a{color:var(--teal)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.hero{background:var(--deep);color:var(--bg);padding:48px 0 40px}
+.hero .eyebrow{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(36px,7vw,56px);line-height:1.05;margin:10px 0 14px}
+.hero p{margin:0;font-size:19px;color:var(--line);max-width:560px}
+.btn{min-height:48px;padding:0 22px;border-radius:10px;font-size:17px;font-weight:700;display:inline-flex;align-items:center;gap:10px;text-decoration:none;border:2px solid transparent}
+.btn.gold{background:var(--gold);color:var(--deep)}
+.btn.line{background:transparent;color:var(--bg);border-color:var(--line)}
+.btn.out{background:#fff;color:var(--teal);border-color:var(--teal);min-height:44px;padding:0 16px;font-size:16px}
+.btn:focus-visible,.chip:focus-visible,.day:focus-visible,.tab:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.sub{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:20px;display:none}
+.sub.open{display:block}
+.sub h2{font-size:20px;margin-bottom:6px}
+.sub p{margin:0 0 12px;color:var(--body);font-size:16px}
+.sub .row{display:flex;flex-wrap:wrap;gap:10px}
+.sub details{margin-top:14px}
+.sub summary{cursor:pointer;font-weight:700;color:var(--teal);min-height:44px;display:flex;align-items:center}
+.controls{padding-top:24px;padding-bottom:4px}
+.tabs{display:inline-flex;border:2px solid var(--teal);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.tab{min-height:44px;padding:0 22px;border:0;background:#fff;color:var(--teal);font-size:16px;font-weight:700}
+.tab[aria-pressed="true"]{background:var(--teal);color:#fff}
+.label{font-size:14px;font-weight:700;color:var(--body);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--teal);background:#fff;color:var(--teal);font-size:16px;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--teal);color:#fff}
+.count{margin:14px 0 0;color:var(--body);font-size:15px}
+main{padding-top:8px;padding-bottom:24px}
+.group{margin-top:28px}
+.group h2{font-size:24px;margin-bottom:14px}
+.ev{display:flex;gap:14px;margin-bottom:14px}
+.dateblock{flex:0 0 64px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 0;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.dateblock .dow{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.dateblock .num{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:700;line-height:1.1}
+.dateblock .mon{font-size:13px;font-weight:600;color:var(--body)}
+.card{flex:1 1 0;min-width:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.when{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--teal)}
+.pill{background:var(--mint);color:var(--deep);font-size:13px;font-weight:700;padding:2px 10px;border-radius:999px}
+.card h3{font-size:20px;line-height:1.25}
+.where{color:var(--body)}
+.desc{margin:2px 0 0;color:var(--body)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.empty,.err{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:22px;color:var(--body);margin-top:20px}
+/* month */
+.mhead{display:flex;align-items:center;justify-content:space-between;margin:8px 0 12px}
+.mhead h2{font-size:24px}
+.nav{width:44px;height:44px;border-radius:10px;border:2px solid var(--teal);background:#fff;color:var(--teal);display:grid;place-items:center}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.dowh{text-align:center;font-size:13px;font-weight:700;color:var(--body);padding:4px 0}
+.day{min-height:56px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--deep);padding:6px 2px;font-size:16px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:4px}
+.day.out{background:transparent;border-color:transparent;color:#7a8f8d}
+.day.today{border:2px solid var(--gold)}
+.day.sel{background:var(--teal);color:#fff;border-color:var(--teal)}
+.dots{display:flex;gap:3px;min-height:8px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.day.sel .dot{background:#fff}
+.picked{margin-top:22px}
+.picked h3{font-size:22px;margin-bottom:12px}
+/* bands */
+.band{background:var(--teal);color:var(--bg);padding:40px 0;margin-top:20px}
+.band h2{font-size:28px;margin-bottom:10px}
+.band p{margin:0 0 16px;color:var(--mint);max-width:560px;font-size:18px}
+footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Community calendar</div>
+    <h1>What's happening</h1>
+    <p>Willow Creek and nearby, all in one place. Bookmark this page, or subscribe once and new events show up on your phone's calendar.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
+      <button class="btn gold" id="subBtn" aria-expanded="false" aria-controls="subPanel">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        Subscribe on your phone
+      </button>
+      <a class="btn line hidden" id="submitTop" href="#" target="_blank" rel="noopener">Submit an event</a>
+    </div>
+    <section class="sub" id="subPanel" aria-labelledby="subTitle" style="color:var(--deep)">
+      <h2 id="subTitle">Subscribe</h2>
+      <p id="subText"></p>
+      <div class="row">
+        <a class="btn gold" id="subMain" href="#">Subscribe</a>
+      </div>
+      <details>
+        <summary>Other calendars</summary>
+        <div class="row" style="margin-top:6px">
+          <a class="btn out" id="subGoogle" href="#" target="_blank" rel="noopener">Google Calendar</a>
+          <a class="btn out" id="subOutlook" href="#" target="_blank" rel="noopener">Outlook</a>
+          <button class="btn out" id="subCopy" type="button">Copy the link</button>
+        </div>
+        <p style="margin-top:12px">Your phone checks for new events on its own, so they can take a few hours to appear.</p>
+      </details>
+    </section>
+  </div>
+</header>
+
+<div class="wrap controls">
+  <div class="tabs" role="group" aria-label="View">
+    <button class="tab" id="tabList" type="button" aria-pressed="true">List</button>
+    <button class="tab" id="tabMonth" type="button" aria-pressed="false">Month</button>
+  </div>
+  <div class="label">Show events in</div>
+  <div class="chips" id="chips" role="group" aria-label="Town"></div>
+  <p class="count" id="count" aria-live="polite"></p>
+</div>
+
+<main class="wrap" id="view"></main>
+
+<section class="band hidden" id="submitBand">
+  <div class="wrap">
+    <h2>Have an event to share?</h2>
+    <p>Businesses, clubs and neighbors are welcome to send one in. Each event is reviewed before it appears, then it shows up for everyone who subscribes.</p>
+    <a class="btn gold" id="submitBottom" href="#" target="_blank" rel="noopener">Submit an event</a>
+  </div>
+</section>
+
+<footer class="wrap" id="foot"></footer>
+
+<script>
+(function () {
+  // Where the "Submit an event" button goes. Leave empty until the Google Form exists.
+  var FORM_URL = '';
+
+  var DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var data = null, towns = [];
+  var q = new URLSearchParams(location.search);
+  var state = { town: q.get('town') || '', view: q.get('view') === 'month' ? 'month' : 'list', month: null, sel: null };
+  var today = new Date(); today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  function pd(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function key(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function addDays(d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+  function mondayOf(d) { return addDays(d, -((d.getDay() + 6) % 7)); }
+  function t12(t) {
+    if (!t) return '';
+    var h = +t.slice(0, 2), m = t.slice(3, 5), ap = h >= 12 ? 'pm' : 'am';
+    h = h % 12 || 12;
+    return h + (m === '00' ? '' : ':' + m) + ap;
+  }
+  function timeText(e) {
+    if (!e.start_time) return 'Time to be announced';
+    return t12(e.start_time) + (e.end_time ? ' to ' + t12(e.end_time) : '');
+  }
+  function whenText(e) {
+    var s = pd(e.date), en = pd(e.end_date), t = e.start_time ? timeText(e) : '';
+    var span = e.end_date !== e.date ? DOW[s.getDay()] + ' to ' + DOW[en.getDay()] : DOW[s.getDay()];
+    return span + (t ? ', ' + t : '');
+  }
+  function visible() {
+    return data.events.filter(function (e) { return !state.town || e.town === state.town; });
+  }
+  function onDay(e, d) { var k = key(d); return e.date <= k && k <= e.end_date; }
+  function icon(p) { return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + '</svg>'; }
+
+  function card(e) {
+    var s = pd(e.date);
+    var where = [e.place, e.town].filter(Boolean).join(' · ');
+    var maps = e.address ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(e.address + ', ' + e.town + ', CA') : '';
+    return '<article class="ev"><div class="dateblock"><div class="dow">' + DOW[s.getDay()] + '</div><div class="num">' + s.getDate() + '</div><div class="mon">' + MON[s.getMonth()] + '</div></div>' +
+      '<div class="card"><div class="when"><span>' + esc(whenText(e)) + '</span>' + (e.free ? '<span class="pill">Free</span>' : '') + '</div>' +
+      '<h3>' + esc(e.title) + '</h3><div class="where">' + esc(where) + (e.address ? '<br>' + esc(e.address) : '') + '</div>' +
+      (e.description ? '<p class="desc">' + esc(e.description) + '</p>' : '') +
+      '<div class="actions"><button class="btn out" type="button" data-ics="' + e.id + '">' + icon('<path d="M12 5v14M5 12h14"/>') + 'Add to calendar</button>' +
+      (e.website ? '<a class="btn out" href="' + esc(e.website) + '" target="_blank" rel="noopener">Website</a>' : '') +
+      (maps ? '<a class="btn out" href="' + esc(maps) + '" target="_blank" rel="noopener">Directions</a>' : '') +
+      '</div></div></article>';
+  }
+
+  function renderList() {
+    var up = visible().filter(function (e) { return e.end_date >= key(today); });
+    $('count').textContent = up.length + (up.length === 1 ? ' event' : ' events') + (state.town ? ' in ' + state.town : ' coming up');
+    if (!up.length) return emptyMsg();
+    var thisWeek = key(mondayOf(today)), groups = [], idx = {};
+    up.forEach(function (e) {
+      var anchor = e.date < key(today) ? today : pd(e.date), wk = key(mondayOf(anchor));
+      var label = wk === thisWeek ? 'This week' : 'Week of ' + MON[pd(wk).getMonth()] + ' ' + pd(wk).getDate();
+      if (!(wk in idx)) { idx[wk] = groups.length; groups.push({ wk: wk, label: label, items: [] }); }
+      groups[idx[wk]].items.push(e);
+    });
+    return groups.map(function (g) {
+      return '<section class="group"><h2>' + esc(g.label) + '</h2>' + g.items.map(card).join('') + '</section>';
+    }).join('');
+  }
+
+  function emptyMsg() {
+    return '<div class="empty">Nothing listed yet' + (state.town ? ' in ' + esc(state.town) : '') + '. Know of something coming up? ' +
+      (FORM_URL ? '<a href="' + esc(FORM_URL) + '" target="_blank" rel="noopener">Send it in</a>.' : 'Event submissions are opening soon.') + '</div>';
+  }
+
+  function renderMonth() {
+    var evs = visible(), m = state.month, first = new Date(m.getFullYear(), m.getMonth(), 1);
+    var start = addDays(first, -first.getDay()), cells = '';
+    var inMonth = evs.filter(function (e) { return e.end_date >= key(first) && e.date <= key(new Date(m.getFullYear(), m.getMonth() + 1, 0)); });
+    $('count').textContent = inMonth.length + (inMonth.length === 1 ? ' event' : ' events') + ' in ' + MONTHS[m.getMonth()] + (state.town ? ' (' + state.town + ')' : '');
+    DOW.forEach(function (d) { cells += '<div class="dowh" aria-hidden="true">' + d + '</div>'; });
+    for (var i = 0; i < 42; i++) {
+      var d = addDays(start, i);
+      if (i >= 35 && d.getMonth() !== m.getMonth()) break;
+      var list = evs.filter(function (e) { return onDay(e, d); });
+      var out = d.getMonth() !== m.getMonth();
+      var cls = 'day' + (out ? ' out' : '') + (key(d) === key(today) ? ' today' : '') + (state.sel === key(d) ? ' sel' : '');
+      var dots = ''; for (var k = 0; k < Math.min(list.length, 3); k++) dots += '<span class="dot"></span>';
+      cells += '<button type="button" class="' + cls + '" data-day="' + key(d) + '" aria-pressed="' + (state.sel === key(d)) + '" aria-label="' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + list.length + (list.length === 1 ? ' event' : ' events') + '">' + d.getDate() + '<span class="dots">' + dots + '</span></button>';
+    }
+    var head = '<div class="mhead"><button class="nav" type="button" id="prev" aria-label="Previous month">' + icon('<path d="M15 6l-6 6 6 6"/>') + '</button><h2>' + MONTHS[m.getMonth()] + ' ' + m.getFullYear() + '</h2><button class="nav" type="button" id="next" aria-label="Next month">' + icon('<path d="M9 6l6 6-6 6"/>') + '</button></div>';
+    var picked = '';
+    if (state.sel) {
+      var sd = pd(state.sel), items = evs.filter(function (e) { return onDay(e, sd); });
+      picked = '<div class="picked"><h3>' + DOW[sd.getDay()] + ', ' + MONTHS[sd.getMonth()] + ' ' + sd.getDate() + '</h3>' +
+        (items.length ? items.map(card).join('') : '<div class="empty" style="margin-top:0">Nothing listed for this day.</div>') + '</div>';
+    } else {
+      picked = '<p class="count">Tap a day to see what is happening.</p>';
+    }
+    return head + '<div class="grid">' + cells + '</div>' + picked;
+  }
+
+  function feedUrl() {
+    return new URL('feeds/' + (state.town ? slug(state.town) : 'all') + '.ics', location.href).href;
+  }
+  function renderSub() {
+    var u = feedUrl(), web = u.replace(/^https?:/, 'webcal:');
+    $('subTitle').textContent = state.town ? 'Subscribe to ' + state.town : 'Subscribe to everything';
+    $('subText').textContent = state.town ? 'Events in ' + state.town + ' will appear on your phone\'s calendar.' : 'Events from every town will appear on your phone\'s calendar. Pick a town above first to follow just one.';
+    $('subMain').href = web;
+    $('subGoogle').href = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(web);
+    $('subOutlook').href = 'https://outlook.live.com/calendar/0/addfromweb?url=' + encodeURIComponent(u) + '&name=' + encodeURIComponent('Community events');
+  }
+
+  function renderChips() {
+    var all = [''].concat(towns);
+    $('chips').innerHTML = all.map(function (t) {
+      return '<button type="button" class="chip" data-town="' + esc(t) + '" aria-pressed="' + (state.town === t) + '">' + (t ? esc(t) : 'All towns') + '</button>';
+    }).join('');
+  }
+
+  function render() {
+    $('tabList').setAttribute('aria-pressed', state.view === 'list');
+    $('tabMonth').setAttribute('aria-pressed', state.view === 'month');
+    renderChips(); renderSub();
+    $('view').innerHTML = state.view === 'month' ? renderMonth() : renderList();
+    var p = new URLSearchParams();
+    if (state.town) p.set('town', state.town);
+    if (state.view === 'month') p.set('view', 'month');
+    try { history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : '')); } catch (x) {}
+  }
+
+  // one-event download, so "Add to calendar" works on any phone
+  function icsText(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n'); }
+  function downloadIcs(e) {
+    var d = e.date.replace(/-/g, ''), L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Community Calendar//EN', 'BEGIN:VEVENT', 'UID:' + e.id + '@community-calendar', 'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z'];
+    if (e.start_time) {
+      var st = e.start_time.replace(':', '') + '00', et;
+      if (e.end_time) et = e.end_time.replace(':', '') + '00';
+      else et = ('0' + Math.min(23, +e.start_time.slice(0, 2) + 1)).slice(-2) + e.start_time.slice(3, 5) + '00';
+      L.push('DTSTART:' + d + 'T' + st, 'DTEND:' + d + 'T' + et);
+      var n = Math.round((pd(e.end_date) - pd(e.date)) / 864e5) + 1;
+      if (n > 1) L.push('RRULE:FREQ=DAILY;COUNT=' + n);
+    } else {
+      L.push('DTSTART;VALUE=DATE:' + d, 'DTEND;VALUE=DATE:' + key(addDays(pd(e.end_date), 1)).replace(/-/g, ''));
+    }
+    L.push('SUMMARY:' + icsText(e.title), 'LOCATION:' + icsText([e.place, e.address].filter(Boolean).join(', ') || e.town));
+    var desc = [e.description, e.website].filter(Boolean).join('\n');
+    if (desc) L.push('DESCRIPTION:' + icsText(desc));
+    L.push('END:VEVENT', 'END:VCALENDAR');
+    var blob = new Blob([L.join('\r\n') + '\r\n'], { type: 'text/calendar' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = slug(e.title) + '.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  document.addEventListener('click', function (ev) {
+    var t = ev.target.closest('button, a'); if (!t) return;
+    if (t.dataset.town !== undefined && t.classList.contains('chip')) { state.town = t.dataset.town; state.sel = null; render(); }
+    else if (t.dataset.day) { state.sel = state.sel === t.dataset.day ? null : t.dataset.day; var dd = pd(t.dataset.day); if (dd.getMonth() !== state.month.getMonth()) state.month = new Date(dd.getFullYear(), dd.getMonth(), 1); render(); }
+    else if (t.id === 'prev') { state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); state.sel = null; render(); }
+    else if (t.id === 'next') { state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1); state.sel = null; render(); }
+    else if (t.id === 'tabList') { state.view = 'list'; render(); }
+    else if (t.id === 'tabMonth') { state.view = 'month'; render(); }
+    else if (t.dataset.ics) { var e = data.events.filter(function (x) { return x.id === t.dataset.ics; })[0]; if (e) downloadIcs(e); }
+    else if (t.id === 'subBtn') { var open = !$('subPanel').classList.contains('open'); $('subPanel').classList.toggle('open', open); t.setAttribute('aria-expanded', open); }
+    else if (t.id === 'subCopy') {
+      var u = feedUrl();
+      (navigator.clipboard ? navigator.clipboard.writeText(u) : Promise.reject()).then(function () { t.textContent = 'Link copied'; }, function () { window.prompt('Copy this link:', u); });
+    }
+  });
+
+  if (FORM_URL) {
+    ['submitTop', 'submitBottom'].forEach(function (id) { $(id).href = FORM_URL; });
+    $('submitTop').classList.remove('hidden'); $('submitBand').classList.remove('hidden');
+  }
+
+  fetch('events.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) {
+    data = j; towns = j.towns || [];
+    if (state.town && towns.indexOf(state.town) < 0) state.town = '';
+    var firstUp = j.events.filter(function (e) { return e.end_date >= key(today); })[0];
+    state.month = new Date(today.getFullYear(), today.getMonth(), 1);
+    $('foot').innerHTML = 'Updated ' + esc(new Date(j.updated).toLocaleDateString(undefined, { month: 'long', day: 'numeric' })) + '. Spot a mistake? ' + (FORM_URL ? '<a href="' + esc(FORM_URL) + '" target="_blank" rel="noopener">Let us know</a>.' : 'Corrections will be welcome soon.');
+    render();
+  }).catch(function () {
+    $('view').innerHTML = '<div class="err">The calendar could not load just now. Please try again in a moment.</div>';
+  });
+})();
+</script>
+</body>
+</html>
