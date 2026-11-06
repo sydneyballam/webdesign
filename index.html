@@ -1,274 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Portal | Web Design Portfolio</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        hubDark: '#111827',
-                        hubCard: '#1F2937'
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small Business Studio of Willow Creek</title>
+<meta name="description" content="Websites, online booking, new-equipment setup and simple systems for Willow Creek small businesses, explained in plain English. Book a free first conversation.">
+<script>
+/* Links people already have, such as index.html?client=unique-boutique, now live on the work page. */
+if (/[?&](client|category)=/.test(location.search)) { location.replace('work.html' + location.search); }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; }
+html { scroll-behavior: smooth; }
+a:focus-visible { outline: 3px solid #E0A526; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
 </head>
-<body class="bg-hubDark text-gray-100 min-h-screen flex flex-col antialiased">
+<body>
+<div style="width: 100%; font-family: 'Source Sans 3', system-ui, sans-serif; color: #12302F; background: #F5F7F6; font-size: 1.125rem; line-height: 1.55">
 
-    <!-- HEADER -->
-    <header class="border-b border-gray-800">
-        <div class="max-w-4xl mx-auto px-4 py-8 sm:py-10 text-center">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 to-teal-400 flex items-center justify-center text-white text-xl shadow-lg mx-auto mb-4">
-                <i class="fa-solid fa-code"></i>
-            </div>
-            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Client Portal</h1>
-            <p id="subtitle" class="mt-2 text-sm sm:text-base text-gray-400"></p>
-        </div>
-    </header>
+<!-- HEADER -->
+<header style="background: #12302F; color: #F5F7F6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 0.75rem 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem">
+<a href="#top" style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.25rem; color: #F5F7F6; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center">Small Business Studio of Willow Creek</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 0 1.25rem">
+<a href="#problems" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">What I help with</a>
+<a href="#how" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">How it works</a>
+<a href="#start" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Getting started</a>
+<a href="#work" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Recent work</a>
+<a href="#learn" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Learn something</a>
+<a href="work.html" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Our work</a>
+<a href="#book" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Book a chat</a>
+</nav>
+</div>
+</header>
 
-    <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-grow">
+<!-- HERO -->
+<section id="top" style="background: #12302F; color: #F5F7F6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 3rem">
+<div style="flex: 1 1 28rem; min-width: 0">
+<p style="margin: 0 0 1rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #BFD9D6">Willow Creek, California</p>
+<h1 style="margin: 0 0 1.25rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -0.02em">Starting or growing a business here? Let's build it together.</h1>
+<p style="margin: 0 0 2rem; font-size: 1.25rem; color: #DCEBE8; max-width: 36rem">I help local business owners get online, get organized, and learn to run it themselves. Websites, booking, email, new equipment, and simple systems, explained in plain English. Every question is welcome.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 0.75rem">
+<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: #E0A526; color: #12302F; font-weight: 700; font-size: 1.0625rem; text-decoration: none">Book a free first conversation</a>
+<a href="#how" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; border: 2px solid #BFD9D6; color: #F5F7F6; font-weight: 700; font-size: 1.0625rem; text-decoration: none; box-sizing: border-box">See how it works</a>
+</div>
+</div>
+<div style="flex: 1 1 20rem; min-width: 0; background: #F5F7F6; color: #12302F; border-radius: 16px; padding: 2rem; box-sizing: border-box">
+<p style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.75rem; line-height: 1.15">Every owner is still learning, and that's a good thing.</p>
+<p style="margin: 0 0 1rem; color: #3E5655">Attachments, domains, booking links, and email settings are skills anyone can pick up, and they get easier fast once someone walks you through them.</p>
+<p style="margin: 0; color: #3E5655">I'll walk you through each one at your pace. Ask me anything.</p>
+</div>
+</div>
+</section>
 
-        <noscript>
-            <p class="text-sm text-gray-400 text-center py-8">Please turn on JavaScript to browse the designs.</p>
-        </noscript>
+<!-- FREE OFFER BAND -->
+<section style="background: #E0A526; color: #12302F">
+<div style="max-width: 70rem; margin: 0 auto; padding: 0.5rem 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 1rem; font-weight: 700; font-size: 1.0625rem">
+<span>Limited spots: free starter websites for local businesses.</span>
+<a href="#free" style="color: #12302F; font-weight: 700; text-decoration: underline; min-height: 44px; display: inline-flex; align-items: center">See what's included</a>
+</div>
+</section>
 
-        <!-- FILTERS -->
-        <section aria-label="Filters" class="space-y-4">
-            <div>
-                <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Category</p>
-                <div id="categoryChips" class="flex flex-wrap gap-2"></div>
-            </div>
+<!-- PROBLEMS -->
+<section id="problems" style="background: #FFFFFF">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">What we can work on</p>
+<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">The tech side of a small business, one step at a time.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+<div style="flex: 1 1 18rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">A website you can update yourself.</h3>
+<p style="margin: 0; color: #3E5655">I'll build one you can edit on your own, and show you how.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Online booking that works for you.</h3>
+<p style="margin: 0; color: #3E5655">I'll help you pick a booking tool that fits your budget and set it up on your site.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">New items and news posted in minutes.</h3>
+<p style="margin: 0; color: #3E5655">We'll design a simple routine, photo, price, post, that fits right into your day.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Events and newsletters your community sees.</h3>
+<p style="margin: 0; color: #3E5655">I'll set up a calendar and a signup form, and show you how to send your first message.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Email, files, and forms that make sense.</h3>
+<p style="margin: 0; color: #3E5655">Ask me anything. That's the job.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Everything clearly yours.</h3>
+<p style="margin: 0; color: #3E5655">We'll map where everything lives and make sure it's all in your name.</p>
+</div>
+</div>
+</div>
+</section>
 
-            <div>
-                <label for="clientSelect" class="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Client</label>
-                <select id="clientSelect" onchange="setClient(this.value)" class="w-full sm:w-72 min-h-[44px] bg-hubCard border border-gray-700 rounded-xl px-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></select>
-            </div>
+<!-- SERVICES -->
+<section id="services" style="background: #F5F7F6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">What I can do</p>
+<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">Six ways I can help you get started and keep going.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Get online</h3>
+<p style="margin: 0; color: #3E5655">A clear website, a domain name, a business email address, and a Google listing so people can find your hours and location when they search.</p>
+</div>
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Take bookings and share events</h3>
+<p style="margin: 0; color: #3E5655">Online scheduling, an events calendar, and a newsletter signup, so customers can reserve a time and hear what's coming up.</p>
+</div>
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Set up simple systems</h3>
+<p style="margin: 0; color: #3E5655">The quiet stuff that keeps a business running: getting new items posted, tracking invoices, and organizing files so you can find them again.</p>
+</div>
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Learn it, one-on-one</h3>
+<p style="margin: 0; color: #3E5655">Short sessions where you ask anything: email, spreadsheets, documents, or how to get the most out of AI tools.</p>
+</div>
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Set up new equipment</h3>
+<p style="margin: 0; color: #3E5655">A new computer, printer, or Wi-Fi router, up and running the day I'm there, with your files, email, and favorite programs moved over from the old one. Inside your home or shop, I'll make sure the Wi-Fi reaches where you work.</p>
+</div>
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Start your business</h3>
+<p style="margin: 0; color: #3E5655">New to running a business in Humboldt County? I'll walk you through the name, the county paperwork, and the online setup, one step at a time.</p>
+</div>
+</div>
+<p style="margin: 2rem 0 0; color: #3E5655; max-width: 40rem">Interested in a small-group workshop for Willow Creek business owners? Tell me what you'd want to learn and I'll add you to the list.</p>
+</div>
+</section>
 
-            <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
-                <p id="resultCount" class="text-sm text-gray-400" aria-live="polite"></p>
-                <button id="copyBtn" type="button" onclick="copyLink()" class="min-h-[44px] px-3 text-sm text-blue-400 hover:text-blue-300 flex items-center gap-2">
-                    <i class="fa-solid fa-link text-xs"></i><span id="copyLabel">Copy link to this view</span>
-                </button>
-            </div>
-        </section>
+<!-- HOW IT WORKS -->
+<section id="how" style="background: #FFFFFF">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">How it works</p>
+<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">Three steps, with the price clear up front.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 2rem">
+<div style="flex: 1 1 16rem; min-width: 0">
+<div style="width: 3rem; height: 3rem; border-radius: 999px; background: #1F5F6B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">1</div>
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Let's talk</h3>
+<p style="margin: 0; color: #3E5655">A free first conversation about your business and what you'd like to make easier. Just a friendly chat.</p>
+</div>
+<div style="flex: 1 1 16rem; min-width: 0">
+<div style="width: 3rem; height: 3rem; border-radius: 999px; background: #1F5F6B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">2</div>
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Get a simple plan</h3>
+<p style="margin: 0; color: #3E5655">A one-page plan in plain words: what we'll set up, what it will cost, and how long it will take. You approve it before anything starts.</p>
+</div>
+<div style="flex: 1 1 16rem; min-width: 0">
+<div style="width: 3rem; height: 3rem; border-radius: 999px; background: #1F5F6B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">3</div>
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Build it, and learn it</h3>
+<p style="margin: 0; color: #3E5655">I build it alongside you and teach you how to run it, so you can handle changes with confidence.</p>
+</div>
+</div>
+</div>
+</section>
 
-        <!-- RESULTS -->
-        <section aria-label="Designs" class="mt-2">
-            <div id="results" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
-            <div id="emptyState" class="hidden text-center py-12 border border-dashed border-gray-700 rounded-2xl">
-                <p id="emptyText" class="text-sm text-gray-400"></p>
-                <button id="resetBtn" type="button" onclick="resetFilters()" class="mt-3 min-h-[44px] px-4 text-sm text-blue-400 hover:text-blue-300">Show all designs</button>
-            </div>
-        </section>
-    </main>
+<!-- FREE STARTER WEBSITE -->
+<section id="free" style="background: #E8F0EE">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">Free starter website &middot; Limited spots</p>
+<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">Get a free starter website for your Willow Creek business.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+<div style="flex: 1 1 20rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">What's included</h3>
+<p style="margin: 0 0 0.5rem; color: #3E5655">A one-page or small site built from your text and photos.</p>
+<p style="margin: 0 0 0.5rem; color: #3E5655">Two rounds of changes, so it ends up just right.</p>
+<p style="margin: 0 0 0.5rem; color: #3E5655">A 30-minute walkthrough so you can update it yourself.</p>
+<p style="margin: 0; color: #3E5655">A one-page guide to what lives where.</p>
+</div>
+<div style="flex: 1 1 20rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Your part</h3>
+<p style="margin: 0 0 0.5rem; color: #3E5655">Your domain name, which is usually about $10 to $20 a year.</p>
+<p style="margin: 0 0 0.5rem; color: #3E5655">Your text and photos for the site.</p>
+<p style="margin: 0; color: #3E5655">Permission to show the finished site in my portfolio, and a short testimonial in your own words.</p>
+</div>
+<div style="flex: 1 1 20rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Add-ons when you're ready</h3>
+<p style="margin: 0 0 0.5rem; color: #3E5655">Online booking, an events calendar, and a newsletter.</p>
+<p style="margin: 0 0 0.5rem; color: #3E5655">A simple way to get new items and news posted.</p>
+<p style="margin: 0; color: #3E5655">Business email, new equipment setup, and ongoing updates, all at a simple hourly rate.</p>
+</div>
+</div>
+<div style="margin-top: 2rem">
+<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: #12302F; color: #F5F7F6; font-weight: 700; font-size: 1.0625rem; text-decoration: none">Ask about a free starter website</a>
+</div>
+</div>
+</section>
 
-    <footer class="border-t border-gray-800 py-6 text-center text-xs text-gray-500">
-        <p>&copy; 2026 Web Design Portal</p>
-    </footer>
+<!-- STARTING OUT -->
+<section id="start" style="background: #F5F7F6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">Starting out in Humboldt County</p>
+<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">The usual path from idea to open for business.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">1. Choose your name</h3>
+<p style="margin: 0; color: #3E5655">Pick a name that fits you, and check that no one else nearby is already using it.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">2. Register the name</h3>
+<p style="margin: 0; color: #3E5655">If your business name doesn't include your own surname, the county asks for a fictitious business name filing.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">3. Get your county license</h3>
+<p style="margin: 0; color: #3E5655">Businesses outside city limits apply through the county. I'll help you find the right type and fill in the form.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">4. Check state and tax questions</h3>
+<p style="margin: 0; color: #3E5655">I'll point you to the right offices so you can ask the right people the right questions.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">5. Get online</h3>
+<p style="margin: 0; color: #3E5655">A domain name, a business email address, a simple website, and a booking link.</p>
+</div>
+<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">6. Welcome your first customers</h3>
+<p style="margin: 0; color: #3E5655">A Facebook page and a few simple posts, so your neighbors know you're open.</p>
+</div>
+</div>
+<p style="margin: 2rem 0 0; color: #3E5655; max-width: 40rem">I'm a guide, not a lawyer or an accountant. I'll help you find the right offices and fill out the forms. Rules and fees change, so we'll check the official sources together.</p>
+</div>
+</section>
 
-    <script>
-        /* ==========================================================
-           HOW TO ADD THINGS
-           1. New client: add a line to CLIENTS (the key becomes the
-              link, e.g. index.html?client=unique-boutique).
-           2. New design: add an object to DESIGNS. A design can have
-              several "looks" (variations); the first look is the main link.
-              "categories" can list more than one category.
-           3. New category: add a line to CATEGORIES.
-           Optional: set "image" on a design (e.g. 'images/thumb.jpg')
-           to show a screenshot instead of the icon tile.
-           ========================================================== */
+<!-- OWNERSHIP -->
+<section style="background: #12302F; color: #F5F7F6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4rem 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 2.5rem">
+<div style="flex: 1 1 22rem; min-width: 0">
+<h2 style="margin: 0 0 1rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em">Everything stays in your name.</h2>
+<p style="margin: 0; color: #DCEBE8; max-width: 30rem">What I build is yours. You stay in the driver's seat.</p>
+</div>
+<div style="flex: 1 1 24rem; min-width: 0; display: flex; flex-direction: column; gap: 1rem">
+<p style="margin: 0; color: #DCEBE8"><strong style="color: #F5F7F6">Your accounts.</strong> Your domain, hosting, and booking and email tools are registered to you.</p>
+<p style="margin: 0; color: #DCEBE8"><strong style="color: #F5F7F6">A one-page guide.</strong> What lives where, and where to look when you want to make a change.</p>
+<p style="margin: 0; color: #DCEBE8"><strong style="color: #F5F7F6">Your choice.</strong> You're free to run it yourself or work with anyone you like.</p>
+</div>
+</div>
+</section>
 
-        const CATEGORIES = [
-            { id: 'storefront',   label: 'Storefront',              icon: 'fa-store' },
-            { id: 'appointments', label: 'Appointments & Calendar', icon: 'fa-calendar-check' },
-            { id: 'wellness',     label: 'Wellness & Retreats',     icon: 'fa-spa' }
-        ];
+<!-- RECENT WORK -->
+<section id="work" style="background: #F5F7F6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">Recent work</p>
+<h2 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">Local businesses I've worked with.</h2>
+<p style="margin: 0 0 2.5rem; color: #3E5655">Shared with the owners' permission.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<p style="margin: 0 0 0.25rem; font-size: 0.9375rem; font-weight: 700; color: #1F5F6B">Estate sales and antiques &middot; Willow Creek</p>
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Unique Boutique</h3>
+<p style="margin: 0 0 1rem; color: #3E5655">A magazine-style catalog that gives people a reason to come through the door, plus a plan for photographing and posting new finds that fits into the owners' day.</p>
+<a href="work.html?client=unique-boutique" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: #1F5F6B">See the designs</a>
+</div>
+<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<p style="margin: 0 0 0.25rem; font-size: 0.9375rem; font-weight: 700; color: #1F5F6B">Massage, reiki and sound healing &middot; Trinity County</p>
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Sweet Somatics</h3>
+<p style="margin: 0 0 1rem; color: #3E5655">A calm, phone-friendly site with online booking in each town she visits and a listing for her small summer retreats, so people can find her and reserve a time themselves.</p>
+<a href="https://sweetsomatics.github.io/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: #1F5F6B">Visit her site</a>
+</div>
+</div>
+<p style="margin: 1.5rem 0 0"><a href="work.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: #1F5F6B">Browse all published sites and prototypes</a></p>
+</div>
+</section>
 
-        const CLIENTS = {
-            'unique-boutique': { name: 'Unique Boutique', place: 'Willow Creek, CA' },
-            'jessica':         { name: 'Jessica', place: 'Hayfork, CA' }
-        };
+<!-- LEARN -->
+<section id="learn" style="background: #FFFFFF">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">Learn something</p>
+<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">A few handy things worth knowing.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem">
+<div style="flex: 1 1 20rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">What's the difference between CC and BCC?</h3>
+<p style="margin: 0 0 0.5rem; color: #3E5655"><strong style="color: #12302F">To</strong> is the main recipient.</p>
+<p style="margin: 0 0 0.5rem; color: #3E5655"><strong style="color: #12302F">CC</strong> sends a copy, and everyone can see each other's addresses.</p>
+<p style="margin: 0 0 0.75rem; color: #3E5655"><strong style="color: #12302F">BCC</strong> sends a copy and hides the addresses.</p>
+<p style="margin: 0; color: #3E5655">When you email a group of customers, use BCC so they don't see each other's addresses.</p>
+</div>
+<div style="flex: 1 1 20rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">How to check an email before you click</h3>
+<p style="margin: 0 0 0.5rem; color: #3E5655">Look at the sender's actual address, not just the name next to it.</p>
+<p style="margin: 0 0 0.5rem; color: #3E5655">Take a moment with anything urgent, unexpected attachments, or links that don't match who the email says it's from.</p>
+<p style="margin: 0; color: #3E5655">Unsure? Pause, and call the company using a number you already have.</p>
+</div>
+<div style="flex: 1 1 20rem; min-width: 0; background: #F5F7F6; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Back up your important files</h3>
+<p style="margin: 0 0 0.5rem; color: #3E5655">Keep your business files in two places: your computer, and one other place such as a cloud folder or an external drive.</p>
+<p style="margin: 0; color: #3E5655">That way you always have a copy. Check now and then that the backup works.</p>
+</div>
+</div>
+</div>
+</section>
 
-        const DESIGNS = [
-            {
-                title: 'Estate Storefront',
-                client: 'unique-boutique',
-                categories: ['storefront'],
-                industry: 'Retail · Estate sales',
-                blurb: 'Estate sale inventory, vintage apparel and Fiestaware.',
-                image: '',
-                looks: [
-                    { label: 'Treasure shop', url: 'ubwc1.html' },
-                    { label: 'Gallery',       url: 'ubwc2.html' },
-                    { label: 'Catalog 1',     url: 'ubwc3.html' },
-                    { label: 'Magazine',      url: 'ubwcmagazine.html' },
-                    { label: 'Catalog 2',     url: 'ubwcvm.html' },
-                    { label: 'Catalog 3',     url: 'ub1.html' }
-                ]
-            },
-            {
-                title: 'Wellness & Retreats',
-                client: 'jessica',
-                categories: ['wellness', 'appointments'],
-                industry: 'Wellness · Massage, reiki, sound healing, yoga',
-                blurb: 'Online booking, summer retreats, and an email signup.',
-                image: '',
-                looks: [
-                    { label: 'Booking site', url: 'jessica.html' }
-                ]
-            }
-        ];
+<!-- BOOK A CHAT -->
+<section id="book" style="background: #12302F; color: #F5F7F6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
+<h2 style="margin: 0 0 1rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; letter-spacing: -0.02em">Book a free first conversation.</h2>
+<p style="margin: 0 0 0.75rem; color: #DCEBE8; max-width: 40rem">Tell me what you're working on or what you'd like to make easier. We'll talk it through in plain English. Add a note when you book and I'll see it ahead of time.</p>
+<p style="margin: 0 0 2rem; color: #DCEBE8; max-width: 40rem">Serving Willow Creek and the surrounding area. Most of this also works by phone or video.</p>
+<div id="cal-embed" style="min-height: 560px; background: #FFFFFF; border-radius: 16px; overflow: hidden"></div>
+<p style="margin: 1rem 0 0; color: #DCEBE8">Calendar not showing? <a id="cal-fallback" href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" target="_blank" rel="noopener" style="color: #F5F7F6; font-weight: 700">Open it in a new tab</a>.</p>
+<noscript><p style="margin: 1rem 0 0; color: #DCEBE8"><a href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" style="color: #F5F7F6; font-weight: 700">Open the booking calendar</a></p></noscript>
+</div>
+</section>
 
-        /* ---------------- code below needs no editing ---------------- */
+<!-- FOOTER -->
+<footer style="background: #0C2120; color: #BFD9D6">
+<div style="max-width: 70rem; margin: 0 auto; padding: 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; font-size: 0.9375rem">
+<span>Small Business Studio of Willow Creek &middot; California</span>
+<span>Practical help. Plain English. Every question welcome.</span>
+</div>
+</footer>
 
-        const state = { category: 'all', client: 'all' };
-
-        function esc(s) {
-            return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-        }
-        function catById(id) { return CATEGORIES.find(c => c.id === id); }
-
-        function readUrl() {
-            const p = new URLSearchParams(location.search);
-            const client = p.get('client');
-            const category = p.get('category');
-            if (client && CLIENTS[client]) state.client = client;
-            if (category && catById(category)) state.category = category;
-        }
-
-        function queryString() {
-            const p = new URLSearchParams();
-            if (state.client !== 'all') p.set('client', state.client);
-            if (state.category !== 'all') p.set('category', state.category);
-            return p.toString();
-        }
-
-        function syncUrl() {
-            const qs = queryString();
-            try {
-                history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
-            } catch (e) { /* some browsers block this on local files */ }
-        }
-
-        function visibleDesigns() {
-            return DESIGNS.filter(d =>
-                (state.client === 'all' || d.client === state.client) &&
-                (state.category === 'all' || d.categories.includes(state.category))
-            );
-        }
-
-        function renderChips() {
-            const chips = [{ id: 'all', label: 'All', soon: false }].concat(
-                CATEGORIES.map(c => ({ id: c.id, label: c.label, soon: !DESIGNS.some(d => d.categories.includes(c.id)) }))
-            );
-            document.getElementById('categoryChips').innerHTML = chips.map(c => {
-                const active = state.category === c.id;
-                const cls = active
-                    ? 'bg-blue-600 border-blue-500 text-white'
-                    : 'bg-hubCard border-gray-700 text-gray-300 hover:border-blue-500/60';
-                return '<button type="button" onclick="setCategory(\'' + c.id + '\')" aria-pressed="' + active + '" ' +
-                    'class="min-h-[44px] px-4 rounded-full border text-sm font-medium transition ' + cls + '">' +
-                    esc(c.label) + (c.soon ? ' <span class="text-xs opacity-60">&middot; soon</span>' : '') + '</button>';
-            }).join('');
-        }
-
-        function renderClientSelect() {
-            const sel = document.getElementById('clientSelect');
-            sel.innerHTML = '<option value="all">All clients</option>' +
-                Object.keys(CLIENTS).map(id => '<option value="' + esc(id) + '">' + esc(CLIENTS[id].name) + '</option>').join('');
-            sel.value = state.client;
-        }
-
-        function cardHtml(d) {
-            const client = CLIENTS[d.client];
-            const cat = catById(d.categories[0]);
-            const thumb = d.image
-                ? '<img src="' + esc(d.image) + '" alt="" loading="lazy" class="w-full h-full object-cover">'
-                : '<i class="fa-solid ' + (cat ? cat.icon : 'fa-code') + ' text-3xl text-white/70"></i>';
-            const tags = d.categories.map(id => {
-                const c = catById(id);
-                return c ? '<span class="text-[11px] bg-gray-800 text-gray-300 px-2.5 py-1 rounded-md">' + esc(c.label) + '</span>' : '';
-            }).join('');
-            const looks = d.looks.length > 1
-                ? '<div class="px-4 pb-4"><p class="text-xs text-gray-500 mb-2">' + d.looks.length + ' looks</p><div class="flex flex-wrap gap-2">' +
-                  d.looks.map(l => '<a href="' + esc(l.url) + '" class="min-h-[40px] inline-flex items-center px-3 rounded-lg border border-gray-700 text-xs text-gray-200 hover:border-blue-500/60 hover:text-white transition">' + esc(l.label) + '</a>').join('') +
-                  '</div></div>'
-                : '';
-            return '<article class="bg-hubCard border border-gray-800 rounded-2xl overflow-hidden flex flex-col">' +
-                '<a href="' + esc(d.looks[0].url) + '" class="block group">' +
-                    '<div class="h-32 bg-gradient-to-tr from-blue-700/60 to-teal-500/50 flex items-center justify-center overflow-hidden">' + thumb + '</div>' +
-                    '<div class="p-4">' +
-                        '<h2 class="font-semibold text-white group-hover:text-blue-300 transition">' + esc(d.title) + '</h2>' +
-                        '<p class="text-xs text-gray-400 mt-0.5">' + esc(client ? client.name : '') + (client && client.place ? ' &middot; ' + esc(client.place) : '') + '</p>' +
-                        '<p class="text-sm text-gray-300 mt-2">' + esc(d.blurb) + '</p>' +
-                        '<div class="flex flex-wrap gap-1.5 mt-3">' + tags + '</div>' +
-                    '</div>' +
-                '</a>' +
-                looks +
-            '</article>';
-        }
-
-        function render() {
-            renderChips();
-            renderClientSelect();
-
-            const list = visibleDesigns();
-            document.getElementById('results').innerHTML = list.map(cardHtml).join('');
-
-            const subtitle = state.client !== 'all'
-                ? 'Designs made for ' + CLIENTS[state.client].name + '.'
-                : 'Browse sample designs for ideas. Filter by what you need, or by client.';
-            document.getElementById('subtitle').textContent = subtitle;
-
-            let count = list.length + (list.length === 1 ? ' design' : ' designs');
-            if (state.client !== 'all') count += ' for ' + CLIENTS[state.client].name;
-            if (state.category !== 'all') count += ' in ' + catById(state.category).label;
-            document.getElementById('resultCount').textContent = count;
-
-            const empty = document.getElementById('emptyState');
-            empty.classList.toggle('hidden', list.length > 0);
-            if (list.length === 0) {
-                const noneAtAll = state.category !== 'all' && !DESIGNS.some(d => d.categories.includes(state.category));
-                document.getElementById('emptyText').textContent = noneAtAll
-                    ? 'Designs for ' + catById(state.category).label + ' are coming soon.'
-                    : 'No designs match these filters yet.';
-            }
-
-            syncUrl();
-        }
-
-        function setCategory(id) { state.category = id; render(); }
-        function setClient(id) { state.client = id; render(); }
-        function resetFilters() { state.category = 'all'; state.client = 'all'; render(); }
-
-        function copyLink() {
-            const qs = queryString();
-            const url = location.href.split('?')[0].split('#')[0] + (qs ? '?' + qs : '');
-            const label = document.getElementById('copyLabel');
-            const done = () => { label.textContent = 'Link copied'; setTimeout(() => { label.textContent = 'Copy link to this view'; }, 2000); };
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(url).then(done, () => window.prompt('Copy this link:', url));
-            } else {
-                window.prompt('Copy this link:', url);
-            }
-        }
-
-        readUrl();
-        render();
-    </script>
+</div>
+<script>
+/* ---- booking: Cal.com calendar, loaded when the booking section comes into view ---- */
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+(function () {
+    var link = 'syd-ballam-qcjhpv/free-first-conversation';
+    var started = false;
+    function start() {
+        if (started) return;
+        started = true;
+        Cal("init", "chat", { origin: "https://app.cal.com" });
+        Cal.ns["chat"]("inline", { elementOrSelector: "#cal-embed", config: { layout: "month_view", theme: "light" }, calLink: link });
+        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#1F5F6B" } } });
+    }
+    var box = document.getElementById('cal-embed');
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries, obs) {
+            if (entries.some(function (e) { return e.isIntersecting; })) { start(); obs.disconnect(); }
+        }, { rootMargin: '400px' }).observe(box);
+    } else { start(); }
+})();
+</script>
 </body>
 </html>
