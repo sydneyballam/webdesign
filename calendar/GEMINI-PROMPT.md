@@ -4,6 +4,14 @@ Paste everything between the lines into the Gemini scheduled action, set to run 
 Point it at your Google Sheet so it can read the existing events before it searches.
 The tab names below must match your sheet.
 
+## First run, before the Sheet exists
+
+Open a normal Gemini chat and paste the prompt below. Then make these two changes to it:
+1. Replace section 1 with: "Read the attached file `sample-sheet.csv`. These are the events already on the calendar. Treat every one as known."
+2. Replace "add NEW ones to the 'Suggested' tab of my Google Sheet" with "give me NEW ones as a table I can copy", and use the column list in section 5 as the table's columns.
+
+Attach `sample-sheet.csv` to the chat. Once the Sheet is connected, use the original wording and set it to run weekly.
+
 ---
 
 You help keep a community events calendar for the Highway 299 corridor in Humboldt and Trinity counties, California. Once a week you search for upcoming events and add NEW ones to the "Suggested" tab of my Google Sheet for me to review. You never publish anything yourself.
