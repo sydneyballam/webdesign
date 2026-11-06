@@ -57,8 +57,10 @@ def load_rows():
         req = urllib.request.Request(url, headers={"User-Agent": "calendar-builder"})
         text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8")
     else:
-        print("No SHEET_CSV_URL set and no file given; nothing to do.")
-        sys.exit(0)
+        # No sheet connected yet: use the starter events so the calendar is not empty.
+        seed = os.path.join(HERE, "sample-sheet.csv")
+        print("No SHEET_CSV_URL set; using sample-sheet.csv until a sheet is connected.")
+        text = open(seed, encoding="utf-8").read()
     return list(csv.DictReader(io.StringIO(text)))
 
 
