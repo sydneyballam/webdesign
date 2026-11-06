@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T23:24:09Z",
+ "updated": "2026-11-06T23:32:15Z",
  "towns": [
   "Big Bar",
   "Burnt Ranch",
@@ -68,6 +68,21 @@
    "category": ""
   },
   {
+   "id": "ae9e29189f44",
+   "title": "Charity Bingo Night",
+   "date": "2026-11-12",
+   "end_date": "2026-11-12",
+   "start_time": "17:30",
+   "end_time": "20:00",
+   "town": "Willow Creek",
+   "place": "Studio 299",
+   "address": "75 The Terrace Ln",
+   "website": "",
+   "description": "Hosted by Pawsitive Animal Services. Buy dinner at 5:30pm (regular or loaded hot dogs, or nachos), then bingo from 6pm to 8pm. $30 buy-in, 8 games, a smoked salmon blackout, and over $500 in prizes. Special: 2 for $10. Presale tickets: call Still Stylin' at 530-629-3418.",
+   "free": false,
+   "category": ""
+  },
+  {
    "id": "43899836227a",
    "title": "McClurg Flooring Grand Opening",
    "date": "2026-11-14",
@@ -121,7 +136,7 @@
    "end_time": "16:00",
    "town": "Willow Creek",
    "place": "Studio 299",
-   "address": "",
+   "address": "75 The Terrace Ln",
    "website": "",
    "description": "Lunch available from New Rv Catering.",
    "free": false,
@@ -136,7 +151,7 @@
    "end_time": "15:00",
    "town": "Willow Creek",
    "place": "Studio 299",
-   "address": "",
+   "address": "75 The Terrace Ln",
    "website": "",
    "description": "Santa visits 1pm to 2pm. Donations support Trinity River Outreach.",
    "free": false,
@@ -151,7 +166,7 @@
    "end_time": "17:00",
    "town": "Willow Creek",
    "place": "Studio 299",
-   "address": "",
+   "address": "75 The Terrace Ln",
    "website": "",
    "description": "All community welcome.",
    "free": true,
