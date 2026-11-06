@@ -4,5 +4,12 @@
     "url": "https://willowcreekchamber.com/calendar/list/?ical=1",
     "page": "https://willowcreekchamber.com/calendar/",
     "default_town": "Willow Creek"
+  },
+  {
+    "name": "Hoopa Valley Tribe",
+    "url_env": "HOOPA_ICS_URL",
+    "page": "https://www.hoopa-nsn.gov/hoopa-valley-tribe-community-events/",
+    "default_town": "Hoopa",
+    "exclude": []
   }
 ]

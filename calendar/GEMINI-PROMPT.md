@@ -24,6 +24,8 @@ Read these pages directly:
 - Willow Creek Chamber of Commerce calendar: https://www.willowcreekchamber.com/calendar
 - Humboldt County Chamber of Commerce events (county-wide): https://www.chamberorganizer.com/members/calendar6c_responsive.php?org_id=HCCW
 - Same calendar, simple mobile page: http://chamberbyphone.mobi/mobi_events.php?org_id=HCCW
+- Visit Redwoods (Humboldt County tourism): https://www.visitredwoods.com/events/ and https://www.visitredwoods.com/listing/events-for-current-month/2130
+- Hoopa Valley Tribe community events: https://www.hoopa-nsn.gov/hoopa-valley-tribe-community-events/
 - [ADD MORE SOURCES HERE, one per line]
 
 Then search the web for other public events in these places over the next 60 days:

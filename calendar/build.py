@@ -238,14 +238,23 @@ def import_sources(sheet_events):
         old = []
     merged = list(sheet_events)  # the sheet always wins over an imported duplicate
     for src in json.load(open(path, encoding="utf-8")):
+        url = src.get("url") or os.environ.get(src.get("url_env", ""), "").strip()
+        if not url:
+            print("%s: no feed address set (%s); keeping its previous events." % (src["name"], src.get("url_env", "url")))
+            keep = [e2 for e2 in old if e2.get("source") == src["name"]]
+            merged += [e for e in keep if not any(is_duplicate(e, m) for m in merged)]
+            continue
         try:
-            got = events_from_ics(read_source(src["url"]), src)
+            got = events_from_ics(read_source(url), src)
         except Exception as e:  # keep the last good copy of this source's events
             print("Could not read %s (%s); keeping its previous events." % (src["name"], e))
             got = [e2 for e2 in old if e2.get("source") == src["name"]]
+        skip_words = [w.lower() for w in src.get("exclude", [])]
         added = skipped = 0
         for e in got:
-            if any(is_duplicate(e, m) for m in merged):
+            if any(w in e["title"].lower() for w in skip_words):
+                skipped += 1
+            elif any(is_duplicate(e, m) for m in merged):
                 skipped += 1
             else:
                 merged.append(e); added += 1

@@ -23,6 +23,7 @@ jobs:
       - name: Build events and feeds from the public sheet tab
         env:
           SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
+          HOOPA_ICS_URL: ${{ secrets.HOOPA_ICS_URL }}
         run: python3 calendar/build.py
       - name: Save if anything changed
         run: |

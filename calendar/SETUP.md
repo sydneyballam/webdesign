@@ -96,6 +96,8 @@ How it behaves:
 - If a feed event matches one already in the sheet (same date, and a very similar title, or the same place within 30 minutes), the sheet version wins and the feed copy is skipped.
 - If a feed can't be reached one hour, its last good events stay on the calendar.
 - A town is picked by finding a known town name in the event's location text.
+- A feed address that should not sit in a public repo (for example a calendar named after a person's email) goes in a GitHub secret instead. Use `"url_env": "SECRET_NAME"` in place of `"url"`, and add the secret in Settings, Secrets and variables, Actions. The Hoopa Valley Tribe entry works this way, with the secret `HOOPA_ICS_URL`. The workflow file passes each secret to the build.
+- To leave certain events out of a feed, add `"exclude": ["word", "another"]` to its entry. Any event whose title contains one of those words is skipped.
 - Feed events are trusted and appear without review. The review step is for submissions and Gemini suggestions.
 
 ## Suggested events from Gemini
