@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Small Business Studio of Willow Creek</title>
 <meta name="description" content="Websites, online booking, new-equipment setup and simple systems for Willow Creek small businesses, explained in plain English. Book a free first conversation.">
-<script>
-/* Links people already have, such as index.html?client=unique-boutique, now live on the work page. */
-if (/[?&](client|category)=/.test(location.search)) { location.replace('work.html' + location.search); }
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,6 +13,27 @@ body { margin: 0; }
 html { scroll-behavior: smooth; }
 a:focus-visible { outline: 3px solid #E0A526; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ---- work list ---- */
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip { min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid #A9BDB8; background: #FFFFFF; color: #12302F; font: 600 1rem 'Source Sans 3', system-ui, sans-serif; cursor: pointer; }
+.chip[aria-pressed="true"] { background: #12302F; border-color: #12302F; color: #F5F7F6; }
+.chip small { font-size: 0.8125rem; opacity: 0.75; }
+.flabel { display: block; margin: 0 0 0.5rem; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3E5655; }
+#clientSelect { min-height: 44px; width: 100%; max-width: 22rem; border: 1px solid #A9BDB8; border-radius: 10px; padding: 0 0.75rem; background: #FFFFFF; color: #12302F; font: 600 1rem 'Source Sans 3', system-ui, sans-serif; }
+.linkbtn { min-height: 44px; padding: 0; border: 0; background: none; color: #1F5F6B; font: 700 1rem 'Source Sans 3', system-ui, sans-serif; text-decoration: underline; cursor: pointer; }
+#results { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); gap: 1rem; }
+.card { display: flex; flex-direction: column; gap: 0.75rem; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.5rem; box-sizing: border-box; min-width: 0; }
+.card h3 { margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15; }
+.card p { margin: 0; color: #3E5655; }
+.badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.badge { font-size: 0.8125rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 6px; }
+.badge.published { background: #D6EFE0; color: #0F4A2A; }
+.badge.prototype { background: #FBEBC4; color: #5A3D00; }
+.badge.tag { background: #E8F0EE; color: #1F4A53; }
+.looks { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.look { min-height: 44px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1rem; border-radius: 999px; border: 2px solid #1F5F6B; color: #1F5F6B; font-weight: 700; text-decoration: none; box-sizing: border-box; }
+.look small { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.85; }
 </style>
 </head>
 <body>
@@ -30,9 +47,8 @@ a:focus-visible { outline: 3px solid #E0A526; outline-offset: 3px; }
 <a href="#problems" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">What I help with</a>
 <a href="#how" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">How it works</a>
 <a href="#start" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Getting started</a>
-<a href="#work" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Recent work</a>
+<a href="#work" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Our work</a>
 <a href="#learn" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Learn something</a>
-<a href="work.html" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Our work</a>
 <a href="#book" style="color: #DCEBE8; text-decoration: none; font-weight: 600; font-size: 1rem; min-height: 44px; display: inline-flex; align-items: center">Book a chat</a>
 </nav>
 </div>
@@ -242,27 +258,26 @@ a:focus-visible { outline: 3px solid #E0A526; outline-offset: 3px; }
 </div>
 </section>
 
-<!-- RECENT WORK -->
+<!-- OUR WORK -->
 <section id="work" style="background: #F5F7F6">
 <div style="max-width: 70rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">Recent work</p>
-<h2 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">Local businesses I've worked with.</h2>
-<p style="margin: 0 0 2.5rem; color: #3E5655">Shared with the owners' permission.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 1rem">
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<p style="margin: 0 0 0.25rem; font-size: 0.9375rem; font-weight: 700; color: #1F5F6B">Estate sales and antiques &middot; Willow Creek</p>
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Unique Boutique</h3>
-<p style="margin: 0 0 1rem; color: #3E5655">A magazine-style catalog that gives people a reason to come through the door, plus a plan for photographing and posting new finds that fits into the owners' day.</p>
-<a href="work.html?client=unique-boutique" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: #1F5F6B">See the designs</a>
-</div>
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D5DEDC; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<p style="margin: 0 0 0.25rem; font-size: 0.9375rem; font-weight: 700; color: #1F5F6B">Massage, reiki and sound healing &middot; Trinity County</p>
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Sweet Somatics</h3>
-<p style="margin: 0 0 1rem; color: #3E5655">A calm, phone-friendly site with online booking in each town she visits and a listing for her small summer retreats, so people can find her and reserve a time themselves.</p>
-<a href="https://sweetsomatics.github.io/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: #1F5F6B">Visit her site</a>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1F5F6B">Our work</p>
+<h2 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem">Published sites and prototypes.</h2>
+<p id="workIntro" style="margin: 0 0 2rem; color: #3E5655; max-width: 40rem">Shared with the owners' permission. Published sites are live today. Prototypes are drafts that show what's possible.</p>
+<div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem">
+<div><span class="flabel">Show</span><div id="statusChips" class="chips"></div></div>
+<div><span class="flabel">Type of business</span><div id="catChips" class="chips"></div></div>
+<div><label for="clientSelect" class="flabel">Client</label><select id="clientSelect"></select></div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem">
+<p id="resultCount" aria-live="polite" style="margin: 0; color: #3E5655"></p>
+<button id="copyBtn" type="button" class="linkbtn">Copy link to this view</button>
 </div>
 </div>
-<p style="margin: 1.5rem 0 0"><a href="work.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: #1F5F6B">Browse all published sites and prototypes</a></p>
+<div id="results"></div>
+<div id="emptyState" hidden style="text-align: center; padding: 2.5rem 1rem; border: 2px dashed #A9BDB8; border-radius: 12px">
+<p id="emptyText" style="margin: 0 0 0.5rem; color: #3E5655"></p>
+<button id="resetBtn" type="button" class="linkbtn">Show everything</button>
+</div>
 </div>
 </section>
 
@@ -334,6 +349,169 @@ a:focus-visible { outline: 3px solid #E0A526; outline-offset: 3px; }
             if (entries.some(function (e) { return e.isIntersecting; })) { start(); obs.disconnect(); }
         }, { rootMargin: '400px' }).observe(box);
     } else { start(); }
+})();
+</script>
+<script>
+/* ==========================================================
+   HOW TO ADD THINGS
+   1. New client: add a line to CLIENTS. The key becomes the link,
+      for example index.html?client=unique-boutique
+   2. New design: add an object to DESIGNS. A design can have several
+      "looks" (variations). "categories" can list more than one.
+   3. New category: add a line to CATEGORIES.
+   4. Every look has a status: 'published' (a live site) or
+      'prototype' (a draft or sample). Change the word when a
+      prototype goes live.
+   A look's url can be a file in this folder or a full web address.
+   ========================================================== */
+(function () {
+    var CLIENTS = {
+        'unique-boutique': { name: 'Unique Boutique', place: 'Willow Creek, CA' },
+        'jessica':         { name: 'Sweet Somatics',  place: 'Hayfork, CA' }
+    };
+    var CATEGORIES = [
+        { id: 'storefront',   label: 'Storefront' },
+        { id: 'appointments', label: 'Appointments & Calendar' },
+        { id: 'wellness',     label: 'Wellness & Retreats' }
+    ];
+    var STATUSES = [
+        { id: 'published', label: 'Published', plural: 'Published sites' },
+        { id: 'prototype', label: 'Prototype', plural: 'Prototypes' }
+    ];
+    var DESIGNS = [
+        {
+            title: 'Estate Storefront',
+            client: 'unique-boutique',
+            categories: ['storefront'],
+            industry: 'Retail · Estate sales',
+            blurb: 'Estate sale inventory, vintage apparel and Fiestaware.',
+            looks: [
+                { label: 'Treasure shop', url: 'ubwc1.html',        status: 'prototype' },
+                { label: 'Gallery',       url: 'ubwc2.html',        status: 'prototype' },
+                { label: 'Catalog 1',     url: 'ubwc3.html',        status: 'prototype' },
+                { label: 'Magazine',      url: 'ubwcmagazine.html', status: 'prototype' },
+                { label: 'Catalog 2',     url: 'ubwcvm.html',       status: 'prototype' },
+                { label: 'Catalog 3',     url: 'ub1.html',          status: 'prototype' }
+            ]
+        },
+        {
+            title: 'Wellness & Retreats',
+            client: 'jessica',
+            categories: ['wellness', 'appointments'],
+            industry: 'Wellness · Massage, reiki, sound healing, yoga',
+            blurb: 'Online booking, summer retreats, and an email signup.',
+            looks: [
+                { label: 'Visit her site', url: 'https://sweetsomatics.github.io/', status: 'published' }
+            ]
+        }
+    ];
+
+    /* ---------------- code below needs no editing ---------------- */
+    var state = { category: 'all', client: 'all', status: 'all' };
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function byId(list, id) { return list.filter(function (x) { return x.id === id; })[0]; }
+    function external(u) { return /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : ''; }
+
+    function readUrl() {
+        var p = new URLSearchParams(location.search);
+        if (p.get('client') && CLIENTS[p.get('client')]) state.client = p.get('client');
+        if (p.get('category') && byId(CATEGORIES, p.get('category'))) state.category = p.get('category');
+        if (p.get('status') && byId(STATUSES, p.get('status'))) state.status = p.get('status');
+    }
+    function queryString() {
+        var p = new URLSearchParams();
+        if (state.client !== 'all') p.set('client', state.client);
+        if (state.category !== 'all') p.set('category', state.category);
+        if (state.status !== 'all') p.set('status', state.status);
+        return p.toString();
+    }
+    function syncUrl() {
+        var qs = queryString();
+        try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs + '#work' : '') + (qs ? '' : location.hash)); } catch (e) {}
+    }
+    function lookShown(l) { return state.status === 'all' || l.status === state.status; }
+    function visible() {
+        return DESIGNS.filter(function (d) {
+            return (state.client === 'all' || d.client === state.client) &&
+                   (state.category === 'all' || d.categories.indexOf(state.category) > -1) &&
+                   d.looks.some(lookShown);
+        });
+    }
+
+    function chip(label, active, onclick, soon) {
+        return '<button type="button" class="chip" aria-pressed="' + active + '" onclick="' + onclick + '">' + esc(label) + (soon ? ' <small>· soon</small>' : '') + '</button>';
+    }
+    function renderChips() {
+        $('statusChips').innerHTML = chip('Everything', state.status === 'all', "studioWork.set('status','all')") +
+            STATUSES.map(function (s) {
+                var none = !DESIGNS.some(function (d) { return d.looks.some(function (l) { return l.status === s.id; }); });
+                return chip(s.plural, state.status === s.id, "studioWork.set('status','" + s.id + "')", none);
+            }).join('');
+        $('catChips').innerHTML = chip('All types', state.category === 'all', "studioWork.set('category','all')") +
+            CATEGORIES.map(function (c) {
+                var none = !DESIGNS.some(function (d) { return d.categories.indexOf(c.id) > -1; });
+                return chip(c.label, state.category === c.id, "studioWork.set('category','" + c.id + "')", none);
+            }).join('');
+        $('clientSelect').innerHTML = '<option value="all">All clients</option>' +
+            Object.keys(CLIENTS).map(function (k) {
+                return '<option value="' + esc(k) + '"' + (state.client === k ? ' selected' : '') + '>' + esc(CLIENTS[k].name) + '</option>';
+            }).join('');
+    }
+    function card(d) {
+        var client = CLIENTS[d.client];
+        var shown = d.looks.filter(lookShown);
+        var statuses = shown.map(function (l) { return l.status; }).filter(function (s, i, a) { return a.indexOf(s) === i; });
+        var badges = statuses.map(function (s) { return '<span class="badge ' + esc(s) + '">' + esc(byId(STATUSES, s).label) + '</span>'; }).join('') +
+            d.categories.map(function (c) { return '<span class="badge tag">' + esc(byId(CATEGORIES, c).label) + '</span>'; }).join('');
+        var looks = shown.map(function (l) {
+            return '<a class="look" href="' + esc(l.url) + '"' + external(l.url) + '>' + esc(l.label) +
+                (statuses.length > 1 ? '<small>' + esc(byId(STATUSES, l.status).label) + '</small>' : '') + '</a>';
+        }).join('');
+        return '<article class="card"><div class="badges">' + badges + '</div>' +
+            '<h3>' + esc(d.title) + '</h3>' +
+            '<p style="font-weight: 700; color: #1F5F6B">' + esc(client.name) + ' · ' + esc(client.place) + '</p>' +
+            '<p>' + esc(d.blurb) + '</p>' +
+            '<div class="looks">' + looks + '</div></article>';
+    }
+    function render() {
+        renderChips();
+        var list = visible();
+        $('results').innerHTML = list.map(card).join('');
+        var count = list.length + (list.length === 1 ? ' design' : ' designs');
+        if (state.client !== 'all') count += ' for ' + CLIENTS[state.client].name;
+        if (state.category !== 'all') count += ' in ' + byId(CATEGORIES, state.category).label;
+        if (state.status !== 'all') count += ' (' + byId(STATUSES, state.status).plural.toLowerCase() + ' only)';
+        $('resultCount').textContent = count;
+        $('emptyState').hidden = list.length > 0;
+        if (!list.length) {
+            var noneAtAll = state.category !== 'all' && !DESIGNS.some(function (d) { return d.categories.indexOf(state.category) > -1; });
+            $('emptyText').textContent = noneAtAll ? 'Designs for ' + byId(CATEGORIES, state.category).label + ' are coming soon.' : 'No designs match these filters yet.';
+        }
+        syncUrl();
+    }
+    function copyLink() {
+        var qs = queryString();
+        var url = location.href.split('?')[0].split('#')[0] + (qs ? '?' + qs + '#work' : '#work');
+        var btn = $('copyBtn');
+        function done() { btn.textContent = 'Link copied'; setTimeout(function () { btn.textContent = 'Copy link to this view'; }, 2000); }
+        if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link:', url); }); }
+        else { window.prompt('Copy this link:', url); }
+    }
+
+    window.studioWork = {
+        set: function (key, value) { state[key] = value; render(); },
+        reset: function () { state.category = 'all'; state.client = 'all'; state.status = 'all'; render(); }
+    };
+    $('clientSelect').addEventListener('change', function (e) { state.client = e.target.value; render(); });
+    $('copyBtn').addEventListener('click', copyLink);
+    $('resetBtn').addEventListener('click', window.studioWork.reset);
+
+    var filtered = location.search.indexOf('client=') > -1 || location.search.indexOf('category=') > -1 || location.search.indexOf('status=') > -1;
+    readUrl();
+    render();
+    /* Shared links such as index.html?client=jessica open straight to the work list. */
+    if (filtered) { window.addEventListener('load', function () { $('work').scrollIntoView({ behavior: 'instant', block: 'start' }); }); }
 })();
 </script>
 </body>
