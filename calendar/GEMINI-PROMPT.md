@@ -22,6 +22,8 @@ Read these pages directly:
 - Blue Lake Casino calendar: https://www.bluelakecasino.com/calendar/?view=list (read every page of the list)
 - Studio 299 (Willow Creek): https://www.studio299arts.com/
 - Willow Creek Chamber of Commerce calendar: https://www.willowcreekchamber.com/calendar
+- Humboldt County Chamber of Commerce events (county-wide): https://www.chamberorganizer.com/members/calendar6c_responsive.php?org_id=HCCW
+- Same calendar, simple mobile page: http://chamberbyphone.mobi/mobi_events.php?org_id=HCCW
 - [ADD MORE SOURCES HERE, one per line]
 
 Then search the web for other public events in these places over the next 60 days:
