@@ -18,7 +18,7 @@ import csv, datetime as dt, hashlib, io, json, os, re, sys, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FEEDS = os.path.join(HERE, "feeds")
-CAL_NAME = "Willow Creek & Nearby Events"
+CAL_NAME = "Along the 299 Events"
 
 
 def slug(s):

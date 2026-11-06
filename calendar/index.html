@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What's Happening | Community Calendar</title>
-<meta name="description" content="Events in Willow Creek and nearby. Bookmark it or subscribe on your phone.">
+<title>What's Going On Along the 299 | Community Calendar</title>
+<meta name="description" content="Events along Highway 299 from Arcata to Weaverville, plus Hoopa and Eureka. Bookmark it or subscribe on your phone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -84,8 +84,8 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Community calendar</div>
-    <h1>What's happening</h1>
-    <p>Willow Creek and nearby, all in one place. Bookmark this page, or subscribe once and new events show up on your phone's calendar.</p>
+    <h1>What's going on along the 299</h1>
+    <p>Along the 299, plus Hoopa and Eureka, all in one place. Bookmark this page, or subscribe once and new events show up on your phone's calendar.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
       <button class="btn gold" id="subBtn" aria-expanded="false" aria-controls="subPanel">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
@@ -138,6 +138,9 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 (function () {
   // Where the "Submit an event" button goes. Leave empty until the Google Form exists.
   var FORM_URL = '';
+
+  // Town chips run west to east along the highway. Hoopa sits where its road branches off at Willow Creek.
+  var ORDER = ['Eureka', 'Arcata', 'McKinleyville', 'Blue Lake', 'Willow Creek', 'Hoopa', 'Burnt Ranch', 'Big Bar', 'Junction City', 'Weaverville'];
 
   var DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -313,7 +316,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
   }
 
   fetch('events.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) {
-    data = j; towns = j.towns || [];
+    data = j; towns = (j.towns || []).slice().sort(function (a, b) { var ia = ORDER.indexOf(a), ib = ORDER.indexOf(b); if (ia < 0) ia = 99; if (ib < 0) ib = 99; return ia - ib || a.localeCompare(b); });
     if (state.town && towns.indexOf(state.town) < 0) state.town = '';
     var firstUp = j.events.filter(function (e) { return e.end_date >= key(today); })[0];
     state.month = new Date(today.getFullYear(), today.getMonth(), 1);
