@@ -99,7 +99,8 @@ def clean_rows(rows):
             "description": r.get("description", ""),
             "free": r.get("free", "").lower() in ("yes", "y", "true", "free"),
             "category": r.get("category", ""),
-            "source": "",
+            "source": r.get("source", ""),
+            "source_url": r.get("source_url", ""),
         })
     events.sort(key=lambda e: (e["date"], e["start_time"] or "00:00", e["title"]))
     return events
@@ -203,6 +204,7 @@ def events_from_ics(text, source):
             "website": ev.get("URL", ({}, ""))[1].strip(),
             "description": plain(unescape(ev.get("DESCRIPTION", ({}, ""))[1])),
             "free": False, "category": "", "source": source["name"],
+            "source_url": source.get("page", ""),
         })
     return out
 

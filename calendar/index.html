@@ -54,6 +54,7 @@ main{padding-top:8px;padding-bottom:24px}
 .card h3{font-size:20px;line-height:1.25}
 .where{color:var(--body)}
 .src{font-size:14px;color:var(--body)}
+.src a{display:inline-block;padding:10px 0}
 .desc{margin:2px 0 0;color:var(--body)}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
 .empty,.err{background:#fff;border:1px dashed var(--line);border-radius:12px;padding:22px;color:var(--body);margin-top:20px}
@@ -187,7 +188,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
       '<div class="card"><div class="when"><span>' + esc(whenText(e)) + '</span>' + (e.free ? '<span class="pill">Free</span>' : '') + '</div>' +
       '<h3>' + esc(e.title) + '</h3><div class="where">' + esc(where) + (e.address ? '<br>' + esc(e.address) : '') + '</div>' +
       (e.description ? '<p class="desc">' + esc(e.description) + '</p>' : '') +
-      (e.source ? '<div class="src">From the ' + esc(e.source) + '</div>' : '') +
+      (e.source ? '<div class="src">From ' + (e.source_url ? '<a href="' + esc(e.source_url) + '" target="_blank" rel="noopener">' + esc(e.source) + '</a>' : esc(e.source)) + '</div>' : '') +
       '<div class="actions"><button class="btn out" type="button" data-ics="' + e.id + '">' + icon('<path d="M12 5v14M5 12h14"/>') + 'Add to calendar</button>' +
       (e.website ? '<a class="btn out" href="' + esc(e.website) + '" target="_blank" rel="noopener">Website</a>' : '') +
       (maps ? '<a class="btn out" href="' + esc(maps) + '" target="_blank" rel="noopener">Directions</a>' : '') +

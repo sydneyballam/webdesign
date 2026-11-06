@@ -1,12 +1,47 @@
 {
- "updated": "2026-11-06T23:36:40Z",
+ "updated": "2026-11-06T23:45:58Z",
  "towns": [
   "Big Bar",
+  "Blue Lake",
   "Burnt Ranch",
   "Hoopa",
   "Willow Creek"
  ],
  "events": [
+  {
+   "id": "693972d8cd11",
+   "title": "Dance Hits & Soul with Blue Rhythm Revue",
+   "date": "2026-11-06",
+   "end_date": "2026-11-06",
+   "start_time": "20:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Wave Lounge, Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/dance-hits-soul-with-blue-rhythm-revue/",
+   "description": "Check the event page for details and any age limits.",
+   "free": true,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
+  },
+  {
+   "id": "5a8cd6f71638",
+   "title": "Humboldt County 2nd Annual Wedding & Event Fair",
+   "date": "2026-11-07",
+   "end_date": "2026-11-07",
+   "start_time": "12:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/humboldt-county-2nd-annual-wedding-event-fair/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
+  },
   {
    "id": "4dc7ee401e14",
    "title": "Museum Membership Dinner",
@@ -21,7 +56,25 @@
    "description": "Historian Jerry Rohde speaks. Free appetizers for members, and you can join for $15.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "265379a0bd96",
+   "title": "Dance Hits with Dr. Squid",
+   "date": "2026-11-07",
+   "end_date": "2026-11-07",
+   "start_time": "20:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/dance-hits-with-dr-squid-2/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
    "id": "4dcd1a8de3cd",
@@ -37,7 +90,8 @@
    "description": "Learn who qualifies for free fuels reduction work.",
    "free": true,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "cd5ce4492c00",
@@ -53,7 +107,8 @@
    "description": "Same meeting as Monday, closer to Big Bar.",
    "free": true,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "f62be0c7f19b",
@@ -69,7 +124,8 @@
    "description": "Tribal members and the community are invited.",
    "free": true,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "ae9e29189f44",
@@ -85,7 +141,25 @@
    "description": "Hosted by Pawsitive Animal Services. Buy dinner at 5:30pm (regular or loaded hot dogs, or nachos), then bingo from 6pm to 8pm. $30 buy-in, 8 games, a smoked salmon blackout, and over $500 in prizes. Special: 2 for $10. Presale tickets: call Still Stylin' at 530-629-3418.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "",
+   "source_url": ""
+  },
+  {
+   "id": "9a45aa35eed3",
+   "title": "Latin Night with DJ Pachanguero",
+   "date": "2026-11-13",
+   "end_date": "2026-11-13",
+   "start_time": "21:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-14/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
    "id": "43899836227a",
@@ -101,7 +175,25 @@
    "description": "Ribbon cutting at 1pm, plus food, drinks and a raffle.",
    "free": true,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "01f0491e05cc",
+   "title": "Dance Music with The R3$pecht Collective",
+   "date": "2026-11-14",
+   "end_date": "2026-11-14",
+   "start_time": "21:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/dance-music-with-the-r3pecht-collective/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
    "id": "009455093e7a",
@@ -117,7 +209,25 @@
    "description": "Held early this month for the holiday. Everyone is welcome.",
    "free": true,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "8afc1dd4434e",
+   "title": "Dance Hits with StereotactiX",
+   "date": "2026-11-20",
+   "end_date": "2026-11-20",
+   "start_time": "20:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/dance-hits-with-stereotactix/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
    "id": "959438757435",
@@ -133,7 +243,8 @@
    "description": "The first of four bazaar weekends.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "7b81e0f35f0a",
@@ -149,7 +260,8 @@
    "description": "Lunch available from New Rv Catering.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "515f3913f84c",
@@ -165,7 +277,25 @@
    "description": "Santa visits 1pm to 2pm. Donations support Trinity River Outreach.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "054a8eb8055b",
+   "title": "Dance Hits with The Undercovers",
+   "date": "2026-11-21",
+   "end_date": "2026-11-21",
+   "start_time": "20:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/dance-hits-with-theundercoversnov/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
    "id": "7e3aee1154d4",
@@ -181,7 +311,25 @@
    "description": "All community welcome.",
    "free": true,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "7b6c4684e817",
+   "title": "Thanksgiving Buffet at Alice's",
+   "date": "2026-11-26",
+   "end_date": "2026-11-26",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Alice's Restaurant, Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/thanksgiving-buffet-at-alices/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
    "id": "610f5dfb37ff",
@@ -197,7 +345,42 @@
    "description": "",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "7568f41303ab",
+   "title": "Latin Night with DJ Pachanguero",
+   "date": "2026-11-27",
+   "end_date": "2026-11-27",
+   "start_time": "21:00",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-15/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
+  },
+  {
+   "id": "95ec8f37a581",
+   "title": "Americana with Elderberry Rust String Band",
+   "date": "2026-11-28",
+   "end_date": "2026-11-28",
+   "start_time": "20:30",
+   "end_time": "",
+   "town": "Blue Lake",
+   "place": "Blue Lake Casino Hotel",
+   "address": "",
+   "website": "https://www.bluelakecasino.com/event/americana-with-elderberry-rust-string-band-2/",
+   "description": "Check the event page for details and any age limits.",
+   "free": false,
+   "category": "",
+   "source": "Blue Lake Casino Hotel calendar",
+   "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
    "id": "aa7172092a2d",
@@ -213,7 +396,8 @@
    "description": "",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "be8042999df2",
@@ -229,7 +413,8 @@
    "description": "The festival also has beer and wine, caroling and a visit from Santa. Brought to you by the Willow Creek Chamber of Commerce.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "cfa405632cbc",
@@ -245,7 +430,8 @@
    "description": "The festival also has beer and wine, caroling and a visit from Santa. Brought to you by the Willow Creek Chamber of Commerce.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "db560dc7e218",
@@ -261,7 +447,8 @@
    "description": "The festival also has beer and wine, caroling and a visit from Santa. Brought to you by the Willow Creek Chamber of Commerce.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
    "id": "e0a3aff50a1f",
@@ -277,7 +464,8 @@
    "description": "Save the date.",
    "free": false,
    "category": "",
-   "source": ""
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/"
   }
  ]
 }

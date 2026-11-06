@@ -8,8 +8,33 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
+UID:693972d8cd11@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261106T200000
+DTEND:20261106T210000
+SUMMARY:Dance Hits & Soul with Blue Rhythm Revue
+LOCATION:Wave Lounge\, Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/dance-hits-soul-with-blue-rhythm-revue/
+URL:https://www.bluelakecasino.com/event/dance-hits-soul-with-blue-rhythm-
+ revue/
+END:VEVENT
+BEGIN:VEVENT
+UID:5a8cd6f71638@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261107T120000
+DTEND:20261107T130000
+SUMMARY:Humboldt County 2nd Annual Wedding & Event Fair
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/humboldt-county-2nd-annual-wedding-event-fai
+ r/
+URL:https://www.bluelakecasino.com/event/humboldt-county-2nd-annual-weddin
+ g-event-fair/
+END:VEVENT
+BEGIN:VEVENT
 UID:4dc7ee401e14@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261107T170000
 DTEND:20261107T180000
 SUMMARY:Museum Membership Dinner
@@ -18,8 +43,19 @@ DESCRIPTION:Historian Jerry Rohde speaks. Free appetizers for members\, an
  d you can join for $15.
 END:VEVENT
 BEGIN:VEVENT
+UID:265379a0bd96@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261107T200000
+DTEND:20261107T210000
+SUMMARY:Dance Hits with Dr. Squid
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/dance-hits-with-dr-squid-2/
+URL:https://www.bluelakecasino.com/event/dance-hits-with-dr-squid-2/
+END:VEVENT
+BEGIN:VEVENT
 UID:4dcd1a8de3cd@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261109T180000
 DTEND:20261109T190000
 SUMMARY:Free fuels reduction eligibility meeting
@@ -28,7 +64,7 @@ DESCRIPTION:Learn who qualifies for free fuels reduction work.
 END:VEVENT
 BEGIN:VEVENT
 UID:cd5ce4492c00@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261110T180000
 DTEND:20261110T190000
 SUMMARY:Free fuels reduction eligibility meeting
@@ -37,7 +73,7 @@ DESCRIPTION:Same meeting as Monday\, closer to Big Bar.
 END:VEVENT
 BEGIN:VEVENT
 UID:f62be0c7f19b@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261111T110000
 DTEND:20261111T120000
 SUMMARY:Veterans Day Honoring Ceremony
@@ -46,7 +82,7 @@ DESCRIPTION:Tribal members and the community are invited.
 END:VEVENT
 BEGIN:VEVENT
 UID:ae9e29189f44@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261112T173000
 DTEND:20261112T200000
 SUMMARY:Charity Bingo Night
@@ -57,8 +93,20 @@ DESCRIPTION:Hosted by Pawsitive Animal Services. Buy dinner at 5:30pm (reg
  ial: 2 for $10. Presale tickets: call Still Stylin' at 530-629-3418.
 END:VEVENT
 BEGIN:VEVENT
+UID:9a45aa35eed3@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261113T210000
+DTEND:20261113T220000
+SUMMARY:Latin Night with DJ Pachanguero
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-14/
+URL:https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-1
+ 4/
+END:VEVENT
+BEGIN:VEVENT
 UID:43899836227a@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261114T130000
 DTEND:20261114T160000
 SUMMARY:McClurg Flooring Grand Opening
@@ -66,8 +114,20 @@ LOCATION:McClurg Flooring\, 80 Country Club Dr #A
 DESCRIPTION:Ribbon cutting at 1pm\, plus food\, drinks and a raffle.
 END:VEVENT
 BEGIN:VEVENT
+UID:01f0491e05cc@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261114T210000
+DTEND:20261114T220000
+SUMMARY:Dance Music with The R3$pecht Collective
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/dance-music-with-the-r3pecht-collective/
+URL:https://www.bluelakecasino.com/event/dance-music-with-the-r3pecht-coll
+ ective/
+END:VEVENT
+BEGIN:VEVENT
 UID:009455093e7a@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261118T173000
 DTEND:20261118T183000
 SUMMARY:Monthly Chamber Board Meeting
@@ -75,8 +135,19 @@ LOCATION:Willow Creek
 DESCRIPTION:Held early this month for the holiday. Everyone is welcome.
 END:VEVENT
 BEGIN:VEVENT
+UID:8afc1dd4434e@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261120T200000
+DTEND:20261120T210000
+SUMMARY:Dance Hits with StereotactiX
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/dance-hits-with-stereotactix/
+URL:https://www.bluelakecasino.com/event/dance-hits-with-stereotactix/
+END:VEVENT
+BEGIN:VEVENT
 UID:959438757435@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261121T100000
 DTEND:20261121T160000
 RRULE:FREQ=DAILY;COUNT=2
@@ -86,7 +157,7 @@ DESCRIPTION:The first of four bazaar weekends.
 END:VEVENT
 BEGIN:VEVENT
 UID:7b81e0f35f0a@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261121T100000
 DTEND:20261121T160000
 SUMMARY:Holiday Boutique
@@ -95,7 +166,7 @@ DESCRIPTION:Lunch available from New Rv Catering.
 END:VEVENT
 BEGIN:VEVENT
 UID:515f3913f84c@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261121T110000
 DTEND:20261121T150000
 SUMMARY:Mini Photo Shoot
@@ -104,8 +175,20 @@ DESCRIPTION:Santa visits 1pm to 2pm. Donations support Trinity River Outre
  ach.
 END:VEVENT
 BEGIN:VEVENT
+UID:054a8eb8055b@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261121T200000
+DTEND:20261121T210000
+SUMMARY:Dance Hits with The Undercovers
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/dance-hits-with-theundercoversnov/
+URL:https://www.bluelakecasino.com/event/dance-hits-with-theundercoversnov
+ /
+END:VEVENT
+BEGIN:VEVENT
 UID:7e3aee1154d4@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261125T150000
 DTEND:20261125T170000
 SUMMARY:Trinity River Outreach Friends-Giving
@@ -113,8 +196,19 @@ LOCATION:Studio 299\, 75 The Terrace Ln
 DESCRIPTION:All community welcome.
 END:VEVENT
 BEGIN:VEVENT
+UID:7b6c4684e817@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261126T110000
+DTEND:20261126T120000
+SUMMARY:Thanksgiving Buffet at Alice's
+LOCATION:Alice's Restaurant\, Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/thanksgiving-buffet-at-alices/
+URL:https://www.bluelakecasino.com/event/thanksgiving-buffet-at-alices/
+END:VEVENT
+BEGIN:VEVENT
 UID:610f5dfb37ff@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261127T100000
 DTEND:20261127T160000
 RRULE:FREQ=DAILY;COUNT=3
@@ -122,8 +216,33 @@ SUMMARY:Holiday Bazaar
 LOCATION:Willow Creek
 END:VEVENT
 BEGIN:VEVENT
+UID:7568f41303ab@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261127T210000
+DTEND:20261127T220000
+SUMMARY:Latin Night with DJ Pachanguero
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-15/
+URL:https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-1
+ 5/
+END:VEVENT
+BEGIN:VEVENT
+UID:95ec8f37a581@community-calendar
+DTSTAMP:20261106T234558Z
+DTSTART:20261128T203000
+DTEND:20261128T213000
+SUMMARY:Americana with Elderberry Rust String Band
+LOCATION:Blue Lake Casino Hotel
+DESCRIPTION:Check the event page for details and any age limits.\nhttps://
+ www.bluelakecasino.com/event/americana-with-elderberry-rust-string-band-2
+ /
+URL:https://www.bluelakecasino.com/event/americana-with-elderberry-rust-st
+ ring-band-2/
+END:VEVENT
+BEGIN:VEVENT
 UID:aa7172092a2d@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261204T100000
 DTEND:20261204T160000
 RRULE:FREQ=DAILY;COUNT=3
@@ -132,7 +251,7 @@ LOCATION:Willow Creek
 END:VEVENT
 BEGIN:VEVENT
 UID:be8042999df2@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261205T173000
 DTEND:20261205T183000
 SUMMARY:Festival of Light & Wonder: Lighted Parade
@@ -142,7 +261,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:cfa405632cbc@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261205T180000
 DTEND:20261205T190000
 SUMMARY:Festival of Light & Wonder: Holiday Classic Movie Screening
@@ -152,7 +271,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:db560dc7e218@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART:20261205T183000
 DTEND:20261205T193000
 SUMMARY:Festival of Light & Wonder: Tree Lighting Countdown
@@ -162,7 +281,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:e0a3aff50a1f@community-calendar
-DTSTAMP:20261106T233640Z
+DTSTAMP:20261106T234558Z
 DTSTART;VALUE=DATE:20270619
 DTEND;VALUE=DATE:20270620
 SUMMARY:Bigfoot Daze
