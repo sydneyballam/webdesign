@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T23:32:15Z",
+ "updated": "2026-11-06T23:36:40Z",
  "towns": [
   "Big Bar",
   "Burnt Ranch",
@@ -20,7 +20,8 @@
    "website": "",
    "description": "Historian Jerry Rohde speaks. Free appetizers for members, and you can join for $15.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "4dcd1a8de3cd",
@@ -35,7 +36,8 @@
    "website": "",
    "description": "Learn who qualifies for free fuels reduction work.",
    "free": true,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "cd5ce4492c00",
@@ -50,7 +52,8 @@
    "website": "",
    "description": "Same meeting as Monday, closer to Big Bar.",
    "free": true,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "f62be0c7f19b",
@@ -65,7 +68,8 @@
    "website": "",
    "description": "Tribal members and the community are invited.",
    "free": true,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "ae9e29189f44",
@@ -80,7 +84,8 @@
    "website": "",
    "description": "Hosted by Pawsitive Animal Services. Buy dinner at 5:30pm (regular or loaded hot dogs, or nachos), then bingo from 6pm to 8pm. $30 buy-in, 8 games, a smoked salmon blackout, and over $500 in prizes. Special: 2 for $10. Presale tickets: call Still Stylin' at 530-629-3418.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "43899836227a",
@@ -95,7 +100,8 @@
    "website": "",
    "description": "Ribbon cutting at 1pm, plus food, drinks and a raffle.",
    "free": true,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "009455093e7a",
@@ -110,7 +116,8 @@
    "website": "",
    "description": "Held early this month for the holiday. Everyone is welcome.",
    "free": true,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "959438757435",
@@ -125,7 +132,8 @@
    "website": "",
    "description": "The first of four bazaar weekends.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "7b81e0f35f0a",
@@ -140,7 +148,8 @@
    "website": "",
    "description": "Lunch available from New Rv Catering.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "515f3913f84c",
@@ -155,7 +164,8 @@
    "website": "",
    "description": "Santa visits 1pm to 2pm. Donations support Trinity River Outreach.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "7e3aee1154d4",
@@ -170,7 +180,8 @@
    "website": "",
    "description": "All community welcome.",
    "free": true,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "610f5dfb37ff",
@@ -185,7 +196,8 @@
    "website": "",
    "description": "",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "aa7172092a2d",
@@ -200,7 +212,8 @@
    "website": "",
    "description": "",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "be8042999df2",
@@ -215,7 +228,8 @@
    "website": "",
    "description": "The festival also has beer and wine, caroling and a visit from Santa. Brought to you by the Willow Creek Chamber of Commerce.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "cfa405632cbc",
@@ -230,7 +244,8 @@
    "website": "",
    "description": "The festival also has beer and wine, caroling and a visit from Santa. Brought to you by the Willow Creek Chamber of Commerce.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "db560dc7e218",
@@ -245,7 +260,8 @@
    "website": "",
    "description": "The festival also has beer and wine, caroling and a visit from Santa. Brought to you by the Willow Creek Chamber of Commerce.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   },
   {
    "id": "e0a3aff50a1f",
@@ -260,7 +276,8 @@
    "website": "",
    "description": "Save the date.",
    "free": false,
-   "category": ""
+   "category": "",
+   "source": ""
   }
  ]
 }

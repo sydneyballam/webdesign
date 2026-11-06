@@ -81,6 +81,23 @@ The published link is readable by anyone who has it. That is fine because the Pu
 - The Action in `.github/workflows/calendar.yml` runs every hour (and on demand from the Actions tab). Scheduled runs only start once this is merged into the main branch.
 - In `calendar/index.html`, set `FORM_URL` to the form's link. Until then the Submit buttons stay hidden.
 
+## Other calendars we subscribe to
+
+`calendar/sources.json` lists calendar feeds (`.ics` links) that the hourly build reads and merges in.
+Today it holds the Willow Creek Chamber of Commerce feed.
+
+To add one, add an entry with a name, the feed link (a `webcal://` link works, or the `https://` version),
+and the town to use when the feed doesn't say:
+
+    {"name": "Studio 299", "url": "https://example.com/feed.ics", "default_town": "Willow Creek"}
+
+How it behaves:
+- Events from a feed show "From the <name>" on each card, and link to the event's own page.
+- If a feed event matches one already in the sheet (same date, and a very similar title, or the same place within 30 minutes), the sheet version wins and the feed copy is skipped.
+- If a feed can't be reached one hour, its last good events stay on the calendar.
+- A town is picked by finding a known town name in the event's location text.
+- Feed events are trusted and appear without review. The review step is for submissions and Gemini suggestions.
+
 ## Suggested events from Gemini
 
 Have Gemini write to a separate tab (for example `Suggested`) with the same columns as the form and a source link. Move a row into `Form Responses 1` (or copy it) and type `Yes` in Approved only after checking the source.
