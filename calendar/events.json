@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07T17:28:38Z",
- "sheet": "read 1 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free,,,,,,,,,",
+ "updated": "2026-11-07T17:41:45Z",
+ "sheet": "read 1 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free,,,,,,,,, | row: #REF!,test,11/7/2026,11/7/2026,2:13:00 PM,2:22:00 PM,Willow Creek",
  "towns": [
   "Big Bar",
   "Blue Lake",
