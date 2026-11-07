@@ -113,7 +113,8 @@ def recurring_rows():
 def clean_rows(rows):
     events, today = [], dt.date.today()
     for n, r in enumerate(rows, start=2):
-        r = {(k or "").strip().lower(): (v or "").strip() for k, v in r.items()}
+        # Extra columns come through as a list under a missing heading; ignore them.
+        r = {k.strip().lower(): (v or "").strip() for k, v in r.items() if k and (v is None or isinstance(v, str))}
         title = r.get("title", "")
         start = parse_date(r.get("date"))
         if not title and not r.get("date"):

@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07T17:28:38Z",
- "sheet": "read 1 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free,,,,,,,,,",
+ "updated": "2026-11-07T17:50:12Z",
+ "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Big Bar",
   "Blue Lake",
