@@ -49,7 +49,7 @@ Add a Yes/No question for logo and branding permission only when branding is add
 ## 2. The sheet
 
 1. In the form, open Responses and click "Link to Sheets". Name the new tab `Form Responses 1` (the default).
-2. In that tab, add a header `Approved` in column T. You type `Yes` in column T for each event you approve.
+2. In that tab, add a header `Approved` in column T. You tick the box in column T for each event you approve.
 3. Add a new tab named `Public`.
 4. In `Public` row 1, type these headers in A1 to K1:
    `title,date,end_date,start_time,end_time,town,place,address,website,description,free`

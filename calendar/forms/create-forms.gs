@@ -58,6 +58,8 @@ function buildSubmissionForm(ss) {
             ss.getSheets()[ss.getSheets().length - 1];
   tab.setName('Form Responses 1');
   tab.getRange('T1').setValue('Approved');
+  tab.getRange('T2:T1000').insertCheckboxes();  // tick a box to publish that event
+  tab.setFrozenRows(1);
   var pub = ss.getSheetByName('Public') || ss.insertSheet('Public');
   pub.getRange('A1:K1').setValues([['title', 'date', 'end_date', 'start_time', 'end_time', 'town', 'place', 'address', 'website', 'description', 'free']]);
   pub.getRange('A2').setFormula(
@@ -70,7 +72,7 @@ function buildSubmissionForm(ss) {
     "ARRAYFORMULA(IF('Form Responses 1'!J2:J=\"Yes\",'Form Responses 1'!I2:I,\"\"))," +
     "ARRAYFORMULA(IF('Form Responses 1'!L2:L=\"Yes\",'Form Responses 1'!K2:K,\"\"))," +
     "'Form Responses 1'!M2:M,'Form Responses 1'!N2:N}," +
-    "'Form Responses 1'!T2:T=\"Yes\"),\"\")");
+    "'Form Responses 1'!T2:T=TRUE),\"\")");
   return f;
 }
 
