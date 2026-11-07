@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--deep:#12302F;--teal:#1F5F6B;--gold:#E0A526;--bg:#F5F7F6;--line:#D5DEDC;--body:#3E5655;--mint:#E8F1EF}
+:root{--deep:#1C2541;--teal:#2B5EA7;--gold:#D9C2F0;--bg:#F6F7FB;--line:#D7DCEB;--body:#3B4560;--mint:#E9EEF8}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--deep);font-family:'Source Sans 3',system-ui,sans-serif;font-size:17px;line-height:1.5}
 h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;margin:0}
@@ -73,7 +73,7 @@ main{padding-top:8px;padding-bottom:24px}
 .grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
 .dowh{text-align:center;font-size:13px;font-weight:700;color:var(--body);padding:4px 0}
 .day{min-height:56px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--deep);padding:6px 2px;font-size:16px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:4px}
-.day.out{background:transparent;border-color:transparent;color:#7a8f8d}
+.day.out{background:transparent;border-color:transparent;color:#7C88A8}
 .day.today{border:2px solid var(--gold)}
 .day.sel{background:var(--teal);color:#fff;border-color:var(--teal)}
 .dots{display:flex;gap:3px;min-height:8px}
@@ -86,11 +86,16 @@ main{padding-top:8px;padding-bottom:24px}
 .band h2{font-size:28px;margin-bottom:10px}
 .band p{margin:0 0 16px;color:var(--mint);max-width:560px;font-size:18px}
 footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
+.topbar{background:var(--deep);border-bottom:1px solid rgba(255,255,255,.14)}
+.topbar .wrap{padding-top:4px;padding-bottom:4px}
+.topbar a{color:#DCE4F5;font-weight:600;font-size:15px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.topbar a:hover{text-decoration:underline}
 .hidden{display:none!important}
 </style>
 </head>
 <body>
 
+<div class="topbar"><div class="wrap"><a href="../">Small Business Studio of Willow Creek</a></div></div>
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Community calendar</div>
