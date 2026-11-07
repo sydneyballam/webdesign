@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T02:00:40Z",
+ "updated": "2026-11-07T04:03:40Z",
  "towns": [
   "Big Bar",
   "Blue Lake",
@@ -7,6 +7,7 @@
   "Eureka",
   "Ferndale",
   "Hoopa",
+  "Salyer",
   "Weaverville",
   "Willow Creek"
  ],
@@ -180,6 +181,23 @@
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
    "source_url": "https://www.bluelakecasino.com/calendar/"
+  },
+  {
+   "id": "78d646bed134",
+   "title": "One Fall Day Crafts and Artisan Vendors",
+   "date": "2026-11-07",
+   "end_date": "2026-11-07",
+   "start_time": "10:00",
+   "end_time": "15:00",
+   "town": "Salyer",
+   "place": "Salyer Wayside Chapel",
+   "address": "",
+   "website": "",
+   "description": "Crafts and artisan vendors, plus coffee and sweet treats.",
+   "free": false,
+   "category": "",
+   "source": "",
+   "source_url": ""
   },
   {
    "id": "5a8cd6f71638",
@@ -903,14 +921,14 @@
    "start_time": "10:00",
    "end_time": "16:00",
    "town": "Willow Creek",
-   "place": "",
+   "place": "Willow Creek-China Flat Museum",
    "address": "",
-   "website": "",
-   "description": "The first of four bazaar weekends.",
+   "website": "http://www.thebigfootmuseum.com/",
+   "description": "Handmade gifts, jewelry, candles, soaps, festive decor, ornaments, wreaths, garlands, treats and more. Vendors welcome: vendors must be museum members (membership is $15 a year). Details at thebigfootmuseum.com.",
    "free": false,
    "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source": "Willow Creek-China Flat Museum flyer",
+   "source_url": "http://www.thebigfootmuseum.com/"
   },
   {
    "id": "7b81e0f35f0a",
@@ -1151,21 +1169,21 @@
    "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
-   "id": "610f5dfb37ff",
-   "title": "Holiday Bazaar",
+   "id": "89f9c1c1df60",
+   "title": "Annual Holiday Bazaar",
    "date": "2026-11-27",
    "end_date": "2026-11-29",
    "start_time": "10:00",
    "end_time": "16:00",
    "town": "Willow Creek",
-   "place": "",
+   "place": "Willow Creek-China Flat Museum",
    "address": "",
-   "website": "",
-   "description": "",
+   "website": "http://www.thebigfootmuseum.com/",
+   "description": "Handmade gifts, jewelry, candles, soaps, festive decor, ornaments, wreaths, garlands, treats and more. Vendors welcome: vendors must be museum members (membership is $15 a year). Details at thebigfootmuseum.com.",
    "free": false,
    "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source": "Willow Creek-China Flat Museum flyer",
+   "source_url": "http://www.thebigfootmuseum.com/"
   },
   {
    "id": "ef481ea66aaa",
@@ -1406,21 +1424,21 @@
    "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
-   "id": "aa7172092a2d",
-   "title": "Holiday Bazaar",
+   "id": "2eb06563898f",
+   "title": "Annual Holiday Bazaar",
    "date": "2026-12-04",
    "end_date": "2026-12-06",
    "start_time": "10:00",
    "end_time": "16:00",
    "town": "Willow Creek",
-   "place": "",
+   "place": "Willow Creek-China Flat Museum",
    "address": "",
-   "website": "",
-   "description": "",
+   "website": "http://www.thebigfootmuseum.com/",
+   "description": "Handmade gifts, jewelry, candles, soaps, festive decor, ornaments, wreaths, garlands, treats and more. Vendors welcome: vendors must be museum members (membership is $15 a year). Details at thebigfootmuseum.com.",
    "free": false,
    "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source": "Willow Creek-China Flat Museum flyer",
+   "source_url": "http://www.thebigfootmuseum.com/"
   },
   {
    "id": "9339ae72ce35",
