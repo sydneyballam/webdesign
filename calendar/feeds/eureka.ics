@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:5a8cd6f71638@community-calendar
-DTSTAMP:20261107T000231Z
+DTSTAMP:20261107T020040Z
 DTSTART:20261107T120000
 DTEND:20261107T163000
 SUMMARY:Humboldt County 2nd Annual Wedding & Event Fair
@@ -18,5 +18,411 @@ DESCRIPTION:Check the event page for details and any price.\nhttps://www.b
  luelakecasino.com/event/humboldt-county-2nd-annual-wedding-event-fair/
 URL:https://www.bluelakecasino.com/event/humboldt-county-2nd-annual-weddin
  g-event-fair/
+END:VEVENT
+BEGIN:VEVENT
+UID:69299e4947ce@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261107T180000
+DTEND:20261107T210000
+SUMMARY:First Saturday Night Arts Alive!
+LOCATION:Downtown & Old Town Eureka
+DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants 
+ across Old Town and Downtown stay open late on the first Saturday of the 
+ month\, with art\, live music and pop-up performances. More info\nhttps:/
+ /www.visiteureka.com/event/first-saturday-night-arts-alive/
+URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive/
+END:VEVENT
+BEGIN:VEVENT
+UID:a16957329de2@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261107T190000
+DTEND:20261107T220000
+SUMMARY:Essential Cinema: Children of Men (20th Anniversary)
+LOCATION:Eureka Theater\, 612 F St.
+DESCRIPTION:Alfonso Cuarón’s dystopian thriller returns to the big scre
+ en for its 20th anniversary. Set in 2027 after two decades of global infe
+ rtility\, it follows Theo (Clive Owen) as he’s pulled into protecting t
+ he first pregnant woman in eighteen years. Doors 7pm\, film 7:30pm. $10 a
+ dults\, $5 kids under 12....\nhttps://www.visiteureka.com/event/essential
+ -cinema-children-of-men-20th-anniversary/
+URL:https://www.visiteureka.com/event/essential-cinema-children-of-men-20t
+ h-anniversary/
+END:VEVENT
+BEGIN:VEVENT
+UID:45407abf1373@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261108T130000
+DTEND:20261108T160000
+SUMMARY:Fall Wreath Making Class for Beginners
+LOCATION:Carl Johnson Company\, 3950 Jacobs Ave
+DESCRIPTION:Make a fall wreath with Misty\, new owner of Blossoms. Mimosa 
+ included. $85 per person. Non-refundable\, though refunds are possible wi
+ th 48+ hours’ notice. Sign up\nhttps://www.visiteureka.com/event/fall-w
+ reath-making-class-for-beginners/
+URL:https://www.visiteureka.com/event/fall-wreath-making-class-for-beginne
+ rs/
+END:VEVENT
+BEGIN:VEVENT
+UID:ea28525fdd8e@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261112T200000
+DTEND:20261112T200000
+RRULE:FREQ=DAILY;COUNT=31
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:9cbd25f20d49@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261113T160000
+DTEND:20261113T160000
+RRULE:FREQ=DAILY;COUNT=2
+SUMMARY:Fig Twig Holiday Market
+LOCATION:Redwood Acres
+DESCRIPTION:A curated holiday market with 90+ vendors of handmade\, vintag
+ e\, up-cycled\, home decor\, jewelry\, bath & body\, plants and clothing 
+ across two buildings (Franceschi Hall & Vickers Building)\, plus local fo
+ od trucks\, cocktails and beverages. Hours: Friday 4–9pm\, Saturday 10a
+ m–4pm. Admission $5. More info\nhttps://www.visiteureka.com/event/fig-t
+ wig-holiday-market/
+URL:https://www.visiteureka.com/event/fig-twig-holiday-market/
+END:VEVENT
+BEGIN:VEVENT
+UID:9c035344e598@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261113T170000
+DTEND:20261113T200000
+SUMMARY:Holiday Shop & Stroll
+LOCATION:Throughout Downtown & Old Town Eureka
+DESCRIPTION:Kick off the season with an evening of holiday shopping in Dow
+ ntown and Old Town Eureka. Businesses stay open late with in-store specia
+ ls\, lit storefronts\, live music and sweet treats. Formerly the Downtown
+  & Old Town Holiday Open House. More info\nhttps://www.visiteureka.com/ev
+ ent/holiday-shop-stroll/
+URL:https://www.visiteureka.com/event/holiday-shop-stroll/
+END:VEVENT
+BEGIN:VEVENT
+UID:44129f52b94a@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261114T130000
+DTEND:20261114T130000
+SUMMARY:Chocolate Chip Cookie Cake Class
+LOCATION:Carl Johnson Company\, 3950 Jacobs Ave
+DESCRIPTION:Cookie cake decorating class with Jeny Giraud\, finalist on 
+ “The Greatest Baker.” $50 per person. Sign up\nhttps://www.visiteurek
+ a.com/event/chocolate-chip-cookie-cake-class/
+URL:https://www.visiteureka.com/event/chocolate-chip-cookie-cake-class/
+END:VEVENT
+BEGIN:VEVENT
+UID:728e31b4fe8a@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261114T160000
+DTEND:20261114T200000
+SUMMARY:StrangeBrew 14: Hum-Brewed
+LOCATION:Eureka Theater\, 612 F St.
+DESCRIPTION:This year’s StrangeBrew celebrates homebrewers: the Humboldt
+  Homebrewers club pours nearly 40 homemade beers\, ciders\, seltzers\, me
+ ads and kombuchas. Unlimited tastings\, a taster cup\, DJs from Radio Cla
+ sh\, a screening of Strange Brew and a People’s Choice Award. Proceeds 
+ support the restoration of...\nhttps://www.visiteureka.com/event/strangeb
+ rew-14-hum-brewed/
+URL:https://www.visiteureka.com/event/strangebrew-14-hum-brewed/
+END:VEVENT
+BEGIN:VEVENT
+UID:58f82adeaabd@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20270104
+SUMMARY:Humboldt Arts Council Annual Members Exhibition
+LOCATION:Morris Graves Museum of Art\, 636 F St
+DESCRIPTION:A juried show of work by Humboldt Arts Council artist members 
+ across visual art disciplines\, juried this year by painter Marceau Verdi
+ ere. Awards presented Saturday\, December 5 at 5:30pm\, before Arts Alive
+ . Museum hours Wednesday–Sunday\, 12–5pm\; $5 adults\, $2 seniors and
+  students\, free for kids 17...\nhttps://www.visiteureka.com/event/humbol
+ dt-arts-council-annual-members-exhibition/
+URL:https://www.visiteureka.com/event/humboldt-arts-council-annual-members
+ -exhibition/
+END:VEVENT
+BEGIN:VEVENT
+UID:29eeed1ca893@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261118T183000
+DTEND:20261118T193000
+SUMMARY:Zoo Conservation Lecture: Lewis's Woodpecker
+LOCATION:Sequoia Park Zoo\, 3414 W Street
+DESCRIPTION:Frank Fogarty\, PhD\, of Cal Poly Humboldt talks about the con
+ servation challenges facing Lewis’s woodpecker\, a unique fire-associat
+ ed species. Part of Sequoia Park Zoo’s free Conservation Lecture Series
+ \, November through March. Free. In the Flamingo Room\; enter through Gat
+ e C\, to the left of the...\nhttps://www.visiteureka.com/event/zoo-conser
+ vation-lecture-lewiss-woodpecker/
+URL:https://www.visiteureka.com/event/zoo-conservation-lecture-lewiss-wood
+ pecker/
+END:VEVENT
+BEGIN:VEVENT
+UID:f964ab934849@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261119T190000
+DTEND:20261119T210000
+SUMMARY:The Land Returns: Documentary Screening & Filmmaker Q&A
+LOCATION:Eureka Theater\, 612 F St.
+DESCRIPTION:A documentary about the grassroots movement returning land to 
+ Indian nations\, including the Wiyot Tribe’s repatriation of Tuluwat Is
+ land in Humboldt Bay. Followed by a live Q&A with the filmmakers. Doors 7
+ pm\, film 7:30pm. $10. Tickets & info\nhttps://www.visiteureka.com/event/
+ the-land-returns-documentary-screening-filmmaker-qa/
+URL:https://www.visiteureka.com/event/the-land-returns-documentary-screeni
+ ng-filmmaker-qa/
+END:VEVENT
+BEGIN:VEVENT
+UID:e288c46aab38@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261120T110000
+DTEND:20261120T160000
+SUMMARY:Humboldt Heroes Blood Drive & Recognition Ceremony
+LOCATION:Scott Hammond State Farm\, 537 7th St
+DESCRIPTION:Donate blood in honor of local veterans as part of NCCBB’s H
+ umboldt Heroes campaign\, which ends with this drive and recognition cere
+ mony. More info\nhttps://www.visiteureka.com/event/humboldt-heroes-blood-
+ drive-recognition-ceremony/
+URL:https://www.visiteureka.com/event/humboldt-heroes-blood-drive-recognit
+ ion-ceremony/
+END:VEVENT
+BEGIN:VEVENT
+UID:bdb4d9d1f044@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261121T080000
+DTEND:20261121T170000
+SUMMARY:Humboldt Roller Derby
+LOCATION:Redwood Acres
+DESCRIPTION:Catch a high-energy home bout at the fairgrounds—it’s a di
+ stinct local favorite with a rowdy\, fun atmosphere.\nhttps://www.visiteu
+ reka.com/event/humboldt-roller-derby/2026-11-21/
+URL:https://www.visiteureka.com/event/humboldt-roller-derby/2026-11-21/
+END:VEVENT
+BEGIN:VEVENT
+UID:1358e0365cb4@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261121T193000
+DTEND:20261121T193000
+SUMMARY:Eureka Chamber Music Series: Piano Trio
+LOCATION:Calvary Lutheran Church\, 716 South Avenue
+DESCRIPTION:A mainstage piano trio concert featuring Rachmaninoff’s Trio
+  élégiaque No. 1\, Shostakovich’s Piano Trio No. 2 and Mendelssohn’
+ s Piano Trio No. 2. Doors 6:45pm\, concert 7:30pm. Tickets & info\nhttps:
+ //www.visiteureka.com/event/eureka-chamber-music-series-piano-trio/
+URL:https://www.visiteureka.com/event/eureka-chamber-music-series-piano-tr
+ io/
+END:VEVENT
+BEGIN:VEVENT
+UID:75a248146e57@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261122T130000
+DTEND:20261122T130000
+SUMMARY:Thanksgiving Cake Decorating Class
+LOCATION:Carl Johnson Company\, 3950 Jacobs Ave
+DESCRIPTION:Thanksgiving-themed cake decorating with Jeny Giraud. $55 per 
+ person. Sign up\nhttps://www.visiteureka.com/event/thanksgiving-cake-deco
+ rating-class/
+URL:https://www.visiteureka.com/event/thanksgiving-cake-decorating-class/
+END:VEVENT
+BEGIN:VEVENT
+UID:4da798f45411@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261126T090000
+DTEND:20261126T090000
+SUMMARY:25th Old Town 5K Turkey Trot
+LOCATION:Old Town Gazebo\, 2nd & F Streets
+DESCRIPTION:The 25th annual Thanksgiving morning 5K run/walk starting at t
+ he Old Town Gazebo. Proceeds support local high school and college cross 
+ country teams. $25 adults / $20 kids in advance\; $30 on race day. Race-d
+ ay registration 7–8:45am at 2nd & F. Pre-registration: Arcata High park
+ ing lot Nov 23–25\,...\nhttps://www.visiteureka.com/event/25th-old-town
+ -5k-turkey-trot/
+URL:https://www.visiteureka.com/event/25th-old-town-5k-turkey-trot/
+END:VEVENT
+BEGIN:VEVENT
+UID:8530c2a7f77d@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261127T140000
+DTEND:20261127T160000
+SUMMARY:Santa Arrives in Old Town
+LOCATION:Old Town Gazebo\, 2nd & F Streets
+DESCRIPTION:Santa comes to town on a Humboldt Bay Fire truck! Meet at the 
+ Gazebo at 2pm for music\, face painting and kids’ activities\, and visi
+ ts with Santa until 4pm. Kids are invited to bring their wish lists. More
+  info\nhttps://www.visiteureka.com/event/santa-arrives-in-old-town/
+URL:https://www.visiteureka.com/event/santa-arrives-in-old-town/
+END:VEVENT
+BEGIN:VEVENT
+UID:978555f2b2c0@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261127T190000
+DTEND:20261127T190000
+RRULE:FREQ=DAILY;COUNT=2
+SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
+LOCATION:Eureka Woman’s Club\, 1531 J St
+DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
+ stmas party\, with dinner included. Shows: Friday 11/27 at 7pm\; Saturday
+  11/28 at 1pm and 7pm. Saturday evening’s show benefits the Breast & GY
+ N Health Project. $55 general\, $50 seniors/students\; 56 seats per show.
+  Tickets & info\nhttps://www.visiteureka.com/event/the-sting-of-the-barb-
+ holiday-dinner-theater/
+URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
+ -theater/
+END:VEVENT
+BEGIN:VEVENT
+UID:68f06426bd24@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261127T190000
+DTEND:20261127T233000
+RRULE:FREQ=DAILY;COUNT=2
+SUMMARY:Threshold:UP featuring Beats Antique
+LOCATION:Eureka Theater\, 612 F St.
+DESCRIPTION:The Eureka Theater’s Threshold dance series presents two nig
+ hts with Beats Antique on their Metamorphosis Tour\, with DJ support from
+  local and touring artists plus lasers and projections throughout the the
+ ater. Proceeds support the theater’s restoration. Friday: Beats Antique
+ \, Beatkitty\,...\nhttps://www.visiteureka.com/event/thresholdup-featurin
+ g-beats-antique/
+URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
+END:VEVENT
+BEGIN:VEVENT
+UID:b29a10ab388d@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261202T180000
+DTEND:20261202T200000
+SUMMARY:Dick Taylor's 4th Annual Tree Lighting
+LOCATION:Dick Taylor Chocolate Factory\, 333 1st St.
+DESCRIPTION:The annual tree lighting celebration at the chocolate factory.
+  Past years have featured caroling\, food trucks\, hot chocolate samples 
+ and the Old Town carriage. More info\nhttps://www.visiteureka.com/event/d
+ ick-taylors-4th-annual-tree-lighting/
+URL:https://www.visiteureka.com/event/dick-taylors-4th-annual-tree-lightin
+ g/
+END:VEVENT
+BEGIN:VEVENT
+UID:317a0c9c5db5@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261204T160000
+DTEND:20261204T170000
+RRULE:FREQ=DAILY;COUNT=3
+SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
+LOCATION:Redwood Acres
+DESCRIPTION:The 46th annual holiday crafts and music festival: three build
+ ings of handmade gifts from North Coast artisans\, plus food and live ent
+ ertainment. Hours: Friday 4–9pm\, Saturday & Sunday 10am–5pm. $5 admi
+ ssion\; free for kids and seniors\, and free with a toy for the Humboldt 
+ Bay Fire Department toy...\nhttps://www.visiteureka.com/event/46th-annual
+ -humboldt-artisans-crafts-music-festival/
+URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
+ -music-festival/
+END:VEVENT
+BEGIN:VEVENT
+UID:cb1d21ccdcae@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261204T193000
+DTEND:20261204T193000
+RRULE:FREQ=DAILY;COUNT=2
+SUMMARY:Eureka Symphony: A Season of Light
+LOCATION:Arkley Center for Performing Arts\, 412 G St
+DESCRIPTION:Eureka Symphony’s holiday concert opens with Victor Hely-Hut
+ chinson’s Carol Symphony\; after intermission\, Claire Bent sings a Han
+ ukkah medley and holiday favorites. Free pre-concert talk at 6:30pm. Two 
+ performances: Friday 12/4 and Saturday 12/5 at 7:30pm. Tickets $21–$54 
+ plus $2 preservation fee\;...\nhttps://www.visiteureka.com/event/eureka-s
+ ymphony-a-season-of-light/
+URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
+END:VEVENT
+BEGIN:VEVENT
+UID:2d67e3ca10fd@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261215
+SUMMARY:Holiday Window Display Contest: "Season of Cheer"
+LOCATION:Throughout Downtown & Old Town Eureka
+DESCRIPTION:Downtown and Old Town businesses dress their windows for the s
+ eason and the public votes for a favorite. This year’s theme is “Seas
+ on of Cheer.” More info\nhttps://www.visiteureka.com/event/holiday-wind
+ ow-display-contest-season-of-cheer/
+URL:https://www.visiteureka.com/event/holiday-window-display-contest-seaso
+ n-of-cheer/
+END:VEVENT
+BEGIN:VEVENT
+UID:3a4ea783cbf6@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261215
+SUMMARY:Winter Whimsy Quest
+LOCATION:Throughout Downtown & Old Town Eureka
+DESCRIPTION:A family-friendly hunt for holiday window displays across Down
+ town and Old Town. Pick up an entry form and return it to the Eureka Welc
+ ome Center\, 108 F St (10am–5pm). More info\nhttps://www.visiteureka.co
+ m/event/winter-whimsy-quest/
+URL:https://www.visiteureka.com/event/winter-whimsy-quest/
+END:VEVENT
+BEGIN:VEVENT
+UID:74cdf8b8e961@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261205T180000
+DTEND:20261205T210000
+SUMMARY:First Saturday Night Arts Alive!
+LOCATION:Downtown & Old Town Eureka
+DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants 
+ across Old Town and Downtown stay open late on the first Saturday of the 
+ month\, with art\, live music and pop-up performances. More info\nhttps:/
+ /www.visiteureka.com/event/first-saturday-night-arts-alive-2/
+URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-2/
+END:VEVENT
+BEGIN:VEVENT
+UID:9aebda3eb857@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261206T130000
+DTEND:20261206T160000
+SUMMARY:Beginner Wreath Making Class
+LOCATION:Carl Johnson Company\, 3950 Jacobs Ave
+DESCRIPTION:Make a Christmas wreath with Misty of Blossoms. $85 per person
+ . Sign up\nhttps://www.visiteureka.com/event/beginner-wreath-making-class
+ -3/
+URL:https://www.visiteureka.com/event/beginner-wreath-making-class-3/
+END:VEVENT
+BEGIN:VEVENT
+UID:62090f3be3ad@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261209T170000
+DTEND:20261209T170000
+SUMMARY:Humboldt Library Foundation Holiday Gala
+LOCATION:Sequoia Conference Center\, 901 Myrtle Ave
+DESCRIPTION:Holiday gala and live auction benefiting the Humboldt County L
+ ibrary. No-host cocktails at 5pm\, dinner at 6pm. Tickets $150 single\, $
+ 400 for two\, $800 for four\, $2\,000 for a table of eight. Tickets & inf
+ o\nhttps://www.visiteureka.com/event/humboldt-library-foundation-holiday-
+ gala/
+URL:https://www.visiteureka.com/event/humboldt-library-foundation-holiday-
+ gala/
+END:VEVENT
+BEGIN:VEVENT
+UID:b1177a7eb218@community-calendar
+DTSTAMP:20261107T020040Z
+DTSTART:20261212T180000
+DTEND:20261212T233000
+SUMMARY:Truckers Christmas Parade
+LOCATION:Redwood Acres
+DESCRIPTION:Big rigs covered in holiday lights convoy through the streets 
+ of Eureka\, starting and ending at Redwood Acres. A beloved local traditi
+ on benefiting the Boys & Girls Club of the Redwoods. The 38th annual para
+ de\, presented by Rex & Friends\, rolls out Saturday\, December 12 at 6pm
+ . More info\nhttps://www.visiteureka.com/event/truckers-christmas-parade/
+ 2026-12-12/
+URL:https://www.visiteureka.com/event/truckers-christmas-parade/2026-12-12
+ /
 END:VEVENT
 END:VCALENDAR
