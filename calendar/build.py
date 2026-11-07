@@ -351,6 +351,51 @@ def ics_for(events, name):
     return "\r\n".join(fold(x) for x in L) + "\r\n"
 
 
+def inject_jsonld(events):
+    """Write schema.org Event data into index.html so search engines can read each event."""
+    path = os.path.join(HERE, "index.html")
+    if not os.path.exists(path):
+        return
+    html_text = open(path, encoding="utf-8").read()
+    start, end = "<!-- EVENTS-JSONLD:START -->", "<!-- EVENTS-JSONLD:END -->"
+    if start not in html_text or end not in html_text:
+        return
+    today = dt.date.today()
+    items = []
+    for e in events:
+        s_d, e_d = dt.date.fromisoformat(e["date"]), dt.date.fromisoformat(e["end_date"])
+        if e_d < today or s_d > today + dt.timedelta(days=120):
+            continue
+        def stamp(d, t):
+            if not t:
+                return d.isoformat()
+            return dt.datetime.combine(d, dt.time(int(t[:2]), int(t[3:5])), tzinfo=LOCAL_TZ).isoformat()
+        place = {"@type": "Place", "name": e["place"] or e["town"],
+                 "address": {"@type": "PostalAddress", "addressLocality": e["town"], "addressRegion": "CA",
+                             "addressCountry": "US"}}
+        if e["address"]:
+            place["address"]["streetAddress"] = e["address"]
+        item = {"@context": "https://schema.org", "@type": "Event", "name": e["title"],
+                "startDate": stamp(s_d, e["start_time"]),
+                "endDate": stamp(e_d, e["end_time"] or e["start_time"]) if e["start_time"] else e_d.isoformat(),
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "location": place}
+        if e["description"]:
+            item["description"] = e["description"]
+        if e["website"]:
+            item["url"] = e["website"]
+        if e["free"]:
+            item["isAccessibleForFree"] = True
+        items.append(item)
+        if len(items) >= 150:
+            break
+    block = '<script type="application/ld+json">' + json.dumps(items, ensure_ascii=False).replace("<", "\\u003c") + "</script>"
+    new = html_text[: html_text.index(start) + len(start)] + "\n" + block + "\n" + html_text[html_text.index(end):]
+    if new != html_text:
+        open(path, "w", encoding="utf-8").write(new)
+
+
 def write(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     old = open(path, encoding="utf-8", newline="").read() if os.path.exists(path) else None
@@ -368,6 +413,7 @@ def main():
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     write(os.path.join(HERE, "events.json"),
           json.dumps({"updated": now, "towns": towns, "events": events}, indent=1) + "\n")
+    inject_jsonld(events)
     write(os.path.join(FEEDS, "all.ics"), ics_for(events, CAL_NAME))
     keep = {"all.ics"}
     for t in towns:
