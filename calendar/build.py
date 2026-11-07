@@ -65,6 +65,15 @@ def load_rows():
     return list(csv.DictReader(io.StringIO(text)))
 
 
+def hand_rows():
+    """Events added by hand from flyers and posts (sample-sheet.csv). They stay on the calendar
+    next to the form sheet, so connecting the sheet never makes them disappear."""
+    if not os.environ.get("SHEET_CSV_URL", "").strip() or len(sys.argv) > 1:
+        return []  # without a sheet, load_rows() already reads this file
+    path = os.path.join(HERE, "sample-sheet.csv")
+    return list(csv.DictReader(open(path, encoding="utf-8"))) if os.path.exists(path) else []
+
+
 def recurring_rows():
     """Monthly events that follow a rule, such as the first Thursday, from recurring.json."""
     path = os.path.join(HERE, "recurring.json")
@@ -123,6 +132,11 @@ def clean_rows(rows):
             "source": r.get("source", ""),
             "source_url": r.get("source_url", ""),
         })
+    seen, unique = set(), []
+    for e in events:
+        if e["id"] not in seen:
+            seen.add(e["id"]); unique.append(e)
+    events = unique
     events.sort(key=lambda e: (e["date"], e["start_time"] or "00:00", e["title"]))
     return events
 
@@ -427,7 +441,7 @@ def write(path, text):
 
 
 def main():
-    events = import_sources(clean_rows(load_rows() + recurring_rows()))
+    events = import_sources(clean_rows(load_rows() + hand_rows() + recurring_rows()))
     events.sort(key=lambda e: (e["date"], e["start_time"] or "00:00", e["title"]))
     towns = sorted({e["town"] for e in events})
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
