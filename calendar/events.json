@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07T17:50:12Z",
- "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
+ "updated": "2026-11-07T17:55:05Z",
+ "sheet": "read 1 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: test,2026-11-10,2026-11-10,14:13,14:22,Willow Creek,corner",
  "towns": [
   "Big Bar",
   "Blue Lake",
@@ -165,6 +165,23 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "4cbaaf461e70",
+   "title": "test",
+   "date": "2026-11-10",
+   "end_date": "2026-11-10",
+   "start_time": "14:13",
+   "end_time": "14:22",
+   "town": "Willow Creek",
+   "place": "corner",
+   "address": "123 manin street",
+   "website": "",
+   "description": "test",
+   "free": true,
+   "category": "",
+   "source": "",
+   "source_url": ""
   },
   {
    "id": "cd5ce4492c00",
