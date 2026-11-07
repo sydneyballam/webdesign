@@ -20,7 +20,7 @@ body{margin:0;background:var(--bg);color:var(--deep);font-family:'Source Sans 3'
 h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;margin:0}
 button,a.btn{font-family:inherit;cursor:pointer}
 a{color:var(--teal)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
 .hero{background:var(--deep);color:var(--bg);padding:48px 0 40px}
 .hero .eyebrow{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .hero h1{font-size:clamp(36px,7vw,56px);line-height:1.05;margin:10px 0 14px}
@@ -52,6 +52,7 @@ main{padding-top:8px;padding-bottom:24px}
 .group{margin-top:28px}
 .group h2{font-size:24px;margin-bottom:14px}
 .ev{display:flex;gap:14px;margin-bottom:14px}
+@media(min-width:900px){.evgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;align-items:start}.hero p,.band p{max-width:720px}}
 .dateblock{flex:0 0 64px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 0;text-align:center;display:flex;flex-direction:column;justify-content:center}
 .dateblock .dow{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
 .dateblock .num{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:700;line-height:1.1}
@@ -248,7 +249,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
       groups[idx[wk]].items.push(e);
     });
     return groups.map(function (g) {
-      return '<section class="group"><h2>' + esc(g.label) + '</h2>' + g.items.map(card).join('') + '</section>';
+      return '<section class="group"><h2>' + esc(g.label) + '</h2><div class="evgrid">' + g.items.map(card).join('') + '</div></section>';
     }).join('');
   }
 
