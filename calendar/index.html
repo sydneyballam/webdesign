@@ -101,8 +101,17 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
         Subscribe on your phone
       </button>
+      <button class="btn line" id="howBtn" aria-expanded="false" aria-controls="howPanel">How this works</button>
       <a class="btn line hidden" id="submitTop" href="#" target="_blank" rel="noopener">Submit an event</a>
     </div>
+    <section class="sub" id="howPanel" aria-labelledby="howTitle" style="color:var(--deep)">
+      <h2 id="howTitle">How this works</h2>
+      <p><strong>The problem.</strong> Local events are posted everywhere: Facebook posts, flyers on a window, chamber websites, casino and venue pages, tribal and county calendars, and pictures with the details written inside. Nobody can check all of those, and text inside a picture can't be searched, copied, or added to a phone.</p>
+      <p><strong>One place.</strong> This calendar gathers them into real, searchable text, so you can look in one spot instead of ten.</p>
+      <p><strong>Where events come from.</strong> Calendars that local organizations already publish are read automatically every hour. Neighbors and businesses can send an event through the form or by email, and each one is checked before it appears. Every event links back to where it came from, so you can see the original.</p>
+      <p><strong>Why it's built this way.</strong> It's a simple, fast page with no accounts and no ads. Search it by word or town, view it as a list or a month, add a single event to your calendar, or subscribe once and your phone updates itself. Search engines can read every event too.</p>
+      <p><strong>Always current.</strong> The page rebuilds itself every hour, and duplicates from different sources are merged into one listing.</p>
+    </section>
     <section class="sub" id="subPanel" aria-labelledby="subTitle" style="color:var(--deep)">
       <h2 id="subTitle">Subscribe</h2>
       <p id="subText"></p>
@@ -323,6 +332,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     else if (t.id === 'tabList') { state.view = 'list'; render(); }
     else if (t.id === 'tabMonth') { state.view = 'month'; render(); }
     else if (t.dataset.ics) { var e = data.events.filter(function (x) { return x.id === t.dataset.ics; })[0]; if (e) downloadIcs(e); }
+    else if (t.id === 'howBtn') { var ho = !$('howPanel').classList.contains('open'); $('howPanel').classList.toggle('open', ho); t.setAttribute('aria-expanded', ho); }
     else if (t.id === 'subBtn') { var open = !$('subPanel').classList.contains('open'); $('subPanel').classList.toggle('open', open); t.setAttribute('aria-expanded', open); }
     else if (t.id === 'subCopy') {
       var u = feedUrl();
