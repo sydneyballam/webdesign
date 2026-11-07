@@ -69,7 +69,10 @@ def load_rows():
         n = max(0, len(list(csv.reader(io.StringIO(text)))) - 1)
         cols = text.splitlines()[0][:120] if text.strip() else "(empty)"
         print("Sheet: read %d row(s). Columns: %s" % (n, cols))
-        SHEET_STATUS = "read %d row(s). Columns: %s" % (n, cols)
+        first = ""
+        for r_ in list(csv.reader(io.StringIO(text)))[1:3]:
+            first += " | row: " + ",".join(c[:25] for c in r_[:7])
+        SHEET_STATUS = "read %d row(s). Columns: %s%s" % (n, cols, first)
     else:
         # No sheet connected yet: use the starter events so the calendar is not empty.
         seed = os.path.join(HERE, "sample-sheet.csv")
