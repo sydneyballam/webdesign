@@ -58,22 +58,39 @@ function buildSubmissionForm(ss) {
             ss.getSheets()[ss.getSheets().length - 1];
   tab.setName('Form Responses 1');
   tab.getRange('T1').setValue('Approved');
-  tab.getRange('T2:T1000').insertCheckboxes();  // tick a box to publish that event
+  tab.getRange('T2:T500').insertCheckboxes();  // tick a box to publish that event
   tab.setFrozenRows(1);
-  var pub = ss.getSheetByName('Public') || ss.insertSheet('Public');
-  pub.getRange('A1:K1').setValues([['title', 'date', 'end_date', 'start_time', 'end_time', 'town', 'place', 'address', 'website', 'description', 'free']]);
-  pub.getRange('A2').setFormula(
-    "=IFERROR(FILTER({'Form Responses 1'!B2:B," +
-    "ARRAYFORMULA(IF('Form Responses 1'!C2:C=\"\",\"\",TEXT('Form Responses 1'!C2:C,\"yyyy-mm-dd\")))," +
-    "ARRAYFORMULA(IF('Form Responses 1'!D2:D=\"\",\"\",TEXT('Form Responses 1'!D2:D,\"yyyy-mm-dd\")))," +
-    "ARRAYFORMULA(IF('Form Responses 1'!E2:E=\"\",\"\",TEXT('Form Responses 1'!E2:E,\"HH:mm\")))," +
-    "ARRAYFORMULA(IF('Form Responses 1'!F2:F=\"\",\"\",TEXT('Form Responses 1'!F2:F,\"HH:mm\")))," +
-    "'Form Responses 1'!G2:G,'Form Responses 1'!H2:H," +
-    "ARRAYFORMULA(IF('Form Responses 1'!J2:J=\"Yes\",'Form Responses 1'!I2:I,\"\"))," +
-    "ARRAYFORMULA(IF('Form Responses 1'!L2:L=\"Yes\",'Form Responses 1'!K2:K,\"\"))," +
-    "'Form Responses 1'!M2:M,'Form Responses 1'!N2:N}," +
-    "'Form Responses 1'!T2:T=TRUE),\"\")");
+  buildPublicTab_(ss);
   return f;
+}
+
+function buildPublicTab_(ss) {
+  // One simple formula per row (rows 2 to 500). A row shows up only when its Approved box is ticked.
+  var pub = ss.getSheetByName('Public') || ss.insertSheet('Public');
+  pub.clear();
+  pub.getRange('A1:K1').setValues([['title', 'date', 'end_date', 'start_time', 'end_time', 'town', 'place', 'address', 'website', 'description', 'free']]);
+  var R = "'Form Responses 1'!";
+  var rows = [];
+  for (var r = 2; r <= 500; r++) {
+    var ok = R + 'T' + r + '=TRUE';
+    var c = function (col) { return R + col + r; };
+    var show = function (expr) { return '=IF(' + ok + ',' + expr + ',"")'; };
+    rows.push([
+      show(c('B')),
+      show('IF(' + c('C') + '="","",TEXT(' + c('C') + ',"yyyy-mm-dd"))'),
+      show('IF(' + c('D') + '="","",TEXT(' + c('D') + ',"yyyy-mm-dd"))'),
+      show('IF(' + c('E') + '="","",TEXT(' + c('E') + ',"HH:mm"))'),
+      show('IF(' + c('F') + '="","",TEXT(' + c('F') + ',"HH:mm"))'),
+      show(c('G')),
+      show(c('H')),
+      show('IF(' + c('J') + '="Yes",' + c('I') + ',"")'),
+      show('IF(' + c('L') + '="Yes",' + c('K') + ',"")'),
+      show(c('M')),
+      show(c('N'))
+    ]);
+  }
+  pub.getRange(2, 1, rows.length, 11).setFormulas(rows);
+  pub.setFrozenRows(1);
 }
 
 function buildCorrectionForm() {
