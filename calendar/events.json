@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T18:50:19Z",
+ "updated": "2026-11-07T21:42:49Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Big Bar",
@@ -63,23 +63,6 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/"
-  },
-  {
-   "id": "69299e4947ce",
-   "title": "First Saturday Night Arts Alive!",
-   "date": "2026-11-07",
-   "end_date": "2026-11-07",
-   "start_time": "18:00",
-   "end_time": "21:00",
-   "town": "Eureka",
-   "place": "Downtown & Old Town Eureka",
-   "address": "",
-   "website": "https://www.visiteureka.com/event/first-saturday-night-arts-alive/",
-   "description": "Galleries, museums, theaters, shops, bars and restaurants across Old Town and Downtown stay open late on the first Saturday of the month, with art, live music and pop-up performances. More info",
-   "free": false,
-   "category": "",
-   "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
   },
   {
    "id": "a16957329de2",
@@ -1661,6 +1644,23 @@
    "category": "",
    "source": "Visit Trinity",
    "source_url": "https://visittrinity.com/calendar/"
+  },
+  {
+   "id": "23b10fc3fd52",
+   "title": "Christmas @ the Acres",
+   "date": "2026-12-18",
+   "end_date": "2026-12-20",
+   "start_time": "17:00",
+   "end_time": "16:00",
+   "town": "Eureka",
+   "place": "Redwood Acres",
+   "address": "",
+   "website": "https://www.visiteureka.com/event/christmas-the-acres/",
+   "description": "A three-day holiday market at Redwood Acres with vendors, music and a kids\u2019 corner. Hours: Friday 5\u20139pm, Saturday 10am\u20137pm, Sunday 10am\u20134pm. More info",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/"
   },
   {
    "id": "6dcfa45f1f7d",
