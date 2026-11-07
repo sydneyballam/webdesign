@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T07:47:10Z",
+ "updated": "2026-11-07T07:49:50Z",
  "towns": [
   "Big Bar",
   "Blue Lake",
@@ -489,6 +489,23 @@
    "source_url": "https://visittrinity.com/calendar/"
   },
   {
+   "id": "6e1230cc06bf",
+   "title": "Friday Garden Work Day: Woodchips in the Garden",
+   "date": "2026-11-13",
+   "end_date": "2026-11-13",
+   "start_time": "13:00",
+   "end_time": "16:00",
+   "town": "Willow Creek",
+   "place": "Neighborhood Harvest Garden",
+   "address": "205 Moccasin Drive",
+   "website": "https://neighborhood-harvest.org",
+   "description": "Learn how to use woodchips in the garden. Come learn tips and meet new neighbors. Free harvests, seeds and more.",
+   "free": true,
+   "category": "",
+   "source": "Neighborhood Harvest flyer",
+   "source_url": "https://neighborhood-harvest.org"
+  },
+  {
    "id": "b0c08ef4f5df",
    "title": "Writers of Willow Creek",
    "date": "2026-11-13",
@@ -965,6 +982,23 @@
    "source_url": "https://willowcreekchamber.com/calendar/"
   },
   {
+   "id": "af0b44f70895",
+   "title": "Saturday Garden Work Day: Fruit Tree Pruning Basics",
+   "date": "2026-11-21",
+   "end_date": "2026-11-21",
+   "start_time": "13:00",
+   "end_time": "16:00",
+   "town": "Willow Creek",
+   "place": "Neighborhood Harvest Garden",
+   "address": "205 Moccasin Drive",
+   "website": "https://neighborhood-harvest.org",
+   "description": "Fruit tree pruning basics, weather permitting. Come learn tips and meet new neighbors. Free harvests, seeds and more.",
+   "free": true,
+   "category": "",
+   "source": "Neighborhood Harvest flyer",
+   "source_url": "https://neighborhood-harvest.org"
+  },
+  {
    "id": "1358e0365cb4",
    "title": "Eureka Chamber Music Series: Piano Trio",
    "date": "2026-11-21",
@@ -1031,6 +1065,23 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/"
+  },
+  {
+   "id": "627be0d5721e",
+   "title": "Free Swap Table at Friends-Giving",
+   "date": "2026-11-25",
+   "end_date": "2026-11-25",
+   "start_time": "",
+   "end_time": "",
+   "town": "Willow Creek",
+   "place": "Studio 299",
+   "address": "75 The Terrace Ln",
+   "website": "https://neighborhood-harvest.org",
+   "description": "Neighborhood Harvest hosts a free swap table at the Trinity River Outreach Friends-Giving.",
+   "free": true,
+   "category": "",
+   "source": "Neighborhood Harvest flyer",
+   "source_url": "https://neighborhood-harvest.org"
   },
   {
    "id": "cd44cdc8b2ac",
@@ -1322,6 +1373,23 @@
    "source_url": "https://www.bluelakecasino.com/calendar/"
   },
   {
+   "id": "1f1ce2d15d17",
+   "title": "Sunday Art Hang Out: Wreath Making and Harvest Crafts",
+   "date": "2026-11-29",
+   "end_date": "2026-11-29",
+   "start_time": "13:00",
+   "end_time": "16:00",
+   "town": "Willow Creek",
+   "place": "Neighborhood Harvest Garden",
+   "address": "205 Moccasin Drive",
+   "website": "https://neighborhood-harvest.org",
+   "description": "Wreath making and more. Come learn tips and meet new neighbors. Free harvests, seeds and more.",
+   "free": true,
+   "category": "",
+   "source": "Neighborhood Harvest flyer",
+   "source_url": "https://neighborhood-harvest.org"
+  },
+  {
    "id": "7bc56f531dde",
    "title": "Rooted in Soul Flow Yoga",
    "date": "2026-11-30",
@@ -1541,6 +1609,23 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/"
+  },
+  {
+   "id": "dae24467123e",
+   "title": "Holiday Neighborhood Harvest Festival",
+   "date": "2026-12-05",
+   "end_date": "2026-12-05",
+   "start_time": "",
+   "end_time": "",
+   "town": "Willow Creek",
+   "place": "Commons Park",
+   "address": "",
+   "website": "https://neighborhood-harvest.org",
+   "description": "Part of the Festival of Light & Wonder.",
+   "free": true,
+   "category": "",
+   "source": "Neighborhood Harvest flyer",
+   "source_url": "https://neighborhood-harvest.org"
   },
   {
    "id": "2d67e3ca10fd",
