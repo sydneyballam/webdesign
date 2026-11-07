@@ -65,6 +65,26 @@ def load_rows():
     return list(csv.DictReader(io.StringIO(text)))
 
 
+def recurring_rows():
+    """Monthly events that follow a rule, such as the first Thursday, from recurring.json."""
+    path = os.path.join(HERE, "recurring.json")
+    if not os.path.exists(path):
+        return []
+    rows, today = [], dt.date.today()
+    for item in json.load(open(path, encoding="utf-8")):
+        y, m, made = today.year, today.month, 0
+        while made < int(item.get("months", 6)):
+            first = dt.date(y, m, 1)
+            day = first + dt.timedelta(days=(int(item["weekday"]) - first.weekday()) % 7 + 7 * (int(item["nth"]) - 1))
+            if day >= today:
+                row = {k: str(v) for k, v in item.items() if k not in ("nth", "weekday", "months")}
+                row["date"] = day.isoformat()
+                rows.append(row)
+                made += 1
+            y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return rows
+
+
 def clean_rows(rows):
     events, today = [], dt.date.today()
     for n, r in enumerate(rows, start=2):
@@ -407,7 +427,7 @@ def write(path, text):
 
 
 def main():
-    events = import_sources(clean_rows(load_rows()))
+    events = import_sources(clean_rows(load_rows() + recurring_rows()))
     events.sort(key=lambda e: (e["date"], e["start_time"] or "00:00", e["title"]))
     towns = sorted({e["town"] for e in events})
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
