@@ -92,6 +92,8 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 .topbar a{color:#DCE4F5;font-weight:600;font-size:15px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
 .topbar a:hover{text-decoration:underline}
 .fix{margin-top:10px;font-size:15px}
+.clearchip{border-style:dashed;background:#fff}
+.linkbtn{background:none;border:0;padding:0;font:inherit;font-weight:700;color:var(--teal);text-decoration:underline;cursor:pointer;min-height:44px}
 .fix a{color:var(--teal);font-weight:600;min-height:44px;display:inline-flex;align-items:center}
 .hidden{display:none!important}
 </style>
@@ -179,7 +181,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
   var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var data = null, towns = [];
   var q = new URLSearchParams(location.search);
-  var state = { q: q.get('q') || '', town: q.get('town') || '', view: q.get('view') === 'month' ? 'month' : 'list', month: null, sel: null };
+  var state = { q: q.get('q') || '', towns: (q.get('town') || '').split(',').filter(Boolean), one: q.get('event') || '', view: q.get('view') === 'month' ? 'month' : 'list', month: null, sel: null };
   var today = new Date(); today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
 
   function $(id) { return document.getElementById(id); }
@@ -210,8 +212,13 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     var hay = [e.title, e.place, e.address, e.town, e.description, e.source].join(' ').toLowerCase();
     return words(state.q).every(function (w) { return hay.indexOf(w) >= 0; });
   }
+  function townLabel() {
+    var t = state.towns;
+    return t.length < 2 ? (t[0] || '') : t.slice(0, -1).join(', ') + ' and ' + t[t.length - 1];
+  }
   function visible() {
-    return data.events.filter(function (e) { return (!state.town || e.town === state.town) && matches(e); });
+    if (state.one) return data.events.filter(function (e) { return e.id === state.one; });
+    return data.events.filter(function (e) { return (!state.towns.length || state.towns.indexOf(e.town) >= 0) && matches(e); });
   }
   function onDay(e, d) { var k = key(d); return e.date <= k && k <= e.end_date; }
   function icon(p) { return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + '</svg>'; }
@@ -233,12 +240,16 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
       '<div class="actions"><button class="btn out" type="button" data-ics="' + e.id + '">' + icon('<path d="M12 5v14M5 12h14"/>') + 'Add to calendar</button>' +
       (e.website ? '<a class="btn out" href="' + esc(e.website) + '" target="_blank" rel="noopener">Website</a>' : '') +
       (maps ? '<a class="btn out" href="' + esc(maps) + '" target="_blank" rel="noopener">Directions</a>' : '') +
+      '<button class="btn out" type="button" data-share="' + e.id + '">' + icon('<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/>') + 'Share</button>' +
       '</div>' + (CORRECT_URL ? '<div class="fix"><a href="' + esc(fixUrl(e)) + '" target="_blank" rel="noopener">Report a mistake</a></div>' : '') + '</div></article>';
   }
 
   function renderList() {
     var up = visible().filter(function (e) { return e.end_date >= key(today); });
-    $('count').textContent = up.length + (up.length === 1 ? ' event' : ' events') + (state.q ? ' matching "' + state.q + '"' : '') + (state.town ? ' in ' + state.town : state.q ? '' : ' coming up');
+    $('count').textContent = up.length + (up.length === 1 ? ' event' : ' events') + (state.q ? ' matching "' + state.q + '"' : '') + (state.towns.length ? ' in ' + townLabel() : state.q ? '' : ' coming up');
+    var banner = state.one ? '<div class="empty" style="margin-bottom:14px">Showing one shared event. <button type="button" class="linkbtn" id="showAll">Show all events</button></div>' : '';
+    if (state.one && !visible().length) return '<div class="empty">That event is no longer on the calendar. <button type="button" class="linkbtn" id="showAll">Show all events</button></div>';
+    if (state.one) { var one = visible()[0]; $('count').textContent = ''; return banner + '<div class="evgrid">' + card(one) + '</div>'; }
     if (!up.length) return emptyMsg();
     var thisWeek = key(mondayOf(today)), groups = [], idx = {};
     up.forEach(function (e) {
@@ -253,7 +264,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
   }
 
   function emptyMsg() {
-    return '<div class="empty">' + (state.q ? 'No events match "' + esc(state.q) + '"' : 'Nothing listed yet') + (state.town ? ' in ' + esc(state.town) : '') + '. Know of something coming up? ' +
+    return '<div class="empty">' + (state.q ? 'No events match "' + esc(state.q) + '"' : 'Nothing listed yet') + (state.towns.length ? ' in ' + esc(townLabel()) : '') + '. Know of something coming up? ' +
       (FORM_URL ? '<a href="' + esc(FORM_URL) + '" target="_blank" rel="noopener">Send it in</a>.' : 'Event submissions are opening soon.') + '</div>';
   }
 
@@ -261,7 +272,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     var evs = visible(), m = state.month, first = new Date(m.getFullYear(), m.getMonth(), 1);
     var start = addDays(first, -first.getDay()), cells = '';
     var inMonth = evs.filter(function (e) { return e.end_date >= key(first) && e.date <= key(new Date(m.getFullYear(), m.getMonth() + 1, 0)); });
-    $('count').textContent = inMonth.length + (inMonth.length === 1 ? ' event' : ' events') + ' in ' + MONTHS[m.getMonth()] + (state.town ? ' (' + state.town + ')' : '');
+    $('count').textContent = inMonth.length + (inMonth.length === 1 ? ' event' : ' events') + ' in ' + MONTHS[m.getMonth()] + (state.towns.length ? ' (' + townLabel() + ')' : '');
     DOW.forEach(function (d) { cells += '<div class="dowh" aria-hidden="true">' + d + '</div>'; });
     for (var i = 0; i < 42; i++) {
       var d = addDays(start, i);
@@ -285,12 +296,13 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
   }
 
   function feedUrl() {
-    return new URL('feeds/' + (state.town ? slug(state.town) : 'all') + '.ics', location.href).href;
+    return new URL('feeds/' + (state.towns.length === 1 ? slug(state.towns[0]) : 'all') + '.ics', location.href).href;
   }
   function renderSub() {
     var u = feedUrl(), web = u.replace(/^https?:/, 'webcal:');
-    $('subTitle').textContent = state.town ? 'Subscribe to ' + state.town : 'Subscribe to everything';
-    $('subText').textContent = state.town ? 'Events in ' + state.town + ' will appear on your phone\'s calendar.' : 'Events from every town will appear on your phone\'s calendar. Pick a town above first to follow just one.';
+    var one = state.towns.length === 1;
+    $('subTitle').textContent = one ? 'Subscribe to ' + state.towns[0] : 'Subscribe to everything';
+    $('subText').textContent = one ? 'Events in ' + state.towns[0] + ' will appear on your phone\'s calendar.' : (state.towns.length > 1 ? 'A phone calendar follows either one town or all of them, so this link has every town. Pick just one town above to follow it on its own.' : 'Events from every town will appear on your phone\'s calendar. Pick one town above to follow just that town.');
     $('subMain').href = web;
     $('subGoogle').href = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(web);
     $('subOutlook').href = 'https://outlook.live.com/calendar/0/addfromweb?url=' + encodeURIComponent(u) + '&name=' + encodeURIComponent('Community events');
@@ -299,8 +311,9 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
   function renderChips() {
     var all = [''].concat(towns);
     $('chips').innerHTML = all.map(function (t) {
-      return '<button type="button" class="chip" data-town="' + esc(t) + '" aria-pressed="' + (state.town === t) + '">' + (t ? esc(t) : 'All towns') + '</button>';
-    }).join('');
+      var on = t ? state.towns.indexOf(t) >= 0 : !state.towns.length;
+      return '<button type="button" class="chip" data-town="' + esc(t) + '" aria-pressed="' + on + '">' + (t ? esc(t) : 'All towns') + '</button>';
+    }).join('') + ((state.towns.length || state.q || state.one) ? '<button type="button" class="chip clearchip" data-clear="1">Clear</button>' : '');
   }
 
   function render() {
@@ -310,13 +323,22 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     $('view').innerHTML = state.view === 'month' ? renderMonth() : renderList();
     var p = new URLSearchParams();
     if (state.q) p.set('q', state.q);
-    if (state.town) p.set('town', state.town);
+    if (state.towns.length) p.set('town', state.towns.join(','));
+    if (state.one) p.set('event', state.one);
     if (state.view === 'month') p.set('view', 'month');
     try { history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : '')); } catch (x) {}
   }
 
   // one-event download, so "Add to calendar" works on any phone
   function icsText(s) { return String(s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n'); }
+  function shareEvent(btn) {
+    var e = data.events.filter(function (x) { return x.id === btn.dataset.share; })[0]; if (!e) return;
+    var url = location.origin + location.pathname + '?event=' + encodeURIComponent(e.id);
+    var text = e.title + ', ' + whenText(e) + (e.town ? ', ' + e.town : '') + '.';
+    var done = function (label) { var old = btn.getAttribute('data-label') || btn.innerHTML; btn.setAttribute('data-label', old); btn.textContent = label; setTimeout(function () { btn.innerHTML = old; }, 2200); };
+    if (navigator.share) { navigator.share({ title: e.title, text: text, url: url }).catch(function () {}); return; }
+    (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject()).then(function () { done('Link copied'); }, function () { window.prompt('Copy this link:', url); });
+  }
   function downloadIcs(e) {
     var d = e.date.replace(/-/g, ''), L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Community Calendar//EN', 'BEGIN:VEVENT', 'UID:' + e.id + '@community-calendar', 'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z'];
     if (e.start_time) {
@@ -341,7 +363,14 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 
   document.addEventListener('click', function (ev) {
     var t = ev.target.closest('button, a'); if (!t) return;
-    if (t.dataset.town !== undefined && t.classList.contains('chip')) { state.town = t.dataset.town; state.sel = null; render(); }
+    if (t.dataset.clear) { state.towns = []; state.q = ''; state.one = ''; state.sel = null; $('q').value = ''; render(); }
+    else if (t.id === 'showAll') { state.one = ''; render(); }
+    else if (t.dataset.share) { shareEvent(t); }
+    else if (t.dataset.town !== undefined && t.classList.contains('chip')) {
+      var tn = t.dataset.town, at = state.towns.indexOf(tn);
+      if (!tn) state.towns = []; else if (at >= 0) state.towns.splice(at, 1); else state.towns.push(tn);
+      state.one = ''; state.sel = null; render();
+    }
     else if (t.dataset.day) { state.sel = state.sel === t.dataset.day ? null : t.dataset.day; var dd = pd(t.dataset.day); if (dd.getMonth() !== state.month.getMonth()) state.month = new Date(dd.getFullYear(), dd.getMonth(), 1); render(); }
     else if (t.id === 'prev') { state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); state.sel = null; render(); }
     else if (t.id === 'next') { state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1); state.sel = null; render(); }
@@ -357,7 +386,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
   });
 
   $('q').value = state.q;
-  $('q').addEventListener('input', function () { state.q = this.value.trim(); state.sel = null; render(); });
+  $('q').addEventListener('input', function () { state.q = this.value.trim(); state.one = ''; state.sel = null; render(); });
 
   if (FORM_URL) {
     ['submitTop', 'submitBottom'].forEach(function (id) { $(id).href = FORM_URL; });
@@ -366,7 +395,8 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 
   fetch('events.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (j) {
     data = j; towns = (j.towns || []).slice().sort(function (a, b) { var ia = ORDER.indexOf(a), ib = ORDER.indexOf(b); if (ia < 0) ia = 99; if (ib < 0) ib = 99; return ia - ib || a.localeCompare(b); });
-    if (state.town && towns.indexOf(state.town) < 0) state.town = '';
+    state.towns = state.towns.filter(function (t) { return towns.indexOf(t) >= 0; });
+    if (state.one) state.view = 'list';
     var firstUp = j.events.filter(function (e) { return e.end_date >= key(today); })[0];
     state.month = new Date(today.getFullYear(), today.getMonth(), 1);
     $('foot').innerHTML = 'Updated ' + esc(new Date(j.updated).toLocaleDateString(undefined, { month: 'long', day: 'numeric' })) + '. Spot a mistake? ' + (CORRECT_URL ? '<a href="' + esc(CORRECT_URL) + '" target="_blank" rel="noopener">Let us know</a>.' : 'Corrections will be welcome soon.');
