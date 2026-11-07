@@ -6,10 +6,22 @@
     "default_town": "Willow Creek"
   },
   {
+    "name": "Visit Eureka",
+    "url": "https://www.visiteureka.com/events/list/?ical=1",
+    "page": "https://www.visiteureka.com/events/",
+    "default_town": "Eureka"
+  },
+  {
     "name": "Hoopa Valley Tribe",
     "url_env": "HOOPA_ICS_URL",
     "page": "https://www.hoopa-nsn.gov/hoopa-valley-tribe-community-events/",
     "default_town": "Hoopa",
     "exclude": []
+  },
+  {
+    "name": "Visit Trinity",
+    "url": "https://www.visittrinity.com/wp-content/Master.ics",
+    "page": "https://visittrinity.com/calendar/",
+    "default_town": "Weaverville"
   }
 ]

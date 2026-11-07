@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Eureka Events
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+X-PUBLISHED-TTL:PT4H
+BEGIN:VEVENT
+UID:5a8cd6f71638@community-calendar
+DTSTAMP:20261107T000231Z
+DTSTART:20261107T120000
+DTEND:20261107T163000
+SUMMARY:Humboldt County 2nd Annual Wedding & Event Fair
+LOCATION:Veterans Memorial Building
+DESCRIPTION:Check the event page for details and any price.\nhttps://www.b
+ luelakecasino.com/event/humboldt-county-2nd-annual-wedding-event-fair/
+URL:https://www.bluelakecasino.com/event/humboldt-county-2nd-annual-weddin
+ g-event-fair/
+END:VEVENT
+END:VCALENDAR

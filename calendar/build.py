@@ -16,6 +16,7 @@ contact names, phones or emails.
 """
 import csv, datetime as dt, difflib, hashlib, html, io, json, os, re, sys, urllib.request
 from zoneinfo import ZoneInfo
+from dateutil.rrule import rrulestr
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FEEDS = os.path.join(HERE, "feeds")
@@ -107,8 +108,9 @@ def clean_rows(rows):
 
 
 # ---------- Importing other people's calendar feeds ----------
-TOWNS = ["Eureka", "Arcata", "McKinleyville", "Blue Lake", "Willow Creek", "Hoopa",
-         "Burnt Ranch", "Big Bar", "Junction City", "Weaverville"]
+TOWNS = ["Eureka", "Arcata", "McKinleyville", "Blue Lake", "Fortuna", "Ferndale", "Trinidad",
+         "Willow Creek", "Hoopa", "Orleans", "Salyer", "Burnt Ranch", "Big Bar", "Junction City",
+         "Weaverville", "Hayfork"]
 LOCAL_TZ = ZoneInfo("America/Los_Angeles")
 
 
@@ -144,7 +146,10 @@ def parse_ics(text):
         elif cur is not None and ":" in ln:
             head, val = ln.split(":", 1)
             parts = head.split(";")
-            cur[parts[0].upper()] = (dict(p.split("=", 1) for p in parts[1:] if "=" in p), val)
+            name = parts[0].upper()
+            if name == "EXDATE" and name in cur:
+                val = cur[name][1] + "," + val
+            cur[name] = (dict(p.split("=", 1) for p in parts[1:] if "=" in p), val)
     return events
 
 
@@ -167,6 +172,25 @@ def plain(s, limit=300):
     return s if len(s) <= limit else s[:limit].rsplit(" ", 1)[0] + "..."
 
 
+def occurrences(ev, sd, st, today, horizon=90, cap=60):
+    """Dates a repeating event falls on, from today to `horizon` days ahead."""
+    rule = ev["RRULE"][1].strip()
+    rule = re.sub(r"(UNTIL=\d{8}T\d{6})Z", r"\1", rule)
+    rule = re.sub(r"UNTIL=(\d{8})(?!T)", r"UNTIL=\1T235959", rule)
+    start = dt.datetime.combine(sd, st or dt.time(0, 0))
+    skip = set()
+    if "EXDATE" in ev:
+        skip = {x.strip()[:8] for x in ev["EXDATE"][1].split(",") if x.strip()}
+    try:
+        rr = rrulestr(rule, dtstart=start)
+        lo = dt.datetime.combine(today, dt.time(0, 0))
+        hi = lo + dt.timedelta(days=horizon)
+        found = [d.date() for d in rr.between(lo, hi, inc=True) if d.strftime("%Y%m%d") not in skip]
+    except (ValueError, TypeError):
+        return [sd] if sd >= today else []
+    return found[:cap]
+
+
 def events_from_ics(text, source):
     out, today = [], dt.date.today()
     for ev in parse_ics(text):
@@ -184,8 +208,13 @@ def events_from_ics(text, source):
             ed = max(sd, ed - dt.timedelta(days=1)); et = None
         elif ed < sd:
             ed = sd
-        if ed < today - dt.timedelta(days=60):
+        span = ed - sd
+        if "RRULE" in ev:
+            days = occurrences(ev, sd, st, today)
+        elif ed < today - dt.timedelta(days=60):
             continue
+        else:
+            days = [sd]
         loc = unescape(ev.get("LOCATION", ({}, ""))[1]).strip()
         town = next((t for t in TOWNS if t.lower() in loc.lower()), source.get("default_town", "Other"))
         parts = [p.strip() for p in loc.split(",") if p.strip()]
@@ -194,18 +223,19 @@ def events_from_ics(text, source):
         if place and re.match(r"\d", place):  # location was only a street address
             place, address = "", place
         title = plain(unescape(ev["SUMMARY"][1]), 120)
-        out.append({
-            "id": hashlib.sha1((source["name"] + title + sd.isoformat()).encode()).hexdigest()[:12],
-            "title": title,
-            "date": sd.isoformat(), "end_date": ed.isoformat(),
-            "start_time": st.strftime("%H:%M") if st else "",
-            "end_time": et.strftime("%H:%M") if (st and et) else "",
-            "town": town, "place": place, "address": address,
-            "website": ev.get("URL", ({}, ""))[1].strip(),
-            "description": plain(unescape(ev.get("DESCRIPTION", ({}, ""))[1])),
-            "free": False, "category": "", "source": source["name"],
-            "source_url": source.get("page", ""),
-        })
+        for day in days:
+            out.append({
+                "id": hashlib.sha1((source["name"] + title + day.isoformat()).encode()).hexdigest()[:12],
+                "title": title,
+                "date": day.isoformat(), "end_date": (day + span).isoformat(),
+                "start_time": st.strftime("%H:%M") if st else "",
+                "end_time": et.strftime("%H:%M") if (st and et) else "",
+                "town": town, "place": place, "address": address,
+                "website": ev.get("URL", ({}, ""))[1].strip(),
+                "description": plain(unescape(ev.get("DESCRIPTION", ({}, ""))[1])),
+                "free": False, "category": "", "source": source["name"],
+                "source_url": source.get("page", ""),
+            })
     return out
 
 

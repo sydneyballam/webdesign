@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install the date helper
+        run: pip install python-dateutil
       - name: Build events and feeds from the public sheet tab
         env:
           SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}
