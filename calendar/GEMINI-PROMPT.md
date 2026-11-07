@@ -55,6 +55,8 @@ Skip:
 - Private events and anything that needs an account or membership to even see.
 - Events that already happened.
 - Anything you cannot tie to a specific date.
+- Sales and advertising: store sales, discounts, coupons, real estate showings, and pitches for "business opportunities", investments, crypto or recruiting.
+- Events whose only link is a ticket or payment page on a site you do not recognize. Add them only if the organizer's own page or a trusted local source confirms them.
 
 ## 4. Remove duplicates (important)
 

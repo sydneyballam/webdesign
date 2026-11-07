@@ -109,3 +109,14 @@ Have Gemini write to a separate tab (for example `Suggested`) with the same colu
 
     python3 calendar/build.py calendar/sample-sheet.csv
     cd calendar && python3 -m http.server 8000     # then open http://localhost:8000
+
+## Before approving any event
+
+Check these quickly. If two or more apply, leave it out or ask the organizer first.
+- The organizer is unknown and gives no phone, email or website you can check.
+- The only link is a ticket or payment page on an unfamiliar site.
+- It is a sales pitch, investment or "business opportunity" session, or a recruiting event.
+- Big prizes or money promised for attending.
+- The date, place or details don't match what you find anywhere else.
+- A form submission sent several events at once, all pointing to the same unfamiliar link.
+Remove an approved event at any time by deleting the Approved "Yes" for that row; it leaves the calendar at the next hourly update.
