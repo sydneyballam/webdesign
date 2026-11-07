@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T21:42:49Z",
+ "updated": "2026-11-07T22:43:07Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Big Bar",
@@ -63,23 +63,6 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/"
-  },
-  {
-   "id": "a16957329de2",
-   "title": "Essential Cinema: Children of Men (20th Anniversary)",
-   "date": "2026-11-07",
-   "end_date": "2026-11-07",
-   "start_time": "19:00",
-   "end_time": "22:00",
-   "town": "Eureka",
-   "place": "Eureka Theater",
-   "address": "612 F St.",
-   "website": "https://www.visiteureka.com/event/essential-cinema-children-of-men-20th-anniversary/",
-   "description": "Alfonso Cuar\u00f3n\u2019s dystopian thriller returns to the big screen for its 20th anniversary. Set in 2027 after two decades of global infertility, it follows Theo (Clive Owen) as he\u2019s pulled into protecting the first pregnant woman in eighteen years. Doors 7pm, film 7:30pm. $10 adults, $5 kids under 12....",
-   "free": false,
-   "category": "",
-   "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
   },
   {
    "id": "265379a0bd96",
@@ -1657,6 +1640,23 @@
    "address": "",
    "website": "https://www.visiteureka.com/event/christmas-the-acres/",
    "description": "A three-day holiday market at Redwood Acres with vendors, music and a kids\u2019 corner. Hours: Friday 5\u20139pm, Saturday 10am\u20137pm, Sunday 10am\u20134pm. More info",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/"
+  },
+  {
+   "id": "954a41626c74",
+   "title": "SHS Open House & Christmas PAWty",
+   "date": "2026-12-19",
+   "end_date": "2026-12-19",
+   "start_time": "12:00",
+   "end_time": "15:00",
+   "town": "Eureka",
+   "place": "Sequoia Humane Society",
+   "address": "6073 Loma Ave",
+   "website": "https://www.visiteureka.com/event/shs-open-house-christmas-pawty/",
+   "description": "Sequoia Humane Society\u2019s holiday party with free photos with Santa \u2013 pets welcome. More info",
    "free": false,
    "category": "",
    "source": "Visit Eureka",
