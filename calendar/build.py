@@ -49,7 +49,11 @@ def parse_time(s):
     return None
 
 
+SHEET_STATUS = "not connected (no SHEET_CSV_URL), using the starter events"
+
+
 def load_rows():
+    global SHEET_STATUS
     arg = sys.argv[1] if len(sys.argv) > 1 else None
     url = os.environ.get("SHEET_CSV_URL", "").strip()
     if arg:
@@ -60,9 +64,12 @@ def load_rows():
             text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8-sig")
         except Exception as err:
             print("SHEET PROBLEM: could not read the published sheet (%s). Using only the hand-added events." % err)
+            SHEET_STATUS = "could not be read: %s" % err
             return []
         n = max(0, len(list(csv.reader(io.StringIO(text)))) - 1)
-        print("Sheet: read %d row(s). Columns: %s" % (n, text.splitlines()[0][:120] if text.strip() else "(empty)"))
+        cols = text.splitlines()[0][:120] if text.strip() else "(empty)"
+        print("Sheet: read %d row(s). Columns: %s" % (n, cols))
+        SHEET_STATUS = "read %d row(s). Columns: %s" % (n, cols)
     else:
         # No sheet connected yet: use the starter events so the calendar is not empty.
         seed = os.path.join(HERE, "sample-sheet.csv")
@@ -449,10 +456,13 @@ def write(path, text):
 def main():
     events = import_sources(clean_rows(load_rows() + hand_rows() + recurring_rows()))
     events.sort(key=lambda e: (e["date"], e["start_time"] or "00:00", e["title"]))
+    # Archive: events that ended before today (Pacific time) leave the calendar and the feeds.
+    today_la = dt.datetime.now(LOCAL_TZ).date().isoformat()
+    events = [e for e in events if e["end_date"] >= today_la]
     towns = sorted({e["town"] for e in events})
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     write(os.path.join(HERE, "events.json"),
-          json.dumps({"updated": now, "towns": towns, "events": events}, indent=1) + "\n")
+          json.dumps({"updated": now, "sheet": SHEET_STATUS, "towns": towns, "events": events}, indent=1) + "\n")
     inject_jsonld(events)
     write(os.path.join(FEEDS, "all.ics"), ics_for(events, CAL_NAME))
     keep = {"all.ics"}
