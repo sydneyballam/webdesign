@@ -55,8 +55,14 @@ def load_rows():
     if arg:
         text = open(arg, encoding="utf-8").read()
     elif url:
-        req = urllib.request.Request(url, headers={"User-Agent": "calendar-builder"})
-        text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8")
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "calendar-builder"})
+            text = urllib.request.urlopen(req, timeout=30).read().decode("utf-8-sig")
+        except Exception as err:
+            print("SHEET PROBLEM: could not read the published sheet (%s). Using only the hand-added events." % err)
+            return []
+        n = max(0, len(list(csv.reader(io.StringIO(text)))) - 1)
+        print("Sheet: read %d row(s). Columns: %s" % (n, text.splitlines()[0][:120] if text.strip() else "(empty)"))
     else:
         # No sheet connected yet: use the starter events so the calendar is not empty.
         seed = os.path.join(HERE, "sample-sheet.csv")
