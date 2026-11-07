@@ -10,6 +10,12 @@ How it fits together:
 
 Nothing private ever leaves the Responses tab. Only the Public tab is published.
 
+## Fast way: let the script build both forms
+
+`calendar/forms/create-forms.gs` builds the submission form, the correction form, the private sheets, the Approved column and the Public tab in one run. Paste it into a new project at script.google.com, click Run, approve the permissions, then open View, Logs for the links. Then set `FORM_URL`, `CORRECT_URL` and `CORRECT_ENTRY` in `calendar/index.html`. The correction form's sheet is private and is never published. Corrections are read by a person and applied by hand.
+
+The steps below describe what the script builds, in case you want to do it by hand.
+
 ## 1. Google Form questions (in this order)
 
 Add the questions in exactly this order so the sheet columns match the formula below.
