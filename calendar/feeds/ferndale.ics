@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:768bb29c793d@community-calendar
-DTSTAMP:20261107T020040Z
+DTSTAMP:20261108T193814Z
 DTSTART:20261120T193000
 DTEND:20261120T140000
 RRULE:FREQ=DAILY;COUNT=31
@@ -23,5 +23,17 @@ DESCRIPTION:The stage musical of the Disney film follows sisters Anna and
  sents-disneys-frozen-the-broadway-musical/
 URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:7368277cc373@community-calendar
+DTSTAMP:20261108T193814Z
+DTSTART:20261204T173000
+DTEND:20261204T183000
+SUMMARY:Ferndale Fire Co 3 Hook & Ladder Turkey Shoot
+LOCATION:The Palace Saloon
+DESCRIPTION:The annual Company 3 fundraiser\, on Hospitality Night. Roll t
+ he dice for the best poker hand and win prizes including smoked chickens\
+ , smoked turkeys\, hams and t-shirts. T-shirts are available too. Your su
+ pport helps the company keep its mission going.
 END:VEVENT
 END:VCALENDAR
