@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:65bc022f8b72@community-calendar
-DTSTAMP:20261107T172638Z
+DTSTAMP:20261108T063932Z
 DTSTART:20261113T110000
 DTEND:20261113T120000
 SUMMARY:TAGA weekly golf tournament
@@ -20,7 +20,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:6f3b911a85d9@community-calendar
-DTSTAMP:20261107T172638Z
+DTSTAMP:20261108T063932Z
 DTSTART:20261120T110000
 DTEND:20261120T120000
 SUMMARY:TAGA weekly golf tournament
@@ -30,8 +30,23 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
  ather permitting. All golfers with an established handicap are welcome.
 END:VEVENT
 BEGIN:VEVENT
+UID:361485cf02c5@community-calendar
+DTSTAMP:20261108T063932Z
+DTSTART:20261121T140000
+DTEND:20261121T220000
+SUMMARY:Tapacapalooza II 2026
+LOCATION:Trinity Alps Performing Arts Center\, 30 Arbuckle Ct\, Weavervill
+ e\, CA
+DESCRIPTION:A music festival celebrating local Trinity County bands\, pres
+ ented by The Trinity Players. Lineup: Miles Tralle\, Cali Rockin' Blues\,
+  Cup of Joe's\, Very Bold Rats\, Nate\, Taylor and Marcio\, Bohemian Muse
+ \, Shiitake Sultan\, RXR\, Ladies of the Canyon and Amateur Cadaver\, on 
+ the Lobby and Main stages. All are welcome. Entrance by donation\, pay wh
+ at you can.
+END:VEVENT
+BEGIN:VEVENT
 UID:ef481ea66aaa@community-calendar
-DTSTAMP:20261107T172638Z
+DTSTAMP:20261108T063932Z
 DTSTART:20261127T110000
 DTEND:20261127T120000
 SUMMARY:TAGA weekly golf tournament
@@ -42,7 +57,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:9339ae72ce35@community-calendar
-DTSTAMP:20261107T172638Z
+DTSTAMP:20261108T063932Z
 DTSTART:20261204T110000
 DTEND:20261204T120000
 SUMMARY:TAGA weekly golf tournament
@@ -53,7 +68,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:ec1fa84ae11b@community-calendar
-DTSTAMP:20261107T172638Z
+DTSTAMP:20261108T063932Z
 DTSTART:20261211T110000
 DTEND:20261211T120000
 SUMMARY:TAGA weekly golf tournament
@@ -64,7 +79,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:5488281c67eb@community-calendar
-DTSTAMP:20261107T172638Z
+DTSTAMP:20261108T063932Z
 DTSTART:20261218T110000
 DTEND:20261218T120000
 SUMMARY:TAGA weekly golf tournament
@@ -75,7 +90,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:6dcfa45f1f7d@community-calendar
-DTSTAMP:20261107T172638Z
+DTSTAMP:20261108T063932Z
 DTSTART:20261225T110000
 DTEND:20261225T120000
 SUMMARY:TAGA weekly golf tournament
