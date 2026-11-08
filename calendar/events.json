@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T08:08:04Z",
+ "updated": "2026-11-08T16:44:54Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Big Bar",
@@ -12,26 +12,6 @@
   "Willow Creek"
  ],
  "events": [
-  {
-   "id": "45407abf1373",
-   "title": "Fall Wreath Making Class for Beginners",
-   "date": "2026-11-08",
-   "end_date": "2026-11-08",
-   "start_time": "13:00",
-   "end_time": "16:00",
-   "town": "Eureka",
-   "place": "Carl Johnson Company",
-   "address": "3950 Jacobs Ave",
-   "website": "https://www.visiteureka.com/event/fall-wreath-making-class-for-beginners/",
-   "description": "Make a fall wreath with Misty, new owner of Blossoms. Mimosa included. $85 per person. Non-refundable, though refunds are possible with 48+ hours\u2019 notice. Sign up",
-   "free": false,
-   "category": "",
-   "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.805235,
-   "lng": -124.137023,
-   "approx": false
-  },
   {
    "id": "4dcd1a8de3cd",
    "title": "Free fuels reduction eligibility meeting",
@@ -1910,6 +1890,26 @@
    "source_url": "https://www.visiteureka.com/events/",
    "lat": 40.735226,
    "lng": -124.21045,
+   "approx": false
+  },
+  {
+   "id": "168b399e19b1",
+   "title": "Cookie Decorating Workshop (Christmas Theme)",
+   "date": "2026-12-19",
+   "end_date": "2026-12-19",
+   "start_time": "13:00",
+   "end_time": "13:00",
+   "town": "Eureka",
+   "place": "Carl Johnson Company",
+   "address": "3950 Jacobs Ave",
+   "website": "https://www.visiteureka.com/event/cookie-decorating-workshop-christmas-theme/",
+   "description": "Decorate six Christmas/Grinch-themed cookies. $50 per person. Sign up",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.805235,
+   "lng": -124.137023,
    "approx": false
   },
   {
