@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T19:16:47Z",
+ "updated": "2026-11-08T19:24:43Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Big Bar",
@@ -8,6 +8,7 @@
   "Eureka",
   "Ferndale",
   "Hoopa",
+  "McKinleyville",
   "Weaverville",
   "Willow Creek"
  ],
@@ -750,6 +751,26 @@
    "source_url": "https://www.visiteureka.com/events/",
    "lat": 40.8021,
    "lng": -124.1637,
+   "approx": true
+  },
+  {
+   "id": "437172876cd8",
+   "title": "Holiday Craft Fair",
+   "date": "2026-11-21",
+   "end_date": "2026-11-21",
+   "start_time": "09:00",
+   "end_time": "16:00",
+   "town": "McKinleyville",
+   "place": "Dow's Prairie Grange #505",
+   "address": "",
+   "website": "",
+   "description": "Support local makers, creators and producers. Delicious food available.",
+   "free": false,
+   "category": "Market",
+   "source": "Humboldt County On Alert group on Facebook",
+   "source_url": "https://www.facebook.com/groups/HumboldtCountyOnAlert/permalink/29402148696088904/",
+   "lat": 40.9457,
+   "lng": -124.1006,
    "approx": true
   },
   {
