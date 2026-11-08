@@ -14,7 +14,7 @@ The CSV must be the PUBLIC tab only (already filtered to approved events, with
 every field the submitter said No to left blank). This script never sees
 contact names, phones or emails.
 """
-import csv, datetime as dt, difflib, hashlib, html, io, json, os, re, sys, urllib.request
+import csv, datetime as dt, difflib, hashlib, html, io, json, os, re, sys, time, urllib.parse, urllib.request
 from zoneinfo import ZoneInfo
 from dateutil.rrule import rrulestr
 
@@ -88,6 +88,63 @@ def hand_rows():
         return []  # without a sheet, load_rows() already reads this file
     path = os.path.join(HERE, "sample-sheet.csv")
     return list(csv.DictReader(open(path, encoding="utf-8"))) if os.path.exists(path) else []
+
+
+TOWN_CENTERS = {
+    "Willow Creek": (40.9390, -123.6320), "Hoopa": (41.0500, -123.6740), "Eureka": (40.8021, -124.1637),
+    "Arcata": (40.8665, -124.0828), "McKinleyville": (40.9457, -124.1006), "Blue Lake": (40.8834, -123.9840),
+    "Trinidad": (41.0590, -124.1430), "Fortuna": (40.5982, -124.1573), "Ferndale": (40.5762, -124.2631),
+    "Orleans": (41.3033, -123.5340), "Salyer": (40.8851, -123.5800), "Burnt Ranch": (40.7957, -123.4617),
+    "Big Bar": (40.7470, -123.2680), "Junction City": (40.7340, -123.0510), "Weaverville": (40.7307, -122.9420),
+    "Hayfork": (40.5546, -123.1745),
+}
+GEOCACHE = os.path.join(HERE, "geocache.json")
+
+
+def census_lookup(query):
+    """Ask the free US Census geocoder for one address. Returns (lat, lng), None for no match, or raises on a network problem."""
+    url = ("https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=json&address="
+           + urllib.parse.quote(query))
+    req = urllib.request.Request(url, headers={"User-Agent": "along-the-299-calendar"})
+    data = json.loads(urllib.request.urlopen(req, timeout=20).read().decode("utf-8"))
+    matches = data.get("result", {}).get("addressMatches", [])
+    if not matches:
+        return None
+    c = matches[0]["coordinates"]
+    return round(c["y"], 6), round(c["x"], 6)
+
+
+def add_locations(events, lookup=None, max_new=60):
+    """Give every event a map position. A street address is looked up once and remembered in geocache.json.
+    Events without a usable address sit at the middle of their town and are marked approximate."""
+    lookup = lookup or census_lookup
+    cache = json.load(open(GEOCACHE, encoding="utf-8")) if os.path.exists(GEOCACHE) else {}
+    before = dict(cache)
+    fresh, down = 0, False
+    for e in events:
+        pos = None
+        if e["address"] and e["town"]:
+            key = (e["address"] + "|" + e["town"]).lower()
+            if key in cache:
+                pos = cache[key]
+            elif not down and fresh < max_new:
+                try:
+                    fresh += 1
+                    got = lookup("%s, %s, CA" % (e["address"], e["town"]))
+                    cache[key] = list(got) if got else None
+                    pos = cache[key]
+                    time.sleep(0.3)
+                except Exception as err:
+                    print("Map lookup unavailable (%s). Using town centers for now." % err)
+                    down = True
+        if pos:
+            e["lat"], e["lng"], e["approx"] = pos[0], pos[1], False
+        elif e["town"] in TOWN_CENTERS:
+            e["lat"], e["lng"] = TOWN_CENTERS[e["town"]]
+            e["approx"] = True
+    if cache != before:
+        write(GEOCACHE, json.dumps(cache, indent=1, sort_keys=True) + "\n")
+    return events
 
 
 def recurring_rows():
@@ -463,6 +520,7 @@ def main():
     # Archive: events that ended before today (Pacific time) leave the calendar and the feeds.
     today_la = dt.datetime.now(LOCAL_TZ).date().isoformat()
     events = [e for e in events if e["end_date"] >= today_la]
+    events = add_locations(events)
     towns = sorted({e["town"] for e in events})
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     write(os.path.join(HERE, "events.json"),

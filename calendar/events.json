@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-07T22:43:07Z",
- "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
+ "updated": "2026-11-08T00:35:03Z",
+ "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Big Bar",
   "Blue Lake",
@@ -28,7 +28,10 @@
    "free": false,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.8851,
+   "lng": -123.58,
+   "approx": true
   },
   {
    "id": "5a8cd6f71638",
@@ -45,7 +48,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "4dc7ee401e14",
@@ -62,7 +68,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "265379a0bd96",
@@ -79,7 +88,10 @@
    "free": true,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "45407abf1373",
@@ -96,7 +108,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "4dcd1a8de3cd",
@@ -113,7 +128,10 @@
    "free": true,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.7957,
+   "lng": -123.4617,
+   "approx": true
   },
   {
    "id": "e1ee772022ce",
@@ -130,7 +148,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "cd5ce4492c00",
@@ -147,7 +168,10 @@
    "free": true,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.747,
+   "lng": -123.268,
+   "approx": true
   },
   {
    "id": "c5b4daabe777",
@@ -164,7 +188,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "f62be0c7f19b",
@@ -181,7 +208,10 @@
    "free": true,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "127ef94277d5",
@@ -198,7 +228,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "3316903c2db4",
@@ -215,7 +248,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "2ed1a19c17e8",
@@ -232,7 +268,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "ae9e29189f44",
@@ -249,7 +288,10 @@
    "free": false,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "ea28525fdd8e",
@@ -266,7 +308,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "65bc022f8b72",
@@ -283,7 +328,10 @@
    "free": false,
    "category": "",
    "source": "Visit Trinity",
-   "source_url": "https://visittrinity.com/calendar/"
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "6e1230cc06bf",
@@ -300,7 +348,10 @@
    "free": true,
    "category": "",
    "source": "Neighborhood Harvest flyer",
-   "source_url": "https://www.facebook.com/profile.php?id=61585530843784"
+   "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "b0c08ef4f5df",
@@ -317,7 +368,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "9cbd25f20d49",
@@ -334,7 +388,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "69b2e027795f",
@@ -351,7 +408,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "9c035344e598",
@@ -368,7 +428,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "9a45aa35eed3",
@@ -385,7 +448,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "44129f52b94a",
@@ -402,7 +468,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "43899836227a",
@@ -419,7 +488,10 @@
    "free": true,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "728e31b4fe8a",
@@ -436,7 +508,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "01f0491e05cc",
@@ -453,7 +528,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "afd20e5fe5e2",
@@ -470,7 +548,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "58f82adeaabd",
@@ -487,7 +568,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "c75429292586",
@@ -504,7 +588,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "3166c184465a",
@@ -521,7 +608,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "7f62d54a45cc",
@@ -538,7 +628,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "009455093e7a",
@@ -555,7 +648,10 @@
    "free": true,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "29eeed1ca893",
@@ -572,7 +668,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "3907a707c614",
@@ -589,7 +688,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "f964ab934849",
@@ -606,7 +708,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "e288c46aab38",
@@ -623,7 +728,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "6f3b911a85d9",
@@ -640,7 +748,10 @@
    "free": false,
    "category": "",
    "source": "Visit Trinity",
-   "source_url": "https://visittrinity.com/calendar/"
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "8402486ce8d9",
@@ -657,7 +768,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "9b9b3ca61dc0",
@@ -674,7 +788,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "768bb29c793d",
@@ -691,7 +808,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.5762,
+   "lng": -124.2631,
+   "approx": true
   },
   {
    "id": "8afc1dd4434e",
@@ -708,7 +828,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "bdb4d9d1f044",
@@ -725,7 +848,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "959438757435",
@@ -742,7 +868,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek-China Flat Museum flyer",
-   "source_url": "http://www.thebigfootmuseum.com/"
+   "source_url": "http://www.thebigfootmuseum.com/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "7b81e0f35f0a",
@@ -759,7 +888,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "515f3913f84c",
@@ -776,7 +908,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "af0b44f70895",
@@ -793,7 +928,10 @@
    "free": true,
    "category": "",
    "source": "Neighborhood Harvest flyer",
-   "source_url": "https://www.facebook.com/profile.php?id=61585530843784"
+   "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "1358e0365cb4",
@@ -810,7 +948,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "054a8eb8055b",
@@ -827,7 +968,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "75a248146e57",
@@ -844,7 +988,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "117b11c4ca8b",
@@ -861,7 +1008,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "627be0d5721e",
@@ -878,7 +1028,10 @@
    "free": true,
    "category": "",
    "source": "Neighborhood Harvest flyer",
-   "source_url": "https://www.facebook.com/profile.php?id=61585530843784"
+   "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "cd44cdc8b2ac",
@@ -895,7 +1048,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "c107e8bd7034",
@@ -912,7 +1068,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "7e3aee1154d4",
@@ -929,7 +1088,10 @@
    "free": true,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "a721f87cea73",
@@ -946,7 +1108,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "ef8bb291c387",
@@ -963,7 +1128,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "4da798f45411",
@@ -980,7 +1148,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "11c27399a77e",
@@ -997,7 +1168,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "7b6c4684e817",
@@ -1014,7 +1188,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "89f9c1c1df60",
@@ -1031,7 +1208,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek-China Flat Museum flyer",
-   "source_url": "http://www.thebigfootmuseum.com/"
+   "source_url": "http://www.thebigfootmuseum.com/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "ef481ea66aaa",
@@ -1048,24 +1228,10 @@
    "free": false,
    "category": "",
    "source": "Visit Trinity",
-   "source_url": "https://visittrinity.com/calendar/"
-  },
-  {
-   "id": "e145bfa75fe3",
-   "title": "Santa Arrives in Old Town",
-   "date": "2026-11-27",
-   "end_date": "2026-11-27",
-   "start_time": "14:00",
-   "end_time": "16:00",
-   "town": "Eureka",
-   "place": "Eureka Main Street Gazebo",
-   "address": "",
-   "website": "https://www.eurekamainstreet.org/events",
-   "description": "Welcoming Santa Claus to Old Town Eureka with community festivities and family activities.",
-   "free": true,
-   "category": "",
-   "source": "",
-   "source_url": ""
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "880e9f1977cf",
@@ -1082,7 +1248,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "baa5262e229c",
@@ -1099,7 +1268,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "978555f2b2c0",
@@ -1116,7 +1288,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "68f06426bd24",
@@ -1133,7 +1308,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "7568f41303ab",
@@ -1150,7 +1328,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "95ec8f37a581",
@@ -1167,7 +1348,10 @@
    "free": false,
    "category": "",
    "source": "Blue Lake Casino Hotel calendar",
-   "source_url": "https://www.bluelakecasino.com/calendar/"
+   "source_url": "https://www.bluelakecasino.com/calendar/",
+   "lat": 40.8834,
+   "lng": -123.984,
+   "approx": true
   },
   {
    "id": "1f1ce2d15d17",
@@ -1184,7 +1368,10 @@
    "free": true,
    "category": "",
    "source": "Neighborhood Harvest flyer",
-   "source_url": "https://www.facebook.com/profile.php?id=61585530843784"
+   "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "7bc56f531dde",
@@ -1201,7 +1388,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "23fefea51e52",
@@ -1218,7 +1408,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "ad51e541c0c8",
@@ -1235,7 +1428,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "c4fd650f53de",
@@ -1252,7 +1448,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
   },
   {
    "id": "b29a10ab388d",
@@ -1269,7 +1468,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "909a7db15ac2",
@@ -1286,7 +1488,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "e8e541743bb3",
@@ -1303,7 +1508,10 @@
    "free": true,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "2eb06563898f",
@@ -1320,7 +1528,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek-China Flat Museum flyer",
-   "source_url": "http://www.thebigfootmuseum.com/"
+   "source_url": "http://www.thebigfootmuseum.com/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "9339ae72ce35",
@@ -1337,7 +1548,10 @@
    "free": false,
    "category": "",
    "source": "Visit Trinity",
-   "source_url": "https://visittrinity.com/calendar/"
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "3287d0da1bb4",
@@ -1354,7 +1568,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "317a0c9c5db5",
@@ -1371,7 +1588,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "e25317b1bae9",
@@ -1388,7 +1608,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "cb1d21ccdcae",
@@ -1405,7 +1628,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "dae24467123e",
@@ -1422,7 +1648,10 @@
    "free": true,
    "category": "",
    "source": "Neighborhood Harvest flyer",
-   "source_url": "https://www.facebook.com/profile.php?id=61585530843784"
+   "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "2d67e3ca10fd",
@@ -1439,7 +1668,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "3a4ea783cbf6",
@@ -1456,7 +1688,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "be8042999df2",
@@ -1473,7 +1708,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "cfa405632cbc",
@@ -1490,7 +1728,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "74cdf8b8e961",
@@ -1507,7 +1748,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "db560dc7e218",
@@ -1524,7 +1768,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "9aebda3eb857",
@@ -1541,7 +1788,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "accc1e6c0789",
@@ -1558,7 +1808,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "62090f3be3ad",
@@ -1575,7 +1828,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "ec1fa84ae11b",
@@ -1592,7 +1848,10 @@
    "free": false,
    "category": "",
    "source": "Visit Trinity",
-   "source_url": "https://visittrinity.com/calendar/"
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "b1177a7eb218",
@@ -1609,7 +1868,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "5488281c67eb",
@@ -1626,7 +1888,10 @@
    "free": false,
    "category": "",
    "source": "Visit Trinity",
-   "source_url": "https://visittrinity.com/calendar/"
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "23b10fc3fd52",
@@ -1643,7 +1908,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "954a41626c74",
@@ -1660,7 +1928,10 @@
    "free": false,
    "category": "",
    "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/"
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "6dcfa45f1f7d",
@@ -1677,7 +1948,10 @@
    "free": false,
    "category": "",
    "source": "Visit Trinity",
-   "source_url": "https://visittrinity.com/calendar/"
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "8f1f15fdc5bb",
@@ -1694,7 +1968,10 @@
    "free": true,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "c1a6f724b4ce",
@@ -1711,7 +1988,10 @@
    "free": true,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "37eb08fe7315",
@@ -1728,7 +2008,10 @@
    "free": true,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "e0ba29c5e3cb",
@@ -1745,7 +2028,10 @@
    "free": true,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "e32a0b81490a",
@@ -1762,7 +2048,10 @@
    "free": true,
    "category": "",
    "source": "",
-   "source_url": ""
+   "source_url": "",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "e0a3aff50a1f",
@@ -1779,7 +2068,10 @@
    "free": false,
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/"
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   }
  ]
 }
