@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T19:16:21Z",
+ "updated": "2026-11-08T19:16:47Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Big Bar",
@@ -1286,8 +1286,8 @@
    "description": "Handicraft jewelry, food and community. Come for the finds, stay for the vibes! Vendors: please call 707-497-7930 to confirm your table.",
    "free": false,
    "category": "Market",
-   "source": "Hoopa Trading Post flyer",
-   "source_url": "",
+   "source": "Willow Creek Events group on Facebook",
+   "source_url": "https://www.facebook.com/groups/willowcreekevents/permalink/4087830258019868/",
    "lat": 41.05,
    "lng": -123.674,
    "approx": true
