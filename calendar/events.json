@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-08T00:35:03Z",
- "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
+ "updated": "2026-11-08T01:10:21Z",
+ "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Big Bar",
   "Blue Lake",
@@ -109,9 +109,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.805235,
+   "lng": -124.137023,
+   "approx": false
   },
   {
    "id": "4dcd1a8de3cd",
@@ -149,9 +149,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "cd5ce4492c00",
@@ -289,9 +289,9 @@
    "category": "",
    "source": "",
    "source_url": "",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.940266,
+   "lng": -123.628299,
+   "approx": false
   },
   {
    "id": "ea28525fdd8e",
@@ -309,9 +309,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.801609,
+   "lng": -124.168081,
+   "approx": false
   },
   {
    "id": "65bc022f8b72",
@@ -349,9 +349,9 @@
    "category": "",
    "source": "Neighborhood Harvest flyer",
    "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.970204,
+   "lng": -123.633552,
+   "approx": false
   },
   {
    "id": "b0c08ef4f5df",
@@ -409,9 +409,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "9c035344e598",
@@ -469,9 +469,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.805235,
+   "lng": -124.137023,
+   "approx": false
   },
   {
    "id": "43899836227a",
@@ -489,9 +489,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.940478,
+   "lng": -123.629264,
+   "approx": false
   },
   {
    "id": "728e31b4fe8a",
@@ -509,9 +509,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.800897,
+   "lng": -124.165782,
+   "approx": false
   },
   {
    "id": "01f0491e05cc",
@@ -549,9 +549,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "58f82adeaabd",
@@ -569,9 +569,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.800599,
+   "lng": -124.165705,
+   "approx": false
   },
   {
    "id": "c75429292586",
@@ -669,9 +669,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.777819,
+   "lng": -124.144468,
+   "approx": false
   },
   {
    "id": "3907a707c614",
@@ -709,9 +709,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.800897,
+   "lng": -124.165782,
+   "approx": false
   },
   {
    "id": "e288c46aab38",
@@ -729,9 +729,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.800386,
+   "lng": -124.165149,
+   "approx": false
   },
   {
    "id": "6f3b911a85d9",
@@ -789,9 +789,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "768bb29c793d",
@@ -809,9 +809,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.5762,
-   "lng": -124.2631,
-   "approx": true
+   "lat": 40.576838,
+   "lng": -124.263508,
+   "approx": false
   },
   {
    "id": "8afc1dd4434e",
@@ -889,9 +889,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.940266,
+   "lng": -123.628299,
+   "approx": false
   },
   {
    "id": "515f3913f84c",
@@ -909,9 +909,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.940266,
+   "lng": -123.628299,
+   "approx": false
   },
   {
    "id": "af0b44f70895",
@@ -929,9 +929,9 @@
    "category": "",
    "source": "Neighborhood Harvest flyer",
    "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.970204,
+   "lng": -123.633552,
+   "approx": false
   },
   {
    "id": "1358e0365cb4",
@@ -949,9 +949,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.777642,
+   "lng": -124.179131,
+   "approx": false
   },
   {
    "id": "054a8eb8055b",
@@ -989,9 +989,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.805235,
+   "lng": -124.137023,
+   "approx": false
   },
   {
    "id": "117b11c4ca8b",
@@ -1009,9 +1009,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "627be0d5721e",
@@ -1029,9 +1029,9 @@
    "category": "",
    "source": "Neighborhood Harvest flyer",
    "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.940266,
+   "lng": -123.628299,
+   "approx": false
   },
   {
    "id": "cd44cdc8b2ac",
@@ -1089,9 +1089,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.940266,
+   "lng": -123.628299,
+   "approx": false
   },
   {
    "id": "a721f87cea73",
@@ -1129,9 +1129,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.935415,
+   "lng": -123.625132,
+   "approx": false
   },
   {
    "id": "4da798f45411",
@@ -1149,9 +1149,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.80439,
+   "lng": -124.166541,
+   "approx": false
   },
   {
    "id": "11c27399a77e",
@@ -1234,6 +1234,26 @@
    "approx": true
   },
   {
+   "id": "e145bfa75fe3",
+   "title": "Santa Arrives in Old Town",
+   "date": "2026-11-27",
+   "end_date": "2026-11-27",
+   "start_time": "14:00",
+   "end_time": "16:00",
+   "town": "Eureka",
+   "place": "Eureka Main Street Gazebo",
+   "address": "",
+   "website": "https://www.eurekamainstreet.org/events",
+   "description": "Welcoming Santa Claus to Old Town Eureka with community festivities and family activities.",
+   "free": true,
+   "category": "",
+   "source": "",
+   "source_url": "",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
+  },
+  {
    "id": "880e9f1977cf",
    "title": "Writers of Willow Creek",
    "date": "2026-11-27",
@@ -1269,9 +1289,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "978555f2b2c0",
@@ -1289,9 +1309,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.794129,
+   "lng": -124.159444,
+   "approx": false
   },
   {
    "id": "68f06426bd24",
@@ -1309,9 +1329,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.800897,
+   "lng": -124.165782,
+   "approx": false
   },
   {
    "id": "7568f41303ab",
@@ -1369,9 +1389,9 @@
    "category": "",
    "source": "Neighborhood Harvest flyer",
    "source_url": "https://www.facebook.com/profile.php?id=61585530843784",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.970204,
+   "lng": -123.633552,
+   "approx": false
   },
   {
    "id": "7bc56f531dde",
@@ -1389,9 +1409,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "23fefea51e52",
@@ -1469,9 +1489,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.805047,
+   "lng": -124.168519,
+   "approx": false
   },
   {
    "id": "909a7db15ac2",
@@ -1509,9 +1529,9 @@
    "category": "",
    "source": "",
    "source_url": "",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.919923,
+   "lng": -123.619584,
+   "approx": false
   },
   {
    "id": "2eb06563898f",
@@ -1609,9 +1629,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "cb1d21ccdcae",
@@ -1629,9 +1649,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.802807,
+   "lng": -124.165133,
+   "approx": false
   },
   {
    "id": "dae24467123e",
@@ -1789,9 +1809,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.805235,
+   "lng": -124.137023,
+   "approx": false
   },
   {
    "id": "accc1e6c0789",
@@ -1809,9 +1829,9 @@
    "category": "",
    "source": "Willow Creek Chamber of Commerce",
    "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
   },
   {
    "id": "62090f3be3ad",
@@ -1829,9 +1849,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.800131,
+   "lng": -124.148956,
+   "approx": false
   },
   {
    "id": "ec1fa84ae11b",
@@ -1929,9 +1949,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true
+   "lat": 40.735226,
+   "lng": -124.21045,
+   "approx": false
   },
   {
    "id": "6dcfa45f1f7d",
@@ -1969,9 +1989,9 @@
    "category": "",
    "source": "",
    "source_url": "",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.919923,
+   "lng": -123.619584,
+   "approx": false
   },
   {
    "id": "c1a6f724b4ce",
@@ -1989,9 +2009,9 @@
    "category": "",
    "source": "",
    "source_url": "",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.919923,
+   "lng": -123.619584,
+   "approx": false
   },
   {
    "id": "37eb08fe7315",
@@ -2009,9 +2029,9 @@
    "category": "",
    "source": "",
    "source_url": "",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.919923,
+   "lng": -123.619584,
+   "approx": false
   },
   {
    "id": "e0ba29c5e3cb",
@@ -2029,9 +2049,9 @@
    "category": "",
    "source": "",
    "source_url": "",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.919923,
+   "lng": -123.619584,
+   "approx": false
   },
   {
    "id": "e32a0b81490a",
@@ -2049,9 +2069,9 @@
    "category": "",
    "source": "",
    "source_url": "",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
+   "lat": 40.919923,
+   "lng": -123.619584,
+   "approx": false
   },
   {
    "id": "e0a3aff50a1f",
