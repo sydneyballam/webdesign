@@ -9,12 +9,27 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:437172876cd8@community-calendar
-DTSTAMP:20261108T192443Z
+DTSTAMP:20261108T193229Z
 DTSTART:20261121T090000
 DTEND:20261121T160000
 SUMMARY:Holiday Craft Fair
-LOCATION:Dow's Prairie Grange #505
+LOCATION:Dow's Prairie Grange #505\, 3995 Dows Prairie Rd\, McKinleyville\
+ , CA
 DESCRIPTION:Support local makers\, creators and producers. Delicious food 
  available.
+END:VEVENT
+BEGIN:VEVENT
+UID:f9fff63d7b63@community-calendar
+DTSTAMP:20261108T193229Z
+DTSTART:20261219T083000
+DTEND:20261219T150000
+SUMMARY:Breakfast with Santa and Holiday Fair
+LOCATION:Dow's Prairie Grange #505\, 3995 Dows Prairie Rd\, McKinleyville\
+ , CA
+DESCRIPTION:Pancake breakfast hosted by the Girl Scouts\, served 8:30am to
+  11:30am: adults $10\, children $7\, supporting their trip to England. Sa
+ nta is here 9am to 11:30am with a free visit and photo opportunity. Child
+ ren's crafts and activities\, and the Holiday Fair runs 8:30am to 3pm wit
+ h over 22 local artists.
 END:VEVENT
 END:VCALENDAR
