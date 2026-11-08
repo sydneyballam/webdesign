@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T19:32:29Z",
+ "updated": "2026-11-08T19:36:48Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Big Bar",
@@ -13,6 +13,26 @@
   "Willow Creek"
  ],
  "events": [
+  {
+   "id": "0a90e9b06374",
+   "title": "Free Community Thanksgiving Dinner",
+   "date": "2026-11-08",
+   "end_date": "2026-11-08",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "McKinleyville",
+   "place": "North Fork Church",
+   "address": "2333 McKinleyville Ave, McKinleyville, CA",
+   "website": "",
+   "description": "Church service at 11am, then dinner at 12:30pm. A traditional Thanksgiving meal with all the fixings. Everyone is welcome. North Fork Church is the new home of the God-Snacked Outreach Ministry.",
+   "free": true,
+   "category": "Food",
+   "source": "Humboldt County On Alert group on Facebook",
+   "source_url": "https://www.facebook.com/groups/HumboldtCountyOnAlert/permalink/29348688071434967/",
+   "lat": 40.9457,
+   "lng": -124.1006,
+   "approx": true
+  },
   {
    "id": "4dcd1a8de3cd",
    "title": "Free fuels reduction eligibility meeting",

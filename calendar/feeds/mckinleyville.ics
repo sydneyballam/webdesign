@@ -8,8 +8,19 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
+UID:0a90e9b06374@community-calendar
+DTSTAMP:20261108T193648Z
+DTSTART:20261108T110000
+DTEND:20261108T120000
+SUMMARY:Free Community Thanksgiving Dinner
+LOCATION:North Fork Church\, 2333 McKinleyville Ave\, McKinleyville\, CA
+DESCRIPTION:Church service at 11am\, then dinner at 12:30pm. A traditional
+  Thanksgiving meal with all the fixings. Everyone is welcome. North Fork 
+ Church is the new home of the God-Snacked Outreach Ministry.
+END:VEVENT
+BEGIN:VEVENT
 UID:437172876cd8@community-calendar
-DTSTAMP:20261108T193229Z
+DTSTAMP:20261108T193648Z
 DTSTART:20261121T090000
 DTEND:20261121T160000
 SUMMARY:Holiday Craft Fair
@@ -20,7 +31,7 @@ DESCRIPTION:Support local makers\, creators and producers. Delicious food
 END:VEVENT
 BEGIN:VEVENT
 UID:f9fff63d7b63@community-calendar
-DTSTAMP:20261108T193229Z
+DTSTAMP:20261108T193648Z
 DTSTART:20261219T083000
 DTEND:20261219T150000
 SUMMARY:Breakfast with Santa and Holiday Fair
