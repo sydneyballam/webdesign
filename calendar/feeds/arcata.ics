@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Arcata Events
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+X-PUBLISHED-TTL:PT4H
+BEGIN:VEVENT
+UID:1664632a6a81@community-calendar
+DTSTAMP:20261109T162429Z
+DTSTART:20261122T110000
+DTEND:20261122T160000
+SUMMARY:48th Annual HBMS Mushroom Fair
+LOCATION:Arcata Community Center\, 321 Community Park Way\, Arcata\, CA
+DESCRIPTION:Humboldt Bay Mycological Society's biggest event of the year. 
+ Your ticket includes mushroom displays of hundreds of fresh local species
+ \, a raffle and food drive (bring nonperishable food for Food for People 
+ to earn up to 10 raffle tickets)\, vendors and food trucks\, a kids' scav
+ enger hunt with free prizes while supplies last\, and workshops and talks
+  on mushroom identification\, cultivation and more. Proceeds support scho
+ larships\, speaker honoraria and educational events.
+END:VEVENT
+END:VCALENDAR
