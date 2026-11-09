@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-09T00:44:57Z",
- "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
+ "updated": "2026-11-09T01:13:46Z",
+ "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Big Bar",
   "Blue Lake",
@@ -1211,6 +1211,26 @@
    "source_url": "https://visittrinity.com/calendar/",
    "lat": 40.7307,
    "lng": -122.942,
+   "approx": true
+  },
+  {
+   "id": "e145bfa75fe3",
+   "title": "Santa Arrives in Old Town",
+   "date": "2026-11-27",
+   "end_date": "2026-11-27",
+   "start_time": "14:00",
+   "end_time": "16:00",
+   "town": "Eureka",
+   "place": "Eureka Main Street Gazebo",
+   "address": "",
+   "website": "https://www.eurekamainstreet.org/events",
+   "description": "Welcoming Santa Claus to Old Town Eureka with community festivities and family activities.",
+   "free": true,
+   "category": "",
+   "source": "",
+   "source_url": "",
+   "lat": 40.8021,
+   "lng": -124.1637,
    "approx": true
   },
   {
