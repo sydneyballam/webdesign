@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:0f722a4aab17@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261111T100000
 DTEND:20261111T200000
 SUMMARY:Adventure's Edge Anniversary Sale: Eureka
@@ -19,7 +19,7 @@ DESCRIPTION:20% off the entire store at the Eureka store\, for one day onl
 END:VEVENT
 BEGIN:VEVENT
 UID:ea28525fdd8e@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261112T200000
 DTEND:20261112T200000
 RRULE:FREQ=DAILY;COUNT=31
@@ -35,7 +35,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:9cbd25f20d49@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261113T160000
 DTEND:20261113T160000
 RRULE:FREQ=DAILY;COUNT=2
@@ -51,7 +51,7 @@ URL:https://www.visiteureka.com/event/fig-twig-holiday-market/
 END:VEVENT
 BEGIN:VEVENT
 UID:9c035344e598@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261113T170000
 DTEND:20261113T200000
 SUMMARY:Holiday Shop & Stroll
@@ -65,7 +65,7 @@ URL:https://www.visiteureka.com/event/holiday-shop-stroll/
 END:VEVENT
 BEGIN:VEVENT
 UID:44129f52b94a@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261114T130000
 DTEND:20261114T130000
 SUMMARY:Chocolate Chip Cookie Cake Class
@@ -77,7 +77,7 @@ URL:https://www.visiteureka.com/event/chocolate-chip-cookie-cake-class/
 END:VEVENT
 BEGIN:VEVENT
 UID:728e31b4fe8a@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261114T160000
 DTEND:20261114T200000
 SUMMARY:StrangeBrew 14: Hum-Brewed
@@ -92,7 +92,7 @@ URL:https://www.visiteureka.com/event/strangebrew-14-hum-brewed/
 END:VEVENT
 BEGIN:VEVENT
 UID:58f82adeaabd@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20270104
 SUMMARY:Humboldt Arts Council Annual Members Exhibition
@@ -108,7 +108,7 @@ URL:https://www.visiteureka.com/event/humboldt-arts-council-annual-members
 END:VEVENT
 BEGIN:VEVENT
 UID:29eeed1ca893@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261118T183000
 DTEND:20261118T193000
 SUMMARY:Zoo Conservation Lecture: Lewis's Woodpecker
@@ -124,7 +124,7 @@ URL:https://www.visiteureka.com/event/zoo-conservation-lecture-lewiss-wood
 END:VEVENT
 BEGIN:VEVENT
 UID:f964ab934849@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261119T190000
 DTEND:20261119T210000
 SUMMARY:The Land Returns: Documentary Screening & Filmmaker Q&A
@@ -139,7 +139,7 @@ URL:https://www.visiteureka.com/event/the-land-returns-documentary-screeni
 END:VEVENT
 BEGIN:VEVENT
 UID:e288c46aab38@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261120T110000
 DTEND:20261120T160000
 SUMMARY:Humboldt Heroes Blood Drive & Recognition Ceremony
@@ -153,7 +153,7 @@ URL:https://www.visiteureka.com/event/humboldt-heroes-blood-drive-recognit
 END:VEVENT
 BEGIN:VEVENT
 UID:bdb4d9d1f044@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261121T080000
 DTEND:20261121T170000
 SUMMARY:Humboldt Roller Derby
@@ -165,7 +165,7 @@ URL:https://www.visiteureka.com/event/humboldt-roller-derby/2026-11-21/
 END:VEVENT
 BEGIN:VEVENT
 UID:1358e0365cb4@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261121T193000
 DTEND:20261121T193000
 SUMMARY:Eureka Chamber Music Series: Piano Trio
@@ -179,7 +179,7 @@ URL:https://www.visiteureka.com/event/eureka-chamber-music-series-piano-tr
 END:VEVENT
 BEGIN:VEVENT
 UID:75a248146e57@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261122T130000
 DTEND:20261122T130000
 SUMMARY:Thanksgiving Cake Decorating Class
@@ -191,7 +191,7 @@ URL:https://www.visiteureka.com/event/thanksgiving-cake-decorating-class/
 END:VEVENT
 BEGIN:VEVENT
 UID:4da798f45411@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261126T090000
 DTEND:20261126T090000
 SUMMARY:25th Old Town 5K Turkey Trot
@@ -205,19 +205,8 @@ DESCRIPTION:The 25th annual Thanksgiving morning 5K run/walk starting at t
 URL:https://www.visiteureka.com/event/25th-old-town-5k-turkey-trot/
 END:VEVENT
 BEGIN:VEVENT
-UID:e145bfa75fe3@community-calendar
-DTSTAMP:20261110T025617Z
-DTSTART:20261127T140000
-DTEND:20261127T160000
-SUMMARY:Santa Arrives in Old Town
-LOCATION:Eureka Main Street Gazebo
-DESCRIPTION:Welcoming Santa Claus to Old Town Eureka with community festiv
- ities and family activities.\nhttps://www.eurekamainstreet.org/events
-URL:https://www.eurekamainstreet.org/events
-END:VEVENT
-BEGIN:VEVENT
 UID:978555f2b2c0@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261127T190000
 DTEND:20261127T190000
 RRULE:FREQ=DAILY;COUNT=2
@@ -234,7 +223,7 @@ URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
 END:VEVENT
 BEGIN:VEVENT
 UID:68f06426bd24@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261127T190000
 DTEND:20261127T233000
 RRULE:FREQ=DAILY;COUNT=2
@@ -250,7 +239,7 @@ URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
 END:VEVENT
 BEGIN:VEVENT
 UID:b29a10ab388d@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261202T180000
 DTEND:20261202T200000
 SUMMARY:Dick Taylor's 4th Annual Tree Lighting
@@ -264,7 +253,7 @@ URL:https://www.visiteureka.com/event/dick-taylors-4th-annual-tree-lightin
 END:VEVENT
 BEGIN:VEVENT
 UID:317a0c9c5db5@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261204T160000
 DTEND:20261204T170000
 RRULE:FREQ=DAILY;COUNT=3
@@ -281,7 +270,7 @@ URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
 END:VEVENT
 BEGIN:VEVENT
 UID:cb1d21ccdcae@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261204T193000
 DTEND:20261204T193000
 RRULE:FREQ=DAILY;COUNT=2
@@ -297,7 +286,7 @@ URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
 UID:2d67e3ca10fd@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Holiday Window Display Contest: "Season of Cheer"
@@ -311,7 +300,7 @@ URL:https://www.visiteureka.com/event/holiday-window-display-contest-seaso
 END:VEVENT
 BEGIN:VEVENT
 UID:3a4ea783cbf6@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Winter Whimsy Quest
@@ -324,7 +313,7 @@ URL:https://www.visiteureka.com/event/winter-whimsy-quest/
 END:VEVENT
 BEGIN:VEVENT
 UID:74cdf8b8e961@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261205T180000
 DTEND:20261205T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -337,7 +326,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-2/
 END:VEVENT
 BEGIN:VEVENT
 UID:9aebda3eb857@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261206T130000
 DTEND:20261206T160000
 SUMMARY:Beginner Wreath Making Class
@@ -349,7 +338,7 @@ URL:https://www.visiteureka.com/event/beginner-wreath-making-class-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:62090f3be3ad@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261209T170000
 DTEND:20261209T170000
 SUMMARY:Humboldt Library Foundation Holiday Gala
@@ -364,7 +353,7 @@ URL:https://www.visiteureka.com/event/humboldt-library-foundation-holiday-
 END:VEVENT
 BEGIN:VEVENT
 UID:b1177a7eb218@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261212T180000
 DTEND:20261212T233000
 SUMMARY:Truckers Christmas Parade
@@ -380,7 +369,7 @@ URL:https://www.visiteureka.com/event/truckers-christmas-parade/2026-12-12
 END:VEVENT
 BEGIN:VEVENT
 UID:23b10fc3fd52@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261218T170000
 DTEND:20261218T160000
 RRULE:FREQ=DAILY;COUNT=3
@@ -394,7 +383,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:954a41626c74@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261219T120000
 DTEND:20261219T150000
 SUMMARY:SHS Open House & Christmas PAWty
@@ -406,7 +395,7 @@ URL:https://www.visiteureka.com/event/shs-open-house-christmas-pawty/
 END:VEVENT
 BEGIN:VEVENT
 UID:168b399e19b1@community-calendar
-DTSTAMP:20261110T025617Z
+DTSTAMP:20261110T034306Z
 DTSTART:20261219T130000
 DTEND:20261219T130000
 SUMMARY:Cookie Decorating Workshop (Christmas Theme)
