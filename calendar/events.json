@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-10T09:59:21Z",
- "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
+ "updated": "2026-11-10T16:10:52Z",
+ "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
   "Big Bar",
@@ -194,6 +194,26 @@
    "approx": true
   },
   {
+   "id": "157034b5e09d",
+   "title": "Native American Heritage Month: Frank Tuttle, Sacred Spaces",
+   "date": "2026-11-12",
+   "end_date": "2026-11-12",
+   "start_time": "13:00",
+   "end_time": "14:30",
+   "town": "Eureka",
+   "place": "MEC, College of the Redwoods Eureka Main Campus",
+   "address": "7351 Tompkins Hill Rd, Eureka, CA",
+   "website": "",
+   "description": "Frank Tuttle, a Maidu and Yuki traditionalist and artist, speaks on Sacred Spaces. Part of Native American Heritage Month, hosted by the College of the Redwoods Native American Student Support and Success Program.",
+   "free": false,
+   "category": "Community",
+   "source": "Native American Student Support and Success Program on Facebook",
+   "source_url": "https://www.facebook.com/photo.php?fbid=1827447459077101&set=a.525686842586509&type=3",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
+  },
+  {
    "id": "ae9e29189f44",
    "title": "Charity Bingo Night",
    "date": "2026-11-12",
@@ -212,6 +232,26 @@
    "lat": 40.940266,
    "lng": -123.628299,
    "approx": false
+  },
+  {
+   "id": "a61d006c2a75",
+   "title": "Native American Heritage Month: Indigenous Tribal Student Union Game Night",
+   "date": "2026-11-12",
+   "end_date": "2026-11-12",
+   "start_time": "17:30",
+   "end_time": "19:30",
+   "town": "Eureka",
+   "place": "MEC, College of the Redwoods Eureka Main Campus",
+   "address": "7351 Tompkins Hill Rd, Eureka, CA",
+   "website": "",
+   "description": "A game night with the Indigenous Tribal Student Union. Part of Native American Heritage Month, hosted by the College of the Redwoods Native American Student Support and Success Program.",
+   "free": false,
+   "category": "Community",
+   "source": "Native American Student Support and Success Program on Facebook",
+   "source_url": "https://www.facebook.com/photo.php?fbid=1827447459077101&set=a.525686842586509&type=3",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "ea28525fdd8e",
@@ -631,6 +671,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "9251f9d444a6",
+   "title": "Native American Heritage Month: Guest Speaker and Native Family Dinner",
+   "date": "2026-11-19",
+   "end_date": "2026-11-19",
+   "start_time": "17:00",
+   "end_time": "19:00",
+   "town": "Hoopa",
+   "place": "College of the Redwoods Klamath-Trinity Campus",
+   "address": "",
+   "website": "",
+   "description": "A guest speaker and a Native family dinner. Part of Native American Heritage Month, hosted by the College of the Redwoods Native American Student Support and Success Program.",
+   "free": false,
+   "category": "Community",
+   "source": "Native American Student Support and Success Program on Facebook",
+   "source_url": "https://www.facebook.com/photo.php?fbid=1827447459077101&set=a.525686842586509&type=3",
+   "lat": 41.05,
+   "lng": -123.674,
    "approx": true
   },
   {
@@ -1251,26 +1311,6 @@
    "source_url": "https://visittrinity.com/calendar/",
    "lat": 40.7307,
    "lng": -122.942,
-   "approx": true
-  },
-  {
-   "id": "e145bfa75fe3",
-   "title": "Santa Arrives in Old Town",
-   "date": "2026-11-27",
-   "end_date": "2026-11-27",
-   "start_time": "14:00",
-   "end_time": "16:00",
-   "town": "Eureka",
-   "place": "Eureka Main Street Gazebo",
-   "address": "",
-   "website": "https://www.eurekamainstreet.org/events",
-   "description": "Welcoming Santa Claus to Old Town Eureka with community festivities and family activities.",
-   "free": true,
-   "category": "",
-   "source": "",
-   "source_url": "",
-   "lat": 40.8021,
-   "lng": -124.1637,
    "approx": true
   },
   {
