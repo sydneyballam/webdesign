@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:343014c1879a@community-calendar
-DTSTAMP:20261110T022624Z
+DTSTAMP:20261110T162000Z
 DTSTART:20261112T100000
 DTEND:20261112T200000
 SUMMARY:Adventure's Edge Anniversary Sale: Arcata
@@ -18,12 +18,28 @@ DESCRIPTION:20% off the entire store at the Arcata store\, for one day onl
  y. The biggest sale of the year.
 END:VEVENT
 BEGIN:VEVENT
+UID:a8cfa27b30c3@community-calendar
+DTSTAMP:20261110T162000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Taste of the Holidays
+LOCATION:Arcata Community Center\, 321 Dr. M.L.K. Jr Pkwy\, Arcata\, CA
+DESCRIPTION:A fundraiser for the Rotary Club of Arcata Sunrise featuring H
+ umboldt County's best specialty food and beverage producers. Tickets are 
+ $50 and include food and beverage tasting. Donate an unwrapped toy for To
+ ys for Tots and enter to win a special gift. Bring a tasting glass from a
+  previous year for a complimentary drink ticket. Ages 16 and up. Check th
+ e ticket page for the start time.\nhttps://www.zeffy.com/en-US/ticketing/
+ 2026-taste-of-the-holidays
+URL:https://www.zeffy.com/en-US/ticketing/2026-taste-of-the-holidays
+END:VEVENT
+BEGIN:VEVENT
 UID:1664632a6a81@community-calendar
-DTSTAMP:20261110T022624Z
+DTSTAMP:20261110T162000Z
 DTSTART:20261122T110000
 DTEND:20261122T160000
 SUMMARY:48th Annual HBMS Mushroom Fair
-LOCATION:Arcata Community Center\, 321 Community Park Way\, Arcata\, CA
+LOCATION:Arcata Community Center\, 321 Dr. M.L.K. Jr Pkwy\, Arcata\, CA
 DESCRIPTION:Humboldt Bay Mycological Society's biggest event of the year. 
  Your ticket includes mushroom displays of hundreds of fresh local species
  \, a raffle and food drive (bring nonperishable food for Food for People 

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T16:14:00Z",
+ "updated": "2026-11-10T16:20:00Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -654,6 +654,26 @@
    "approx": false
   },
   {
+   "id": "a8cfa27b30c3",
+   "title": "Taste of the Holidays",
+   "date": "2026-11-19",
+   "end_date": "2026-11-19",
+   "start_time": "",
+   "end_time": "",
+   "town": "Arcata",
+   "place": "Arcata Community Center",
+   "address": "321 Dr. M.L.K. Jr Pkwy, Arcata, CA",
+   "website": "https://www.zeffy.com/en-US/ticketing/2026-taste-of-the-holidays",
+   "description": "A fundraiser for the Rotary Club of Arcata Sunrise featuring Humboldt County's best specialty food and beverage producers. Tickets are $50 and include food and beverage tasting. Donate an unwrapped toy for Toys for Tots and enter to win a special gift. Bring a tasting glass from a previous year for a complimentary drink ticket. Ages 16 and up. Check the ticket page for the start time.",
+   "free": false,
+   "category": "Fundraiser",
+   "source": "Rotary Club of Arcata Sunrise",
+   "source_url": "https://www.zeffy.com/en-US/ticketing/2026-taste-of-the-holidays",
+   "lat": 40.8665,
+   "lng": -124.0828,
+   "approx": true
+  },
+  {
    "id": "3907a707c614",
    "title": "Storytime",
    "date": "2026-11-19",
@@ -1022,16 +1042,16 @@
    "end_time": "16:00",
    "town": "Arcata",
    "place": "Arcata Community Center",
-   "address": "321 Community Park Way, Arcata, CA",
+   "address": "321 Dr. M.L.K. Jr Pkwy, Arcata, CA",
    "website": "",
    "description": "Humboldt Bay Mycological Society's biggest event of the year. Your ticket includes mushroom displays of hundreds of fresh local species, a raffle and food drive (bring nonperishable food for Food for People to earn up to 10 raffle tickets), vendors and food trucks, a kids' scavenger hunt with free prizes while supplies last, and workshops and talks on mushroom identification, cultivation and more. Proceeds support scholarships, speaker honoraria and educational events.",
    "free": false,
    "category": "Community",
    "source": "Humboldt Bay Mycological Society on Facebook",
    "source_url": "https://facebook.com/events/s/48th-annual-hbms-mushroom-fair/1694040305326956/",
-   "lat": 40.864994,
-   "lng": -124.079546,
-   "approx": false
+   "lat": 40.8665,
+   "lng": -124.0828,
+   "approx": true
   },
   {
    "id": "75a248146e57",
