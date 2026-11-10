@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T02:11:04Z",
+ "updated": "2026-11-10T02:26:24Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -72,6 +72,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 40.747,
    "lng": -123.268,
+   "approx": true
+  },
+  {
+   "id": "0f722a4aab17",
+   "title": "Adventure's Edge Anniversary Sale: Eureka",
+   "date": "2026-11-11",
+   "end_date": "2026-11-11",
+   "start_time": "10:00",
+   "end_time": "20:00",
+   "town": "Eureka",
+   "place": "Adventure's Edge, Eureka store",
+   "address": "125 W 5th St, Eureka, CA",
+   "website": "",
+   "description": "20% off the entire store at the Eureka store, for one day only. The biggest sale of the year.",
+   "free": false,
+   "category": "Sale",
+   "source": "Adventure's Edge on Facebook",
+   "source_url": "https://www.facebook.com/AdventureEdge/posts/pfbid0DfYNp5mi3b98nffj8MD191ZLRZVsEH7jXzvQRPC9ygY8JsAVRuYqKCvw7D4e2nCxl",
+   "lat": 40.8021,
+   "lng": -124.1637,
    "approx": true
   },
   {
@@ -152,6 +172,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 41.05,
    "lng": -123.674,
+   "approx": true
+  },
+  {
+   "id": "343014c1879a",
+   "title": "Adventure's Edge Anniversary Sale: Arcata",
+   "date": "2026-11-12",
+   "end_date": "2026-11-12",
+   "start_time": "10:00",
+   "end_time": "20:00",
+   "town": "Arcata",
+   "place": "Adventure's Edge, Arcata store",
+   "address": "650 10th St, Arcata, CA",
+   "website": "",
+   "description": "20% off the entire store at the Arcata store, for one day only. The biggest sale of the year.",
+   "free": false,
+   "category": "Sale",
+   "source": "Adventure's Edge on Facebook",
+   "source_url": "https://www.facebook.com/AdventureEdge/posts/pfbid0DfYNp5mi3b98nffj8MD191ZLRZVsEH7jXzvQRPC9ygY8JsAVRuYqKCvw7D4e2nCxl",
+   "lat": 40.8665,
+   "lng": -124.0828,
    "approx": true
   },
   {
