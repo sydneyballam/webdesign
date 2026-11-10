@@ -274,7 +274,7 @@ def ics_dt(prop):
     return d.date(), d.time()
 
 
-def plain(s, limit=300):
+def plain(s, limit=700):
     s = html.unescape(re.sub(r"<[^>]+>", " ", s or ""))
     s = re.sub(r"\s+", " ", s).strip()
     return s if len(s) <= limit else s[:limit].rsplit(" ", 1)[0] + "..."
@@ -514,8 +514,59 @@ def write(path, text):
     open(path, "w", encoding="utf-8", newline="").write(text)
 
 
+
+def expand_days(events):
+    """One card per day for events that run several days.
+
+    Imported events with a posted schedule (schedules.json) become one event per
+    performance or open day. Events from the sheet or flyers that have a start
+    time and run a week or less repeat that time each day. Long running
+    exhibits and contests with no times stay as a single card."""
+    try:
+        rules = json.load(open(os.path.join(HERE, "schedules.json"), encoding="utf-8"))
+    except (OSError, ValueError):
+        rules = []
+    try:
+        feeds = {x["name"] for x in json.load(open(os.path.join(HERE, "sources.json"), encoding="utf-8"))}
+    except (OSError, ValueError):
+        feeds = set()
+    names = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    out = []
+    for e in events:
+        if e["end_date"] <= e["date"]:
+            out.append(e)
+            continue
+        first, last = dt.date.fromisoformat(e["date"]), dt.date.fromisoformat(e["end_date"])
+        rule = next((r for r in rules if r["match"].lower() in e["title"].lower()), None)
+        occ = []
+        if rule:
+            if "occurrences" in rule:
+                occ = [(o["date"], o.get("start", ""), o.get("end", "")) for o in rule["occurrences"]]
+            else:
+                d = first
+                while d <= last:
+                    t = rule.get("weekly", {}).get(names[d.weekday()])
+                    if t and d.isoformat() not in rule.get("skip", []):
+                        occ.append((d.isoformat(), t[0], t[1]))
+                    d += dt.timedelta(days=1)
+                occ += [(o["date"], o.get("start", ""), o.get("end", "")) for o in rule.get("add", [])]
+            occ = sorted(o for o in occ if e["date"] <= o[0] <= e["end_date"])
+        elif e.get("source") not in feeds and e["start_time"] and (last - first).days <= 6:
+            occ = [((first + dt.timedelta(days=i)).isoformat(), e["start_time"], e["end_time"])
+                   for i in range((last - first).days + 1)]
+        if not occ:
+            out.append(e)
+            continue
+        for day, st, et in occ:
+            c = dict(e, date=day, end_date=day, start_time=st, end_time=et)
+            c["id"] = hashlib.sha1((e.get("source", "") + e["title"] + day + st).encode()).hexdigest()[:12]
+            out.append(c)
+    return out
+
+
 def main():
     events = import_sources(clean_rows(load_rows() + hand_rows() + recurring_rows()))
+    events = expand_days(events)
     events.sort(key=lambda e: (e["date"], e["start_time"] or "00:00", e["title"]))
     # Archive: events that ended before today (Pacific time) leave the calendar and the feeds.
     today_la = dt.datetime.now(LOCAL_TZ).date().isoformat()

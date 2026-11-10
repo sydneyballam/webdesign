@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:0f722a4aab17@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261111T100000
 DTEND:20261111T200000
 SUMMARY:Adventure's Edge Anniversary Sale: Eureka
@@ -19,7 +19,7 @@ DESCRIPTION:20% off the entire store at the Eureka store\, for one day onl
 END:VEVENT
 BEGIN:VEVENT
 UID:157034b5e09d@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261112T130000
 DTEND:20261112T143000
 SUMMARY:Native American Heritage Month: Frank Tuttle\, Sacred Spaces
@@ -32,7 +32,7 @@ DESCRIPTION:Frank Tuttle\, a Maidu and Yuki traditionalist and artist\, sp
 END:VEVENT
 BEGIN:VEVENT
 UID:a61d006c2a75@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261112T173000
 DTEND:20261112T193000
 SUMMARY:Native American Heritage Month: Indigenous Tribal Student Union Ga
@@ -44,11 +44,10 @@ DESCRIPTION:A game night with the Indigenous Tribal Student Union. Part of
  ative American Student Support and Success Program.
 END:VEVENT
 BEGIN:VEVENT
-UID:ea28525fdd8e@community-calendar
-DTSTAMP:20261110T165827Z
+UID:5b67e0091839@community-calendar
+DTSTAMP:20261110T191715Z
 DTSTART:20261112T200000
-DTEND:20261112T200000
-RRULE:FREQ=DAILY;COUNT=31
+DTEND:20261112T210000
 SUMMARY:NCRT presents "She Loves Me"
 LOCATION:5th and D Street Theater
 DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
@@ -61,7 +60,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:020122d82fac@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261113T160000
 DTEND:20261113T210000
 SUMMARY:Fig Twig Holiday Market (Friday)
@@ -75,7 +74,7 @@ URL:https://www.instagram.com/figtwigmarket/
 END:VEVENT
 BEGIN:VEVENT
 UID:9c035344e598@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261113T170000
 DTEND:20261113T200000
 SUMMARY:Holiday Shop & Stroll
@@ -88,8 +87,34 @@ DESCRIPTION:Kick off the season with an evening of holiday shopping in Dow
 URL:https://www.visiteureka.com/event/holiday-shop-stroll/
 END:VEVENT
 BEGIN:VEVENT
+UID:b4c9dc1c7f76@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261113T200000
+DTEND:20261113T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:99b23dacd0ee@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261114T100000
+DTEND:20261114T150000
+SUMMARY:Artisan Fair
+LOCATION:Eureka First Baptist Church\, 422 Del Norte St\, Eureka\, CA
+DESCRIPTION:Discover unique artisan goods perfect for gifting or keeping f
+ or yourself. Handmade gifts\, raffle drawings\, live music and free apple
+  cider.
+END:VEVENT
+BEGIN:VEVENT
 UID:e7155c973907@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261114T100000
 DTEND:20261114T160000
 SUMMARY:Fig Twig Holiday Market (Saturday)
@@ -103,7 +128,7 @@ URL:https://www.instagram.com/figtwigmarket/
 END:VEVENT
 BEGIN:VEVENT
 UID:44129f52b94a@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261114T130000
 DTEND:20261114T130000
 SUMMARY:Chocolate Chip Cookie Cake Class
@@ -115,7 +140,7 @@ URL:https://www.visiteureka.com/event/chocolate-chip-cookie-cake-class/
 END:VEVENT
 BEGIN:VEVENT
 UID:728e31b4fe8a@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261114T160000
 DTEND:20261114T200000
 SUMMARY:StrangeBrew 14: Hum-Brewed
@@ -129,8 +154,23 @@ DESCRIPTION:This year’s StrangeBrew celebrates homebrewers: the Humboldt
 URL:https://www.visiteureka.com/event/strangebrew-14-hum-brewed/
 END:VEVENT
 BEGIN:VEVENT
+UID:c7532172ac65@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261114T200000
+DTEND:20261114T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:58f82adeaabd@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20270104
 SUMMARY:Humboldt Arts Council Annual Members Exhibition
@@ -146,7 +186,7 @@ URL:https://www.visiteureka.com/event/humboldt-arts-council-annual-members
 END:VEVENT
 BEGIN:VEVENT
 UID:29eeed1ca893@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261118T183000
 DTEND:20261118T193000
 SUMMARY:Zoo Conservation Lecture: Lewis's Woodpecker
@@ -162,7 +202,7 @@ URL:https://www.visiteureka.com/event/zoo-conservation-lecture-lewiss-wood
 END:VEVENT
 BEGIN:VEVENT
 UID:f964ab934849@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261119T190000
 DTEND:20261119T210000
 SUMMARY:The Land Returns: Documentary Screening & Filmmaker Q&A
@@ -176,8 +216,23 @@ URL:https://www.visiteureka.com/event/the-land-returns-documentary-screeni
  ng-filmmaker-qa/
 END:VEVENT
 BEGIN:VEVENT
+UID:ef5bcea03724@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261119T200000
+DTEND:20261119T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:e288c46aab38@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261120T110000
 DTEND:20261120T160000
 SUMMARY:Humboldt Heroes Blood Drive & Recognition Ceremony
@@ -190,8 +245,23 @@ URL:https://www.visiteureka.com/event/humboldt-heroes-blood-drive-recognit
  ion-ceremony/
 END:VEVENT
 BEGIN:VEVENT
+UID:4699d385d427@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261120T200000
+DTEND:20261120T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:bdb4d9d1f044@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261121T080000
 DTEND:20261121T170000
 SUMMARY:Humboldt Roller Derby
@@ -203,7 +273,7 @@ URL:https://www.visiteureka.com/event/humboldt-roller-derby/2026-11-21/
 END:VEVENT
 BEGIN:VEVENT
 UID:1358e0365cb4@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261121T193000
 DTEND:20261121T193000
 SUMMARY:Eureka Chamber Music Series: Piano Trio
@@ -216,8 +286,23 @@ URL:https://www.visiteureka.com/event/eureka-chamber-music-series-piano-tr
  io/
 END:VEVENT
 BEGIN:VEVENT
+UID:821bf4c948a5@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261121T200000
+DTEND:20261121T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:75a248146e57@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261122T130000
 DTEND:20261122T130000
 SUMMARY:Thanksgiving Cake Decorating Class
@@ -228,8 +313,23 @@ DESCRIPTION:Thanksgiving-themed cake decorating with Jeny Giraud. $55 per
 URL:https://www.visiteureka.com/event/thanksgiving-cake-decorating-class/
 END:VEVENT
 BEGIN:VEVENT
+UID:f6b572f6cd5c@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261122T140000
+DTEND:20261122T150000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:4da798f45411@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261126T090000
 DTEND:20261126T090000
 SUMMARY:25th Old Town 5K Turkey Trot
@@ -243,22 +343,25 @@ DESCRIPTION:The 25th annual Thanksgiving morning 5K run/walk starting at t
 URL:https://www.visiteureka.com/event/25th-old-town-5k-turkey-trot/
 END:VEVENT
 BEGIN:VEVENT
-UID:e145bfa75fe3@community-calendar
-DTSTAMP:20261110T165827Z
-DTSTART:20261127T140000
-DTEND:20261127T160000
-SUMMARY:Santa Arrives in Old Town
-LOCATION:Eureka Main Street Gazebo
-DESCRIPTION:Welcoming Santa Claus to Old Town Eureka with community festiv
- ities and family activities.\nhttps://www.eurekamainstreet.org/events
-URL:https://www.eurekamainstreet.org/events
+UID:04a6e9e80a3f@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261126T200000
+DTEND:20261126T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
-UID:978555f2b2c0@community-calendar
-DTSTAMP:20261110T165827Z
+UID:f56825d71500@community-calendar
+DTSTAMP:20261110T191715Z
 DTSTART:20261127T190000
-DTEND:20261127T190000
-RRULE:FREQ=DAILY;COUNT=2
+DTEND:20261127T200000
 SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
 LOCATION:Eureka Woman’s Club\, 1531 J St
 DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
@@ -271,11 +374,10 @@ URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
  -theater/
 END:VEVENT
 BEGIN:VEVENT
-UID:68f06426bd24@community-calendar
-DTSTAMP:20261110T165827Z
+UID:787e2d40aa37@community-calendar
+DTSTAMP:20261110T191715Z
 DTSTART:20261127T190000
 DTEND:20261127T233000
-RRULE:FREQ=DAILY;COUNT=2
 SUMMARY:Threshold:UP featuring Beats Antique
 LOCATION:Eureka Theater\, 612 F St.
 DESCRIPTION:The Eureka Theater’s Threshold dance series presents two nig
@@ -287,8 +389,100 @@ DESCRIPTION:The Eureka Theater’s Threshold dance series presents two nig
 URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
 END:VEVENT
 BEGIN:VEVENT
+UID:f2ec30fb6dee@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261127T200000
+DTEND:20261127T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:dbb81fa31aab@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261128T130000
+DTEND:20261128T140000
+SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
+LOCATION:Eureka Woman’s Club\, 1531 J St
+DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
+ stmas party\, with dinner included. Shows: Friday 11/27 at 7pm\; Saturday
+  11/28 at 1pm and 7pm. Saturday evening’s show benefits the Breast & GY
+ N Health Project. $55 general\, $50 seniors/students\; 56 seats per show.
+  Tickets & info\nhttps://www.visiteureka.com/event/the-sting-of-the-barb-
+ holiday-dinner-theater/
+URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
+ -theater/
+END:VEVENT
+BEGIN:VEVENT
+UID:c4d1749b95bf@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261128T190000
+DTEND:20261128T200000
+SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
+LOCATION:Eureka Woman’s Club\, 1531 J St
+DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
+ stmas party\, with dinner included. Shows: Friday 11/27 at 7pm\; Saturday
+  11/28 at 1pm and 7pm. Saturday evening’s show benefits the Breast & GY
+ N Health Project. $55 general\, $50 seniors/students\; 56 seats per show.
+  Tickets & info\nhttps://www.visiteureka.com/event/the-sting-of-the-barb-
+ holiday-dinner-theater/
+URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
+ -theater/
+END:VEVENT
+BEGIN:VEVENT
+UID:624ecbbd39d6@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261128T190000
+DTEND:20261128T233000
+SUMMARY:Threshold:UP featuring Beats Antique
+LOCATION:Eureka Theater\, 612 F St.
+DESCRIPTION:The Eureka Theater’s Threshold dance series presents two nig
+ hts with Beats Antique on their Metamorphosis Tour\, with DJ support from
+  local and touring artists plus lasers and projections throughout the the
+ ater. Proceeds support the theater’s restoration. Friday: Beats Antique
+ \, Beatkitty\,...\nhttps://www.visiteureka.com/event/thresholdup-featurin
+ g-beats-antique/
+URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
+END:VEVENT
+BEGIN:VEVENT
+UID:863ac1ae5416@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261128T200000
+DTEND:20261128T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:1828dacc9953@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261129T140000
+DTEND:20261129T150000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:b29a10ab388d@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261202T180000
 DTEND:20261202T200000
 SUMMARY:Dick Taylor's 4th Annual Tree Lighting
@@ -301,11 +495,25 @@ URL:https://www.visiteureka.com/event/dick-taylors-4th-annual-tree-lightin
  g/
 END:VEVENT
 BEGIN:VEVENT
-UID:317a0c9c5db5@community-calendar
-DTSTAMP:20261110T165827Z
+UID:25edbd2145b4@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261203T200000
+DTEND:20261203T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:601f4fe75a2e@community-calendar
+DTSTAMP:20261110T191715Z
 DTSTART:20261204T160000
-DTEND:20261204T170000
-RRULE:FREQ=DAILY;COUNT=3
+DTEND:20261204T210000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
 LOCATION:Redwood Acres
 DESCRIPTION:The 46th annual holiday crafts and music festival: three build
@@ -318,11 +526,10 @@ URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
  -music-festival/
 END:VEVENT
 BEGIN:VEVENT
-UID:cb1d21ccdcae@community-calendar
-DTSTAMP:20261110T165827Z
+UID:237c72757514@community-calendar
+DTSTAMP:20261110T191715Z
 DTSTART:20261204T193000
-DTEND:20261204T193000
-RRULE:FREQ=DAILY;COUNT=2
+DTEND:20261204T203000
 SUMMARY:Eureka Symphony: A Season of Light
 LOCATION:Arkley Center for Performing Arts\, 412 G St
 DESCRIPTION:Eureka Symphony’s holiday concert opens with Victor Hely-Hut
@@ -334,8 +541,23 @@ DESCRIPTION:Eureka Symphony’s holiday concert opens with Victor Hely-Hut
 URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
+UID:8d6ede5bdec6@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261204T200000
+DTEND:20261204T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:2d67e3ca10fd@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Holiday Window Display Contest: "Season of Cheer"
@@ -349,7 +571,7 @@ URL:https://www.visiteureka.com/event/holiday-window-display-contest-seaso
 END:VEVENT
 BEGIN:VEVENT
 UID:3a4ea783cbf6@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Winter Whimsy Quest
@@ -361,8 +583,24 @@ DESCRIPTION:A family-friendly hunt for holiday window displays across Down
 URL:https://www.visiteureka.com/event/winter-whimsy-quest/
 END:VEVENT
 BEGIN:VEVENT
+UID:9ba391125ecb@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261205T100000
+DTEND:20261205T170000
+SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
+LOCATION:Redwood Acres
+DESCRIPTION:The 46th annual holiday crafts and music festival: three build
+ ings of handmade gifts from North Coast artisans\, plus food and live ent
+ ertainment. Hours: Friday 4–9pm\, Saturday & Sunday 10am–5pm. $5 admi
+ ssion\; free for kids and seniors\, and free with a toy for the Humboldt 
+ Bay Fire Department toy...\nhttps://www.visiteureka.com/event/46th-annual
+ -humboldt-artisans-crafts-music-festival/
+URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
+ -music-festival/
+END:VEVENT
+BEGIN:VEVENT
 UID:74cdf8b8e961@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261205T180000
 DTEND:20261205T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -374,8 +612,54 @@ DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants
 URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-2/
 END:VEVENT
 BEGIN:VEVENT
+UID:24176bc4d9a2@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261205T193000
+DTEND:20261205T203000
+SUMMARY:Eureka Symphony: A Season of Light
+LOCATION:Arkley Center for Performing Arts\, 412 G St
+DESCRIPTION:Eureka Symphony’s holiday concert opens with Victor Hely-Hut
+ chinson’s Carol Symphony\; after intermission\, Claire Bent sings a Han
+ ukkah medley and holiday favorites. Free pre-concert talk at 6:30pm. Two 
+ performances: Friday 12/4 and Saturday 12/5 at 7:30pm. Tickets $21–$54 
+ plus $2 preservation fee\;...\nhttps://www.visiteureka.com/event/eureka-s
+ ymphony-a-season-of-light/
+URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
+END:VEVENT
+BEGIN:VEVENT
+UID:db860b88dff9@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261205T200000
+DTEND:20261205T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:5d50725f88e1@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261206T100000
+DTEND:20261206T170000
+SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
+LOCATION:Redwood Acres
+DESCRIPTION:The 46th annual holiday crafts and music festival: three build
+ ings of handmade gifts from North Coast artisans\, plus food and live ent
+ ertainment. Hours: Friday 4–9pm\, Saturday & Sunday 10am–5pm. $5 admi
+ ssion\; free for kids and seniors\, and free with a toy for the Humboldt 
+ Bay Fire Department toy...\nhttps://www.visiteureka.com/event/46th-annual
+ -humboldt-artisans-crafts-music-festival/
+URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
+ -music-festival/
+END:VEVENT
+BEGIN:VEVENT
 UID:9aebda3eb857@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261206T130000
 DTEND:20261206T160000
 SUMMARY:Beginner Wreath Making Class
@@ -386,8 +670,23 @@ DESCRIPTION:Make a Christmas wreath with Misty of Blossoms. $85 per person
 URL:https://www.visiteureka.com/event/beginner-wreath-making-class-3/
 END:VEVENT
 BEGIN:VEVENT
+UID:fb99387793a9@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261206T140000
+DTEND:20261206T150000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:62090f3be3ad@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261209T170000
 DTEND:20261209T170000
 SUMMARY:Humboldt Library Foundation Holiday Gala
@@ -401,8 +700,38 @@ URL:https://www.visiteureka.com/event/humboldt-library-foundation-holiday-
  gala/
 END:VEVENT
 BEGIN:VEVENT
+UID:e61c285cda1d@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261210T200000
+DTEND:20261210T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:f4eb9656a384@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261211T200000
+DTEND:20261211T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
 UID:5856ddec48d6@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261212T140000
 DTEND:20261212T150000
 SUMMARY:Victorian Holiday: 125th Anniversary Tea
@@ -416,7 +745,7 @@ URL:https://www.eurekawomansclub.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b1177a7eb218@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261212T180000
 DTEND:20261212T233000
 SUMMARY:Truckers Christmas Parade
@@ -431,11 +760,38 @@ URL:https://www.visiteureka.com/event/truckers-christmas-parade/2026-12-12
  /
 END:VEVENT
 BEGIN:VEVENT
-UID:23b10fc3fd52@community-calendar
-DTSTAMP:20261110T165827Z
+UID:95fddf94ed92@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261212T200000
+DTEND:20261212T210000
+SUMMARY:NCRT presents "She Loves Me"
+LOCATION:5th and D Street Theater
+DESCRIPTION:A romantic musical comedy set in 1930s Budapest: two bickering
+  perfume-shop coworkers have no idea they are each other’s anonymous pe
+ n pals – the story behind “You’ve Got Mail.” Directed by Andrea Z
+ valeko. Performances Thursday–Saturday at 8pm\, plus Sunday matinees at
+  2pm on 11/22\, 11/29 and 12/6....\nhttps://www.visiteureka.com/event/ncr
+ t-presents-she-loves-me/
+URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
+END:VEVENT
+BEGIN:VEVENT
+UID:19bae3e1102b@community-calendar
+DTSTAMP:20261110T191715Z
 DTSTART:20261218T170000
-DTEND:20261218T160000
-RRULE:FREQ=DAILY;COUNT=3
+DTEND:20261218T210000
+SUMMARY:Christmas @ the Acres
+LOCATION:Redwood Acres
+DESCRIPTION:A three-day holiday market at Redwood Acres with vendors\, mus
+ ic and a kids’ corner. Hours: Friday 5–9pm\, Saturday 10am–7pm\, Su
+ nday 10am–4pm. More info\nhttps://www.visiteureka.com/event/christmas-t
+ he-acres/
+URL:https://www.visiteureka.com/event/christmas-the-acres/
+END:VEVENT
+BEGIN:VEVENT
+UID:26305abc1186@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261219T100000
+DTEND:20261219T190000
 SUMMARY:Christmas @ the Acres
 LOCATION:Redwood Acres
 DESCRIPTION:A three-day holiday market at Redwood Acres with vendors\, mus
@@ -446,7 +802,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:954a41626c74@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261219T120000
 DTEND:20261219T150000
 SUMMARY:SHS Open House & Christmas PAWty
@@ -458,7 +814,7 @@ URL:https://www.visiteureka.com/event/shs-open-house-christmas-pawty/
 END:VEVENT
 BEGIN:VEVENT
 UID:168b399e19b1@community-calendar
-DTSTAMP:20261110T165827Z
+DTSTAMP:20261110T191715Z
 DTSTART:20261219T130000
 DTEND:20261219T130000
 SUMMARY:Cookie Decorating Workshop (Christmas Theme)
@@ -468,5 +824,18 @@ DESCRIPTION:Decorate six Christmas/Grinch-themed cookies. $50 per person.
  istmas-theme/
 URL:https://www.visiteureka.com/event/cookie-decorating-workshop-christmas
  -theme/
+END:VEVENT
+BEGIN:VEVENT
+UID:762c6fd1457d@community-calendar
+DTSTAMP:20261110T191715Z
+DTSTART:20261220T100000
+DTEND:20261220T160000
+SUMMARY:Christmas @ the Acres
+LOCATION:Redwood Acres
+DESCRIPTION:A three-day holiday market at Redwood Acres with vendors\, mus
+ ic and a kids’ corner. Hours: Friday 5–9pm\, Saturday 10am–7pm\, Su
+ nday 10am–4pm. More info\nhttps://www.visiteureka.com/event/christmas-t
+ he-acres/
+URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 END:VCALENDAR

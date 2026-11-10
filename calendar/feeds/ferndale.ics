@@ -8,11 +8,74 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:768bb29c793d@community-calendar
-DTSTAMP:20261108T193814Z
+UID:d252dbb6ad83@community-calendar
+DTSTAMP:20261110T191628Z
 DTSTART:20261120T193000
-DTEND:20261120T140000
-RRULE:FREQ=DAILY;COUNT=31
+DTEND:20261120T203000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:e1628de3b680@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261121T140000
+DTEND:20261121T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:d222b8c5595c@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261122T140000
+DTEND:20261122T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:ac00780c6250@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261127T193000
+DTEND:20261127T203000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:1e66ae9bef0d@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261129T140000
+DTEND:20261129T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
 LOCATION:Ferndale Repertory Theatre\, 447 Main St
 DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
@@ -26,7 +89,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:7368277cc373@community-calendar
-DTSTAMP:20261108T193814Z
+DTSTAMP:20261110T191628Z
 DTSTART:20261204T173000
 DTEND:20261204T183000
 SUMMARY:Ferndale Fire Co 3 Hook & Ladder Turkey Shoot
@@ -35,5 +98,149 @@ DESCRIPTION:The annual Company 3 fundraiser\, on Hospitality Night. Roll t
  he dice for the best poker hand and win prizes including smoked chickens\
  , smoked turkeys\, hams and t-shirts. T-shirts are available too. Your su
  pport helps the company keep its mission going.
+END:VEVENT
+BEGIN:VEVENT
+UID:4e1a3c822d8f@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261204T193000
+DTEND:20261204T203000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:f0bdcf128107@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261205T140000
+DTEND:20261205T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:3fd7af2907cb@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261206T140000
+DTEND:20261206T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:4f263dd9dd5d@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261211T193000
+DTEND:20261211T203000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:3a186e8c77af@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261212T140000
+DTEND:20261212T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:40fd71f5d935@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261213T140000
+DTEND:20261213T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:97122c00aa85@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261218T193000
+DTEND:20261218T203000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:e823eb3c8925@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261219T140000
+DTEND:20261219T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:9301d82b8ea3@community-calendar
+DTSTAMP:20261110T191628Z
+DTSTART:20261220T140000
+DTEND:20261220T150000
+SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
+LOCATION:Ferndale Repertory Theatre\, 447 Main St
+DESCRIPTION:The stage musical of the Disney film follows sisters Anna and 
+ Elsa\; fun for all ages. Fridays at 7:30pm\; Saturdays and Sundays at 2pm
+  (no regular show Sat 11/28). Running time about 2 hours plus intermissio
+ n. $25 general\, $22 seniors 60+ and students. Family Day Sat 11/21: 4 ti
+ ckets for $75 with...\nhttps://www.visiteureka.com/event/ferndale-rep-pre
+ sents-disneys-frozen-the-broadway-musical/
+URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
+ -the-broadway-musical/
 END:VEVENT
 END:VCALENDAR
