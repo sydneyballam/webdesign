@@ -1,7 +1,12 @@
 {
+ "100 memorial dr, weaverville, ca|weaverville": null,
  "11716 state hwy 96, hoopa, ca 95546|hoopa": [
   41.053652,
   -123.677633
+ ],
+ "125 w 5th st, eureka, ca|eureka": [
+  40.800668,
+  -124.174445
  ],
  "1531 j st|eureka": [
   40.794129,
@@ -88,6 +93,10 @@
  "636 f st|eureka": [
   40.800599,
   -124.165705
+ ],
+ "650 10th st, arcata, ca|arcata": [
+  40.869534,
+  -124.084935
  ],
  "716 south avenue|eureka": [
   40.777642,
