@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T02:26:24Z",
+ "updated": "2026-11-10T02:33:41Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -392,6 +392,26 @@
    "source_url": "https://www.bluelakecasino.com/calendar/",
    "lat": 40.8834,
    "lng": -123.984,
+   "approx": true
+  },
+  {
+   "id": "9257edbb3221",
+   "title": "Festival of Light Arts & Fine Crafts Event",
+   "date": "2026-11-14",
+   "end_date": "2026-11-14",
+   "start_time": "10:00",
+   "end_time": "16:00",
+   "town": "Weaverville",
+   "place": "Veterans Memorial Hall",
+   "address": "100 Memorial Dr, Weaverville, CA",
+   "website": "https://trinitycountyarts.org",
+   "description": "Holiday cheer, vendors, hot lunch and a Dutch auction. A fundraiser for free art, music and dance lessons for Trinity children. Sponsored by the Trinity County Arts Council and friends.",
+   "free": false,
+   "category": "Arts",
+   "source": "Trinity County Arts Council",
+   "source_url": "https://trinitycountyarts.org",
+   "lat": 40.7307,
+   "lng": -122.942,
    "approx": true
   },
   {
