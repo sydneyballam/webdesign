@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T16:10:52Z",
+ "updated": "2026-11-10T16:14:00Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -1991,6 +1991,26 @@
    "source_url": "https://visittrinity.com/calendar/",
    "lat": 40.7307,
    "lng": -122.942,
+   "approx": true
+  },
+  {
+   "id": "5856ddec48d6",
+   "title": "Victorian Holiday: 125th Anniversary Tea",
+   "date": "2026-12-12",
+   "end_date": "2026-12-12",
+   "start_time": "14:00",
+   "end_time": "",
+   "town": "Eureka",
+   "place": "Eureka Woman's Club",
+   "address": "1531 J St, Eureka, CA",
+   "website": "https://www.eurekawomansclub.org/",
+   "description": "Celebrate the club's 125th anniversary with a Victorian holiday tea. Doors open at 1:30pm and tea starts at 2pm. Enjoy sweet and savory tea fare by Wendy Chan, with a vegetarian option, plus a costume contest with prizes, festive carolers, a fan language presentation and handmade gifts for sale. Tickets are $50.",
+   "free": false,
+   "category": "Community",
+   "source": "Eureka Woman's Club",
+   "source_url": "https://www.eurekawomansclub.org/",
+   "lat": 40.8021,
+   "lng": -124.1637,
    "approx": true
   },
   {
