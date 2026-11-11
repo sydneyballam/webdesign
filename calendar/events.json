@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T15:57:03Z",
+ "updated": "2026-11-11T19:02:26Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -31,26 +31,6 @@
    "lat": 40.800668,
    "lng": -124.174445,
    "approx": false
-  },
-  {
-   "id": "c5b4daabe777",
-   "title": "Story Time",
-   "date": "2026-11-11",
-   "end_date": "2026-11-11",
-   "start_time": "10:30",
-   "end_time": "11:00",
-   "town": "Willow Creek",
-   "place": "Willow Creek Library",
-   "address": "39 Mayfair St",
-   "website": "https://willowcreekchamber.com/event/story-time/2026-11-11/",
-   "description": "A special time just for young children with their caregivers and families, story time brings children together to experience stories as an event and share the oohs, ahs, and mystery of \u2018what will happen next?\u2019 with others. Story time is a great activity for children. Children who often hear stories read aloud learn how to listen, learn more words and how to use them, and absorb new facts and ideas. In the adventure of story, kids also grow in imagination, problem-solving and creativity. Kids who listen to stories are better prepared for life and school. Story time at the library builds a child\u2019s fascination with reading and teaches skills that can be a lifelong advantage. Most of all, it\u2019s...",
-   "free": false,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
   },
   {
    "id": "f62be0c7f19b",
@@ -2770,6 +2750,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "1b9f857f23aa",
+   "title": "Kim Yerton Library, Free Tech Support with Acorn Wireless (By Appointment)",
+   "date": "2026-12-09",
+   "end_date": "2026-12-09",
+   "start_time": "14:00",
+   "end_time": "16:30",
+   "town": "Hoopa",
+   "place": "Kim Yerton Memorial Library",
+   "address": "370 Loop Rd",
+   "website": "https://willowcreekchamber.com/event/kim-yerton-library-free-tech-support-with-acorn-wireless-by-appointment/2026-12-09/",
+   "description": "If you want to learn how to use your own online device, create an account for an email, or get started on the internet, help is here! Stop by the Kim Yerton Memorial Hoopa Branch Library and talk to Acorn Wireless\u2019s expert Digital Navigator, Abraham Camez. He\u2019ll get you started and help you over any stumbling blocks. Acorn Wireless is a tribally owned internet service provider operated by the Hoopa Valley Public Utilities District. It was started in 2020 from CARES funding approved by the Hoopa Valley Tribal Council and supports Hoopa Valley people in key activities like distance learning, remote work, and telemedicine. Acorn provides high-speed broadband internet for the Hoopa Community....",
+   "free": false,
+   "category": "",
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
    "approx": true
   },
   {
