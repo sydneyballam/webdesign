@@ -1,9 +1,8 @@
 {
- "updated": "2026-11-10T19:57:38Z",
+ "updated": "2026-11-11T09:01:59Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
-  "Big Bar",
   "Blue Lake",
   "Eureka",
   "Ferndale",
@@ -13,46 +12,6 @@
   "Willow Creek"
  ],
  "events": [
-  {
-   "id": "28ac7ea00c3c",
-   "title": "Nahdiyaw Youth Nonprofit Meeting",
-   "date": "2026-11-10",
-   "end_date": "2026-11-10",
-   "start_time": "17:30",
-   "end_time": "",
-   "town": "Hoopa",
-   "place": "Soctish Room",
-   "address": "",
-   "website": "",
-   "description": "Board members and volunteers are needed for Nahdiyaw, a new nonprofit designed to empower and support the youth in our community. Everyone is welcome to come share ideas, be heard and help shape its future.",
-   "free": false,
-   "category": "Community",
-   "source": "Nahdiyaw on Facebook",
-   "source_url": "https://www.facebook.com/story.php?story_fbid=pfbid02CXaVZgemif6ffcHUqFH1qH7zbZmCWpK8qUfUUWJctMKzYtREKqLgxd8ZVxEsdrTKl&id=100068990626808",
-   "lat": 41.05,
-   "lng": -123.674,
-   "approx": true
-  },
-  {
-   "id": "cd5ce4492c00",
-   "title": "Free fuels reduction eligibility meeting",
-   "date": "2026-11-10",
-   "end_date": "2026-11-10",
-   "start_time": "18:00",
-   "end_time": "",
-   "town": "Big Bar",
-   "place": "Trinity River Natives Cultural Center",
-   "address": "",
-   "website": "",
-   "description": "Same meeting as Monday, closer to Big Bar.",
-   "free": true,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.747,
-   "lng": -123.268,
-   "approx": true
-  },
   {
    "id": "0f722a4aab17",
    "title": "Adventure's Edge Anniversary Sale: Eureka",
