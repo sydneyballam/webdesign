@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T15:51:13Z",
+ "updated": "2026-11-11T15:53:25Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -110,6 +110,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 41.05,
    "lng": -123.674,
+   "approx": true
+  },
+  {
+   "id": "471a8944969d",
+   "title": "Trivia Night at Trinity County Brewing Company",
+   "date": "2026-11-11",
+   "end_date": "2026-11-11",
+   "start_time": "18:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity County Brewing Company",
+   "address": "",
+   "website": "",
+   "description": "Wednesday night trivia at Trinity County Brewing Company: brainpower and beer. Free entry, and winners take home prizes. Starts at 6pm.",
+   "free": true,
+   "category": "Community",
+   "source": "Trinity County Brewing Company on Facebook",
+   "source_url": "https://www.facebook.com/groups/1991811091555913/permalink/2367267400676945/",
+   "lat": 40.7307,
+   "lng": -122.942,
    "approx": true
   },
   {
@@ -690,6 +710,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "5c884cbd7e06",
+   "title": "Trivia Night at Trinity County Brewing Company",
+   "date": "2026-11-18",
+   "end_date": "2026-11-18",
+   "start_time": "18:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity County Brewing Company",
+   "address": "",
+   "website": "",
+   "description": "Wednesday night trivia at Trinity County Brewing Company: brainpower and beer. Free entry, and winners take home prizes. Starts at 6pm.",
+   "free": true,
+   "category": "Community",
+   "source": "Trinity County Brewing Company on Facebook",
+   "source_url": "https://www.facebook.com/groups/1991811091555913/permalink/2367267400676945/",
+   "lat": 40.7307,
+   "lng": -122.942,
    "approx": true
   },
   {
