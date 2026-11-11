@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T19:02:26Z",
+ "updated": "2026-11-11T20:05:36Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -770,6 +770,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "640f9b30b0aa",
+   "title": "Henderson Center Holiday Open House",
+   "date": "2026-11-19",
+   "end_date": "2026-11-19",
+   "start_time": "17:00",
+   "end_time": "20:00",
+   "town": "Eureka",
+   "place": "Henderson Center",
+   "address": "",
+   "website": "https://www.visiteureka.com/event/henderson-center-holiday-open-house/",
+   "description": "Henderson Center Merchants come together for an evening to kick off the Christmas season! Retailers and Merchants will be open late, with retailers offering shopping specials and other businesses having family games, events, and Santa and The Grinch will be there! All family fun is free for the community.",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
    "approx": true
   },
   {
@@ -3130,26 +3150,6 @@
    "source_url": "https://www.visiteureka.com/events/",
    "lat": 40.735226,
    "lng": -124.21045,
-   "approx": false
-  },
-  {
-   "id": "168b399e19b1",
-   "title": "Cookie Decorating Workshop (Christmas Theme)",
-   "date": "2026-12-19",
-   "end_date": "2026-12-19",
-   "start_time": "13:00",
-   "end_time": "13:00",
-   "town": "Eureka",
-   "place": "Carl Johnson Company",
-   "address": "3950 Jacobs Ave",
-   "website": "https://www.visiteureka.com/event/cookie-decorating-workshop-christmas-theme/",
-   "description": "Decorate six Christmas/Grinch-themed cookies. $50 per person. Sign up",
-   "free": false,
-   "category": "",
-   "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.805235,
-   "lng": -124.137023,
    "approx": false
   },
   {
