@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T17:09:12Z",
+ "updated": "2026-11-12T19:00:23Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -34,26 +34,6 @@
    "lat": 40.869534,
    "lng": -124.084935,
    "approx": false
-  },
-  {
-   "id": "2ed1a19c17e8",
-   "title": "Storytime",
-   "date": "2026-11-12",
-   "end_date": "2026-11-12",
-   "start_time": "10:30",
-   "end_time": "11:00",
-   "town": "Willow Creek",
-   "place": "Willow Creek Library",
-   "address": "39 Mayfair St",
-   "website": "https://willowcreekchamber.com/event/storytime/2026-11-12/",
-   "description": "",
-   "free": false,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
   },
   {
    "id": "157034b5e09d",
@@ -2993,6 +2973,26 @@
    "source_url": "https://visittrinity.com/calendar/",
    "lat": 40.7307,
    "lng": -122.942,
+   "approx": true
+  },
+  {
+   "id": "9a3a9d4f6d44",
+   "title": "Writers of Willow Creek",
+   "date": "2026-12-11",
+   "end_date": "2026-12-11",
+   "start_time": "14:00",
+   "end_time": "15:00",
+   "town": "Willow Creek",
+   "place": "Willow Creek Library",
+   "address": "39 Mayfair St",
+   "website": "https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-11/",
+   "description": "A weekly meetup of local writers to create, share, and connect! Stop by, get support and feedback, and be a part of the creative process.",
+   "free": false,
+   "category": "",
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
    "approx": true
   },
   {
