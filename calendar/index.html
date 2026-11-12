@@ -36,6 +36,10 @@ a{color:var(--teal)}
 .sub p{margin:0 0 12px;color:var(--body);font-size:16px}
 .sub .row{display:flex;flex-wrap:wrap;gap:10px}
 .sub .stack{display:grid;gap:10px;max-width:22rem}
+.sub .stack .btn[data-tip]{position:relative}
+.sub .stack .btn[data-tip]::after{content:attr(data-tip);position:absolute;left:0;bottom:calc(100% + 8px);width:max-content;max-width:min(20rem,calc(100vw - 64px));padding:10px 12px;border-radius:8px;background:var(--deep);color:#fff;font-size:14px;font-weight:500;line-height:1.4;text-align:left;box-shadow:0 4px 14px rgba(28,37,65,.25);opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;pointer-events:none;z-index:5}
+.sub .stack .btn[data-tip]:hover::after,.sub .stack .btn[data-tip]:focus-visible::after{opacity:1;visibility:visible;transform:none}
+@media (prefers-reduced-motion:reduce){.sub .stack .btn[data-tip]::after{transition:none}}
 .sub .stack .btn{width:100%;justify-content:center;text-align:center}
 .sub details{margin-top:14px}
 .sub summary{cursor:pointer;font-weight:700;color:var(--teal);min-height:44px;display:flex;align-items:center}
@@ -162,10 +166,11 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
       <h2 id="subTitle">Subscribe</h2>
       <p id="subText"></p>
       <div class="stack">
-        <a class="btn gold" id="subMain" href="#">Apple (iPhone and Mac)</a>
-        <a class="btn out" id="subGoogle" href="#" target="_blank" rel="noopener">Google Calendar (Android)</a>
-        <a class="btn out" id="subOutlook" href="#" target="_blank" rel="noopener">Outlook</a>
-        <button class="btn out" id="subCopy" type="button">Copy the link</button>
+        <a class="btn gold" id="subMain" data-tip="Opens your Calendar app and keeps it up to date on its own. Works on iPhone, iPad and Mac." aria-describedby="subMainTip" href="#">Apple (iPhone and Mac)</a>
+        <a class="btn out" id="subGoogle" data-tip="Adds this calendar to your Google account so it shows in the Google Calendar app. If it won't open on your phone, use Copy the link." aria-describedby="subGoogleTip" href="#" target="_blank" rel="noopener">Google Calendar (Android)</a>
+        <a class="btn out" id="subOutlook" data-tip="Adds this calendar to your Outlook calendar on the web." aria-describedby="subOutlookTip" href="#" target="_blank" rel="noopener">Outlook</a>
+        <button class="btn out" id="subCopy" data-tip="Copies the calendar address, to paste into any calendar app that can add a calendar from a web address." aria-describedby="subCopyTip" type="button">Copy the link</button>
+        <span class="sr" id="subMainTip">Opens your Calendar app and keeps it up to date on its own. Works on iPhone, iPad and Mac.</span><span class="sr" id="subGoogleTip">Adds this calendar to your Google account so it shows in the Google Calendar app. If it won't open on your phone, use Copy the link.</span><span class="sr" id="subOutlookTip">Adds this calendar to your Outlook calendar on the web.</span><span class="sr" id="subCopyTip">Copies the calendar address, to paste into any calendar app that can add a calendar from a web address.</span>
       </div>
     </section>
   </div>
