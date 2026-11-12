@@ -338,12 +338,12 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     return CORRECT_URL + (CORRECT_URL.indexOf('?') < 0 ? '?' : '&') + 'usp=pp_url&entry.' + CORRECT_ENTRY + '=' + encodeURIComponent(e.title + ' (' + e.date + ')');
   }
 
-  function card(e) {
+  function card(e, ongoing) {
     var s = pd(e.date);
     var where = [e.place, e.town].filter(Boolean).join(' · ');
     var maps = e.address ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(e.address + ', ' + e.town + ', CA') : '';
     return '<article class="ev"><div class="dateblock"><div class="dow">' + DOW[s.getDay()] + '</div><div class="num">' + s.getDate() + '</div><div class="mon">' + MON[s.getMonth()] + '</div></div>' +
-      '<div class="card"><div class="when"><span>' + esc(whenText(e)) + '</span>' + (e.free ? '<span class="pill">Free</span>' : '') + '</div>' +
+      '<div class="card"><div class="when"><span>' + esc(whenText(e)) + '</span>' + (ongoing ? '<span class="pill">Still on this week</span>' : '') + (e.free ? '<span class="pill">Free</span>' : '') + '</div>' +
       '<h3>' + esc(e.title) + '</h3><div class="where">' + esc(where) + (e.address ? '<br>' + esc(e.address) : '') + '</div>' +
       (state.near && away(e) !== null ? '<div class="mi">About ' + (away(e) < 1 ? 'less than 1' : Math.round(away(e))) + ' mi away</div>' : '') +
       (e.description ? '<p class="desc">' + esc(e.description) + '</p>' : '') +
@@ -363,14 +363,25 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     if (state.one) { var one = visible()[0]; $('count').textContent = ''; return banner + '<div class="evgrid">' + card(one) + '</div>'; }
     if (!up.length) return emptyMsg();
     var thisWeek = key(mondayOf(today)), groups = [], idx = {};
-    up.forEach(function (e) {
-      var anchor = e.date < key(today) ? today : pd(e.date), wk = key(mondayOf(anchor));
+    function put(e, wk, ongoing) {
       var label = wk === thisWeek ? 'This week' : 'Week of ' + MON[pd(wk).getMonth()] + ' ' + pd(wk).getDate();
       if (!(wk in idx)) { idx[wk] = groups.length; groups.push({ wk: wk, label: label, items: [] }); }
-      groups[idx[wk]].items.push(e);
+      groups[idx[wk]].items.push({ e: e, ongoing: ongoing });
+    }
+    up.forEach(function (e) {
+      var anchor = e.date < key(today) ? today : pd(e.date), wk = key(mondayOf(anchor));
+      put(e, wk, false);
+      // A run of several days or weeks also shows in every later week it is still open,
+      // so someone looking at any week sees it.
+      if (e.end_date > e.date && !state.one) {
+        var last = key(mondayOf(pd(e.end_date))), w = pd(wk);
+        for (var n = 0; n < 20; n++) { w = addDays(w, 7); if (key(w) > last) break; put(e, key(w), true); }
+      }
     });
+    groups.sort(function (a, b) { return a.wk < b.wk ? -1 : 1; });
     return groups.map(function (g) {
-      return '<section class="group"><h2>' + esc(g.label) + '</h2><div class="evgrid">' + g.items.map(card).join('') + '</div></section>';
+      g.items.sort(function (x, y) { return (x.ongoing ? 1 : 0) - (y.ongoing ? 1 : 0); });
+      return '<section class="group"><h2>' + esc(g.label) + '</h2><div class="evgrid">' + g.items.map(function (i) { return card(i.e, i.ongoing); }).join('') + '</div></section>';
     }).join('');
   }
 
@@ -531,7 +542,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     else if (t.id === 'zipGo') { lookupZip($('zip').value); }
     else if (t.id === 'locBtn') { useLocation(); }
     else if (t.id === 'showAll') { state.one = ''; render(); }
-    else if (t.dataset.share) { var row = document.getElementById('sr-' + t.dataset.share), op = row.classList.contains('hidden'); row.classList.toggle('hidden', !op); t.setAttribute('aria-expanded', op); }
+    else if (t.dataset.share) { var row = t.closest('.card').querySelector('.sharerow'), op = row.classList.contains('hidden'); row.classList.toggle('hidden', !op); t.setAttribute('aria-expanded', op); }
     else if (t.dataset.copy) { copyLink(t); }
     else if (t.dataset.native) { navigator.share({ title: t.dataset.title, text: t.dataset.text, url: t.dataset.native }).catch(function () {}); }
     else if (t.id === 'shareBtn') { var so = !$('sharePanel').classList.contains('open'); $('sharePanel').classList.toggle('open', so); t.setAttribute('aria-expanded', so); }
