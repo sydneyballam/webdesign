@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Samoa Events
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+X-PUBLISHED-TTL:PT4H
+BEGIN:VEVENT
+UID:9ffb89836882@community-calendar
+DTSTAMP:20261112T010111Z
+DTSTART:20261206T100000
+DTEND:20261206T150000
+SUMMARY:Santa\, Trains and Candy Canes
+LOCATION:Timber Heritage Museum\, 930 Vance Ave\, Samoa\, CA
+DESCRIPTION:The Timber Heritage Association's annual holiday celebration\,
+  a festive day of holiday fun for the whole family. Cookies and holiday t
+ reats\, crafts and activities\, local vendors and a visit from Santa\, al
+ l around a lit up steam locomotive.\nhttps://www.timberheritage.org/speci
+ al-events
+URL:https://www.timberheritage.org/special-events
+END:VEVENT
+END:VCALENDAR

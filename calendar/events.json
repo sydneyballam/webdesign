@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T01:00:32Z",
+ "updated": "2026-11-12T01:01:11Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -8,6 +8,7 @@
   "Ferndale",
   "Hoopa",
   "McKinleyville",
+  "Samoa",
   "Weaverville",
   "Willow Creek"
  ],
@@ -2671,6 +2672,26 @@
    "lat": 40.942069,
    "lng": -124.106218,
    "approx": false
+  },
+  {
+   "id": "9ffb89836882",
+   "title": "Santa, Trains and Candy Canes",
+   "date": "2026-12-06",
+   "end_date": "2026-12-06",
+   "start_time": "10:00",
+   "end_time": "15:00",
+   "town": "Samoa",
+   "place": "Timber Heritage Museum",
+   "address": "930 Vance Ave, Samoa, CA",
+   "website": "https://www.timberheritage.org/special-events",
+   "description": "The Timber Heritage Association's annual holiday celebration, a festive day of holiday fun for the whole family. Cookies and holiday treats, crafts and activities, local vendors and a visit from Santa, all around a lit up steam locomotive.",
+   "free": true,
+   "category": "Holiday",
+   "source": "Timber Heritage Association on Facebook",
+   "source_url": "https://www.facebook.com/groups/198177600519852/permalink/3121587694845480/",
+   "lat": 40.8227,
+   "lng": -124.1832,
+   "approx": true
   },
   {
    "id": "9aebda3eb857",
