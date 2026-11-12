@@ -127,6 +127,7 @@
   40.940266,
   -123.628299
  ],
+ "75 the terrace, willow creek, ca|willow creek": null,
  "80 country club dr #a|willow creek": [
   40.940478,
   -123.629264
@@ -134,5 +135,9 @@
  "901 myrtle ave|eureka": [
   40.800131,
   -124.148956
+ ],
+ "930 vance ave, samoa, ca|samoa": [
+  40.821069,
+  -124.181722
  ]
 }

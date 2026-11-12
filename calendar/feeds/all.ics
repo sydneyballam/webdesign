@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:0f722a4aab17@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261111T100000
 DTEND:20261111T200000
 SUMMARY:Adventure's Edge Anniversary Sale: Eureka
@@ -19,7 +19,7 @@ DESCRIPTION:20% off the entire store at the Eureka store\, for one day onl
 END:VEVENT
 BEGIN:VEVENT
 UID:f62be0c7f19b@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261111T110000
 DTEND:20261111T120000
 SUMMARY:Veterans Day Honoring Ceremony
@@ -27,31 +27,8 @@ LOCATION:Hoopa Tribal Office
 DESCRIPTION:Tribal members and the community are invited.
 END:VEVENT
 BEGIN:VEVENT
-UID:127ef94277d5@community-calendar
-DTSTAMP:20261112T010111Z
-DTSTART:20261111T140000
-DTEND:20261111T163000
-SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
- ointment)
-LOCATION:Kim Yerton Memorial Library\, 370 Loop Rd
-DESCRIPTION:If you want to learn how to use your own online device\, creat
- e an account for an email\, or get started on the internet\, help is here
- ! Stop by the Kim Yerton Memorial Hoopa Branch Library and talk to Acorn 
- Wireless’s expert Digital Navigator\, Abraham Camez. He’ll get you st
- arted and help you over any stumbling blocks. Acorn Wireless is a triball
- y owned internet service provider operated by the Hoopa Valley Public Uti
- lities District. It was started in 2020 from CARES funding approved by th
- e Hoopa Valley Tribal Council and supports Hoopa Valley people in key act
- ivities like distance learning\, remote work\, and telemedicine. Acorn pr
- ovides high-speed broadband internet for the Hoopa Community....\nhttps:/
- /willowcreekchamber.com/event/kim-yerton-library-free-tech-support-with-a
- corn-wireless-by-appointment/2026-11-11/
-URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
- ort-with-acorn-wireless-by-appointment/2026-11-11/
-END:VEVENT
-BEGIN:VEVENT
 UID:3316903c2db4@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261111T170000
 DTEND:20261111T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -71,7 +48,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:471a8944969d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261111T180000
 DTEND:20261111T190000
 SUMMARY:Trivia Night at Trinity County Brewing Company
@@ -82,7 +59,7 @@ DESCRIPTION:Wednesday night trivia at Trinity County Brewing Company: brai
 END:VEVENT
 BEGIN:VEVENT
 UID:343014c1879a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261112T100000
 DTEND:20261112T200000
 SUMMARY:Adventure's Edge Anniversary Sale: Arcata
@@ -92,7 +69,7 @@ DESCRIPTION:20% off the entire store at the Arcata store\, for one day onl
 END:VEVENT
 BEGIN:VEVENT
 UID:2ed1a19c17e8@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261112T103000
 DTEND:20261112T110000
 SUMMARY:Storytime
@@ -102,7 +79,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-11-12/
 END:VEVENT
 BEGIN:VEVENT
 UID:157034b5e09d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261112T130000
 DTEND:20261112T143000
 SUMMARY:Native American Heritage Month: Frank Tuttle\, Sacred Spaces
@@ -115,7 +92,7 @@ DESCRIPTION:Frank Tuttle\, a Maidu and Yuki traditionalist and artist\, sp
 END:VEVENT
 BEGIN:VEVENT
 UID:ae9e29189f44@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261112T173000
 DTEND:20261112T200000
 SUMMARY:Charity Bingo Night
@@ -127,7 +104,7 @@ DESCRIPTION:Hosted by Pawsitive Animal Services. Buy dinner at 5:30pm (reg
 END:VEVENT
 BEGIN:VEVENT
 UID:a61d006c2a75@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261112T173000
 DTEND:20261112T193000
 SUMMARY:Native American Heritage Month: Indigenous Tribal Student Union Ga
@@ -140,7 +117,7 @@ DESCRIPTION:A game night with the Indigenous Tribal Student Union. Part of
 END:VEVENT
 BEGIN:VEVENT
 UID:5b67e0091839@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261112T200000
 DTEND:20261112T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -156,7 +133,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:65bc022f8b72@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T110000
 DTEND:20261113T120000
 SUMMARY:TAGA weekly golf tournament
@@ -167,7 +144,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:6e1230cc06bf@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T130000
 DTEND:20261113T160000
 SUMMARY:Friday Garden Work Day: Woodchips in the Garden
@@ -180,7 +157,7 @@ URL:https://www.facebook.com/profile.php?id=61585530843784
 END:VEVENT
 BEGIN:VEVENT
 UID:b0c08ef4f5df@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T140000
 DTEND:20261113T150000
 SUMMARY:Writers of Willow Creek
@@ -194,7 +171,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-11-1
 END:VEVENT
 BEGIN:VEVENT
 UID:020122d82fac@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T160000
 DTEND:20261113T210000
 SUMMARY:Fig Twig Holiday Market (Friday)
@@ -208,7 +185,7 @@ URL:https://www.instagram.com/figtwigmarket/
 END:VEVENT
 BEGIN:VEVENT
 UID:69b2e027795f@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T160000
 DTEND:20261113T170000
 SUMMARY:Yoga for Every Body
@@ -219,7 +196,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-11-13/
 END:VEVENT
 BEGIN:VEVENT
 UID:9c035344e598@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T170000
 DTEND:20261113T200000
 SUMMARY:Holiday Shop & Stroll
@@ -233,7 +210,7 @@ URL:https://www.visiteureka.com/event/holiday-shop-stroll/
 END:VEVENT
 BEGIN:VEVENT
 UID:b4c9dc1c7f76@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T200000
 DTEND:20261113T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -249,7 +226,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:9a45aa35eed3@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261113T210000
 DTEND:20261113T220000
 SUMMARY:Latin Night with DJ Pachanguero
@@ -261,7 +238,7 @@ URL:https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-1
 END:VEVENT
 BEGIN:VEVENT
 UID:99b23dacd0ee@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T100000
 DTEND:20261114T150000
 SUMMARY:Artisan Fair
@@ -272,7 +249,7 @@ DESCRIPTION:Discover unique artisan goods perfect for gifting or keeping f
 END:VEVENT
 BEGIN:VEVENT
 UID:9257edbb3221@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T100000
 DTEND:20261114T160000
 SUMMARY:Festival of Light Arts & Fine Crafts Event
@@ -285,7 +262,7 @@ URL:https://trinitycountyarts.org
 END:VEVENT
 BEGIN:VEVENT
 UID:e7155c973907@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T100000
 DTEND:20261114T160000
 SUMMARY:Fig Twig Holiday Market (Saturday)
@@ -299,7 +276,7 @@ URL:https://www.instagram.com/figtwigmarket/
 END:VEVENT
 BEGIN:VEVENT
 UID:44129f52b94a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T130000
 DTEND:20261114T130000
 SUMMARY:Chocolate Chip Cookie Cake Class
@@ -311,7 +288,7 @@ URL:https://www.visiteureka.com/event/chocolate-chip-cookie-cake-class/
 END:VEVENT
 BEGIN:VEVENT
 UID:43899836227a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T130000
 DTEND:20261114T160000
 SUMMARY:McClurg Flooring Grand Opening
@@ -320,7 +297,7 @@ DESCRIPTION:Ribbon cutting at 1pm\, plus food\, drinks and a raffle.
 END:VEVENT
 BEGIN:VEVENT
 UID:728e31b4fe8a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T160000
 DTEND:20261114T200000
 SUMMARY:StrangeBrew 14: Hum-Brewed
@@ -336,7 +313,7 @@ URL:https://www.visiteureka.com/event/strangebrew-14-hum-brewed/
 END:VEVENT
 BEGIN:VEVENT
 UID:c7532172ac65@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T200000
 DTEND:20261114T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -352,7 +329,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:01f0491e05cc@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261114T210000
 DTEND:20261114T220000
 SUMMARY:Dance Music with The R3$pecht Collective
@@ -364,7 +341,7 @@ URL:https://www.bluelakecasino.com/event/dance-music-with-the-r3pecht-coll
 END:VEVENT
 BEGIN:VEVENT
 UID:86415484d910@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261115T183000
 DTEND:20261115T203000
 SUMMARY:Paint & Pour: Pottery Painting at Humboldt Cider Co.
@@ -375,7 +352,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:afd20e5fe5e2@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261116T180000
 DTEND:20261116T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -387,7 +364,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-11-
 END:VEVENT
 BEGIN:VEVENT
 UID:58f82adeaabd@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20270104
 SUMMARY:Humboldt Arts Council Annual Members Exhibition
@@ -403,7 +380,7 @@ URL:https://www.visiteureka.com/event/humboldt-arts-council-annual-members
 END:VEVENT
 BEGIN:VEVENT
 UID:c75429292586@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261118T103000
 DTEND:20261118T110000
 SUMMARY:Story Time
@@ -423,7 +400,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-11-18/
 END:VEVENT
 BEGIN:VEVENT
 UID:3166c184465a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261118T140000
 DTEND:20261118T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -446,7 +423,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:7f62d54a45cc@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261118T170000
 DTEND:20261118T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -466,7 +443,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:009455093e7a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261118T173000
 DTEND:20261118T183000
 SUMMARY:Monthly Chamber Board Meeting
@@ -475,7 +452,7 @@ DESCRIPTION:Held early this month for the holiday. Everyone is welcome.
 END:VEVENT
 BEGIN:VEVENT
 UID:5c884cbd7e06@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261118T180000
 DTEND:20261118T190000
 SUMMARY:Trivia Night at Trinity County Brewing Company
@@ -486,7 +463,7 @@ DESCRIPTION:Wednesday night trivia at Trinity County Brewing Company: brai
 END:VEVENT
 BEGIN:VEVENT
 UID:29eeed1ca893@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261118T183000
 DTEND:20261118T193000
 SUMMARY:Zoo Conservation Lecture: Lewis's Woodpecker
@@ -503,7 +480,7 @@ URL:https://www.visiteureka.com/event/zoo-conservation-lecture-lewiss-wood
 END:VEVENT
 BEGIN:VEVENT
 UID:a8cfa27b30c3@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Taste of the Holidays
@@ -519,7 +496,7 @@ URL:https://www.zeffy.com/en-US/ticketing/2026-taste-of-the-holidays
 END:VEVENT
 BEGIN:VEVENT
 UID:3907a707c614@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261119T103000
 DTEND:20261119T110000
 SUMMARY:Storytime
@@ -529,7 +506,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-11-19/
 END:VEVENT
 BEGIN:VEVENT
 UID:640f9b30b0aa@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261119T170000
 DTEND:20261119T200000
 SUMMARY:Henderson Center Holiday Open House
@@ -544,7 +521,7 @@ URL:https://www.visiteureka.com/event/henderson-center-holiday-open-house/
 END:VEVENT
 BEGIN:VEVENT
 UID:9251f9d444a6@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261119T170000
 DTEND:20261119T190000
 SUMMARY:Native American Heritage Month: Guest Speaker and Native Family Di
@@ -556,7 +533,7 @@ DESCRIPTION:A guest speaker and a Native family dinner. Part of Native Ame
 END:VEVENT
 BEGIN:VEVENT
 UID:f964ab934849@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261119T190000
 DTEND:20261119T210000
 SUMMARY:The Land Returns: Documentary Screening & Filmmaker Q&A
@@ -571,7 +548,7 @@ URL:https://www.visiteureka.com/event/the-land-returns-documentary-screeni
 END:VEVENT
 BEGIN:VEVENT
 UID:ef5bcea03724@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261119T200000
 DTEND:20261119T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -587,7 +564,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:e288c46aab38@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261120T110000
 DTEND:20261120T160000
 SUMMARY:Humboldt Heroes Blood Drive & Recognition Ceremony
@@ -601,7 +578,7 @@ URL:https://www.visiteureka.com/event/humboldt-heroes-blood-drive-recognit
 END:VEVENT
 BEGIN:VEVENT
 UID:6f3b911a85d9@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261120T110000
 DTEND:20261120T120000
 SUMMARY:TAGA weekly golf tournament
@@ -612,7 +589,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:8402486ce8d9@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261120T140000
 DTEND:20261120T150000
 SUMMARY:Writers of Willow Creek
@@ -626,7 +603,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-11-2
 END:VEVENT
 BEGIN:VEVENT
 UID:9b9b3ca61dc0@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261120T160000
 DTEND:20261120T170000
 SUMMARY:Yoga for Every Body
@@ -637,7 +614,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-11-20/
 END:VEVENT
 BEGIN:VEVENT
 UID:d252dbb6ad83@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261120T193000
 DTEND:20261120T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -654,7 +631,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:8afc1dd4434e@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261120T200000
 DTEND:20261120T210000
 SUMMARY:Dance Hits with StereotactiX
@@ -665,7 +642,7 @@ URL:https://www.bluelakecasino.com/event/dance-hits-with-stereotactix/
 END:VEVENT
 BEGIN:VEVENT
 UID:4699d385d427@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261120T200000
 DTEND:20261120T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -681,7 +658,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:bdb4d9d1f044@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T080000
 DTEND:20261121T170000
 SUMMARY:Humboldt Roller Derby
@@ -693,7 +670,7 @@ URL:https://www.visiteureka.com/event/humboldt-roller-derby/2026-11-21/
 END:VEVENT
 BEGIN:VEVENT
 UID:437172876cd8@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T090000
 DTEND:20261121T160000
 SUMMARY:Holiday Craft Fair
@@ -704,7 +681,7 @@ DESCRIPTION:Support local makers\, creators and producers. Delicious food
 END:VEVENT
 BEGIN:VEVENT
 UID:858d65cee6ea@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T100000
 DTEND:20261121T160000
 SUMMARY:Annual Holiday Bazaar
@@ -717,7 +694,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:c6bfb9f5740d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T100000
 DTEND:20261121T160000
 SUMMARY:Henderson's Beef Seasoning at the Holiday Boutique
@@ -728,7 +705,7 @@ DESCRIPTION:Henderson's Beef Seasoning\, made for beef\, at the Studio 299
 END:VEVENT
 BEGIN:VEVENT
 UID:a2ca0a93cb4c@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T100000
 DTEND:20261121T160000
 SUMMARY:His Creations at the Holiday Boutique
@@ -741,7 +718,7 @@ DESCRIPTION:A faith based\, family owned small business at the Holiday Bou
 END:VEVENT
 BEGIN:VEVENT
 UID:7b81e0f35f0a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T100000
 DTEND:20261121T160000
 SUMMARY:Holiday Boutique
@@ -750,7 +727,7 @@ DESCRIPTION:Lunch available from New Rv Catering.
 END:VEVENT
 BEGIN:VEVENT
 UID:515f3913f84c@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T110000
 DTEND:20261121T150000
 SUMMARY:Mini Photo Shoot
@@ -760,7 +737,7 @@ DESCRIPTION:Santa visits 1pm to 2pm. Donations support Trinity River Outre
 END:VEVENT
 BEGIN:VEVENT
 UID:af0b44f70895@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T130000
 DTEND:20261121T160000
 SUMMARY:Saturday Garden Work Day: Fruit Tree Pruning Basics
@@ -773,7 +750,7 @@ URL:https://www.facebook.com/profile.php?id=61585530843784
 END:VEVENT
 BEGIN:VEVENT
 UID:e1628de3b680@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T140000
 DTEND:20261121T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -790,7 +767,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:361485cf02c5@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T140000
 DTEND:20261121T220000
 SUMMARY:Tapacapalooza II 2026
@@ -805,7 +782,7 @@ DESCRIPTION:A music festival celebrating local Trinity County bands\, pres
 END:VEVENT
 BEGIN:VEVENT
 UID:1358e0365cb4@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T193000
 DTEND:20261121T193000
 SUMMARY:Eureka Chamber Music Series: Piano Trio
@@ -819,7 +796,7 @@ URL:https://www.visiteureka.com/event/eureka-chamber-music-series-piano-tr
 END:VEVENT
 BEGIN:VEVENT
 UID:054a8eb8055b@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T200000
 DTEND:20261121T210000
 SUMMARY:Dance Hits with The Undercovers
@@ -831,7 +808,7 @@ URL:https://www.bluelakecasino.com/event/dance-hits-with-theundercoversnov
 END:VEVENT
 BEGIN:VEVENT
 UID:821bf4c948a5@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261121T200000
 DTEND:20261121T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -847,7 +824,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:998a610827a4@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261122T100000
 DTEND:20261122T160000
 SUMMARY:Annual Holiday Bazaar
@@ -860,7 +837,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:d9fdebc2f825@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261122T100000
 DTEND:20261122T120000
 SUMMARY:Ceramic Mushroom Ornament Class
@@ -871,7 +848,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:1664632a6a81@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261122T110000
 DTEND:20261122T160000
 SUMMARY:48th Annual HBMS Mushroom Fair
@@ -886,7 +863,7 @@ DESCRIPTION:Humboldt Bay Mycological Society's biggest event of the year.
 END:VEVENT
 BEGIN:VEVENT
 UID:75a248146e57@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261122T130000
 DTEND:20261122T130000
 SUMMARY:Thanksgiving Cake Decorating Class
@@ -898,7 +875,7 @@ URL:https://www.visiteureka.com/event/thanksgiving-cake-decorating-class/
 END:VEVENT
 BEGIN:VEVENT
 UID:d222b8c5595c@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261122T140000
 DTEND:20261122T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -915,7 +892,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:f6b572f6cd5c@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261122T140000
 DTEND:20261122T150000
 SUMMARY:NCRT presents "She Loves Me"
@@ -931,7 +908,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:117b11c4ca8b@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261123T180000
 DTEND:20261123T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -943,7 +920,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-11-
 END:VEVENT
 BEGIN:VEVENT
 UID:627be0d5721e@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Free Swap Table at Friends-Giving
@@ -955,7 +932,7 @@ URL:https://www.facebook.com/profile.php?id=61585530843784
 END:VEVENT
 BEGIN:VEVENT
 UID:cd44cdc8b2ac@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261125T103000
 DTEND:20261125T110000
 SUMMARY:Story Time
@@ -975,7 +952,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-11-25/
 END:VEVENT
 BEGIN:VEVENT
 UID:c107e8bd7034@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261125T140000
 DTEND:20261125T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -998,7 +975,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:7e3aee1154d4@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261125T150000
 DTEND:20261125T170000
 SUMMARY:Trinity River Outreach Friends-Giving
@@ -1007,7 +984,7 @@ DESCRIPTION:All community welcome.
 END:VEVENT
 BEGIN:VEVENT
 UID:a721f87cea73@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261125T170000
 DTEND:20261125T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -1027,7 +1004,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:ef8bb291c387@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261125T173000
 DTEND:20261125T183000
 SUMMARY:Willow Creek Chamber Monthly Meeting
@@ -1039,7 +1016,7 @@ URL:https://willowcreekchamber.com/event/willow-creek-chamber-monthly-meet
 END:VEVENT
 BEGIN:VEVENT
 UID:4da798f45411@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261126T090000
 DTEND:20261126T090000
 SUMMARY:25th Old Town 5K Turkey Trot
@@ -1055,7 +1032,7 @@ URL:https://www.visiteureka.com/event/25th-old-town-5k-turkey-trot/
 END:VEVENT
 BEGIN:VEVENT
 UID:11c27399a77e@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261126T103000
 DTEND:20261126T110000
 SUMMARY:Storytime
@@ -1065,7 +1042,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-11-26/
 END:VEVENT
 BEGIN:VEVENT
 UID:7b6c4684e817@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261126T110000
 DTEND:20261126T120000
 SUMMARY:Thanksgiving Buffet at Alice's
@@ -1076,7 +1053,7 @@ URL:https://www.bluelakecasino.com/event/thanksgiving-buffet-at-alices/
 END:VEVENT
 BEGIN:VEVENT
 UID:68224c0a3af5@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261126T113000
 DTEND:20261126T123000
 SUMMARY:Free Community Thanksgiving Dinner
@@ -1088,7 +1065,7 @@ DESCRIPTION:Doors open at 11:30 for appetizers. Dinner is served at noon.
 END:VEVENT
 BEGIN:VEVENT
 UID:04a6e9e80a3f@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261126T200000
 DTEND:20261126T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1104,7 +1081,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:7152050195f7@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T100000
 DTEND:20261127T160000
 SUMMARY:Annual Holiday Bazaar
@@ -1117,7 +1094,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:ef481ea66aaa@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T110000
 DTEND:20261127T120000
 SUMMARY:TAGA weekly golf tournament
@@ -1127,8 +1104,19 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
  ather permitting. All golfers with an established handicap are welcome.
 END:VEVENT
 BEGIN:VEVENT
+UID:e145bfa75fe3@community-calendar
+DTSTAMP:20261112T011918Z
+DTSTART:20261127T140000
+DTEND:20261127T160000
+SUMMARY:Santa Arrives in Old Town
+LOCATION:Eureka Main Street Gazebo
+DESCRIPTION:Welcoming Santa Claus to Old Town Eureka with community festiv
+ ities and family activities.\nhttps://www.eurekamainstreet.org/events
+URL:https://www.eurekamainstreet.org/events
+END:VEVENT
+BEGIN:VEVENT
 UID:880e9f1977cf@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T140000
 DTEND:20261127T150000
 SUMMARY:Writers of Willow Creek
@@ -1142,7 +1130,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-11-2
 END:VEVENT
 BEGIN:VEVENT
 UID:baa5262e229c@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T160000
 DTEND:20261127T170000
 SUMMARY:Yoga for Every Body
@@ -1153,7 +1141,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-11-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:f56825d71500@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T190000
 DTEND:20261127T200000
 SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
@@ -1169,7 +1157,7 @@ URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
 END:VEVENT
 BEGIN:VEVENT
 UID:787e2d40aa37@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T190000
 DTEND:20261127T233000
 SUMMARY:Threshold:UP featuring Beats Antique
@@ -1186,7 +1174,7 @@ URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
 END:VEVENT
 BEGIN:VEVENT
 UID:ac00780c6250@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T193000
 DTEND:20261127T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -1203,7 +1191,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:f2ec30fb6dee@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T200000
 DTEND:20261127T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1219,7 +1207,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:7568f41303ab@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261127T210000
 DTEND:20261127T220000
 SUMMARY:Latin Night with DJ Pachanguero
@@ -1231,7 +1219,7 @@ URL:https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-1
 END:VEVENT
 BEGIN:VEVENT
 UID:78ce0b6fd178@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261128T100000
 DTEND:20261128T160000
 SUMMARY:Annual Holiday Bazaar
@@ -1244,7 +1232,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:d3097afca19c@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261128T100000
 DTEND:20261128T120000
 SUMMARY:Mosaic Garden Stone Workshop
@@ -1255,7 +1243,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:0db5cd9b26f1@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261128T100000
 DTEND:20261128T170000
 SUMMARY:Small Business Day Market
@@ -1266,7 +1254,7 @@ DESCRIPTION:Handicraft jewelry\, food and community. Come for the finds\,
 END:VEVENT
 BEGIN:VEVENT
 UID:dbb81fa31aab@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261128T130000
 DTEND:20261128T140000
 SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
@@ -1281,8 +1269,24 @@ URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
  -theater/
 END:VEVENT
 BEGIN:VEVENT
+UID:c4d1749b95bf@community-calendar
+DTSTAMP:20261112T011918Z
+DTSTART:20261128T190000
+DTEND:20261128T200000
+SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
+LOCATION:Eureka Woman’s Club\, 1531 J St
+DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
+ stmas party\, with dinner included. Shows: Friday 11/27 at 7pm\; Saturday
+  11/28 at 1pm and 7pm. Saturday evening’s show benefits the Breast & GY
+ N Health Project. $55 general\, $50 seniors/students\; 56 seats per show.
+  Tickets & info\nhttps://www.visiteureka.com/event/the-sting-of-the-barb-
+ holiday-dinner-theater/
+URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
+ -theater/
+END:VEVENT
+BEGIN:VEVENT
 UID:624ecbbd39d6@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261128T190000
 DTEND:20261128T233000
 SUMMARY:Threshold:UP featuring Beats Antique
@@ -1299,7 +1303,7 @@ URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
 END:VEVENT
 BEGIN:VEVENT
 UID:863ac1ae5416@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261128T200000
 DTEND:20261128T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1315,7 +1319,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:95ec8f37a581@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261128T203000
 DTEND:20261128T213000
 SUMMARY:Americana with Elderberry Rust String Band
@@ -1328,7 +1332,7 @@ URL:https://www.bluelakecasino.com/event/americana-with-elderberry-rust-st
 END:VEVENT
 BEGIN:VEVENT
 UID:64f8454c253d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261129T100000
 DTEND:20261129T160000
 SUMMARY:Annual Holiday Bazaar
@@ -1341,7 +1345,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:7a086d1bcdb7@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261129T110000
 DTEND:20261129T120000
 SUMMARY:Pottery Painting & Story Time
@@ -1352,7 +1356,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:1f1ce2d15d17@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261129T130000
 DTEND:20261129T160000
 SUMMARY:Sunday Art Hang Out: Wreath Making and Harvest Crafts
@@ -1368,7 +1372,7 @@ URL:https://neighborhood-harvest.org
 END:VEVENT
 BEGIN:VEVENT
 UID:1e66ae9bef0d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261129T140000
 DTEND:20261129T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -1385,7 +1389,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:1828dacc9953@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261129T140000
 DTEND:20261129T150000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1401,7 +1405,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:7bc56f531dde@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261130T180000
 DTEND:20261130T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -1413,7 +1417,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-11-
 END:VEVENT
 BEGIN:VEVENT
 UID:23fefea51e52@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261202T103000
 DTEND:20261202T110000
 SUMMARY:Story Time
@@ -1433,7 +1437,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-02/
 END:VEVENT
 BEGIN:VEVENT
 UID:ad51e541c0c8@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261202T140000
 DTEND:20261202T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -1456,7 +1460,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:c4fd650f53de@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261202T170000
 DTEND:20261202T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -1476,7 +1480,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:b29a10ab388d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261202T180000
 DTEND:20261202T200000
 SUMMARY:Dick Taylor's 4th Annual Tree Lighting
@@ -1490,7 +1494,7 @@ URL:https://www.visiteureka.com/event/dick-taylors-4th-annual-tree-lightin
 END:VEVENT
 BEGIN:VEVENT
 UID:909a7db15ac2@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261203T103000
 DTEND:20261203T110000
 SUMMARY:Storytime
@@ -1500,7 +1504,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-03/
 END:VEVENT
 BEGIN:VEVENT
 UID:e8e541743bb3@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261203T180000
 DTEND:20261203T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -1514,7 +1518,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:25edbd2145b4@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261203T200000
 DTEND:20261203T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1530,7 +1534,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:0e9d0884336a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T100000
 DTEND:20261204T160000
 SUMMARY:Annual Holiday Bazaar
@@ -1543,7 +1547,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:9339ae72ce35@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T110000
 DTEND:20261204T120000
 SUMMARY:TAGA weekly golf tournament
@@ -1554,7 +1558,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:3287d0da1bb4@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T140000
 DTEND:20261204T150000
 SUMMARY:Writers of Willow Creek
@@ -1568,7 +1572,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-0
 END:VEVENT
 BEGIN:VEVENT
 UID:601f4fe75a2e@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T160000
 DTEND:20261204T210000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -1584,7 +1588,7 @@ URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
 END:VEVENT
 BEGIN:VEVENT
 UID:e25317b1bae9@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T160000
 DTEND:20261204T170000
 SUMMARY:Yoga for Every Body
@@ -1595,7 +1599,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-04/
 END:VEVENT
 BEGIN:VEVENT
 UID:7368277cc373@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T173000
 DTEND:20261204T183000
 SUMMARY:Ferndale Fire Co 3 Hook & Ladder Turkey Shoot
@@ -1607,7 +1611,7 @@ DESCRIPTION:The annual Company 3 fundraiser\, on Hospitality Night. Roll t
 END:VEVENT
 BEGIN:VEVENT
 UID:237c72757514@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T193000
 DTEND:20261204T203000
 SUMMARY:Eureka Symphony: A Season of Light
@@ -1623,7 +1627,7 @@ URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
 UID:4e1a3c822d8f@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T193000
 DTEND:20261204T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -1640,7 +1644,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:8d6ede5bdec6@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261204T200000
 DTEND:20261204T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1656,7 +1660,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:dae24467123e@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Holiday Neighborhood Harvest Festival
@@ -1667,7 +1671,7 @@ URL:https://www.facebook.com/profile.php?id=61585530843784
 END:VEVENT
 BEGIN:VEVENT
 UID:2d67e3ca10fd@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Holiday Window Display Contest: "Season of Cheer"
@@ -1681,7 +1685,7 @@ URL:https://www.visiteureka.com/event/holiday-window-display-contest-seaso
 END:VEVENT
 BEGIN:VEVENT
 UID:3a4ea783cbf6@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Winter Whimsy Quest
@@ -1694,7 +1698,7 @@ URL:https://www.visiteureka.com/event/winter-whimsy-quest/
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba391125ecb@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T100000
 DTEND:20261205T170000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -1710,7 +1714,7 @@ URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
 END:VEVENT
 BEGIN:VEVENT
 UID:ebea6fa5895b@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T100000
 DTEND:20261205T160000
 SUMMARY:Annual Holiday Bazaar
@@ -1723,7 +1727,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:f0bdcf128107@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T140000
 DTEND:20261205T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -1740,7 +1744,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:be8042999df2@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T173000
 DTEND:20261205T183000
 SUMMARY:Festival of Light & Wonder: Lighted Parade
@@ -1750,7 +1754,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:cfa405632cbc@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T180000
 DTEND:20261205T190000
 SUMMARY:Festival of Light & Wonder: Holiday Classic Movie Screening
@@ -1760,7 +1764,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:74cdf8b8e961@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T180000
 DTEND:20261205T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -1773,7 +1777,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-2/
 END:VEVENT
 BEGIN:VEVENT
 UID:db560dc7e218@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T183000
 DTEND:20261205T193000
 SUMMARY:Festival of Light & Wonder: Tree Lighting Countdown
@@ -1783,7 +1787,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:24176bc4d9a2@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T193000
 DTEND:20261205T203000
 SUMMARY:Eureka Symphony: A Season of Light
@@ -1799,7 +1803,7 @@ URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
 UID:db860b88dff9@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261205T200000
 DTEND:20261205T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1815,7 +1819,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:5d50725f88e1@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261206T100000
 DTEND:20261206T170000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -1831,7 +1835,7 @@ URL:https://www.visiteureka.com/event/46th-annual-humboldt-artisans-crafts
 END:VEVENT
 BEGIN:VEVENT
 UID:418c3c5ea50f@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261206T100000
 DTEND:20261206T160000
 SUMMARY:Annual Holiday Bazaar
@@ -1844,7 +1848,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2dc4db089a27@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261206T100000
 DTEND:20261206T123000
 SUMMARY:Ceramic Christmas Tree Painting & Candle Making
@@ -1855,7 +1859,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:9ffb89836882@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261206T100000
 DTEND:20261206T150000
 SUMMARY:Santa\, Trains and Candy Canes
@@ -1869,7 +1873,7 @@ URL:https://www.timberheritage.org/special-events
 END:VEVENT
 BEGIN:VEVENT
 UID:9aebda3eb857@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261206T130000
 DTEND:20261206T160000
 SUMMARY:Beginner Wreath Making Class
@@ -1881,7 +1885,7 @@ URL:https://www.visiteureka.com/event/beginner-wreath-making-class-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:3fd7af2907cb@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261206T140000
 DTEND:20261206T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -1898,7 +1902,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:fb99387793a9@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261206T140000
 DTEND:20261206T150000
 SUMMARY:NCRT presents "She Loves Me"
@@ -1914,7 +1918,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:accc1e6c0789@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261207T180000
 DTEND:20261207T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -1926,7 +1930,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:0037de1ac52e@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261209T103000
 DTEND:20261209T110000
 SUMMARY:Story Time
@@ -1946,7 +1950,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-09/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b9f857f23aa@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261209T140000
 DTEND:20261209T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -1969,7 +1973,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:62090f3be3ad@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261209T170000
 DTEND:20261209T170000
 SUMMARY:Humboldt Library Foundation Holiday Gala
@@ -1983,8 +1987,28 @@ URL:https://www.visiteureka.com/event/humboldt-library-foundation-holiday-
  gala/
 END:VEVENT
 BEGIN:VEVENT
+UID:ec95458366c1@community-calendar
+DTSTAMP:20261112T011918Z
+DTSTART:20261209T170000
+DTEND:20261209T194500
+SUMMARY:Kim Yerton Library\, Cribbage & Game Night
+LOCATION:Kim Yerton Memorial Library\, 370 Loop Rd
+DESCRIPTION:Join us for a fun and friendly Cribbage & Board Game Night at 
+ the library! Whether you’re a seasoned cribbage player or just learning
+  the game\, come enjoy an evening of strategy and good company. We provid
+ e boards and cards\, but feel free to bring your own. Not into Cribbage? 
+ No problem! We have a variety of board games for all ages\, so bring the 
+ whole family and find a game to enjoy together. From classics like Checke
+ rs and Clue to trivia challenges and more\, there’s something for every
+ one. All ages are welcome – come by to play\, relax\, and make new frie
+ nds. Every Wednesday evening starting at 5 p.m.\nhttps://willowcreekchamb
+ er.com/event/kim-yerton-library-cribbage-game-night/2026-12-09/
+URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
+ night/2026-12-09/
+END:VEVENT
+BEGIN:VEVENT
 UID:e61c285cda1d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261210T200000
 DTEND:20261210T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -2000,7 +2024,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:ec1fa84ae11b@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261211T110000
 DTEND:20261211T120000
 SUMMARY:TAGA weekly golf tournament
@@ -2011,7 +2035,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:4f263dd9dd5d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261211T193000
 DTEND:20261211T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -2028,7 +2052,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:f4eb9656a384@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261211T200000
 DTEND:20261211T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -2044,7 +2068,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:b44b7050ec34@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261212T100000
 DTEND:20261212T123000
 SUMMARY:Ceramic Christmas Tree Painting & Candle Making
@@ -2055,7 +2079,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:3a186e8c77af@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261212T140000
 DTEND:20261212T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -2072,7 +2096,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:5856ddec48d6@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261212T140000
 DTEND:20261212T150000
 SUMMARY:Victorian Holiday: 125th Anniversary Tea
@@ -2086,7 +2110,7 @@ URL:https://www.eurekawomansclub.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b1177a7eb218@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261212T180000
 DTEND:20261212T233000
 SUMMARY:Truckers Christmas Parade
@@ -2102,7 +2126,7 @@ URL:https://www.visiteureka.com/event/truckers-christmas-parade/2026-12-12
 END:VEVENT
 BEGIN:VEVENT
 UID:95fddf94ed92@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261212T200000
 DTEND:20261212T210000
 SUMMARY:NCRT presents "She Loves Me"
@@ -2118,7 +2142,7 @@ URL:https://www.visiteureka.com/event/ncrt-presents-she-loves-me/
 END:VEVENT
 BEGIN:VEVENT
 UID:40fd71f5d935@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261213T140000
 DTEND:20261213T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -2135,7 +2159,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:5488281c67eb@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261218T110000
 DTEND:20261218T120000
 SUMMARY:TAGA weekly golf tournament
@@ -2146,7 +2170,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:19bae3e1102b@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261218T170000
 DTEND:20261218T210000
 SUMMARY:Christmas @ the Acres
@@ -2159,7 +2183,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:ed4ab8311047@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261218T173000
 DTEND:20261218T193000
 SUMMARY:Mosaic Address Plaque or Welcome Sign Workshop
@@ -2171,7 +2195,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:97122c00aa85@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261218T193000
 DTEND:20261218T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -2188,7 +2212,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:f9fff63d7b63@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261219T083000
 DTEND:20261219T150000
 SUMMARY:Breakfast with Santa and Holiday Fair
@@ -2202,7 +2226,7 @@ DESCRIPTION:Pancake breakfast hosted by the Girl Scouts\, served 8:30am to
 END:VEVENT
 BEGIN:VEVENT
 UID:26305abc1186@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261219T100000
 DTEND:20261219T190000
 SUMMARY:Christmas @ the Acres
@@ -2215,7 +2239,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:954a41626c74@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261219T120000
 DTEND:20261219T150000
 SUMMARY:SHS Open House & Christmas PAWty
@@ -2227,7 +2251,7 @@ URL:https://www.visiteureka.com/event/shs-open-house-christmas-pawty/
 END:VEVENT
 BEGIN:VEVENT
 UID:e823eb3c8925@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261219T140000
 DTEND:20261219T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -2244,7 +2268,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:d512109f4759@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261219T173000
 DTEND:20261219T193000
 SUMMARY:Mosaic Address Plaque or Welcome Sign Workshop
@@ -2256,7 +2280,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:ef318aa31ffd@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261219T180000
 DTEND:20261219T190000
 SUMMARY:Christmas Parade: 46th Annual Mountain Magic Christmas
@@ -2267,7 +2291,7 @@ DESCRIPTION:The Christmas Parade for the 46th annual Mountain Magic Christ
 END:VEVENT
 BEGIN:VEVENT
 UID:762c6fd1457d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261220T100000
 DTEND:20261220T160000
 SUMMARY:Christmas @ the Acres
@@ -2280,7 +2304,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f41da001363@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261220T110000
 DTEND:20261220T120000
 SUMMARY:Pottery Painting & Story Time
@@ -2291,7 +2315,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:9301d82b8ea3@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261220T140000
 DTEND:20261220T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -2308,7 +2332,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:6dcfa45f1f7d@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20261225T110000
 DTEND:20261225T120000
 SUMMARY:TAGA weekly golf tournament
@@ -2319,7 +2343,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:8f1f15fdc5bb@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20270107T180000
 DTEND:20270107T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2333,7 +2357,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:c1a6f724b4ce@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20270204T180000
 DTEND:20270204T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2347,7 +2371,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:37eb08fe7315@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20270304T180000
 DTEND:20270304T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2361,7 +2385,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:e0ba29c5e3cb@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20270401T180000
 DTEND:20270401T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2375,7 +2399,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:e32a0b81490a@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART:20270506T180000
 DTEND:20270506T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2389,7 +2413,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:e0a3aff50a1f@community-calendar
-DTSTAMP:20261112T010111Z
+DTSTAMP:20261112T011918Z
 DTSTART;VALUE=DATE:20270619
 DTEND;VALUE=DATE:20270620
 SUMMARY:Bigfoot Daze
