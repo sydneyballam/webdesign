@@ -237,14 +237,15 @@
         </div>
         <section id="news" class="max-w-xl lg:max-w-5xl mx-auto px-4 mt-8 scroll-mt-4">
             <h2 class="text-3xl font-semibold">Stay in the loop</h2>
-            <p class="mt-2 text-ink/80">Get new retreat dates and openings by email.</p>
-            <form id="newsForm" class="mt-5 lg:max-w-xl" method="post">
+            <p id="newsIntro" class="mt-2 text-ink/80">Get new retreat dates and openings by email.</p>
+            <form id="newsForm" class="mt-5 lg:max-w-xl" method="post" novalidate>
                 <label for="email" class="block font-semibold mb-2">Email address</label>
                 <div class="flex flex-col sm:flex-row gap-3">
                     <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"
                            class="min-h-[52px] flex-1 rounded-full border-2 border-ink/40 bg-white/60 px-5 text-ink placeholder-ink/50 focus:border-ink">
                     <button type="submit" class="min-h-[52px] rounded-full bg-ink text-paper text-lg font-semibold px-6">Join the list</button>
                 </div>
+                <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
                 <p id="newsNotice" role="status" class="empty:hidden mt-3 text-sm bg-sage/50 rounded-lg px-3 py-2"></p>
             </form>
         </section>
@@ -331,8 +332,8 @@
             social: { facebook: '', x: '', instagram: '' },
             // Her Venmo username, without the @. While empty, the page says Venmo is accepted but shows no link.
             venmo: 'Jessica_LynnP',
-            // While this is empty, the newsletter form shows a mockup notice instead.
-            newsletterAction: ''
+            // Newsletter signups are emailed to this address by the free FormSubmit service.
+            newsletterTo: 'sweetsomatics@gmail.com'
         };
 
         // Retreats are not typed in here. They come from jessica-retreats.json, which a
@@ -708,14 +709,32 @@
             .then(showRetreats)
             .catch(err => { console.error('Could not load retreats:', err); retreatsUnavailable(); });
 
-        /* ---- newsletter ---- */
-        const newsForm = document.getElementById('newsForm');
-        if (SITE.newsletterAction) newsForm.action = SITE.newsletterAction;
-        newsForm.addEventListener('submit', function (ev) {
-            if (SITE.newsletterAction) return;   // real form: let the browser send it
-            ev.preventDefault();
-            document.getElementById('newsNotice').textContent = 'Mockup only. Nothing was sent. On the live site, this adds you to her email list.';
-        });
+        /* ---- newsletter: each signup is emailed to Jessica ---- */
+        (function () {
+            const form = document.getElementById('newsForm'), note = document.getElementById('newsNotice'), btn = form.querySelector('button[type="submit"]');
+            form.addEventListener('submit', function (ev) {
+                ev.preventDefault();
+                const email = form.elements.email.value.trim();
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { note.textContent = 'Please enter a valid email address.'; form.elements.email.focus(); return; }
+                const thanks = function () {
+                    form.hidden = true;
+                    document.getElementById('newsIntro').textContent = 'Thank you! Jessica will add you to her list and send you news about retreats and openings.';
+                };
+                if (form.elements._honey.value) { thanks(); return; }   // a robot filled the hidden field: pretend it worked
+                btn.disabled = true; note.textContent = 'Sending...';
+                fetch('https://formsubmit.co/ajax/' + SITE.newsletterTo, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email: email, _subject: 'New email signup from the Sweet Somatics website', _replyto: email, _template: 'table', message: 'Please add ' + email + ' to the newsletter list.' })
+                }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+                  .then(function (d) { if (d && (d.success === false || d.success === 'false')) throw new Error(d.message || 'not sent'); thanks(); })
+                  .catch(function (err) {
+                      console.error('Newsletter signup failed:', err);
+                      btn.disabled = false;
+                      note.innerHTML = 'Sorry, that did not go through. Please email <a class="underline underline-offset-4" href="mailto:' + esc(SITE.newsletterTo) + '">' + esc(SITE.newsletterTo) + '</a> and she will add you.';
+                  });
+            });
+        })();
     </script>
 </body>
 </html>
