@@ -35,6 +35,8 @@ a{color:var(--teal)}
 .sub h2{font-size:20px;margin-bottom:6px}
 .sub p{margin:0 0 12px;color:var(--body);font-size:16px}
 .sub .row{display:flex;flex-wrap:wrap;gap:10px}
+.sub .stack{display:grid;gap:10px;max-width:22rem}
+.sub .stack .btn{width:100%;justify-content:center;text-align:center}
 .sub details{margin-top:14px}
 .sub summary{cursor:pointer;font-weight:700;color:var(--teal);min-height:44px;display:flex;align-items:center}
 .controls{padding-top:24px;padding-bottom:4px}
@@ -159,19 +161,12 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     <section class="sub" id="subPanel" aria-labelledby="subTitle" style="color:var(--deep)">
       <h2 id="subTitle">Subscribe</h2>
       <p id="subText"></p>
-      <div class="row">
-        <a class="btn gold" id="subMain" href="#">Subscribe</a>
+      <div class="stack">
+        <a class="btn gold" id="subMain" href="#">Apple (iPhone and Mac)</a>
+        <a class="btn out" id="subGoogle" href="#" target="_blank" rel="noopener">Google Calendar (Android)</a>
+        <a class="btn out" id="subOutlook" href="#" target="_blank" rel="noopener">Outlook</a>
+        <button class="btn out" id="subCopy" type="button">Copy the link</button>
       </div>
-      <details>
-        <summary>Doesn't open? (Android and other calendars)</summary>
-        <div class="row" style="margin-top:6px">
-          <a class="btn out" id="subGoogle" href="#" target="_blank" rel="noopener">Add to Google Calendar</a>
-          <a class="btn out" id="subOutlook" href="#" target="_blank" rel="noopener">Outlook</a>
-        </div>
-        <p style="margin-top:12px">Or on a computer, paste this address in Google Calendar under Other calendars, then From URL:</p>
-        <div class="row" style="align-items:center"><code id="subAddr" style="overflow-wrap:anywhere;font-size:14px;background:var(--mint);padding:8px 10px;border-radius:8px"></code>
-        <button class="btn out" id="subCopy" type="button">Copy the link</button></div>
-      </details>
     </section>
   </div>
 </header>
@@ -446,7 +441,6 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     $('subTitle').textContent = one ? 'Subscribe to ' + state.towns[0] : 'Subscribe to everything';
     $('subText').textContent = one ? 'Events in ' + state.towns[0] + ' will appear in your calendar.' : (state.towns.length > 1 ? 'A calendar app follows either one town or all of them, so this link has every town. Pick just one town above to follow it on its own.' : 'Events from every town will appear in your calendar. Pick one town above to follow just that town.');
     $('subMain').href = web;
-    $('subAddr').textContent = u;
     $('subGoogle').href = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(web);
     $('subOutlook').href = 'https://outlook.live.com/calendar/0/addfromweb?url=' + encodeURIComponent(u) + '&name=' + encodeURIComponent('Community events');
   }
