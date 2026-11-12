@@ -1,11 +1,147 @@
 [
-  {"match": "She Loves Me", "weekly": {"Thu": ["20:00", ""], "Fri": ["20:00", ""], "Sat": ["20:00", ""]},
-   "add": [{"date": "2026-11-22", "start": "14:00"}, {"date": "2026-11-29", "start": "14:00"}, {"date": "2026-12-06", "start": "14:00"}]},
-  {"match": "Disney's Frozen", "weekly": {"Fri": ["19:30", ""], "Sat": ["14:00", ""], "Sun": ["14:00", ""]}, "skip": ["2026-11-28"]},
-  {"match": "Sting of the Barb", "occurrences": [
-    {"date": "2026-11-27", "start": "19:00"}, {"date": "2026-11-28", "start": "13:00"}, {"date": "2026-11-28", "start": "19:00"}]},
-  {"match": "Beats Antique", "weekly": {"Fri": ["19:00", "23:30"], "Sat": ["19:00", "23:30"]}},
-  {"match": "Humboldt Artisans Crafts", "weekly": {"Fri": ["16:00", "21:00"], "Sat": ["10:00", "17:00"], "Sun": ["10:00", "17:00"]}},
-  {"match": "A Season of Light", "weekly": {"Fri": ["19:30", ""], "Sat": ["19:30", ""]}},
-  {"match": "Christmas @ the Acres", "weekly": {"Fri": ["17:00", "21:00"], "Sat": ["10:00", "19:00"], "Sun": ["10:00", "16:00"]}}
+ {
+  "match": "She Loves Me",
+  "weekly": {
+   "Thu": [
+    "20:00",
+    ""
+   ],
+   "Fri": [
+    "20:00",
+    ""
+   ],
+   "Sat": [
+    "20:00",
+    ""
+   ]
+  },
+  "add": [
+   {
+    "date": "2026-11-22",
+    "start": "14:00"
+   },
+   {
+    "date": "2026-11-29",
+    "start": "14:00"
+   },
+   {
+    "date": "2026-12-06",
+    "start": "14:00"
+   }
+  ]
+ },
+ {
+  "match": "Disney's Frozen",
+  "weekly": {
+   "Fri": [
+    "19:30",
+    ""
+   ],
+   "Sat": [
+    "14:00",
+    ""
+   ],
+   "Sun": [
+    "14:00",
+    ""
+   ]
+  },
+  "skip": [
+   "2026-11-28"
+  ]
+ },
+ {
+  "match": "Sting of the Barb",
+  "occurrences": [
+   {
+    "date": "2026-11-27",
+    "start": "19:00"
+   },
+   {
+    "date": "2026-11-28",
+    "start": "13:00"
+   },
+   {
+    "date": "2026-11-28",
+    "start": "19:00"
+   }
+  ]
+ },
+ {
+  "match": "Beats Antique",
+  "weekly": {
+   "Fri": [
+    "19:00",
+    "23:30"
+   ],
+   "Sat": [
+    "19:00",
+    "23:30"
+   ]
+  }
+ },
+ {
+  "match": "Humboldt Artisans Crafts",
+  "weekly": {
+   "Fri": [
+    "16:00",
+    "21:00"
+   ],
+   "Sat": [
+    "10:00",
+    "17:00"
+   ],
+   "Sun": [
+    "10:00",
+    "17:00"
+   ]
+  }
+ },
+ {
+  "match": "A Season of Light",
+  "weekly": {
+   "Fri": [
+    "19:30",
+    ""
+   ],
+   "Sat": [
+    "19:30",
+    ""
+   ]
+  }
+ },
+ {
+  "match": "Christmas @ the Acres",
+  "weekly": {
+   "Fri": [
+    "17:00",
+    "21:00"
+   ],
+   "Sat": [
+    "10:00",
+    "19:00"
+   ],
+   "Sun": [
+    "10:00",
+    "16:00"
+   ]
+  }
+ },
+ {
+  "match": "Holiday of Trees Bazaar",
+  "weekly": {
+   "Fri": [
+    "",
+    ""
+   ],
+   "Sat": [
+    "",
+    ""
+   ],
+   "Sun": [
+    "",
+    ""
+   ]
+  }
+ }
 ]
