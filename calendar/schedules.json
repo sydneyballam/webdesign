@@ -143,5 +143,88 @@
     ""
    ]
   }
+ },
+ {
+  "match": "Winter Fair: Winter Wanderland",
+  "weekly": {
+   "Wed": [
+    "",
+    ""
+   ],
+   "Thu": [
+    "",
+    ""
+   ],
+   "Fri": [
+    "",
+    ""
+   ],
+   "Sat": [
+    "",
+    ""
+   ],
+   "Sun": [
+    "",
+    ""
+   ]
+  }
+ },
+ {
+  "match": "Winter Fair: Ice Skating Rink",
+  "weekly": {
+   "Tue": [
+    "",
+    ""
+   ],
+   "Wed": [
+    "",
+    ""
+   ],
+   "Thu": [
+    "",
+    ""
+   ],
+   "Fri": [
+    "",
+    ""
+   ],
+   "Sat": [
+    "",
+    ""
+   ],
+   "Sun": [
+    "",
+    ""
+   ]
+  }
+ },
+ {
+  "match": "Winter Fair: Polar Bunny Hill",
+  "weekly": {
+   "Tue": [
+    "",
+    ""
+   ],
+   "Wed": [
+    "",
+    ""
+   ],
+   "Thu": [
+    "",
+    ""
+   ],
+   "Fri": [
+    "",
+    ""
+   ],
+   "Sat": [
+    "",
+    ""
+   ],
+   "Sun": [
+    "",
+    ""
+   ]
+  }
  }
 ]

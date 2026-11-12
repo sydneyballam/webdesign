@@ -8,10 +8,10 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:2b886394411d@community-calendar
-DTSTAMP:20261112T161019Z
+UID:e9ce9d2a4764@community-calendar
+DTSTAMP:20261112T210335Z
 DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20261114
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
 LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
 DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
@@ -21,10 +21,160 @@ DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
 URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
-UID:739364477ea7@community-calendar
-DTSTAMP:20261112T161019Z
+UID:f17686f04595@community-calendar
+DTSTAMP:20261112T210335Z
 DTSTART;VALUE=DATE:20261113
-DTEND;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20261114
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:922e451a12ba@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:ca7312aac24a@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:5fc8124cbbfb@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:8573aecbe934@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:1ee1468e6a0e@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:cf46d4cdc812@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:da1ac30bb9de@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:f977c27deeed@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:ce4ca30edf17@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:6a6002911e9e@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:128a0502d0db@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:5611f889d7f7@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
 LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
 DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
@@ -34,7 +184,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:d252dbb6ad83@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261120T193000
 DTEND:20261120T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -50,8 +200,33 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:1097397cac0b@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:a7dc8ec19e84@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:e1628de3b680@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261121T140000
 DTEND:20261121T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -67,8 +242,33 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:f2a4f6a5f2f7@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:cd4b8f0b221c@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:d222b8c5595c@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261122T140000
 DTEND:20261122T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -84,8 +284,83 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:9763e389a338@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:d9676211d089@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:fe9810903a57@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:f66bc59ed1b8@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:924d8331c9f3@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:c99bf6648b49@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:b0f59a286371@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Humboldt County Winter Fair: Holiday of Trees Bazaar
@@ -96,10 +371,35 @@ DESCRIPTION:Local vendors and delights to kick off the season! Part of the
 URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
-UID:1df7785e3e7b@community-calendar
-DTSTAMP:20261112T161019Z
+UID:9f4cc24f346a@community-calendar
+DTSTAMP:20261112T210335Z
 DTSTART;VALUE=DATE:20261127
-DTEND;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261128
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:1ebd5b38c8da@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:48a4a72df329@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
 LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
 DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
@@ -110,7 +410,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ac00780c6250@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261127T193000
 DTEND:20261127T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -127,7 +427,7 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
 END:VEVENT
 BEGIN:VEVENT
 UID:0033fca6846b@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Humboldt County Winter Fair: Holiday of Trees Bazaar
@@ -138,8 +438,46 @@ DESCRIPTION:Local vendors and delights to kick off the season! Part of the
 URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:12972579bb9b@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:378de2247b14@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:d25f473b2264@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:16ab7480c057@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Humboldt County Winter Fair: Holiday of Trees Bazaar
@@ -150,8 +488,46 @@ DESCRIPTION:Local vendors and delights to kick off the season! Part of the
 URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:41a358b7b27b@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:9d93ba5b19cb@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:681f215e8a18@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:1e66ae9bef0d@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261129T140000
 DTEND:20261129T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -167,8 +543,147 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:120bdd153658@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:09c5ca39c9b8@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:4dabfdbef06b@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:3bcb70dd27ea@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:8d5449c5c5ca@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:c3f582e12e6a@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:cc6e172c23dc@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:9e65adb27622@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:284644aad3cf@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:e4bddf5088da@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:c15b97ee4b0e@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:7368277cc373@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261204T173000
 DTEND:20261204T183000
 SUMMARY:Ferndale Fire Co 3 Hook & Ladder Turkey Shoot
@@ -180,7 +695,7 @@ DESCRIPTION:The annual Company 3 fundraiser\, on Hospitality Night. Roll t
 END:VEVENT
 BEGIN:VEVENT
 UID:4e1a3c822d8f@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261204T193000
 DTEND:20261204T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -196,8 +711,46 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:f9c62372382f@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:5d6cfba08697@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:269b8f86656e@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:f0bdcf128107@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261205T140000
 DTEND:20261205T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -213,8 +766,46 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:2f869137c12e@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:03a969e1b8f6@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:b7cb90e22d29@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:3fd7af2907cb@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261206T140000
 DTEND:20261206T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -230,8 +821,147 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:ed5917d332f0@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:b90b69e8ff5e@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:7b8286ae837c@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:7ca8ce5270b5@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:016cee64cdff@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:99542b362d7c@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:747e3dc33380@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:9f36e97dcaf0@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:2a9f600217fe@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:602da9975e25@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:d404b64e75c0@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:4f263dd9dd5d@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261211T193000
 DTEND:20261211T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -247,8 +977,46 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:dd4da655c893@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:13227ab3f1e5@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:afa768278b03@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:3a186e8c77af@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261212T140000
 DTEND:20261212T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -264,8 +1032,46 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:4d38f1e20280@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:f56c3dfb1b6b@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:3eb5225b8a51@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:40fd71f5d935@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261213T140000
 DTEND:20261213T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -281,8 +1087,147 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:b8d1cdfd8090@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:2dc80d12ee5b@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:ac2741272dcb@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:a4cab78bdee1@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:fee9e28c4c57@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:0c4eb3898971@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:a56141fe751c@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:9a38646bbc76@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:57fad638b7aa@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:43f370a86390@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:ad690daa0f35@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:97122c00aa85@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261218T193000
 DTEND:20261218T203000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -298,8 +1243,46 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:05b8dc120673@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:2a0df8f0f885@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:5a1b5ac6e702@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:e823eb3c8925@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261219T140000
 DTEND:20261219T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -315,8 +1298,46 @@ URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
 END:VEVENT
 BEGIN:VEVENT
+UID:cbe147a03e79@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261221
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:e4fd9502fa31@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261221
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:399f98405eff@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261221
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
 UID:9301d82b8ea3@community-calendar
-DTSTAMP:20261112T161019Z
+DTSTAMP:20261112T210335Z
 DTSTART:20261220T140000
 DTEND:20261220T150000
 SUMMARY:Ferndale Rep presents "Disney's Frozen: The Broadway Musical"
@@ -330,5 +1351,481 @@ DESCRIPTION:The stage musical of the Disney film follows sisters Anna and
  ents-disneys-frozen-the-broadway-musical/
 URL:https://www.visiteureka.com/event/ferndale-rep-presents-disneys-frozen
  -the-broadway-musical/
+END:VEVENT
+BEGIN:VEVENT
+UID:0b4406d0dfac@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:caa56896319a@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:328bf3af600d@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:900be3bb31b2@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:b34b0209be9f@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:51ce850aeff6@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:163c0c0c67d2@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:ecb347112d97@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:Humboldt County Winter Fair: Winter Wanderland
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Stroll through dazzling displays of lights! Open Nov 27 to Dec
+  24\, closed Mondays and Tuesdays. Part of the Humboldt County Winter Fai
+ r. Check the fair's website for hours and ticket prices.\nhttps://www.hum
+ boldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:fb2f5f0b0f1d@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:aa2bfb5b468a@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:8735754bd095@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:d5636856aaac@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:dea3b565aed2@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:88aaa2a11f13@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:64a404f24423@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261230
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:ec1120953272@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261230
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:0e03ff75acdb@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:9d36a759ec44@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:eba031e7cddb@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:e421471798dd@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:76ae0b6a08a1@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:9882cee5040d@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:d827f639acac@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270103
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:617a9b4aabf9@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270103
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:08bfd6a0bab8@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270103
+DTEND;VALUE=DATE:20270104
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:28f8d55ed7e7@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270103
+DTEND;VALUE=DATE:20270104
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:5d5fb2c4955c@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:8d4032fb75a9@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:88bf0bbb28fd@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:7f9751211e67@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:eb90a7fcfc62@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:4c6b0c1646fb@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:e99a32e5a2fb@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:9cb0a666bd1c@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:74de25639a0e@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:244baf9e3622@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:1c92e4202a2b@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Glide across the ice with friends and family! Open Nov 13 to J
+ an 10\, closed Mondays. Part of the Humboldt County Winter Fair. Check th
+ e fair's website for session times and prices.\nhttps://www.humboldtcount
+ yfair.org/
+URL:https://www.humboldtcountyfair.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:3cc1e0a472df@community-calendar
+DTSTAMP:20261112T210335Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
+LOCATION:Humboldt County Fairgrounds\, 1250 Fifth Street\, Ferndale\, CA
+DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
+ , closed Mondays. Part of the Humboldt County Winter Fair. Check the fair
+ 's website for hours and prices.\nhttps://www.humboldtcountyfair.org/
+URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 END:VCALENDAR
