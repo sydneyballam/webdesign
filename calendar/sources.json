@@ -9,7 +9,10 @@
     "name": "Visit Eureka",
     "url": "https://www.visiteureka.com/events/list/?ical=1",
     "page": "https://www.visiteureka.com/events/",
-    "default_town": "Eureka"
+    "default_town": "Eureka",
+    "exclude": [
+      "Holiday Shop & Stroll"
+    ]
   },
   {
     "name": "Hoopa Valley Tribe",
