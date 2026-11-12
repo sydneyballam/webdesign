@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T07:32:00Z",
+ "updated": "2026-11-12T07:40:13Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -8,6 +8,7 @@
   "Ferndale",
   "Fortuna",
   "Hoopa",
+  "Lewiston",
   "McKinleyville",
   "Samoa",
   "Weaverville",
@@ -1752,6 +1753,26 @@
    "source_url": "https://www.bluelakecasino.com/calendar/",
    "lat": 40.8834,
    "lng": -123.984,
+   "approx": true
+  },
+  {
+   "id": "e8eb744f9968",
+   "title": "Lewiston Bridge Lighting",
+   "date": "2026-11-28",
+   "end_date": "2026-11-28",
+   "start_time": "",
+   "end_time": "",
+   "town": "Lewiston",
+   "place": "Lewiston Bridge",
+   "address": "Lewiston, CA",
+   "website": "",
+   "description": "Annual Bridge Lighting with a fireworks show. Mountain104.com provides the music for the day and for the fireworks, and simulcasts it online for anyone watching from home. Donations for this year's lighting are still open; see the Lewiston Sparkies post.",
+   "free": true,
+   "category": "Holiday",
+   "source": "Mountain104.com on Facebook",
+   "source_url": "https://m.facebook.com/groups/1719216448308263/permalink/4759715414258336/",
+   "lat": 40.7059,
+   "lng": -122.8036,
    "approx": true
   },
   {

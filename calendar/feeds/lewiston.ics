@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Lewiston Events
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+X-PUBLISHED-TTL:PT4H
+BEGIN:VEVENT
+UID:e8eb744f9968@community-calendar
+DTSTAMP:20261112T074013Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Lewiston Bridge Lighting
+LOCATION:Lewiston Bridge\, Lewiston\, CA
+DESCRIPTION:Annual Bridge Lighting with a fireworks show. Mountain104.com 
+ provides the music for the day and for the fireworks\, and simulcasts it 
+ online for anyone watching from home. Donations for this year's lighting 
+ are still open\; see the Lewiston Sparkies post.
+END:VEVENT
+END:VCALENDAR
