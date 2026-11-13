@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small Business Studio of Willow Creek</title>
+<meta name="description" content="Websites, online booking, new-equipment setup and simple systems, explained in plain English for Willow Creek small businesses. Book a free first conversation.">
+<link rel="canonical" href="https://sydneyballam.github.io/webdesign/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{--ink:#10243E;--paper:#EAF3FF;--line:#C8DBF3;--muted:#40566F;--link:#0B58C2;--wlink:#0B58C2;--f-display:'Manrope',system-ui,sans-serif;--f-body:'Manrope',system-ui,sans-serif;--r-pill:999px;--r-s:12px;--r-m:20px;--chip-line:#9bb8de;--chip-bg:#fff;--chip-on-bg:#10243E;--chip-on-fg:#fff;--wcard-line:#C8DBF3;--focus:#FF7A2F}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1.125rem/1.6 var(--f-body);overflow-x:clip}
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:1rem;padding:.5rem 2.5vw;background:rgba(234,243,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top a.brand{font-weight:800;color:var(--ink);text-decoration:none;margin-right:auto;line-height:1.2}.top nav{display:flex;gap:.2rem;overflow-x:auto}.top nav a{white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;padding:0 .8rem;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:700;font-size:.9375rem}.top nav a:hover{background:#D6E7FB}
+.go{display:inline-flex;min-height:44px;align-items:center;padding:0 1.2rem;border-radius:999px;background:#FF7A2F;color:#10243E;font-weight:800;text-decoration:none;white-space:nowrap}
+.story{display:grid;grid-template-columns:1fr minmax(18rem,26rem) 1fr;gap:0 3vw;padding:0 2.5vw}
+.steps-col{grid-column:1;padding:2rem 0}.phone-col{grid-column:2;grid-row:1}.right-col{grid-column:3;padding:2rem 0}
+.phone-col{position:relative}.stick{position:sticky;top:5rem;padding:1rem 0}
+.phone{width:100%;max-width:22rem;margin:0 auto;aspect-ratio:9/18.5;border-radius:42px;background:#0b1626;padding:12px;box-shadow:0 30px 60px rgba(16,36,62,.4)}
+.scr{position:relative;width:100%;height:100%;border-radius:32px;overflow:hidden;background:#fff}
+.scr .s{position:absolute;inset:0;padding:2.2rem 1rem 1rem;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;font-size:1.0625rem;line-height:1.45;overflow:hidden;visibility:hidden}
+.scr .s.on{opacity:1;transform:none;visibility:visible}
+@media (prefers-reduced-motion:reduce){.scr .s{transition:none}}
+.notch{position:absolute;top:8px;left:50%;width:34%;height:18px;margin-left:-17%;border-radius:12px;background:#0b1626;z-index:3}
+.s h4{margin:0 0 .7rem;font-size:1.3rem;line-height:1.15}
+.sb{background:#F1F3F4;border-radius:999px;padding:.55rem .9rem;font-weight:600;margin-bottom:.8rem}
+.res{border-radius:12px;padding:1rem;margin-bottom:.8rem;border:1px solid #e3e6ea}.res.me{border:2px solid #0B58C2;background:#F2F7FF}.res b{display:block;color:#0B58C2}.res span{color:#3b6a43;font-weight:700}.res.dim{opacity:.55}
+.mini-hero{background:linear-gradient(135deg,#0B58C2,#6AA6FF);color:#fff;border-radius:16px;padding:1rem;margin-bottom:.7rem}.mini-hero h4{font-size:1.2rem}
+.pill{display:inline-block;background:#FF7A2F;color:#10243E;font-weight:800;border-radius:999px;padding:.4rem .9rem;margin-right:.3rem}.pill.o{background:transparent;border:2px solid #fff;color:#fff}
+.ev{display:flex;gap:.8rem;align-items:center;border:1px solid #e3e6ea;border-radius:12px;padding:.9rem;margin-bottom:.6rem}.ev b{font-size:1.2rem;color:#0B58C2}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem;margin:.6rem 0}.slots i{font-style:normal;text-align:center;border:1px solid #cfd8e3;border-radius:10px;padding:.9rem 0;font-weight:700}.slots i.sel{background:#0B58C2;color:#fff;border-color:#0B58C2}
+.cbtn{display:block;text-align:center;background:#FF7A2F;color:#10243E;font-weight:800;border-radius:12px;padding:.7rem}
+.cal{border-left:5px solid #0B58C2;background:#EAF3FF;border-radius:8px;padding:1rem;margin:.6rem 0}
+.toast{margin-top:.8rem;background:#10243E;color:#fff;border-radius:12px;padding:.7rem .9rem;font-weight:700}
+.field{border:1px solid #cfd8e3;border-radius:10px;padding:.9rem;margin-bottom:.7rem}.field small{display:block;color:#5a6b7d}
+.step{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:1rem 0;opacity:.35;transition:opacity .3s}
+.step.on{opacity:1}
+.step .n{font-weight:800;color:#0B58C2;letter-spacing:.1em;text-transform:uppercase;font-size:.875rem}
+.step h2{margin:.3rem 0 .6rem;font-weight:800;font-size:clamp(1.8rem,3.4vw,3.2rem);line-height:1.05;letter-spacing:-.035em}.step p{margin:0 0 .6rem;max-width:30rem}
+.step .mini{display:none}
+.heroblock{padding:3rem 2.5vw 0}.heroblock .kick{margin:0 0 .6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.875rem;color:#0B58C2}
+.heroblock h1{margin:0 0 1rem;font-weight:800;font-size:clamp(2.4rem,6vw,5.6rem);line-height:1;letter-spacing:-.04em;max-width:78rem}
+.heroblock .lead{font-size:1.3rem;max-width:56rem;margin:0 0 1.25rem}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 1.5rem;border-radius:999px;background:#10243E;color:#fff;font-weight:800;text-decoration:none;margin:0 .7rem .7rem 0;border:3px solid #10243E}.btn.alt{background:transparent;color:#10243E}
+.right-col .tip{position:sticky;top:7rem;background:#fff;border:2px solid var(--line);border-radius:20px;padding:1.25rem}.right-col .tip b{display:block;margin-bottom:.4rem}
+.sec{display:grid;grid-template-columns:minmax(16rem,26rem) 1fr;gap:1.5rem 4vw;padding:4rem 2.5vw;border-top:1px solid var(--line)}
+.sec header{position:sticky;top:5.5rem;align-self:start}
+.kick{margin:0 0 .5rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.875rem;color:#0B58C2}
+.sec h2{margin:0 0 .6rem;font-weight:800;font-size:clamp(1.9rem,3.6vw,3.2rem);line-height:1.04;letter-spacing:-.035em}
+.intro{margin:0 0 .5rem}
+.cards{display:grid;gap:0;border-left:3px solid #10243E}
+.c{position:relative;padding:.4rem 0 1.6rem 1.6rem}.c::before{content:"";position:absolute;left:-.62rem;top:.6rem;width:1.1rem;height:1.1rem;border-radius:50%;background:#FF7A2F;border:3px solid var(--paper)}
+.c h3{margin:0 0 .4rem;font-weight:800;font-size:1.4rem;line-height:1.15}.c p{margin:0 0 .55rem;max-width:44rem}
+.steps .no{font-weight:800;color:#0B58C2;font-size:2.2rem;line-height:1;display:block}
+.cta,.note{grid-column:2}.cta .btn{margin:0 .6rem .6rem 0}.note{margin:0;color:var(--muted);font-style:italic;max-width:50rem}
+.own{background:#10243E;color:#fff;border-top:0}.own .kick{color:#7DBBFF}.own .cards{border-color:#7DBBFF}.own .c::before{border-color:#10243E}.own .intro{color:#CFE0F5}
+.workbox{grid-column:1/-1;background:#fff;border:2px solid var(--line);border-radius:22px;padding:1.5rem}.workbox .lede{max-width:80rem;margin:0 0 .5rem}.workbox h2{font-size:clamp(1.8rem,3.4vw,3rem)}
+.sec:has(.workbox){display:block}.sec:has(.workbox) header{position:static;margin-bottom:1rem}.book{display:block}
+.foot{padding:1.5rem 2.5vw 5rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;font-size:.9375rem;color:var(--muted)}
+@media (max-width:1100px){.story{display:block}.phone-col,.right-col{display:none}.step{min-height:auto;opacity:1;padding:1.5rem 0}.step .mini{display:block;margin-top:1rem}.phone.small{max-width:18rem;aspect-ratio:9/16}.sec{display:block}.sec header{position:static;margin-bottom:1rem}}
+
+
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{min-height:44px;padding:0 1rem;border-radius:var(--r-pill,999px);border:1px solid var(--chip-line,var(--line));background:var(--chip-bg,#fff);color:var(--chip-fg,var(--ink));font:600 1rem var(--f-body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--chip-on-bg,var(--ink));border-color:var(--chip-on-bg,var(--ink));color:var(--chip-on-fg,var(--paper))}
+.chip small{font-size:.8125rem;opacity:.75}
+.flabel{display:block;margin:0 0 .5rem;font-size:.875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#clientSelect{min-height:44px;width:100%;max-width:22rem;border:1px solid var(--chip-line,var(--line));border-radius:var(--r-s,10px);padding:0 .75rem;background:#fff;color:#111;font:600 1rem var(--f-body)}
+.linkbtn{min-height:44px;padding:0;border:0;background:none;color:var(--link);font:700 1rem var(--f-body);text-decoration:underline;cursor:pointer}
+.filters{display:flex;flex-direction:column;gap:1.25rem;margin:1.5rem 0}
+.fcount{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem}
+.fcount p{margin:0;color:var(--muted)}
+#results{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,22rem),1fr));gap:1rem}
+.wcard{display:flex;flex-direction:column;gap:.75rem;background:var(--wcard-bg,#fff);color:#1b1b1b;border:1px solid var(--wcard-line,var(--line));border-radius:var(--r-m,12px);padding:1.5rem;box-sizing:border-box;min-width:0}
+.wcard h3{margin:0;font-family:var(--f-display);font-weight:700;font-size:1.5rem;line-height:1.15;color:#111}
+.wcard p{margin:0;color:#333}
+.wcard .client{font-weight:700;color:var(--wlink,var(--link))}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem}
+.badge{font-size:.8125rem;font-weight:700;padding:.2rem .6rem;border-radius:6px}
+.badge.published{background:#DCE8F8;color:#183B6B}.badge.prototype{background:#EFE6F9;color:#3F2A5C}.badge.tag{background:#E9EEF8;color:#1E4580}
+.looks{display:flex;flex-wrap:wrap;gap:.5rem}
+.look{min-height:44px;display:inline-flex;align-items:center;gap:.5rem;padding:0 1rem;border-radius:var(--r-pill,999px);border:2px solid var(--wlink,var(--link));color:var(--wlink,var(--link));font-weight:700;text-decoration:none;box-sizing:border-box;background:#fff}
+.look small{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
+#emptyState{text-align:center;padding:2.5rem 1rem;border:2px dashed var(--muted);border-radius:var(--r-m,12px)}
+#emptyState p{margin:0 0 .5rem;color:var(--muted)}
+#cal-embed{background:#fff;border-radius:var(--r-m,12px);padding:.5rem;margin:1.5rem 0 1rem;min-height:12rem;color:#111}
+.focus a:focus-visible,a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus,#1a56db);outline-offset:3px}
+html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+#designPick{position:fixed;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:6px 8px 6px 14px;border-radius:999px;background:#14181f;color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.3);font:600 14px/1.2 system-ui,sans-serif}
+#designPick button{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:#fff;color:#14181f;font:700 14px system-ui,sans-serif;cursor:pointer}
+#designPick button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media print{#designPick{display:none}}
+
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="#top">Small Business Studio of Willow Creek</a><nav aria-label="Main"><a href="#modernize">Modernize your site</a><a href="#problems">What I help with</a><a href="#how">How it works</a><a href="#start">Getting started</a><a href="#work">Our work</a><a href="calendar/">Events calendar</a><a href="#learn">Learn something</a><a href="#book">Book a chat</a></nav><a class="go" href="#book">Book a free chat</a></header>
+<main id="top"><section class="heroblock"><p class="kick">Willow Creek, California</p><h1>Starting or growing a business here? Let's build it together.</h1><p class="lead">I help local business owners get online, get organized, and feel at home with the tools they use. Websites, booking, email, new equipment, and simple systems, explained in plain English. Every question is welcome.</p><div><a class="btn" href="#book">Book a free first conversation</a><a class="btn alt" href="#how">See how it works</a></div></section>
+<section class="story" id="story"><div class="steps-col"><div class="step" data-i="0"><span class="n">9 PM</span><h2>Someone is looking for what you do.</h2><p>They pull out their phone and search. A clear website with current hours is the one they tap.</p><div class="mini" aria-hidden="true"><div class="phone small"><div class="scr"><span class="notch"></span><div class="s on" style="position:relative;visibility:visible;opacity:1;transform:none;height:100%"><div class="sb">lunch spot near me</div><div class="res me"><b>Your Business Name</b>yourbusiness.com<br><span>Open now</span> &middot; Closes 5 PM</div><div class="res dim"><b>Old directory listing</b>Hours not confirmed</div><div class="res dim"><b>Another page</b>Last updated 2019</div></div></div></div></div></div><div class="step" data-i="1"><span class="n">Step 2</span><h2>They land on a site that answers the question.</h2><p>Hours, photos, what you offer and what is coming up, readable on any phone.</p><div class="mini" aria-hidden="true"><div class="phone small"><div class="scr"><span class="notch"></span><div class="s on" style="position:relative;visibility:visible;opacity:1;transform:none;height:100%"><div class="mini-hero"><h4>Your Business Name</h4>Open today, 9 to 5<br><br><span class="pill">Book a visit</span><span class="pill o">Call</span></div><h4>Coming up</h4><div class="ev"><b>12</b>Open house</div><div class="ev"><b>20</b>Evening event</div></div></div></div></div></div><div class="step" data-i="2"><span class="n">Step 3</span><h2>They book in a few taps.</h2><p>No phone tag, no waiting for a reply. They pick a time that works for them.</p><div class="mini" aria-hidden="true"><div class="phone small"><div class="scr"><span class="notch"></span><div class="s on" style="position:relative;visibility:visible;opacity:1;transform:none;height:100%"><h4>Pick a time</h4><div>Thursday</div><div class="slots"><i>10:00</i><i>11:30</i><i class="sel">2:00</i><i>3:30</i><i>4:00</i><i>5:00</i></div><span class="cbtn">Confirm booking</span></div></div></div></div></div><div class="step" data-i="3"><span class="n">Step 4</span><h2>It lands in their calendar.</h2><p>Bookings and events can be added to their own calendar app, so they actually show up.</p><div class="mini" aria-hidden="true"><div class="phone small"><div class="scr"><span class="notch"></span><div class="s on" style="position:relative;visibility:visible;opacity:1;transform:none;height:100%"><h4>Thursday</h4><div class="cal"><b>2:00 PM</b><br>Visit Your Business<br>Willow Creek</div><div class="cal" style="border-color:#FF7A2F"><b>6:00 PM</b><br>Evening event</div><div class="toast">Added to your calendar</div></div></div></div></div></div><div class="step" data-i="4"><span class="n">Step 5</span><h2>And you can change anything yourself.</h2><p>New hours, a holiday closure, a special. A few taps, and it is live. No waiting on someone else.</p><div class="mini" aria-hidden="true"><div class="phone small"><div class="scr"><span class="notch"></span><div class="s on" style="position:relative;visibility:visible;opacity:1;transform:none;height:100%"><h4>Edit hours</h4><div class="field"><small>Thursday</small>9:00 AM to 5:00 PM</div><div class="field"><small>Friday</small>Closed for the holiday</div><span class="cbtn">Publish</span><div class="toast">Published. Your site is up to date.</div></div></div></div></div></div></div><div class="phone-col"><div class="stick"><div class="phone" aria-hidden="true"><div class="scr"><span class="notch"></span><div class="s on"><div class="sb">lunch spot near me</div><div class="res me"><b>Your Business Name</b>yourbusiness.com<br><span>Open now</span> &middot; Closes 5 PM</div><div class="res dim"><b>Old directory listing</b>Hours not confirmed</div><div class="res dim"><b>Another page</b>Last updated 2019</div></div><div class="s"><div class="mini-hero"><h4>Your Business Name</h4>Open today, 9 to 5<br><br><span class="pill">Book a visit</span><span class="pill o">Call</span></div><h4>Coming up</h4><div class="ev"><b>12</b>Open house</div><div class="ev"><b>20</b>Evening event</div></div><div class="s"><h4>Pick a time</h4><div>Thursday</div><div class="slots"><i>10:00</i><i>11:30</i><i class="sel">2:00</i><i>3:30</i><i>4:00</i><i>5:00</i></div><span class="cbtn">Confirm booking</span></div><div class="s"><h4>Thursday</h4><div class="cal"><b>2:00 PM</b><br>Visit Your Business<br>Willow Creek</div><div class="cal" style="border-color:#FF7A2F"><b>6:00 PM</b><br>Evening event</div><div class="toast">Added to your calendar</div></div><div class="s"><h4>Edit hours</h4><div class="field"><small>Thursday</small>9:00 AM to 5:00 PM</div><div class="field"><small>Friday</small>Closed for the holiday</div><span class="cbtn">Publish</span><div class="toast">Published. Your site is up to date.</div></div></div></div></div></div>
+<div class="right-col"><div class="tip"><b>Every owner is still learning, and that's a good thing.</b><p>Attachments, domains, booking links, and email settings are skills anyone can pick up, and they get easier fast once someone walks you through them.</p><p>I'll walk you through each one at your pace. Ask me anything.</p></div></div></section>
+<section class="sec" style="padding:1rem 2.5vw;background:#FF7A2F;color:#10243E;font-weight:800;display:block">Limited spots: free starter websites for local businesses. <a href="#free" style="color:#10243E">See what's included</a></section>
+<section class="sec " id="modernize"><header><p class="kick">Modernize your website</p><h2>A website you can keep fresh yourself, with a calendar that does the work.</h2><p class="intro">A website only helps when it's current. When changes have to wait on someone else, hours, prices and events slowly fall out of date, and every update can mean another bill. Let's build one that stays up to date because updating it is easy.</p></header><div class="cards"><div class="c"><h3>Easy to update</h3><p>Change your hours, prices or a photo in minutes, without waiting on anyone. I show you how, and I'm here when you want a hand.</p></div><div class="c"><h3>A calendar of events that stays current</h3><p>Add an event once and it shows on your site and in subscribers' calendar apps. No more flyers that go out of date or a calendar nobody updates.</p></div><div class="c"><h3>No middleman, lower costs</h3><p>Your site lives in your name on simple, low cost hosting. There's no outside company to pay every time something changes.</p></div><div class="c"><h3>Looks good and works on any phone</h3><p>Big, readable text, quick loading and clear wording that search engines can find. Your words and photos carry over, and I keep your web address where I can.</p></div></div><div class="cta"><a class="btn" href="#book">Book a free website chat</a><a class="btn alt" href="calendar/">See an example: the 299 events calendar</a></div></section>
+<section class="sec " id="events"><header><p class="kick">Events calendars</p><h2>Publish your events once, and let your community follow along.</h2><p class="intro">A flyer or a Facebook post is easy to miss. A real events calendar puts every date in one place, and people can follow it in their calendar app, or add single events, so they never have to check back.</p></header><div class="cards"><div class="c"><h3>Publish in one place</h3><p>Add an event once and it shows on your website as a list, a month and a map. Each event gets its own shareable link, so posting it on Facebook takes a few seconds.</p></div><div class="c"><h3>Subscribers get updates automatically</h3><p>When someone subscribes, new events and changes appear in their calendar app by themselves, on iPhone and computers. This only works with the right kind of calendar, a subscribable feed. A picture, a PDF or a Facebook event can't do it.</p></div><div class="c"><h3>Marketing built in</h3><p>Events that are easy to find, easy to share and easy to add to a calendar get more people through the door. I can also help with ready to post wording for Facebook and a simple newsletter.</p></div></div><div class="cta"><a class="btn" href="calendar/">See it working: the 299 events calendar</a><a class="btn alt" href="#book">Book a free calendar chat</a></div></section>
+<section class="sec " id="problems"><header><p class="kick">What we can work on</p><h2>The tech side of a small business, one step at a time.</h2></header><div class="cards"><div class="c"><h3>A website built to last.</h3><p>Simple, sturdy pages on free hosting in your name, with no plugins to keep up with. I'll make changes when you need them, and show you any parts you'd like to handle yourself.</p></div><div class="c"><h3>Online booking that works for you.</h3><p>I'll help you pick a booking tool that fits your budget and set it up on your site.</p></div><div class="c"><h3>New items and news posted in minutes.</h3><p>We'll design a simple routine, photo, price, post, that fits right into your day.</p></div><div class="c"><h3>Events and newsletters your community sees.</h3><p>I'll set up a calendar people can follow in their calendar app, a signup form, and show you how to share your first event.</p></div><div class="c"><h3>Email, files, and forms that make sense.</h3><p>Ask me anything. That's the job.</p></div><div class="c"><h3>Everything clearly yours.</h3><p>We'll map where everything lives and make sure it's all in your name.</p></div></div></section>
+<section class="sec " id="services"><header><p class="kick">What I can do</p><h2>Seven ways I can help you get started and keep going.</h2></header><div class="cards"><div class="c"><h3>Get online</h3><p>A clear website, a domain name, a business email address, and a Google listing so people can find your hours and location when they search.</p></div><div class="c"><h3>Modernize your website</h3><p>Already have a website that feels dated? I'll give it a fresh look and make it work well on phones, load quickly, and be easy to read. Your words and photos carry over, and I'll keep your web address wherever I can.</p></div><div class="c"><h3>Take bookings and share events</h3><p>Online scheduling, an events calendar, and a newsletter signup, so customers can reserve a time and hear what's coming up.</p></div><div class="c"><h3>Set up simple systems</h3><p>The quiet stuff that keeps a business running: getting new items posted, tracking invoices, and organizing files so you can find them again.</p></div><div class="c"><h3>Learn it, one-on-one</h3><p>Short sessions where you ask anything: email, spreadsheets, documents, or how to get the most out of AI tools.</p></div><div class="c"><h3>Set up new equipment</h3><p>A new computer, printer, or Wi-Fi router, up and running the day I'm there, with your files, email, and favorite programs moved over from the old one. Inside your home or shop, I'll make sure the Wi-Fi reaches where you work.</p></div><div class="c"><h3>Start your business</h3><p>New to running a business in Humboldt County? I'll walk you through the name, the county paperwork, and the online setup, one step at a time.</p></div></div><p class="note">Interested in a small-group workshop for Willow Creek business owners? Tell me what you'd want to learn and I'll add you to the list.</p></section>
+<section class="sec how" id="how"><header><p class="kick">How it works</p><h2>Three steps, with the price clear up front.</h2></header><div class="cards steps"><div class="c"><span class="no">1</span><h3>Let's talk</h3><p>A free first conversation about your business and what you'd like to make easier. Just a friendly chat.</p></div><div class="c"><span class="no">2</span><h3>Get a simple plan</h3><p>A one-page plan in plain words: what we'll set up, what it will cost, and how long it will take. You approve it before anything starts.</p></div><div class="c"><span class="no">3</span><h3>Build it together</h3><p>I build it alongside you, then show you how the pieces fit. For future changes, you can learn the parts you like or hand them to me.</p></div></div></section>
+<section class="sec " id="free"><header><p class="kick">Free starter website · Limited spots</p><h2>Get a free starter website for your Willow Creek business.</h2></header><div class="cards"><div class="c"><h3>What's included</h3><p>A one-page or small site built from your text and photos.</p><p>Two rounds of changes, so it ends up just right.</p><p>A 30-minute walkthrough of how everything fits together.</p><p>A one-page guide to what lives where.</p></div><div class="c"><h3>Your part</h3><p>Your domain name, which is usually about $10 to $20 a year.</p><p>Your text and photos for the site.</p><p>Permission to show the finished site in my portfolio, and a short testimonial in your own words.</p></div><div class="c"><h3>Add-ons when you're ready</h3><p>Online booking, an events calendar, and a newsletter.</p><p>A simple way to get new items and news posted.</p><p>Business email, new equipment setup, and ongoing updates, all at a simple hourly rate.</p></div></div><div class="cta"><a class="btn" href="#book">Ask about a free starter website</a></div></section>
+<section class="sec " id="start"><header><p class="kick">Starting out in Humboldt County</p><h2>The usual path from idea to open for business.</h2></header><div class="cards"><div class="c"><h3>1. Choose your name</h3><p>Pick a name that fits you, and check that no one else nearby is already using it.</p></div><div class="c"><h3>2. Register the name</h3><p>If your business name doesn't include your own surname, the county asks for a fictitious business name filing.</p></div><div class="c"><h3>3. Get your county license</h3><p>Businesses outside city limits apply through the county. I'll help you find the right type and fill in the form.</p></div><div class="c"><h3>4. Check state and tax questions</h3><p>I'll point you to the right offices so you can ask the right people the right questions.</p></div><div class="c"><h3>5. Get online</h3><p>A domain name, a business email address, a simple website, and a booking link.</p></div><div class="c"><h3>6. Welcome your first customers</h3><p>A Facebook page and a few simple posts, so your neighbors know you're open.</p></div></div><p class="note">I'm a guide, not a lawyer or an accountant. I'll help you find the right offices and fill out the forms. Rules and fees change, so we'll check the official sources together.</p></section>
+<section class="sec own"><header><p class="kick">Yours to keep</p><h2>Everything stays in your name.</h2><p class="intro">What I build is yours. You stay in the driver's seat.</p></header><div class="cards"><div class="c"><p><strong>Your accounts.</strong> Your domain, hosting, and booking and email tools are registered to you.</p></div><div class="c"><p><strong>A one-page guide.</strong> What lives where, and where to look when you want to make a change.</p></div><div class="c"><p><strong>Your choice.</strong> You're free to run it yourself or work with anyone you like.</p></div></div></section>
+<section class="sec" id="work"><header><p class="kick">Our work</p><h2>Published sites and prototypes.</h2></header><div class="workbox"><div class="workwrap ">
+<p id="workIntro" class="lede">Shared with the owners' permission. Published sites are live today. Prototypes are drafts that show what's possible.</p>
+<p class="lede">Also built here: <a href="calendar/">Along the 299</a>, a live events calendar for Willow Creek, Hoopa, Weaverville, Eureka and the towns between.</p>
+<div class="filters">
+<div><span class="flabel">Show</span><div id="statusChips" class="chips"></div></div>
+<div><span class="flabel">Type of business</span><div id="catChips" class="chips"></div></div>
+<div><label for="clientSelect" class="flabel">Client</label><select id="clientSelect"></select></div>
+<div class="fcount"><p id="resultCount" aria-live="polite"></p><button id="copyBtn" type="button" class="linkbtn">Copy link to this view</button></div>
+</div>
+<div id="results"></div>
+<div id="emptyState" hidden><p id="emptyText"></p><button id="resetBtn" type="button" class="linkbtn">Show everything</button></div>
+</div></div></section>
+<section class="sec " id="learn"><header><p class="kick">Learn something</p><h2>A few handy things worth knowing.</h2></header><div class="cards"><div class="c"><h3>What's the difference between CC and BCC?</h3><p><strong>To</strong> is the main recipient.</p><p><strong>CC</strong> sends a copy, and everyone can see each other's addresses.</p><p><strong>BCC</strong> sends a copy and hides the addresses.</p><p>When you email a group of customers, use BCC so they don't see each other's addresses.</p></div><div class="c"><h3>How to check an email before you click</h3><p>Look at the sender's actual address, not just the name next to it.</p><p>Take a moment with anything urgent, unexpected attachments, or links that don't match who the email says it's from.</p><p>Unsure? Pause, and call the company using a number you already have.</p></div><div class="c"><h3>Back up your important files</h3><p>Keep your business files in two places: your computer, and one other place such as a cloud folder or an external drive.</p><p>That way you always have a copy. Check now and then that the backup works.</p></div></div></section>
+<section class="sec book" id="book"><div class="workbox"><h2>Book a free first conversation.</h2><p>Tell me what you're working on or what you'd like to make easier. We'll talk it through in plain English. Add a note when you book and I'll see it ahead of time.</p><p>Serving Willow Creek and the surrounding area. Most of this also works by phone or video.</p>
+<div id="cal-embed"></div>
+<p>Calendar not showing? <a id="cal-fallback" href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+<noscript><p><a href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation">Open the booking calendar</a></p></noscript></div></section></main><div class="foot"><span>Small Business Studio of Willow Creek · California</span><span>Practical help. Plain English. Every question welcome.</span></div>
+
+<script>
+/* ---- booking: Cal.com calendar, loaded when the booking section comes into view ---- */
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+(function () {
+    var link = 'syd-ballam-qcjhpv/free-first-conversation';
+    var started = false;
+    function start() {
+        if (started) return;
+        started = true;
+        Cal("init", "chat", { origin: "https://app.cal.com" });
+        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#2B5EA7", "cal-brand-emphasis": "#1C2541", "cal-brand-text": "#FFFFFF" } } });
+        Cal.ns["chat"]("inline", { elementOrSelector: "#cal-embed", config: { layout: "month_view", theme: "light" }, calLink: link });
+        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#2B5EA7" } } });
+    }
+    var box = document.getElementById('cal-embed');
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries, obs) {
+            if (entries.some(function (e) { return e.isIntersecting; })) { start(); obs.disconnect(); }
+        }, { rootMargin: '400px' }).observe(box);
+    } else { start(); }
+})();
+</script>
+<script>
+/* ==========================================================
+   HOW TO ADD THINGS
+   1. New client: add a line to CLIENTS. The key becomes the link,
+      for example index.html?client=unique-boutique
+   2. New design: add an object to DESIGNS. A design can have several
+      "looks" (variations). "categories" can list more than one.
+   3. New category: add a line to CATEGORIES.
+   4. Every look has a status: 'published' (a live site) or
+      'prototype' (a draft or sample). Change the word when a
+      prototype goes live.
+   A look's url can be a file in this folder or a full web address.
+   ========================================================== */
+(function () {
+    var CLIENTS = {
+        'unique-boutique': { name: 'Unique Boutique', place: 'Willow Creek, CA' },
+        'jessica':         { name: 'Sweet Somatics',  place: 'Hayfork, CA' }
+    };
+    var CATEGORIES = [
+        { id: 'storefront',   label: 'Storefront' },
+        { id: 'appointments', label: 'Appointments & Calendar' },
+        { id: 'wellness',     label: 'Wellness & Retreats' }
+    ];
+    var STATUSES = [
+        { id: 'published', label: 'Published', plural: 'Published sites' },
+        { id: 'prototype', label: 'Prototype', plural: 'Prototypes' }
+    ];
+    var DESIGNS = [
+        {
+            title: 'Estate Storefront',
+            client: 'unique-boutique',
+            categories: ['storefront'],
+            industry: 'Retail · Estate sales',
+            blurb: 'Estate sale inventory, vintage apparel and Fiestaware.',
+            looks: [
+                { label: 'Treasure shop', url: 'ubwc1.html',        status: 'prototype' },
+                { label: 'Gallery',       url: 'ubwc2.html',        status: 'prototype' },
+                { label: 'Catalog 1',     url: 'ubwc3.html',        status: 'prototype' },
+                { label: 'Magazine',      url: 'ubwcmagazine.html', status: 'prototype' },
+                { label: 'Catalog 2',     url: 'ubwcvm.html',       status: 'prototype' },
+                { label: 'Catalog 3',     url: 'ub1.html',          status: 'prototype' }
+            ]
+        },
+        {
+            title: 'Wellness & Retreats',
+            client: 'jessica',
+            categories: ['wellness', 'appointments'],
+            industry: 'Wellness · Massage, reiki, sound healing, yoga',
+            blurb: 'Online booking, summer retreats, and an email signup.',
+            looks: [
+                { label: 'Visit her site', url: 'https://sweetsomatics.github.io/', status: 'published' }
+            ]
+        }
+    ];
+
+    /* ---------------- code below needs no editing ---------------- */
+    var state = { category: 'all', client: 'all', status: 'all' };
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function byId(list, id) { return list.filter(function (x) { return x.id === id; })[0]; }
+    function external(u) { return /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : ''; }
+
+    function readUrl() {
+        var p = new URLSearchParams(location.search);
+        if (p.get('client') && CLIENTS[p.get('client')]) state.client = p.get('client');
+        if (p.get('category') && byId(CATEGORIES, p.get('category'))) state.category = p.get('category');
+        if (p.get('status') && byId(STATUSES, p.get('status'))) state.status = p.get('status');
+    }
+    function queryString() {
+        var p = new URLSearchParams();
+        if (state.client !== 'all') p.set('client', state.client);
+        if (state.category !== 'all') p.set('category', state.category);
+        if (state.status !== 'all') p.set('status', state.status);
+        return p.toString();
+    }
+    function syncUrl() {
+        var qs = queryString();
+        try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs + '#work' : '') + (qs ? '' : location.hash)); } catch (e) {}
+    }
+    function lookShown(l) { return state.status === 'all' || l.status === state.status; }
+    function visible() {
+        return DESIGNS.filter(function (d) {
+            return (state.client === 'all' || d.client === state.client) &&
+                   (state.category === 'all' || d.categories.indexOf(state.category) > -1) &&
+                   d.looks.some(lookShown);
+        });
+    }
+
+    function chip(label, active, onclick, soon) {
+        return '<button type="button" class="chip" aria-pressed="' + active + '" onclick="' + onclick + '">' + esc(label) + (soon ? ' <small>· soon</small>' : '') + '</button>';
+    }
+    function renderChips() {
+        $('statusChips').innerHTML = chip('Everything', state.status === 'all', "studioWork.set('status','all')") +
+            STATUSES.map(function (s) {
+                var none = !DESIGNS.some(function (d) { return d.looks.some(function (l) { return l.status === s.id; }); });
+                return chip(s.plural, state.status === s.id, "studioWork.set('status','" + s.id + "')", none);
+            }).join('');
+        $('catChips').innerHTML = chip('All types', state.category === 'all', "studioWork.set('category','all')") +
+            CATEGORIES.map(function (c) {
+                var none = !DESIGNS.some(function (d) { return d.categories.indexOf(c.id) > -1; });
+                return chip(c.label, state.category === c.id, "studioWork.set('category','" + c.id + "')", none);
+            }).join('');
+        $('clientSelect').innerHTML = '<option value="all">All clients</option>' +
+            Object.keys(CLIENTS).map(function (k) {
+                return '<option value="' + esc(k) + '"' + (state.client === k ? ' selected' : '') + '>' + esc(CLIENTS[k].name) + '</option>';
+            }).join('');
+    }
+    function card(d) {
+        var client = CLIENTS[d.client];
+        var shown = d.looks.filter(lookShown);
+        var statuses = shown.map(function (l) { return l.status; }).filter(function (s, i, a) { return a.indexOf(s) === i; });
+        var badges = statuses.map(function (s) { return '<span class="badge ' + esc(s) + '">' + esc(byId(STATUSES, s).label) + '</span>'; }).join('') +
+            d.categories.map(function (c) { return '<span class="badge tag">' + esc(byId(CATEGORIES, c).label) + '</span>'; }).join('');
+        var looks = shown.map(function (l) {
+            return '<a class="look" href="' + esc(l.url) + '"' + external(l.url) + '>' + esc(l.label) +
+                (statuses.length > 1 ? '<small>' + esc(byId(STATUSES, l.status).label) + '</small>' : '') + '</a>';
+        }).join('');
+        return '<article class="wcard"><div class="badges">' + badges + '</div>' +
+            '<h3>' + esc(d.title) + '</h3>' +
+            '<p class="client">' + esc(client.name) + ' · ' + esc(client.place) + '</p>' +
+            '<p>' + esc(d.blurb) + '</p>' +
+            '<div class="looks">' + looks + '</div></article>';
+    }
+    function render() {
+        renderChips();
+        var list = visible();
+        $('results').innerHTML = list.map(card).join('');
+        var count = list.length + (list.length === 1 ? ' design' : ' designs');
+        if (state.client !== 'all') count += ' for ' + CLIENTS[state.client].name;
+        if (state.category !== 'all') count += ' in ' + byId(CATEGORIES, state.category).label;
+        if (state.status !== 'all') count += ' (' + byId(STATUSES, state.status).plural.toLowerCase() + ' only)';
+        $('resultCount').textContent = count;
+        $('emptyState').hidden = list.length > 0;
+        if (!list.length) {
+            var noneAtAll = state.category !== 'all' && !DESIGNS.some(function (d) { return d.categories.indexOf(state.category) > -1; });
+            $('emptyText').textContent = noneAtAll ? 'Designs for ' + byId(CATEGORIES, state.category).label + ' are coming soon.' : 'No designs match these filters yet.';
+        }
+        syncUrl();
+    }
+    function copyLink() {
+        var qs = queryString();
+        var url = location.href.split('?')[0].split('#')[0] + (qs ? '?' + qs + '#work' : '#work');
+        var btn = $('copyBtn');
+        function done() { btn.textContent = 'Link copied'; setTimeout(function () { btn.textContent = 'Copy link to this view'; }, 2000); }
+        if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link:', url); }); }
+        else { window.prompt('Copy this link:', url); }
+    }
+
+    window.studioWork = {
+        set: function (key, value) { state[key] = value; render(); },
+        reset: function () { state.category = 'all'; state.client = 'all'; state.status = 'all'; render(); }
+    };
+    $('clientSelect').addEventListener('change', function (e) { state.client = e.target.value; render(); });
+    $('copyBtn').addEventListener('click', copyLink);
+    $('resetBtn').addEventListener('click', window.studioWork.reset);
+
+    var filtered = location.search.indexOf('client=') > -1 || location.search.indexOf('category=') > -1 || location.search.indexOf('status=') > -1;
+    readUrl();
+    render();
+    /* Shared links such as index.html?client=jessica open straight to the work list. */
+    if (filtered) { window.addEventListener('load', function () { $('work').scrollIntoView({ behavior: 'instant', block: 'start' }); }); }
+})();
+</script>
+<div id="designPick" role="group" aria-label="Page design"><span>Design 8 of 8 &middot; Phone Story</span><button type="button" id="designNext">Shuffle design</button></div>
+<script>
+(function(){var F=['index.html','studio-2.html','studio-3.html','studio-4.html','studio-5.html','studio-6.html','studio-7.html','studio-8.html'],me=8;try{localStorage.setItem('design',me)}catch(e){}
+document.getElementById('designNext').addEventListener('click',function(){var d;do{d=1+Math.floor(Math.random()*8)}while(d===me);
+try{localStorage.setItem('design',d)}catch(e){}location.href=F[d-1]+(d===1?'?design=1':'')+location.hash})})();
+</script><script>
+(function(){var steps=[].slice.call(document.querySelectorAll('.step')),scr=[].slice.call(document.querySelectorAll('.phone-col .s'));
+if(!('IntersectionObserver' in window)){steps.forEach(function(s){s.classList.add('on')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=+e.target.dataset.i;steps.forEach(function(s,k){s.classList.toggle('on',k===i)});scr.forEach(function(s,k){s.classList.toggle('on',k===i)})}})},{rootMargin:'-40% 0px -40% 0px'});
+steps.forEach(function(s){io.observe(s)})})();
+</script>
+</body>
+</html>

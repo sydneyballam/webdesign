@@ -3,10 +3,10 @@ from build_studio import *   # helpers: C, page, picker, links, plist, work_bloc
 import build_studio as B
 
 REDIRECT = '''<script>
-/* Pick one of the five designs at random on each visit (never the same twice in a row). ?design=1 stays on this page. */
-(function(){var q=/[?&]design=([1-5])/.exec(location.search),d=q?+q[1]:0,last=0,F=['index.html','studio-2.html','studio-3.html','studio-4.html','studio-5.html'];
+/* Pick one of the designs at random on each visit (never the same twice in a row). ?design=1 stays on this page. */
+(function(){var q=/[?&]design=([1-9])/.exec(location.search),d=q?+q[1]:0,last=0,F=['index.html','studio-2.html','studio-3.html','studio-4.html','studio-5.html','studio-6.html','studio-7.html','studio-8.html'];
 try{last=+localStorage.getItem('design')||0}catch(e){}
-if(!d){do{d=1+Math.floor(Math.random()*5)}while(d===last)}
+if(!d){do{d=1+Math.floor(Math.random()*8)}while(d===last)}
 try{localStorage.setItem('design',d)}catch(e){}
 if(d>1){var s=location.search.replace(/[?&]design=\\d/,'');location.replace(F[d-1]+s+location.hash)}
 })();

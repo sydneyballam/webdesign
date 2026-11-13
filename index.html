@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <script>
-/* Pick one of the five designs at random on each visit (never the same twice in a row). ?design=1 stays on this page. */
-(function(){var q=/[?&]design=([1-5])/.exec(location.search),d=q?+q[1]:0,last=0,F=['index.html','studio-2.html','studio-3.html','studio-4.html','studio-5.html'];
+/* Pick one of the designs at random on each visit (never the same twice in a row). ?design=1 stays on this page. */
+(function(){var q=/[?&]design=([1-9])/.exec(location.search),d=q?+q[1]:0,last=0,F=['index.html','studio-2.html','studio-3.html','studio-4.html','studio-5.html','studio-6.html','studio-7.html','studio-8.html'];
 try{last=+localStorage.getItem('design')||0}catch(e){}
-if(!d){do{d=1+Math.floor(Math.random()*5)}while(d===last)}
+if(!d){do{d=1+Math.floor(Math.random()*8)}while(d===last)}
 try{localStorage.setItem('design',d)}catch(e){}
 if(d>1){var s=location.search.replace(/[?&]design=\d/,'');location.replace(F[d-1]+s+location.hash)}
 })();
@@ -319,10 +319,10 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
     if (filtered) { window.addEventListener('load', function () { $('work').scrollIntoView({ behavior: 'instant', block: 'start' }); }); }
 })();
 </script>
-<div id="designPick" role="group" aria-label="Page design"><span>Design 1 of 5 &middot; Gazette</span><button type="button" id="designNext">Shuffle design</button></div>
+<div id="designPick" role="group" aria-label="Page design"><span>Design 1 of 8 &middot; Gazette</span><button type="button" id="designNext">Shuffle design</button></div>
 <script>
-(function(){var F=['index.html','studio-2.html','studio-3.html','studio-4.html','studio-5.html'],me=1;try{localStorage.setItem('design',me)}catch(e){}
-document.getElementById('designNext').addEventListener('click',function(){var d;do{d=1+Math.floor(Math.random()*5)}while(d===me);
+(function(){var F=['index.html','studio-2.html','studio-3.html','studio-4.html','studio-5.html','studio-6.html','studio-7.html','studio-8.html'],me=1;try{localStorage.setItem('design',me)}catch(e){}
+document.getElementById('designNext').addEventListener('click',function(){var d;do{d=1+Math.floor(Math.random()*8)}while(d===me);
 try{localStorage.setItem('design',d)}catch(e){}location.href=F[d-1]+(d===1?'?design=1':'')+location.hash})})();
 </script>
 </body>

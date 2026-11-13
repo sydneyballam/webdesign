@@ -6,21 +6,22 @@ import content
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 C = content.load()
-NAMES = {1: 'Gazette', 2: 'Shop Row', 3: 'Ledger', 4: 'Pinboard', 5: 'Terminal'}
-FILES = {1: 'index.html', 2: 'studio-2.html', 3: 'studio-3.html', 4: 'studio-4.html', 5: 'studio-5.html'}
+NAMES = {1: 'Gazette', 2: 'Shop Row', 3: 'Ledger', 4: 'Pinboard', 5: 'Terminal', 6: 'Glow-up', 7: 'Site Maker', 8: 'Phone Story'}
+FILES = {1: 'index.html', 2: 'studio-2.html', 3: 'studio-3.html', 4: 'studio-4.html', 5: 'studio-5.html', 6: 'studio-6.html', 7: 'studio-7.html', 8: 'studio-8.html'}
+N = len(FILES)
 DESC = "Websites, online booking, new-equipment setup and simple systems, explained in plain English for Willow Creek small businesses. Book a free first conversation."
 
 def fonts(*fams):
     return '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?' + '&'.join('family=' + f for f in fams) + '&display=swap" rel="stylesheet">'
 
 def picker(n):
-    files = ','.join("'%s'" % FILES[i] for i in range(1, 6))
-    return '''<div id="designPick" role="group" aria-label="Page design"><span>Design %d of 5 &middot; %s</span><button type="button" id="designNext">Shuffle design</button></div>
+    files = ','.join("'%s'" % FILES[i] for i in range(1, N + 1))
+    return '''<div id="designPick" role="group" aria-label="Page design"><span>Design %d of %d &middot; %s</span><button type="button" id="designNext">Shuffle design</button></div>
 <script>
 (function(){var F=[%s],me=%d;try{localStorage.setItem('design',me)}catch(e){}
-document.getElementById('designNext').addEventListener('click',function(){var d;do{d=1+Math.floor(Math.random()*5)}while(d===me);
+document.getElementById('designNext').addEventListener('click',function(){var d;do{d=1+Math.floor(Math.random()*%d)}while(d===me);
 try{localStorage.setItem('design',d)}catch(e){}location.href=F[d-1]+(d===1?'?design=1':'')+location.hash})})();
-</script>''' % (n, NAMES[n], files, n)
+</script>''' % (n, N, NAMES[n], files, n, N)
 
 PICK_CSS = '''#designPick{position:fixed;right:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:6px 8px 6px 14px;border-radius:999px;background:#14181f;color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.3);font:600 14px/1.2 system-ui,sans-serif}
 #designPick button{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:#fff;color:#14181f;font:700 14px system-ui,sans-serif;cursor:pointer}
@@ -127,8 +128,9 @@ def fill(t, **kw):
 
 if __name__ == '__main__':
     from designs_rest import REDIRECT
-    import designs_new as N
-    outs = {1: N.gazette(), 2: N.shoprow(), 3: N.ledger(), 4: N.pinboard(), 5: N.terminal()}
+    import designs_new as DN
+    import designs_conv as K
+    outs = {1: DN.gazette(), 2: DN.shoprow(), 3: DN.ledger(), 4: DN.pinboard(), 5: DN.terminal(), 6: K.glowup(), 7: K.sitemaker(), 8: K.phonestory()}
     outs[1] = outs[1].replace('<head>\n', '<head>\n' + REDIRECT, 1)
     for n, html in outs.items():
         open(os.path.join(ROOT, FILES[n]), 'w', encoding='utf-8').write(html)
