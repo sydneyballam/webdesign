@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#151A3C">
+<title>Event Desk (prototype)</title>
+<style>
+:root{--ink:#151A3C;--paper:#FFF8EC;--line:#D9DDF2;--gold:#FFC93C;--pink:#FF4F8B;--violet:#7B6CFF;--muted:#5A6088}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper)}
+header{background:var(--ink);color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+header b{font-size:1.05rem}
+header span{font-size:.8rem;background:var(--gold);color:var(--ink);padding:3px 10px;border-radius:99px;font-weight:700}
+main{display:grid;gap:24px;padding:16px;max-width:1100px;margin:0 auto}
+@media(min-width:860px){main{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;padding:28px}}
+h1{font-size:1.5rem;margin:0 0 4px;line-height:1.15}
+p.sub{margin:0 0 16px;color:var(--muted)}
+label{display:block;font-weight:700;margin:14px 0 6px;font-size:.95rem}
+input,textarea,select{width:100%;font:inherit;padding:13px 14px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--violet);outline-offset:1px;border-color:var(--violet)}
+textarea{min-height:92px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0;font-weight:600}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-block;padding:10px 16px;border:2px solid var(--line);border-radius:99px;background:#fff;cursor:pointer;min-height:44px}
+.chips input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chips input:focus-visible+span{outline:3px solid var(--violet);outline-offset:2px}
+.sw span{width:44px;height:44px;padding:0;border-radius:50%;border-width:3px}
+.sw input:checked+span{box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--ink)}
+.paste{background:#fff;border:2px dashed var(--violet);border-radius:14px;padding:12px 14px;margin-bottom:6px}
+.paste summary{font-weight:700;cursor:pointer;min-height:32px}
+.btn{display:block;width:100%;font:inherit;font-weight:800;border:0;border-radius:14px;padding:16px;margin-top:12px;cursor:pointer;min-height:54px}
+.btn.main{background:var(--pink);color:#fff;font-size:1.1rem}
+.btn.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.preview{position:sticky;top:12px}
+canvas{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px rgba(21,26,60,.25);background:#fff;display:block}
+.note{font-size:.9rem;color:var(--muted);margin-top:8px}
+#msg{margin-top:12px;padding:12px 14px;border-radius:12px;background:#E9F8EE;color:#0E4D27;display:none;font-weight:600}
+#msg.err{background:#FDECEC;color:#7A1414}
+.what{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:18px;font-size:.92rem}
+.what h2{font-size:1rem;margin:0 0 6px}
+.what ul{margin:0;padding-left:20px}
+pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:10px;padding:10px;font-size:.8rem;margin:8px 0 0}
+</style>
+</head>
+<body>
+<header><b>Event Desk</b><span>Prototype</span></header>
+<main>
+<section>
+  <h1>Add an event</h1>
+  <p class="sub">Fill it in once. Get a flyer, a calendar entry, and a ready-to-post caption.</p>
+
+  <details class="paste"><summary>Have flyer text? Paste it here</summary>
+    <textarea id="paste" placeholder="Paste the text from your flyer or Facebook post"></textarea>
+    <button class="btn alt" type="button" id="fill">Fill in what I can</button>
+    <div class="note">It guesses the title, date, time and place. Check the boxes below.</div>
+  </details>
+
+  <form id="f" autocomplete="off" onsubmit="return false">
+    <label for="biz">Your business or group</label>
+    <input id="biz" value="Willow Creek Community Hall">
+    <label for="title">What's happening?</label>
+    <input id="title" value="Pie &amp; Coffee Morning">
+    <div class="row">
+      <div><label for="date">Date</label><input id="date" type="date"></div>
+      <div><label for="town">Town</label><input id="town" value="Willow Creek"></div>
+    </div>
+    <div class="row">
+      <div><label for="start">Starts</label><input id="start" type="time" value="09:00"></div>
+      <div><label for="end">Ends</label><input id="end" type="time" value="11:30"></div>
+    </div>
+    <label for="place">Where?</label>
+    <input id="place" value="Community Hall, Highway 299">
+    <label for="price">Cost</label>
+    <input id="price" value="Free">
+    <label for="desc">A line or two about it</label>
+    <textarea id="desc">Home-baked pie, hot coffee and good company. Everyone is welcome.</textarea>
+
+    <label>Flyer style</label>
+    <div class="chips" id="styles">
+      <label><input type="radio" name="style" value="bold" checked><span>Bold</span></label>
+      <label><input type="radio" name="style" value="poster"><span>Poster</span></label>
+      <label><input type="radio" name="style" value="clean"><span>Clean</span></label>
+    </div>
+    <label>Color</label>
+    <div class="chips sw" id="colors">
+      <label><input type="radio" name="color" value="#FF4F8B" checked aria-label="Pink"><span style="background:#FF4F8B"></span></label>
+      <label><input type="radio" name="color" value="#FFC93C" aria-label="Gold"><span style="background:#FFC93C"></span></label>
+      <label><input type="radio" name="color" value="#2FBF8F" aria-label="Green"><span style="background:#2FBF8F"></span></label>
+      <label><input type="radio" name="color" value="#3B82F6" aria-label="Blue"><span style="background:#3B82F6"></span></label>
+      <label><input type="radio" name="color" value="#7B6CFF" aria-label="Violet"><span style="background:#7B6CFF"></span></label>
+    </div>
+    <label class="chips" style="margin-top:16px"><span style="display:flex;gap:10px;align-items:center;border-radius:14px;width:100%"><input id="pub" type="checkbox" checked style="position:static;opacity:1;width:22px;height:22px;margin:0"> List this on What's Going On Along the 299</span></label>
+  </form>
+</section>
+
+<section class="preview">
+  <canvas id="c" width="1080" height="1350" aria-label="Flyer preview"></canvas>
+  <button class="btn main" id="share" type="button">Share flyer to Facebook</button>
+  <button class="btn gold" id="save" type="button">Save event &amp; add to my calendar</button>
+  <button class="btn alt" id="dl" type="button">Download flyer picture</button>
+  <div id="msg" role="status"></div>
+  <div class="what">
+    <h2>What's real in this prototype</h2>
+    <ul>
+      <li>Flyer, caption, phone Share sheet and calendar file all work now.</li>
+      <li>"List on the 299" isn't connected yet. It shows the row that would be added.</li>
+    </ul>
+    <pre id="row"></pre>
+  </div>
+</section>
+</main>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var c=$('c'),x=c.getContext('2d');
+var d=new Date();d.setDate(d.getDate()+(6-d.getDay()+7)%7+7);
+$('date').value=d.toISOString().slice(0,10);
+
+function val(i){return $(i).value.trim()}
+function radio(n){return document.querySelector('input[name='+n+']:checked').value}
+function pd(s){var p=s.split('-');return new Date(+p[0],p[1]-1,+p[2])}
+function dayLong(s){if(!s)return'';return pd(s).toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}
+function t12(t){if(!t)return'';var p=t.split(':'),h=+p[0],m=p[1],ap=h>=12?'PM':'AM';h=h%12||12;return h+(m==='00'?'':':'+m)+' '+ap}
+function timeLine(){var a=t12(val('start')),b=t12(val('end'));return a&&b?a+' to '+b:a}
+function lum(h){var n=parseInt(h.slice(1),16),r=n>>16,g=n>>8&255,b=n&255;return(.299*r+.587*g+.114*b)/255}
+function onCol(h){return lum(h)>.6?'#151A3C':'#FFFFFF'}
+function wrap(t,mw,font){x.font=font;var w=t.split(/\s+/),l=[],cur='';w.forEach(function(s){var n=cur?cur+' '+s:s;if(x.measureText(n).width>mw&&cur){l.push(cur);cur=s}else cur=n});if(cur)l.push(cur);return l}
+function fit(t,mw,maxPx,minPx,weight,maxLines){var px=maxPx,ls;for(;px>=minPx;px-=4){ls=wrap(t,mw,weight+' '+px+'px system-ui,Helvetica,Arial,sans-serif');if(ls.length<=maxLines)break}return{px:px,ls:ls,font:weight+' '+px+'px system-ui,Helvetica,Arial,sans-serif'}}
+function rr(a,b,w,h,r){x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath()}
+function lines(f,xx,yy,col,lh){x.fillStyle=col;x.font=f.font;f.ls.forEach(function(s,i){x.fillText(s,xx,yy+i*(f.px*lh))});return yy+f.ls.length*f.px*lh}
+
+function draw(){
+  var st=radio('style'),col=radio('color'),on=onCol(col),W=1080,H=1350,M=80;
+  x.clearRect(0,0,W,H);x.textBaseline='top';
+  var title=val('title')||'Your event',biz=val('biz'),when=dayLong(val('date')),tm=timeLine(),place=[val('place'),val('town')].filter(Boolean).join(', '),price=val('price'),desc=val('desc');
+  var bg,fg,sub;
+  if(st==='bold'){bg=col;fg=on;sub=on}
+  else if(st==='poster'){bg='#151A3C';fg='#FFFFFF';sub='#C9CFF5'}
+  else{bg='#FFFFFF';fg='#151A3C';sub='#5A6088'}
+  x.fillStyle=bg;x.fillRect(0,0,W,H);
+  if(st==='poster'){x.fillStyle=col;x.fillRect(0,0,W,40);x.fillRect(0,H-40,W,40);x.fillStyle=col;x.beginPath();x.arc(W-60,420,260,0,7);x.globalAlpha=.18;x.fill();x.globalAlpha=1}
+  if(st==='clean'){x.fillStyle=col;x.fillRect(0,0,34,H);x.fillRect(0,H-26,W,26)}
+  var L=st==='clean'?M+30:M,mw=W-L-M;
+  x.font='700 34px system-ui,Helvetica,Arial,sans-serif';x.fillStyle=st==='poster'?col:sub;
+  x.fillText((biz||'').toUpperCase().slice(0,40),L,st==='poster'?90:70);
+  // big date badge
+  var y=st==='poster'?170:150;
+  if(val('date')){var dd=pd(val('date'));var mon=dd.toLocaleDateString('en-US',{month:'short'}).toUpperCase(),dn=dd.getDate();
+    var bw=190,bh=210;rr(L,y,bw,bh,28);x.fillStyle=st==='bold'?on:col;x.fill();
+    var bc=st==='bold'?col:on;x.fillStyle=bc;x.font='800 44px system-ui,Helvetica,Arial,sans-serif';x.textAlign='center';x.fillText(mon,L+bw/2,y+22);x.font='900 112px system-ui,Helvetica,Arial,sans-serif';x.fillText(String(dn),L+bw/2,y+70);x.textAlign='left';
+    var wk=dd.toLocaleDateString('en-US',{weekday:'long'});x.font='800 46px system-ui,Helvetica,Arial,sans-serif';x.fillStyle=sub;x.fillText(wk,L+bw+36,y+20);x.font='600 38px system-ui,Helvetica,Arial,sans-serif';x.fillText(tm,L+bw+36,y+82);
+    if(price){x.font='800 36px system-ui,Helvetica,Arial,sans-serif';var pw=x.measureText(price).width+44;rr(L+bw+36,y+144,pw,56,28);x.fillStyle=st==='bold'?on:col;x.fill();x.fillStyle=st==='bold'?col:on;x.fillText(price,L+bw+58,y+152)}
+    y+=bh+60}
+  var f=fit(title,mw,150,72,'900',4);y=lines(f,L,y,fg,1.04)+34;
+  if(desc){var df=fit(desc,mw,44,30,'500',5);y=lines(df,L,y,sub,1.35)+10}
+  // footer
+  var fy=H-250;
+  x.fillStyle=st==='clean'?col:(st==='bold'?on:col);x.fillRect(L,fy,100,8);
+  x.font='700 42px system-ui,Helvetica,Arial,sans-serif';x.fillStyle=fg;
+  var pf=fit(place,mw,48,32,'800',2);lines(pf,L,fy+32,fg,1.2);
+  x.font='600 30px system-ui,Helvetica,Arial,sans-serif';x.fillStyle=sub;x.fillText('Part of What\u2019s Going On Along the 299',L,H-90);
+}
+function caption(){
+  var t=val('title'),b=val('biz'),w=dayLong(val('date')),tm=timeLine(),p=[val('place'),val('town')].filter(Boolean).join(', ');
+  return [t+(b?' at '+b:''),'',w+(tm?', '+tm:''),p,val('price'),'',val('desc')].filter(function(s,i,a){return s||(i>0&&a[i-1])}).join('\n').replace(/\n{3,}/g,'\n\n').trim()
+}
+function csv(){
+  function q(s){s=s||'';return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
+  var free=/^free$/i.test(val('price'))?'Yes':'';
+  return [val('title'),val('date'),'',val('start'),val('end'),val('town'),[val('place')].join(''),'','',val('desc'),free,'',val('biz'),''].map(q).join(',')
+}
+function ics(){
+  function z(s){return s.replace(/[-:]/g,'')}
+  function esc(s){return(s||'').replace(/\\/g,'\\\\').replace(/;/g,'\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')}
+  var dt=val('date'),s=val('start')||'09:00',e=val('end')||s;
+  var now=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'');
+  return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Event Desk//EN','BEGIN:VEVENT','UID:'+Date.now()+'@eventdesk','DTSTAMP:'+now,
+   'DTSTART:'+z(dt)+'T'+z(s)+'00','DTEND:'+z(dt)+'T'+z(e)+'00','SUMMARY:'+esc(val('title')),
+   'LOCATION:'+esc([val('place'),val('town')].filter(Boolean).join(', ')),'DESCRIPTION:'+esc(val('desc')),'END:VEVENT','END:VCALENDAR'].join('\r\n')
+}
+function say(t,err){var m=$('msg');m.textContent=t;m.className=err?'err':'';m.style.display='block'}
+function blob(cb){c.toBlob(cb,'image/png')}
+function dlBlob(b,name){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)}
+function slug(){return (val('title')||'event').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+
+function refresh(){draw();$('row').textContent=$('pub').checked?'Would be added to the 299 calendar:\n'+csv():'Kept private (not listed on the 299 calendar).'}
+document.getElementById('f').addEventListener('input',refresh);
+document.getElementById('f').addEventListener('change',refresh);
+refresh();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refresh);
+
+$('share').onclick=function(){
+  var cap=caption();
+  blob(function(b){
+    var file=new File([b],slug()+'.png',{type:'image/png'});
+    if(navigator.canShare&&navigator.canShare({files:[file]})){
+      navigator.share({files:[file],text:cap,title:val('title')}).then(function(){say('Shared. Pick Facebook to finish your post.')}).catch(function(e){if(e&&e.name!=='AbortError')say('Sharing didn\u2019t work here. Use Download, then post from Facebook.',1)});
+    }else{
+      dlBlob(b,slug()+'.png');
+      (navigator.clipboard?navigator.clipboard.writeText(cap):Promise.reject()).then(function(){say('This device can\u2019t open the Share sheet from here. Your flyer was saved and the caption was copied. Open Facebook, add the picture and paste.')}).catch(function(){say('Flyer saved. Caption: '+cap)});
+    }
+  });
+};
+$('dl').onclick=function(){blob(function(b){dlBlob(b,slug()+'.png');say('Flyer picture saved.')})};
+$('save').onclick=function(){
+  if(!val('date')||!val('title')){say('Add a title and date first.',1);return}
+  dlBlob(new Blob([ics()],{type:'text/calendar'}),slug()+'.ics');
+  say($('pub').checked?'Calendar file ready. In the real version this event would now appear in your feed and on the 299 calendar.':'Calendar file ready.');
+};
+// paste helper
+var MONTHS='january february march april may june july august september october november december'.split(' ');
+$('fill').onclick=function(){
+  var t=$('paste').value,got=0;if(!t.trim()){return}
+  var lines=t.split(/\n+/).map(function(s){return s.trim()}).filter(Boolean);
+  var dm=t.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2})(?:st|nd|rd|th)?(?:,?\s*(\d{4}))?/i);
+  if(dm){var mi=MONTHS.findIndex(function(m){return m.indexOf(dm[1].toLowerCase())===0}),yr=+dm[3]||new Date().getFullYear();var dt=new Date(yr,mi,+dm[2]);if(!dm[3]&&dt<new Date(Date.now()-864e5))dt=new Date(yr+1,mi,+dm[2]);$('date').value=dt.getFullYear()+'-'+('0'+(dt.getMonth()+1)).slice(-2)+'-'+('0'+dt.getDate()).slice(-2);got++}
+  var tm=t.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm|a\.m\.|p\.m\.)?\s*(?:-|to|\u2013|until)\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm|a\.m\.|p\.m\.)/i);
+  function h24(h,m,ap){h=+h;ap=(ap||'').toLowerCase().replace(/\./g,'');if(ap==='pm'&&h<12)h+=12;if(ap==='am'&&h===12)h=0;return('0'+h).slice(-2)+':'+(m||'00')}
+  if(tm){$('start').value=h24(tm[1],tm[2],tm[3]||tm[6]);$('end').value=h24(tm[4],tm[5],tm[6]);got++}
+  else{var t1=t.match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)/i);if(t1){$('start').value=h24(t1[1],t1[2],t1[3]);got++}}
+  if(lines[0]&&lines[0].length<70){$('title').value=lines[0].replace(/[!\u2022*]+/g,'').trim();got++}
+  var at=t.match(/\b(?:at|@)\s+([A-Z][^\n.,!]{3,50})/);if(at){$('place').value=at[1].trim();got++}
+  if(/free/i.test(t))$('price').value='Free';
+  refresh();say(got?'Filled in '+got+' things. Please check each box.':'Couldn\u2019t find details. Please fill in the boxes.',!got);
+};
+})();
+</script>
+</body>
+</html>
