@@ -180,6 +180,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 <div class="wrap controls">
   <div class="tabs" role="group" aria-label="View">
     <button class="tab" id="tabList" type="button" aria-pressed="true">List</button>
+    <button class="tab" id="tabWeek" type="button" aria-pressed="false">Week</button>
     <button class="tab" id="tabMonth" type="button" aria-pressed="false">Month</button>
     <button class="tab" id="tabMap" type="button" aria-pressed="false">Map</button>
   </div>
@@ -239,7 +240,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
   var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var data = null, towns = [], theMap = null;
   var q = new URLSearchParams(location.search);
-  var state = { q: q.get('q') || '', towns: (q.get('town') || '').split(',').filter(Boolean), one: q.get('event') || '', view: ({ month: 'month', map: 'map' })[q.get('view')] || 'list', month: null, sel: null,
+  var state = { q: q.get('q') || '', towns: (q.get('town') || '').split(',').filter(Boolean), one: q.get('event') || '', view: ({ week: 'week', month: 'month', map: 'map' })[q.get('view')] || 'list', month: null, week: null, sel: null,
     from: /^\d{4}-\d{2}-\d{2}$/.test(q.get('from') || '') ? q.get('from') : '', to: /^\d{4}-\d{2}-\d{2}$/.test(q.get('to') || '') ? q.get('to') : '',
     zip: /^\d{5}$/.test(q.get('zip') || '') ? q.get('zip') : '', miles: [5, 10, 25, 50, 100].indexOf(+q.get('mi')) >= 0 ? +q.get('mi') : 25, near: null, nearNote: '' };
   var zips = null;
@@ -401,6 +402,22 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
       (FORM_URL ? '<a href="' + esc(FORM_URL) + '" target="_blank" rel="noopener">Send it in</a>.' : 'Event submissions are opening soon.') + '</div>';
   }
 
+  function renderWeek() {
+    var evs = visible(), mon = state.week, sun = addDays(mon, 6), thisMon = key(mondayOf(today));
+    var inWeek = evs.filter(function (e) { return e.end_date >= key(mon) && e.date <= key(sun); });
+    var label = key(mon) === thisMon ? 'This week' : MON[mon.getMonth()] + ' ' + mon.getDate() + ' to ' + (sun.getMonth() !== mon.getMonth() ? MON[sun.getMonth()] + ' ' : '') + sun.getDate();
+    $('count').textContent = inWeek.length + (inWeek.length === 1 ? ' event' : ' events') + ' ' + (key(mon) === thisMon ? 'this week' : 'that week') + (state.towns.length ? ' (' + townLabel() + ')' : '') + filterText();
+    var head = '<div class="mhead"><button class="nav" type="button" id="wprev" aria-label="Previous week">' + icon('<path d="M15 6l-6 6 6 6"/>') + '</button><h2>' + esc(label) + (key(mon) !== thisMon ? ' <button type="button" class="linkbtn" id="wnow" style="font-size:15px">Back to this week</button>' : '') + '</h2><button class="nav" type="button" id="wnext" aria-label="Next week">' + icon('<path d="M9 6l6 6-6 6"/>') + '</button></div>';
+    var days = '';
+    for (var i = 0; i < 7; i++) {
+      var d = addDays(mon, i), items = evs.filter(function (e) { return onDay(e, d); });
+      items.sort(function (a, b) { return (a.start_time || '00:00') < (b.start_time || '00:00') ? -1 : 1; });
+      days += '<section class="group"><h2>' + DOW[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + (key(d) === key(today) ? ' <span class="pill">Today</span>' : '') + '</h2>' +
+        (items.length ? '<div class="evgrid">' + items.map(function (e) { return card(e, e.date < key(d)); }).join('') + '</div>' : '<div class="empty" style="margin-top:0">Nothing listed for this day.</div>') + '</section>';
+    }
+    return head + days;
+  }
+
   function renderMonth() {
     var evs = visible(), m = state.month, first = new Date(m.getFullYear(), m.getMonth(), 1);
     var start = addDays(first, -first.getDay()), cells = '';
@@ -482,6 +499,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 
   function render() {
     $('tabList').setAttribute('aria-pressed', state.view === 'list');
+    $('tabWeek').setAttribute('aria-pressed', state.view === 'week');
     $('tabMonth').setAttribute('aria-pressed', state.view === 'month');
     $('tabMap').setAttribute('aria-pressed', state.view === 'map');
     if (theMap) { theMap.remove(); theMap = null; }
@@ -492,7 +510,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     $('miles').value = String(state.miles);
     $('nearNote').textContent = state.nearNote;
     Array.prototype.forEach.call(document.querySelectorAll('#dateChips .chip'), function (b) { var r = rangeFor(b.dataset.range); b.setAttribute('aria-pressed', r[0] === state.from && r[1] === state.to); });
-    $('view').innerHTML = state.view === 'month' ? renderMonth() : state.view === 'map' ? renderMap() : renderList();
+    $('view').innerHTML = state.view === 'week' ? renderWeek() : state.view === 'month' ? renderMonth() : state.view === 'map' ? renderMap() : renderList();
     if (state.view === 'map') drawMap();
     var p = new URLSearchParams();
     if (state.q) p.set('q', state.q);
@@ -566,6 +584,10 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     else if (t.id === 'prev') { state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1); state.sel = null; render(); }
     else if (t.id === 'next') { state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1); state.sel = null; render(); }
     else if (t.id === 'tabList') { state.view = 'list'; render(); }
+    else if (t.id === 'tabWeek') { state.view = 'week'; state.one = ''; state.week = mondayOf(today); render(); }
+    else if (t.id === 'wprev') { state.week = addDays(state.week, -7); render(); }
+    else if (t.id === 'wnext') { state.week = addDays(state.week, 7); render(); }
+    else if (t.id === 'wnow') { state.week = mondayOf(today); render(); }
     else if (t.id === 'tabMonth') { state.view = 'month'; render(); }
     else if (t.id === 'tabMap') { state.view = 'map'; state.one = ''; render(); }
     else if (t.dataset.open) { state.one = t.dataset.open; state.view = 'list'; render(); window.scrollTo(0, 0); }
@@ -596,7 +618,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
     state.towns = state.towns.filter(function (t) { return towns.indexOf(t) >= 0; });
     if (state.one) state.view = 'list';
     var firstUp = j.events.filter(function (e) { return e.end_date >= key(today); })[0];
-    state.month = new Date(today.getFullYear(), today.getMonth(), 1);
+    state.month = new Date(today.getFullYear(), today.getMonth(), 1); state.week = mondayOf(today);
     $('foot').innerHTML = 'Updated ' + esc(new Date(j.updated).toLocaleDateString(undefined, { month: 'long', day: 'numeric' })) + '. Spot a mistake? ' + (CORRECT_URL ? '<a href="' + esc(CORRECT_URL) + '" target="_blank" rel="noopener">Let us know</a>.' : 'Corrections will be welcome soon.');
     render();
     if (state.zip) lookupZip(state.zip);
