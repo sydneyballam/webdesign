@@ -12,7 +12,7 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;font:17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper)}
 header{background:var(--ink);color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-header b{font-size:1.05rem}
+header{flex-wrap:wrap}header a{color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:10px 4px;min-height:44px;display:inline-flex;align-items:center}header a:hover,header a:focus-visible{text-decoration:underline}header a.back{color:var(--gold)}header nav{display:flex;gap:14px;margin-right:auto}header b{font-size:1.05rem}
 header span{font-size:.8rem;background:var(--gold);color:var(--ink);padding:3px 10px;border-radius:99px;font-weight:700}
 main{display:grid;gap:24px;padding:16px;max-width:1100px;margin:0 auto}
 @media(min-width:860px){main{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;padding:28px}}
@@ -50,7 +50,7 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
 </style>
 </head>
 <body>
-<header><b>Event Desk</b><span>Prototype</span></header>
+<header><a class="back" href="../">← Small Business Studio</a><nav><a href="../#book">Book a chat</a><a href="../calendar/">299 calendar</a></nav><b>Event Desk</b><span>Prototype</span></header>
 <main>
 <section>
   <h1>Add an event</h1>
