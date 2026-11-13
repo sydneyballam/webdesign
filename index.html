@@ -8,387 +8,416 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script>
+/* Pick one of five designs at random on each visit (never the same twice in a row). ?design=1..5 forces one. */
+(function(){var N=5,d=0,last=0,q=/[?&]design=([1-5])/.exec(location.search);
+try{last=+localStorage.getItem('design')||0}catch(e){}
+if(q)d=+q[1];else{do{d=1+Math.floor(Math.random()*N)}while(d===last&&N>1)}
+try{localStorage.setItem('design',d)}catch(e){}
+document.documentElement.setAttribute('data-design',d);
+var fam={2:'Fraunces:wght@600;700;800',3:'Space+Grotesk:wght@500;700',4:'Space+Grotesk:wght@500;700',5:'Playfair+Display:wght@600;700;800'};
+if(fam[d]){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family='+fam[d]+'&display=swap';document.head.appendChild(l)}
+})();
+</script>
 <style>
+/* ---- designs: the page is re-skinned by swapping these variables ---- */
+:root{--c-ink:#1C2541;--c-paper:#F6F7FB;--c-white:#FFFFFF;--c-mist:#E9EEF8;--c-line:#D7DCEB;--c-body:#3B4560;--c-accent:#2B5EA7;--c-soft:#B9C6E6;--c-soft2:#DCE4F5;--c-lilac:#D9C2F0;--c-deep:#0F1730;--c-mid:#9AA8CC;--c-b1bg:#EFE6F9;--c-b1fg:#3F2A5C;--c-b2bg:#DCE8F8;--c-b2fg:#183B6B;--c-b3fg:#1E4580;--f-display:'Bricolage Grotesque'}
+html[data-design="2"]{--c-ink:#1F2A22;--c-paper:#FAF6EE;--c-white:#FFFFFF;--c-mist:#EFE8DA;--c-line:#DDD3BF;--c-body:#3F4A3F;--c-accent:#8A4B1F;--c-soft:#CFC9B4;--c-soft2:#E6E1D0;--c-lilac:#E8B86B;--c-deep:#131B15;--c-mid:#A89F86;--c-b1bg:#F3E4C8;--c-b1fg:#5A3A12;--c-b2bg:#DCE9DC;--c-b2fg:#1F4A2A;--c-b3fg:#6B3A12;--f-display:'Fraunces'}
+html[data-design="3"]{--c-ink:#2B1B3D;--c-paper:#FFF8F1;--c-white:#FFFFFF;--c-mist:#FDEBDD;--c-line:#F1D6BF;--c-body:#4A3A58;--c-accent:#B3261E;--c-soft:#E7D3F2;--c-soft2:#F4E6FA;--c-lilac:#FFB84D;--c-deep:#1A1026;--c-mid:#C9A9A0;--c-b1bg:#FFE3C2;--c-b1fg:#5C3300;--c-b2bg:#F4E1F7;--c-b2fg:#4B1F5C;--c-b3fg:#8A1F18;--f-display:'Space Grotesk'}
+html[data-design="4"]{--c-ink:#111111;--c-paper:#F4F1EA;--c-white:#FFFFFF;--c-mist:#E8E4DA;--c-line:#CFC9BA;--c-body:#2E2E2E;--c-accent:#0A4FD6;--c-soft:#C8C8C8;--c-soft2:#E4E4E4;--c-lilac:#FFE14D;--c-deep:#000000;--c-mid:#8C8C8C;--c-b1bg:#FFF3A8;--c-b1fg:#3D3500;--c-b2bg:#DDE6FA;--c-b2fg:#0A3A9E;--c-b3fg:#0A3A9E;--f-display:'Space Grotesk'}
+html[data-design="5"]{--c-ink:#0B3C49;--c-paper:#F2FAF9;--c-white:#FFFFFF;--c-mist:#DFF1EF;--c-line:#C2E0DC;--c-body:#2F4F57;--c-accent:#0A6E7A;--c-soft:#A9D4D6;--c-soft2:#D2EBEC;--c-lilac:#FFD6A5;--c-deep:#06262E;--c-mid:#7FB0B3;--c-b1bg:#FFE7CC;--c-b1fg:#5C3A0A;--c-b2bg:#D2EBEC;--c-b2fg:#0A4A55;--c-b3fg:#0A5A66;--f-display:'Playfair Display'}
+html[data-design="4"] h1,html[data-design="4"] h2{text-transform:uppercase;letter-spacing:-0.01em!important}
+html[data-design="4"] [style*="border-radius: 999px"],html[data-design="4"] .chip,html[data-design="4"] .look{border-radius:4px!important}
+html[data-design="4"] [style*="border-radius: 16px"],html[data-design="4"] [style*="border-radius: 12px"],html[data-design="4"] .card{border-radius:2px!important}
+html[data-design="2"] h1,html[data-design="2"] h2,html[data-design="5"] h1,html[data-design="5"] h2{font-weight:700!important;letter-spacing:-0.01em!important}
+html[data-design="3"] [style*="border-radius: 16px"],html[data-design="3"] [style*="border-radius: 12px"],html[data-design="3"] .card{border-radius:22px!important}
+html.swap *{transition:background-color .35s,color .35s,border-color .35s}
+@media (prefers-reduced-motion:reduce){html.swap *{transition:none}}
+#designPick{position:fixed;left:12px;bottom:12px;z-index:50;display:flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:6px 8px 6px 14px;border-radius:999px;background:var(--c-ink);color:var(--c-paper);box-shadow:0 4px 16px rgba(0,0,0,.25);font:600 14px/1.2 'Source Sans 3',system-ui,sans-serif}
+#designPick button{min-height:44px;padding:0 16px;border:0;border-radius:999px;background:var(--c-lilac);color:var(--c-ink);font:700 14px 'Source Sans 3',system-ui,sans-serif;cursor:pointer}
+#designPick button:focus-visible{outline:3px solid var(--c-paper);outline-offset:2px}
+html[data-design="4"] #designPick,html[data-design="4"] #designPick button{border-radius:4px}
+@media print{#designPick{display:none}}
 body { margin: 0; }
 html { scroll-behavior: smooth; }
-a:focus-visible { outline: 3px solid #D9C2F0; outline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--c-lilac); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* ---- work list ---- */
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.chip { min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid #9AA8CC; background: #FFFFFF; color: #1C2541; font: 600 1rem 'Source Sans 3', system-ui, sans-serif; cursor: pointer; }
-.chip[aria-pressed="true"] { background: #1C2541; border-color: #1C2541; color: #F6F7FB; }
+.chip { min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--c-mid); background: var(--c-white); color: var(--c-ink); font: 600 1rem 'Source Sans 3', system-ui, sans-serif; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--c-ink); border-color: var(--c-ink); color: var(--c-paper); }
 .chip small { font-size: 0.8125rem; opacity: 0.75; }
-.flabel { display: block; margin: 0 0 0.5rem; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #3B4560; }
-#clientSelect { min-height: 44px; width: 100%; max-width: 22rem; border: 1px solid #9AA8CC; border-radius: 10px; padding: 0 0.75rem; background: #FFFFFF; color: #1C2541; font: 600 1rem 'Source Sans 3', system-ui, sans-serif; }
-.linkbtn { min-height: 44px; padding: 0; border: 0; background: none; color: #2B5EA7; font: 700 1rem 'Source Sans 3', system-ui, sans-serif; text-decoration: underline; cursor: pointer; }
+.flabel { display: block; margin: 0 0 0.5rem; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c-body); }
+#clientSelect { min-height: 44px; width: 100%; max-width: 22rem; border: 1px solid var(--c-mid); border-radius: 10px; padding: 0 0.75rem; background: var(--c-white); color: var(--c-ink); font: 600 1rem 'Source Sans 3', system-ui, sans-serif; }
+.linkbtn { min-height: 44px; padding: 0; border: 0; background: none; color: var(--c-accent); font: 700 1rem 'Source Sans 3', system-ui, sans-serif; text-decoration: underline; cursor: pointer; }
 #results { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); gap: 1rem; }
-.card { display: flex; flex-direction: column; gap: 0.75rem; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box; min-width: 0; }
-.card h3 { margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15; }
-.card p { margin: 0; color: #3B4560; }
+.card { display: flex; flex-direction: column; gap: 0.75rem; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box; min-width: 0; }
+.card h3 { margin: 0; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15; }
+.card p { margin: 0; color: var(--c-body); }
 .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .badge { font-size: 0.8125rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 6px; }
-.badge.published { background: #DCE8F8; color: #183B6B; }
-.badge.prototype { background: #EFE6F9; color: #3F2A5C; }
-.badge.tag { background: #E9EEF8; color: #1E4580; }
+.badge.published { background: var(--c-b2bg); color: var(--c-b2fg); }
+.badge.prototype { background: var(--c-b1bg); color: var(--c-b1fg); }
+.badge.tag { background: var(--c-mist); color: var(--c-b3fg); }
 .looks { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.look { min-height: 44px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1rem; border-radius: 999px; border: 2px solid #2B5EA7; color: #2B5EA7; font-weight: 700; text-decoration: none; box-sizing: border-box; }
+.look { min-height: 44px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1rem; border-radius: 999px; border: 2px solid var(--c-accent); color: var(--c-accent); font-weight: 700; text-decoration: none; box-sizing: border-box; }
 .look small { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.85; }
 </style>
 </head>
 <body>
-<div style="width: 100%; font-family: 'Source Sans 3', system-ui, sans-serif; color: #1C2541; background: #F6F7FB; font-size: 1.125rem; line-height: 1.55">
+<div style="width: 100%; font-family: 'Source Sans 3', system-ui, sans-serif; color: var(--c-ink); background: var(--c-paper); font-size: 1.125rem; line-height: 1.55">
 
 <!-- HEADER -->
-<header style="background: #1C2541; color: #F6F7FB">
+<header style="background: var(--c-ink); color: var(--c-paper)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 0.75rem 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem">
-<a href="#top" style="font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.25rem; color: #F6F7FB; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center">Small Business Studio of Willow Creek</a>
+<a href="#top" style="font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--c-paper); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center">Small Business Studio of Willow Creek</a>
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 0.5rem">
-<a href="#modernize" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid #B9C6E6">Modernize your site</a>
-<a href="#problems" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid #B9C6E6">What I help with</a>
-<a href="#how" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid #B9C6E6">How it works</a>
-<a href="#start" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid #B9C6E6">Getting started</a>
-<a href="#work" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid #B9C6E6">Our work</a>
-<a href="calendar/" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid #B9C6E6">Events calendar</a>
-<a href="#learn" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid #B9C6E6">Learn something</a>
-<a href="#book" style="color: #F6F7FB; text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: #D9C2F0; color: #1C2541; border: 2px solid #D9C2F0">Book a chat</a>
+<a href="#modernize" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid var(--c-soft)">Modernize your site</a>
+<a href="#problems" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid var(--c-soft)">What I help with</a>
+<a href="#how" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid var(--c-soft)">How it works</a>
+<a href="#start" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid var(--c-soft)">Getting started</a>
+<a href="#work" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid var(--c-soft)">Our work</a>
+<a href="calendar/" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid var(--c-soft)">Events calendar</a>
+<a href="#learn" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: rgba(255,255,255,0.10); border: 2px solid var(--c-soft)">Learn something</a>
+<a href="#book" style="color: var(--c-paper); text-decoration: none; font-weight: 700; font-size: 1rem; min-height: 44px; padding: 0 1.1rem; border-radius: 999px; box-sizing: border-box; display: inline-flex; align-items: center; background: var(--c-lilac); color: var(--c-ink); border: 2px solid var(--c-lilac)">Book a chat</a>
 </nav>
 </div>
 </header>
 
 <!-- HERO -->
-<section id="top" style="background: #1C2541; color: #F6F7FB">
+<section id="top" style="background: var(--c-ink); color: var(--c-paper)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 3rem">
 <div style="flex: 1 1 28rem; min-width: 0">
-<p style="margin: 0 0 1rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #B9C6E6">Willow Creek, California</p>
-<h1 style="margin: 0 0 1.25rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -0.02em">Starting or growing a business here? Let's build it together.</h1>
-<p style="margin: 0 0 2rem; font-size: 1.25rem; color: #DCE4F5; max-width: 60rem">I help local business owners get online, get organized, and feel at home with the tools they use. Websites, booking, email, new equipment, and simple systems, explained in plain English. Every question is welcome.</p>
+<p style="margin: 0 0 1rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-soft)">Willow Creek, California</p>
+<h1 style="margin: 0 0 1.25rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -0.02em">Starting or growing a business here? Let's build it together.</h1>
+<p style="margin: 0 0 2rem; font-size: 1.25rem; color: var(--c-soft2); max-width: 60rem">I help local business owners get online, get organized, and feel at home with the tools they use. Websites, booking, email, new equipment, and simple systems, explained in plain English. Every question is welcome.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 0.75rem">
-<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: #D9C2F0; color: #1C2541; font-weight: 700; font-size: 1.0625rem; text-decoration: none">Book a free first conversation</a>
-<a href="#how" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; border: 2px solid #B9C6E6; color: #F6F7FB; font-weight: 700; font-size: 1.0625rem; text-decoration: none; box-sizing: border-box">See how it works</a>
+<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: var(--c-lilac); color: var(--c-ink); font-weight: 700; font-size: 1.0625rem; text-decoration: none">Book a free first conversation</a>
+<a href="#how" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; border: 2px solid var(--c-soft); color: var(--c-paper); font-weight: 700; font-size: 1.0625rem; text-decoration: none; box-sizing: border-box">See how it works</a>
 </div>
 </div>
-<div style="flex: 1 1 20rem; min-width: 0; background: #F6F7FB; color: #1C2541; border-radius: 16px; padding: 2rem; box-sizing: border-box">
-<p style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.75rem; line-height: 1.15">Every owner is still learning, and that's a good thing.</p>
-<p style="margin: 0 0 1rem; color: #3B4560">Attachments, domains, booking links, and email settings are skills anyone can pick up, and they get easier fast once someone walks you through them.</p>
-<p style="margin: 0; color: #3B4560">I'll walk you through each one at your pace. Ask me anything.</p>
+<div style="flex: 1 1 20rem; min-width: 0; background: var(--c-paper); color: var(--c-ink); border-radius: 16px; padding: 2rem; box-sizing: border-box">
+<p style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.75rem; line-height: 1.15">Every owner is still learning, and that's a good thing.</p>
+<p style="margin: 0 0 1rem; color: var(--c-body)">Attachments, domains, booking links, and email settings are skills anyone can pick up, and they get easier fast once someone walks you through them.</p>
+<p style="margin: 0; color: var(--c-body)">I'll walk you through each one at your pace. Ask me anything.</p>
 </div>
 </div>
 </section>
 
 <!-- FREE OFFER BAND -->
-<section style="background: #D9C2F0; color: #1C2541">
+<section style="background: var(--c-lilac); color: var(--c-ink)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 0.5rem 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 1rem; font-weight: 700; font-size: 1.0625rem">
 <span>Limited spots: free starter websites for local businesses.</span>
-<a href="#free" style="color: #1C2541; font-weight: 700; text-decoration: underline; min-height: 44px; display: inline-flex; align-items: center">See what's included</a>
+<a href="#free" style="color: var(--c-ink); font-weight: 700; text-decoration: underline; min-height: 44px; display: inline-flex; align-items: center">See what's included</a>
 </div>
 </section>
 
 <!-- MODERNIZE -->
-<section id="modernize" style="background: #E9EEF8">
+<section id="modernize" style="background: var(--c-mist)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">Modernize your website</p>
-<h2 style="margin: 0 0 1rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.015em; max-width: 60rem">A website you can keep fresh yourself, with a calendar that does the work.</h2>
-<p style="margin: 0 0 2rem; font-size: 1.25rem; color: #3B4560; max-width: 60rem">A website only helps when it's current. When changes have to wait on someone else, hours, prices and events slowly fall out of date, and every update can mean another bill. Let's build one that stays up to date because updating it is easy.</p>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">Modernize your website</p>
+<h2 style="margin: 0 0 1rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.015em; max-width: 60rem">A website you can keep fresh yourself, with a calendar that does the work.</h2>
+<p style="margin: 0 0 2rem; font-size: 1.25rem; color: var(--c-body); max-width: 60rem">A website only helps when it's current. When changes have to wait on someone else, hours, prices and events slowly fall out of date, and every update can mean another bill. Let's build one that stays up to date because updating it is easy.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem">
-<div style="flex: 1 1 15rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Easy to update</h3>
-<p style="margin: 0; color: #3B4560">Change your hours, prices or a photo in minutes, without waiting on anyone. I show you how, and I'm here when you want a hand.</p>
+<div style="flex: 1 1 15rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Easy to update</h3>
+<p style="margin: 0; color: var(--c-body)">Change your hours, prices or a photo in minutes, without waiting on anyone. I show you how, and I'm here when you want a hand.</p>
 </div>
-<div style="flex: 1 1 15rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">A calendar of events that stays current</h3>
-<p style="margin: 0; color: #3B4560">Add an event once and it shows on your site and in subscribers' calendar apps. No more flyers that go out of date or a calendar nobody updates.</p>
+<div style="flex: 1 1 15rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">A calendar of events that stays current</h3>
+<p style="margin: 0; color: var(--c-body)">Add an event once and it shows on your site and in subscribers' calendar apps. No more flyers that go out of date or a calendar nobody updates.</p>
 </div>
-<div style="flex: 1 1 15rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">No middleman, lower costs</h3>
-<p style="margin: 0; color: #3B4560">Your site lives in your name on simple, low cost hosting. There's no outside company to pay every time something changes.</p>
+<div style="flex: 1 1 15rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">No middleman, lower costs</h3>
+<p style="margin: 0; color: var(--c-body)">Your site lives in your name on simple, low cost hosting. There's no outside company to pay every time something changes.</p>
 </div>
-<div style="flex: 1 1 15rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Looks good and works on any phone</h3>
-<p style="margin: 0; color: #3B4560">Big, readable text, quick loading and clear wording that search engines can find. Your words and photos carry over, and I keep your web address where I can.</p>
+<div style="flex: 1 1 15rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Looks good and works on any phone</h3>
+<p style="margin: 0; color: var(--c-body)">Big, readable text, quick loading and clear wording that search engines can find. Your words and photos carry over, and I keep your web address where I can.</p>
 </div>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center">
-<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: #1C2541; color: #F6F7FB; font-weight: 700; font-size: 1.0625rem; text-decoration: none">Book a free website chat</a>
-<a href="calendar/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; border: 2px solid #1C2541; color: #1C2541; font-weight: 700; font-size: 1.0625rem; text-decoration: none; box-sizing: border-box">See an example: the 299 events calendar</a>
+<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: var(--c-ink); color: var(--c-paper); font-weight: 700; font-size: 1.0625rem; text-decoration: none">Book a free website chat</a>
+<a href="calendar/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; border: 2px solid var(--c-ink); color: var(--c-ink); font-weight: 700; font-size: 1.0625rem; text-decoration: none; box-sizing: border-box">See an example: the 299 events calendar</a>
 </div>
 </div>
 </section>
 
 <!-- EVENTS CALENDAR -->
-<section id="events" style="background: #FFFFFF">
+<section id="events" style="background: var(--c-white)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">Events calendars</p>
-<h2 style="margin: 0 0 1rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.015em; max-width: 60rem">Publish your events once, and let your community follow along.</h2>
-<p style="margin: 0 0 2rem; font-size: 1.25rem; color: #3B4560; max-width: 60rem">A flyer or a Facebook post is easy to miss. A real events calendar puts every date in one place, and people can follow it in their calendar app, or add single events, so they never have to check back.</p>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">Events calendars</p>
+<h2 style="margin: 0 0 1rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: clamp(1.9rem, 4vw, 2.75rem); line-height: 1.08; letter-spacing: -0.015em; max-width: 60rem">Publish your events once, and let your community follow along.</h2>
+<p style="margin: 0 0 2rem; font-size: 1.25rem; color: var(--c-body); max-width: 60rem">A flyer or a Facebook post is easy to miss. A real events calendar puts every date in one place, and people can follow it in their calendar app, or add single events, so they never have to check back.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem">
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Publish in one place</h3>
-<p style="margin: 0; color: #3B4560">Add an event once and it shows on your website as a list, a month and a map. Each event gets its own shareable link, so posting it on Facebook takes a few seconds.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Publish in one place</h3>
+<p style="margin: 0; color: var(--c-body)">Add an event once and it shows on your website as a list, a month and a map. Each event gets its own shareable link, so posting it on Facebook takes a few seconds.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Subscribers get updates automatically</h3>
-<p style="margin: 0; color: #3B4560">When someone subscribes, new events and changes appear in their calendar app by themselves, on iPhone and computers. This only works with the right kind of calendar, a subscribable feed. A picture, a PDF or a Facebook event can't do it.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Subscribers get updates automatically</h3>
+<p style="margin: 0; color: var(--c-body)">When someone subscribes, new events and changes appear in their calendar app by themselves, on iPhone and computers. This only works with the right kind of calendar, a subscribable feed. A picture, a PDF or a Facebook event can't do it.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Marketing built in</h3>
-<p style="margin: 0; color: #3B4560">Events that are easy to find, easy to share and easy to add to a calendar get more people through the door. I can also help with ready to post wording for Facebook and a simple newsletter.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Marketing built in</h3>
+<p style="margin: 0; color: var(--c-body)">Events that are easy to find, easy to share and easy to add to a calendar get more people through the door. I can also help with ready to post wording for Facebook and a simple newsletter.</p>
 </div>
 
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center">
-<a href="calendar/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: #1C2541; color: #F6F7FB; font-weight: 700; font-size: 1.0625rem; text-decoration: none">See it working: the 299 events calendar</a>
-<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; border: 2px solid #1C2541; color: #1C2541; font-weight: 700; font-size: 1.0625rem; text-decoration: none; box-sizing: border-box">Book a free calendar chat</a>
+<a href="calendar/" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: var(--c-ink); color: var(--c-paper); font-weight: 700; font-size: 1.0625rem; text-decoration: none">See it working: the 299 events calendar</a>
+<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; border: 2px solid var(--c-ink); color: var(--c-ink); font-weight: 700; font-size: 1.0625rem; text-decoration: none; box-sizing: border-box">Book a free calendar chat</a>
 </div>
 </div>
 </section>
 
 <!-- PROBLEMS -->
-<section id="problems" style="background: #FFFFFF">
+<section id="problems" style="background: var(--c-white)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">What we can work on</p>
-<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">The tech side of a small business, one step at a time.</h2>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">What we can work on</p>
+<h2 style="margin: 0 0 2.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">The tech side of a small business, one step at a time.</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 1rem">
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">A website built to last.</h3>
-<p style="margin: 0; color: #3B4560">Simple, sturdy pages on free hosting in your name, with no plugins to keep up with. I'll make changes when you need them, and show you any parts you'd like to handle yourself.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">A website built to last.</h3>
+<p style="margin: 0; color: var(--c-body)">Simple, sturdy pages on free hosting in your name, with no plugins to keep up with. I'll make changes when you need them, and show you any parts you'd like to handle yourself.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Online booking that works for you.</h3>
-<p style="margin: 0; color: #3B4560">I'll help you pick a booking tool that fits your budget and set it up on your site.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Online booking that works for you.</h3>
+<p style="margin: 0; color: var(--c-body)">I'll help you pick a booking tool that fits your budget and set it up on your site.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">New items and news posted in minutes.</h3>
-<p style="margin: 0; color: #3B4560">We'll design a simple routine, photo, price, post, that fits right into your day.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">New items and news posted in minutes.</h3>
+<p style="margin: 0; color: var(--c-body)">We'll design a simple routine, photo, price, post, that fits right into your day.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Events and newsletters your community sees.</h3>
-<p style="margin: 0; color: #3B4560">I'll set up a calendar people can follow in their calendar app, a signup form, and show you how to share your first event.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Events and newsletters your community sees.</h3>
+<p style="margin: 0; color: var(--c-body)">I'll set up a calendar people can follow in their calendar app, a signup form, and show you how to share your first event.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Email, files, and forms that make sense.</h3>
-<p style="margin: 0; color: #3B4560">Ask me anything. That's the job.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Email, files, and forms that make sense.</h3>
+<p style="margin: 0; color: var(--c-body)">Ask me anything. That's the job.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Everything clearly yours.</h3>
-<p style="margin: 0; color: #3B4560">We'll map where everything lives and make sure it's all in your name.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">Everything clearly yours.</h3>
+<p style="margin: 0; color: var(--c-body)">We'll map where everything lives and make sure it's all in your name.</p>
 </div>
 </div>
 </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" style="background: #F6F7FB">
+<section id="services" style="background: var(--c-paper)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">What I can do</p>
-<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Seven ways I can help you get started and keep going.</h2>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">What I can do</p>
+<h2 style="margin: 0 0 2.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Seven ways I can help you get started and keep going.</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); gap: 1rem">
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Get online</h3>
-<p style="margin: 0; color: #3B4560">A clear website, a domain name, a business email address, and a Google listing so people can find your hours and location when they search.</p>
+<div style="flex: 1 1 22rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Get online</h3>
+<p style="margin: 0; color: var(--c-body)">A clear website, a domain name, a business email address, and a Google listing so people can find your hours and location when they search.</p>
 </div>
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Modernize your website</h3>
-<p style="margin: 0; color: #3B4560">Already have a website that feels dated? I'll give it a fresh look and make it work well on phones, load quickly, and be easy to read. Your words and photos carry over, and I'll keep your web address wherever I can.</p>
+<div style="flex: 1 1 22rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Modernize your website</h3>
+<p style="margin: 0; color: var(--c-body)">Already have a website that feels dated? I'll give it a fresh look and make it work well on phones, load quickly, and be easy to read. Your words and photos carry over, and I'll keep your web address wherever I can.</p>
 </div>
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Take bookings and share events</h3>
-<p style="margin: 0; color: #3B4560">Online scheduling, an events calendar, and a newsletter signup, so customers can reserve a time and hear what's coming up.</p>
+<div style="flex: 1 1 22rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Take bookings and share events</h3>
+<p style="margin: 0; color: var(--c-body)">Online scheduling, an events calendar, and a newsletter signup, so customers can reserve a time and hear what's coming up.</p>
 </div>
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Set up simple systems</h3>
-<p style="margin: 0; color: #3B4560">The quiet stuff that keeps a business running: getting new items posted, tracking invoices, and organizing files so you can find them again.</p>
+<div style="flex: 1 1 22rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Set up simple systems</h3>
+<p style="margin: 0; color: var(--c-body)">The quiet stuff that keeps a business running: getting new items posted, tracking invoices, and organizing files so you can find them again.</p>
 </div>
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Learn it, one-on-one</h3>
-<p style="margin: 0; color: #3B4560">Short sessions where you ask anything: email, spreadsheets, documents, or how to get the most out of AI tools.</p>
+<div style="flex: 1 1 22rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Learn it, one-on-one</h3>
+<p style="margin: 0; color: var(--c-body)">Short sessions where you ask anything: email, spreadsheets, documents, or how to get the most out of AI tools.</p>
 </div>
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Set up new equipment</h3>
-<p style="margin: 0; color: #3B4560">A new computer, printer, or Wi-Fi router, up and running the day I'm there, with your files, email, and favorite programs moved over from the old one. Inside your home or shop, I'll make sure the Wi-Fi reaches where you work.</p>
+<div style="flex: 1 1 22rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Set up new equipment</h3>
+<p style="margin: 0; color: var(--c-body)">A new computer, printer, or Wi-Fi router, up and running the day I'm there, with your files, email, and favorite programs moved over from the old one. Inside your home or shop, I'll make sure the Wi-Fi reaches where you work.</p>
 </div>
-<div style="flex: 1 1 22rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Start your business</h3>
-<p style="margin: 0; color: #3B4560">New to running a business in Humboldt County? I'll walk you through the name, the county paperwork, and the online setup, one step at a time.</p>
+<div style="flex: 1 1 22rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Start your business</h3>
+<p style="margin: 0; color: var(--c-body)">New to running a business in Humboldt County? I'll walk you through the name, the county paperwork, and the online setup, one step at a time.</p>
 </div>
 </div>
-<p style="margin: 2rem 0 0; color: #3B4560; max-width: 60rem">Interested in a small-group workshop for Willow Creek business owners? Tell me what you'd want to learn and I'll add you to the list.</p>
+<p style="margin: 2rem 0 0; color: var(--c-body); max-width: 60rem">Interested in a small-group workshop for Willow Creek business owners? Tell me what you'd want to learn and I'll add you to the list.</p>
 </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how" style="background: #FFFFFF">
+<section id="how" style="background: var(--c-white)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">How it works</p>
-<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Three steps, with the price clear up front.</h2>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">How it works</p>
+<h2 style="margin: 0 0 2.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Three steps, with the price clear up front.</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 2rem">
 <div style="flex: 1 1 16rem; min-width: 0">
-<div style="width: 3rem; height: 3rem; border-radius: 999px; background: #2B5EA7; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">1</div>
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Let's talk</h3>
-<p style="margin: 0; color: #3B4560">A free first conversation about your business and what you'd like to make easier. Just a friendly chat.</p>
+<div style="width: 3rem; height: 3rem; border-radius: 999px; background: var(--c-accent); color: var(--c-white); display: flex; align-items: center; justify-content: center; font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">1</div>
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Let's talk</h3>
+<p style="margin: 0; color: var(--c-body)">A free first conversation about your business and what you'd like to make easier. Just a friendly chat.</p>
 </div>
 <div style="flex: 1 1 16rem; min-width: 0">
-<div style="width: 3rem; height: 3rem; border-radius: 999px; background: #2B5EA7; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">2</div>
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Get a simple plan</h3>
-<p style="margin: 0; color: #3B4560">A one-page plan in plain words: what we'll set up, what it will cost, and how long it will take. You approve it before anything starts.</p>
+<div style="width: 3rem; height: 3rem; border-radius: 999px; background: var(--c-accent); color: var(--c-white); display: flex; align-items: center; justify-content: center; font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">2</div>
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Get a simple plan</h3>
+<p style="margin: 0; color: var(--c-body)">A one-page plan in plain words: what we'll set up, what it will cost, and how long it will take. You approve it before anything starts.</p>
 </div>
 <div style="flex: 1 1 16rem; min-width: 0">
-<div style="width: 3rem; height: 3rem; border-radius: 999px; background: #2B5EA7; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">3</div>
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Build it together</h3>
-<p style="margin: 0; color: #3B4560">I build it alongside you, then show you how the pieces fit. For future changes, you can learn the parts you like or hand them to me.</p>
+<div style="width: 3rem; height: 3rem; border-radius: 999px; background: var(--c-accent); color: var(--c-white); display: flex; align-items: center; justify-content: center; font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: 1.375rem; margin-bottom: 1rem">3</div>
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1.15">Build it together</h3>
+<p style="margin: 0; color: var(--c-body)">I build it alongside you, then show you how the pieces fit. For future changes, you can learn the parts you like or hand them to me.</p>
 </div>
 </div>
 </div>
 </section>
 
 <!-- FREE STARTER WEBSITE -->
-<section id="free" style="background: #E9EEF8">
+<section id="free" style="background: var(--c-mist)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">Free starter website &middot; Limited spots</p>
-<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Get a free starter website for your Willow Creek business.</h2>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">Free starter website &middot; Limited spots</p>
+<h2 style="margin: 0 0 2.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Get a free starter website for your Willow Creek business.</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 1rem">
-<div style="flex: 1 1 20rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">What's included</h3>
-<p style="margin: 0 0 0.5rem; color: #3B4560">A one-page or small site built from your text and photos.</p>
-<p style="margin: 0 0 0.5rem; color: #3B4560">Two rounds of changes, so it ends up just right.</p>
-<p style="margin: 0 0 0.5rem; color: #3B4560">A 30-minute walkthrough of how everything fits together.</p>
-<p style="margin: 0; color: #3B4560">A one-page guide to what lives where.</p>
+<div style="flex: 1 1 20rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">What's included</h3>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">A one-page or small site built from your text and photos.</p>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">Two rounds of changes, so it ends up just right.</p>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">A 30-minute walkthrough of how everything fits together.</p>
+<p style="margin: 0; color: var(--c-body)">A one-page guide to what lives where.</p>
 </div>
-<div style="flex: 1 1 20rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Your part</h3>
-<p style="margin: 0 0 0.5rem; color: #3B4560">Your domain name, which is usually about $10 to $20 a year.</p>
-<p style="margin: 0 0 0.5rem; color: #3B4560">Your text and photos for the site.</p>
-<p style="margin: 0; color: #3B4560">Permission to show the finished site in my portfolio, and a short testimonial in your own words.</p>
+<div style="flex: 1 1 20rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Your part</h3>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">Your domain name, which is usually about $10 to $20 a year.</p>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">Your text and photos for the site.</p>
+<p style="margin: 0; color: var(--c-body)">Permission to show the finished site in my portfolio, and a short testimonial in your own words.</p>
 </div>
-<div style="flex: 1 1 20rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Add-ons when you're ready</h3>
-<p style="margin: 0 0 0.5rem; color: #3B4560">Online booking, an events calendar, and a newsletter.</p>
-<p style="margin: 0 0 0.5rem; color: #3B4560">A simple way to get new items and news posted.</p>
-<p style="margin: 0; color: #3B4560">Business email, new equipment setup, and ongoing updates, all at a simple hourly rate.</p>
+<div style="flex: 1 1 20rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Add-ons when you're ready</h3>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">Online booking, an events calendar, and a newsletter.</p>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">A simple way to get new items and news posted.</p>
+<p style="margin: 0; color: var(--c-body)">Business email, new equipment setup, and ongoing updates, all at a simple hourly rate.</p>
 </div>
 </div>
 <div style="margin-top: 2rem">
-<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: #1C2541; color: #F6F7FB; font-weight: 700; font-size: 1.0625rem; text-decoration: none">Ask about a free starter website</a>
+<a href="#book" style="display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.75rem; border-radius: 999px; background: var(--c-ink); color: var(--c-paper); font-weight: 700; font-size: 1.0625rem; text-decoration: none">Ask about a free starter website</a>
 </div>
 </div>
 </section>
 
 <!-- STARTING OUT -->
-<section id="start" style="background: #F6F7FB">
+<section id="start" style="background: var(--c-paper)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">Starting out in Humboldt County</p>
-<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">The usual path from idea to open for business.</h2>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">Starting out in Humboldt County</p>
+<h2 style="margin: 0 0 2.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">The usual path from idea to open for business.</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 1rem">
-<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">1. Choose your name</h3>
-<p style="margin: 0; color: #3B4560">Pick a name that fits you, and check that no one else nearby is already using it.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">1. Choose your name</h3>
+<p style="margin: 0; color: var(--c-body)">Pick a name that fits you, and check that no one else nearby is already using it.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">2. Register the name</h3>
-<p style="margin: 0; color: #3B4560">If your business name doesn't include your own surname, the county asks for a fictitious business name filing.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">2. Register the name</h3>
+<p style="margin: 0; color: var(--c-body)">If your business name doesn't include your own surname, the county asks for a fictitious business name filing.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">3. Get your county license</h3>
-<p style="margin: 0; color: #3B4560">Businesses outside city limits apply through the county. I'll help you find the right type and fill in the form.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">3. Get your county license</h3>
+<p style="margin: 0; color: var(--c-body)">Businesses outside city limits apply through the county. I'll help you find the right type and fill in the form.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">4. Check state and tax questions</h3>
-<p style="margin: 0; color: #3B4560">I'll point you to the right offices so you can ask the right people the right questions.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">4. Check state and tax questions</h3>
+<p style="margin: 0; color: var(--c-body)">I'll point you to the right offices so you can ask the right people the right questions.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">5. Get online</h3>
-<p style="margin: 0; color: #3B4560">A domain name, a business email address, a simple website, and a booking link.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">5. Get online</h3>
+<p style="margin: 0; color: var(--c-body)">A domain name, a business email address, a simple website, and a booking link.</p>
 </div>
-<div style="flex: 1 1 18rem; min-width: 0; background: #FFFFFF; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">6. Welcome your first customers</h3>
-<p style="margin: 0; color: #3B4560">A Facebook page and a few simple posts, so your neighbors know you're open.</p>
+<div style="flex: 1 1 18rem; min-width: 0; background: var(--c-white); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.5rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2">6. Welcome your first customers</h3>
+<p style="margin: 0; color: var(--c-body)">A Facebook page and a few simple posts, so your neighbors know you're open.</p>
 </div>
 </div>
-<p style="margin: 2rem 0 0; color: #3B4560; max-width: 60rem">I'm a guide, not a lawyer or an accountant. I'll help you find the right offices and fill out the forms. Rules and fees change, so we'll check the official sources together.</p>
+<p style="margin: 2rem 0 0; color: var(--c-body); max-width: 60rem">I'm a guide, not a lawyer or an accountant. I'll help you find the right offices and fill out the forms. Rules and fees change, so we'll check the official sources together.</p>
 </div>
 </section>
 
 <!-- OWNERSHIP -->
-<section style="background: #1C2541; color: #F6F7FB">
+<section style="background: var(--c-ink); color: var(--c-paper)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4rem 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 2.5rem">
 <div style="flex: 1 1 22rem; min-width: 0">
-<h2 style="margin: 0 0 1rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em">Everything stays in your name.</h2>
-<p style="margin: 0; color: #DCE4F5; max-width: 60rem">What I build is yours. You stay in the driver's seat.</p>
+<h2 style="margin: 0 0 1rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em">Everything stays in your name.</h2>
+<p style="margin: 0; color: var(--c-soft2); max-width: 60rem">What I build is yours. You stay in the driver's seat.</p>
 </div>
 <div style="flex: 1 1 24rem; min-width: 0; display: flex; flex-direction: column; gap: 1rem">
-<p style="margin: 0; color: #DCE4F5"><strong style="color: #F6F7FB">Your accounts.</strong> Your domain, hosting, and booking and email tools are registered to you.</p>
-<p style="margin: 0; color: #DCE4F5"><strong style="color: #F6F7FB">A one-page guide.</strong> What lives where, and where to look when you want to make a change.</p>
-<p style="margin: 0; color: #DCE4F5"><strong style="color: #F6F7FB">Your choice.</strong> You're free to run it yourself or work with anyone you like.</p>
+<p style="margin: 0; color: var(--c-soft2)"><strong style="color: var(--c-paper)">Your accounts.</strong> Your domain, hosting, and booking and email tools are registered to you.</p>
+<p style="margin: 0; color: var(--c-soft2)"><strong style="color: var(--c-paper)">A one-page guide.</strong> What lives where, and where to look when you want to make a change.</p>
+<p style="margin: 0; color: var(--c-soft2)"><strong style="color: var(--c-paper)">Your choice.</strong> You're free to run it yourself or work with anyone you like.</p>
 </div>
 </div>
 </section>
 
 <!-- OUR WORK -->
-<section id="work" style="background: #F6F7FB">
+<section id="work" style="background: var(--c-paper)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">Our work</p>
-<h2 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Published sites and prototypes.</h2>
-<p id="workIntro" style="margin: 0 0 2rem; color: #3B4560; max-width: 60rem">Shared with the owners' permission. Published sites are live today. Prototypes are drafts that show what's possible.</p>
-<p style="margin: 0 0 2rem; color: #3B4560; max-width: 60rem">Also built here: <a href="calendar/" style="color: #2B5EA7; font-weight: 700">Along the 299</a>, a live events calendar for Willow Creek, Hoopa, Weaverville, Eureka and the towns between.</p>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">Our work</p>
+<h2 style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">Published sites and prototypes.</h2>
+<p id="workIntro" style="margin: 0 0 2rem; color: var(--c-body); max-width: 60rem">Shared with the owners' permission. Published sites are live today. Prototypes are drafts that show what's possible.</p>
+<p style="margin: 0 0 2rem; color: var(--c-body); max-width: 60rem">Also built here: <a href="calendar/" style="color: var(--c-accent); font-weight: 700">Along the 299</a>, a live events calendar for Willow Creek, Hoopa, Weaverville, Eureka and the towns between.</p>
 <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.5rem">
 <div><span class="flabel">Show</span><div id="statusChips" class="chips"></div></div>
 <div><span class="flabel">Type of business</span><div id="catChips" class="chips"></div></div>
 <div><label for="clientSelect" class="flabel">Client</label><select id="clientSelect"></select></div>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem">
-<p id="resultCount" aria-live="polite" style="margin: 0; color: #3B4560"></p>
+<p id="resultCount" aria-live="polite" style="margin: 0; color: var(--c-body)"></p>
 <button id="copyBtn" type="button" class="linkbtn">Copy link to this view</button>
 </div>
 </div>
 <div id="results"></div>
-<div id="emptyState" hidden style="text-align: center; padding: 2.5rem 1rem; border: 2px dashed #9AA8CC; border-radius: 12px">
-<p id="emptyText" style="margin: 0 0 0.5rem; color: #3B4560"></p>
+<div id="emptyState" hidden style="text-align: center; padding: 2.5rem 1rem; border: 2px dashed var(--c-mid); border-radius: 12px">
+<p id="emptyText" style="margin: 0 0 0.5rem; color: var(--c-body)"></p>
 <button id="resetBtn" type="button" class="linkbtn">Show everything</button>
 </div>
 </div>
 </section>
 
 <!-- LEARN -->
-<section id="learn" style="background: #FFFFFF">
+<section id="learn" style="background: var(--c-white)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #2B5EA7">Learn something</p>
-<h2 style="margin: 0 0 2.5rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">A few handy things worth knowing.</h2>
+<p style="margin: 0 0 0.5rem; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-accent)">Learn something</p>
+<h2 style="margin: 0 0 2.5rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 60rem">A few handy things worth knowing.</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 1rem">
-<div style="flex: 1 1 20rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">What's the difference between CC and BCC?</h3>
-<p style="margin: 0 0 0.5rem; color: #3B4560"><strong style="color: #1C2541">To</strong> is the main recipient.</p>
-<p style="margin: 0 0 0.5rem; color: #3B4560"><strong style="color: #1C2541">CC</strong> sends a copy, and everyone can see each other's addresses.</p>
-<p style="margin: 0 0 0.75rem; color: #3B4560"><strong style="color: #1C2541">BCC</strong> sends a copy and hides the addresses.</p>
-<p style="margin: 0; color: #3B4560">When you email a group of customers, use BCC so they don't see each other's addresses.</p>
+<div style="flex: 1 1 20rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">What's the difference between CC and BCC?</h3>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)"><strong style="color: var(--c-ink)">To</strong> is the main recipient.</p>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)"><strong style="color: var(--c-ink)">CC</strong> sends a copy, and everyone can see each other's addresses.</p>
+<p style="margin: 0 0 0.75rem; color: var(--c-body)"><strong style="color: var(--c-ink)">BCC</strong> sends a copy and hides the addresses.</p>
+<p style="margin: 0; color: var(--c-body)">When you email a group of customers, use BCC so they don't see each other's addresses.</p>
 </div>
-<div style="flex: 1 1 20rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">How to check an email before you click</h3>
-<p style="margin: 0 0 0.5rem; color: #3B4560">Look at the sender's actual address, not just the name next to it.</p>
-<p style="margin: 0 0 0.5rem; color: #3B4560">Take a moment with anything urgent, unexpected attachments, or links that don't match who the email says it's from.</p>
-<p style="margin: 0; color: #3B4560">Unsure? Pause, and call the company using a number you already have.</p>
+<div style="flex: 1 1 20rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">How to check an email before you click</h3>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">Look at the sender's actual address, not just the name next to it.</p>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">Take a moment with anything urgent, unexpected attachments, or links that don't match who the email says it's from.</p>
+<p style="margin: 0; color: var(--c-body)">Unsure? Pause, and call the company using a number you already have.</p>
 </div>
-<div style="flex: 1 1 20rem; min-width: 0; background: #F6F7FB; border: 1px solid #D7DCEB; border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
-<h3 style="margin: 0 0 0.75rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Back up your important files</h3>
-<p style="margin: 0 0 0.5rem; color: #3B4560">Keep your business files in two places: your computer, and one other place such as a cloud folder or an external drive.</p>
-<p style="margin: 0; color: #3B4560">That way you always have a copy. Check now and then that the backup works.</p>
+<div style="flex: 1 1 20rem; min-width: 0; background: var(--c-paper); border: 1px solid var(--c-line); border-radius: 12px; padding: 1.75rem; box-sizing: border-box">
+<h3 style="margin: 0 0 0.75rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 700; font-size: 1.375rem; line-height: 1.15">Back up your important files</h3>
+<p style="margin: 0 0 0.5rem; color: var(--c-body)">Keep your business files in two places: your computer, and one other place such as a cloud folder or an external drive.</p>
+<p style="margin: 0; color: var(--c-body)">That way you always have a copy. Check now and then that the backup works.</p>
 </div>
 </div>
 </div>
 </section>
 
 <!-- BOOK A CHAT -->
-<section id="book" style="background: #1C2541; color: #F6F7FB">
+<section id="book" style="background: var(--c-ink); color: var(--c-paper)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 4.5rem 1.5rem; box-sizing: border-box">
-<h2 style="margin: 0 0 1rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; letter-spacing: -0.02em">Book a free first conversation.</h2>
-<p style="margin: 0 0 0.75rem; color: #DCE4F5; max-width: 60rem">Tell me what you're working on or what you'd like to make easier. We'll talk it through in plain English. Add a note when you book and I'll see it ahead of time.</p>
-<p style="margin: 0 0 2rem; color: #DCE4F5; max-width: 60rem">Serving Willow Creek and the surrounding area. Most of this also works by phone or video.</p>
-<div id="cal-embed" style="min-height: 560px; background: #FFFFFF; border-radius: 16px; overflow: hidden"></div>
-<p style="margin: 1rem 0 0; color: #DCE4F5">Calendar not showing? <a id="cal-fallback" href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" target="_blank" rel="noopener" style="color: #F6F7FB; font-weight: 700">Open it in a new tab</a>.</p>
-<noscript><p style="margin: 1rem 0 0; color: #DCE4F5"><a href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" style="color: #F6F7FB; font-weight: 700">Open the booking calendar</a></p></noscript>
+<h2 style="margin: 0 0 1rem; font-family: var(--f-display), system-ui, sans-serif; font-weight: 800; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; letter-spacing: -0.02em">Book a free first conversation.</h2>
+<p style="margin: 0 0 0.75rem; color: var(--c-soft2); max-width: 60rem">Tell me what you're working on or what you'd like to make easier. We'll talk it through in plain English. Add a note when you book and I'll see it ahead of time.</p>
+<p style="margin: 0 0 2rem; color: var(--c-soft2); max-width: 60rem">Serving Willow Creek and the surrounding area. Most of this also works by phone or video.</p>
+<div id="cal-embed" style="min-height: 560px; background: var(--c-white); border-radius: 16px; overflow: hidden"></div>
+<p style="margin: 1rem 0 0; color: var(--c-soft2)">Calendar not showing? <a id="cal-fallback" href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" target="_blank" rel="noopener" style="color: var(--c-paper); font-weight: 700">Open it in a new tab</a>.</p>
+<noscript><p style="margin: 1rem 0 0; color: var(--c-soft2)"><a href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" style="color: var(--c-paper); font-weight: 700">Open the booking calendar</a></p></noscript>
 </div>
 </section>
 
 <!-- FOOTER -->
-<footer style="background: #0F1730; color: #B9C6E6">
+<footer style="background: var(--c-deep); color: var(--c-soft)">
 <div style="max-width: 88rem; margin: 0 auto; padding: 1.5rem; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; font-size: 0.9375rem">
 <span>Small Business Studio of Willow Creek &middot; California</span>
 <span>Practical help. Plain English. Every question welcome.</span>
@@ -406,9 +435,9 @@ a:focus-visible { outline: 3px solid #D9C2F0; outline-offset: 3px; }
         if (started) return;
         started = true;
         Cal("init", "chat", { origin: "https://app.cal.com" });
-        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#2B5EA7", "cal-brand-emphasis": "#1C2541", "cal-brand-text": "#FFFFFF" } } });
+        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "var(--c-accent)", "cal-brand-emphasis": "var(--c-ink)", "cal-brand-text": "var(--c-white)" } } });
         Cal.ns["chat"]("inline", { elementOrSelector: "#cal-embed", config: { layout: "month_view", theme: "light" }, calLink: link });
-        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#2B5EA7" } } });
+        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "var(--c-accent)" } } });
     }
     var box = document.getElementById('cal-embed');
     if ('IntersectionObserver' in window) {
@@ -537,7 +566,7 @@ a:focus-visible { outline: 3px solid #D9C2F0; outline-offset: 3px; }
         }).join('');
         return '<article class="card"><div class="badges">' + badges + '</div>' +
             '<h3>' + esc(d.title) + '</h3>' +
-            '<p style="font-weight: 700; color: #2B5EA7">' + esc(client.name) + ' · ' + esc(client.place) + '</p>' +
+            '<p style="font-weight: 700; color: var(--c-accent)">' + esc(client.name) + ' · ' + esc(client.place) + '</p>' +
             '<p>' + esc(d.blurb) + '</p>' +
             '<div class="looks">' + looks + '</div></article>';
     }
@@ -580,6 +609,15 @@ a:focus-visible { outline: 3px solid #D9C2F0; outline-offset: 3px; }
     /* Shared links such as index.html?client=jessica open straight to the work list. */
     if (filtered) { window.addEventListener('load', function () { $('work').scrollIntoView({ behavior: 'instant', block: 'start' }); }); }
 })();
+</script>
+<div id="designPick" role="group" aria-label="Page design"><span id="designName">Design 1 of 5</span><button type="button" id="designNext">Shuffle design</button></div>
+<script>
+(function(){var names={1:'Harbor',2:'Redwood',3:'Sunrise',4:'Editorial',5:'Tide'},h=document.documentElement,n=document.getElementById('designName');
+function show(){n.textContent='Design '+h.getAttribute('data-design')+' of 5 · '+names[h.getAttribute('data-design')]}show();
+document.getElementById('designNext').addEventListener('click',function(){var c=+h.getAttribute('data-design'),d;do{d=1+Math.floor(Math.random()*5)}while(d===c);
+var fam={2:'Fraunces:wght@600;700;800',3:'Space+Grotesk:wght@500;700',4:'Space+Grotesk:wght@500;700',5:'Playfair+Display:wght@600;700;800'};
+if(fam[d]&&!document.querySelector('link[href*="'+fam[d].split(':')[0]+'"]')){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family='+fam[d]+'&display=swap';document.head.appendChild(l)}
+h.classList.add('swap');h.setAttribute('data-design',d);try{localStorage.setItem('design',d)}catch(e){}show();setTimeout(function(){h.classList.remove('swap')},500)})})();
 </script>
 </body>
 </html>
