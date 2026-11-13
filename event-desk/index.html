@@ -33,6 +33,7 @@ textarea{min-height:92px;resize:vertical}
 .sw input:checked+span{box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--ink)}
 .paste{background:#fff;border:2px dashed var(--violet);border-radius:14px;padding:12px 14px;margin-bottom:6px}
 .paste summary{font-weight:700;cursor:pointer;min-height:32px}
+.drop{display:block;text-align:center;padding:22px 12px;border:2px dashed var(--line);border-radius:12px;background:#F7F8FF;cursor:pointer;margin:6px 0 10px;font-weight:400}.drop.over{border-color:var(--pink);background:#FFF0F5}.drop span{color:var(--muted);font-size:.9rem}.drop img{max-height:120px;max-width:100%;border-radius:8px;margin-top:10px;display:block;margin-inline:auto}
 .btn{display:block;width:100%;font:inherit;font-weight:800;border:0;border-radius:14px;padding:16px;margin-top:12px;cursor:pointer;min-height:54px}
 .btn.main{background:var(--pink);color:#fff;font-size:1.1rem}
 .btn.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
@@ -55,10 +56,13 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
   <h1>Add an event</h1>
   <p class="sub">Fill it in once. Get a flyer, a calendar entry, and a ready-to-post caption.</p>
 
-  <details class="paste"><summary>Have flyer text? Paste it here</summary>
-    <textarea id="paste" placeholder="Paste the text from your flyer or Facebook post"></textarea>
+  <details class="paste"><summary>Have a flyer? Upload it, drag it in, or paste the text</summary>
+    <label class="drop" id="drop" for="flyerfile"><b>Tap to choose a picture of your flyer</b><br><span>or drag one here</span><img id="thumb" alt="" hidden></label>
+    <input id="flyerfile" type="file" accept="image/*" hidden>
+    <div id="ocr" class="note" role="status"></div>
+    <textarea id="paste" placeholder="Or paste the text from your flyer or Facebook post"></textarea>
     <button class="btn alt" type="button" id="fill">Fill in what I can</button>
-    <div class="note">It guesses the title, date, time and place. Check the boxes below.</div>
+    <div class="note">It guesses the title, date, time and place. Always check the boxes below.</div>
   </details>
 
   <form id="f" autocomplete="off" onsubmit="return false">
@@ -231,6 +235,27 @@ $('fill').onclick=function(){
   if(/free/i.test(t))$('price').value='Free';
   refresh();say(got?'Filled in '+got+' things. Please check each box.':'Couldn\u2019t find details. Please fill in the boxes.',!got);
 };
+})();
+
+// flyer picture -> text (reads the picture right on this device)
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var drop=$('drop'),inp=$('flyerfile'),out=$('ocr'),loaded=null;
+  function lib(){return loaded||(loaded=new Promise(function(ok,no){if(window.Tesseract)return ok();var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';s.onload=ok;s.onerror=function(){loaded=null;no()};document.head.appendChild(s)}))}
+  function go(f){
+    if(!f||!/^image\//.test(f.type)){out.textContent='Please choose a picture (photo or screenshot).';return}
+    var t=$('thumb');t.src=URL.createObjectURL(f);t.hidden=false;
+    out.textContent='Getting ready to read your flyer\u2026';
+    lib().then(function(){return Tesseract.recognize(f,'eng',{logger:function(m){if(m.status==='recognizing text')out.textContent='Reading your flyer\u2026 '+Math.round(m.progress*100)+'%'}})})
+    .then(function(r){var txt=(r.data.text||'').trim();if(txt.length<8){out.textContent='I couldn\u2019t read much text from that picture. Try a clearer one, or type the details below.';return}
+      $('paste').value=txt;$('fill').click();out.textContent='Done. Please check each box below.'})
+    .catch(function(){out.textContent='Couldn\u2019t read that picture here. You can paste the text or type the details below.'});
+  }
+  inp.addEventListener('change',function(){go(inp.files[0])});
+  ['dragenter','dragover'].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.add('over')})});
+  ['dragleave','drop'].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.remove('over')})});
+  drop.addEventListener('drop',function(ev){go(ev.dataTransfer.files[0])});
+  document.addEventListener('dragover',function(e){e.preventDefault()});document.addEventListener('drop',function(e){if(!drop.contains(e.target)){e.preventDefault()}});
 })();
 </script>
 </body>
