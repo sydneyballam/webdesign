@@ -194,16 +194,19 @@ document.getElementById('f').addEventListener('input',refresh);
 document.getElementById('f').addEventListener('change',refresh);
 refresh();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refresh);
 
+function isPhone(){var u=navigator.userAgent||'';return /Android|iPhone|iPad|iPod/i.test(u)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)}
 $('share').onclick=function(){
-  var cap=caption();
+  var cap=caption(),phone=isPhone();
+  var fb=phone?null:window.open('https://www.facebook.com/','_blank');
   blob(function(b){
     var file=new File([b],slug()+'.png',{type:'image/png'});
-    if(navigator.canShare&&navigator.canShare({files:[file]})){
+    if(phone&&navigator.canShare&&navigator.canShare({files:[file]})){
       navigator.share({files:[file],text:cap,title:val('title')}).then(function(){say('Shared. Pick Facebook to finish your post.')}).catch(function(e){if(e&&e.name!=='AbortError')say('Sharing didn\u2019t work here. Use Download, then post from Facebook.',1)});
-    }else{
-      dlBlob(b,slug()+'.png');
-      (navigator.clipboard?navigator.clipboard.writeText(cap):Promise.reject()).then(function(){say('This device can\u2019t open the Share sheet from here. Your flyer was saved and the caption was copied. Open Facebook, add the picture and paste.')}).catch(function(){say('Flyer saved. Caption: '+cap)});
+      return;
     }
+    dlBlob(b,slug()+'.png');
+    var done=function(copied){say('Facebook is opening in a new tab. Your flyer was saved to your Downloads'+(copied?' and the caption was copied. In Facebook, start a post, add the picture, and paste.':'. Caption:\n'+cap)+(fb?'':' (If no tab opened, go to facebook.com.)'))};
+    (navigator.clipboard?navigator.clipboard.writeText(cap):Promise.reject()).then(function(){done(1)}).catch(function(){done(0)});
   });
 };
 $('dl').onclick=function(){blob(function(b){dlBlob(b,slug()+'.png');say('Flyer picture saved.')})};
