@@ -67,23 +67,28 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
 
   <form id="f" autocomplete="off" onsubmit="return false">
     <label for="biz">Your business or group</label>
-    <input id="biz" value="Willow Creek Community Hall">
+    <input id="biz" placeholder="Example: Willow Creek Community Hall">
     <label for="title">What's happening?</label>
-    <input id="title" maxlength="70" value="Pie &amp; Coffee Morning">
+    <input id="title" maxlength="70" placeholder="Example: Pie &amp; Coffee Morning">
     <div class="row">
       <div><label for="date">Date</label><input id="date" type="date"></div>
-      <div><label for="town">Town</label><input id="town" value="Willow Creek"></div>
+      <div><label for="town">Town</label><select id="town"><option value="">Choose&hellip;</option><option>Willow Creek</option><option>Hoopa</option><option>Burnt Ranch</option><option>Big Bar</option><option>Salyer</option><option>Orleans</option><option>Junction City</option><option>Weaverville</option><option>Hayfork</option><option>Blue Lake</option><option>Arcata</option><option>McKinleyville</option><option>Eureka</option><option>Ferndale</option><option>Fortuna</option><option>Trinidad</option><option>Other</option></select></div>
     </div>
     <div class="row">
-      <div><label for="start">Starts</label><input id="start" type="time" value="09:00"></div>
-      <div><label for="end">Ends</label><input id="end" type="time" value="11:30"></div>
+      <div><label for="start">Starts</label><input id="start" type="time"></div>
+      <div><label for="end">Ends</label><input id="end" type="time"></div>
     </div>
     <label for="place">Where?</label>
-    <input id="place" value="Community Hall, Highway 299">
+    <input id="place" placeholder="Example: Community Hall, Highway 299">
     <label for="price">Cost</label>
-    <input id="price" value="Free">
+    <input id="price" placeholder="Example: Free, or $7">
     <label for="desc">A line or two about it <span id="cnt" style="font-weight:400;color:var(--muted)"></span></label>
-    <textarea id="desc" maxlength="260">Home-baked pie, hot coffee and good company. Everyone is welcome.</textarea>
+    <textarea id="desc" maxlength="260" placeholder="Example: Home-baked pie, hot coffee and good company. Everyone is welcome."></textarea>
+
+    <label for="addr">Street address <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+    <input id="addr" placeholder="Example: 123 Main St">
+    <label for="site">Website or Facebook page <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+    <input id="site" inputmode="url" placeholder="Example: facebook.com/yourpage">
 
     <label>Flyer style</label>
     <div class="chips" id="styles">
@@ -110,22 +115,28 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
     </div>
     <div class="note" id="contrast"></div>
     <label class="chips" style="margin-top:16px"><span style="display:flex;gap:10px;align-items:center;border-radius:14px;width:100%"><input id="pub" type="checkbox" checked style="position:static;opacity:1;width:22px;height:22px;margin:0"> List this on What's Going On Along the 299</span></label>
+    <div id="contact" class="paste" style="margin-top:10px">
+      <b>So we can reach you (never shown)</b>
+      <label for="cname" style="margin-top:8px">Your name</label><input id="cname" autocomplete="name">
+      <label for="cinfo">Email or phone</label><input id="cinfo" autocomplete="email" inputmode="email">
+      <input id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+    </div>
   </form>
 </section>
 
 <section class="preview">
   <canvas id="c" width="1080" height="1350" aria-label="Flyer preview"></canvas>
   <button class="btn main" id="share" type="button">Share flyer to Facebook</button>
-  <button class="btn gold" id="save" type="button">Save event &amp; add to my calendar</button>
+  <button class="btn gold" id="save" type="button">Save &amp; add to my calendar</button>
   <button class="btn alt" id="dl" type="button">Download flyer picture</button>
   <div id="msg" role="status"></div>
   <div class="what">
     <h2>What's real in this prototype</h2>
     <ul>
       <li>Flyer, caption, phone Share sheet and calendar file all work now.</li>
-      <li>"List on the 299" isn't connected yet. It shows the row that would be added.</li>
+      <li>"List on the 299" sends your event to the same form the community uses. A person checks it before it appears.</li>
     </ul>
-    <pre id="row"></pre>
+    <pre id="row"></pre><div class="note">Prefer the regular form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVQe_zMa3xuxvw31wdLszKdXx1Kc4aHKThMhFjEG5s3Tyhfw/viewform" target="_blank" rel="noopener">Open it here</a>.</div>
   </div>
 </section>
 </main>
@@ -133,8 +144,6 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
 (function(){
 var $=function(i){return document.getElementById(i)};
 var c=$('c'),x=c.getContext('2d');
-var d=new Date();d.setDate(d.getDate()+(6-d.getDay()+7)%7+7);
-$('date').value=d.toISOString().slice(0,10);
 
 function val(i){return $(i).value.trim()}
 function radio(n){return document.querySelector('input[name='+n+']:checked').value}
@@ -220,7 +229,7 @@ function blob(cb){c.toBlob(cb,'image/png')}
 function dlBlob(b,name){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)}
 function slug(){return (val('title')||'event').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
 
-function refresh(){draw();$('cnt').textContent=val('desc').length+'/260';$('row').textContent=$('pub').checked?'Would be added to the 299 calendar:\n'+csv():'Kept private (not listed on the 299 calendar).'}
+function refresh(){draw();$('cnt').textContent=val('desc').length+'/260';$('row').textContent=$('pub').checked?'Will be sent to the 299 calendar for review when you tap Save.':'Kept private (not listed on the 299 calendar).'}
 document.getElementById('f').addEventListener('input',refresh);
 document.getElementById('f').addEventListener('change',refresh);
 refresh();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refresh);
@@ -241,10 +250,40 @@ $('share').onclick=function(){
   });
 };
 $('dl').onclick=function(){blob(function(b){dlBlob(b,slug()+'.png');say('Flyer picture saved.')})};
+var FORM_POST='https://docs.google.com/forms/d/e/1FAIpQLSdVQe_zMa3xuxvw31wdLszKdXx1Kc4aHKThMhFjEG5s3Tyhfw/formResponse',sending=false;
+function sendToForm(){
+  var dt=val('date').split('-'),fd=new URLSearchParams(),pr=val('price'),d=val('desc');
+  var free=/^\s*(free|no charge|no cost|\$0)\b/i.test(pr);
+  if(pr&&!free)d=('Cost: '+pr+'. '+d).trim();
+  fd.set('entry.1332374345',val('title'));
+  fd.set('entry.1015767542_year',dt[0]);fd.set('entry.1015767542_month',String(+dt[1]));fd.set('entry.1015767542_day',String(+dt[2]));
+  [['1017698842','start'],['206403826','end']].forEach(function(p){var t=val(p[1]);if(t){var a=t.split(':');fd.set('entry.'+p[0]+'_hour',String(+a[0]));fd.set('entry.'+p[0]+'_minute',String(+a[1]))}});
+  fd.set('entry.1519731879',val('town'));
+  fd.set('entry.759646954',val('place'));
+  fd.set('entry.674068551',val('addr'));
+  fd.set('entry.1709657516',val('addr')?'Yes':'No');
+  fd.set('entry.435414099',val('site'));
+  fd.set('entry.367686690',val('site')?'Yes':'No');
+  fd.set('entry.1573857090',d);
+  if(free)fd.set('entry.1937247590','Yes');
+  fd.set('entry.1759197141','No');
+  fd.set('entry.1662611451',val('cname'));
+  var ci=val('cinfo');if(/@/.test(ci))fd.set('entry.512742574',ci);else fd.set('entry.2114071500',ci);
+  fd.set('fvv','1');fd.set('pageHistory','0');
+  return fetch(FORM_POST,{method:'POST',mode:'no-cors',body:fd});
+}
 $('save').onclick=function(){
-  if(!val('date')||!val('title')){say('Add a title and date first.',1);return}
+  if(!val('title')||!val('date')){say('Add a title and date first.',1);return}
+  var pub=$('pub').checked;
+  if(pub&&!val('town')){say('Choose a town so people can find your event.',1);return}
+  if(pub&&!val('cinfo')){say('Add an email or phone number so we can reach you if we have a question. It is never shown.',1);return}
   dlBlob(new Blob([ics()],{type:'text/calendar'}),slug()+'.ics');
-  say($('pub').checked?'Calendar file ready. In the real version this event would now appear in your feed and on the 299 calendar.':'Calendar file ready.');
+  if(!pub){say('Calendar file ready.');return}
+  if($('hp').value){say('Calendar file ready.');return}
+  if(sending)return;sending=true;$('save').disabled=true;
+  sendToForm().then(function(){say('Sent! Your event is waiting for a quick check and will show on the 299 calendar once approved. Your calendar file was saved too.')})
+    .catch(function(){say('Your calendar file was saved, but sending to the 299 calendar did not work. Please try again, or use the regular form linked below.',1)})
+    .then(function(){sending=false;$('save').disabled=false});
 };
 // paste helper
 var MONTHS='january february march april may june july august september october november december'.split(' ');
