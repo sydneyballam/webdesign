@@ -75,7 +75,15 @@ WORK_CSS = '''
 .look small{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
 #emptyState{text-align:center;padding:2.5rem 1rem;border:2px dashed var(--muted);border-radius:var(--r-m,12px)}
 #emptyState p{margin:0 0 .5rem;color:var(--muted)}
-#cal-embed{background:#fff;border-radius:var(--r-m,12px);padding:.5rem;margin:1.5rem 0 1rem;min-height:12rem;color:#111}
+.booking{position:relative;margin:1.5rem 0 1rem;border-radius:26px;padding:3px;background:linear-gradient(135deg,#FFC93C,#FF7AA8 45%,#7B6CFF);box-shadow:0 22px 50px rgba(21,26,60,.35);color:#E6E9FF}
+.booking>*{position:relative}
+.booking::before{content:"";position:absolute;inset:3px;border-radius:23px;background:#151A3C}
+.bk-head{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .9rem;padding:1rem 1.4rem .4rem;font:600 .9375rem system-ui,sans-serif;color:#B4BBE8}
+.bk-head b{color:#fff;font-size:1.15rem;font-weight:800}
+.bk-ico{width:30px;height:30px;border-radius:9px;background:#FFC93C;position:relative;flex:0 0 auto}
+.bk-ico::before{content:"";position:absolute;left:7px;right:7px;top:10px;bottom:6px;border:2px solid #151A3C;border-radius:3px}
+.bk-ico::after{content:"";position:absolute;left:10px;right:10px;top:6px;height:5px;border-left:2px solid #151A3C;border-right:2px solid #151A3C}
+#cal-embed{background:transparent;border-radius:23px;padding:.25rem .5rem .6rem;min-height:14rem;color:#E6E9FF}
 .focus a:focus-visible,a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus,#1a56db);outline-offset:3px}
 html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 '''
@@ -83,9 +91,24 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 def book_block():
     b = C['book']
     return '''<h2>%s</h2><p>%s</p><p>%s</p>
-<div id="cal-embed"></div>
+<div class="booking"><div class="bk-head"><span class="bk-ico" aria-hidden="true"></span><b>Free first conversation</b><span>Pick any time that works for you</span></div><div id="cal-embed"></div></div>
 <p>Calendar not showing? <a id="cal-fallback" href="%s" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
 <noscript><p><a href="%s">Open the booking calendar</a></p></noscript>''' % (b['h2'], b['p1'], b['p2'], b['fallback'], b['fallback'])
+
+CAL_UI = 'Cal.ns["chat"]("ui", { theme: "dark", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { dark: { "cal-bg": "#151A3C", "cal-bg-subtle": "#1F2656", "cal-bg-emphasis": "#2B3375", "cal-bg-muted": "#1A2048", "cal-text": "#E6E9FF", "cal-text-emphasis": "#FFFFFF", "cal-text-subtle": "#B4BBE8", "cal-text-muted": "#8A93CF", "cal-border": "#323B86", "cal-border-subtle": "#2A3278", "cal-border-muted": "#232A66", "cal-border-emphasis": "#FFC93C", "cal-border-booker": "#151A3C", "cal-border-booker-width": "0px", "cal-brand": "#FFC93C", "cal-brand-emphasis": "#FFD95E", "cal-brand-text": "#151A3C", "radius": "1rem" } } });'
+
+def cal_js():
+    js = C['cal_js']
+    a = js.index('        Cal.ns["chat"]("ui", { theme: "light"')
+    z = js.index('        Cal.ns["chat"]("inline"')
+    js = js[:a] + '        ' + CAL_UI + '\n' + js[z:]
+    a = js.rindex('        Cal.ns["chat"]("ui", { theme: "light"')
+    z = js.index('    }\n    var box')
+    js = js[:a] + js[z:]
+    js = js.replace('        Cal.ns["chat"]("inline"', '        Cal.ns["chat"]("inline"')
+    k = js.index('calLink: link });') + len('calLink: link });')
+    js = js[:k] + '\n        ' + CAL_UI + js[k:]
+    return js.replace('config: { layout: "month_view", theme: "light" }', 'config: { layout: "month_view", theme: "dark" }')
 
 def page(n, fam, css, body, extra_js=''):
     return '''<!DOCTYPE html>
@@ -111,7 +134,7 @@ def page(n, fam, css, body, extra_js=''):
 %s
 </body>
 </html>
-''' % (DESC, fonts(*fam), css, WORK_CSS, PICK_CSS, body, '', C['cal_js'], work_js(), picker(n) + extra_js)
+''' % (DESC, fonts(*fam), css, WORK_CSS, PICK_CSS, body, '', cal_js(), work_js(), picker(n) + extra_js)
 
 def li(items): return ''.join(items)
 def plist(paras): return ''.join('<p>%s</p>' % p for p in paras)

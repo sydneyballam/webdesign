@@ -81,7 +81,15 @@
 .look small{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;opacity:.85}
 #emptyState{text-align:center;padding:2.5rem 1rem;border:2px dashed var(--muted);border-radius:var(--r-m,12px)}
 #emptyState p{margin:0 0 .5rem;color:var(--muted)}
-#cal-embed{background:#fff;border-radius:var(--r-m,12px);padding:.5rem;margin:1.5rem 0 1rem;min-height:12rem;color:#111}
+.booking{position:relative;margin:1.5rem 0 1rem;border-radius:26px;padding:3px;background:linear-gradient(135deg,#FFC93C,#FF7AA8 45%,#7B6CFF);box-shadow:0 22px 50px rgba(21,26,60,.35);color:#E6E9FF}
+.booking>*{position:relative}
+.booking::before{content:"";position:absolute;inset:3px;border-radius:23px;background:#151A3C}
+.bk-head{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .9rem;padding:1rem 1.4rem .4rem;font:600 .9375rem system-ui,sans-serif;color:#B4BBE8}
+.bk-head b{color:#fff;font-size:1.15rem;font-weight:800}
+.bk-ico{width:30px;height:30px;border-radius:9px;background:#FFC93C;position:relative;flex:0 0 auto}
+.bk-ico::before{content:"";position:absolute;left:7px;right:7px;top:10px;bottom:6px;border:2px solid #151A3C;border-radius:3px}
+.bk-ico::after{content:"";position:absolute;left:10px;right:10px;top:6px;height:5px;border-left:2px solid #151A3C;border-right:2px solid #151A3C}
+#cal-embed{background:transparent;border-radius:23px;padding:.25rem .5rem .6rem;min-height:14rem;color:#E6E9FF}
 .focus a:focus-visible,a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus,#1a56db);outline-offset:3px}
 html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
@@ -118,7 +126,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 </div></div><div class="door"><a class="" href="#book">Come in: book a free chat</a></div></div></section>
 <section class="shop " id="learn" style="--a:#B7791F;--b:#FFF7E0"><div class="awning"></div><div class="front"><div class="board"><p class="kick">Learn something</p><h2>A few handy things worth knowing.</h2></div><div class="window"><div class="items"><div class="item"><h3>What's the difference between CC and BCC?</h3><p><strong>To</strong> is the main recipient.</p><p><strong>CC</strong> sends a copy, and everyone can see each other's addresses.</p><p><strong>BCC</strong> sends a copy and hides the addresses.</p><p>When you email a group of customers, use BCC so they don't see each other's addresses.</p></div><div class="item"><h3>How to check an email before you click</h3><p>Look at the sender's actual address, not just the name next to it.</p><p>Take a moment with anything urgent, unexpected attachments, or links that don't match who the email says it's from.</p><p>Unsure? Pause, and call the company using a number you already have.</p></div><div class="item"><h3>Back up your important files</h3><p>Keep your business files in two places: your computer, and one other place such as a cloud folder or an external drive.</p><p>That way you always have a copy. Check now and then that the backup works.</p></div></div></div><div class="door"><a class="" href="#book">Come in: book a free chat</a></div></div></section>
 <section class="shop book" id="book" style="--a:#C8452D;--b:#F7EFE0"><div class="awning"></div><div class="front" style="grid-template-columns:1fr"><div class="window"><h2>Book a free first conversation.</h2><p>Tell me what you're working on or what you'd like to make easier. We'll talk it through in plain English. Add a note when you book and I'll see it ahead of time.</p><p>Serving Willow Creek and the surrounding area. Most of this also works by phone or video.</p>
-<div id="cal-embed"></div>
+<div class="booking"><div class="bk-head"><span class="bk-ico" aria-hidden="true"></span><b>Free first conversation</b><span>Pick any time that works for you</span></div><div id="cal-embed"></div></div>
 <p>Calendar not showing? <a id="cal-fallback" href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
 <noscript><p><a href="https://cal.com/syd-ballam-qcjhpv/free-first-conversation">Open the booking calendar</a></p></noscript></div></div></section><div class="walk"></div></main>
 <div class="foot"><span>Small Business Studio of Willow Creek · California</span><span>Practical help. Plain English. Every question welcome.</span></div>
@@ -133,9 +141,9 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
         if (started) return;
         started = true;
         Cal("init", "chat", { origin: "https://app.cal.com" });
-        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#2B5EA7", "cal-brand-emphasis": "#1C2541", "cal-brand-text": "#FFFFFF" } } });
-        Cal.ns["chat"]("inline", { elementOrSelector: "#cal-embed", config: { layout: "month_view", theme: "light" }, calLink: link });
-        Cal.ns["chat"]("ui", { theme: "light", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { light: { "cal-brand": "#2B5EA7" } } });
+        Cal.ns["chat"]("ui", { theme: "dark", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { dark: { "cal-bg": "#151A3C", "cal-bg-subtle": "#1F2656", "cal-bg-emphasis": "#2B3375", "cal-bg-muted": "#1A2048", "cal-text": "#E6E9FF", "cal-text-emphasis": "#FFFFFF", "cal-text-subtle": "#B4BBE8", "cal-text-muted": "#8A93CF", "cal-border": "#323B86", "cal-border-subtle": "#2A3278", "cal-border-muted": "#232A66", "cal-border-emphasis": "#FFC93C", "cal-border-booker": "#151A3C", "cal-border-booker-width": "0px", "cal-brand": "#FFC93C", "cal-brand-emphasis": "#FFD95E", "cal-brand-text": "#151A3C", "radius": "1rem" } } });
+        Cal.ns["chat"]("inline", { elementOrSelector: "#cal-embed", config: { layout: "month_view", theme: "dark" }, calLink: link });
+        Cal.ns["chat"]("ui", { theme: "dark", hideEventTypeDetails: false, layout: "month_view", cssVarsPerTheme: { dark: { "cal-bg": "#151A3C", "cal-bg-subtle": "#1F2656", "cal-bg-emphasis": "#2B3375", "cal-bg-muted": "#1A2048", "cal-text": "#E6E9FF", "cal-text-emphasis": "#FFFFFF", "cal-text-subtle": "#B4BBE8", "cal-text-muted": "#8A93CF", "cal-border": "#323B86", "cal-border-subtle": "#2A3278", "cal-border-muted": "#232A66", "cal-border-emphasis": "#FFC93C", "cal-border-booker": "#151A3C", "cal-border-booker-width": "0px", "cal-brand": "#FFC93C", "cal-brand-emphasis": "#FFD95E", "cal-brand-text": "#151A3C", "radius": "1rem" } } });
     }
     var box = document.getElementById('cal-embed');
     if ('IntersectionObserver' in window) {
