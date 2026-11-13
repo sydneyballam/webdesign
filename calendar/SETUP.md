@@ -126,3 +126,7 @@ Check these quickly. If two or more apply, leave it out or ask the organizer fir
 - The date, place or details don't match what you find anywhere else.
 - A form submission sent several events at once, all pointing to the same unfamiliar link.
 Remove an approved event at any time by deleting the Approved "Yes" for that row; it leaves the calendar at the next hourly update.
+
+## Adding the Hosted by, Cost and "Town not listed" questions
+
+Run `calendar/forms/add-fields.gs` once (instructions are at the top of the file). It adds those three questions to the live form and rebuilds the Public tab, with new `cost` and `source` columns. After that, the Event Desk page needs the three ENTRY numbers it prints.

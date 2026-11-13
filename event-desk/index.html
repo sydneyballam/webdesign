@@ -40,6 +40,7 @@ textarea{min-height:92px;resize:vertical}
 .btn.gold{background:var(--gold);color:var(--ink)}
 .preview{position:sticky;top:12px}
 canvas{width:100%;height:auto;border-radius:14px;box-shadow:0 12px 30px rgba(21,26,60,.25);background:#fff;display:block}
+.tick{display:flex;gap:10px;align-items:center;font-weight:500;margin:8px 0 0;min-height:44px}.tick input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--ink)}
 .note{font-size:.9rem;color:var(--muted);margin-top:8px}
 #msg{margin-top:12px;padding:12px 14px;border-radius:12px;background:#E9F8EE;color:#0E4D27;display:none;font-weight:600}
 #msg.err{background:#FDECEC;color:#7A1414}
@@ -66,29 +67,37 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
   </details>
 
   <form id="f" autocomplete="off" onsubmit="return false">
-    <label for="biz">Your business or group</label>
+    <label for="biz">Hosted by (your business or group)</label>
     <input id="biz" placeholder="Example: Willow Creek Community Hall">
     <label for="title">What's happening?</label>
     <input id="title" maxlength="70" placeholder="Example: Pie &amp; Coffee Morning">
     <div class="row">
       <div><label for="date">Date</label><input id="date" type="date"></div>
-      <div><label for="town">Town</label><select id="town"><option value="">Choose&hellip;</option><option>Willow Creek</option><option>Hoopa</option><option>Burnt Ranch</option><option>Big Bar</option><option>Salyer</option><option>Orleans</option><option>Junction City</option><option>Weaverville</option><option>Hayfork</option><option>Blue Lake</option><option>Arcata</option><option>McKinleyville</option><option>Eureka</option><option>Ferndale</option><option>Fortuna</option><option>Trinidad</option><option>Other</option></select></div>
+      <div><label for="date2">Last day <span style="font-weight:400;color:var(--muted)">(if more than one)</span></label><input id="date2" type="date"></div>
     </div>
+    <label for="town">Town</label>
+    <select id="town"><option value="">Choose&hellip;</option><option>Willow Creek</option><option>Hoopa</option><option>Burnt Ranch</option><option>Big Bar</option><option>Salyer</option><option>Orleans</option><option>Junction City</option><option>Weaverville</option><option>Hayfork</option><option>Blue Lake</option><option>Arcata</option><option>McKinleyville</option><option>Eureka</option><option>Ferndale</option><option>Fortuna</option><option>Trinidad</option><option value="__new">My town isn’t listed. Add it…</option></select>
+    <input id="newtown" hidden maxlength="40" placeholder="Type your town&rsquo;s name" style="margin-top:8px">
     <div class="row">
       <div><label for="start">Starts</label><input id="start" type="time"></div>
       <div><label for="end">Ends</label><input id="end" type="time"></div>
     </div>
     <label for="place">Where?</label>
     <input id="place" placeholder="Example: Community Hall, Highway 299">
-    <label for="price">Cost</label>
-    <input id="price" placeholder="Example: Free, or $7">
+    <label for="price">Cost <button type="button" id="freebtn" style="font:inherit;font-size:.85rem;font-weight:700;margin-left:8px;border:2px solid var(--line);background:#fff;border-radius:99px;padding:2px 12px;cursor:pointer">It’s free</button></label>
+    <input id="price" placeholder="Example: Free, or $7, or kids free">
     <label for="desc">A line or two about it <span id="cnt" style="font-weight:400;color:var(--muted)"></span></label>
     <textarea id="desc" maxlength="260" placeholder="Example: Home-baked pie, hot coffee and good company. Everyone is welcome."></textarea>
 
     <label for="addr">Street address <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
     <input id="addr" placeholder="Example: 123 Main St">
+    <label class="tick"><input id="showaddr" type="checkbox" checked> Show the address on the calendar</label>
     <label for="site">Website or Facebook page <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
     <input id="site" inputmode="url" placeholder="Example: facebook.com/yourpage">
+    <label class="tick"><input id="showsite" type="checkbox" checked> Show this link on the calendar</label>
+    <label for="flyer">Link to your flyer <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+    <input id="flyer" inputmode="url" placeholder="Example: a link to the flyer on your page">
+    <label class="tick"><input id="showflyer" type="checkbox"> Show the flyer link on the calendar</label>
 
     <label>Flyer style</label>
     <div class="chips" id="styles">
@@ -118,7 +127,9 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
     <div id="contact" class="paste" style="margin-top:10px">
       <b>So we can reach you (never shown)</b>
       <label for="cname" style="margin-top:8px">Your name</label><input id="cname" autocomplete="name">
-      <label for="cinfo">Email or phone</label><input id="cinfo" autocomplete="email" inputmode="email">
+      <label for="cinfo">Email</label><input id="cinfo" autocomplete="email" inputmode="email">
+      <label for="cphone">Phone</label><input id="cphone" autocomplete="tel" inputmode="tel">
+      <div class="note">Email or phone, at least one.</div>
       <input id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
     </div>
   </form>
@@ -178,6 +189,7 @@ function draw(){
   var y=st==='poster'?170:150;
   if(val('date')){var dd=pd(val('date'));var mon=dd.toLocaleDateString('en-US',{month:'short'}).toUpperCase(),dn=dd.getDate();
     var bw=190,bh=210,wk=dd.toLocaleDateString('en-US',{weekday:'long'});
+    if(val('date2')&&val('date2')>val('date')){var d2=pd(val('date2'));wk=dd.toLocaleDateString('en-US',{weekday:'short'})+' to '+d2.toLocaleDateString('en-US',{weekday:'short'})}
     x.font='800 46px system-ui,Helvetica,Arial,sans-serif';var iw=x.measureText(wk).width;x.font='600 38px system-ui,Helvetica,Arial,sans-serif';iw=Math.max(iw,x.measureText(tm).width);if(price){x.font='800 36px system-ui,Helvetica,Arial,sans-serif';iw=Math.max(iw,x.measureText(price).width+44)}
     var L=cx-(bw+36+iw)/2;rr(L,y,bw,bh,28);x.fillStyle=st==='bold'?on:col;x.fill();
     var bc=st==='bold'?col:on;x.fillStyle=bc;x.font='800 44px system-ui,Helvetica,Arial,sans-serif';x.textAlign='center';x.fillText(mon,L+bw/2,y+22);x.font='900 112px system-ui,Helvetica,Arial,sans-serif';x.fillText(String(dn),L+bw/2,y+70);x.textAlign='left';
@@ -205,10 +217,11 @@ function draw(){
   var pf=fit(place,mw,48,32,'800',2);lines(pf,cx,fy+32,fg,1.2);
   x.font='600 30px system-ui,Helvetica,Arial,sans-serif';x.fillStyle=sub;x.fillText('Part of What\u2019s Going On Along the 299',cx,H-90);x.textAlign='left';
 }
-function placeStr(){var pl=val('place'),tn=val('town');return tn&&pl.toLowerCase().indexOf(tn.toLowerCase())<0?[pl,tn].filter(Boolean).join(', '):pl||tn}
+function placeStr(){var pl=val('place'),tn=townName();return tn&&pl.toLowerCase().indexOf(tn.toLowerCase())<0?[pl,tn].filter(Boolean).join(', '):pl||tn}
 function caption(){
-  var t=val('title'),b=val('biz'),w=dayLong(val('date')),tm=timeLine(),p=placeStr();
-  return [t+(b?' at '+b:''),'',w+(tm?', '+tm:''),p,val('price'),'',val('desc')].filter(function(s,i,a){return s||(i>0&&a[i-1])}).join('\n').replace(/\n{3,}/g,'\n\n').trim()
+  var d1=val('date'),d2=val('date2'),w=dayLong(d1)+(d2&&d2>d1?' to '+dayLong(d2):''),tm=timeLine(),host=val('biz');
+  var parts=[val('title')+(host?' with '+host:''),'',w+(tm?', '+tm:''),[placeStr(),val('addr')].filter(Boolean).join(', '),val('price')?'Cost: '+val('price'):'','',val('desc'),'',val('site')];
+  return parts.join('\n').replace(/\n{3,}/g,'\n\n').trim()
 }
 function csv(){
   function q(s){s=s||'';return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s}
@@ -221,8 +234,8 @@ function ics(){
   var dt=val('date'),s=val('start')||'09:00',e=val('end')||s;
   var now=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'');
   return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Event Desk//EN','BEGIN:VEVENT','UID:'+Date.now()+'@eventdesk','DTSTAMP:'+now,
-   'DTSTART:'+z(dt)+'T'+z(s)+'00','DTEND:'+z(dt)+'T'+z(e)+'00','SUMMARY:'+esc(val('title')),
-   'LOCATION:'+esc(placeStr()),'DESCRIPTION:'+esc(val('desc')),'END:VEVENT','END:VCALENDAR'].join('\r\n')
+   'DTSTART:'+z(dt)+'T'+z(s)+'00','DTEND:'+z(val('date2')&&val('date2')>dt?val('date2'):dt)+'T'+z(e)+'00','SUMMARY:'+esc(val('title')),
+   'LOCATION:'+esc(placeStr()),'DESCRIPTION:'+esc((val('price')?'Cost: '+val('price')+'. ':'')+val('desc')),'END:VEVENT','END:VCALENDAR'].join('\r\n')
 }
 function say(t,err){var m=$('msg');m.textContent=t;m.className=err?'err':'';m.style.display='block'}
 function blob(cb){c.toBlob(cb,'image/png')}
@@ -250,33 +263,48 @@ $('share').onclick=function(){
   });
 };
 $('dl').onclick=function(){blob(function(b){dlBlob(b,slug()+'.png');say('Flyer picture saved.')})};
+document.getElementById('town').addEventListener('change',function(){var n=$('newtown');n.hidden=this.value!=='__new';if(!n.hidden)n.focus();refresh()});
+$('freebtn').onclick=function(){$('price').value='Free';refresh()};
+function townName(){var t=val('town');return t==='__new'?val('newtown'):t}
 var FORM_POST='https://docs.google.com/forms/d/e/1FAIpQLSdVQe_zMa3xuxvw31wdLszKdXx1Kc4aHKThMhFjEG5s3Tyhfw/formResponse',sending=false;
+var ENTRY={host:null,cost:null,other:null}; // filled in once the three new form questions exist
 function sendToForm(){
-  var dt=val('date').split('-'),fd=new URLSearchParams(),pr=val('price'),d=val('desc');
+  var dt=val('date').split('-'),fd=new URLSearchParams(),pr=val('price'),d=val('desc'),host=val('biz');
   var free=/^\s*(free|no charge|no cost|\$0)\b/i.test(pr);
-  if(pr&&!free)d=('Cost: '+pr+'. '+d).trim();
+  var town=townName(),isNew=val('town')==='__new',pre=[];
+  if(host&&!ENTRY.host)pre.push('Hosted by '+host+'.');
+  if(pr&&!free&&!ENTRY.cost)pre.push('Cost: '+pr+'.');
+  if(isNew&&!ENTRY.other)pre.push('Town: '+town+'.');
+  d=(pre.join(' ')+' '+d).trim();
   fd.set('entry.1332374345',val('title'));
   fd.set('entry.1015767542_year',dt[0]);fd.set('entry.1015767542_month',String(+dt[1]));fd.set('entry.1015767542_day',String(+dt[2]));
+  var d2=val('date2');if(d2&&d2>val('date')){var e2=d2.split('-');fd.set('entry.64711560_year',e2[0]);fd.set('entry.64711560_month',String(+e2[1]));fd.set('entry.64711560_day',String(+e2[2]))}
   [['1017698842','start'],['206403826','end']].forEach(function(p){var t=val(p[1]);if(t){var a=t.split(':');fd.set('entry.'+p[0]+'_hour',String(+a[0]));fd.set('entry.'+p[0]+'_minute',String(+a[1]))}});
-  fd.set('entry.1519731879',val('town'));
+  fd.set('entry.1519731879',isNew?'Other':town);
+  if(isNew&&ENTRY.other)fd.set('entry.'+ENTRY.other,town);
+  if(host&&ENTRY.host)fd.set('entry.'+ENTRY.host,host);
+  if(pr&&!free&&ENTRY.cost)fd.set('entry.'+ENTRY.cost,pr);
   fd.set('entry.759646954',val('place'));
   fd.set('entry.674068551',val('addr'));
-  fd.set('entry.1709657516',val('addr')?'Yes':'No');
+  fd.set('entry.1709657516',val('addr')&&$('showaddr').checked?'Yes':'No');
   fd.set('entry.435414099',val('site'));
-  fd.set('entry.367686690',val('site')?'Yes':'No');
+  fd.set('entry.367686690',val('site')&&$('showsite').checked?'Yes':'No');
   fd.set('entry.1573857090',d);
   if(free)fd.set('entry.1937247590','Yes');
-  fd.set('entry.1759197141','No');
+  fd.set('entry.2008768941',val('flyer'));
+  fd.set('entry.1759197141',val('flyer')&&$('showflyer').checked?'Yes':'No');
   fd.set('entry.1662611451',val('cname'));
-  var ci=val('cinfo');if(/@/.test(ci))fd.set('entry.512742574',ci);else fd.set('entry.2114071500',ci);
+  fd.set('entry.512742574',val('cinfo'));
+  fd.set('entry.2114071500',val('cphone'));
   fd.set('fvv','1');fd.set('pageHistory','0');
   return fetch(FORM_POST,{method:'POST',mode:'no-cors',body:fd});
 }
 $('save').onclick=function(){
   if(!val('title')||!val('date')){say('Add a title and date first.',1);return}
   var pub=$('pub').checked;
-  if(pub&&!val('town')){say('Choose a town so people can find your event.',1);return}
-  if(pub&&!val('cinfo')){say('Add an email or phone number so we can reach you if we have a question. It is never shown.',1);return}
+  if(pub&&!townName()){say(val('town')==='__new'?'Type the name of your town.':'Choose a town so people can find your event.',1);return}
+  if(val('date2')&&val('date2')<val('date')){say('The last day is before the first day.',1);return}
+  if(pub&&!val('cinfo')&&!val('cphone')){say('Add an email or phone number so we can reach you if we have a question. It is never shown.',1);return}
   dlBlob(new Blob([ics()],{type:'text/calendar'}),slug()+'.ics');
   if(!pub){say('Calendar file ready.');return}
   if($('hp').value){say('Calendar file ready.');return}
