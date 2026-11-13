@@ -29,7 +29,7 @@ textarea{min-height:92px;resize:vertical}
 .chips span{display:inline-block;padding:10px 16px;border:2px solid var(--line);border-radius:99px;background:#fff;cursor:pointer;min-height:44px}
 .chips input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
 .chips input:focus-visible+span{outline:3px solid var(--violet);outline-offset:2px}
-.sw span{width:44px;height:44px;padding:0;border-radius:50%;border-width:3px}
+.sw .auto{width:auto}.sw span{width:44px;height:44px;padding:0;border-radius:50%;border-width:3px}
 .sw input:checked+span{box-shadow:0 0 0 3px var(--paper),0 0 0 6px var(--ink)}
 .paste{background:#fff;border:2px dashed var(--violet);border-radius:14px;padding:12px 14px;margin-bottom:6px}
 .paste summary{font-weight:700;cursor:pointer;min-height:32px}
@@ -99,6 +99,16 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
       <label><input type="radio" name="color" value="#3B82F6" aria-label="Blue"><span style="background:#3B82F6"></span></label>
       <label><input type="radio" name="color" value="#7B6CFF" aria-label="Violet"><span style="background:#7B6CFF"></span></label>
     </div>
+    <label>Text color</label>
+    <div class="chips sw" id="tcolors">
+      <label><input type="radio" name="tcolor" value="auto" checked aria-label="Automatic"><span class="auto" style="width:auto;padding:0 16px;border-width:2px;border-radius:99px;font-size:.95rem;display:inline-flex;align-items:center;height:44px">Auto</span></label>
+      <label><input type="radio" name="tcolor" value="#FFFFFF" aria-label="White"><span style="background:#fff;border-color:#C9CFF5"></span></label>
+      <label><input type="radio" name="tcolor" value="#151A3C" aria-label="Navy"><span style="background:#151A3C"></span></label>
+      <label><input type="radio" name="tcolor" value="#000000" aria-label="Black"><span style="background:#000"></span></label>
+      <label><input type="radio" name="tcolor" value="#FFC93C" aria-label="Gold"><span style="background:#FFC93C"></span></label>
+      <label><input type="radio" name="tcolor" value="#FF4F8B" aria-label="Pink"><span style="background:#FF4F8B"></span></label>
+    </div>
+    <div class="note" id="contrast"></div>
     <label class="chips" style="margin-top:16px"><span style="display:flex;gap:10px;align-items:center;border-radius:14px;width:100%"><input id="pub" type="checkbox" checked style="position:static;opacity:1;width:22px;height:22px;margin:0"> List this on What's Going On Along the 299</span></label>
   </form>
 </section>
@@ -147,6 +157,8 @@ function draw(){
   if(st==='bold'){bg=col;fg=on;sub=on}
   else if(st==='poster'){bg='#151A3C';fg='#FFFFFF';sub='#C9CFF5'}
   else{bg='#FFFFFF';fg='#151A3C';sub='#5A6088'}
+  var tc=radio('tcolor');if(tc!=='auto'){fg=tc;sub=tc}
+  var cd=Math.abs(lum(bg)-lum(fg));$('contrast').textContent=cd<.35?'Heads up: this text color may be hard to read on this background.':'';
   x.fillStyle=bg;x.fillRect(0,0,W,H);
   if(st==='poster'){x.fillStyle=col;x.fillRect(0,0,W,40);x.fillRect(0,H-40,W,40);x.fillStyle=col;x.beginPath();x.arc(W-60,420,260,0,7);x.globalAlpha=.18;x.fill();x.globalAlpha=1}
   if(st==='clean'){x.fillStyle=col;x.fillRect(0,0,34,H);x.fillRect(0,H-26,W,26)}
