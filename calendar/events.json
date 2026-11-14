@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T10:49:43Z",
+ "updated": "2026-11-14T11:46:45Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -1424,6 +1424,26 @@
    "lat": 40.800386,
    "lng": -124.165149,
    "approx": false
+  },
+  {
+   "id": "6f3b911a85d9",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-11-20",
+   "end_date": "2026-11-20",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "8402486ce8d9",
@@ -3025,6 +3045,26 @@
    "approx": true
   },
   {
+   "id": "ef481ea66aaa",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-11-27",
+   "end_date": "2026-11-27",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
+  },
+  {
    "id": "e145bfa75fe3",
    "title": "Santa Arrives in Old Town",
    "date": "2026-11-27",
@@ -4549,6 +4589,26 @@
    "approx": true
   },
   {
+   "id": "9339ae72ce35",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-04",
+   "end_date": "2026-12-04",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
+  },
+  {
    "id": "3287d0da1bb4",
    "title": "Writers of Willow Creek",
    "date": "2026-12-04",
@@ -5990,6 +6050,26 @@
    "approx": false
   },
   {
+   "id": "ec1fa84ae11b",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-11",
+   "end_date": "2026-12-11",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
+  },
+  {
    "id": "9a3a9d4f6d44",
    "title": "Writers of Willow Creek",
    "date": "2026-12-11",
@@ -6902,6 +6982,26 @@
    "approx": false
   },
   {
+   "id": "5488281c67eb",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-18",
+   "end_date": "2026-12-18",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
+  },
+  {
    "id": "19bae3e1102b",
    "title": "Christmas @ the Acres",
    "date": "2026-12-18",
@@ -7772,6 +7872,26 @@
    "lat": 40.585816,
    "lng": -124.265927,
    "approx": false
+  },
+  {
+   "id": "6dcfa45f1f7d",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-25",
+   "end_date": "2026-12-25",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "8735754bd095",
