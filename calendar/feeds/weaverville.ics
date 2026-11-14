@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:9257edbb3221@community-calendar
-DTSTAMP:20261114T070610Z
+DTSTAMP:20261114T080828Z
 DTSTART:20261114T100000
 DTEND:20261114T160000
 SUMMARY:Festival of Light Arts & Fine Crafts Event
@@ -22,7 +22,7 @@ URL:https://trinitycountyarts.org
 END:VEVENT
 BEGIN:VEVENT
 UID:3eae2492bcf7@community-calendar
-DTSTAMP:20261114T070610Z
+DTSTAMP:20261114T080828Z
 DTSTART:20261118T180000
 DTEND:20261118T190000
 SUMMARY:Bunco Night (Soroptimist)
@@ -33,7 +33,7 @@ DESCRIPTION:Soroptimist's Fun in the Fall Wednesday game night: Bunco! A f
 END:VEVENT
 BEGIN:VEVENT
 UID:5c884cbd7e06@community-calendar
-DTSTAMP:20261114T070610Z
+DTSTAMP:20261114T080828Z
 DTSTART:20261118T180000
 DTEND:20261118T190000
 SUMMARY:Trivia Night at Trinity County Brewing Company
@@ -43,8 +43,19 @@ DESCRIPTION:Wednesday night trivia at Trinity County Brewing Company: brai
  .
 END:VEVENT
 BEGIN:VEVENT
+UID:6f3b911a85d9@community-calendar
+DTSTAMP:20261114T080828Z
+DTSTART:20261120T110000
+DTEND:20261120T120000
+SUMMARY:TAGA weekly golf tournament
+LOCATION:Trinity Alps Golf Course
+DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
+ y Friday morning at 11 a.m.\, Trinity Alps Golf Course in Weaverville. We
+ ather permitting. All golfers with an established handicap are welcome.
+END:VEVENT
+BEGIN:VEVENT
 UID:361485cf02c5@community-calendar
-DTSTAMP:20261114T070610Z
+DTSTAMP:20261114T080828Z
 DTSTART:20261121T140000
 DTEND:20261121T220000
 SUMMARY:Tapacapalooza II 2026
@@ -59,7 +70,7 @@ DESCRIPTION:A music festival celebrating local Trinity County bands\, pres
 END:VEVENT
 BEGIN:VEVENT
 UID:68224c0a3af5@community-calendar
-DTSTAMP:20261114T070610Z
+DTSTAMP:20261114T080828Z
 DTSTART:20261126T113000
 DTEND:20261126T123000
 SUMMARY:Free Community Thanksgiving Dinner
@@ -70,8 +81,52 @@ DESCRIPTION:Doors open at 11:30 for appetizers. Dinner is served at noon.
  d Sharron Scott\, partnering with Mountain Chapel.
 END:VEVENT
 BEGIN:VEVENT
+UID:ef481ea66aaa@community-calendar
+DTSTAMP:20261114T080828Z
+DTSTART:20261127T110000
+DTEND:20261127T120000
+SUMMARY:TAGA weekly golf tournament
+LOCATION:Trinity Alps Golf Course
+DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
+ y Friday morning at 11 a.m.\, Trinity Alps Golf Course in Weaverville. We
+ ather permitting. All golfers with an established handicap are welcome.
+END:VEVENT
+BEGIN:VEVENT
+UID:9339ae72ce35@community-calendar
+DTSTAMP:20261114T080828Z
+DTSTART:20261204T110000
+DTEND:20261204T120000
+SUMMARY:TAGA weekly golf tournament
+LOCATION:Trinity Alps Golf Course
+DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
+ y Friday morning at 11 a.m.\, Trinity Alps Golf Course in Weaverville. We
+ ather permitting. All golfers with an established handicap are welcome.
+END:VEVENT
+BEGIN:VEVENT
+UID:ec1fa84ae11b@community-calendar
+DTSTAMP:20261114T080828Z
+DTSTART:20261211T110000
+DTEND:20261211T120000
+SUMMARY:TAGA weekly golf tournament
+LOCATION:Trinity Alps Golf Course
+DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
+ y Friday morning at 11 a.m.\, Trinity Alps Golf Course in Weaverville. We
+ ather permitting. All golfers with an established handicap are welcome.
+END:VEVENT
+BEGIN:VEVENT
+UID:5488281c67eb@community-calendar
+DTSTAMP:20261114T080828Z
+DTSTART:20261218T110000
+DTEND:20261218T120000
+SUMMARY:TAGA weekly golf tournament
+LOCATION:Trinity Alps Golf Course
+DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
+ y Friday morning at 11 a.m.\, Trinity Alps Golf Course in Weaverville. We
+ ather permitting. All golfers with an established handicap are welcome.
+END:VEVENT
+BEGIN:VEVENT
 UID:ef318aa31ffd@community-calendar
-DTSTAMP:20261114T070610Z
+DTSTAMP:20261114T080828Z
 DTSTART:20261219T180000
 DTEND:20261219T190000
 SUMMARY:Christmas Parade: 46th Annual Mountain Magic Christmas
@@ -79,5 +134,16 @@ LOCATION:Historic Weaverville
 DESCRIPTION:The Christmas Parade for the 46th annual Mountain Magic Christ
  mas in Historic Weaverville\, hosted by the Weaverville Chamber of Commer
  ce.
+END:VEVENT
+BEGIN:VEVENT
+UID:6dcfa45f1f7d@community-calendar
+DTSTAMP:20261114T080828Z
+DTSTART:20261225T110000
+DTEND:20261225T120000
+SUMMARY:TAGA weekly golf tournament
+LOCATION:Trinity Alps Golf Course
+DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
+ y Friday morning at 11 a.m.\, Trinity Alps Golf Course in Weaverville. We
+ ather permitting. All golfers with an established handicap are welcome.
 END:VEVENT
 END:VCALENDAR
