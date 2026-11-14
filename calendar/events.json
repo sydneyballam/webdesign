@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T23:47:20Z",
+ "updated": "2026-11-14T01:07:13Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -203,26 +203,6 @@
    "approx": false
   },
   {
-   "id": "b0c08ef4f5df",
-   "title": "Writers of Willow Creek",
-   "date": "2026-11-13",
-   "end_date": "2026-11-13",
-   "start_time": "14:00",
-   "end_time": "15:00",
-   "town": "Willow Creek",
-   "place": "Willow Creek Library",
-   "address": "39 Mayfair St",
-   "website": "https://willowcreekchamber.com/event/writers-of-willow-creek/2026-11-13/",
-   "description": "A weekly meetup of local writers to create, share, and connect! Stop by, get support and feedback, and be a part of the creative process.",
-   "free": false,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
-   "approx": true
-  },
-  {
    "id": "020122d82fac",
    "title": "Fig Twig Holiday Market (Friday)",
    "date": "2026-11-13",
@@ -241,26 +221,6 @@
    "source_url": "https://www.instagram.com/figtwigmarket/",
    "lat": 40.78046,
    "lng": -124.129808,
-   "approx": false
-  },
-  {
-   "id": "69b2e027795f",
-   "title": "Yoga for Every Body",
-   "date": "2026-11-13",
-   "end_date": "2026-11-13",
-   "start_time": "16:00",
-   "end_time": "17:00",
-   "town": "Willow Creek",
-   "place": "Trinity Herbals & Wellness Center",
-   "address": "39025 HWY 299",
-   "website": "https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-11-13/",
-   "description": "",
-   "free": false,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939334,
-   "lng": -123.631042,
    "approx": false
   },
   {
@@ -3788,6 +3748,27 @@
    "approx": false
   },
   {
+   "id": "c4d1749b95bf",
+   "title": "\"The Sting of the Barb\" Holiday Dinner Theater",
+   "date": "2026-11-28",
+   "end_date": "2026-11-28",
+   "start_time": "19:00",
+   "end_time": "",
+   "town": "Eureka",
+   "place": "Eureka Woman\u2019s Club",
+   "address": "1531 J St",
+   "website": "https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner-theater/",
+   "description": "An original murder mystery by Linden Tyler set at a 1930s Christmas party, with dinner included. Shows: Friday 11/27 at 7pm; Saturday 11/28 at 1pm and 7pm. Saturday evening\u2019s show benefits the Breast & GYN Health Project. $55 general, $50 seniors/students; 56 seats per show. Tickets & info",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "also": [],
+   "lat": 40.794129,
+   "lng": -124.159444,
+   "approx": false
+  },
+  {
    "id": "624ecbbd39d6",
    "title": "Threshold:UP featuring Beats Antique",
    "date": "2026-11-28",
@@ -6338,6 +6319,26 @@
    "approx": true
   },
   {
+   "id": "2a1e32acbcbe",
+   "title": "Yoga for Every Body",
+   "date": "2026-12-11",
+   "end_date": "2026-12-11",
+   "start_time": "16:00",
+   "end_time": "17:00",
+   "town": "Willow Creek",
+   "place": "Trinity Herbals & Wellness Center",
+   "address": "39025 HWY 299",
+   "website": "https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-11/",
+   "description": "",
+   "free": false,
+   "category": "",
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
+  },
+  {
    "id": "68a858c189d7",
    "title": "Al Gray Lighted Parade",
    "date": "2026-12-11",
@@ -6747,6 +6748,26 @@
    ],
    "lat": 40.576838,
    "lng": -124.263508,
+   "approx": false
+  },
+  {
+   "id": "999c5fd1bd7f",
+   "title": "Rooted in Soul Flow Yoga",
+   "date": "2026-12-14",
+   "end_date": "2026-12-14",
+   "start_time": "18:00",
+   "end_time": "19:15",
+   "town": "Willow Creek",
+   "place": "Trinity Herbals & Wellness Center",
+   "address": "39025 HWY 299",
+   "website": "https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-14/",
+   "description": "Mondays 6-7:15pm. 5 week series. Sept 21-Oct 19",
+   "free": false,
+   "category": "",
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939334,
+   "lng": -123.631042,
    "approx": false
   },
   {
