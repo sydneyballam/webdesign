@@ -14,7 +14,7 @@ body{margin:0;font:17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-seri
 header{background:var(--ink);color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 header{flex-wrap:wrap}header a{color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:10px 4px;min-height:44px;display:inline-flex;align-items:center}header a:hover,header a:focus-visible{text-decoration:underline}header a.back{color:var(--gold)}header nav{display:flex;gap:14px;margin-right:auto}header b{font-size:1.05rem}
 header span{font-size:.8rem;background:var(--gold);color:var(--ink);padding:3px 10px;border-radius:99px;font-weight:700}
-main{display:grid;gap:24px;padding:16px;max-width:1100px;margin:0 auto}
+main{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;padding:16px;max-width:1100px;margin:0 auto}
 @media(min-width:860px){main{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;padding:28px}}
 h1{font-size:1.5rem;margin:0 0 4px;line-height:1.15}
 p.sub{margin:0 0 16px;color:var(--muted)}
@@ -22,7 +22,7 @@ label{display:block;font-weight:700;margin:14px 0 6px;font-size:.95rem}
 input,textarea,select{width:100%;font:inherit;padding:13px 14px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
 input:focus,textarea:focus,select:focus{outline:3px solid var(--violet);outline-offset:1px;border-color:var(--violet)}
 textarea{min-height:92px;resize:vertical}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.row>div{min-width:0}input[type=date],input[type=time]{min-width:0;max-width:100%}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips label{margin:0;font-weight:600}
 .chips input{position:absolute;opacity:0;width:1px;height:1px}
@@ -51,7 +51,9 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
 </style>
 </head>
 <body>
-<header><a class="back" href="../">← Small Business Studio</a><nav><a href="../#book">Book a chat</a><a href="../calendar/">299 calendar</a></nav><b>Event Desk</b><span>Prototype</span></header>
+<!--sitebar--><style>.sitebar{background:#151A3C;color:#fff;font:600 15px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px;padding:2px 10px;position:relative;z-index:50}.sitebar b{margin-right:auto;padding:10px 6px;font-weight:800}.sitebar a{color:#fff;text-decoration:none;padding:0 12px;min-height:44px;display:inline-flex;align-items:center;border-radius:8px}.sitebar a:hover,.sitebar a:focus-visible{background:rgba(255,255,255,.16);outline:2px solid #FFC93C;outline-offset:-2px}.sitebar a[aria-current]{color:#FFC93C;text-decoration:underline;text-underline-offset:5px}</style><nav class="sitebar" aria-label="All pages"><b>Willow Creek</b><a href="../">Small Business Studio</a><a href="../calendar/">Events calendar</a><a href="../event-desk/" aria-current="page">Event Desk</a></nav><!--/sitebar-->
+
+<header><b>Event Desk</b><span>Prototype</span></header>
 <main>
 <section>
   <h1>Add an event</h1>

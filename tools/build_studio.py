@@ -3,6 +3,7 @@ index.html = Design 1 (Harbor). studio-2.html .. studio-5.html = Designs 2 to 5.
 Run: python3 tools/build_studio.py"""
 import os, re
 import content
+import sitebar
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 C = content.load()
@@ -111,7 +112,7 @@ def cal_js():
     return js.replace('config: { layout: "month_view", theme: "light" }', 'config: { layout: "month_view", theme: "dark" }')
 
 def page(n, fam, css, body, extra_js=''):
-    return '''<!DOCTYPE html>
+    return sitebar.inject_html('''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -134,7 +135,7 @@ def page(n, fam, css, body, extra_js=''):
 %s
 </body>
 </html>
-''' % (DESC, fonts(*fam), css, WORK_CSS, PICK_CSS, body, '', cal_js(), work_js(), picker(n) + extra_js)
+''' % (DESC, fonts(*fam), css, WORK_CSS, PICK_CSS, body, '', cal_js(), work_js(), picker(n) + extra_js), '', 'studio')
 
 def li(items): return ''.join(items)
 def plist(paras): return ''.join('<p>%s</p>' % p for p in paras)
@@ -161,4 +162,5 @@ if __name__ == '__main__':
     # the original design stays available, outside the random rotation
     classic = open(os.path.join(ROOT, 'tools', 'harbor-source.html'), encoding='utf-8').read()
     classic = classic.replace('<head>\n', '<head>\n<link rel="canonical" href="https://sydneyballam.github.io/webdesign/">\n', 1)
+    classic = sitebar.inject_html(classic, '', 'studio')
     open(os.path.join(ROOT, 'classic.html'), 'w', encoding='utf-8').write(classic)
