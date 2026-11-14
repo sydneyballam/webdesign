@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T11:46:45Z",
+ "updated": "2026-11-14T13:56:46Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -284,26 +284,6 @@
    "lat": 40.8021,
    "lng": -124.1637,
    "approx": true
-  },
-  {
-   "id": "44129f52b94a",
-   "title": "Chocolate Chip Cookie Cake Class",
-   "date": "2026-11-14",
-   "end_date": "2026-11-14",
-   "start_time": "13:00",
-   "end_time": "13:00",
-   "town": "Eureka",
-   "place": "Carl Johnson Company",
-   "address": "3950 Jacobs Ave",
-   "website": "https://www.visiteureka.com/event/chocolate-chip-cookie-cake-class/",
-   "description": "Cookie cake decorating class with Jeny Giraud, finalist on \u201cThe Greatest Baker.\u201d $50 per person. Sign up",
-   "free": false,
-   "category": "",
-   "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.805235,
-   "lng": -124.137023,
-   "approx": false
   },
   {
    "id": "43899836227a",
@@ -7699,6 +7679,26 @@
    ],
    "lat": 40.585816,
    "lng": -124.265927,
+   "approx": false
+  },
+  {
+   "id": "d9cda11aa348",
+   "title": "Christmas Cake Decorating Class",
+   "date": "2026-12-23",
+   "end_date": "2026-12-23",
+   "start_time": "17:00",
+   "end_time": "17:00",
+   "town": "Eureka",
+   "place": "Carl Johnson Company",
+   "address": "3950 Jacobs Ave",
+   "website": "https://www.visiteureka.com/event/christmas-cake-decorating-class/",
+   "description": "Vintage-style Christmas cake decorating; choose chocolate or gingerbread. $55 per person. Sign up",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.805235,
+   "lng": -124.137023,
    "approx": false
   },
   {
