@@ -132,6 +132,7 @@ footer{padding-top:22px;padding-bottom:40px;font-size:14px;color:var(--body)}
 body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:22px;align-items:start}
 .fcard{background:#fff;color:#151A3C;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(21,26,60,.18);display:flex;flex-direction:column}
 .fcard canvas{display:block;width:100%;height:auto;aspect-ratio:4/5;background:#E9ECFA}
+.fwrap{position:relative}.fwrap .flink{position:absolute;display:block;cursor:pointer;border-radius:8px}.fwrap .flink:hover{background:rgba(255,255,255,.22);outline:2px solid rgba(21,26,60,.35)}
 .fcard .fbody{padding:12px 14px 14px;font-size:15px;line-height:1.4}
 .fcard .fbody .actions{margin-top:10px}
 .fcard .fbody .where,.fcard .fbody .mi,.fcard .fbody .src{margin:0 0 6px}
@@ -366,7 +367,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
     var k = e.id + '|' + e.date; flyerData[k] = o;
     var label = e.title + '. ' + whenText(e) + '. ' + place + '.' + (o.price ? ' ' + o.price + '.' : '') + (o.desc ? ' ' + o.desc : '');
     var maps = e.address ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(e.address + ', ' + e.town + ', CA') : '';
-    return '<article class="fcard"><canvas role="img" data-flk="' + esc(k) + '" aria-label="' + esc(label) + '" width="648" height="810"></canvas><div class="fbody">' +
+    return '<article class="fcard"><div class="fwrap"><canvas role="img" data-flk="' + esc(k) + '" aria-label="' + esc(label) + '" width="648" height="810"></canvas></div><div class="fbody">' +
       (ongoing ? '<div class="when"><span class="pill">Still on this week</span></div>' : '') +
       (e.address ? '<div class="where">' + esc(e.address) + '</div>' : '') +
       (state.near && away(e) !== null ? '<div class="mi">About ' + (away(e) < 1 ? 'less than 1' : Math.round(away(e))) + ' mi away</div>' : '') +
@@ -382,7 +383,20 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
   function paintFlyers() {
     if (!FLYERS) return;
     var cs = document.querySelectorAll('canvas[data-flk]');
-    function paint(cv) { var o = flyerData[cv.getAttribute('data-flk')]; if (o) try { Flyer.draw(cv, o, 0.6); } catch (err) {} }
+    function paint(cv) {
+      var o = flyerData[cv.getAttribute('data-flk')]; if (!o) return;
+      try {
+        var r = Flyer.draw(cv, o, 0.6), w = cv.parentNode;
+        var old = w.querySelector('a.flink'); if (old) old.remove();
+        if (r.siteBox && o.site && /^https?:\/\//i.test(o.site)) {
+          var b = r.siteBox, a = document.createElement('a');
+          a.className = 'flink'; a.href = o.site; a.target = '_blank'; a.rel = 'noopener'; a.tabIndex = -1; a.setAttribute('aria-hidden', 'true');
+          a.style.left = ((b.x - 28) / 1080 * 100) + '%'; a.style.top = ((b.y - 16) / 1350 * 100) + '%';
+          a.style.width = ((b.w + 56) / 1080 * 100) + '%'; a.style.height = ((b.h + 32) / 1350 * 100) + '%';
+          w.appendChild(a);
+        }
+      } catch (err) {}
+    }
     if (!('IntersectionObserver' in window)) { Array.prototype.forEach.call(cs, paint); return; }
     if (flyerIO) flyerIO.disconnect();
     flyerIO = new IntersectionObserver(function (ents) { ents.forEach(function (en) { if (en.isIntersecting) { paint(en.target); flyerIO.unobserve(en.target); } }); }, { rootMargin: '900px 0px' });

@@ -68,9 +68,18 @@ function draw(cv,o,scale){
   x.fillStyle=inv?on:col;x.fillRect(cx-50,fy,100,8);
   x.font='700 42px '+FFAM;x.fillStyle=fg;
   var pf=fit(place,mw,48,32,'800',2),py=lines(pf,cx,fy+32,fg,1.2);
-  if(site){var sf=fit(site,mw,38,24,'700',1);x.fillStyle=inv?on:col;if(lum(col)>.8&&!inv&&st!=='poster')x.fillStyle=fg;lines(sf,cx,py+8,x.fillStyle,1.2)}
+  var siteBox=null;
+  if(site){
+    var shown=site;x.font='700 28px '+FFAM;
+    if(x.measureText(shown).width>mw){var hostOnly=site.split('/')[0];shown=hostOnly+(site.length>hostOnly.length?'/\u2026':'')}
+    var sf=fit(shown,mw,38,24,'700',1);x.font=sf.font;
+    while(shown.length>4&&x.measureText(shown).width>mw){shown=shown.replace(/\u2026$/,'').slice(0,-2)+'\u2026';sf.ls=[shown]}
+    x.fillStyle=inv?on:col;if(lum(col)>.8&&!inv&&st!=='poster')x.fillStyle=fg;
+    var sw=x.measureText(sf.ls[0]).width;lines(sf,cx,py+8,x.fillStyle,1.2);
+    siteBox={x:cx-sw/2,y:py+8,w:sw,h:sf.px*1.2};
+  }
   x.font='600 30px '+FFAM;x.fillStyle=st==='stripes'?onCol(col):sub;x.fillText('Part of What\u2019s Going On Along the 299',cx,st==='stripes'?H-62:(st==='frame'?H-112:H-90));x.textAlign='left';
-  return{lowContrast:low};
+  return{lowContrast:low,siteBox:siteBox};
 }
 
 var STYLES=['bold','poster','clean','gradient','frame','stripes'],FONTKEYS=['modern','friendly','classic','tall','hand','type'],COLORS=['#FF4F8B','#FFC93C','#2FBF8F','#3B82F6','#7B6CFF','#FF8A3D','#E5383B','#14B8A6','#1E3A8A','#7A3E1D'];
