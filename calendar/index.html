@@ -135,7 +135,6 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
 .fcard .fbody{padding:12px 14px 14px;font-size:15px;line-height:1.4}
 .fcard .fbody .actions{margin-top:10px}
 .fcard .fbody .where,.fcard .fbody .mi,.fcard .fbody .src{margin:0 0 6px}
-.flyerTag{position:fixed;left:12px;bottom:12px;z-index:60;background:#151A3C;color:#fff;border:2px solid #FFC93C;border-radius:99px;padding:10px 16px;font:700 14px/1.2 system-ui,sans-serif;text-decoration:none}
 .hidden{display:none!important}
 </style>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
@@ -359,7 +358,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
     return '<div class="also"><strong>Also on:</strong> ' + esc(txt) + '</div>';
   }
 
-  var FLYERS = /(^|[?&])flyers=1/.test(location.search) && !!window.Flyer, flyerData = {};
+  var FLYERS = !/(^|[?&])flyers=0/.test(location.search) && !!window.Flyer, flyerData = {};
   function flyerCard(e, ongoing) {
     var pl = e.place || '', tn = e.town || '', place = tn && pl.toLowerCase().indexOf(tn.toLowerCase()) < 0 ? [pl, tn].filter(Boolean).join(', ') : (pl || tn);
     var o = { title: e.title, biz: e.source || '', date: e.date, start: e.start_time, end: e.end_time, place: place, price: e.cost || (e.free ? 'Free' : ''), desc: e.description || '', site: e.website || '' };
@@ -389,7 +388,8 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
     flyerIO = new IntersectionObserver(function (ents) { ents.forEach(function (en) { if (en.isIntersecting) { paint(en.target); flyerIO.unobserve(en.target); } }); }, { rootMargin: '900px 0px' });
     Array.prototype.forEach.call(cs, function (cv) { flyerIO.observe(cv); });
   }
-  if (FLYERS) { document.body.classList.add('flyers'); var ft = document.createElement('a'); ft.className = 'flyerTag'; ft.href = location.pathname; ft.textContent = 'Flyer preview. Tap to go back to normal cards'; document.body.appendChild(ft); }
+  if (FLYERS) document.body.classList.add('flyers');
+  (function () { var c = $('count'); if (!c || !window.Flyer) return; var a = document.createElement('a'); a.className = 'linkbtn'; a.style.cssText = 'display:inline-block;margin:0 0 0 12px;font-size:15px'; a.href = FLYERS ? location.pathname + '?flyers=0' : location.pathname; a.textContent = FLYERS ? 'Show plain cards instead' : 'Show flyer cards'; c.parentNode.insertBefore(a, c.nextSibling); })();
 
   function card(e, ongoing) {
     if (FLYERS) return flyerCard(e, ongoing);
@@ -557,7 +557,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
     if (state.view === 'map') drawMap();
     paintFlyers();
     var p = new URLSearchParams();
-    if (FLYERS) p.set('flyers', '1');
+    if (!FLYERS && window.Flyer) p.set('flyers', '0');
     if (state.q) p.set('q', state.q);
     if (state.towns.length) p.set('town', state.towns.join(','));
     if (state.one) p.set('event', state.one);
