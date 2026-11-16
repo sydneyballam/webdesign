@@ -8,19 +8,8 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:86415484d910@community-calendar
-DTSTAMP:20261115T135328Z
-DTSTART:20261115T183000
-DTEND:20261115T203000
-SUMMARY:Paint & Pour: Pottery Painting at Humboldt Cider Co.
-LOCATION:Humboldt Cider Co.
-DESCRIPTION:Paint a ceramic piece\, such as a mug\, while you sip. Sign up
-  at the-makers-space.info.\nhttps://the-makers-space.info
-URL:https://the-makers-space.info
-END:VEVENT
-BEGIN:VEVENT
 UID:a8cfa27b30c3@community-calendar
-DTSTAMP:20261115T135328Z
+DTSTAMP:20261116T165847Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Taste of the Holidays
@@ -36,7 +25,7 @@ URL:https://www.zeffy.com/en-US/ticketing/2026-taste-of-the-holidays
 END:VEVENT
 BEGIN:VEVENT
 UID:1664632a6a81@community-calendar
-DTSTAMP:20261115T135328Z
+DTSTAMP:20261116T165847Z
 DTSTART:20261122T110000
 DTEND:20261122T160000
 SUMMARY:48th Annual HBMS Mushroom Fair
