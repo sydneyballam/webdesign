@@ -561,7 +561,7 @@ def expand_days(events):
             continue
         days = [o[0] for o in occ]
         for day, st, et in occ:
-            c = dict(e, date=day, end_date=day, start_time=st, end_time=et)
+            c = dict(e, date=day, end_date=day, start_time=st, end_time=et, **((rule or {}).get("set") or {}))
             c["also"] = [d for d in days if d > day]
             c["id"] = hashlib.sha1((e.get("source", "") + e["title"] + day + st).encode()).hexdigest()[:12]
             out.append(c)
