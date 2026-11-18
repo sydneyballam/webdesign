@@ -7,8 +7,8 @@ Run `python3 tools/sitebar.py` to refresh the two hand-edited pages (calendar, e
 import os, re
 
 CSS = ('.sitebar{background:#151A3C;color:#fff;font:600 15px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;'
-       'display:flex;flex-wrap:wrap;align-items:center;gap:2px 6px;padding:2px 10px;position:relative;z-index:50}'
-       '.sitebar b{margin-right:auto;padding:10px 6px;font-weight:800}'
+       'display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:2px 6px;padding:2px 10px;position:relative;z-index:50}'
+       ''
        '.sitebar a{color:#fff;text-decoration:none;padding:0 12px;min-height:44px;display:inline-flex;align-items:center;border-radius:8px}'
        '.sitebar a:hover,.sitebar a:focus-visible{background:rgba(255,255,255,.16);outline:2px solid #FFC93C;outline-offset:-2px}'
        '.sitebar a[aria-current]{color:#FFC93C;text-decoration:underline;text-underline-offset:5px}')
@@ -19,7 +19,7 @@ PAGES = [('', 'Small Business Studio', 'studio'), ('calendar/', 'Events calendar
 def bar(prefix='', current=''):
     links = ''.join('<a href="%s%s"%s>%s</a>' % (prefix, href, ' aria-current="page"' if key == current else '', label)
                     for href, label, key in PAGES)
-    return '<!--sitebar--><style>%s</style><nav class="sitebar" aria-label="All pages"><b>Willow Creek</b>%s</nav><!--/sitebar-->' % (CSS, links)
+    return '<!--sitebar--><style>%s</style><nav class="sitebar" aria-label="All pages">%s</nav><!--/sitebar-->' % (CSS, links)
 
 
 def inject_html(html, prefix, current):
