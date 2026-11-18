@@ -109,6 +109,7 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
       <label><input type="radio" name="style" value="gradient"><span>Sunset</span></label>
       <label><input type="radio" name="style" value="frame"><span>Frame</span></label>
       <label><input type="radio" name="style" value="stripes"><span>Stripes</span></label>
+      <label><input type="radio" name="style" value="blush"><span>Blush</span></label>
     </div>
     <label>Font</label>
     <div class="chips" id="fonts">
@@ -131,6 +132,9 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
       <label><input type="radio" name="color" value="#14B8A6" aria-label="Teal"><span style="background:#14B8A6"></span></label>
       <label><input type="radio" name="color" value="#1E3A8A" aria-label="Deep blue"><span style="background:#1E3A8A"></span></label>
       <label><input type="radio" name="color" value="#7A3E1D" aria-label="Brown"><span style="background:#7A3E1D"></span></label>
+      <label><input type="radio" name="color" value="#EDB9A8" aria-label="Blush"><span style="background:#EDB9A8"></span></label>
+      <label><input type="radio" name="color" value="#B9C6B1" aria-label="Sage"><span style="background:#B9C6B1"></span></label>
+      <label><input type="radio" name="color" value="#5B2A2E" aria-label="Burgundy"><span style="background:#5B2A2E"></span></label>
       <label><input type="radio" name="color" value="#888888" class="cust" aria-label="Pick your own color"><span class="cs" style="background:conic-gradient(#ff4f8b,#ffc93c,#2fbf8f,#3b82f6,#7b6cff,#ff4f8b)"></span><input type="color" class="cp" value="#888888" aria-label="Choose a color"></label>
     </div>
     <label>Text color</label>
@@ -143,6 +147,8 @@ pre{white-space:pre-wrap;word-break:break-word;background:#F2F4FD;border-radius:
       <label><input type="radio" name="tcolor" value="#FF4F8B" aria-label="Pink"><span style="background:#FF4F8B"></span></label>
       <label><input type="radio" name="tcolor" value="#3B82F6" aria-label="Blue"><span style="background:#3B82F6"></span></label>
       <label><input type="radio" name="tcolor" value="#2FBF8F" aria-label="Green"><span style="background:#2FBF8F"></span></label>
+      <label><input type="radio" name="tcolor" value="#5B2A2E" aria-label="Burgundy"><span style="background:#5B2A2E"></span></label>
+      <label><input type="radio" name="tcolor" value="#FBEEE3" aria-label="Cream"><span style="background:#FBEEE3;border-color:#C9CFF5"></span></label>
       <label><input type="radio" name="tcolor" value="#888888" class="cust" aria-label="Pick your own color"><span class="cs" style="background:conic-gradient(#ff4f8b,#ffc93c,#2fbf8f,#3b82f6,#7b6cff,#ff4f8b)"></span><input type="color" class="cp" value="#888888" aria-label="Choose a color"></label>
     </div>
     <div class="note" id="contrast"></div>
@@ -239,6 +245,7 @@ $('share').onclick=function(){
 $('dl').onclick=function(){blob(function(b){dlBlob(b,slug()+'.png');say('Flyer picture saved.')})};
 Array.prototype.forEach.call(document.querySelectorAll('.cp'),function(cp){cp.addEventListener('input',function(){var lab=cp.parentNode,r=lab.querySelector('input.cust');r.value=cp.value;r.checked=true;lab.querySelector('.cs').style.background=cp.value;refresh()})});
 document.getElementById('town').addEventListener('change',function(){var n=$('newtown');n.hidden=this.value!=='__new';if(!n.hidden)n.focus();refresh()});
+Array.prototype.forEach.call(document.querySelectorAll('input[name=style]'),function(r){r.addEventListener('change',function(){if(r.value==='blush'&&r.checked){var b=document.querySelector('input[name=color][value="#5B2A2E"]'),f=document.querySelector('input[name=font][value=classic]');if(b)b.checked=true;if(f)f.checked=true;refresh()}})});
 $('freebtn').onclick=function(){$('price').value='Free';refresh()};
 function townName(){var t=val('town');return t==='__new'?val('newtown'):t}
 var FORM_POST='https://docs.google.com/forms/d/e/1FAIpQLSdVQe_zMa3xuxvw31wdLszKdXx1Kc4aHKThMhFjEG5s3Tyhfw/formResponse',sending=false;

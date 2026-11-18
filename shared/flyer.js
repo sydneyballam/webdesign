@@ -24,6 +24,7 @@ function draw(cv,o,scale){
   if(st==='bold'){bg=col;fg=on;sub=on}
   else if(st==='gradient'){bg=shade(col,.45);fg=lum(col)>.75?'#151A3C':'#FFFFFF';sub=fg;on=fg}
   else if(st==='frame'){bg='#FFF8EC';fg='#151A3C';sub='#5A6088'}
+  else if(st==='blush'){bg='#FBEEE3';fg='#5B2A2E';sub='#7A4A4E'}
   else if(st==='poster'){bg='#151A3C';fg='#FFFFFF';sub='#C9CFF5'}
   else{bg='#FFFFFF';fg='#151A3C';sub='#5A6088'}
   var tc=o.tcolor||'auto';if(tc!=='auto'){fg=tc;sub=tc}
@@ -31,6 +32,7 @@ function draw(cv,o,scale){
   if(st==='gradient'){var gr=x.createLinearGradient(0,0,0,H);gr.addColorStop(0,col);gr.addColorStop(1,bg);x.fillStyle=gr}else x.fillStyle=bg;
   x.fillRect(0,0,W,H);
   if(st==='gradient'){x.globalAlpha=.14;x.fillStyle='#fff';x.beginPath();x.arc(W*.85,H*.12,330,0,7);x.fill();x.beginPath();x.arc(W*.1,H*.9,260,0,7);x.fill();x.globalAlpha=1}
+  if(st==='blush'){x.fillStyle='#EDB9A8';x.beginPath();x.arc(W-30,30,310,0,7);x.fill();x.fillStyle='#B9C6B1';x.beginPath();x.arc(20,H-10,330,0,7);x.fill();x.fillStyle='#F1D3C6';x.beginPath();x.arc(W-40,H-60,150,0,7);x.fill()}
   if(st==='frame'){x.strokeStyle=col;x.lineWidth=14;x.strokeRect(34,34,W-68,H-68);x.strokeStyle='#151A3C';x.lineWidth=3;x.strokeRect(66,66,W-132,H-132)}
   if(st==='stripes'){x.fillStyle=col;x.beginPath();x.moveTo(0,0);x.lineTo(W,0);x.lineTo(W,120);x.lineTo(0,235);x.closePath();x.fill();x.beginPath();x.moveTo(0,H);x.lineTo(W,H);x.lineTo(W,H-235);x.lineTo(0,H-120);x.closePath();x.fill();x.globalAlpha=.35;x.fillStyle='#fff';x.beginPath();x.moveTo(0,250);x.lineTo(W,135);x.lineTo(W,160);x.lineTo(0,275);x.closePath();x.fill();x.globalAlpha=1}
   if(st==='poster'){x.fillStyle=col;x.fillRect(0,0,W,40);x.fillRect(0,H-40,W,40);x.fillStyle=col;x.beginPath();x.arc(W-60,420,260,0,7);x.globalAlpha=.18;x.fill();x.globalAlpha=1}
@@ -82,9 +84,11 @@ function draw(cv,o,scale){
   return{lowContrast:low,siteBox:siteBox};
 }
 
-var STYLES=['bold','poster','clean','gradient','frame','stripes'],FONTKEYS=['modern','friendly','classic','tall','hand','type'],COLORS=['#FF4F8B','#FFC93C','#2FBF8F','#3B82F6','#7B6CFF','#FF8A3D','#E5383B','#14B8A6','#1E3A8A','#7A3E1D'];
+var STYLES=['bold','poster','clean','gradient','frame','stripes','blush'],FONTKEYS=['modern','friendly','classic','tall','hand','type'],COLORS=['#FF4F8B','#FFC93C','#2FBF8F','#3B82F6','#7B6CFF','#FF8A3D','#E5383B','#14B8A6','#1E3A8A','#7A3E1D','#EDB9A8','#B9C6B1'];
 function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
 /* The same seed always gives the same look, so a card never changes between visits. */
-function pick(seed){var h=hash(String(seed));return{style:STYLES[h%STYLES.length],font:FONTKEYS[(h>>>5)%FONTKEYS.length],color:COLORS[(h>>>11)%COLORS.length]}}
+function pick(seed){var h=hash(String(seed));var o={style:STYLES[h%STYLES.length],font:FONTKEYS[(h>>>5)%FONTKEYS.length],color:COLORS[(h>>>11)%COLORS.length]};
+  if(o.style==='blush'){o.font='classic';o.color='#5B2A2E'}   /* Jessica's palette always keeps its serif and burgundy */
+  return o}
 root.Flyer={draw:draw,pick:pick,fonts:FONTS};
 })(window);
