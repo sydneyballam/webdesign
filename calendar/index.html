@@ -137,6 +137,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
 .fcard .fbody .actions{margin-top:10px}
 .fcard .fbody .where,.fcard .fbody .mi,.fcard .fbody .src{margin:0 0 6px}
 .hidden{display:none!important}
+.wpbar{margin:0 0 14px}.wpost{background:#fff;border:2px solid var(--teal);border-radius:14px;padding:14px;margin:0 0 18px}.wpost textarea{display:block;width:100%;margin:10px 0 12px;font:16px/1.45 inherit;font-family:inherit;padding:10px;border:1px solid #bbb;border-radius:10px}.wpost .stack{display:flex;flex-wrap:wrap;gap:8px}
 </style>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <script src="../shared/flyer.js"></script>
@@ -252,7 +253,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
   var q = new URLSearchParams(location.search);
   var state = { q: q.get('q') || '', towns: (q.get('town') || '').split(',').filter(Boolean), one: q.get('event') || '', view: ({ week: 'week', month: 'month', map: 'map' })[q.get('view')] || 'list', month: null, week: null, sel: null,
     from: /^\d{4}-\d{2}-\d{2}$/.test(q.get('from') || '') ? q.get('from') : '', to: /^\d{4}-\d{2}-\d{2}$/.test(q.get('to') || '') ? q.get('to') : '',
-    zip: /^\d{5}$/.test(q.get('zip') || '') ? q.get('zip') : '', miles: [5, 10, 25, 50, 100].indexOf(+q.get('mi')) >= 0 ? +q.get('mi') : 25, near: null, nearNote: '' };
+    zip: /^\d{5}$/.test(q.get('zip') || '') ? q.get('zip') : '', miles: [5, 10, 25, 50, 100].indexOf(+q.get('mi')) >= 0 ? +q.get('mi') : 25, near: null, nearNote: '', wpost: false };
   var zips = null;
   var today = new Date(); today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
 
@@ -459,12 +460,48 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
       (FORM_URL ? '<a href="' + esc(FORM_URL) + '" target="_blank" rel="noopener">Send it in</a>.' : 'Event submissions are opening soon.') + '</div>';
   }
 
+  function weekPost() {
+    var evs = visible(), mon = state.week, cur = key(mon) === key(mondayOf(today)), lines = [], seen = {}, n = 0, days = {};
+    var sun = addDays(mon, 6), rng = MON[mon.getMonth()] + ' ' + mon.getDate() + ' to ' + (sun.getMonth() !== mon.getMonth() ? MON[sun.getMonth()] + ' ' : '') + sun.getDate();
+    var gk = function (e) { return [e.title, e.place, e.town].join('|').toLowerCase(); };
+    var span = [];
+    for (var i = 0; i < 7; i++) {
+      var d = addDays(mon, i);
+      if (cur && key(d) < key(today)) continue;
+      span.push(d);
+      evs.forEach(function (e) { if (onDay(e, d)) (days[gk(e)] = days[gk(e)] || {})[key(d)] = 1; });
+    }
+    span.forEach(function (d) {
+      var items = evs.filter(function (e) { return onDay(e, d) && !seen[gk(e)]; });
+      if (!items.length) return;
+      items.sort(function (a, b) { return (a.start_time || '00:00') < (b.start_time || '00:00') ? -1 : 1; });
+      lines.push('', DOW[d.getDay()].toUpperCase() + ' ' + MON[d.getMonth()] + ' ' + d.getDate());
+      items.forEach(function (e) {
+        if (seen[gk(e)]) return;
+        seen[gk(e)] = 1; n++;
+        var more = span.filter(function (x) { return key(x) > key(d) && days[gk(e)][key(x)]; }).map(function (x) { return DOW[x.getDay()].slice(0, 3); });
+        var where = [e.place, e.town].filter(Boolean).join(', ');
+        lines.push('\u2022 ' + (e.start_time ? t12(e.start_time) + ': ' : '') + e.title + (where ? ' (' + where + ')' : '') + (more.length ? ' [also ' + more.join(', ') + ']' : ''), '   ' + eventUrl(e));
+      });
+    });
+    if (!n) return '';
+    var townTxt = state.towns.length ? ' in ' + townLabel() : '';
+    return "What's going on along the 299 " + (cur ? 'this week' : 'the week of ' + rng) + townTxt + ' \uD83D\uDCC5' + lines.join('\n') + '\n\nSee everything, with directions and Add to calendar: ' + pageUrl() + '\nKnow of something we missed? Send it in and we will add it.';
+  }
+  function wpanel() {
+    var txt = weekPost();
+    return '<div class="wpost"><label for="wpText"><strong>Your post.</strong> Edit it if you like, then copy it.</label>' +
+      (txt ? '<textarea id="wpText" rows="14">' + esc(txt) + '</textarea>' : '<p class="empty" style="margin:8px 0 0">Nothing listed this week, so there is nothing to post yet.</p>') +
+      (txt ? '<div class="stack"><button class="btn" type="button" id="wpCopy">Copy post</button><button class="btn out" type="button" id="wpFb">Copy and open Facebook</button><button class="btn out" type="button" id="wpClose">Close</button></div>' : '<div class="stack"><button class="btn out" type="button" id="wpClose">Close</button></div>') + '</div>';
+  }
+
   function renderWeek() {
     var evs = visible(), mon = state.week, sun = addDays(mon, 6), thisMon = key(mondayOf(today));
     var inWeek = evs.filter(function (e) { return e.end_date >= key(mon) && e.date <= key(sun); });
     var label = key(mon) === thisMon ? 'This week' : MON[mon.getMonth()] + ' ' + mon.getDate() + ' to ' + (sun.getMonth() !== mon.getMonth() ? MON[sun.getMonth()] + ' ' : '') + sun.getDate();
     $('count').textContent = inWeek.length + (inWeek.length === 1 ? ' event' : ' events') + ' ' + (key(mon) === thisMon ? 'this week' : 'that week') + (state.towns.length ? ' (' + townLabel() + ')' : '') + filterText();
     var head = '<div class="mhead"><button class="nav" type="button" id="wprev" aria-label="Previous week">' + icon('<path d="M15 6l-6 6 6 6"/>') + '</button><h2>' + esc(label) + (key(mon) !== thisMon ? ' <button type="button" class="linkbtn" id="wnow" style="font-size:15px">Back to this week</button>' : '') + '</h2><button class="nav" type="button" id="wnext" aria-label="Next week">' + icon('<path d="M9 6l6 6-6 6"/>') + '</button></div>';
+    var bar = '<div class="wpbar"><button class="btn" type="button" id="wpBtn" aria-expanded="' + state.wpost + '">Write this week\'s post</button></div>' + (state.wpost ? wpanel() : '');
     var days = '';
     for (var i = 0; i < 7; i++) {
       var d = addDays(mon, i), items = evs.filter(function (e) { return onDay(e, d); });
@@ -472,7 +509,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
       days += '<section class="group"><h2>' + DOW[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + (key(d) === key(today) ? ' <span class="pill">Today</span>' : '') + '</h2>' +
         (items.length ? '<div class="evgrid">' + items.map(function (e) { return card(e, e.date < key(d)); }).join('') + '</div>' : '<div class="empty" style="margin-top:0">Nothing listed for this day.</div>') + '</section>';
     }
-    return head + days;
+    return head + bar + days;
   }
 
   function renderMonth() {
@@ -644,8 +681,15 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
     else if (t.id === 'next') { state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1); state.sel = null; render(); }
     else if (t.id === 'tabList') { state.view = 'list'; render(); }
     else if (t.id === 'tabWeek') { state.view = 'week'; state.one = ''; state.week = mondayOf(today); render(); }
-    else if (t.id === 'wprev') { state.week = addDays(state.week, -7); render(); }
-    else if (t.id === 'wnext') { state.week = addDays(state.week, 7); render(); }
+    else if (t.id === 'wpBtn') { state.wpost = !state.wpost; render(); if (state.wpost && $('wpText')) $('wpText').focus(); }
+    else if (t.id === 'wpClose') { state.wpost = false; render(); }
+    else if (t.id === 'wpCopy' || t.id === 'wpFb') {
+      var ta = $('wpText'), tx = ta.value, done = function () { t.textContent = t.id === 'wpFb' ? 'Copied. Paste it in Facebook' : 'Copied'; };
+      (navigator.clipboard ? navigator.clipboard.writeText(tx) : Promise.reject()).then(done, function () { ta.focus(); ta.select(); t.textContent = 'Selected. Press copy'; });
+      if (t.id === 'wpFb') window.open('https://www.facebook.com/', '_blank', 'noopener');
+    }
+    else if (t.id === 'wprev') { state.week = addDays(state.week, -7); state.wpost = false; render(); }
+    else if (t.id === 'wnext') { state.week = addDays(state.week, 7); state.wpost = false; render(); }
     else if (t.id === 'wnow') { state.week = mondayOf(today); render(); }
     else if (t.id === 'tabMonth') { state.view = 'month'; render(); }
     else if (t.id === 'tabMap') { state.view = 'map'; state.one = ''; render(); }
