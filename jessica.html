@@ -348,6 +348,37 @@
         const fmtTime = fmt({ hour: 'numeric', minute: '2-digit' }), fmtMonthYear = fmt({ month: 'long', year: 'numeric' });
         const dayKey = d => fmt({ year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 
+        /* Cal.com's description box saves little bits of HTML (<p>, <b>, <br>). Show those as real
+           paragraphs and bold text, and keep only a short list of safe tags. */
+        function richDesc(src, cls) {
+            src = String(src || '').trim(); if (!src) return '';
+            var out = [];
+            if (src.indexOf('<') < 0) {
+                src.split(/\n\s*\n|\n/).forEach(function (t) { t = t.trim(); if (t) out.push('<p>' + esc(t) + '</p>'); });
+            } else {
+                var doc = new DOMParser().parseFromString('<body>' + src.replace(/<br\s*\/?>/gi, '<br>') + '</body>', 'text/html');
+                var KEEP = { P: 'p', B: 'strong', STRONG: 'strong', I: 'em', EM: 'em', UL: 'ul', OL: 'ol', LI: 'li', BR: 'br', A: 'a' };
+                var walk = function (n) {
+                    if (n.nodeType === 3) return esc(n.nodeValue);
+                    if (n.nodeType !== 1) return '';
+                    var inner = Array.prototype.map.call(n.childNodes, walk).join(''), t = KEEP[n.tagName];
+                    if (!t) return inner;
+                    if (t === 'br') return '<br>';
+                    if (t === 'a') { var h = n.getAttribute('href') || ''; return /^https?:\/\//i.test(h) ? '<a class="underline underline-offset-4" href="' + esc(h) + '" target="_blank" rel="noopener">' + inner + '</a>' : inner; }
+                    return '<' + t + '>' + inner + '</' + t + '>';
+                };
+                var html = '', run = '';
+                var flush = function () { var r = run.replace(/^(\s|<br>)+|(\s|<br>)+$/g, ''); if (r) html += '<p>' + r.replace(/(<br>\s*){2,}/g, '</p><p>') + '</p>'; run = ''; };
+                Array.prototype.forEach.call(doc.body.childNodes, function (n) {
+                    if (n.nodeType === 1 && (n.tagName === 'P' || n.tagName === 'UL' || n.tagName === 'OL' || n.tagName === 'DIV')) {
+                        flush(); var h = walk(n).replace(/^<p>(\s|<br>)*<\/p>$/, ''); if (n.tagName === 'DIV') h = h ? '<p>' + h + '</p>' : ''; html += h;
+                    } else run += walk(n);
+                });
+                flush();
+                out.push(html);
+            }
+            return '<div class="' + cls + ' space-y-2 [&_ul]:list-disc [&_ol]:list-decimal [&_ul]:pl-6 [&_ol]:pl-6 [&_strong]:font-semibold">' + out.join('') + '</div>';
+        }
         function esc(s) {
             return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
         }
@@ -618,7 +649,7 @@
             return '<li class="py-7 border-b border-ink/20">' +
                 '<h3 class="text-2xl font-semibold">' + esc(rangeText(e)) + '</h3>' +
                 '<p class="text-xl mt-1">' + esc(e.title) + '</p>' +
-                (e.description ? '<p class="mt-2 text-ink/80">' + esc(e.description) + '</p>' : '') +
+                richDesc(e.description, 'mt-2 text-ink/80') +
                 (tm ? '<p class="mt-2 text-sm text-ink/80"><i class="fa-regular fa-clock mr-1" aria-hidden="true"></i>' + esc(tm) + '</p>' : '') +
                 (e.place ? '<p class="mt-2 text-sm text-ink/80"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i>' + esc(e.place) + '</p>' : '') +
                 '<p class="mt-3 inline-block rounded-full px-3 py-1 text-sm font-semibold ' + (sold ? 'bg-ink text-paper' : 'bg-sage/60') + '">' + esc(spotsText(e)) + '</p>' +
@@ -646,7 +677,7 @@
                 const label = fmtMonthYear.format(new Date(e.start)) + ': ' + e.title, ph = e.photos || [];
                 return '<li class="py-4 border-b border-ink/15"><p class="text-lg font-semibold text-ink">' + esc(label) + '</p>' +
                     (e.place ? '<p class="mt-1 text-sm"><i class="fa-solid fa-location-dot mr-1" aria-hidden="true"></i>' + esc(e.place) + '</p>' : '') +
-                    (e.description ? '<p class="mt-1">' + esc(e.description) + '</p>' : '') +
+                    richDesc(e.description, 'mt-1') +
                     photoGrid(e) + '</li>';
             }).join('');
             document.getElementById('pastWrap').classList.toggle('hidden', !old.length);
