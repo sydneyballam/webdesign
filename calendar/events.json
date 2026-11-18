@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T09:23:59Z",
+ "updated": "2026-11-18T09:26:24Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -1126,6 +1126,27 @@
    "lat": 40.940266,
    "lng": -123.628299,
    "approx": false
+  },
+  {
+   "id": "9194521043f6",
+   "title": "Thanksgiving Turkey Giveaway",
+   "date": "2026-11-21",
+   "end_date": "2026-11-21",
+   "start_time": "12:00",
+   "end_time": "",
+   "town": "McKinleyville",
+   "place": "McKinleyville Shopping Center",
+   "address": "",
+   "website": "",
+   "description": "Presented by the McKinleyville Merchant Association. 35 turkeys for local families. Together for a stronger community.",
+   "free": false,
+   "cost": "",
+   "category": "Community",
+   "source": "McKinleyville Merchant Association flyer",
+   "source_url": "",
+   "lat": 40.9457,
+   "lng": -124.1006,
+   "approx": true
   },
   {
    "id": "af0b44f70895",
