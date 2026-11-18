@@ -137,7 +137,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
 .fcard .fbody .actions{margin-top:10px}
 .fcard .fbody .where,.fcard .fbody .mi,.fcard .fbody .src{margin:0 0 6px}
 .hidden{display:none!important}
-.wpbar{margin:0 0 14px}.wpost{background:#fff;border:2px solid var(--teal);border-radius:14px;padding:14px;margin:0 0 18px}.wpost textarea{display:block;width:100%;margin:10px 0 12px;font:16px/1.45 inherit;font-family:inherit;padding:10px;border:1px solid #bbb;border-radius:10px}.wpost .stack{display:flex;flex-wrap:wrap;gap:8px}
+.wpbar{margin:0 0 14px}.wpost{background:#fff;border:2px solid var(--teal);border-radius:14px;padding:14px;margin:0 0 18px}.wprow{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 12px}.wprow label{font-weight:600}.wprow input{font:inherit;padding:6px;margin-left:6px}.wpost textarea{display:block;width:100%;margin:10px 0 12px;font:16px/1.45 inherit;font-family:inherit;padding:10px;border:1px solid #bbb;border-radius:10px}.wpost .stack{display:flex;flex-wrap:wrap;gap:8px}
 </style>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <script src="../shared/flyer.js"></script>
@@ -253,7 +253,7 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
   var q = new URLSearchParams(location.search);
   var state = { q: q.get('q') || '', towns: (q.get('town') || '').split(',').filter(Boolean), one: q.get('event') || '', view: ({ week: 'week', month: 'month', map: 'map' })[q.get('view')] || 'list', month: null, week: null, sel: null,
     from: /^\d{4}-\d{2}-\d{2}$/.test(q.get('from') || '') ? q.get('from') : '', to: /^\d{4}-\d{2}-\d{2}$/.test(q.get('to') || '') ? q.get('to') : '',
-    zip: /^\d{5}$/.test(q.get('zip') || '') ? q.get('zip') : '', miles: [5, 10, 25, 50, 100].indexOf(+q.get('mi')) >= 0 ? +q.get('mi') : 25, near: null, nearNote: '', wpost: false };
+    zip: /^\d{5}$/.test(q.get('zip') || '') ? q.get('zip') : '', miles: [5, 10, 25, 50, 100].indexOf(+q.get('mi')) >= 0 ? +q.get('mi') : 25, near: null, nearNote: '', wpost: false, wfrom: '', wto: '' };
   var zips = null;
   var today = new Date(); today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
 
@@ -460,39 +460,35 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
       (FORM_URL ? '<a href="' + esc(FORM_URL) + '" target="_blank" rel="noopener">Send it in</a>.' : 'Event submissions are opening soon.') + '</div>';
   }
 
+  function wrange() {
+    if (!state.wfrom) { state.wfrom = key(today); state.wto = key(addDays(today, 6)); }
+    return [state.wfrom, state.wto];
+  }
   function weekPost() {
-    var evs = visible(), mon = state.week, cur = key(mon) === key(mondayOf(today)), lines = [], seen = {}, n = 0, days = {};
-    var sun = addDays(mon, 6), rng = MON[mon.getMonth()] + ' ' + mon.getDate() + ' to ' + (sun.getMonth() !== mon.getMonth() ? MON[sun.getMonth()] + ' ' : '') + sun.getDate();
-    var gk = function (e) { return [e.title, e.place, e.town].join('|').toLowerCase(); };
-    var span = [];
-    for (var i = 0; i < 7; i++) {
-      var d = addDays(mon, i);
-      if (cur && key(d) < key(today)) continue;
-      span.push(d);
-      evs.forEach(function (e) { if (onDay(e, d)) (days[gk(e)] = days[gk(e)] || {})[key(d)] = 1; });
-    }
-    span.forEach(function (d) {
-      var items = evs.filter(function (e) { return onDay(e, d) && !seen[gk(e)]; });
-      if (!items.length) return;
+    var r = wrange(), evs = visible(), lines = [], n = 0, f = pd(r[0]), t = pd(r[1]);
+    var rng = MON[f.getMonth()] + ' ' + f.getDate() + (r[0] === r[1] ? '' : ' to ' + (t.getMonth() !== f.getMonth() ? MON[t.getMonth()] + ' ' : '') + t.getDate());
+    for (var d = f, c = 0; key(d) <= r[1] && c < 62; d = addDays(d, 1), c++) {
+      var items = evs.filter(function (e) { return onDay(e, d); });
+      if (!items.length) continue;
       items.sort(function (a, b) { return (a.start_time || '00:00') < (b.start_time || '00:00') ? -1 : 1; });
       lines.push('', DOW[d.getDay()].toUpperCase() + ' ' + MON[d.getMonth()] + ' ' + d.getDate());
       items.forEach(function (e) {
-        if (seen[gk(e)]) return;
-        seen[gk(e)] = 1; n++;
-        var more = span.filter(function (x) { return key(x) > key(d) && days[gk(e)][key(x)]; }).map(function (x) { return DOW[x.getDay()].slice(0, 3); });
+        n++;
         var where = [e.place, e.town].filter(Boolean).join(', ');
-        lines.push('\u2022 ' + (e.start_time ? t12(e.start_time) + ': ' : '') + e.title + (where ? ' (' + where + ')' : '') + (more.length ? ' [also ' + more.join(', ') + ']' : ''), '   ' + eventUrl(e));
+        lines.push('\u2022 ' + (e.start_time ? t12(e.start_time) + ': ' : '') + e.title + (where ? ' (' + where + ')' : ''), '   ' + eventUrl(e));
       });
-    });
+    }
     if (!n) return '';
     var townTxt = state.towns.length ? ' in ' + townLabel() : '';
-    return "What's going on along the 299 " + (cur ? 'this week' : 'the week of ' + rng) + townTxt + ' \uD83D\uDCC5' + lines.join('\n') + '\n\nSee everything, with directions and Add to calendar: ' + pageUrl() + '\nKnow of something we missed? Send it in and we will add it.';
+    return "What's going on along the 299" + townTxt + ', ' + rng + ' \uD83D\uDCC5' + lines.join('\n') + '\n\nSee everything, with directions and Add to calendar: ' + pageUrl() + '\nKnow of something we missed? Send it in and we will add it.';
   }
   function wpanel() {
-    var txt = weekPost();
-    return '<div class="wpost"><label for="wpText"><strong>Your post.</strong> Edit it if you like, then copy it.</label>' +
-      (txt ? '<textarea id="wpText" rows="14">' + esc(txt) + '</textarea>' : '<p class="empty" style="margin:8px 0 0">Nothing listed this week, so there is nothing to post yet.</p>') +
-      (txt ? '<div class="stack"><button class="btn" type="button" id="wpCopy">Copy post</button><button class="btn out" type="button" id="wpFb">Copy and open Facebook</button><button class="btn out" type="button" id="wpClose">Close</button></div>' : '<div class="stack"><button class="btn out" type="button" id="wpClose">Close</button></div>') + '</div>';
+    var r = wrange(), txt = weekPost();
+    return '<div class="wpost"><div class="wprow"><label>From <input type="date" id="wpFrom" value="' + r[0] + '"></label><label>Through <input type="date" id="wpTo" value="' + r[1] + '"></label></div>' +
+      '<label for="wpText"><strong>Your post.</strong> Edit it if you like, then copy it.</label>' +
+      '<textarea id="wpText" rows="14">' + esc(txt) + '</textarea>' +
+      '<p class="empty" id="wpNone" style="margin:0 0 10px' + (txt ? ';display:none' : '') + '">Nothing listed in those dates.</p>' +
+      '<div class="stack"><button class="btn" type="button" id="wpCopy">Copy post</button><button class="btn out" type="button" id="wpFb">Copy and open Facebook</button><button class="btn out" type="button" id="wpClose">Close</button></div></div>';
   }
 
   function renderWeek() {
@@ -688,8 +684,8 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
       (navigator.clipboard ? navigator.clipboard.writeText(tx) : Promise.reject()).then(done, function () { ta.focus(); ta.select(); t.textContent = 'Selected. Press copy'; });
       if (t.id === 'wpFb') window.open('https://www.facebook.com/', '_blank', 'noopener');
     }
-    else if (t.id === 'wprev') { state.week = addDays(state.week, -7); state.wpost = false; render(); }
-    else if (t.id === 'wnext') { state.week = addDays(state.week, 7); state.wpost = false; render(); }
+    else if (t.id === 'wprev') { state.week = addDays(state.week, -7); render(); }
+    else if (t.id === 'wnext') { state.week = addDays(state.week, 7); render(); }
     else if (t.id === 'wnow') { state.week = mondayOf(today); render(); }
     else if (t.id === 'tabMonth') { state.view = 'month'; render(); }
     else if (t.id === 'tabMap') { state.view = 'map'; state.one = ''; render(); }
@@ -704,6 +700,13 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
   });
 
   $('pageShare').innerHTML = shareRow(pageUrl(), "What's going on along the 299: events from Willow Creek to Eureka, all in one place.", "What's going on along the 299");
+  document.addEventListener('change', function (ev) {
+    var t = ev.target; if (t.id !== 'wpFrom' && t.id !== 'wpTo') return;
+    if (t.id === 'wpFrom') state.wfrom = t.value || key(today); else state.wto = t.value || state.wfrom;
+    if (state.wto < state.wfrom) { if (t.id === 'wpFrom') state.wto = state.wfrom; else state.wfrom = state.wto; }
+    $('wpFrom').value = state.wfrom; $('wpTo').value = state.wto;
+    var tx = weekPost(); $('wpText').value = tx; $('wpNone').style.display = tx ? 'none' : '';
+  });
   $('q').value = state.q;
   $('from').addEventListener('change', function () { state.from = this.value; if (state.from && state.to && state.to < state.from) state.to = state.from; state.one = ''; state.sel = null; render(); });
   $('to').addEventListener('change', function () { state.to = this.value; if (state.from && state.to && state.to < state.from) state.from = state.to; state.one = ''; state.sel = null; render(); });
