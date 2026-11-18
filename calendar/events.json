@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T09:26:24Z",
+ "updated": "2026-11-18T16:34:51Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -2048,9 +2048,9 @@
    "category": "",
    "source": "Visit Eureka",
    "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.8021,
-   "lng": -124.1637,
-   "approx": true,
+   "lat": 40.80439,
+   "lng": -124.166541,
+   "approx": false,
    "cost": "$25 adult, $20 kids"
   },
   {
