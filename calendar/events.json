@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T16:34:51Z",
+ "updated": "2026-11-18T16:54:48Z",
  "sheet": "not connected (no SHEET_CSV_URL), using the starter events",
  "towns": [
   "Arcata",
@@ -1096,12 +1096,12 @@
    "place": "Studio 299",
    "address": "75 The Terrace Ln",
    "website": "",
-   "description": "Lunch available from New Rv Catering.",
+   "description": "Over 20 local artists. New River Catering will have quiche and lasagna for sale.",
    "free": false,
    "cost": "",
    "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
+   "source": "Willow Creek Events on Facebook",
+   "source_url": "https://www.facebook.com/groups/willowcreekevents/permalink/4103822599753967/",
    "lat": 40.940266,
    "lng": -123.628299,
    "approx": false
