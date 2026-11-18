@@ -231,5 +231,13 @@
     ""
    ]
   }
+ },
+ {
+  "match": "Old Town 5K Turkey Trot",
+  "set": {
+   "cost": "$25 adult, $20 kids",
+   "address": "2nd & F St",
+   "description": "25th annual 5K run/walk starting at the Gazebo in Old Town. Pre-race sign-up: $25 adults, $20 kids, Nov 23 to 25. Race day: $30 for everyone, 7:00 to 8:45 am at 2nd & F St. T-shirts are for sale. Online registration is new this year."
+  }
  }
 ]

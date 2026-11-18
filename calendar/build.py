@@ -536,7 +536,8 @@ def expand_days(events):
     out = []
     for e in events:
         if e["end_date"] <= e["date"]:
-            out.append(e)
+            one = next((r for r in rules if r["match"].lower() in e["title"].lower() and r.get("set")), None)
+            out.append(dict(e, **one["set"]) if one else e)
             continue
         first, last = dt.date.fromisoformat(e["date"]), dt.date.fromisoformat(e["end_date"])
         rule = next((r for r in rules if r["match"].lower() in e["title"].lower()), None)
