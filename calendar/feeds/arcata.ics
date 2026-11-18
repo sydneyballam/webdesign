@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:a8cfa27b30c3@community-calendar
-DTSTAMP:20261116T165847Z
+DTSTAMP:20261118T192604Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:Taste of the Holidays
@@ -25,7 +25,7 @@ URL:https://www.zeffy.com/en-US/ticketing/2026-taste-of-the-holidays
 END:VEVENT
 BEGIN:VEVENT
 UID:1664632a6a81@community-calendar
-DTSTAMP:20261116T165847Z
+DTSTAMP:20261118T192604Z
 DTSTART:20261122T110000
 DTEND:20261122T160000
 SUMMARY:48th Annual HBMS Mushroom Fair
@@ -37,5 +37,25 @@ DESCRIPTION:Humboldt Bay Mycological Society's biggest event of the year.
  enger hunt with free prizes while supplies last\, and workshops and talks
   on mushroom identification\, cultivation and more. Proceeds support scho
  larships\, speaker honoraria and educational events.
+END:VEVENT
+BEGIN:VEVENT
+UID:23d2823eb1d8@community-calendar
+DTSTAMP:20261118T192604Z
+DTSTART:20261212T100000
+DTEND:20261212T170000
+SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
+LOCATION:Arcata Community Center\, 321 Dr. M.L.K. Jr Pkwy
+DESCRIPTION:CA\nhttps://Arcata
+URL:https://Arcata
+END:VEVENT
+BEGIN:VEVENT
+UID:756d7494380f@community-calendar
+DTSTAMP:20261118T192604Z
+DTSTART:20261213T100000
+DTEND:20261213T160000
+SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
+LOCATION:Arcata Community Center\, 321 Dr. M.L.K. Jr Pkwy
+DESCRIPTION:CA\nhttps://Arcata
+URL:https://Arcata
 END:VEVENT
 END:VCALENDAR
