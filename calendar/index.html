@@ -468,13 +468,12 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
       var items = evs.filter(function (e) { return onDay(e, d); });
       if (!items.length) continue;
       items.sort(function (a, b) { return (a.start_time || '00:00') < (b.start_time || '00:00') ? -1 : 1; });
-      lines.push('', DOW[d.getDay()].toUpperCase() + ' ' + MON[d.getMonth()] + ' ' + d.getDate());
+      lines.push('', DOW[d.getDay()].toUpperCase() + ' ' + MON[d.getMonth()] + ' ' + d.getDate(), pageUrl() + '?from=' + key(d) + '&to=' + key(d) + (state.towns.length ? '&town=' + encodeURIComponent(state.towns.join(',')) : ''));
       items.forEach(function (e) {
         n++;
         var where = [e.place, e.town].filter(Boolean).join(', ');
         lines.push('\u2022 ' + (e.start_time ? t12(e.start_time) + ': ' : '') + e.title + (where ? ' (' + where + ')' : ''));
       });
-      lines.push('Details: ' + pageUrl() + '?from=' + key(d) + '&to=' + key(d) + (state.towns.length ? '&town=' + encodeURIComponent(state.towns.join(',')) : ''));
     }
     if (!n) return '';
     var townTxt = state.towns.length ? ' in ' + townLabel() : '';
