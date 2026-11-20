@@ -8,24 +8,8 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:a8cfa27b30c3@community-calendar
-DTSTAMP:20261120T012712Z
-DTSTART;VALUE=DATE:20261119
-DTEND;VALUE=DATE:20261120
-SUMMARY:Taste of the Holidays
-LOCATION:Arcata Community Center\, 321 Dr. M.L.K. Jr Pkwy\, Arcata\, CA
-DESCRIPTION:A fundraiser for the Rotary Club of Arcata Sunrise featuring H
- umboldt County's best specialty food and beverage producers. Tickets are 
- $50 and include food and beverage tasting. Donate an unwrapped toy for To
- ys for Tots and enter to win a special gift. Bring a tasting glass from a
-  previous year for a complimentary drink ticket. Ages 16 and up. Check th
- e ticket page for the start time.\nhttps://www.zeffy.com/en-US/ticketing/
- 2026-taste-of-the-holidays
-URL:https://www.zeffy.com/en-US/ticketing/2026-taste-of-the-holidays
-END:VEVENT
-BEGIN:VEVENT
 UID:1664632a6a81@community-calendar
-DTSTAMP:20261120T012712Z
+DTSTAMP:20261120T083049Z
 DTSTART:20261122T110000
 DTEND:20261122T160000
 SUMMARY:48th Annual HBMS Mushroom Fair
@@ -40,7 +24,7 @@ DESCRIPTION:Humboldt Bay Mycological Society's biggest event of the year.
 END:VEVENT
 BEGIN:VEVENT
 UID:23d2823eb1d8@community-calendar
-DTSTAMP:20261120T012712Z
+DTSTAMP:20261120T083049Z
 DTSTART:20261212T100000
 DTEND:20261212T170000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -50,7 +34,7 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
 END:VEVENT
 BEGIN:VEVENT
 UID:756d7494380f@community-calendar
-DTSTAMP:20261120T012712Z
+DTSTAMP:20261120T083049Z
 DTSTART:20261213T100000
 DTEND:20261213T160000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market

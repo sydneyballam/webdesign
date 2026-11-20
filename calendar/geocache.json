@@ -84,6 +84,10 @@
   40.977792,
   -124.09574
  ],
+ "405 main street, ferndale, ca|ferndale": [
+  40.576572,
+  -124.263852
+ ],
  "40620 hwy 299|willow creek": [
   40.919923,
   -123.619584
@@ -157,6 +161,8 @@
   40.821069,
   -124.181722
  ],
+ "francis street, ferndale, ca|ferndale": null,
  "lewiston, ca|lewiston": null,
+ "main street, ferndale, ca|ferndale": null,
  "rohner park, fortuna, ca|fortuna": null
 }
