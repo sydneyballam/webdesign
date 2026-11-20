@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T08:30:49Z",
+ "updated": "2026-11-20T23:58:29Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -167,26 +167,6 @@
    "source_url": "https://visittrinity.com/calendar/",
    "lat": 40.7307,
    "lng": -122.942,
-   "approx": true
-  },
-  {
-   "id": "8402486ce8d9",
-   "title": "Writers of Willow Creek",
-   "date": "2026-11-20",
-   "end_date": "2026-11-20",
-   "start_time": "14:00",
-   "end_time": "15:00",
-   "town": "Willow Creek",
-   "place": "Willow Creek Library",
-   "address": "39 Mayfair St",
-   "website": "https://willowcreekchamber.com/event/writers-of-willow-creek/2026-11-20/",
-   "description": "A weekly meetup of local writers to create, share, and connect! Stop by, get support and feedback, and be a part of the creative process.",
-   "free": false,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.939,
-   "lng": -123.632,
    "approx": true
   },
   {
@@ -6060,6 +6040,26 @@
    "approx": true
   },
   {
+   "id": "4faac3880fec",
+   "title": "Yoga for Every Body",
+   "date": "2026-12-18",
+   "end_date": "2026-12-18",
+   "start_time": "16:00",
+   "end_time": "17:00",
+   "town": "Willow Creek",
+   "place": "Trinity Herbals & Wellness Center",
+   "address": "39025 HWY 299",
+   "website": "https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-18/",
+   "description": "",
+   "free": false,
+   "category": "",
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939334,
+   "lng": -123.631042,
+   "approx": false
+  },
+  {
    "id": "19bae3e1102b",
    "title": "Christmas @ the Acres",
    "date": "2026-12-18",
@@ -8000,6 +8000,26 @@
    "lat": 40.919923,
    "lng": -123.619584,
    "approx": false
+  },
+  {
+   "id": "66c1c34ad29e",
+   "title": "First Saturday Night Arts Alive!",
+   "date": "2027-04-03",
+   "end_date": "2027-04-03",
+   "start_time": "18:00",
+   "end_time": "21:00",
+   "town": "Eureka",
+   "place": "Downtown & Old Town Eureka",
+   "address": "",
+   "website": "https://www.visiteureka.com/event/first-saturday-night-arts-alive-6/",
+   "description": "Galleries, museums, theaters, shops, bars and restaurants across Old Town and Downtown stay open late on the first Saturday of the month, with art, live music and pop-up performances. More info",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
+   "approx": true
   },
   {
    "id": "e32a0b81490a",
