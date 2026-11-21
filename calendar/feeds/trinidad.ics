@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Community Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Trinidad Events
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:PT4H
+X-PUBLISHED-TTL:PT4H
+BEGIN:VEVENT
+UID:478e43c0e9fc@community-calendar
+DTSTAMP:20261121T055015Z
+DTSTART:20261206T150000
+DTEND:20261206T160000
+SUMMARY:McKinleyville Community Choir: Holiday Concert
+LOCATION:Trinidad Town Hall\, 409 Trinity St\, Trinidad\, CA
+DESCRIPTION:Holiday concert by the McKinleyville Community Choir\, under t
+ he direction of Jon Reisdorf. Free admission\, donations welcome.
+END:VEVENT
+END:VCALENDAR
