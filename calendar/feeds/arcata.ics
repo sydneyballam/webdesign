@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:1664632a6a81@community-calendar
-DTSTAMP:20261120T083049Z
+DTSTAMP:20261122T174854Z
 DTSTART:20261122T110000
 DTEND:20261122T160000
 SUMMARY:48th Annual HBMS Mushroom Fair
@@ -24,7 +24,7 @@ DESCRIPTION:Humboldt Bay Mycological Society's biggest event of the year.
 END:VEVENT
 BEGIN:VEVENT
 UID:23d2823eb1d8@community-calendar
-DTSTAMP:20261120T083049Z
+DTSTAMP:20261122T174854Z
 DTSTART:20261212T100000
 DTEND:20261212T170000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -34,12 +34,31 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
 END:VEVENT
 BEGIN:VEVENT
 UID:756d7494380f@community-calendar
-DTSTAMP:20261120T083049Z
+DTSTAMP:20261122T174854Z
 DTSTART:20261213T100000
 DTEND:20261213T160000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
 LOCATION:Arcata Community Center\, 321 Dr. M.L.K. Jr Pkwy\, Arcata\, CA
 DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
  ion benefiting the Youth Development Scholarship Fund.
+END:VEVENT
+BEGIN:VEVENT
+UID:6ace6748e737@community-calendar
+DTSTAMP:20261122T174854Z
+DTSTART:20270618T000000
+DTEND:20270618T233000
+RRULE:FREQ=DAILY;COUNT=5
+SUMMARY:Juneteenth Cultural Festival
+LOCATION:Arcata
+DESCRIPTION:A multi-day celebration of emancipation through culture\, educ
+ ation\, art\, and community connection. Presented by Black Humboldt and t
+ he Eureka Chapter of the NAACP\, the festival spans multiple venues with 
+ a speaker series\, live music\, line dancing\, a vendor village\, kids’
+  zone\, and the main Day Festival at Halvorsen Park. Frequency : Annually
+  Time : Varies Vanues : Multiple Locations (Eureka\, Arcata\, Blue Lake)\
+ nhttps://www.visiteureka.com/event/juneteenth-cultural-festival/2027-06-1
+ 8/
+URL:https://www.visiteureka.com/event/juneteenth-cultural-festival/2027-06
+ -18/
 END:VEVENT
 END:VCALENDAR

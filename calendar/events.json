@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T09:44:28Z",
+ "updated": "2026-11-22T17:48:54Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -209,26 +209,6 @@
    "lat": 40.8665,
    "lng": -124.0828,
    "approx": true
-  },
-  {
-   "id": "75a248146e57",
-   "title": "Thanksgiving Cake Decorating Class",
-   "date": "2026-11-22",
-   "end_date": "2026-11-22",
-   "start_time": "13:00",
-   "end_time": "13:00",
-   "town": "Eureka",
-   "place": "Carl Johnson Company",
-   "address": "3950 Jacobs Ave",
-   "website": "https://www.visiteureka.com/event/thanksgiving-cake-decorating-class/",
-   "description": "Thanksgiving-themed cake decorating with Jeny Giraud. $55 per person. Sign up",
-   "free": false,
-   "category": "",
-   "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/",
-   "lat": 40.805235,
-   "lng": -124.137023,
-   "approx": false
   },
   {
    "id": "117b11c4ca8b",
@@ -1066,6 +1046,26 @@
    ],
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "ef481ea66aaa",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-11-27",
+   "end_date": "2026-11-27",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
    "approx": true
   },
   {
@@ -2548,6 +2548,26 @@
    ],
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "9339ae72ce35",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-04",
+   "end_date": "2026-12-04",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
    "approx": true
   },
   {
@@ -4034,6 +4054,26 @@
    "approx": false
   },
   {
+   "id": "ec1fa84ae11b",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-11",
+   "end_date": "2026-12-11",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
+  },
+  {
    "id": "9a3a9d4f6d44",
    "title": "Writers of Willow Creek",
    "date": "2026-12-11",
@@ -5052,6 +5092,26 @@
    "approx": false
   },
   {
+   "id": "5488281c67eb",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-18",
+   "end_date": "2026-12-18",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
+  },
+  {
    "id": "a60005d6359c",
    "title": "Writers of Willow Creek",
    "date": "2026-12-18",
@@ -5997,6 +6057,26 @@
    "lat": 40.585816,
    "lng": -124.265927,
    "approx": false
+  },
+  {
+   "id": "6dcfa45f1f7d",
+   "title": "TAGA weekly golf tournament",
+   "date": "2026-12-25",
+   "end_date": "2026-12-25",
+   "start_time": "11:00",
+   "end_time": "",
+   "town": "Weaverville",
+   "place": "Trinity Alps Golf Course",
+   "address": "",
+   "website": "",
+   "description": "Trinity Alps Golf Association, weekly 18-hole tournament every Friday morning at 11 a.m., Trinity Alps Golf Course in Weaverville. Weather permitting. All golfers with an established handicap are welcome.",
+   "free": false,
+   "category": "",
+   "source": "Visit Trinity",
+   "source_url": "https://visittrinity.com/calendar/",
+   "lat": 40.7307,
+   "lng": -122.942,
+   "approx": true
   },
   {
    "id": "8735754bd095",
@@ -7088,6 +7168,26 @@
    "approx": true
   },
   {
+   "id": "6ace6748e737",
+   "title": "Juneteenth Cultural Festival",
+   "date": "2027-06-18",
+   "end_date": "2027-06-22",
+   "start_time": "00:00",
+   "end_time": "23:30",
+   "town": "Arcata",
+   "place": "Arcata",
+   "address": "",
+   "website": "https://www.visiteureka.com/event/juneteenth-cultural-festival/2027-06-18/",
+   "description": "A multi-day celebration of emancipation through culture, education, art, and community connection. Presented by Black Humboldt and the Eureka Chapter of the NAACP, the festival spans multiple venues with a speaker series, live music, line dancing, a vendor village, kids\u2019 zone, and the main Day Festival at Halvorsen Park. Frequency : Annually Time : Varies Vanues : Multiple Locations (Eureka, Arcata, Blue Lake)",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8665,
+   "lng": -124.0828,
+   "approx": true
+  },
+  {
    "id": "e0a3aff50a1f",
    "title": "Bigfoot Daze",
    "date": "2027-06-19",
@@ -7106,6 +7206,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "65a5fe77169d",
+   "title": "First Saturday Night Arts Alive!",
+   "date": "2027-07-03",
+   "end_date": "2027-07-03",
+   "start_time": "18:00",
+   "end_time": "21:00",
+   "town": "Eureka",
+   "place": "Downtown & Old Town Eureka",
+   "address": "",
+   "website": "https://www.visiteureka.com/event/first-saturday-night-arts-alive-9/",
+   "description": "Galleries, museums, theaters, shops, bars and restaurants across Old Town and Downtown stay open late on the first Saturday of the month, with art, live music and pop-up performances. More info",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
    "approx": true
   }
  ]
