@@ -8,78 +8,8 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:858d65cee6ea@community-calendar
-DTSTAMP:20261121T152022Z
-DTSTART:20261121T100000
-DTEND:20261121T160000
-SUMMARY:Annual Holiday Bazaar
-LOCATION:Willow Creek-China Flat Museum
-DESCRIPTION:Handmade gifts\, jewelry\, candles\, soaps\, festive decor\, o
- rnaments\, wreaths\, garlands\, treats and more. Vendors welcome: vendors
-  must be museum members (membership is $15 a year). Details at thebigfoot
- museum.com.\nhttp://www.thebigfootmuseum.com/
-URL:http://www.thebigfootmuseum.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:c6bfb9f5740d@community-calendar
-DTSTAMP:20261121T152022Z
-DTSTART:20261121T100000
-DTEND:20261121T160000
-SUMMARY:Henderson's Beef Seasoning at the Holiday Boutique
-LOCATION:Studio 299\, 75 The Terrace\, Willow Creek\, CA
-DESCRIPTION:Henderson's Beef Seasoning\, made for beef\, at the Studio 299
-  Holiday Boutique. Bring bold flavor to your holiday table\, and find a f
- lavorful gift for the beef lover on your list.
-END:VEVENT
-BEGIN:VEVENT
-UID:a2ca0a93cb4c@community-calendar
-DTSTAMP:20261121T152022Z
-DTSTART:20261121T100000
-DTEND:20261121T160000
-SUMMARY:His Creations at the Holiday Boutique
-LOCATION:Studio 299 Boutique\, 75 The Terrace\, Willow Creek\, CA
-DESCRIPTION:A faith based\, family owned small business at the Holiday Bou
- tique. Sublimation tumblers\, discounted epoxy tumblers\, and a DTF t-shi
- rt bar where you pick your shirt\, choose your design and it's pressed ri
- ght there. Holiday and everyday designs\, plus a tub of discounted prints
- .
-END:VEVENT
-BEGIN:VEVENT
-UID:7b81e0f35f0a@community-calendar
-DTSTAMP:20261121T152022Z
-DTSTART:20261121T100000
-DTEND:20261121T160000
-SUMMARY:Holiday Boutique
-LOCATION:Studio 299\, 75 The Terrace Ln
-DESCRIPTION:Over 20 local artists. New River Catering will have quiche and
-  lasagna for sale.
-END:VEVENT
-BEGIN:VEVENT
-UID:515f3913f84c@community-calendar
-DTSTAMP:20261121T152022Z
-DTSTART:20261121T110000
-DTEND:20261121T150000
-SUMMARY:Mini Photo Shoot
-LOCATION:Studio 299\, 75 The Terrace Ln
-DESCRIPTION:Santa visits 1pm to 2pm. Donations support Trinity River Outre
- ach.
-END:VEVENT
-BEGIN:VEVENT
-UID:af0b44f70895@community-calendar
-DTSTAMP:20261121T152022Z
-DTSTART:20261121T130000
-DTEND:20261121T160000
-SUMMARY:Saturday Garden Work Day: Fruit Tree Pruning Basics
-LOCATION:Neighborhood Harvest Garden\, 205 Moccasin Drive
-DESCRIPTION:Fruit tree pruning basics\, weather permitting. Come learn tip
- s and meet new neighbors. Free harvests\, seeds and more. The garden is o
- n private property\, so please come only during workshop and event hours.
- \nhttps://www.facebook.com/profile.php?id=61585530843784
-URL:https://www.facebook.com/profile.php?id=61585530843784
-END:VEVENT
-BEGIN:VEVENT
 UID:998a610827a4@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261122T100000
 DTEND:20261122T160000
 SUMMARY:Annual Holiday Bazaar
@@ -92,7 +22,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:117b11c4ca8b@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261123T180000
 DTEND:20261123T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -104,7 +34,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-11-
 END:VEVENT
 BEGIN:VEVENT
 UID:627be0d5721e@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:Free Swap Table at Friends-Giving
@@ -116,7 +46,7 @@ URL:https://www.facebook.com/profile.php?id=61585530843784
 END:VEVENT
 BEGIN:VEVENT
 UID:cd44cdc8b2ac@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261125T103000
 DTEND:20261125T110000
 SUMMARY:Story Time
@@ -136,7 +66,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-11-25/
 END:VEVENT
 BEGIN:VEVENT
 UID:7e3aee1154d4@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261125T150000
 DTEND:20261125T170000
 SUMMARY:Trinity River Outreach Friends-Giving
@@ -145,7 +75,7 @@ DESCRIPTION:All community welcome.
 END:VEVENT
 BEGIN:VEVENT
 UID:ef8bb291c387@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261125T173000
 DTEND:20261125T183000
 SUMMARY:Willow Creek Chamber Monthly Meeting
@@ -157,7 +87,7 @@ URL:https://willowcreekchamber.com/event/willow-creek-chamber-monthly-meet
 END:VEVENT
 BEGIN:VEVENT
 UID:11c27399a77e@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261126T103000
 DTEND:20261126T110000
 SUMMARY:Storytime
@@ -167,7 +97,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-11-26/
 END:VEVENT
 BEGIN:VEVENT
 UID:e46f4651cbea@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Wildfoot Wonders Reopening
@@ -177,7 +107,7 @@ DESCRIPTION:Gifts and more. Wildfoot Wonders is reopening at 107 Mayfair S
 END:VEVENT
 BEGIN:VEVENT
 UID:7152050195f7@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261127T100000
 DTEND:20261127T160000
 SUMMARY:Annual Holiday Bazaar
@@ -190,7 +120,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:880e9f1977cf@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261127T140000
 DTEND:20261127T150000
 SUMMARY:Writers of Willow Creek
@@ -204,7 +134,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-11-2
 END:VEVENT
 BEGIN:VEVENT
 UID:baa5262e229c@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261127T160000
 DTEND:20261127T170000
 SUMMARY:Yoga for Every Body
@@ -215,7 +145,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-11-27/
 END:VEVENT
 BEGIN:VEVENT
 UID:78ce0b6fd178@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261128T100000
 DTEND:20261128T160000
 SUMMARY:Annual Holiday Bazaar
@@ -228,7 +158,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:4a63274b0197@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261128T100000
 DTEND:20261128T160000
 SUMMARY:Nightmare Friendsgiving: Act in a Short Film
@@ -240,7 +170,7 @@ URL:https://www.dqwc.org
 END:VEVENT
 BEGIN:VEVENT
 UID:64f8454c253d@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261129T100000
 DTEND:20261129T160000
 SUMMARY:Annual Holiday Bazaar
@@ -253,7 +183,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:1f1ce2d15d17@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261129T130000
 DTEND:20261129T160000
 SUMMARY:Sunday Art Hang Out: Wreath Making and Harvest Crafts
@@ -269,7 +199,7 @@ URL:https://neighborhood-harvest.org
 END:VEVENT
 BEGIN:VEVENT
 UID:7bc56f531dde@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261130T180000
 DTEND:20261130T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -281,7 +211,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-11-
 END:VEVENT
 BEGIN:VEVENT
 UID:23fefea51e52@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261202T103000
 DTEND:20261202T110000
 SUMMARY:Story Time
@@ -301,7 +231,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-02/
 END:VEVENT
 BEGIN:VEVENT
 UID:909a7db15ac2@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261203T103000
 DTEND:20261203T110000
 SUMMARY:Storytime
@@ -311,7 +241,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-03/
 END:VEVENT
 BEGIN:VEVENT
 UID:e8e541743bb3@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261203T180000
 DTEND:20261203T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -325,7 +255,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:0e9d0884336a@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261204T100000
 DTEND:20261204T160000
 SUMMARY:Annual Holiday Bazaar
@@ -338,7 +268,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:3287d0da1bb4@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261204T140000
 DTEND:20261204T150000
 SUMMARY:Writers of Willow Creek
@@ -352,7 +282,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-0
 END:VEVENT
 BEGIN:VEVENT
 UID:e25317b1bae9@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261204T160000
 DTEND:20261204T170000
 SUMMARY:Yoga for Every Body
@@ -363,7 +293,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-04/
 END:VEVENT
 BEGIN:VEVENT
 UID:dae24467123e@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Holiday Neighborhood Harvest Festival
@@ -374,7 +304,7 @@ URL:https://www.facebook.com/profile.php?id=61585530843784
 END:VEVENT
 BEGIN:VEVENT
 UID:ebea6fa5895b@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261205T100000
 DTEND:20261205T160000
 SUMMARY:Annual Holiday Bazaar
@@ -387,7 +317,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:be8042999df2@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261205T173000
 DTEND:20261205T183000
 SUMMARY:Festival of Light & Wonder: Lighted Parade
@@ -397,7 +327,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:cfa405632cbc@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261205T180000
 DTEND:20261205T190000
 SUMMARY:Festival of Light & Wonder: Holiday Classic Movie Screening
@@ -407,7 +337,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:db560dc7e218@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261205T183000
 DTEND:20261205T193000
 SUMMARY:Festival of Light & Wonder: Tree Lighting Countdown
@@ -417,7 +347,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:418c3c5ea50f@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261206T100000
 DTEND:20261206T160000
 SUMMARY:Annual Holiday Bazaar
@@ -430,7 +360,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:accc1e6c0789@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261207T180000
 DTEND:20261207T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -442,7 +372,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:0037de1ac52e@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261209T103000
 DTEND:20261209T110000
 SUMMARY:Story Time
@@ -462,7 +392,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-09/
 END:VEVENT
 BEGIN:VEVENT
 UID:705d2281dc1c@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261210T103000
 DTEND:20261210T110000
 SUMMARY:Storytime
@@ -472,7 +402,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-10/
 END:VEVENT
 BEGIN:VEVENT
 UID:9a3a9d4f6d44@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261211T140000
 DTEND:20261211T150000
 SUMMARY:Writers of Willow Creek
@@ -486,7 +416,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-1
 END:VEVENT
 BEGIN:VEVENT
 UID:2a1e32acbcbe@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261211T160000
 DTEND:20261211T170000
 SUMMARY:Yoga for Every Body
@@ -497,7 +427,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-11/
 END:VEVENT
 BEGIN:VEVENT
 UID:999c5fd1bd7f@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261214T180000
 DTEND:20261214T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -509,7 +439,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:3d59244a05dd@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261216T103000
 DTEND:20261216T110000
 SUMMARY:Story Time
@@ -529,7 +459,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-16/
 END:VEVENT
 BEGIN:VEVENT
 UID:aceeb961c84f@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261217T103000
 DTEND:20261217T110000
 SUMMARY:Storytime
@@ -539,7 +469,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-17/
 END:VEVENT
 BEGIN:VEVENT
 UID:a60005d6359c@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261218T140000
 DTEND:20261218T150000
 SUMMARY:Writers of Willow Creek
@@ -553,7 +483,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-1
 END:VEVENT
 BEGIN:VEVENT
 UID:4faac3880fec@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261218T160000
 DTEND:20261218T170000
 SUMMARY:Yoga for Every Body
@@ -564,7 +494,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-18/
 END:VEVENT
 BEGIN:VEVENT
 UID:b9409a848f13@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20261221T180000
 DTEND:20261221T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -576,7 +506,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:8f1f15fdc5bb@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20270107T180000
 DTEND:20270107T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -590,7 +520,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:c1a6f724b4ce@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20270204T180000
 DTEND:20270204T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -604,7 +534,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:37eb08fe7315@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20270304T180000
 DTEND:20270304T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -618,7 +548,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:e0ba29c5e3cb@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20270401T180000
 DTEND:20270401T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -632,7 +562,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:e32a0b81490a@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART:20270506T180000
 DTEND:20270506T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -646,7 +576,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:e0a3aff50a1f@community-calendar
-DTSTAMP:20261121T152022Z
+DTSTAMP:20261122T094428Z
 DTSTART;VALUE=DATE:20270619
 DTEND;VALUE=DATE:20270620
 SUMMARY:Bigfoot Daze
