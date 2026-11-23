@@ -8,23 +8,8 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:1664632a6a81@community-calendar
-DTSTAMP:20261122T174854Z
-DTSTART:20261122T110000
-DTEND:20261122T160000
-SUMMARY:48th Annual HBMS Mushroom Fair
-LOCATION:Arcata Community Center\, 321 Dr. M.L.K. Jr Pkwy\, Arcata\, CA
-DESCRIPTION:Humboldt Bay Mycological Society's biggest event of the year. 
- Your ticket includes mushroom displays of hundreds of fresh local species
- \, a raffle and food drive (bring nonperishable food for Food for People 
- to earn up to 10 raffle tickets)\, vendors and food trucks\, a kids' scav
- enger hunt with free prizes while supplies last\, and workshops and talks
-  on mushroom identification\, cultivation and more. Proceeds support scho
- larships\, speaker honoraria and educational events.
-END:VEVENT
-BEGIN:VEVENT
 UID:23d2823eb1d8@community-calendar
-DTSTAMP:20261122T174854Z
+DTSTAMP:20261123T201120Z
 DTSTART:20261212T100000
 DTEND:20261212T170000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -34,7 +19,7 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
 END:VEVENT
 BEGIN:VEVENT
 UID:756d7494380f@community-calendar
-DTSTAMP:20261122T174854Z
+DTSTAMP:20261123T201120Z
 DTSTART:20261213T100000
 DTEND:20261213T160000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -44,7 +29,7 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
 END:VEVENT
 BEGIN:VEVENT
 UID:6ace6748e737@community-calendar
-DTSTAMP:20261122T174854Z
+DTSTAMP:20261123T201120Z
 DTSTART:20270618T000000
 DTEND:20270618T233000
 RRULE:FREQ=DAILY;COUNT=5
