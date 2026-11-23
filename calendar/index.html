@@ -661,7 +661,11 @@ body.flyers .evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(m
     else if (t.id === 'zipGo') { lookupZip($('zip').value); }
     else if (t.id === 'locBtn') { useLocation(); }
     else if (t.id === 'showAll') { state.one = ''; render(); }
-    else if (t.dataset.share) { var row = t.closest('.card').querySelector('.sharerow'), op = row.classList.contains('hidden'); row.classList.toggle('hidden', !op); t.setAttribute('aria-expanded', op); }
+    else if (t.dataset.share) {
+      var row = document.getElementById('sr-' + t.dataset.share), ne = row && row.querySelector('[data-native]');
+      if (ne && window.matchMedia && matchMedia('(pointer: coarse)').matches) { ne.click(); }
+      else if (row) { var op = row.classList.contains('hidden'); row.classList.toggle('hidden', !op); t.setAttribute('aria-expanded', op); }
+    }
     else if (t.dataset.copy) { copyLink(t); }
     else if (t.dataset.native) { navigator.share({ title: t.dataset.title, text: t.dataset.text, url: t.dataset.native }).catch(function () {}); }
     else if (t.id === 'shareBtn') { var so = !$('sharePanel').classList.contains('open'); $('sharePanel').classList.toggle('open', so); t.setAttribute('aria-expanded', so); }
