@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:23d2823eb1d8@community-calendar
-DTSTAMP:20261123T201120Z
+DTSTAMP:20261124T202556Z
 DTSTART:20261212T100000
 DTEND:20261212T170000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -19,7 +19,7 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
 END:VEVENT
 BEGIN:VEVENT
 UID:756d7494380f@community-calendar
-DTSTAMP:20261123T201120Z
+DTSTAMP:20261124T202556Z
 DTSTART:20261213T100000
 DTEND:20261213T160000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -28,8 +28,21 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
  ion benefiting the Youth Development Scholarship Fund.
 END:VEVENT
 BEGIN:VEVENT
+UID:250b1902609d@community-calendar
+DTSTAMP:20261124T202556Z
+DTSTART:20261220T100000
+DTEND:20261220T140000
+SUMMARY:North Coast Co-op Cheese Festival
+LOCATION:Arcata Co-op\, 811 I St\, Arcata\, CA
+DESCRIPTION:Taste over 30 cheeses\, from seasonal exclusives to Co-op favo
+ rites\, and learn from the cheese experts. All cheeses available for tast
+ ing are 20% off for the day. Watch a 150-pound cheese wheel get broken op
+ en at 11am\, and enter to win a fully loaded holiday charcuterie board wo
+ rth over $200.
+END:VEVENT
+BEGIN:VEVENT
 UID:6ace6748e737@community-calendar
-DTSTAMP:20261123T201120Z
+DTSTAMP:20261124T202556Z
 DTSTART:20270618T000000
 DTEND:20270618T233000
 RRULE:FREQ=DAILY;COUNT=5
