@@ -8,31 +8,8 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:c107e8bd7034@community-calendar
-DTSTAMP:20261125T195542Z
-DTSTART:20261125T140000
-DTEND:20261125T163000
-SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
- ointment)
-LOCATION:Kim Yerton Memorial Library\, 370 Loop Rd
-DESCRIPTION:If you want to learn how to use your own online device\, creat
- e an account for an email\, or get started on the internet\, help is here
- ! Stop by the Kim Yerton Memorial Hoopa Branch Library and talk to Acorn 
- Wireless’s expert Digital Navigator\, Abraham Camez. He’ll get you st
- arted and help you over any stumbling blocks. Acorn Wireless is a triball
- y owned internet service provider operated by the Hoopa Valley Public Uti
- lities District. It was started in 2020 from CARES funding approved by th
- e Hoopa Valley Tribal Council and supports Hoopa Valley people in key act
- ivities like distance learning\, remote work\, and telemedicine. Acorn pr
- ovides high-speed broadband internet for the Hoopa Community....\nhttps:/
- /willowcreekchamber.com/event/kim-yerton-library-free-tech-support-with-a
- corn-wireless-by-appointment/2026-11-25/
-URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
- ort-with-acorn-wireless-by-appointment/2026-11-25/
-END:VEVENT
-BEGIN:VEVENT
 UID:a721f87cea73@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261125T170000
 DTEND:20261125T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -52,7 +29,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:0db5cd9b26f1@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261128T100000
 DTEND:20261128T170000
 SUMMARY:Small Business Day Market
@@ -63,7 +40,7 @@ DESCRIPTION:Handicraft jewelry\, food and community. Come for the finds\,
 END:VEVENT
 BEGIN:VEVENT
 UID:ad51e541c0c8@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261202T140000
 DTEND:20261202T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -86,7 +63,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:c4fd650f53de@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261202T170000
 DTEND:20261202T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -106,7 +83,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:1b9f857f23aa@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261209T140000
 DTEND:20261209T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -129,7 +106,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:ec95458366c1@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261209T170000
 DTEND:20261209T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -149,7 +126,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:3e19d3f55871@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261216T140000
 DTEND:20261216T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -172,7 +149,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:595998a9a4c2@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261216T170000
 DTEND:20261216T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -192,7 +169,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:467a335654ec@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261223T140000
 DTEND:20261223T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -212,5 +189,25 @@ DESCRIPTION:If you want to learn how to use your own online device\, creat
  corn-wireless-by-appointment/2026-12-23/
 URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
  ort-with-acorn-wireless-by-appointment/2026-12-23/
+END:VEVENT
+BEGIN:VEVENT
+UID:05c1e82fe6d4@community-calendar
+DTSTAMP:20261126T024948Z
+DTSTART:20261223T170000
+DTEND:20261223T194500
+SUMMARY:Kim Yerton Library\, Cribbage & Game Night
+LOCATION:Kim Yerton Memorial Library\, 370 Loop Rd
+DESCRIPTION:Join us for a fun and friendly Cribbage & Board Game Night at 
+ the library! Whether you’re a seasoned cribbage player or just learning
+  the game\, come enjoy an evening of strategy and good company. We provid
+ e boards and cards\, but feel free to bring your own. Not into Cribbage? 
+ No problem! We have a variety of board games for all ages\, so bring the 
+ whole family and find a game to enjoy together. From classics like Checke
+ rs and Clue to trivia challenges and more\, there’s something for every
+ one. All ages are welcome – come by to play\, relax\, and make new frie
+ nds. Every Wednesday evening starting at 5 p.m.\nhttps://willowcreekchamb
+ er.com/event/kim-yerton-library-cribbage-game-night/2026-12-23/
+URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
+ night/2026-12-23/
 END:VEVENT
 END:VCALENDAR

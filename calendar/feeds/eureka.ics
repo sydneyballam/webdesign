@@ -8,22 +8,8 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:4da798f45411@community-calendar
-DTSTAMP:20261125T195542Z
-DTSTART:20261126T090000
-DTEND:20261126T090000
-SUMMARY:25th Old Town 5K Turkey Trot
-LOCATION:Old Town Gazebo\, 2nd & F St
-DESCRIPTION:25th annual 5K run/walk starting at the Gazebo in Old Town. Pr
- e-race sign-up: $25 adults\, $20 kids\, Nov 23 to 25. Race day: $30 for e
- veryone\, 7:00 to 8:45 am at 2nd & F St. T-shirts are for sale. Online re
- gistration is new this year.\nhttps://www.visiteureka.com/event/25th-old-
- town-5k-turkey-trot/
-URL:https://www.visiteureka.com/event/25th-old-town-5k-turkey-trot/
-END:VEVENT
-BEGIN:VEVENT
 UID:e145bfa75fe3@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261127T140000
 DTEND:20261127T160000
 SUMMARY:Santa Arrives in Old Town
@@ -34,7 +20,7 @@ URL:https://www.eurekamainstreet.org/events
 END:VEVENT
 BEGIN:VEVENT
 UID:f56825d71500@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261127T190000
 DTEND:20261127T200000
 SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
@@ -50,7 +36,7 @@ URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
 END:VEVENT
 BEGIN:VEVENT
 UID:787e2d40aa37@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261127T190000
 DTEND:20261127T233000
 SUMMARY:Threshold:UP featuring Beats Antique
@@ -67,7 +53,7 @@ URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
 END:VEVENT
 BEGIN:VEVENT
 UID:dbb81fa31aab@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261128T130000
 DTEND:20261128T140000
 SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
@@ -83,7 +69,7 @@ URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
 END:VEVENT
 BEGIN:VEVENT
 UID:c4d1749b95bf@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261128T190000
 DTEND:20261128T200000
 SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
@@ -99,7 +85,7 @@ URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
 END:VEVENT
 BEGIN:VEVENT
 UID:624ecbbd39d6@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261128T190000
 DTEND:20261128T233000
 SUMMARY:Threshold:UP featuring Beats Antique
@@ -116,7 +102,7 @@ URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
 END:VEVENT
 BEGIN:VEVENT
 UID:b29a10ab388d@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261202T180000
 DTEND:20261202T200000
 SUMMARY:Dick Taylor's 4th Annual Tree Lighting
@@ -130,7 +116,7 @@ URL:https://www.visiteureka.com/event/dick-taylors-4th-annual-tree-lightin
 END:VEVENT
 BEGIN:VEVENT
 UID:601f4fe75a2e@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261204T160000
 DTEND:20261204T210000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -143,7 +129,7 @@ URL:https://www.humboldtartisans.com
 END:VEVENT
 BEGIN:VEVENT
 UID:237c72757514@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261204T193000
 DTEND:20261204T203000
 SUMMARY:Eureka Symphony: A Season of Light
@@ -159,7 +145,7 @@ URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
 UID:2d67e3ca10fd@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Holiday Window Display Contest: "Season of Cheer"
@@ -173,7 +159,7 @@ URL:https://www.visiteureka.com/event/holiday-window-display-contest-seaso
 END:VEVENT
 BEGIN:VEVENT
 UID:3a4ea783cbf6@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Winter Whimsy Quest
@@ -186,7 +172,7 @@ URL:https://www.visiteureka.com/event/winter-whimsy-quest/
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba391125ecb@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261205T100000
 DTEND:20261205T170000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -199,7 +185,7 @@ URL:https://www.humboldtartisans.com
 END:VEVENT
 BEGIN:VEVENT
 UID:f2b27b8309e2@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261205T110000
 DTEND:20261205T120000
 SUMMARY:Salty Santa Boat Parade
@@ -210,7 +196,7 @@ DESCRIPTION:Boats of every size\, from row boats to tug boats\, parade alo
 END:VEVENT
 BEGIN:VEVENT
 UID:c6e0dd1a0d79@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261205T110000
 DTEND:20261205T160000
 RRULE:FREQ=DAILY;COUNT=2
@@ -227,7 +213,7 @@ URL:https://www.visiteureka.com/event/winter-open-studio-george-sennott-st
 END:VEVENT
 BEGIN:VEVENT
 UID:74cdf8b8e961@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261205T180000
 DTEND:20261205T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -240,7 +226,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-2/
 END:VEVENT
 BEGIN:VEVENT
 UID:24176bc4d9a2@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261205T193000
 DTEND:20261205T203000
 SUMMARY:Eureka Symphony: A Season of Light
@@ -256,7 +242,7 @@ URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
 UID:5d50725f88e1@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261206T100000
 DTEND:20261206T170000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -269,7 +255,7 @@ URL:https://www.humboldtartisans.com
 END:VEVENT
 BEGIN:VEVENT
 UID:9aebda3eb857@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261206T130000
 DTEND:20261206T160000
 SUMMARY:Beginner Wreath Making Class
@@ -281,7 +267,7 @@ URL:https://www.visiteureka.com/event/beginner-wreath-making-class-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:62090f3be3ad@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261209T170000
 DTEND:20261209T170000
 SUMMARY:Humboldt Library Foundation Holiday Gala
@@ -296,7 +282,7 @@ URL:https://www.visiteureka.com/event/humboldt-library-foundation-holiday-
 END:VEVENT
 BEGIN:VEVENT
 UID:5856ddec48d6@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261212T140000
 DTEND:20261212T150000
 SUMMARY:Victorian Holiday: 125th Anniversary Tea
@@ -310,7 +296,7 @@ URL:https://www.eurekawomansclub.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b1177a7eb218@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261212T180000
 DTEND:20261212T233000
 SUMMARY:Truckers Christmas Parade
@@ -326,7 +312,7 @@ URL:https://www.visiteureka.com/event/truckers-christmas-parade/2026-12-12
 END:VEVENT
 BEGIN:VEVENT
 UID:40cad33f85d5@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261221
 SUMMARY:North Coast Dance “The Nutcracker”
@@ -341,7 +327,7 @@ URL:https://www.visiteureka.com/event/north-coast-dance-the-nutcracker-202
 END:VEVENT
 BEGIN:VEVENT
 UID:19bae3e1102b@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261218T170000
 DTEND:20261218T210000
 SUMMARY:Christmas @ the Acres
@@ -354,7 +340,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:26305abc1186@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261219T100000
 DTEND:20261219T190000
 SUMMARY:Christmas @ the Acres
@@ -367,7 +353,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:954a41626c74@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261219T120000
 DTEND:20261219T150000
 SUMMARY:SHS Open House & Christmas PAWty
@@ -379,7 +365,7 @@ URL:https://www.visiteureka.com/event/shs-open-house-christmas-pawty/
 END:VEVENT
 BEGIN:VEVENT
 UID:168b399e19b1@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261219T130000
 DTEND:20261219T130000
 SUMMARY:Cookie Decorating Workshop (Christmas Theme)
@@ -392,7 +378,7 @@ URL:https://www.visiteureka.com/event/cookie-decorating-workshop-christmas
 END:VEVENT
 BEGIN:VEVENT
 UID:0ec0f5dfa9d7@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261219T140000
 DTEND:20261219T153000
 SUMMARY:A Company of Voices: 3rd Annual Holiday Tea & Concert
@@ -406,7 +392,7 @@ URL:https://www.visiteureka.com/event/a-company-of-voices-3rd-annual-holid
 END:VEVENT
 BEGIN:VEVENT
 UID:762c6fd1457d@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261220T100000
 DTEND:20261220T160000
 SUMMARY:Christmas @ the Acres
@@ -419,7 +405,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:d9cda11aa348@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20261223T170000
 DTEND:20261223T170000
 SUMMARY:Christmas Cake Decorating Class
@@ -431,7 +417,7 @@ URL:https://www.visiteureka.com/event/christmas-cake-decorating-class/
 END:VEVENT
 BEGIN:VEVENT
 UID:711cf55c32a1@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270102T180000
 DTEND:20270102T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -444,7 +430,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f7e7b2d62d5@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270123T193000
 DTEND:20270123T193000
 SUMMARY:Eureka Chamber Music Series: Imani Winds
@@ -458,7 +444,7 @@ URL:https://www.visiteureka.com/event/eureka-chamber-music-series-imani-wi
 END:VEVENT
 BEGIN:VEVENT
 UID:c2707745384d@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270206T180000
 DTEND:20270206T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -471,7 +457,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-4/
 END:VEVENT
 BEGIN:VEVENT
 UID:3ae29d389c9a@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270306T180000
 DTEND:20270306T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -484,7 +470,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-5/
 END:VEVENT
 BEGIN:VEVENT
 UID:66c1c34ad29e@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270403T180000
 DTEND:20270403T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -497,7 +483,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-6/
 END:VEVENT
 BEGIN:VEVENT
 UID:98fa20726c14@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270501T180000
 DTEND:20270501T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -510,7 +496,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-7/
 END:VEVENT
 BEGIN:VEVENT
 UID:ef30cf89062d@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270530T170000
 DTEND:20270530T210000
 SUMMARY:Celebration of the Arts Gala
@@ -526,7 +512,7 @@ URL:https://www.visiteureka.com/event/celebration-of-the-arts-gala/2027-05
 END:VEVENT
 BEGIN:VEVENT
 UID:773bc84d4cac@community-calendar
-DTSTAMP:20261125T195542Z
+DTSTAMP:20261126T024948Z
 DTSTART:20270605T180000
 DTEND:20270605T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -536,5 +522,18 @@ DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants
  month\, with art\, live music and pop-up performances. More info\nhttps:/
  /www.visiteureka.com/event/first-saturday-night-arts-alive-8/
 URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-8/
+END:VEVENT
+BEGIN:VEVENT
+UID:65a5fe77169d@community-calendar
+DTSTAMP:20261126T024948Z
+DTSTART:20270703T180000
+DTEND:20270703T210000
+SUMMARY:First Saturday Night Arts Alive!
+LOCATION:Downtown & Old Town Eureka
+DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants 
+ across Old Town and Downtown stay open late on the first Saturday of the 
+ month\, with art\, live music and pop-up performances. More info\nhttps:/
+ /www.visiteureka.com/event/first-saturday-night-arts-alive-9/
+URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-9/
 END:VEVENT
 END:VCALENDAR

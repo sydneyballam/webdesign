@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T19:55:42Z",
+ "updated": "2026-11-26T02:49:48Z",
  "sheet": "read 6 row(s). Columns: title,date,end_date,start_time,end_time,town,place,address,website,description,free | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF! | row: #REF!,#REF!,#REF!,#REF!,#REF!,#REF!,#REF!",
  "towns": [
   "Arcata",
@@ -164,26 +164,6 @@
    "approx": false
   },
   {
-   "id": "c107e8bd7034",
-   "title": "Kim Yerton Library, Free Tech Support with Acorn Wireless (By Appointment)",
-   "date": "2026-11-25",
-   "end_date": "2026-11-25",
-   "start_time": "14:00",
-   "end_time": "16:30",
-   "town": "Hoopa",
-   "place": "Kim Yerton Memorial Library",
-   "address": "370 Loop Rd",
-   "website": "https://willowcreekchamber.com/event/kim-yerton-library-free-tech-support-with-acorn-wireless-by-appointment/2026-11-25/",
-   "description": "If you want to learn how to use your own online device, create an account for an email, or get started on the internet, help is here! Stop by the Kim Yerton Memorial Hoopa Branch Library and talk to Acorn Wireless\u2019s expert Digital Navigator, Abraham Camez. He\u2019ll get you started and help you over any stumbling blocks. Acorn Wireless is a tribally owned internet service provider operated by the Hoopa Valley Public Utilities District. It was started in 2020 from CARES funding approved by the Hoopa Valley Tribal Council and supports Hoopa Valley people in key activities like distance learning, remote work, and telemedicine. Acorn provides high-speed broadband internet for the Hoopa Community....",
-   "free": false,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 41.05,
-   "lng": -123.674,
-   "approx": true
-  },
-  {
    "id": "7e3aee1154d4",
    "title": "Trinity River Outreach Friends-Giving",
    "date": "2026-11-25",
@@ -223,26 +203,6 @@
    "lat": 41.05,
    "lng": -123.674,
    "approx": true
-  },
-  {
-   "id": "ef8bb291c387",
-   "title": "Willow Creek Chamber Monthly Meeting",
-   "date": "2026-11-25",
-   "end_date": "2026-11-25",
-   "start_time": "17:30",
-   "end_time": "18:30",
-   "town": "Willow Creek",
-   "place": "Humboldt Land Co.",
-   "address": "39060 CA-299",
-   "website": "https://willowcreekchamber.com/event/willow-creek-chamber-monthly-meeting/2026-11-25/",
-   "description": "Everyone is welcome!",
-   "free": false,
-   "category": "",
-   "source": "Willow Creek Chamber of Commerce",
-   "source_url": "https://willowcreekchamber.com/calendar/",
-   "lat": 40.935415,
-   "lng": -123.625132,
-   "approx": false
   },
   {
    "id": "924d8331c9f3",
@@ -366,27 +326,6 @@
    ],
    "lat": 40.585816,
    "lng": -124.265927,
-   "approx": false
-  },
-  {
-   "id": "4da798f45411",
-   "title": "25th Old Town 5K Turkey Trot",
-   "date": "2026-11-26",
-   "end_date": "2026-11-26",
-   "start_time": "09:00",
-   "end_time": "09:00",
-   "town": "Eureka",
-   "place": "Old Town Gazebo",
-   "address": "2nd & F St",
-   "website": "https://www.visiteureka.com/event/25th-old-town-5k-turkey-trot/",
-   "description": "25th annual 5K run/walk starting at the Gazebo in Old Town. Pre-race sign-up: $25 adults, $20 kids, Nov 23 to 25. Race day: $30 for everyone, 7:00 to 8:45 am at 2nd & F St. T-shirts are for sale. Online registration is new this year.",
-   "free": false,
-   "category": "",
-   "source": "Visit Eureka",
-   "source_url": "https://www.visiteureka.com/events/",
-   "cost": "$25 adult, $20 kids",
-   "lat": 40.80439,
-   "lng": -124.166541,
    "approx": false
   },
   {
@@ -5606,6 +5545,26 @@
    "approx": false
   },
   {
+   "id": "05c1e82fe6d4",
+   "title": "Kim Yerton Library, Cribbage & Game Night",
+   "date": "2026-12-23",
+   "end_date": "2026-12-23",
+   "start_time": "17:00",
+   "end_time": "19:45",
+   "town": "Hoopa",
+   "place": "Kim Yerton Memorial Library",
+   "address": "370 Loop Rd",
+   "website": "https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-night/2026-12-23/",
+   "description": "Join us for a fun and friendly Cribbage & Board Game Night at the library! Whether you\u2019re a seasoned cribbage player or just learning the game, come enjoy an evening of strategy and good company. We provide boards and cards, but feel free to bring your own. Not into Cribbage? No problem! We have a variety of board games for all ages, so bring the whole family and find a game to enjoy together. From classics like Checkers and Clue to trivia challenges and more, there\u2019s something for everyone. All ages are welcome \u2013 come by to play, relax, and make new friends. Every Wednesday evening starting at 5 p.m.",
+   "free": false,
+   "category": "",
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 41.05,
+   "lng": -123.674,
+   "approx": true
+  },
+  {
    "id": "51ce850aeff6",
    "title": "Humboldt County Winter Fair: Ice Skating Rink",
    "date": "2026-12-24",
@@ -5702,6 +5661,26 @@
    "lat": 40.585816,
    "lng": -124.265927,
    "approx": false
+  },
+  {
+   "id": "e17433e2c0e2",
+   "title": "Storytime",
+   "date": "2026-12-24",
+   "end_date": "2026-12-24",
+   "start_time": "10:30",
+   "end_time": "11:00",
+   "town": "Willow Creek",
+   "place": "Willow Creek Library",
+   "address": "39 Mayfair St",
+   "website": "https://willowcreekchamber.com/event/storytime/2026-12-24/",
+   "description": "",
+   "free": false,
+   "category": "",
+   "source": "Willow Creek Chamber of Commerce",
+   "source_url": "https://willowcreekchamber.com/calendar/",
+   "lat": 40.939,
+   "lng": -123.632,
+   "approx": true
   },
   {
    "id": "fb2f5f0b0f1d",
@@ -6925,6 +6904,26 @@
    "source_url": "https://willowcreekchamber.com/calendar/",
    "lat": 40.939,
    "lng": -123.632,
+   "approx": true
+  },
+  {
+   "id": "65a5fe77169d",
+   "title": "First Saturday Night Arts Alive!",
+   "date": "2027-07-03",
+   "end_date": "2027-07-03",
+   "start_time": "18:00",
+   "end_time": "21:00",
+   "town": "Eureka",
+   "place": "Downtown & Old Town Eureka",
+   "address": "",
+   "website": "https://www.visiteureka.com/event/first-saturday-night-arts-alive-9/",
+   "description": "Galleries, museums, theaters, shops, bars and restaurants across Old Town and Downtown stay open late on the first Saturday of the month, with art, live music and pop-up performances. More info",
+   "free": false,
+   "category": "",
+   "source": "Visit Eureka",
+   "source_url": "https://www.visiteureka.com/events/",
+   "lat": 40.8021,
+   "lng": -124.1637,
    "approx": true
   }
  ]
