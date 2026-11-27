@@ -8,19 +8,8 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
-UID:7b6c4684e817@community-calendar
-DTSTAMP:20261122T094428Z
-DTSTART:20261126T110000
-DTEND:20261126T120000
-SUMMARY:Thanksgiving Buffet at Alice's
-LOCATION:Alice's Restaurant\, Blue Lake Casino Hotel
-DESCRIPTION:Check the event page for details and any age limits.\nhttps://
- www.bluelakecasino.com/event/thanksgiving-buffet-at-alices/
-URL:https://www.bluelakecasino.com/event/thanksgiving-buffet-at-alices/
-END:VEVENT
-BEGIN:VEVENT
 UID:7568f41303ab@community-calendar
-DTSTAMP:20261122T094428Z
+DTSTAMP:20261127T150138Z
 DTSTART:20261127T210000
 DTEND:20261127T220000
 SUMMARY:Latin Night with DJ Pachanguero
@@ -32,7 +21,7 @@ URL:https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-1
 END:VEVENT
 BEGIN:VEVENT
 UID:95ec8f37a581@community-calendar
-DTSTAMP:20261122T094428Z
+DTSTAMP:20261127T150138Z
 DTSTART:20261128T203000
 DTEND:20261128T213000
 SUMMARY:Americana with Elderberry Rust String Band
