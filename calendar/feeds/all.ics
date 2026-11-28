@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT4H
 X-PUBLISHED-TTL:PT4H
 BEGIN:VEVENT
 UID:b0f59a286371@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Humboldt County Winter Fair: Holiday of Trees Bazaar
@@ -21,7 +21,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9f4cc24f346a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -34,7 +34,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:1ebd5b38c8da@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -46,7 +46,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:48a4a72df329@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -59,7 +59,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e46f4651cbea@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:Wildfoot Wonders Reopening
@@ -69,7 +69,7 @@ DESCRIPTION:Gifts and more. Wildfoot Wonders is reopening at 107 Mayfair S
 END:VEVENT
 BEGIN:VEVENT
 UID:7152050195f7@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261127T100000
 DTEND:20261127T160000
 SUMMARY:Annual Holiday Bazaar
@@ -82,7 +82,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:ef481ea66aaa@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261127T110000
 DTEND:20261127T120000
 SUMMARY:TAGA weekly golf tournament
@@ -93,7 +93,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:e145bfa75fe3@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261127T140000
 DTEND:20261127T160000
 SUMMARY:Santa Arrives in Old Town
@@ -103,52 +103,8 @@ DESCRIPTION:Welcoming Santa Claus to Old Town Eureka with community festiv
 URL:https://www.eurekamainstreet.org/events
 END:VEVENT
 BEGIN:VEVENT
-UID:baa5262e229c@community-calendar
-DTSTAMP:20261127T232625Z
-DTSTART:20261127T160000
-DTEND:20261127T170000
-SUMMARY:Yoga for Every Body
-LOCATION:Trinity Herbals & Wellness Center\, 39025 HWY 299
-DESCRIPTION:https://willowcreekchamber.com/event/yoga-for-every-body-2/202
- 6-11-27/
-URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-11-27/
-END:VEVENT
-BEGIN:VEVENT
-UID:f56825d71500@community-calendar
-DTSTAMP:20261127T232625Z
-DTSTART:20261127T190000
-DTEND:20261127T200000
-SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
-LOCATION:Eureka Woman’s Club\, 1531 J St
-DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
- stmas party\, with dinner included. Shows: Friday 11/27 at 7pm\; Saturday
-  11/28 at 1pm and 7pm. Saturday evening’s show benefits the Breast & GY
- N Health Project. $55 general\, $50 seniors/students\; 56 seats per show.
-  Tickets & info\nhttps://www.visiteureka.com/event/the-sting-of-the-barb-
- holiday-dinner-theater/
-URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
- -theater/
-END:VEVENT
-BEGIN:VEVENT
-UID:787e2d40aa37@community-calendar
-DTSTAMP:20261127T232625Z
-DTSTART:20261127T190000
-DTEND:20261127T233000
-SUMMARY:Threshold:UP featuring Beats Antique
-LOCATION:Eureka Theater\, 612 F St.
-DESCRIPTION:The Eureka Theater’s Threshold dance series presents two nig
- hts with Beats Antique on their Metamorphosis Tour\, with DJ support from
-  local and touring artists plus lasers and projections throughout the the
- ater. Proceeds support the theater’s restoration. Friday: Beats Antique
- \, Beatkitty\, Illexxandra. Saturday: Beats Antique\, David Starfire\, Mr
- . Jennings. Both nights: Pressure\, Devstep\, DJ Sigil\, Marjo Lak. Doors
-  7pm. Tickets & info\nhttps://www.visiteureka.com/event/thresholdup-featu
- ring-beats-antique/
-URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
-END:VEVENT
-BEGIN:VEVENT
 UID:7568f41303ab@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261127T210000
 DTEND:20261127T220000
 SUMMARY:Latin Night with DJ Pachanguero
@@ -160,7 +116,7 @@ URL:https://www.bluelakecasino.com/event/latin-night-with-dj-pachanguero-1
 END:VEVENT
 BEGIN:VEVENT
 UID:0033fca6846b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Humboldt County Winter Fair: Holiday of Trees Bazaar
@@ -172,7 +128,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:12972579bb9b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -185,7 +141,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:378de2247b14@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -197,7 +153,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:d25f473b2264@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -210,7 +166,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e8eb744f9968@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Lewiston Bridge Lighting
@@ -222,7 +178,7 @@ DESCRIPTION:Annual Bridge Lighting with a fireworks show. Mountain104.com
 END:VEVENT
 BEGIN:VEVENT
 UID:78ce0b6fd178@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261128T100000
 DTEND:20261128T160000
 SUMMARY:Annual Holiday Bazaar
@@ -235,7 +191,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:d3097afca19c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261128T100000
 DTEND:20261128T120000
 SUMMARY:Mosaic Garden Stone Workshop
@@ -246,7 +202,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:4a63274b0197@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261128T100000
 DTEND:20261128T160000
 SUMMARY:Nightmare Friendsgiving: Act in a Short Film
@@ -258,7 +214,7 @@ URL:https://www.dqwc.org
 END:VEVENT
 BEGIN:VEVENT
 UID:0db5cd9b26f1@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261128T100000
 DTEND:20261128T170000
 SUMMARY:Small Business Day Market
@@ -268,57 +224,8 @@ DESCRIPTION:Handicraft jewelry\, food and community. Come for the finds\,
  le.
 END:VEVENT
 BEGIN:VEVENT
-UID:dbb81fa31aab@community-calendar
-DTSTAMP:20261127T232625Z
-DTSTART:20261128T130000
-DTEND:20261128T140000
-SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
-LOCATION:Eureka Woman’s Club\, 1531 J St
-DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
- stmas party\, with dinner included. Shows: Friday 11/27 at 7pm\; Saturday
-  11/28 at 1pm and 7pm. Saturday evening’s show benefits the Breast & GY
- N Health Project. $55 general\, $50 seniors/students\; 56 seats per show.
-  Tickets & info\nhttps://www.visiteureka.com/event/the-sting-of-the-barb-
- holiday-dinner-theater/
-URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
- -theater/
-END:VEVENT
-BEGIN:VEVENT
-UID:c4d1749b95bf@community-calendar
-DTSTAMP:20261127T232625Z
-DTSTART:20261128T190000
-DTEND:20261128T200000
-SUMMARY:"The Sting of the Barb" Holiday Dinner Theater
-LOCATION:Eureka Woman’s Club\, 1531 J St
-DESCRIPTION:An original murder mystery by Linden Tyler set at a 1930s Chri
- stmas party\, with dinner included. Shows: Friday 11/27 at 7pm\; Saturday
-  11/28 at 1pm and 7pm. Saturday evening’s show benefits the Breast & GY
- N Health Project. $55 general\, $50 seniors/students\; 56 seats per show.
-  Tickets & info\nhttps://www.visiteureka.com/event/the-sting-of-the-barb-
- holiday-dinner-theater/
-URL:https://www.visiteureka.com/event/the-sting-of-the-barb-holiday-dinner
- -theater/
-END:VEVENT
-BEGIN:VEVENT
-UID:624ecbbd39d6@community-calendar
-DTSTAMP:20261127T232625Z
-DTSTART:20261128T190000
-DTEND:20261128T233000
-SUMMARY:Threshold:UP featuring Beats Antique
-LOCATION:Eureka Theater\, 612 F St.
-DESCRIPTION:The Eureka Theater’s Threshold dance series presents two nig
- hts with Beats Antique on their Metamorphosis Tour\, with DJ support from
-  local and touring artists plus lasers and projections throughout the the
- ater. Proceeds support the theater’s restoration. Friday: Beats Antique
- \, Beatkitty\, Illexxandra. Saturday: Beats Antique\, David Starfire\, Mr
- . Jennings. Both nights: Pressure\, Devstep\, DJ Sigil\, Marjo Lak. Doors
-  7pm. Tickets & info\nhttps://www.visiteureka.com/event/thresholdup-featu
- ring-beats-antique/
-URL:https://www.visiteureka.com/event/thresholdup-featuring-beats-antique/
-END:VEVENT
-BEGIN:VEVENT
 UID:95ec8f37a581@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261128T203000
 DTEND:20261128T213000
 SUMMARY:Americana with Elderberry Rust String Band
@@ -331,7 +238,7 @@ URL:https://www.bluelakecasino.com/event/americana-with-elderberry-rust-st
 END:VEVENT
 BEGIN:VEVENT
 UID:16ab7480c057@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Humboldt County Winter Fair: Holiday of Trees Bazaar
@@ -343,7 +250,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:41a358b7b27b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -356,7 +263,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9d93ba5b19cb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -368,7 +275,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:681f215e8a18@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -381,7 +288,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:64f8454c253d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261129T100000
 DTEND:20261129T160000
 SUMMARY:Annual Holiday Bazaar
@@ -394,7 +301,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:7a086d1bcdb7@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261129T110000
 DTEND:20261129T120000
 SUMMARY:Pottery Painting & Story Time
@@ -405,7 +312,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:1f1ce2d15d17@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261129T130000
 DTEND:20261129T160000
 SUMMARY:Sunday Art Hang Out: Wreath Making and Harvest Crafts
@@ -421,7 +328,7 @@ URL:https://neighborhood-harvest.org
 END:VEVENT
 BEGIN:VEVENT
 UID:7bc56f531dde@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261130T180000
 DTEND:20261130T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -433,7 +340,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-11-
 END:VEVENT
 BEGIN:VEVENT
 UID:120bdd153658@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -446,7 +353,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:09c5ca39c9b8@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -458,7 +365,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:4dabfdbef06b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -471,7 +378,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:3bcb70dd27ea@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -483,7 +390,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:8d5449c5c5ca@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -496,7 +403,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:23fefea51e52@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261202T103000
 DTEND:20261202T110000
 SUMMARY:Story Time
@@ -516,7 +423,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-02/
 END:VEVENT
 BEGIN:VEVENT
 UID:ad51e541c0c8@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261202T140000
 DTEND:20261202T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -539,7 +446,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:c4fd650f53de@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261202T170000
 DTEND:20261202T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -559,7 +466,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:b29a10ab388d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261202T180000
 DTEND:20261202T200000
 SUMMARY:Dick Taylor's 4th Annual Tree Lighting
@@ -573,7 +480,7 @@ URL:https://www.visiteureka.com/event/dick-taylors-4th-annual-tree-lightin
 END:VEVENT
 BEGIN:VEVENT
 UID:c3f582e12e6a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -586,7 +493,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:cc6e172c23dc@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -598,7 +505,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9e65adb27622@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -611,7 +518,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:909a7db15ac2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261203T103000
 DTEND:20261203T110000
 SUMMARY:Storytime
@@ -621,7 +528,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-03/
 END:VEVENT
 BEGIN:VEVENT
 UID:e8e541743bb3@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261203T180000
 DTEND:20261203T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -635,7 +542,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:284644aad3cf@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -648,7 +555,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4bddf5088da@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -660,7 +567,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:c15b97ee4b0e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -673,7 +580,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:0e9d0884336a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T100000
 DTEND:20261204T160000
 SUMMARY:Annual Holiday Bazaar
@@ -686,7 +593,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:9339ae72ce35@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T110000
 DTEND:20261204T120000
 SUMMARY:TAGA weekly golf tournament
@@ -697,7 +604,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:3287d0da1bb4@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T140000
 DTEND:20261204T150000
 SUMMARY:Writers of Willow Creek
@@ -711,7 +618,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-0
 END:VEVENT
 BEGIN:VEVENT
 UID:601f4fe75a2e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T160000
 DTEND:20261204T210000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -724,7 +631,7 @@ URL:https://www.humboldtartisans.com
 END:VEVENT
 BEGIN:VEVENT
 UID:e25317b1bae9@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T160000
 DTEND:20261204T170000
 SUMMARY:Yoga for Every Body
@@ -735,7 +642,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-04/
 END:VEVENT
 BEGIN:VEVENT
 UID:0d15c0ca41b0@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T170000
 DTEND:20261204T210000
 SUMMARY:Hospitality Night
@@ -745,7 +652,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:7368277cc373@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T173000
 DTEND:20261204T183000
 SUMMARY:Ferndale Fire Co 3 Hook & Ladder Turkey Shoot
@@ -757,7 +664,7 @@ DESCRIPTION:The annual Company 3 fundraiser\, on Hospitality Night. Roll t
 END:VEVENT
 BEGIN:VEVENT
 UID:237c72757514@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261204T193000
 DTEND:20261204T203000
 SUMMARY:Eureka Symphony: A Season of Light
@@ -773,7 +680,7 @@ URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
 UID:dae24467123e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Holiday Neighborhood Harvest Festival
@@ -784,7 +691,7 @@ URL:https://www.facebook.com/profile.php?id=61585530843784
 END:VEVENT
 BEGIN:VEVENT
 UID:2d67e3ca10fd@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Holiday Window Display Contest: "Season of Cheer"
@@ -798,7 +705,7 @@ URL:https://www.visiteureka.com/event/holiday-window-display-contest-seaso
 END:VEVENT
 BEGIN:VEVENT
 UID:f9c62372382f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -811,7 +718,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:5d6cfba08697@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -823,7 +730,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:269b8f86656e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -836,7 +743,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:93d97affe409@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:Scotia Band Sax Quartet
@@ -847,7 +754,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:3a4ea783cbf6@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261215
 SUMMARY:Winter Whimsy Quest
@@ -860,7 +767,7 @@ URL:https://www.visiteureka.com/event/winter-whimsy-quest/
 END:VEVENT
 BEGIN:VEVENT
 UID:9ba391125ecb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T100000
 DTEND:20261205T170000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -873,7 +780,7 @@ URL:https://www.humboldtartisans.com
 END:VEVENT
 BEGIN:VEVENT
 UID:ebea6fa5895b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T100000
 DTEND:20261205T160000
 SUMMARY:Annual Holiday Bazaar
@@ -886,7 +793,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:77a46afbc4c0@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T103000
 DTEND:20261205T113000
 SUMMARY:Santa Claus in Ferndale
@@ -896,7 +803,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:f2b27b8309e2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T110000
 DTEND:20261205T120000
 SUMMARY:Salty Santa Boat Parade
@@ -907,7 +814,7 @@ DESCRIPTION:Boats of every size\, from row boats to tug boats\, parade alo
 END:VEVENT
 BEGIN:VEVENT
 UID:c6e0dd1a0d79@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T110000
 DTEND:20261205T160000
 RRULE:FREQ=DAILY;COUNT=2
@@ -924,7 +831,7 @@ URL:https://www.visiteureka.com/event/winter-open-studio-george-sennott-st
 END:VEVENT
 BEGIN:VEVENT
 UID:be8042999df2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T173000
 DTEND:20261205T183000
 SUMMARY:Festival of Light & Wonder: Lighted Parade
@@ -934,7 +841,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:cfa405632cbc@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T180000
 DTEND:20261205T190000
 SUMMARY:Festival of Light & Wonder: Holiday Classic Movie Screening
@@ -944,7 +851,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:74cdf8b8e961@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T180000
 DTEND:20261205T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -957,7 +864,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-2/
 END:VEVENT
 BEGIN:VEVENT
 UID:db560dc7e218@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T183000
 DTEND:20261205T193000
 SUMMARY:Festival of Light & Wonder: Tree Lighting Countdown
@@ -967,7 +874,7 @@ DESCRIPTION:The festival also has beer and wine\, caroling and a visit fro
 END:VEVENT
 BEGIN:VEVENT
 UID:24176bc4d9a2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261205T193000
 DTEND:20261205T203000
 SUMMARY:Eureka Symphony: A Season of Light
@@ -983,7 +890,7 @@ URL:https://www.visiteureka.com/event/eureka-symphony-a-season-of-light/
 END:VEVENT
 BEGIN:VEVENT
 UID:2f869137c12e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -996,7 +903,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:03a969e1b8f6@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1008,7 +915,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b7cb90e22d29@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261206
 DTEND;VALUE=DATE:20261207
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1021,7 +928,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:5d50725f88e1@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T100000
 DTEND:20261206T170000
 SUMMARY:46th Annual Humboldt Artisans Crafts & Music Festival
@@ -1034,7 +941,7 @@ URL:https://www.humboldtartisans.com
 END:VEVENT
 BEGIN:VEVENT
 UID:418c3c5ea50f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T100000
 DTEND:20261206T160000
 SUMMARY:Annual Holiday Bazaar
@@ -1047,7 +954,7 @@ URL:http://www.thebigfootmuseum.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:2dc4db089a27@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T100000
 DTEND:20261206T123000
 SUMMARY:Ceramic Christmas Tree Painting & Candle Making
@@ -1058,7 +965,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:9ffb89836882@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T100000
 DTEND:20261206T150000
 SUMMARY:Santa\, Trains and Candy Canes
@@ -1072,7 +979,7 @@ URL:https://www.timberheritage.org/special-events
 END:VEVENT
 BEGIN:VEVENT
 UID:9aebda3eb857@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T130000
 DTEND:20261206T160000
 SUMMARY:Beginner Wreath Making Class
@@ -1084,7 +991,7 @@ URL:https://www.visiteureka.com/event/beginner-wreath-making-class-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:478e43c0e9fc@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T150000
 DTEND:20261206T160000
 SUMMARY:McKinleyville Community Choir: Holiday Concert
@@ -1094,7 +1001,7 @@ DESCRIPTION:Holiday concert by the McKinleyville Community Choir\, under t
 END:VEVENT
 BEGIN:VEVENT
 UID:b7ea9ff6720b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T160000
 DTEND:20261206T190000
 SUMMARY:Linguica & Beans Dinner
@@ -1104,7 +1011,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:1fe43e63e77c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261206T173000
 DTEND:20261206T183000
 SUMMARY:Christmas Tree Lighting
@@ -1114,7 +1021,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:accc1e6c0789@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261207T180000
 DTEND:20261207T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -1126,7 +1033,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:ed5917d332f0@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1139,7 +1046,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b90b69e8ff5e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1151,7 +1058,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:7b8286ae837c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1164,7 +1071,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:7ca8ce5270b5@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1176,7 +1083,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:016cee64cdff@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1189,7 +1096,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:0037de1ac52e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261209T103000
 DTEND:20261209T110000
 SUMMARY:Story Time
@@ -1209,7 +1116,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-09/
 END:VEVENT
 BEGIN:VEVENT
 UID:1b9f857f23aa@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261209T140000
 DTEND:20261209T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -1232,7 +1139,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:62090f3be3ad@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261209T170000
 DTEND:20261209T170000
 SUMMARY:Humboldt Library Foundation Holiday Gala
@@ -1247,7 +1154,7 @@ URL:https://www.visiteureka.com/event/humboldt-library-foundation-holiday-
 END:VEVENT
 BEGIN:VEVENT
 UID:ec95458366c1@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261209T170000
 DTEND:20261209T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -1267,7 +1174,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:99542b362d7c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1280,7 +1187,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:747e3dc33380@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1292,7 +1199,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9f36e97dcaf0@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1305,7 +1212,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:705d2281dc1c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261210T103000
 DTEND:20261210T110000
 SUMMARY:Storytime
@@ -1315,7 +1222,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-10/
 END:VEVENT
 BEGIN:VEVENT
 UID:2a9f600217fe@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1328,7 +1235,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:602da9975e25@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1340,7 +1247,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:d404b64e75c0@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1353,7 +1260,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ec1fa84ae11b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261211T110000
 DTEND:20261211T120000
 SUMMARY:TAGA weekly golf tournament
@@ -1364,7 +1271,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:9a3a9d4f6d44@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261211T140000
 DTEND:20261211T150000
 SUMMARY:Writers of Willow Creek
@@ -1378,7 +1285,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-1
 END:VEVENT
 BEGIN:VEVENT
 UID:2a1e32acbcbe@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261211T160000
 DTEND:20261211T170000
 SUMMARY:Yoga for Every Body
@@ -1389,7 +1296,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-11/
 END:VEVENT
 BEGIN:VEVENT
 UID:68a858c189d7@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261211T180000
 DTEND:20261211T190000
 SUMMARY:Al Gray Lighted Parade
@@ -1399,7 +1306,7 @@ DESCRIPTION:Fortuna's annual lighted parade\, presented by the Fortuna Cha
 END:VEVENT
 BEGIN:VEVENT
 UID:dd4da655c893@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1412,7 +1319,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:13227ab3f1e5@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1424,7 +1331,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:afa768278b03@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1437,7 +1344,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:fa30b2392542@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:Scotia Band Sax Quartet
@@ -1448,7 +1355,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:23d2823eb1d8@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261212T100000
 DTEND:20261212T170000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -1458,7 +1365,7 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
 END:VEVENT
 BEGIN:VEVENT
 UID:b44b7050ec34@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261212T100000
 DTEND:20261212T123000
 SUMMARY:Ceramic Christmas Tree Painting & Candle Making
@@ -1469,7 +1376,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:5856ddec48d6@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261212T140000
 DTEND:20261212T150000
 SUMMARY:Victorian Holiday: 125th Anniversary Tea
@@ -1483,7 +1390,7 @@ URL:https://www.eurekawomansclub.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b1177a7eb218@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261212T180000
 DTEND:20261212T233000
 SUMMARY:Truckers Christmas Parade
@@ -1499,7 +1406,7 @@ URL:https://www.visiteureka.com/event/truckers-christmas-parade/2026-12-12
 END:VEVENT
 BEGIN:VEVENT
 UID:4d38f1e20280@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1512,7 +1419,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:f56c3dfb1b6b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1524,7 +1431,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:3eb5225b8a51@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1537,7 +1444,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:756d7494380f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261213T100000
 DTEND:20261213T160000
 SUMMARY:Arcata Recreation Division 2026 Holiday Craft Market
@@ -1547,7 +1454,7 @@ DESCRIPTION:Over 50 vendors\, food and live music. Admission is a $2 donat
 END:VEVENT
 BEGIN:VEVENT
 UID:0dbccfa4bd43@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261213T150000
 DTEND:20261213T160000
 SUMMARY:McKinleyville Community Choir: Holiday Concert
@@ -1557,7 +1464,7 @@ DESCRIPTION:Holiday concert by the McKinleyville Community Choir\, under t
 END:VEVENT
 BEGIN:VEVENT
 UID:999c5fd1bd7f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261214T180000
 DTEND:20261214T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -1569,7 +1476,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:b8d1cdfd8090@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1582,7 +1489,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:2dc80d12ee5b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1594,7 +1501,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ac2741272dcb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1607,7 +1514,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:a4cab78bdee1@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1619,7 +1526,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:fee9e28c4c57@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1632,7 +1539,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:3d59244a05dd@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261216T103000
 DTEND:20261216T110000
 SUMMARY:Story Time
@@ -1652,7 +1559,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-16/
 END:VEVENT
 BEGIN:VEVENT
 UID:3e19d3f55871@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261216T140000
 DTEND:20261216T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -1675,7 +1582,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:595998a9a4c2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261216T170000
 DTEND:20261216T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -1695,7 +1602,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:0c4eb3898971@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1708,7 +1615,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:a56141fe751c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1720,7 +1627,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9a38646bbc76@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1733,7 +1640,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:40cad33f85d5@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261221
 SUMMARY:North Coast Dance “The Nutcracker”
@@ -1748,7 +1655,7 @@ URL:https://www.visiteureka.com/event/north-coast-dance-the-nutcracker-202
 END:VEVENT
 BEGIN:VEVENT
 UID:aceeb961c84f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261217T103000
 DTEND:20261217T110000
 SUMMARY:Storytime
@@ -1758,7 +1665,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-17/
 END:VEVENT
 BEGIN:VEVENT
 UID:57fad638b7aa@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1771,7 +1678,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:43f370a86390@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1783,7 +1690,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ad690daa0f35@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1796,7 +1703,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:5488281c67eb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261218T110000
 DTEND:20261218T120000
 SUMMARY:TAGA weekly golf tournament
@@ -1807,7 +1714,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:a60005d6359c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261218T140000
 DTEND:20261218T150000
 SUMMARY:Writers of Willow Creek
@@ -1821,7 +1728,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-1
 END:VEVENT
 BEGIN:VEVENT
 UID:4faac3880fec@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261218T160000
 DTEND:20261218T170000
 SUMMARY:Yoga for Every Body
@@ -1832,7 +1739,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-18/
 END:VEVENT
 BEGIN:VEVENT
 UID:19bae3e1102b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261218T170000
 DTEND:20261218T210000
 SUMMARY:Christmas @ the Acres
@@ -1845,7 +1752,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:ed4ab8311047@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261218T173000
 DTEND:20261218T193000
 SUMMARY:Mosaic Address Plaque or Welcome Sign Workshop
@@ -1857,7 +1764,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:05b8dc120673@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -1870,7 +1777,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:2a0df8f0f885@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -1882,7 +1789,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:5a1b5ac6e702@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -1895,7 +1802,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:f7bf98ec8a6e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Scotia Band Sax Quartet
@@ -1906,7 +1813,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:f9fff63d7b63@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261219T083000
 DTEND:20261219T150000
 SUMMARY:Breakfast with Santa and Holiday Fair
@@ -1920,7 +1827,7 @@ DESCRIPTION:Pancake breakfast hosted by the Girl Scouts\, served 8:30am to
 END:VEVENT
 BEGIN:VEVENT
 UID:26305abc1186@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261219T100000
 DTEND:20261219T190000
 SUMMARY:Christmas @ the Acres
@@ -1933,7 +1840,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:954a41626c74@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261219T120000
 DTEND:20261219T150000
 SUMMARY:SHS Open House & Christmas PAWty
@@ -1945,7 +1852,7 @@ URL:https://www.visiteureka.com/event/shs-open-house-christmas-pawty/
 END:VEVENT
 BEGIN:VEVENT
 UID:168b399e19b1@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261219T130000
 DTEND:20261219T130000
 SUMMARY:Cookie Decorating Workshop (Christmas Theme)
@@ -1958,7 +1865,7 @@ URL:https://www.visiteureka.com/event/cookie-decorating-workshop-christmas
 END:VEVENT
 BEGIN:VEVENT
 UID:0ec0f5dfa9d7@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261219T140000
 DTEND:20261219T153000
 SUMMARY:A Company of Voices: 3rd Annual Holiday Tea & Concert
@@ -1972,7 +1879,7 @@ URL:https://www.visiteureka.com/event/a-company-of-voices-3rd-annual-holid
 END:VEVENT
 BEGIN:VEVENT
 UID:d512109f4759@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261219T173000
 DTEND:20261219T193000
 SUMMARY:Mosaic Address Plaque or Welcome Sign Workshop
@@ -1984,7 +1891,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:ef318aa31ffd@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261219T180000
 DTEND:20261219T190000
 SUMMARY:Christmas Parade: 46th Annual Mountain Magic Christmas
@@ -1995,7 +1902,7 @@ DESCRIPTION:The Christmas Parade for the 46th annual Mountain Magic Christ
 END:VEVENT
 BEGIN:VEVENT
 UID:cbe147a03e79@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2008,7 +1915,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e4fd9502fa31@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2020,7 +1927,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:399f98405eff@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -2033,7 +1940,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:762c6fd1457d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261220T100000
 DTEND:20261220T160000
 SUMMARY:Christmas @ the Acres
@@ -2046,7 +1953,7 @@ URL:https://www.visiteureka.com/event/christmas-the-acres/
 END:VEVENT
 BEGIN:VEVENT
 UID:250b1902609d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261220T100000
 DTEND:20261220T140000
 SUMMARY:North Coast Co-op Cheese Festival
@@ -2059,7 +1966,7 @@ DESCRIPTION:Taste over 30 cheeses\, from seasonal exclusives to Co-op favo
 END:VEVENT
 BEGIN:VEVENT
 UID:1f41da001363@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261220T110000
 DTEND:20261220T120000
 SUMMARY:Pottery Painting & Story Time
@@ -2070,7 +1977,7 @@ URL:https://the-makers-space.info
 END:VEVENT
 BEGIN:VEVENT
 UID:7bee4187080a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261220T150000
 DTEND:20261220T160000
 SUMMARY:McKinleyville Community Choir: Holiday Concert
@@ -2080,7 +1987,7 @@ DESCRIPTION:Holiday concert by the McKinleyville Community Choir\, under t
 END:VEVENT
 BEGIN:VEVENT
 UID:afe363dd100d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261220T180000
 DTEND:20261220T190000
 SUMMARY:Lighted Tractor Parade
@@ -2090,7 +1997,7 @@ URL:https://visitferndale.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:b9409a848f13@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261221T180000
 DTEND:20261221T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -2102,7 +2009,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:0b4406d0dfac@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2115,7 +2022,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:caa56896319a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2127,7 +2034,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:328bf3af600d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2140,7 +2047,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:900be3bb31b2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2152,7 +2059,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:b34b0209be9f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -2165,7 +2072,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:c296364d2d48@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261223T103000
 DTEND:20261223T110000
 SUMMARY:Story Time
@@ -2185,7 +2092,7 @@ URL:https://willowcreekchamber.com/event/story-time/2026-12-23/
 END:VEVENT
 BEGIN:VEVENT
 UID:467a335654ec@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261223T140000
 DTEND:20261223T163000
 SUMMARY:Kim Yerton Library\, Free Tech Support with Acorn Wireless (By App
@@ -2208,7 +2115,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-free-tech-supp
 END:VEVENT
 BEGIN:VEVENT
 UID:d9cda11aa348@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261223T170000
 DTEND:20261223T170000
 SUMMARY:Christmas Cake Decorating Class
@@ -2220,7 +2127,7 @@ URL:https://www.visiteureka.com/event/christmas-cake-decorating-class/
 END:VEVENT
 BEGIN:VEVENT
 UID:05c1e82fe6d4@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261223T170000
 DTEND:20261223T194500
 SUMMARY:Kim Yerton Library\, Cribbage & Game Night
@@ -2240,7 +2147,7 @@ URL:https://willowcreekchamber.com/event/kim-yerton-library-cribbage-game-
 END:VEVENT
 BEGIN:VEVENT
 UID:51ce850aeff6@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2253,7 +2160,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:163c0c0c67d2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2265,7 +2172,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ecb347112d97@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
 SUMMARY:Humboldt County Winter Fair: Winter Wanderland
@@ -2278,7 +2185,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e17433e2c0e2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261224T103000
 DTEND:20261224T110000
 SUMMARY:Storytime
@@ -2288,7 +2195,7 @@ URL:https://willowcreekchamber.com/event/storytime/2026-12-24/
 END:VEVENT
 BEGIN:VEVENT
 UID:fb2f5f0b0f1d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2301,7 +2208,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:aa2bfb5b468a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2313,7 +2220,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:6dcfa45f1f7d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261225T110000
 DTEND:20261225T120000
 SUMMARY:TAGA weekly golf tournament
@@ -2324,7 +2231,7 @@ DESCRIPTION:Trinity Alps Golf Association\, weekly 18-hole tournament ever
 END:VEVENT
 BEGIN:VEVENT
 UID:ed617a9a1c6b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261225T140000
 DTEND:20261225T150000
 SUMMARY:Writers of Willow Creek
@@ -2338,7 +2245,7 @@ URL:https://willowcreekchamber.com/event/writers-of-willow-creek/2026-12-2
 END:VEVENT
 BEGIN:VEVENT
 UID:5232a8c8e15f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261225T160000
 DTEND:20261225T170000
 SUMMARY:Yoga for Every Body
@@ -2349,7 +2256,7 @@ URL:https://willowcreekchamber.com/event/yoga-for-every-body-2/2026-12-25/
 END:VEVENT
 BEGIN:VEVENT
 UID:8735754bd095@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2362,7 +2269,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:d5636856aaac@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2374,7 +2281,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:dea3b565aed2@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261228
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2387,7 +2294,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:88aaa2a11f13@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261227
 DTEND;VALUE=DATE:20261228
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2399,7 +2306,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:18dd17983f33@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20261228T180000
 DTEND:20261228T191500
 SUMMARY:Rooted in Soul Flow Yoga
@@ -2411,7 +2318,7 @@ URL:https://willowcreekchamber.com/event/rooted-in-soul-flow-yoga/2026-12-
 END:VEVENT
 BEGIN:VEVENT
 UID:64a404f24423@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261229
 DTEND;VALUE=DATE:20261230
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2424,7 +2331,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:ec1120953272@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261229
 DTEND;VALUE=DATE:20261230
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2436,7 +2343,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:0e03ff75acdb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2449,7 +2356,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9d36a759ec44@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2460,8 +2367,28 @@ DESCRIPTION:Slide down an all-new sledding feature! Open Nov 13 to Jan 10\
 URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:aae5aafdd0b8@community-calendar
+DTSTAMP:20261128T074306Z
+DTSTART:20261230T103000
+DTEND:20261230T110000
+SUMMARY:Story Time
+LOCATION:Willow Creek Library\, 39 Mayfair St
+DESCRIPTION:A special time just for young children with their caregivers a
+ nd families\, story time brings children together to experience stories a
+ s an event and share the oohs\, ahs\, and mystery of ‘what will happen 
+ next?’ with others. Story time is a great activity for children. Childr
+ en who often hear stories read aloud learn how to listen\, learn more wor
+ ds and how to use them\, and absorb new facts and ideas. In the adventure
+  of story\, kids also grow in imagination\, problem-solving and creativit
+ y. Kids who listen to stories are better prepared for life and school. St
+ ory time at the library builds a child’s fascination with reading and t
+ eaches skills that can be a lifelong advantage. Most of all\, it’s...\n
+ https://willowcreekchamber.com/event/story-time/2026-12-30/
+URL:https://willowcreekchamber.com/event/story-time/2026-12-30/
+END:VEVENT
+BEGIN:VEVENT
 UID:eba031e7cddb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2474,7 +2401,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:e421471798dd@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2486,7 +2413,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:76ae0b6a08a1@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2499,7 +2426,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9882cee5040d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2511,7 +2438,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:d827f639acac@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270102
 DTEND;VALUE=DATE:20270103
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2524,7 +2451,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:617a9b4aabf9@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270102
 DTEND;VALUE=DATE:20270103
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2536,7 +2463,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:711cf55c32a1@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270102T180000
 DTEND:20270102T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2549,7 +2476,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:08bfd6a0bab8@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270103
 DTEND;VALUE=DATE:20270104
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2562,7 +2489,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:28f8d55ed7e7@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270103
 DTEND;VALUE=DATE:20270104
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2574,7 +2501,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:5d5fb2c4955c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270105
 DTEND;VALUE=DATE:20270106
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2587,7 +2514,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:8d4032fb75a9@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270105
 DTEND;VALUE=DATE:20270106
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2599,7 +2526,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:88bf0bbb28fd@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2612,7 +2539,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:7f9751211e67@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2624,7 +2551,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:eb90a7fcfc62@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2637,7 +2564,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:4c6b0c1646fb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2649,7 +2576,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:8f1f15fdc5bb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270107T180000
 DTEND:20270107T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2663,7 +2590,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:e99a32e5a2fb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2676,7 +2603,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:9cb0a666bd1c@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2688,7 +2615,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:74de25639a0e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2701,7 +2628,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:244baf9e3622@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2713,7 +2640,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:1c92e4202a2b@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:Humboldt County Winter Fair: Ice Skating Rink
@@ -2726,7 +2653,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:3cc1e0a472df@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:Humboldt County Winter Fair: Polar Bunny Hill
@@ -2738,7 +2665,7 @@ URL:https://www.humboldtcountyfair.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:3f7e7b2d62d5@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270123T193000
 DTEND:20270123T193000
 SUMMARY:Eureka Chamber Music Series: Imani Winds
@@ -2752,7 +2679,7 @@ URL:https://www.visiteureka.com/event/eureka-chamber-music-series-imani-wi
 END:VEVENT
 BEGIN:VEVENT
 UID:c1a6f724b4ce@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270204T180000
 DTEND:20270204T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2766,7 +2693,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:c2707745384d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270206T180000
 DTEND:20270206T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2779,7 +2706,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-4/
 END:VEVENT
 BEGIN:VEVENT
 UID:37eb08fe7315@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270304T180000
 DTEND:20270304T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2793,7 +2720,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:3ae29d389c9a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270306T180000
 DTEND:20270306T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2806,7 +2733,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-5/
 END:VEVENT
 BEGIN:VEVENT
 UID:e0ba29c5e3cb@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270401T180000
 DTEND:20270401T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2820,7 +2747,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:66c1c34ad29e@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270403T180000
 DTEND:20270403T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2833,7 +2760,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-6/
 END:VEVENT
 BEGIN:VEVENT
 UID:98fa20726c14@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270501T180000
 DTEND:20270501T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2846,7 +2773,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-7/
 END:VEVENT
 BEGIN:VEVENT
 UID:e32a0b81490a@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270506T180000
 DTEND:20270506T190000
 SUMMARY:Willow Creek Fire Safe Council Monthly Board Meeting
@@ -2860,7 +2787,7 @@ URL:https://us06web.zoom.us/j/86943975943?pwd=qamI5EEDfB6Nbn5HSbuJouliqQt7
 END:VEVENT
 BEGIN:VEVENT
 UID:ef30cf89062d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270530T170000
 DTEND:20270530T210000
 SUMMARY:Celebration of the Arts Gala
@@ -2876,7 +2803,7 @@ URL:https://www.visiteureka.com/event/celebration-of-the-arts-gala/2027-05
 END:VEVENT
 BEGIN:VEVENT
 UID:773bc84d4cac@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270605T180000
 DTEND:20270605T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2889,7 +2816,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-8/
 END:VEVENT
 BEGIN:VEVENT
 UID:6ace6748e737@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270618T000000
 DTEND:20270618T233000
 RRULE:FREQ=DAILY;COUNT=5
@@ -2908,7 +2835,7 @@ URL:https://www.visiteureka.com/event/juneteenth-cultural-festival/2027-06
 END:VEVENT
 BEGIN:VEVENT
 UID:e0a3aff50a1f@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART;VALUE=DATE:20270619
 DTEND;VALUE=DATE:20270620
 SUMMARY:Bigfoot Daze
@@ -2917,7 +2844,7 @@ DESCRIPTION:Save the date.
 END:VEVENT
 BEGIN:VEVENT
 UID:65a5fe77169d@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270703T180000
 DTEND:20270703T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2930,7 +2857,7 @@ URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-9/
 END:VEVENT
 BEGIN:VEVENT
 UID:6b2d63b62a52@community-calendar
-DTSTAMP:20261127T232625Z
+DTSTAMP:20261128T074306Z
 DTSTART:20270807T180000
 DTEND:20270807T210000
 SUMMARY:First Saturday Night Arts Alive!
@@ -2940,5 +2867,31 @@ DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants
  month\, with art\, live music and pop-up performances. More info\nhttps:/
  /www.visiteureka.com/event/first-saturday-night-arts-alive-10/
 URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-10/
+END:VEVENT
+BEGIN:VEVENT
+UID:c690066aa32e@community-calendar
+DTSTAMP:20261128T074306Z
+DTSTART:20270904T180000
+DTEND:20270904T210000
+SUMMARY:First Saturday Night Arts Alive!
+LOCATION:Downtown & Old Town Eureka
+DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants 
+ across Old Town and Downtown stay open late on the first Saturday of the 
+ month\, with art\, live music and pop-up performances. More info\nhttps:/
+ /www.visiteureka.com/event/first-saturday-night-arts-alive-11/
+URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-11/
+END:VEVENT
+BEGIN:VEVENT
+UID:e64f479ff4b2@community-calendar
+DTSTAMP:20261128T074306Z
+DTSTART:20271002T180000
+DTEND:20271002T210000
+SUMMARY:First Saturday Night Arts Alive!
+LOCATION:Downtown & Old Town Eureka
+DESCRIPTION:Galleries\, museums\, theaters\, shops\, bars and restaurants 
+ across Old Town and Downtown stay open late on the first Saturday of the 
+ month\, with art\, live music and pop-up performances. More info\nhttps:/
+ /www.visiteureka.com/event/first-saturday-night-arts-alive-12/
+URL:https://www.visiteureka.com/event/first-saturday-night-arts-alive-12/
 END:VEVENT
 END:VCALENDAR
